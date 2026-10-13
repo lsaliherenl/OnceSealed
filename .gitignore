@@ -1,0 +1,35 @@
+# Secrets
+.env
+*.key
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Data (downloaded, not redistributed)
+data/raw/
+samples/pdfs/
+
+# Local run logs and LLM cache (reports/ and data/evidence/ are published)
+data/runs/
+data/cache/
+*.sqlite
+*.db
+
+# Foundry
+contracts/out/
+contracts/cache/
+contracts/broadcast/*/31337/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build artifacts
+*.egg-info/
+build/
+dist/

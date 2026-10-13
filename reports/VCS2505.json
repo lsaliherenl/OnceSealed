@@ -1,0 +1,307 @@
+{
+  "schema": "report-v1",
+  "project": {
+    "project_id": "VCS2505",
+    "project_name": "Fuel Efficient Cooking in South Africa",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/2505",
+    "methodology": "VMR0006",
+    "methodology_version": null
+  },
+  "document": {
+    "file_name": "Fuel Efficient Cooking in South Africa Grouped PDD_v9_Clean.pdf",
+    "sha256": "1d09240addf6b933de31de7492b798775ddf16183425b8d0eff00e6f0e5d810a",
+    "pages": 64
+  },
+  "methodology_status": {
+    "code": "VMR0006",
+    "version": null,
+    "status": "not_ccp_approved",
+    "summary": "No CCP approval for VMR0006. ICVCM approved Verra's successor cookstove methodology VM0050 v1.0 with conditions that constrain fNRB and require stricter fuel-use monitoring.",
+    "sources": [
+      "https://icvcm.org/integrity-council-approves-three-cookstove-methodologies/",
+      "https://www.calyxglobal.com/research-hub/research/how-the-ICVCM-CCP-labels-are-raising-the-quality-of-cookstoves-and-household-biodigester-projects"
+    ],
+    "table_version": "2026-10-13"
+  },
+  "method": {
+    "report_schema": "report-v1",
+    "prompt_version": "v1",
+    "question_set_version": "qs-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "decision_model": "typesafe/jev-1.13",
+    "decision_input": "verified_quotes",
+    "methodology_table_version": "2026-10-13",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x77db5fd6b725dc8d6f2e2b1447ec2f91b8433a5f1eedfcbc811383577c657bdf",
+  "principles": [
+    {
+      "principle": "additionality",
+      "rationale": "Document relies on VMR0006 activity method, regulatory surplus, and a deemed-additional rule for zero-cost stoves with no revenue other than GHG credits. It describes the baseline as continued non-renewable wood fuel use. However, excerpts do not provide investment/IRR, barrier, or common practice analysis, nor explicit confirmation that this project has no other revenue source. Additionality is therefore asserted through methodology criteria rather than substantively demonstrated.",
+      "quotes": [
+        {
+          "text": "The methodology VMR0006 v1.1 uses activity method for the demonstration of additionality.",
+          "page": 45,
+          "paragraph_id": "p45-07",
+          "verification": "exact"
+        },
+        {
+          "text": "There is no government mandated programme or policy in South Africa ensuring the distribution of new project activity instances or fuel efficient cookstoves.",
+          "page": 8,
+          "paragraph_id": "p8-19",
+          "verification": "exact"
+        },
+        {
+          "text": "Where the project activity installs or distributes stoves at zero cost to the end-user and has no other source of revenue other than the sale of GHG credits, the project activity shall be deemed additional.",
+          "page": 9,
+          "paragraph_id": "p9-08",
+          "verification": "exact"
+        },
+        {
+          "text": "As per the VMR0006 methodology, the baseline scenario is the continued use of non-renewable wood fuel (firewood) by the target population to meet similar thermal energy needs as provided by project ICS in absence of project activity.",
+          "page": 43,
+          "paragraph_id": "p43-06",
+          "verification": "alnum"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_weak",
+        "score": 50,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "assertion_only",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.47,
+          "assertion_only": 0.53,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.37,
+        "independent_sources": 0.3,
+        "strength": 1.22,
+        "strength_probabilities": {
+          "0": 0.01,
+          "1": 0.81,
+          "2": 0.13,
+          "3": 0.05
+        },
+        "strength_confidence": 0.76,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "assertion_only",
+      "score": 41,
+      "review_flags": []
+    },
+    {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "quotes": [],
+      "dropped_findings": 0,
+      "llm": null,
+      "decision": null,
+      "rule": "no_reversal_risk"
+    },
+    {
+      "principle": "robust_quantification",
+      "rationale": "The excerpts show PI-level baseline surveys, fNRB calculation via CDM TOOL30, default emission factors, a 0.95 leakage factor, a 0.94 uncertainty adjustment, conservative ex-ante modelling, and QA/QC procedures with precision thresholds and lower-bound fallback. They also describe monitoring data collection and verification sampling. This is specific substantive evidence, though not all parameters are fully detailed in the excerpts.",
+      "quotes": [
+        {
+          "text": "Based on the initial number of ICS planned for PI1-K2C and taking the expected 5-year operational lifetime of the ICS into account, the GP’s ex-ante ERs were modelled to represent a conservative approximation.",
+          "page": 15,
+          "paragraph_id": "p15-04",
+          "verification": "exact"
+        },
+        {
+          "text": "The sample size and selection were determined in accordance with the CDM guidance on “Sampling and surveys for CDM project activities and programmes of activities v04.0” with a 90/10 confidence/precision level.",
+          "page": 44,
+          "paragraph_id": "p44-04",
+          "verification": "exact"
+        },
+        {
+          "text": "Leakage shall be considered as default 0.95 in accordance with Section 8.3 of the applied methodology VRM0006 v1.",
+          "page": 46,
+          "paragraph_id": "p46-08",
+          "verification": "exact"
+        },
+        {
+          "text": "Data from the monitoring survey will be collected at least biennially and applied to the emissions reductions calculations during that monitoring period. Where the required level of precision is not met either additional surveys may be completed, or the lower bound value applied.",
+          "page": 55,
+          "paragraph_id": "p55-08",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.2,
+          "documentary": 0.77,
+          "assertion_only": 0.03,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.69,
+        "independent_sources": 0.32,
+        "strength": 2.64,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.05,
+          "2": 0.26,
+          "3": 0.69
+        },
+        "strength_confidence": 0.64,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "strong_evidence",
+      "score": 88,
+      "review_flags": []
+    },
+    {
+      "principle": "no_double_counting",
+      "rationale": "The PDD states the project is not registered or seeking registration under any other GHG program, is not in an emissions trading program, and has not sought or received other GHG-related environmental credits. It also describes unique cookstove serial numbers, a distribution database, and an End User Agreement assigning ER/VCU ownership to the CME.",
+      "quotes": [
+        {
+          "text": "This is a new project and has not been registered or seeking registration under any other \nGHG programs.",
+          "page": 20,
+          "paragraph_id": "p20-10",
+          "verification": "exact"
+        },
+        {
+          "text": "The project is not included in an emissions trading program or any other mechanism that \nincludes GHG allowance trading.",
+          "page": 21,
+          "paragraph_id": "p21-05",
+          "verification": "exact"
+        },
+        {
+          "text": "The project has not sought, nor received another form of GHG-related environmental \ncredit.",
+          "page": 21,
+          "paragraph_id": "p21-07",
+          "verification": "exact"
+        },
+        {
+          "text": "Each ICS will have a serial number, made to order by the manufacturer, to uniquely identify \nit. All rights to distribute the delivered stoves and claim the resultant emissions reductions \nbelong to the PP.",
+          "page": 38,
+          "paragraph_id": "p38-04",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 84,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "assertion_only",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.39,
+          "assertion_only": 0.61,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.48,
+        "independent_sources": 0.1,
+        "strength": 1.23,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.83,
+          "2": 0.11,
+          "3": 0.06
+        },
+        "strength_confidence": 0.77,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "assertion_only",
+      "score": 41,
+      "review_flags": []
+    },
+    {
+      "principle": "safeguards",
+      "rationale": "The document includes a safeguards section with evidence of local stakeholder consultation (approved plan and implementation), a grievance redress mechanism, assessment of risks to local stakeholders (none identified), and environmental mitigation measures such as reducing wood cutting to protect biodiversity. It also addresses cultural and gender sensitivity. This constitutes specific, substantive evidence for the principle.",
+      "quotes": [
+        {
+          "text": "The project proponent shall conduct a local stakeholder consultation prior to validation as a way to inform the design of the project and maximize participation from stakeholders. Such consultations allow stakeholders to evaluate impacts, raise concerns about potential negative impacts and provide input on the project design.",
+          "page": 23,
+          "paragraph_id": "p23-02",
+          "verification": "exact"
+        },
+        {
+          "text": "No natural and human-induced risks to local stakeholder well-being is expected arising from the project implementation during the project lifecycle.",
+          "page": 27,
+          "paragraph_id": "p27-03",
+          "verification": "alnum"
+        },
+        {
+          "text": "A grievance redress mechanism will be developed specifically for each Project Instance and included in the project design documents. Each IP will define a grievance mechanism that is most appropriate to their operations and to the communities within the project boundary.",
+          "page": 30,
+          "paragraph_id": "p30-03",
+          "verification": "exact"
+        },
+        {
+          "text": "- Reduce wood cutting which leads to deforestation and loss of biodiversity. Promote sustainable ecosystems and ecological balance.",
+          "page": 22,
+          "paragraph_id": "p22-06",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.87,
+          "assertion_only": 0.13,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.83,
+        "independent_sources": 0.09,
+        "strength": 1.3,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.71,
+          "2": 0.28,
+          "3": 0.01
+        },
+        "strength_confidence": 0.7,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "assertion_only",
+      "score": 43,
+      "review_flags": []
+    }
+  ],
+  "overall": {
+    "score": 56,
+    "included": [
+      "additionality",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [
+      "permanence"
+    ],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-13T19:51:29+00:00"
+}

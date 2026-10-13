@@ -1,0 +1,59 @@
+{
+  "table_version": "2026-10-13",
+  "note": "ICVCM Core Carbon Principles (CCP) decisions at methodology level, compiled by hand from the cited public sources. This is not an assessment of individual projects.",
+  "statuses": {
+    "approved_with_conditions": "ICVCM approved the methodology (or these versions) for the CCP label; project-level conditions apply.",
+    "not_approved": "ICVCM assessed the methodology and decided it does not meet the CCPs.",
+    "not_ccp_approved": "The methodology has no CCP approval (not assessed or superseded); a successor methodology may be approved.",
+    "unknown": "No ICVCM decision recorded in this table."
+  },
+  "methodologies": [
+    {
+      "code": "ACM0002",
+      "versions": "all current",
+      "status": "not_approved",
+      "principle": "additionality",
+      "summary": "In August 2024 ICVCM rejected current grid-connected renewable energy methodologies because their additionality tests were insufficiently rigorous.",
+      "decided": "2024-08",
+      "sources": ["https://icvcm.org/carbon-credits-from-current-renewable-energy-methodologies-will-not-receive-high-integrity-ccp-label/"]
+    },
+    {
+      "code": "ACM0001",
+      "versions": "15.0-19.0",
+      "min_version": 15.0,
+      "max_version": 19.0,
+      "status": "approved_with_conditions",
+      "principle": null,
+      "summary": "ICVCM approved ACM0001 versions 15-19 for landfill gas projects, subject to additional criteria (including limits on electricity generation). Earlier versions are not eligible. Verra's successor VMR0016 was approved in August 2026.",
+      "decided": "2024",
+      "sources": [
+        "https://verra.org/verras-rice-cultivation-and-landfill-gas-methodologies-receive-icvcm-approval/",
+        "https://verra.org/methodologies/acm0001-flaring-or-use-of-landfill-gas/"
+      ]
+    },
+    {
+      "code": "VM0007",
+      "versions": "all",
+      "status": "not_ccp_approved",
+      "principle": null,
+      "summary": "Verra excluded its older REDD+ methodologies (including VM0007) from ICVCM assessment; their credits cannot carry the CCP label. ICVCM approved the successor VM0048 v1.0 with conditions in November 2024.",
+      "decided": "2024-11",
+      "sources": [
+        "https://icvcm.org/integrity-council-approves-three-redd-methodologies/",
+        "https://www.jonesday.com/en/insights/2025/03/the-icvcm-and-redd-standards-implications-for-voluntary-carbon-markets"
+      ]
+    },
+    {
+      "code": "VMR0006",
+      "versions": "all",
+      "status": "not_ccp_approved",
+      "principle": null,
+      "summary": "No CCP approval for VMR0006. ICVCM approved Verra's successor cookstove methodology VM0050 v1.0 with conditions that constrain fNRB and require stricter fuel-use monitoring.",
+      "decided": "2025",
+      "sources": [
+        "https://icvcm.org/integrity-council-approves-three-cookstove-methodologies/",
+        "https://www.calyxglobal.com/research-hub/research/how-the-ICVCM-CCP-labels-are-raising-the-quality-of-cookstoves-and-household-biodigester-projects"
+      ]
+    }
+  ]
+}

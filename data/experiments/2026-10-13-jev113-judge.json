@@ -1,0 +1,1082 @@
+{
+  "VCS138/additionality": {
+    "llm": {
+      "status": "evidence_weak",
+      "score": 35
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "documentary",
+          "probabilities": {
+            "quantified_verifiable": 0.01,
+            "documentary": 0.64,
+            "assertion_only": 0.35,
+            "not_addressed": 0
+          },
+          "confidence": 0.52
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.24
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.78
+        },
+        "strength": {
+          "type": "score",
+          "score": 1.32,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.72,
+            "2": 0.23,
+            "3": 0.05
+          },
+          "confidence": 0.67
+        }
+      },
+      "usage": {
+        "input_tokens": 693,
+        "output_tokens": 110,
+        "cost": 2.9106e-05
+      },
+      "id": "gen-dec-1791918121-fh2pfa1SSKR2CdrQRWbu",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS138/no_double_counting": {
+    "llm": {
+      "status": "evidence_found",
+      "score": 85
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "documentary",
+          "probabilities": {
+            "quantified_verifiable": 0.01,
+            "documentary": 0.86,
+            "assertion_only": 0.13,
+            "not_addressed": 0
+          },
+          "confidence": 0.81
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.22
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.79
+        },
+        "strength": {
+          "type": "score",
+          "score": 1.9,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.42,
+            "2": 0.26,
+            "3": 0.32
+          },
+          "confidence": 0.1
+        }
+      },
+      "usage": {
+        "input_tokens": 732,
+        "output_tokens": 110,
+        "cost": 3.0744e-05
+      },
+      "id": "gen-dec-1791918122-7bYvbZpI0piUakjrYyfs",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS138/permanence": {
+    "llm": {
+      "status": "not_applicable",
+      "score": null
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "not_addressed",
+          "probabilities": {
+            "quantified_verifiable": 0,
+            "documentary": 0,
+            "assertion_only": 0,
+            "not_addressed": 1
+          },
+          "confidence": 1
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.39
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.73
+        },
+        "strength": {
+          "type": "score",
+          "score": 0.04,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0.97,
+            "1": 0.02,
+            "2": 0.01,
+            "3": 0
+          },
+          "confidence": 0.96
+        }
+      },
+      "usage": {
+        "input_tokens": 537,
+        "output_tokens": 110,
+        "cost": 2.2554e-05
+      },
+      "id": "gen-dec-1791918123-Cv6RUOvCi5a0rJ1yGevb",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS138/robust_quantification": {
+    "llm": {
+      "status": "evidence_found",
+      "score": 85
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "documentary",
+          "probabilities": {
+            "quantified_verifiable": 0,
+            "documentary": 0.88,
+            "assertion_only": 0.12,
+            "not_addressed": 0
+          },
+          "confidence": 0.84
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.19
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.8
+        },
+        "strength": {
+          "type": "score",
+          "score": 1.74,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.3,
+            "2": 0.63,
+            "3": 0.06
+          },
+          "confidence": 0.62
+        }
+      },
+      "usage": {
+        "input_tokens": 685,
+        "output_tokens": 110,
+        "cost": 2.877e-05
+      },
+      "id": "gen-dec-1791918124-98PCp03y8gD2KJ312Uei",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS138/safeguards": {
+    "llm": {
+      "status": "evidence_weak",
+      "score": 45
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "documentary",
+          "probabilities": {
+            "quantified_verifiable": 0.01,
+            "documentary": 0.88,
+            "assertion_only": 0.11,
+            "not_addressed": 0
+          },
+          "confidence": 0.84
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.54
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.74
+        },
+        "strength": {
+          "type": "score",
+          "score": 1.71,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.32,
+            "2": 0.63,
+            "3": 0.04
+          },
+          "confidence": 0.62
+        }
+      },
+      "usage": {
+        "input_tokens": 647,
+        "output_tokens": 110,
+        "cost": 2.7174e-05
+      },
+      "id": "gen-dec-1791918124-Yt1bQm8bqQvO07wroSxm",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS1477/additionality": {
+    "llm": {
+      "status": "evidence_found",
+      "score": 70
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "documentary",
+          "probabilities": {
+            "quantified_verifiable": 0,
+            "documentary": 0.61,
+            "assertion_only": 0.39,
+            "not_addressed": 0
+          },
+          "confidence": 0.48
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.39
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.81
+        },
+        "strength": {
+          "type": "score",
+          "score": 1.69,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.33,
+            "2": 0.64,
+            "3": 0.03
+          },
+          "confidence": 0.64
+        }
+      },
+      "usage": {
+        "input_tokens": 714,
+        "output_tokens": 110,
+        "cost": 2.9988e-05
+      },
+      "id": "gen-dec-1791918125-fOycp6MuRzeyKXoMCfBu",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS1477/no_double_counting": {
+    "llm": {
+      "status": "evidence_found",
+      "score": 80
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "documentary",
+          "probabilities": {
+            "quantified_verifiable": 0,
+            "documentary": 0.73,
+            "assertion_only": 0.27,
+            "not_addressed": 0
+          },
+          "confidence": 0.64
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.84
+        },
+        "strength": {
+          "type": "score",
+          "score": 1.59,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.47,
+            "2": 0.46,
+            "3": 0.07
+          },
+          "confidence": 0.4
+        }
+      },
+      "usage": {
+        "input_tokens": 672,
+        "output_tokens": 110,
+        "cost": 2.8224e-05
+      },
+      "id": "gen-dec-1791918126-fU637ZzVxGUsvBqEKnFh",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS1477/permanence": {
+    "llm": {
+      "status": "evidence_found",
+      "score": 85
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "quantified_verifiable",
+          "probabilities": {
+            "quantified_verifiable": 0.83,
+            "documentary": 0.05,
+            "assertion_only": 0.12,
+            "not_addressed": 0
+          },
+          "confidence": 0.77
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.26
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.86
+        },
+        "strength": {
+          "type": "score",
+          "score": 2.05,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.17,
+            "2": 0.6,
+            "3": 0.23
+          },
+          "confidence": 0.6
+        }
+      },
+      "usage": {
+        "input_tokens": 684,
+        "output_tokens": 112,
+        "cost": 2.8728e-05
+      },
+      "id": "gen-dec-1791918127-G8jQchuXtjMfFJllNp5y",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS1477/robust_quantification": {
+    "llm": {
+      "status": "evidence_found",
+      "score": 80
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "quantified_verifiable",
+          "probabilities": {
+            "quantified_verifiable": 0.87,
+            "documentary": 0.1,
+            "assertion_only": 0.03,
+            "not_addressed": 0
+          },
+          "confidence": 0.83
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.25
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.73
+        },
+        "strength": {
+          "type": "score",
+          "score": 2.37,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.1,
+            "2": 0.42,
+            "3": 0.48
+          },
+          "confidence": 0.38
+        }
+      },
+      "usage": {
+        "input_tokens": 667,
+        "output_tokens": 112,
+        "cost": 2.8014e-05
+      },
+      "id": "gen-dec-1791918127-WPMLvwBBrRA7Fre3T67M",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS1477/safeguards": {
+    "llm": {
+      "status": "evidence_found",
+      "score": 85
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "documentary",
+          "probabilities": {
+            "quantified_verifiable": 0,
+            "documentary": 0.99,
+            "assertion_only": 0.01,
+            "not_addressed": 0
+          },
+          "confidence": 0.99
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.21
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.79
+        },
+        "strength": {
+          "type": "score",
+          "score": 1.59,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.59,
+            "2": 0.23,
+            "3": 0.18
+          },
+          "confidence": 0.41
+        }
+      },
+      "usage": {
+        "input_tokens": 696,
+        "output_tokens": 110,
+        "cost": 2.9232e-05
+      },
+      "id": "gen-dec-1791918128-VcpBHeZC3wVEqa4sU6VW",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS1851/additionality": {
+    "llm": {
+      "status": "evidence_found",
+      "score": 82
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "documentary",
+          "probabilities": {
+            "quantified_verifiable": 0.21,
+            "documentary": 0.39,
+            "assertion_only": 0.39,
+            "not_addressed": 0.01
+          },
+          "confidence": 0.19
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.17
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.84
+        },
+        "strength": {
+          "type": "score",
+          "score": 1.4,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.66,
+            "2": 0.26,
+            "3": 0.07
+          },
+          "confidence": 0.59
+        }
+      },
+      "usage": {
+        "input_tokens": 714,
+        "output_tokens": 110,
+        "cost": 2.9988e-05
+      },
+      "id": "gen-dec-1791918129-PJDxMnrHAdueB6o94fhL",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS1851/no_double_counting": {
+    "llm": {
+      "status": "evidence_found",
+      "score": 85
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "documentary",
+          "probabilities": {
+            "quantified_verifiable": 0.01,
+            "documentary": 0.6,
+            "assertion_only": 0.39,
+            "not_addressed": 0
+          },
+          "confidence": 0.47
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.45
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.81
+        },
+        "strength": {
+          "type": "score",
+          "score": 1.83,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.32,
+            "2": 0.53,
+            "3": 0.15
+          },
+          "confidence": 0.53
+        }
+      },
+      "usage": {
+        "input_tokens": 677,
+        "output_tokens": 110,
+        "cost": 2.8434e-05
+      },
+      "id": "gen-dec-1791918130-ak37u7UIKHOXRp6KEq0C",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS1851/permanence": {
+    "llm": {
+      "status": "not_applicable",
+      "score": null
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "not_addressed",
+          "probabilities": {
+            "quantified_verifiable": 0,
+            "documentary": 0,
+            "assertion_only": 0.02,
+            "not_addressed": 0.98
+          },
+          "confidence": 0.97
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.13
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.59
+        },
+        "strength": {
+          "type": "score",
+          "score": 0.12,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0.89,
+            "1": 0.11,
+            "2": 0,
+            "3": 0
+          },
+          "confidence": 0.89
+        }
+      },
+      "usage": {
+        "input_tokens": 589,
+        "output_tokens": 110,
+        "cost": 2.4738e-05
+      },
+      "id": "gen-dec-1791918130-ZXD0IMFnSUDmxnDAZ03g",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS1851/robust_quantification": {
+    "llm": {
+      "status": "evidence_found",
+      "score": 78
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "documentary",
+          "probabilities": {
+            "quantified_verifiable": 0.03,
+            "documentary": 0.96,
+            "assertion_only": 0.01,
+            "not_addressed": 0
+          },
+          "confidence": 0.95
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.73
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.84
+        },
+        "strength": {
+          "type": "score",
+          "score": 2.31,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.05,
+            "2": 0.59,
+            "3": 0.36
+          },
+          "confidence": 0.59
+        }
+      },
+      "usage": {
+        "input_tokens": 686,
+        "output_tokens": 110,
+        "cost": 2.8812e-05
+      },
+      "id": "gen-dec-1791918131-xeVQZ0zQV7NJ8DAKovG2",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS1851/safeguards": {
+    "llm": {
+      "status": "evidence_weak",
+      "score": 40
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "documentary",
+          "probabilities": {
+            "quantified_verifiable": 0,
+            "documentary": 0.88,
+            "assertion_only": 0.11,
+            "not_addressed": 0.01
+          },
+          "confidence": 0.84
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.77
+        },
+        "strength": {
+          "type": "score",
+          "score": 1.9,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.11,
+            "2": 0.88,
+            "3": 0.01
+          },
+          "confidence": 0.88
+        }
+      },
+      "usage": {
+        "input_tokens": 651,
+        "output_tokens": 110,
+        "cost": 2.7342e-05
+      },
+      "id": "gen-dec-1791918132-A6amIHUhyUuZ8dtCshOE",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS2505/additionality": {
+    "llm": {
+      "status": "evidence_weak",
+      "score": 38
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "assertion_only",
+          "probabilities": {
+            "quantified_verifiable": 0,
+            "documentary": 0.46,
+            "assertion_only": 0.54,
+            "not_addressed": 0
+          },
+          "confidence": 0.39
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.23
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.82
+        },
+        "strength": {
+          "type": "score",
+          "score": 1.24,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.75,
+            "2": 0.18,
+            "3": 0.04
+          },
+          "confidence": 0.71
+        }
+      },
+      "usage": {
+        "input_tokens": 691,
+        "output_tokens": 111,
+        "cost": 2.9022e-05
+      },
+      "id": "gen-dec-1791918133-b0BuZ8q1ySjoeGli1py2",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS2505/no_double_counting": {
+    "llm": {
+      "status": "evidence_found",
+      "score": 85
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "documentary",
+          "probabilities": {
+            "quantified_verifiable": 0,
+            "documentary": 0.99,
+            "assertion_only": 0.01,
+            "not_addressed": 0
+          },
+          "confidence": 0.99
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.15
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.82
+        },
+        "strength": {
+          "type": "score",
+          "score": 2.1,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.31,
+            "2": 0.28,
+            "3": 0.41
+          },
+          "confidence": 0.1
+        }
+      },
+      "usage": {
+        "input_tokens": 657,
+        "output_tokens": 110,
+        "cost": 2.7594e-05
+      },
+      "id": "gen-dec-1791918134-uBXC7MTVnl4CfaO3KJmk",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS2505/permanence": {
+    "llm": {
+      "status": "not_applicable",
+      "score": null
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "not_addressed",
+          "probabilities": {
+            "quantified_verifiable": 0,
+            "documentary": 0.01,
+            "assertion_only": 0.1,
+            "not_addressed": 0.89
+          },
+          "confidence": 0.85
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.73
+        },
+        "strength": {
+          "type": "score",
+          "score": 0.65,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0.36,
+            "1": 0.63,
+            "2": 0.01,
+            "3": 0
+          },
+          "confidence": 0.63
+        }
+      },
+      "usage": {
+        "input_tokens": 617,
+        "output_tokens": 110,
+        "cost": 2.5914e-05
+      },
+      "id": "gen-dec-1791918134-pHdfMyUNsAKomhvGgQ7q",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS2505/robust_quantification": {
+    "llm": {
+      "status": "evidence_found",
+      "score": 85
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "quantified_verifiable",
+          "probabilities": {
+            "quantified_verifiable": 0.82,
+            "documentary": 0.17,
+            "assertion_only": 0.01,
+            "not_addressed": 0
+          },
+          "confidence": 0.76
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.29
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.83
+        },
+        "strength": {
+          "type": "score",
+          "score": 2.34,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.59,
+            "3": 0.38
+          },
+          "confidence": 0.59
+        }
+      },
+      "usage": {
+        "input_tokens": 703,
+        "output_tokens": 112,
+        "cost": 2.9526e-05
+      },
+      "id": "gen-dec-1791918135-dme1dsW5QtgxtB8NuNwK",
+      "provider": "TypeSafe"
+    }
+  },
+  "VCS2505/safeguards": {
+    "llm": {
+      "status": "evidence_found",
+      "score": 85
+    },
+    "jev": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "evidence_level": {
+          "type": "choice",
+          "choice": "documentary",
+          "probabilities": {
+            "quantified_verifiable": 0,
+            "documentary": 0.88,
+            "assertion_only": 0.12,
+            "not_addressed": 0
+          },
+          "confidence": 0.84
+        },
+        "independent": {
+          "type": "noul",
+          "noul": 0.23
+        },
+        "needs_review": {
+          "type": "noul",
+          "noul": 0.84
+        },
+        "strength": {
+          "type": "score",
+          "score": 1.88,
+          "legend": {
+            "0": "No evidence",
+            "1": "Assertion only",
+            "2": "Partial documentary evidence",
+            "3": "Strong, specific, checkable evidence"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.14,
+            "2": 0.84,
+            "3": 0.02
+          },
+          "confidence": 0.84
+        }
+      },
+      "usage": {
+        "input_tokens": 717,
+        "output_tokens": 110,
+        "cost": 3.0114e-05
+      },
+      "id": "gen-dec-1791918136-lhT8XW7TetnYKwoYZv6S",
+      "provider": "TypeSafe"
+    }
+  }
+}

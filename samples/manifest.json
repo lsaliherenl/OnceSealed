@@ -1,0 +1,61 @@
+{
+  "note": "Verra project documents used in the demo. PDFs are downloaded manually into samples/pdfs/ and are NOT committed. sha256 is filled in after download.",
+  "documents": [
+    {
+      "project_id": "VCS1477",
+      "project_name": "Katingan Peatland Restoration and Conservation Project",
+      "category": "REDD+ / peatland (VM0007)",
+      "icvcm_context": "Forest carbon; permanence and safeguards are the key questions.",
+      "registry_url": "https://registry.verra.org/app/projectDetail/VCS/1477",
+      "doc_type": "VCS Project Description",
+      "file_name": "CCB VCS PD 1477_30.11.2025_v4.pdf",
+      "local_path": "samples/pdfs/VCS1477_PD.pdf",
+      "sha256": "f2c4ea5cb1f617445cd4583a0835f21f3c853139bb9aff3df9f53e45c021b03f",
+      "methodology": "VM0007",
+      "methodology_version": "1.5",
+      "reversal_risk": true
+    },
+    {
+      "project_id": "VCS1851",
+      "project_name": "Renewable Solar Power Project by ReNew Solar Power Private Limited",
+      "category": "Grid-connected solar (ACM0002)",
+      "icvcm_context": "ICVCM (Aug 2024) rejected current grid-connected renewable methodologies on additionality grounds.",
+      "registry_url": "https://registry.verra.org/app/projectDetail/VCS/1851",
+      "doc_type": "VCS Project Description (joint PD/MR)",
+      "file_name": "VCS Joint PDMR_Renew Power_V02_29.01.19.pdf",
+      "local_path": "samples/pdfs/VCS1851_PD.pdf",
+      "sha256": "ec4a5b85922c7a42435d783dbecdbe0c31b534b1870ebf61eae0b9f6bdfe8fc3",
+      "methodology": "ACM0002",
+      "methodology_version": "19",
+      "reversal_risk": false
+    },
+    {
+      "project_id": "VCS138",
+      "project_name": "Greater New Bedford LFG Utilization Project",
+      "category": "Landfill gas (ACM0001)",
+      "icvcm_context": "ICVCM approved ACM0001 v15-19 for the CCP label, with conditions.",
+      "registry_url": "https://registry.verra.org/app/projectDetail/VCS/138",
+      "doc_type": "VCS Project Description",
+      "file_name": "PROJ_DESC_138_12MAY2016.pdf",
+      "local_path": "samples/pdfs/VCS138_PD.pdf",
+      "sha256": "8c22eb7d83ff957fa785940a206c03b5adc4b0f7506ea2d98d5fd455ab44e104",
+      "methodology": "ACM0001",
+      "methodology_version": "16",
+      "reversal_risk": false
+    },
+    {
+      "project_id": "VCS2505",
+      "project_name": "Fuel Efficient Cooking in South Africa",
+      "category": "Cookstoves (VMR0006) - optional",
+      "icvcm_context": "Cookstove crediting has faced over-crediting criticism; optional fourth case.",
+      "registry_url": "https://registry.verra.org/app/projectDetail/VCS/2505",
+      "doc_type": "VCS Project Description",
+      "file_name": "Fuel Efficient Cooking in South Africa Grouped PDD_v9_Clean.pdf",
+      "local_path": "samples/pdfs/VCS2505_PD.pdf",
+      "sha256": "1d09240addf6b933de31de7492b798775ddf16183425b8d0eff00e6f0e5d810a",
+      "methodology": "VMR0006",
+      "methodology_version": null,
+      "reversal_risk": false
+    }
+  ]
+}
