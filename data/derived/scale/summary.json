@@ -1,0 +1,40 @@
+{
+  "block_gas_limit": 36000000,
+  "real_history_retirements": 38382,
+  "VCS766-2009-linear": {
+    "replayed": 7467,
+    "succeeded": 7466,
+    "first_failure": 7467,
+    "gas_first": 214395,
+    "gas_last": 35997313,
+    "gas_max": 35997313,
+    "median_latency_ms": 111.3
+  },
+  "VCS766-2009-hinted": {
+    "replayed": 38382,
+    "succeeded": 38382,
+    "first_failure": null,
+    "gas_first": 238996,
+    "gas_last": 211368,
+    "gas_max": 238996,
+    "median_latency_ms": 111.3
+  },
+  "VCS1477-2020-linear": {
+    "replayed": 1001,
+    "succeeded": 1001,
+    "first_failure": null,
+    "gas_first": 214395,
+    "gas_last": 4978219,
+    "gas_max": 4978219,
+    "median_latency_ms": 109.5
+  },
+  "VCS1477-2020-hinted": {
+    "replayed": 1001,
+    "succeeded": 1001,
+    "first_failure": null,
+    "gas_first": 239073,
+    "gas_last": 211445,
+    "gas_max": 239073,
+    "median_latency_ms": 109.6
+  }
+}
