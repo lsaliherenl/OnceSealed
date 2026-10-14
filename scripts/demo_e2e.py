@@ -3,7 +3,7 @@
     python scripts/demo_e2e.py
 
 Starts a throwaway Anvil node, deploys the registry, then:
-  1. registers a simulated issuance batch for a real project (VCS1477)
+  1. registers an issuance batch for a real project (VCS1477): real vintage and quantity, simulated serials
   2. anchors the published quality report (reports/VCS1477.json)
   3. a fictional buyer retires serials 1-5000; only a commitment goes on-chain
   4. a second buyer tries 4000-6000 -> rejected with AlreadyRetired
@@ -22,7 +22,7 @@ from pathlib import Path
 from core.chain import anvil
 from core.chain.registry import Registry, RegistryError, connect
 from core.config import PROJECT_ROOT, auditor_box_keys, chain_settings
-from core.data.batches import IssuanceBatch
+from core.data.batches import load_batches
 from core.privacy.commitment import new_salt, to_hex
 from core.privacy.identity import fictional_lei
 from core.privacy.vault import VaultStore
@@ -64,10 +64,11 @@ def run(rpc: str) -> None:
     rng = random.Random(7)
     buyer_a, buyer_b = fictional_lei(rng), fictional_lei(rng)
 
-    step(1, "Register a simulated issuance batch for VCS1477 (Katingan)")
-    batch = IssuanceBatch("VCS1477", vintage=2020, batch_no=1, first_serial=1, last_serial=100_000)
+    step(1, "Register an issuance batch for VCS1477 (Katingan): real vintage and quantity, simulated serials")
+    batch = next(b for b in load_batches("VCS1477") if b.vintage == 2020)
     tx = app.ensure_batch(batch)
-    print(f"    batch {batch.key}  serials {batch.first_serial}-{batch.last_serial}  (gas {tx.gas_used})")
+    print(f"    batch {batch.key}  {batch.quantity:,} credits, serials {batch.first_serial}-{batch.last_serial}"
+          f"  (gas {tx.gas_used})")
 
     step(2, "Anchor the published quality report")
     report = json.loads((PROJECT_ROOT / "reports" / "VCS1477.json").read_text(encoding="utf-8"))

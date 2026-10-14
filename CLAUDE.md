@@ -25,7 +25,12 @@ Bu dosya projenin iç bağlamıdır. Her oturumda önce bunu oku, tasarım kural
 
 ## Problem (sunumda kullanılacak)
 
-- **Ana rakam (kendimiz hesaplayacağız):** OffsetsDB'de iptal kayıtlarının ne kadarında "kimin adına iptal edildiği" bilgisi yok. CarbonPlan'in kendi yazısı: 1,34 milyar iptalin yalnızca 0,67 milyarında bu bilgi var (~%50). https://carbonplan.org/blog/offsets-db-additions
+- **Kendi hesabımız (14 Ekim, `scripts/anonymity_stats.py` → `docs/anonymity_stats.md`, grafik `docs/figures/anonymity_trend.png`):** OffsetsDB 2026-06-01 anlık görüntüsü, 495 bin iptal, 1,59 milyar ton.
+  - **Açıkça "gizli" işaretlenen iptallerin ton payı: ≤2018'de %0,4 → 2023-26'da %17,2** ("not disclosed", "not public", "anonymous", "private offset"; muhafazakâr alt sınır). Ana slayt rakamı bu.
+  - **2023-26'da tonların %52,9-55,5'inde alıcı belirlenemiyor** (aralık: isim deseni tanınmayan serbest notlar).
+  - Sınıflar (`core/data/anonymity.py`): named, named_in_note, intermediary_only, explicitly_undisclosed, generic_note, no_information. `retirement_account` sayılmaz (aracı hesap sahibi). "Private Limited" gibi şirket adları anonim sayılmaz (testli).
+  - Uyarı: "no_information" kısmen kayıt sistemlerinin yayımlama pratiğini yansıtır (ACR/CAR'da eski yıllarda çok yüksek); "alıcının tercihi" diye sunma, açık "gizli" işaretini öne çıkar.
+- **Eski ana rakam notu (bilgi için):** OffsetsDB'de iptal kayıtlarının ne kadarında "kimin adına iptal edildiği" bilgisi yok. CarbonPlan'in kendi yazısı: 1,34 milyar iptalin yalnızca 0,67 milyarında bu bilgi var (~%50). https://carbonplan.org/blog/offsets-db-additions
   - "Anonim" tanımını açık yap: boş alan / kod veya kısaltma (ör. "DL") / aracı adına ("on behalf of client") ayrı kategoriler.
 - Destekleyici (ikincil, kaynaksız olduğunu bil): Relae, son 3 yılda spot piyasadaki iptallerin %55'inin anonim olduğunu söylüyor ama kaynak göstermiyor. https://relae.co/blog/voluntary-carbon-market-trends-2026
 - Greenhushing: şirketler dava korkusuyla iddialarını gizliyor. (400+ yaptırım rakamı bir blogdan, doğrulanmadı; sadece eğilim olarak kullan.)
@@ -224,7 +229,7 @@ core/
   data/             OffsetsDB yükleme, simüle seri üretimi
 app/                Streamlit (çok sayfalı)
 tests/              pytest + vectors.json (Foundry ile ortak)
-notebooks/          anonymity_stats.ipynb
+docs/anonymity_stats.md  anonimlik analizi (scripts/anonymity_stats.py üretir)
 reports/            yayımlanan kalite raporları (JSON)
 samples/            manifest.json (PDF URL + SHA-256), PDF'lerin kendisi değil
 docs/               mimari diyagram, demo senaryosu, değerlendirme sonuçları
@@ -247,11 +252,11 @@ docs/               mimari diyagram, demo senaryosu, değerlendirme sonuçları
 
 | # | Tarih | İş paketi | Bitti sayılması için |
 |---|---|---|---|
-| 1 | 14-15 Ekim | `RetirementRegistry` + Foundry testleri | Tüm testler geçer; `forge test` CI'da |
-| 2 | 15-16 Ekim | Gizlilik modülü (`core/privacy`): kurgusal LEI üretimi (mod-97), taahhüt, SealedBox kasası (SQLite), makbuz; `tests/vectors.json` | Python ve Foundry aynı vektörlerle aynı hash'i üretir |
-| 3 | 16-17 Ekim | Zincir istemcisi (`core/chain`, web3.py) + deploy betiği; Anvil'de uçtan uca senaryo | Parti → rapor → iptal → örtüşme reddi → denetçi onayı → `verifyClaim`, tek komutla |
-| 4 | 17 Ekim | Simüle seri verisi (`core/data`): OffsetsDB ihraç kayıtlarından Verra biçiminde partiler | 4 proje için partiler hazır |
-| 5 | 18 Ekim | Anonimlik notebook'u (OffsetsDB) | Sunum için kendi hesapladığımız oran + grafik |
+| 1 | 14 Ekim ✓ | `RetirementRegistry` + Foundry testleri | Bitti |
+| 2 | 14 Ekim ✓ | Gizlilik modülü (`core/privacy`): kurgusal LEI üretimi (mod-97), taahhüt, SealedBox kasası (SQLite), makbuz; `tests/vectors.json` | Python ve Foundry aynı vektörlerle aynı hash'i üretir |
+| 3 | 14 Ekim ✓ | Zincir istemcisi (`core/chain`, web3.py) + deploy betiği; Anvil'de uçtan uca senaryo | Parti → rapor → iptal → örtüşme reddi → denetçi onayı → `verifyClaim`, tek komutla |
+| 4 | ~~17 Ekim~~ **14 Ekim ✓** | Simüle seri verisi: `scripts/build_batches.py` → `data/batches.json` (64 parti, gerçek vintage/tarih/miktar, seriler 1..miktar) | Bitti |
+| 5 | ~~18 Ekim~~ **14 Ekim ✓** | Anonimlik analizi (notebook yerine betik + rapor + grafik) | Bitti |
 | 6 | 18-20 Ekim | Streamlit: alıcı, herkese açık doğrulama, denetçi, proje kalitesi ekranları | Demo senaryosu arayüzden baştan sona oynar |
 | 7 | 21 Ekim | Sepolia deploy + Etherscan doğrulama; raporların zincire yazılması | Etherscan'de doğrulanmış sözleşme ve işlemler |
 | 8 | 21-22 Ekim | (Opsiyonel) etiketli küme / Turnike karşılaştırması | Turnike durumuna göre karar |

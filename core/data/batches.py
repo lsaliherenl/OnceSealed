@@ -6,8 +6,10 @@ batch key is defined here and nowhere else, because batchId = keccak256(key).
 Serial labels carry a "SIM" prefix so nobody mistakes them for real Verra serials.
 """
 
+import json
 from dataclasses import dataclass
 
+from core.config import PROJECT_ROOT
 from core.privacy.identity import project_id as project_id_bytes
 from core.privacy.identity import text_id
 
@@ -43,3 +45,14 @@ class IssuanceBatch:
     def serial_label(self, start: int, end: int) -> str:
         """Human-readable label for a range in this batch (simulated, not a real Verra serial)."""
         return f"SIM-{self.project_id}-{self.vintage}-{self.batch_no:03d}-{start:09d}-{end:09d}"
+
+
+BATCHES_PATH = PROJECT_ROOT / "data" / "batches.json"
+
+
+def load_batches(project_id: str | None = None) -> list[IssuanceBatch]:
+    """Demo batches built by scripts/build_batches.py from real OffsetsDB issuance records."""
+    data = json.loads(BATCHES_PATH.read_text(encoding="utf-8"))
+    out = [IssuanceBatch(b["project_id"], b["vintage"], b["batch_no"], b["first_serial"], b["last_serial"])
+           for b in data["batches"]]
+    return [b for b in out if project_id is None or b.project_id == project_id]

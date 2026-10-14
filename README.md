@@ -22,9 +22,14 @@ OnceSealed is a prototype verification and privacy layer that could sit on top o
 
 Companies increasingly hide who retires carbon credits ("greenhushing"), while the market needs auditability.
 
-- In OffsetsDB, only 0.67 billion of 1.34 billion retired credits carry information about who benefits from the
-  retirement ([CarbonPlan](https://carbonplan.org/blog/offsets-db-additions)).
-- **TODO:** our own anonymity statistic computed from the OffsetsDB snapshot (`notebooks/anonymity_stats.ipynb`).
+Our analysis of 495,000 retirement records (1.59 billion tonnes, 7 registries) in CarbonPlan's OffsetsDB
+([full method and tables](docs/anonymity_stats.md)):
+
+- Retired tonnes **explicitly marked "not disclosed", "not public" or "anonymous" rose from 0.4% (up to 2018) to 17.2%
+  (2023–2026)**.
+- In 2023–2026, **53–55%** of retired tonnes name no identifiable beneficiary at all.
+
+![Explicitly undisclosed retirements are rising](docs/figures/anonymity_trend.png)
 
 The tension: buyers want confidentiality; regulators, auditors and the public want proof that each credit was
 retired exactly once and that its quality claims are grounded in evidence.
@@ -169,7 +174,8 @@ python scripts/assess_project.py VCS1851
 - [x] Privacy module (commitments, sealed-box audit vault) with Python ↔ Solidity test vectors
 - [x] Python chain client and end-to-end flow on a local chain (`scripts/demo_e2e.py`)
 - [ ] Streamlit app: buyer, public verification, auditor and project quality views
-- [ ] Anonymity statistic from OffsetsDB
+- [x] Anonymity statistic from OffsetsDB ([docs/anonymity_stats.md](docs/anonymity_stats.md))
+- [x] Issuance batches from real OffsetsDB issuance records (`data/batches.json`, simulated serials)
 - [ ] Human-labelled evaluation set; compare decision models on it
 - [ ] Demo video
 

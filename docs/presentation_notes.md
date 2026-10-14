@@ -22,7 +22,8 @@
 | Rakam | Kaynak | Not |
 |---|---|---|
 | OffsetsDB'deki 1,34 milyar iptalin yalnızca 0,67 milyarında kimin adına iptal edildiği bilgisi var (~%50) | [CarbonPlan](https://carbonplan.org/blog/offsets-db-additions) | Güvenilir, birincil kaynak |
-| **Kendi hesapladığımız anonimlik oranı** | OffsetsDB anlık görüntüsü (2026-06-01) | **TODO** (iş paketi 5). İlk slayta bu girecek |
+| **Açıkça "gizli" işaretlenen iptallerin ton payı ≤2018'de %0,4 → 2023-26'da %17,2** | Kendi hesabımız, OffsetsDB 2026-06-01 ([docs/anonymity_stats.md](anonymity_stats.md)) | **İlk slayt.** Grafik: `docs/figures/anonymity_trend.png` |
+| 2023-26'da iptal edilen tonların %53-55'inde alıcı belirlenemiyor | Kendi hesabımız | İkinci cümle. "Kayıt sistemi pratiği de etkiliyor" uyarısını bil |
 | Spot piyasada iptallerin %55'i anonim | [Relae](https://relae.co/blog/voluntary-carbon-market-trends-2026) | Kaynak göstermiyor; ana rakam yapma |
 | ICVCM, şebekeye bağlı yenilenebilir enerji metodolojilerini ek katkı gerekçesiyle reddetti (Ağu 2024) | [ICVCM](https://icvcm.org/carbon-credits-from-current-renewable-energy-methodologies-will-not-receive-high-integrity-ccp-label/) | Kalite sorununun somut örneği |
 
@@ -31,6 +32,14 @@ Piyasa ise her kredinin tek bir kez kullanıldığının ve kalite iddialarını
 Bugün ikisi aynı anda sağlanamıyor. OnceSealed ikisini birlikte sağlıyor.
 
 **EN:** *"Buyers want confidentiality. Markets need auditability. Today you have to choose. We think you shouldn't."*
+
+**İlk slayt cümlesi (EN):** *"We analysed 495,000 retirements in OffsetsDB. The share of retired tonnes explicitly marked
+'not disclosed' went from almost zero before 2019 to 17% in 2023–2026 — and more than half still name no one at all."*
+
+**Jüri sorarsa ("bu rakam ne kadar sağlam?"):** %17 sadece açık ifadelere ("not disclosed", "anonymous" vb.) dayanıyor,
+yani alt sınır. "Belirlenemeyen" oranı kısmen kayıt sistemlerinin neyi yayımladığına da bağlı; bu yüzden aralık
+veriyoruz ve yöntemi tabloyla birlikte yayımladık. Sınıflandırıcı test edildi: "XYZ Private Limited" gibi şirket adları
+anonim sayılmıyor.
 
 ## 3. Çözüm: üç parça
 
@@ -175,7 +184,7 @@ silinemez. Operator'ün kasaya yazdığını değiştirmesi de mümkün değil, 
 
 ## 10. Yapılacaklar (sunum için)
 
-- [ ] Anonimlik oranını hesapla ve grafik çıkar (iş paketi 5)
+- [x] Anonimlik oranı ve grafik (`docs/figures/anonymity_trend.png`)
 - [ ] Sepolia adresi ve Etherscan bağlantıları (iş paketi 7)
 - [ ] Arayüz ekran görüntüleri (iş paketi 6)
 - [ ] Mimari diyagram
