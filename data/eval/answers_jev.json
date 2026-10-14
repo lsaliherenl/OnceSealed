@@ -1,0 +1,3198 @@
+{
+ "question_set_version": "qs-v2-checklist",
+ "model": "jev",
+ "runs": [
+  {
+   "VCS1477-additionality|A1": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1224,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-additionality|A2": {
+    "p_yes": 0.53,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1224,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-additionality|A3": {
+    "p_yes": 0.91,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1224,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-additionality|A4": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1224,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-permanence|P1": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1183,
+    "cost": 3.822e-05
+   },
+   "VCS1477-permanence|P2": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1183,
+    "cost": 3.822e-05
+   },
+   "VCS1477-permanence|P3": {
+    "p_yes": 0.96,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1183,
+    "cost": 3.822e-05
+   },
+   "VCS1477-robust_quantification|Q1": {
+    "p_yes": 0.2,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1225,
+    "cost": 4.3974e-05
+   },
+   "VCS1477-robust_quantification|Q2": {
+    "p_yes": 0.37,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1225,
+    "cost": 4.3974e-05
+   },
+   "VCS1477-robust_quantification|Q3": {
+    "p_yes": 0.95,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1225,
+    "cost": 4.3974e-05
+   },
+   "VCS1477-robust_quantification|Q4": {
+    "p_yes": 0.75,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1225,
+    "cost": 4.3974e-05
+   },
+   "VCS1477-no_double_counting|D1": {
+    "p_yes": 0.31,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1174,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-no_double_counting|D2": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1174,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-no_double_counting|D3": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1174,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-safeguards|S1": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1179,
+    "cost": 4.536e-05
+   },
+   "VCS1477-safeguards|S2": {
+    "p_yes": 0.73,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1179,
+    "cost": 4.536e-05
+   },
+   "VCS1477-safeguards|S3": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1179,
+    "cost": 4.536e-05
+   },
+   "VCS1477-safeguards|S4": {
+    "p_yes": 0.22,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1179,
+    "cost": 4.536e-05
+   },
+   "VCS1851-additionality|A1": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1264,
+    "cost": 4.1664e-05
+   },
+   "VCS1851-additionality|A2": {
+    "p_yes": 0.63,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1264,
+    "cost": 4.1664e-05
+   },
+   "VCS1851-additionality|A3": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1264,
+    "cost": 4.1664e-05
+   },
+   "VCS1851-additionality|A4": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1264,
+    "cost": 4.1664e-05
+   },
+   "VCS1851-robust_quantification|Q1": {
+    "p_yes": 0.79,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 817,
+    "cost": 4.053e-05
+   },
+   "VCS1851-robust_quantification|Q2": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 817,
+    "cost": 4.053e-05
+   },
+   "VCS1851-robust_quantification|Q3": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 817,
+    "cost": 4.053e-05
+   },
+   "VCS1851-robust_quantification|Q4": {
+    "p_yes": 0.21,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 817,
+    "cost": 4.053e-05
+   },
+   "VCS1851-no_double_counting|D1": {
+    "p_yes": 0.42,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 864,
+    "cost": 4.452e-05
+   },
+   "VCS1851-no_double_counting|D2": {
+    "p_yes": 0.98,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 864,
+    "cost": 4.452e-05
+   },
+   "VCS1851-no_double_counting|D3": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 864,
+    "cost": 4.452e-05
+   },
+   "VCS1851-safeguards|S1": {
+    "p_yes": 0.96,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 816,
+    "cost": 3.5154e-05
+   },
+   "VCS1851-safeguards|S2": {
+    "p_yes": 0.09,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 816,
+    "cost": 3.5154e-05
+   },
+   "VCS1851-safeguards|S3": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 816,
+    "cost": 3.5154e-05
+   },
+   "VCS1851-safeguards|S4": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 816,
+    "cost": 3.5154e-05
+   },
+   "VCS138-additionality|A1": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 835,
+    "cost": 3.7506e-05
+   },
+   "VCS138-additionality|A2": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 835,
+    "cost": 3.7506e-05
+   },
+   "VCS138-additionality|A3": {
+    "p_yes": 0.35,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 835,
+    "cost": 3.7506e-05
+   },
+   "VCS138-additionality|A4": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 835,
+    "cost": 3.7506e-05
+   },
+   "VCS138-robust_quantification|Q1": {
+    "p_yes": 0.74,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 843,
+    "cost": 4.8888e-05
+   },
+   "VCS138-robust_quantification|Q2": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 843,
+    "cost": 4.8888e-05
+   },
+   "VCS138-robust_quantification|Q3": {
+    "p_yes": 0.09,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 843,
+    "cost": 4.8888e-05
+   },
+   "VCS138-robust_quantification|Q4": {
+    "p_yes": 0.22,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 843,
+    "cost": 4.8888e-05
+   },
+   "VCS138-no_double_counting|D1": {
+    "p_yes": 0.94,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 817,
+    "cost": 4.1454e-05
+   },
+   "VCS138-no_double_counting|D2": {
+    "p_yes": 0.98,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 817,
+    "cost": 4.1454e-05
+   },
+   "VCS138-no_double_counting|D3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 817,
+    "cost": 4.1454e-05
+   },
+   "VCS138-safeguards|S1": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 915,
+    "cost": 3.192e-05
+   },
+   "VCS138-safeguards|S2": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 915,
+    "cost": 3.192e-05
+   },
+   "VCS138-safeguards|S3": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 915,
+    "cost": 3.192e-05
+   },
+   "VCS138-safeguards|S4": {
+    "p_yes": 0.01,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 915,
+    "cost": 3.192e-05
+   },
+   "VCS2505-additionality|A1": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 847,
+    "cost": 4.4646e-05
+   },
+   "VCS2505-additionality|A2": {
+    "p_yes": 0.59,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 847,
+    "cost": 4.4646e-05
+   },
+   "VCS2505-additionality|A3": {
+    "p_yes": 0.91,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 847,
+    "cost": 4.4646e-05
+   },
+   "VCS2505-additionality|A4": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 847,
+    "cost": 4.4646e-05
+   },
+   "VCS2505-robust_quantification|Q1": {
+    "p_yes": 0.16,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 858,
+    "cost": 4.095e-05
+   },
+   "VCS2505-robust_quantification|Q2": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 858,
+    "cost": 4.095e-05
+   },
+   "VCS2505-robust_quantification|Q3": {
+    "p_yes": 0.88,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 858,
+    "cost": 4.095e-05
+   },
+   "VCS2505-robust_quantification|Q4": {
+    "p_yes": 0.83,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 858,
+    "cost": 4.095e-05
+   },
+   "VCS2505-no_double_counting|D1": {
+    "p_yes": 0.85,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 842,
+    "cost": 4.6578e-05
+   },
+   "VCS2505-no_double_counting|D2": {
+    "p_yes": 0.5,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 842,
+    "cost": 4.6578e-05
+   },
+   "VCS2505-no_double_counting|D3": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 842,
+    "cost": 4.6578e-05
+   },
+   "VCS2505-safeguards|S1": {
+    "p_yes": 0.23,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.0614e-05
+   },
+   "VCS2505-safeguards|S2": {
+    "p_yes": 0.76,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.0614e-05
+   },
+   "VCS2505-safeguards|S3": {
+    "p_yes": 0.2,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.0614e-05
+   },
+   "VCS2505-safeguards|S4": {
+    "p_yes": 0.18,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.0614e-05
+   },
+   "VCS1742-additionality|A1": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 935,
+    "cost": 4.5738e-05
+   },
+   "VCS1742-additionality|A2": {
+    "p_yes": 0.18,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 935,
+    "cost": 4.5738e-05
+   },
+   "VCS1742-additionality|A3": {
+    "p_yes": 0.17,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 935,
+    "cost": 4.5738e-05
+   },
+   "VCS1742-additionality|A4": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 935,
+    "cost": 4.5738e-05
+   },
+   "VCS1742-robust_quantification|Q1": {
+    "p_yes": 0.23,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 848,
+    "cost": 4.347e-05
+   },
+   "VCS1742-robust_quantification|Q2": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 848,
+    "cost": 4.347e-05
+   },
+   "VCS1742-robust_quantification|Q3": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 848,
+    "cost": 4.347e-05
+   },
+   "VCS1742-robust_quantification|Q4": {
+    "p_yes": 0.27,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 848,
+    "cost": 4.347e-05
+   },
+   "VCS1742-no_double_counting|D1": {
+    "p_yes": 0.39,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 3.9144e-05
+   },
+   "VCS1742-no_double_counting|D2": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 3.9144e-05
+   },
+   "VCS1742-no_double_counting|D3": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 3.9144e-05
+   },
+   "VCS1742-safeguards|S1": {
+    "p_yes": 0.49,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 3.948e-05
+   },
+   "VCS1742-safeguards|S2": {
+    "p_yes": 0.19,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 3.948e-05
+   },
+   "VCS1742-safeguards|S3": {
+    "p_yes": 0.83,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 3.948e-05
+   },
+   "VCS1742-safeguards|S4": {
+    "p_yes": 0.2,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 3.948e-05
+   },
+   "VCS1728-additionality|A1": {
+    "p_yes": 0.72,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 882,
+    "cost": 4.0194e-05
+   },
+   "VCS1728-additionality|A2": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 882,
+    "cost": 4.0194e-05
+   },
+   "VCS1728-additionality|A3": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 882,
+    "cost": 4.0194e-05
+   },
+   "VCS1728-additionality|A4": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 882,
+    "cost": 4.0194e-05
+   },
+   "VCS1728-robust_quantification|Q1": {
+    "p_yes": 0.2,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1594,
+    "cost": 3.7716e-05
+   },
+   "VCS1728-robust_quantification|Q2": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1594,
+    "cost": 3.7716e-05
+   },
+   "VCS1728-robust_quantification|Q3": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1594,
+    "cost": 3.7716e-05
+   },
+   "VCS1728-robust_quantification|Q4": {
+    "p_yes": 0.28,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 1594,
+    "cost": 3.7716e-05
+   },
+   "VCS1728-no_double_counting|D1": {
+    "p_yes": 0.2,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 813,
+    "cost": 4.1034e-05
+   },
+   "VCS1728-no_double_counting|D2": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 813,
+    "cost": 4.1034e-05
+   },
+   "VCS1728-no_double_counting|D3": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 813,
+    "cost": 4.1034e-05
+   },
+   "VCS1728-safeguards|S1": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 753,
+    "cost": 4.074e-05
+   },
+   "VCS1728-safeguards|S2": {
+    "p_yes": 0.97,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 753,
+    "cost": 4.074e-05
+   },
+   "VCS1728-safeguards|S3": {
+    "p_yes": 0.17,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 753,
+    "cost": 4.074e-05
+   },
+   "VCS1728-safeguards|S4": {
+    "p_yes": 0.18,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 753,
+    "cost": 4.074e-05
+   },
+   "VCS2609-additionality|A1": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 803,
+    "cost": 4.0404e-05
+   },
+   "VCS2609-additionality|A2": {
+    "p_yes": 0.9,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 803,
+    "cost": 4.0404e-05
+   },
+   "VCS2609-additionality|A3": {
+    "p_yes": 0.15,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 803,
+    "cost": 4.0404e-05
+   },
+   "VCS2609-additionality|A4": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 803,
+    "cost": 4.0404e-05
+   },
+   "VCS2609-permanence|P1": {
+    "p_yes": 0.98,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 809,
+    "cost": 4.2336e-05
+   },
+   "VCS2609-permanence|P2": {
+    "p_yes": 0.16,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 809,
+    "cost": 4.2336e-05
+   },
+   "VCS2609-permanence|P3": {
+    "p_yes": 0.73,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 809,
+    "cost": 4.2336e-05
+   },
+   "VCS2609-robust_quantification|Q1": {
+    "p_yes": 0.12,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 848,
+    "cost": 4.3596e-05
+   },
+   "VCS2609-robust_quantification|Q2": {
+    "p_yes": 0.63,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 848,
+    "cost": 4.3596e-05
+   },
+   "VCS2609-robust_quantification|Q3": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 848,
+    "cost": 4.3596e-05
+   },
+   "VCS2609-robust_quantification|Q4": {
+    "p_yes": 0.8,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 848,
+    "cost": 4.3596e-05
+   },
+   "VCS2609-no_double_counting|D1": {
+    "p_yes": 0.86,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 782,
+    "cost": 3.6918e-05
+   },
+   "VCS2609-no_double_counting|D2": {
+    "p_yes": 0.95,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 782,
+    "cost": 3.6918e-05
+   },
+   "VCS2609-no_double_counting|D3": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 782,
+    "cost": 3.6918e-05
+   },
+   "VCS2609-safeguards|S1": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 725,
+    "cost": 4.599e-05
+   },
+   "VCS2609-safeguards|S2": {
+    "p_yes": 0.7,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 725,
+    "cost": 4.599e-05
+   },
+   "VCS2609-safeguards|S3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 725,
+    "cost": 4.599e-05
+   },
+   "VCS2609-safeguards|S4": {
+    "p_yes": 0.96,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 725,
+    "cost": 4.599e-05
+   },
+   "VCS673-additionality|A1": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 828,
+    "cost": 4.1874e-05
+   },
+   "VCS673-additionality|A2": {
+    "p_yes": 0.17,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 828,
+    "cost": 4.1874e-05
+   },
+   "VCS673-additionality|A3": {
+    "p_yes": 0.15,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 828,
+    "cost": 4.1874e-05
+   },
+   "VCS673-additionality|A4": {
+    "p_yes": 0.46,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 828,
+    "cost": 4.1874e-05
+   },
+   "VCS673-permanence|P1": {
+    "p_yes": 0.16,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 859,
+    "cost": 3.8682e-05
+   },
+   "VCS673-permanence|P2": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 859,
+    "cost": 3.8682e-05
+   },
+   "VCS673-permanence|P3": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 859,
+    "cost": 3.8682e-05
+   },
+   "VCS673-robust_quantification|Q1": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 873,
+    "cost": 3.9774e-05
+   },
+   "VCS673-robust_quantification|Q2": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 873,
+    "cost": 3.9774e-05
+   },
+   "VCS673-robust_quantification|Q3": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 873,
+    "cost": 3.9774e-05
+   },
+   "VCS673-robust_quantification|Q4": {
+    "p_yes": 0.86,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 873,
+    "cost": 3.9774e-05
+   },
+   "VCS673-no_double_counting|D1": {
+    "p_yes": 0.44,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.1496e-05
+   },
+   "VCS673-no_double_counting|D2": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.1496e-05
+   },
+   "VCS673-no_double_counting|D3": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.1496e-05
+   },
+   "VCS673-safeguards|S1": {
+    "p_yes": 0.98,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 842,
+    "cost": 3.9942e-05
+   },
+   "VCS673-safeguards|S2": {
+    "p_yes": 0.09,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 842,
+    "cost": 3.9942e-05
+   },
+   "VCS673-safeguards|S3": {
+    "p_yes": 0.94,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 842,
+    "cost": 3.9942e-05
+   },
+   "VCS673-safeguards|S4": {
+    "p_yes": 0.36,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 842,
+    "cost": 3.9942e-05
+   },
+   "VCS2846-additionality|A1": {
+    "p_yes": 0.2,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 568,
+    "cost": 4.4394e-05
+   },
+   "VCS2846-additionality|A2": {
+    "p_yes": 0.86,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 568,
+    "cost": 4.4394e-05
+   },
+   "VCS2846-additionality|A3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 568,
+    "cost": 4.4394e-05
+   },
+   "VCS2846-additionality|A4": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 568,
+    "cost": 4.4394e-05
+   },
+   "VCS2846-robust_quantification|Q1": {
+    "p_yes": 0.09,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 737,
+    "cost": 4.263e-05
+   },
+   "VCS2846-robust_quantification|Q2": {
+    "p_yes": 0.44,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 737,
+    "cost": 4.263e-05
+   },
+   "VCS2846-robust_quantification|Q3": {
+    "p_yes": 0.85,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 737,
+    "cost": 4.263e-05
+   },
+   "VCS2846-robust_quantification|Q4": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 737,
+    "cost": 4.263e-05
+   },
+   "VCS2846-no_double_counting|D1": {
+    "p_yes": 0.69,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 801,
+    "cost": 4.326e-05
+   },
+   "VCS2846-no_double_counting|D2": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 801,
+    "cost": 4.326e-05
+   },
+   "VCS2846-no_double_counting|D3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 801,
+    "cost": 4.326e-05
+   },
+   "VCS2846-safeguards|S1": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 866,
+    "cost": 4.0404e-05
+   },
+   "VCS2846-safeguards|S2": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 866,
+    "cost": 4.0404e-05
+   },
+   "VCS2846-safeguards|S3": {
+    "p_yes": 0.26,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 866,
+    "cost": 4.0404e-05
+   },
+   "VCS2846-safeguards|S4": {
+    "p_yes": 0.2,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 866,
+    "cost": 4.0404e-05
+   },
+   "VCS985-additionality|A1": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 804,
+    "cost": 4.7124e-05
+   },
+   "VCS985-additionality|A2": {
+    "p_yes": 0.89,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 804,
+    "cost": 4.7124e-05
+   },
+   "VCS985-additionality|A3": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 804,
+    "cost": 4.7124e-05
+   },
+   "VCS985-additionality|A4": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 804,
+    "cost": 4.7124e-05
+   },
+   "VCS985-permanence|P1": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 808,
+    "cost": 3.5448e-05
+   },
+   "VCS985-permanence|P2": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 808,
+    "cost": 3.5448e-05
+   },
+   "VCS985-permanence|P3": {
+    "p_yes": 0.83,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 808,
+    "cost": 3.5448e-05
+   },
+   "VCS985-robust_quantification|Q1": {
+    "p_yes": 0.32,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 699,
+    "cost": 4.2084e-05
+   },
+   "VCS985-robust_quantification|Q2": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 699,
+    "cost": 4.2084e-05
+   },
+   "VCS985-robust_quantification|Q3": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 699,
+    "cost": 4.2084e-05
+   },
+   "VCS985-robust_quantification|Q4": {
+    "p_yes": 0.95,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 699,
+    "cost": 4.2084e-05
+   },
+   "VCS985-no_double_counting|D1": {
+    "p_yes": 0.86,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 636,
+    "cost": 4.158e-05
+   },
+   "VCS985-no_double_counting|D2": {
+    "p_yes": 0.97,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 636,
+    "cost": 4.158e-05
+   },
+   "VCS985-no_double_counting|D3": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 636,
+    "cost": 4.158e-05
+   },
+   "VCS985-safeguards|S1": {
+    "p_yes": 0.7,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 794,
+    "cost": 4.2504e-05
+   },
+   "VCS985-safeguards|S2": {
+    "p_yes": 0.49,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 794,
+    "cost": 4.2504e-05
+   },
+   "VCS985-safeguards|S3": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 794,
+    "cost": 4.2504e-05
+   },
+   "VCS985-safeguards|S4": {
+    "p_yes": 0.12,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 794,
+    "cost": 4.2504e-05
+   },
+   "VCS4150-additionality|A1": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 812,
+    "cost": 5.145e-05
+   },
+   "VCS4150-additionality|A2": {
+    "p_yes": 0.64,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 812,
+    "cost": 5.145e-05
+   },
+   "VCS4150-additionality|A3": {
+    "p_yes": 0.18,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 812,
+    "cost": 5.145e-05
+   },
+   "VCS4150-additionality|A4": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 812,
+    "cost": 5.145e-05
+   },
+   "VCS4150-robust_quantification|Q1": {
+    "p_yes": 0.76,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 802,
+    "cost": 4.4352e-05
+   },
+   "VCS4150-robust_quantification|Q2": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 802,
+    "cost": 4.4352e-05
+   },
+   "VCS4150-robust_quantification|Q3": {
+    "p_yes": 0.97,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 802,
+    "cost": 4.4352e-05
+   },
+   "VCS4150-robust_quantification|Q4": {
+    "p_yes": 0.55,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 802,
+    "cost": 4.4352e-05
+   },
+   "VCS4150-no_double_counting|D1": {
+    "p_yes": 0.8,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 787,
+    "cost": 4.4478e-05
+   },
+   "VCS4150-no_double_counting|D2": {
+    "p_yes": 0.84,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 787,
+    "cost": 4.4478e-05
+   },
+   "VCS4150-no_double_counting|D3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 787,
+    "cost": 4.4478e-05
+   },
+   "VCS4150-safeguards|S1": {
+    "p_yes": 0.4,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 794,
+    "cost": 4.032e-05
+   },
+   "VCS4150-safeguards|S2": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 794,
+    "cost": 4.032e-05
+   },
+   "VCS4150-safeguards|S3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 794,
+    "cost": 4.032e-05
+   },
+   "VCS4150-safeguards|S4": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 794,
+    "cost": 4.032e-05
+   }
+  },
+  {
+   "VCS1477-additionality|A1": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 924,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-additionality|A2": {
+    "p_yes": 0.54,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 924,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-additionality|A3": {
+    "p_yes": 0.91,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 924,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-additionality|A4": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 924,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-permanence|P1": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 927,
+    "cost": 3.822e-05
+   },
+   "VCS1477-permanence|P2": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 927,
+    "cost": 3.822e-05
+   },
+   "VCS1477-permanence|P3": {
+    "p_yes": 0.96,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 927,
+    "cost": 3.822e-05
+   },
+   "VCS1477-robust_quantification|Q1": {
+    "p_yes": 0.19,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 899,
+    "cost": 4.3974e-05
+   },
+   "VCS1477-robust_quantification|Q2": {
+    "p_yes": 0.37,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 899,
+    "cost": 4.3974e-05
+   },
+   "VCS1477-robust_quantification|Q3": {
+    "p_yes": 0.95,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 899,
+    "cost": 4.3974e-05
+   },
+   "VCS1477-robust_quantification|Q4": {
+    "p_yes": 0.74,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 899,
+    "cost": 4.3974e-05
+   },
+   "VCS1477-no_double_counting|D1": {
+    "p_yes": 0.31,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 976,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-no_double_counting|D2": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 976,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-no_double_counting|D3": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 976,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-safeguards|S1": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 883,
+    "cost": 4.536e-05
+   },
+   "VCS1477-safeguards|S2": {
+    "p_yes": 0.73,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 883,
+    "cost": 4.536e-05
+   },
+   "VCS1477-safeguards|S3": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 883,
+    "cost": 4.536e-05
+   },
+   "VCS1477-safeguards|S4": {
+    "p_yes": 0.23,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 883,
+    "cost": 4.536e-05
+   },
+   "VCS1851-additionality|A1": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 967,
+    "cost": 4.1664e-05
+   },
+   "VCS1851-additionality|A2": {
+    "p_yes": 0.6,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 967,
+    "cost": 4.1664e-05
+   },
+   "VCS1851-additionality|A3": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 967,
+    "cost": 4.1664e-05
+   },
+   "VCS1851-additionality|A4": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 967,
+    "cost": 4.1664e-05
+   },
+   "VCS1851-robust_quantification|Q1": {
+    "p_yes": 0.77,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 804,
+    "cost": 4.053e-05
+   },
+   "VCS1851-robust_quantification|Q2": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 804,
+    "cost": 4.053e-05
+   },
+   "VCS1851-robust_quantification|Q3": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 804,
+    "cost": 4.053e-05
+   },
+   "VCS1851-robust_quantification|Q4": {
+    "p_yes": 0.21,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 804,
+    "cost": 4.053e-05
+   },
+   "VCS1851-no_double_counting|D1": {
+    "p_yes": 0.41,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 4.452e-05
+   },
+   "VCS1851-no_double_counting|D2": {
+    "p_yes": 0.97,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 4.452e-05
+   },
+   "VCS1851-no_double_counting|D3": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 4.452e-05
+   },
+   "VCS1851-safeguards|S1": {
+    "p_yes": 0.96,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 869,
+    "cost": 3.5154e-05
+   },
+   "VCS1851-safeguards|S2": {
+    "p_yes": 0.09,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 869,
+    "cost": 3.5154e-05
+   },
+   "VCS1851-safeguards|S3": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 869,
+    "cost": 3.5154e-05
+   },
+   "VCS1851-safeguards|S4": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 869,
+    "cost": 3.5154e-05
+   },
+   "VCS138-additionality|A1": {
+    "p_yes": 0.01,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 842,
+    "cost": 3.7506e-05
+   },
+   "VCS138-additionality|A2": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 842,
+    "cost": 3.7506e-05
+   },
+   "VCS138-additionality|A3": {
+    "p_yes": 0.34,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 842,
+    "cost": 3.7506e-05
+   },
+   "VCS138-additionality|A4": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 842,
+    "cost": 3.7506e-05
+   },
+   "VCS138-robust_quantification|Q1": {
+    "p_yes": 0.73,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 857,
+    "cost": 4.8888e-05
+   },
+   "VCS138-robust_quantification|Q2": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 857,
+    "cost": 4.8888e-05
+   },
+   "VCS138-robust_quantification|Q3": {
+    "p_yes": 0.09,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 857,
+    "cost": 4.8888e-05
+   },
+   "VCS138-robust_quantification|Q4": {
+    "p_yes": 0.24,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 857,
+    "cost": 4.8888e-05
+   },
+   "VCS138-no_double_counting|D1": {
+    "p_yes": 0.94,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 846,
+    "cost": 4.1454e-05
+   },
+   "VCS138-no_double_counting|D2": {
+    "p_yes": 0.98,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 846,
+    "cost": 4.1454e-05
+   },
+   "VCS138-no_double_counting|D3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 846,
+    "cost": 4.1454e-05
+   },
+   "VCS138-safeguards|S1": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 770,
+    "cost": 3.192e-05
+   },
+   "VCS138-safeguards|S2": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 770,
+    "cost": 3.192e-05
+   },
+   "VCS138-safeguards|S3": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 770,
+    "cost": 3.192e-05
+   },
+   "VCS138-safeguards|S4": {
+    "p_yes": 0.01,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 770,
+    "cost": 3.192e-05
+   },
+   "VCS2505-additionality|A1": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.4646e-05
+   },
+   "VCS2505-additionality|A2": {
+    "p_yes": 0.57,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.4646e-05
+   },
+   "VCS2505-additionality|A3": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.4646e-05
+   },
+   "VCS2505-additionality|A4": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.4646e-05
+   },
+   "VCS2505-robust_quantification|Q1": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 904,
+    "cost": 4.095e-05
+   },
+   "VCS2505-robust_quantification|Q2": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 904,
+    "cost": 4.095e-05
+   },
+   "VCS2505-robust_quantification|Q3": {
+    "p_yes": 0.88,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 904,
+    "cost": 4.095e-05
+   },
+   "VCS2505-robust_quantification|Q4": {
+    "p_yes": 0.84,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 904,
+    "cost": 4.095e-05
+   },
+   "VCS2505-no_double_counting|D1": {
+    "p_yes": 0.86,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 879,
+    "cost": 4.6578e-05
+   },
+   "VCS2505-no_double_counting|D2": {
+    "p_yes": 0.5,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 879,
+    "cost": 4.6578e-05
+   },
+   "VCS2505-no_double_counting|D3": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 879,
+    "cost": 4.6578e-05
+   },
+   "VCS2505-safeguards|S1": {
+    "p_yes": 0.21,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 847,
+    "cost": 4.0614e-05
+   },
+   "VCS2505-safeguards|S2": {
+    "p_yes": 0.77,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 847,
+    "cost": 4.0614e-05
+   },
+   "VCS2505-safeguards|S3": {
+    "p_yes": 0.21,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 847,
+    "cost": 4.0614e-05
+   },
+   "VCS2505-safeguards|S4": {
+    "p_yes": 0.18,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 847,
+    "cost": 4.0614e-05
+   },
+   "VCS1742-additionality|A1": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 895,
+    "cost": 4.5738e-05
+   },
+   "VCS1742-additionality|A2": {
+    "p_yes": 0.19,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 895,
+    "cost": 4.5738e-05
+   },
+   "VCS1742-additionality|A3": {
+    "p_yes": 0.18,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 895,
+    "cost": 4.5738e-05
+   },
+   "VCS1742-additionality|A4": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 895,
+    "cost": 4.5738e-05
+   },
+   "VCS1742-robust_quantification|Q1": {
+    "p_yes": 0.21,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 772,
+    "cost": 4.347e-05
+   },
+   "VCS1742-robust_quantification|Q2": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 772,
+    "cost": 4.347e-05
+   },
+   "VCS1742-robust_quantification|Q3": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 772,
+    "cost": 4.347e-05
+   },
+   "VCS1742-robust_quantification|Q4": {
+    "p_yes": 0.25,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 772,
+    "cost": 4.347e-05
+   },
+   "VCS1742-no_double_counting|D1": {
+    "p_yes": 0.38,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 847,
+    "cost": 3.9144e-05
+   },
+   "VCS1742-no_double_counting|D2": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 847,
+    "cost": 3.9144e-05
+   },
+   "VCS1742-no_double_counting|D3": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 847,
+    "cost": 3.9144e-05
+   },
+   "VCS1742-safeguards|S1": {
+    "p_yes": 0.49,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 851,
+    "cost": 3.948e-05
+   },
+   "VCS1742-safeguards|S2": {
+    "p_yes": 0.2,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 851,
+    "cost": 3.948e-05
+   },
+   "VCS1742-safeguards|S3": {
+    "p_yes": 0.84,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 851,
+    "cost": 3.948e-05
+   },
+   "VCS1742-safeguards|S4": {
+    "p_yes": 0.19,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 851,
+    "cost": 3.948e-05
+   },
+   "VCS1728-additionality|A1": {
+    "p_yes": 0.74,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 834,
+    "cost": 4.0194e-05
+   },
+   "VCS1728-additionality|A2": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 834,
+    "cost": 4.0194e-05
+   },
+   "VCS1728-additionality|A3": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 834,
+    "cost": 4.0194e-05
+   },
+   "VCS1728-additionality|A4": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 834,
+    "cost": 4.0194e-05
+   },
+   "VCS1728-robust_quantification|Q1": {
+    "p_yes": 0.19,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 995,
+    "cost": 3.7716e-05
+   },
+   "VCS1728-robust_quantification|Q2": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 995,
+    "cost": 3.7716e-05
+   },
+   "VCS1728-robust_quantification|Q3": {
+    "p_yes": 0.12,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 995,
+    "cost": 3.7716e-05
+   },
+   "VCS1728-robust_quantification|Q4": {
+    "p_yes": 0.29,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 995,
+    "cost": 3.7716e-05
+   },
+   "VCS1728-no_double_counting|D1": {
+    "p_yes": 0.19,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 811,
+    "cost": 4.1034e-05
+   },
+   "VCS1728-no_double_counting|D2": {
+    "p_yes": 0.94,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 811,
+    "cost": 4.1034e-05
+   },
+   "VCS1728-no_double_counting|D3": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 811,
+    "cost": 4.1034e-05
+   },
+   "VCS1728-safeguards|S1": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 609,
+    "cost": 4.074e-05
+   },
+   "VCS1728-safeguards|S2": {
+    "p_yes": 0.97,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 609,
+    "cost": 4.074e-05
+   },
+   "VCS1728-safeguards|S3": {
+    "p_yes": 0.18,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 609,
+    "cost": 4.074e-05
+   },
+   "VCS1728-safeguards|S4": {
+    "p_yes": 0.19,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 609,
+    "cost": 4.074e-05
+   },
+   "VCS2609-additionality|A1": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 809,
+    "cost": 4.0404e-05
+   },
+   "VCS2609-additionality|A2": {
+    "p_yes": 0.91,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 809,
+    "cost": 4.0404e-05
+   },
+   "VCS2609-additionality|A3": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 809,
+    "cost": 4.0404e-05
+   },
+   "VCS2609-additionality|A4": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 809,
+    "cost": 4.0404e-05
+   },
+   "VCS2609-permanence|P1": {
+    "p_yes": 0.98,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 898,
+    "cost": 4.2336e-05
+   },
+   "VCS2609-permanence|P2": {
+    "p_yes": 0.15,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 898,
+    "cost": 4.2336e-05
+   },
+   "VCS2609-permanence|P3": {
+    "p_yes": 0.74,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 898,
+    "cost": 4.2336e-05
+   },
+   "VCS2609-robust_quantification|Q1": {
+    "p_yes": 0.12,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 849,
+    "cost": 4.3596e-05
+   },
+   "VCS2609-robust_quantification|Q2": {
+    "p_yes": 0.63,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 849,
+    "cost": 4.3596e-05
+   },
+   "VCS2609-robust_quantification|Q3": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 849,
+    "cost": 4.3596e-05
+   },
+   "VCS2609-robust_quantification|Q4": {
+    "p_yes": 0.79,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 849,
+    "cost": 4.3596e-05
+   },
+   "VCS2609-no_double_counting|D1": {
+    "p_yes": 0.85,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 3.6918e-05
+   },
+   "VCS2609-no_double_counting|D2": {
+    "p_yes": 0.95,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 3.6918e-05
+   },
+   "VCS2609-no_double_counting|D3": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 3.6918e-05
+   },
+   "VCS2609-safeguards|S1": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 823,
+    "cost": 4.599e-05
+   },
+   "VCS2609-safeguards|S2": {
+    "p_yes": 0.7,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 823,
+    "cost": 4.599e-05
+   },
+   "VCS2609-safeguards|S3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 823,
+    "cost": 4.599e-05
+   },
+   "VCS2609-safeguards|S4": {
+    "p_yes": 0.96,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 823,
+    "cost": 4.599e-05
+   },
+   "VCS673-additionality|A1": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 740,
+    "cost": 4.1874e-05
+   },
+   "VCS673-additionality|A2": {
+    "p_yes": 0.17,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 740,
+    "cost": 4.1874e-05
+   },
+   "VCS673-additionality|A3": {
+    "p_yes": 0.15,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 740,
+    "cost": 4.1874e-05
+   },
+   "VCS673-additionality|A4": {
+    "p_yes": 0.48,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 740,
+    "cost": 4.1874e-05
+   },
+   "VCS673-permanence|P1": {
+    "p_yes": 0.17,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 905,
+    "cost": 3.8682e-05
+   },
+   "VCS673-permanence|P2": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 905,
+    "cost": 3.8682e-05
+   },
+   "VCS673-permanence|P3": {
+    "p_yes": 0.94,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 905,
+    "cost": 3.8682e-05
+   },
+   "VCS673-robust_quantification|Q1": {
+    "p_yes": 0.12,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 920,
+    "cost": 3.9774e-05
+   },
+   "VCS673-robust_quantification|Q2": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 920,
+    "cost": 3.9774e-05
+   },
+   "VCS673-robust_quantification|Q3": {
+    "p_yes": 0.09,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 920,
+    "cost": 3.9774e-05
+   },
+   "VCS673-robust_quantification|Q4": {
+    "p_yes": 0.86,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 920,
+    "cost": 3.9774e-05
+   },
+   "VCS673-no_double_counting|D1": {
+    "p_yes": 0.46,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 964,
+    "cost": 4.1496e-05
+   },
+   "VCS673-no_double_counting|D2": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 964,
+    "cost": 4.1496e-05
+   },
+   "VCS673-no_double_counting|D3": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 964,
+    "cost": 4.1496e-05
+   },
+   "VCS673-safeguards|S1": {
+    "p_yes": 0.98,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 881,
+    "cost": 3.9942e-05
+   },
+   "VCS673-safeguards|S2": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 881,
+    "cost": 3.9942e-05
+   },
+   "VCS673-safeguards|S3": {
+    "p_yes": 0.94,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 881,
+    "cost": 3.9942e-05
+   },
+   "VCS673-safeguards|S4": {
+    "p_yes": 0.36,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 881,
+    "cost": 3.9942e-05
+   },
+   "VCS2846-additionality|A1": {
+    "p_yes": 0.25,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 901,
+    "cost": 4.4394e-05
+   },
+   "VCS2846-additionality|A2": {
+    "p_yes": 0.87,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 901,
+    "cost": 4.4394e-05
+   },
+   "VCS2846-additionality|A3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 901,
+    "cost": 4.4394e-05
+   },
+   "VCS2846-additionality|A4": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 901,
+    "cost": 4.4394e-05
+   },
+   "VCS2846-robust_quantification|Q1": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 833,
+    "cost": 4.263e-05
+   },
+   "VCS2846-robust_quantification|Q2": {
+    "p_yes": 0.41,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 833,
+    "cost": 4.263e-05
+   },
+   "VCS2846-robust_quantification|Q3": {
+    "p_yes": 0.85,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 833,
+    "cost": 4.263e-05
+   },
+   "VCS2846-robust_quantification|Q4": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 833,
+    "cost": 4.263e-05
+   },
+   "VCS2846-no_double_counting|D1": {
+    "p_yes": 0.63,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 837,
+    "cost": 4.326e-05
+   },
+   "VCS2846-no_double_counting|D2": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 837,
+    "cost": 4.326e-05
+   },
+   "VCS2846-no_double_counting|D3": {
+    "p_yes": 0.09,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 837,
+    "cost": 4.326e-05
+   },
+   "VCS2846-safeguards|S1": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 835,
+    "cost": 4.0404e-05
+   },
+   "VCS2846-safeguards|S2": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 835,
+    "cost": 4.0404e-05
+   },
+   "VCS2846-safeguards|S3": {
+    "p_yes": 0.28,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 835,
+    "cost": 4.0404e-05
+   },
+   "VCS2846-safeguards|S4": {
+    "p_yes": 0.18,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 835,
+    "cost": 4.0404e-05
+   },
+   "VCS985-additionality|A1": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 887,
+    "cost": 4.7124e-05
+   },
+   "VCS985-additionality|A2": {
+    "p_yes": 0.9,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 887,
+    "cost": 4.7124e-05
+   },
+   "VCS985-additionality|A3": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 887,
+    "cost": 4.7124e-05
+   },
+   "VCS985-additionality|A4": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 887,
+    "cost": 4.7124e-05
+   },
+   "VCS985-permanence|P1": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 852,
+    "cost": 3.5448e-05
+   },
+   "VCS985-permanence|P2": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 852,
+    "cost": 3.5448e-05
+   },
+   "VCS985-permanence|P3": {
+    "p_yes": 0.82,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 852,
+    "cost": 3.5448e-05
+   },
+   "VCS985-robust_quantification|Q1": {
+    "p_yes": 0.31,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 818,
+    "cost": 4.2084e-05
+   },
+   "VCS985-robust_quantification|Q2": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 818,
+    "cost": 4.2084e-05
+   },
+   "VCS985-robust_quantification|Q3": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 818,
+    "cost": 4.2084e-05
+   },
+   "VCS985-robust_quantification|Q4": {
+    "p_yes": 0.94,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 818,
+    "cost": 4.2084e-05
+   },
+   "VCS985-no_double_counting|D1": {
+    "p_yes": 0.87,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 819,
+    "cost": 4.158e-05
+   },
+   "VCS985-no_double_counting|D2": {
+    "p_yes": 0.97,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 819,
+    "cost": 4.158e-05
+   },
+   "VCS985-no_double_counting|D3": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 819,
+    "cost": 4.158e-05
+   },
+   "VCS985-safeguards|S1": {
+    "p_yes": 0.68,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 659,
+    "cost": 4.2504e-05
+   },
+   "VCS985-safeguards|S2": {
+    "p_yes": 0.45,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 659,
+    "cost": 4.2504e-05
+   },
+   "VCS985-safeguards|S3": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 659,
+    "cost": 4.2504e-05
+   },
+   "VCS985-safeguards|S4": {
+    "p_yes": 0.12,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 659,
+    "cost": 4.2504e-05
+   },
+   "VCS4150-additionality|A1": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 880,
+    "cost": 5.145e-05
+   },
+   "VCS4150-additionality|A2": {
+    "p_yes": 0.64,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 880,
+    "cost": 5.145e-05
+   },
+   "VCS4150-additionality|A3": {
+    "p_yes": 0.18,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 880,
+    "cost": 5.145e-05
+   },
+   "VCS4150-additionality|A4": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 880,
+    "cost": 5.145e-05
+   },
+   "VCS4150-robust_quantification|Q1": {
+    "p_yes": 0.75,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 838,
+    "cost": 4.4352e-05
+   },
+   "VCS4150-robust_quantification|Q2": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 838,
+    "cost": 4.4352e-05
+   },
+   "VCS4150-robust_quantification|Q3": {
+    "p_yes": 0.97,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 838,
+    "cost": 4.4352e-05
+   },
+   "VCS4150-robust_quantification|Q4": {
+    "p_yes": 0.53,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 838,
+    "cost": 4.4352e-05
+   },
+   "VCS4150-no_double_counting|D1": {
+    "p_yes": 0.8,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 790,
+    "cost": 4.4478e-05
+   },
+   "VCS4150-no_double_counting|D2": {
+    "p_yes": 0.85,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 790,
+    "cost": 4.4478e-05
+   },
+   "VCS4150-no_double_counting|D3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 790,
+    "cost": 4.4478e-05
+   },
+   "VCS4150-safeguards|S1": {
+    "p_yes": 0.4,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 805,
+    "cost": 4.032e-05
+   },
+   "VCS4150-safeguards|S2": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 805,
+    "cost": 4.032e-05
+   },
+   "VCS4150-safeguards|S3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 805,
+    "cost": 4.032e-05
+   },
+   "VCS4150-safeguards|S4": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 805,
+    "cost": 4.032e-05
+   }
+  },
+  {
+   "VCS1477-additionality|A1": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-additionality|A2": {
+    "p_yes": 0.52,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-additionality|A3": {
+    "p_yes": 0.91,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-additionality|A4": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-permanence|P1": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 874,
+    "cost": 3.822e-05
+   },
+   "VCS1477-permanence|P2": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 874,
+    "cost": 3.822e-05
+   },
+   "VCS1477-permanence|P3": {
+    "p_yes": 0.96,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 874,
+    "cost": 3.822e-05
+   },
+   "VCS1477-robust_quantification|Q1": {
+    "p_yes": 0.2,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 873,
+    "cost": 4.3974e-05
+   },
+   "VCS1477-robust_quantification|Q2": {
+    "p_yes": 0.39,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 873,
+    "cost": 4.3974e-05
+   },
+   "VCS1477-robust_quantification|Q3": {
+    "p_yes": 0.95,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 873,
+    "cost": 4.3974e-05
+   },
+   "VCS1477-robust_quantification|Q4": {
+    "p_yes": 0.74,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 873,
+    "cost": 4.3974e-05
+   },
+   "VCS1477-no_double_counting|D1": {
+    "p_yes": 0.28,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 844,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-no_double_counting|D2": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 844,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-no_double_counting|D3": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 844,
+    "cost": 4.5024e-05
+   },
+   "VCS1477-safeguards|S1": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 906,
+    "cost": 4.536e-05
+   },
+   "VCS1477-safeguards|S2": {
+    "p_yes": 0.73,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 906,
+    "cost": 4.536e-05
+   },
+   "VCS1477-safeguards|S3": {
+    "p_yes": 0.12,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 906,
+    "cost": 4.536e-05
+   },
+   "VCS1477-safeguards|S4": {
+    "p_yes": 0.23,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 906,
+    "cost": 4.536e-05
+   },
+   "VCS1851-additionality|A1": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 926,
+    "cost": 4.1664e-05
+   },
+   "VCS1851-additionality|A2": {
+    "p_yes": 0.63,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 926,
+    "cost": 4.1664e-05
+   },
+   "VCS1851-additionality|A3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 926,
+    "cost": 4.1664e-05
+   },
+   "VCS1851-additionality|A4": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 926,
+    "cost": 4.1664e-05
+   },
+   "VCS1851-robust_quantification|Q1": {
+    "p_yes": 0.81,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 837,
+    "cost": 4.053e-05
+   },
+   "VCS1851-robust_quantification|Q2": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 837,
+    "cost": 4.053e-05
+   },
+   "VCS1851-robust_quantification|Q3": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 837,
+    "cost": 4.053e-05
+   },
+   "VCS1851-robust_quantification|Q4": {
+    "p_yes": 0.21,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 837,
+    "cost": 4.053e-05
+   },
+   "VCS1851-no_double_counting|D1": {
+    "p_yes": 0.4,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 901,
+    "cost": 4.452e-05
+   },
+   "VCS1851-no_double_counting|D2": {
+    "p_yes": 0.98,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 901,
+    "cost": 4.452e-05
+   },
+   "VCS1851-no_double_counting|D3": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 901,
+    "cost": 4.452e-05
+   },
+   "VCS1851-safeguards|S1": {
+    "p_yes": 0.96,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 876,
+    "cost": 3.5154e-05
+   },
+   "VCS1851-safeguards|S2": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 876,
+    "cost": 3.5154e-05
+   },
+   "VCS1851-safeguards|S3": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 876,
+    "cost": 3.5154e-05
+   },
+   "VCS1851-safeguards|S4": {
+    "p_yes": 0.15,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 876,
+    "cost": 3.5154e-05
+   },
+   "VCS138-additionality|A1": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 881,
+    "cost": 3.7506e-05
+   },
+   "VCS138-additionality|A2": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 881,
+    "cost": 3.7506e-05
+   },
+   "VCS138-additionality|A3": {
+    "p_yes": 0.31,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 881,
+    "cost": 3.7506e-05
+   },
+   "VCS138-additionality|A4": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 881,
+    "cost": 3.7506e-05
+   },
+   "VCS138-robust_quantification|Q1": {
+    "p_yes": 0.76,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 881,
+    "cost": 4.8888e-05
+   },
+   "VCS138-robust_quantification|Q2": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 881,
+    "cost": 4.8888e-05
+   },
+   "VCS138-robust_quantification|Q3": {
+    "p_yes": 0.09,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 881,
+    "cost": 4.8888e-05
+   },
+   "VCS138-robust_quantification|Q4": {
+    "p_yes": 0.24,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 881,
+    "cost": 4.8888e-05
+   },
+   "VCS138-no_double_counting|D1": {
+    "p_yes": 0.94,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 987,
+    "cost": 4.1454e-05
+   },
+   "VCS138-no_double_counting|D2": {
+    "p_yes": 0.98,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 987,
+    "cost": 4.1454e-05
+   },
+   "VCS138-no_double_counting|D3": {
+    "p_yes": 0.09,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 987,
+    "cost": 4.1454e-05
+   },
+   "VCS138-safeguards|S1": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 742,
+    "cost": 3.192e-05
+   },
+   "VCS138-safeguards|S2": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 742,
+    "cost": 3.192e-05
+   },
+   "VCS138-safeguards|S3": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 742,
+    "cost": 3.192e-05
+   },
+   "VCS138-safeguards|S4": {
+    "p_yes": 0.01,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 742,
+    "cost": 3.192e-05
+   },
+   "VCS2505-additionality|A1": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 896,
+    "cost": 4.4646e-05
+   },
+   "VCS2505-additionality|A2": {
+    "p_yes": 0.59,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 896,
+    "cost": 4.4646e-05
+   },
+   "VCS2505-additionality|A3": {
+    "p_yes": 0.91,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 896,
+    "cost": 4.4646e-05
+   },
+   "VCS2505-additionality|A4": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 896,
+    "cost": 4.4646e-05
+   },
+   "VCS2505-robust_quantification|Q1": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 935,
+    "cost": 4.095e-05
+   },
+   "VCS2505-robust_quantification|Q2": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 935,
+    "cost": 4.095e-05
+   },
+   "VCS2505-robust_quantification|Q3": {
+    "p_yes": 0.88,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 935,
+    "cost": 4.095e-05
+   },
+   "VCS2505-robust_quantification|Q4": {
+    "p_yes": 0.84,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 935,
+    "cost": 4.095e-05
+   },
+   "VCS2505-no_double_counting|D1": {
+    "p_yes": 0.87,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 867,
+    "cost": 4.6578e-05
+   },
+   "VCS2505-no_double_counting|D2": {
+    "p_yes": 0.49,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 867,
+    "cost": 4.6578e-05
+   },
+   "VCS2505-no_double_counting|D3": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 867,
+    "cost": 4.6578e-05
+   },
+   "VCS2505-safeguards|S1": {
+    "p_yes": 0.2,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 4.0614e-05
+   },
+   "VCS2505-safeguards|S2": {
+    "p_yes": 0.76,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 4.0614e-05
+   },
+   "VCS2505-safeguards|S3": {
+    "p_yes": 0.21,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 4.0614e-05
+   },
+   "VCS2505-safeguards|S4": {
+    "p_yes": 0.17,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 872,
+    "cost": 4.0614e-05
+   },
+   "VCS1742-additionality|A1": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 819,
+    "cost": 4.5738e-05
+   },
+   "VCS1742-additionality|A2": {
+    "p_yes": 0.2,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 819,
+    "cost": 4.5738e-05
+   },
+   "VCS1742-additionality|A3": {
+    "p_yes": 0.17,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 819,
+    "cost": 4.5738e-05
+   },
+   "VCS1742-additionality|A4": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 819,
+    "cost": 4.5738e-05
+   },
+   "VCS1742-robust_quantification|Q1": {
+    "p_yes": 0.23,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 611,
+    "cost": 4.347e-05
+   },
+   "VCS1742-robust_quantification|Q2": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 611,
+    "cost": 4.347e-05
+   },
+   "VCS1742-robust_quantification|Q3": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 611,
+    "cost": 4.347e-05
+   },
+   "VCS1742-robust_quantification|Q4": {
+    "p_yes": 0.26,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 611,
+    "cost": 4.347e-05
+   },
+   "VCS1742-no_double_counting|D1": {
+    "p_yes": 0.39,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 808,
+    "cost": 3.9144e-05
+   },
+   "VCS1742-no_double_counting|D2": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 808,
+    "cost": 3.9144e-05
+   },
+   "VCS1742-no_double_counting|D3": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 808,
+    "cost": 3.9144e-05
+   },
+   "VCS1742-safeguards|S1": {
+    "p_yes": 0.47,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 826,
+    "cost": 3.948e-05
+   },
+   "VCS1742-safeguards|S2": {
+    "p_yes": 0.21,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 826,
+    "cost": 3.948e-05
+   },
+   "VCS1742-safeguards|S3": {
+    "p_yes": 0.82,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 826,
+    "cost": 3.948e-05
+   },
+   "VCS1742-safeguards|S4": {
+    "p_yes": 0.19,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 826,
+    "cost": 3.948e-05
+   },
+   "VCS1728-additionality|A1": {
+    "p_yes": 0.74,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 836,
+    "cost": 4.0194e-05
+   },
+   "VCS1728-additionality|A2": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 836,
+    "cost": 4.0194e-05
+   },
+   "VCS1728-additionality|A3": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 836,
+    "cost": 4.0194e-05
+   },
+   "VCS1728-additionality|A4": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 836,
+    "cost": 4.0194e-05
+   },
+   "VCS1728-robust_quantification|Q1": {
+    "p_yes": 0.19,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 3.7716e-05
+   },
+   "VCS1728-robust_quantification|Q2": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 3.7716e-05
+   },
+   "VCS1728-robust_quantification|Q3": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 3.7716e-05
+   },
+   "VCS1728-robust_quantification|Q4": {
+    "p_yes": 0.29,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 3.7716e-05
+   },
+   "VCS1728-no_double_counting|D1": {
+    "p_yes": 0.16,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 831,
+    "cost": 4.1034e-05
+   },
+   "VCS1728-no_double_counting|D2": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 831,
+    "cost": 4.1034e-05
+   },
+   "VCS1728-no_double_counting|D3": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 831,
+    "cost": 4.1034e-05
+   },
+   "VCS1728-safeguards|S1": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 659,
+    "cost": 4.074e-05
+   },
+   "VCS1728-safeguards|S2": {
+    "p_yes": 0.97,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 659,
+    "cost": 4.074e-05
+   },
+   "VCS1728-safeguards|S3": {
+    "p_yes": 0.19,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 659,
+    "cost": 4.074e-05
+   },
+   "VCS1728-safeguards|S4": {
+    "p_yes": 0.17,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 659,
+    "cost": 4.074e-05
+   },
+   "VCS2609-additionality|A1": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 790,
+    "cost": 4.0404e-05
+   },
+   "VCS2609-additionality|A2": {
+    "p_yes": 0.91,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 790,
+    "cost": 4.0404e-05
+   },
+   "VCS2609-additionality|A3": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 790,
+    "cost": 4.0404e-05
+   },
+   "VCS2609-additionality|A4": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 790,
+    "cost": 4.0404e-05
+   },
+   "VCS2609-permanence|P1": {
+    "p_yes": 0.98,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.2336e-05
+   },
+   "VCS2609-permanence|P2": {
+    "p_yes": 0.16,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.2336e-05
+   },
+   "VCS2609-permanence|P3": {
+    "p_yes": 0.73,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 855,
+    "cost": 4.2336e-05
+   },
+   "VCS2609-robust_quantification|Q1": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 866,
+    "cost": 4.3596e-05
+   },
+   "VCS2609-robust_quantification|Q2": {
+    "p_yes": 0.67,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 866,
+    "cost": 4.3596e-05
+   },
+   "VCS2609-robust_quantification|Q3": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 866,
+    "cost": 4.3596e-05
+   },
+   "VCS2609-robust_quantification|Q4": {
+    "p_yes": 0.8,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 866,
+    "cost": 4.3596e-05
+   },
+   "VCS2609-no_double_counting|D1": {
+    "p_yes": 0.86,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 858,
+    "cost": 3.6918e-05
+   },
+   "VCS2609-no_double_counting|D2": {
+    "p_yes": 0.95,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 858,
+    "cost": 3.6918e-05
+   },
+   "VCS2609-no_double_counting|D3": {
+    "p_yes": 0.07,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 858,
+    "cost": 3.6918e-05
+   },
+   "VCS2609-safeguards|S1": {
+    "p_yes": 0.15,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 824,
+    "cost": 4.599e-05
+   },
+   "VCS2609-safeguards|S2": {
+    "p_yes": 0.69,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 824,
+    "cost": 4.599e-05
+   },
+   "VCS2609-safeguards|S3": {
+    "p_yes": 0.09,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 824,
+    "cost": 4.599e-05
+   },
+   "VCS2609-safeguards|S4": {
+    "p_yes": 0.96,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 824,
+    "cost": 4.599e-05
+   },
+   "VCS673-additionality|A1": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 791,
+    "cost": 4.1874e-05
+   },
+   "VCS673-additionality|A2": {
+    "p_yes": 0.17,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 791,
+    "cost": 4.1874e-05
+   },
+   "VCS673-additionality|A3": {
+    "p_yes": 0.16,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 791,
+    "cost": 4.1874e-05
+   },
+   "VCS673-additionality|A4": {
+    "p_yes": 0.45,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 791,
+    "cost": 4.1874e-05
+   },
+   "VCS673-permanence|P1": {
+    "p_yes": 0.17,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 741,
+    "cost": 3.8682e-05
+   },
+   "VCS673-permanence|P2": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 741,
+    "cost": 3.8682e-05
+   },
+   "VCS673-permanence|P3": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 741,
+    "cost": 3.8682e-05
+   },
+   "VCS673-robust_quantification|Q1": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 814,
+    "cost": 3.9774e-05
+   },
+   "VCS673-robust_quantification|Q2": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 814,
+    "cost": 3.9774e-05
+   },
+   "VCS673-robust_quantification|Q3": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 814,
+    "cost": 3.9774e-05
+   },
+   "VCS673-robust_quantification|Q4": {
+    "p_yes": 0.87,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 814,
+    "cost": 3.9774e-05
+   },
+   "VCS673-no_double_counting|D1": {
+    "p_yes": 0.48,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 796,
+    "cost": 4.1496e-05
+   },
+   "VCS673-no_double_counting|D2": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 796,
+    "cost": 4.1496e-05
+   },
+   "VCS673-no_double_counting|D3": {
+    "p_yes": 0.04,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 796,
+    "cost": 4.1496e-05
+   },
+   "VCS673-safeguards|S1": {
+    "p_yes": 0.98,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 822,
+    "cost": 3.9942e-05
+   },
+   "VCS673-safeguards|S2": {
+    "p_yes": 0.09,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 822,
+    "cost": 3.9942e-05
+   },
+   "VCS673-safeguards|S3": {
+    "p_yes": 0.94,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 822,
+    "cost": 3.9942e-05
+   },
+   "VCS673-safeguards|S4": {
+    "p_yes": 0.37,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 822,
+    "cost": 3.9942e-05
+   },
+   "VCS2846-additionality|A1": {
+    "p_yes": 0.24,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 832,
+    "cost": 4.4394e-05
+   },
+   "VCS2846-additionality|A2": {
+    "p_yes": 0.86,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 832,
+    "cost": 4.4394e-05
+   },
+   "VCS2846-additionality|A3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 832,
+    "cost": 4.4394e-05
+   },
+   "VCS2846-additionality|A4": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 832,
+    "cost": 4.4394e-05
+   },
+   "VCS2846-robust_quantification|Q1": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 841,
+    "cost": 4.263e-05
+   },
+   "VCS2846-robust_quantification|Q2": {
+    "p_yes": 0.47,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 841,
+    "cost": 4.263e-05
+   },
+   "VCS2846-robust_quantification|Q3": {
+    "p_yes": 0.85,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 841,
+    "cost": 4.263e-05
+   },
+   "VCS2846-robust_quantification|Q4": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 841,
+    "cost": 4.263e-05
+   },
+   "VCS2846-no_double_counting|D1": {
+    "p_yes": 0.63,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 626,
+    "cost": 4.326e-05
+   },
+   "VCS2846-no_double_counting|D2": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 626,
+    "cost": 4.326e-05
+   },
+   "VCS2846-no_double_counting|D3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 626,
+    "cost": 4.326e-05
+   },
+   "VCS2846-safeguards|S1": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 869,
+    "cost": 4.0404e-05
+   },
+   "VCS2846-safeguards|S2": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 869,
+    "cost": 4.0404e-05
+   },
+   "VCS2846-safeguards|S3": {
+    "p_yes": 0.26,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 869,
+    "cost": 4.0404e-05
+   },
+   "VCS2846-safeguards|S4": {
+    "p_yes": 0.19,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 869,
+    "cost": 4.0404e-05
+   },
+   "VCS985-additionality|A1": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 835,
+    "cost": 4.7124e-05
+   },
+   "VCS985-additionality|A2": {
+    "p_yes": 0.88,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 835,
+    "cost": 4.7124e-05
+   },
+   "VCS985-additionality|A3": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 835,
+    "cost": 4.7124e-05
+   },
+   "VCS985-additionality|A4": {
+    "p_yes": 0.05,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 835,
+    "cost": 4.7124e-05
+   },
+   "VCS985-permanence|P1": {
+    "p_yes": 0.06,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 821,
+    "cost": 3.5448e-05
+   },
+   "VCS985-permanence|P2": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 821,
+    "cost": 3.5448e-05
+   },
+   "VCS985-permanence|P3": {
+    "p_yes": 0.8,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 821,
+    "cost": 3.5448e-05
+   },
+   "VCS985-robust_quantification|Q1": {
+    "p_yes": 0.34,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 4.2084e-05
+   },
+   "VCS985-robust_quantification|Q2": {
+    "p_yes": 0.93,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 4.2084e-05
+   },
+   "VCS985-robust_quantification|Q3": {
+    "p_yes": 0.1,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 4.2084e-05
+   },
+   "VCS985-robust_quantification|Q4": {
+    "p_yes": 0.95,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 863,
+    "cost": 4.2084e-05
+   },
+   "VCS985-no_double_counting|D1": {
+    "p_yes": 0.88,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 815,
+    "cost": 4.158e-05
+   },
+   "VCS985-no_double_counting|D2": {
+    "p_yes": 0.96,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 815,
+    "cost": 4.158e-05
+   },
+   "VCS985-no_double_counting|D3": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 815,
+    "cost": 4.158e-05
+   },
+   "VCS985-safeguards|S1": {
+    "p_yes": 0.71,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 657,
+    "cost": 4.2504e-05
+   },
+   "VCS985-safeguards|S2": {
+    "p_yes": 0.48,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 657,
+    "cost": 4.2504e-05
+   },
+   "VCS985-safeguards|S3": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 657,
+    "cost": 4.2504e-05
+   },
+   "VCS985-safeguards|S4": {
+    "p_yes": 0.13,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 657,
+    "cost": 4.2504e-05
+   },
+   "VCS4150-additionality|A1": {
+    "p_yes": 0.02,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 802,
+    "cost": 5.145e-05
+   },
+   "VCS4150-additionality|A2": {
+    "p_yes": 0.62,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 802,
+    "cost": 5.145e-05
+   },
+   "VCS4150-additionality|A3": {
+    "p_yes": 0.19,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 802,
+    "cost": 5.145e-05
+   },
+   "VCS4150-additionality|A4": {
+    "p_yes": 0.03,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 802,
+    "cost": 5.145e-05
+   },
+   "VCS4150-robust_quantification|Q1": {
+    "p_yes": 0.77,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 810,
+    "cost": 4.4352e-05
+   },
+   "VCS4150-robust_quantification|Q2": {
+    "p_yes": 0.11,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 810,
+    "cost": 4.4352e-05
+   },
+   "VCS4150-robust_quantification|Q3": {
+    "p_yes": 0.97,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 810,
+    "cost": 4.4352e-05
+   },
+   "VCS4150-robust_quantification|Q4": {
+    "p_yes": 0.54,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 810,
+    "cost": 4.4352e-05
+   },
+   "VCS4150-no_double_counting|D1": {
+    "p_yes": 0.8,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 766,
+    "cost": 4.4478e-05
+   },
+   "VCS4150-no_double_counting|D2": {
+    "p_yes": 0.84,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 766,
+    "cost": 4.4478e-05
+   },
+   "VCS4150-no_double_counting|D3": {
+    "p_yes": 0.08,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 766,
+    "cost": 4.4478e-05
+   },
+   "VCS4150-safeguards|S1": {
+    "p_yes": 0.41,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 784,
+    "cost": 4.032e-05
+   },
+   "VCS4150-safeguards|S2": {
+    "p_yes": 0.92,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 784,
+    "cost": 4.032e-05
+   },
+   "VCS4150-safeguards|S3": {
+    "p_yes": 0.09,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 784,
+    "cost": 4.032e-05
+   },
+   "VCS4150-safeguards|S4": {
+    "p_yes": 0.14,
+    "model": "typesafe/jev-1.13-20260917",
+    "latency_ms": 784,
+    "cost": 4.032e-05
+   }
+  }
+ ]
+}

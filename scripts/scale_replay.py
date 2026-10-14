@@ -48,7 +48,9 @@ def main() -> None:
     print(f"{args.project} vintage {args.vintage}: issued {issued:,}, {len(quantities):,} retirements to replay")
 
     port = anvil.free_port()
-    proc = anvil.start_anvil(port, extra_args=["--gas-limit", str(args.block_gas)])
+    # Blocks are made huge so the EIP-1559 base fee never climbs (a test-chain artefact that would drain the
+    # test account); the real block limit is enforced per transaction through its gas cap (args.block_gas).
+    proc = anvil.start_anvil(port, extra_args=["--gas-limit", "1000000000"])
     try:
         keys = {role: "0x" + Account.create().key.hex().removeprefix("0x") for role in ROLES}
         w3, accounts = connect(ChainSettings("anvil", f"http://127.0.0.1:{port}", keys))

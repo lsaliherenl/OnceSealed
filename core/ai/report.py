@@ -167,7 +167,9 @@ def build_report(
         "schema": REPORT_SCHEMA_VERSION,
         "project": {k: project.get(k) for k in ("project_id", "project_name", "registry_url",
                                                  "methodology", "methodology_version")},
-        "document": {"file_name": project.get("file_name"), "sha256": doc.sha256, "pages": doc.page_count},
+        "document": {"file_name": project.get("file_name"), "sha256": doc.sha256, "pages": doc.page_count,
+                     **({"extra_files": [{"file_name": f["file_name"], "sha256": f["sha256"]}
+                                         for f in project["extra_files"]]} if project.get("extra_files") else {})},
         "methodology_status": methodology_status(project["methodology"], project.get("methodology_version")),
         "method": method,
         "method_hash": hash_json(method),

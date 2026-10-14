@@ -1,0 +1,2550 @@
+{
+ "question_set_version": "qs-v2-checklist",
+ "excerpt_chars_max": 2500,
+ "items": [
+  {
+   "item_id": "VCS1477-additionality",
+   "project_id": "VCS1477",
+   "project_name": "Katingan Peatland Restoration and Conservation Project",
+   "category": "REDD+ / peatland (VM0007)",
+   "principle": "additionality",
+   "questions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p18-05",
+     "page": 18,
+     "text": "2.1.4 Project Eligibility (VCS, 3.1, 3.6, 3.8, 3.18, 4.1; CCB Program Rules, 4.2.4, 4.6.4)"
+    },
+    {
+     "id": "p43-02",
+     "page": 43,
+     "text": "outlines how the project's contributions to biodiversity conservation and community development \nare not mandated by law, not practiced under business-as-usual conditions, and not financially \nviable without the project, and how they go beyond what would be achieved through existing legal \nframeworks. \n \nAdditionality of Biodiversity Benefits \nBaseline Scenario \nIn the absence of the Katingan Mentaya Project, the baseline scenario would likely involve \ncontinued forest conversion, peatland degradation, and biodiversity loss. This is due to systemic \nunder-enforcement of environmental regulations, the economic attractiveness of plantation \ndevelopment, and weak land governance. Indonesia’s conservation laws (e.g., Law No. 5/1990 \nand PP No. 57/2016 on peatland protection) exist, but enforcement is limited, particularly in \nremote forest areas. The project area contains globally significant biodiversity, including \nendangered species such as the Bornean Orangutan (Pongo pygmaeus) and Proboscis Monkey \n(Nasalis larvatus), which would face escalating threats under business-as-usual conditions. \n \nBarriers to Natural Protection \nSeveral barriers prevent natural forest protection in the absence of the project:"
+    },
+    {
+     "id": "p43-03",
+     "page": 43,
+     "text": "• \nEconomic barriers: Strong financial incentives exist for forest conversion to monoculture \nplantations (e.g., acacia or oil palm), driven by national development policy and \ninternational markets. \n• \nInstitutional barriers: Local and provincial governments lack the capacity and resources \nto enforce protection or manage conservation areas. \n• \nTechnological barriers: Tools for ecosystem monitoring (e.g., remote sensing, patrols) are \noften inaccessible or underutilised."
+    },
+    {
+     "id": "p44-03",
+     "page": 44,
+     "text": "2.2.3 Benefits to be used as Offsets (CCB, G2.2)"
+    },
+    {
+     "id": "p107-11",
+     "page": 107,
+     "text": "Condition \nmet. \nThe \ndetermination \nof \nthe \nbaseline has been done \nfollowing \nthe \nsteps \ndescribed in VM0007 REDD \nMethodology Framework."
+    },
+    {
+     "id": "p107-12",
+     "page": 107,
+     "text": "The use of this tool to determine additionality \nrequires the baseline methodology to provide \nfor a stepwise approach justifying the \ndetermination of the most plausible baseline \nscenario. Project proponent(s) proposing new \nbaseline \nmethodologies \nshall \nensure \nconsistency between the determination of a \nbaseline scenario and the determination of \nadditionality of a project activity."
+    },
+    {
+     "id": "p121-02",
+     "page": 121,
+     "text": "3.1.5.2 \nAdditionality Methods (VCS, 3.14)"
+    },
+    {
+     "id": "p354-04",
+     "page": 354,
+     "text": "5.5.2 Trigger Species Population Trends (CCB, GL3.2, GL3.3)"
+    }
+   ],
+   "excerpt_chars": 2472
+  },
+  {
+   "item_id": "VCS1477-permanence",
+   "project_id": "VCS1477",
+   "project_name": "Katingan Peatland Restoration and Conservation Project",
+   "category": "REDD+ / peatland (VM0007)",
+   "principle": "permanence",
+   "questions": [
+    "P1",
+    "P2",
+    "P3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p252-03",
+     "page": 252,
+     "text": "Ground level | Fire brigades and Prevention strategies"
+    },
+    {
+     "id": "p252-04",
+     "page": 252,
+     "text": "At the ground level, specialised fire brigades (which include trained and equipped community fire \nunits) play a crucial role in both prevention and firefighting efforts. These teams are equipped \nwith advanced tools and equipment designed for tackling wildfires effectively (this includes tools \ndesigned specifically for tackling fire in peat swamp conditions, importantly when the below-\nground peat is on fire). Their tasks include creating fire breaks—controlled areas devoid of \nvegetation to impede the fire's progress—and employing techniques such as backburning to \neliminate potential fuel sources. These brigades are well-trained in assessing fire behaviour, \nunderstanding wind patterns, and implementing strategies to contain and extinguish fires. \nGround level monitoring also involves community engagement and education to promote fire \nprevention measures, fostering a collaborative approach to wildfire management."
+    },
+    {
+     "id": "p315-02",
+     "page": 315,
+     "text": "2020 current conditions - Forest extent and quality:"
+    },
+    {
+     "id": "p318-05",
+     "page": 318,
+     "text": "Forest monitoring (using remotely sensed data): The extent of \ndeforestation and forest degradation has been monitored via \nremote sensing since the project’s inception in 2010. We will \ncontinue to monitor forest disturbance in near-real time using \nsatellite imagery so that any threats to the forest can be reported \nto and subsequently addressed by the field teams on the ground \n(see Climate section 3 for more details)."
+    },
+    {
+     "id": "p318-06",
+     "page": 318,
+     "text": "Fire prevention: Remote sensing using fire hotspot data was \nconducted during the previous PD period in order to alert field \nstaff to any fire incidences. On-the-ground fire suppression, \nmanagement activities and patrols have also been implemented, \nand will continue during the next decade in order to reduce the \nthreat of fire to biodiversity. As reported in the previous \nmonitoring reports, the project has also established fire break \nplantations totaling 6.91 ha (as of 2020). During the next \ndecade, additional fire break plantations will be established as \nper the project implementation plan (see the ‘Katingan-Mentaya-\nFire-Management-and-Mitigation-Report-Final.pdf’ report in the \n‘Anthropogenic threats: Fires’ supporting evidence folders for \ndetails). Furthermore, fire prevention and awareness training \nwith project staff and communities will continue to reduce the \nimpact of fires. These activities will continue to protect this \nimportant area of peatland habitat and the biodiversity it \nsupports."
+    }
+   ],
+   "excerpt_chars": 2484
+  },
+  {
+   "item_id": "VCS1477-robust_quantification",
+   "project_id": "VCS1477",
+   "project_name": "Katingan Peatland Restoration and Conservation Project",
+   "category": "REDD+ / peatland (VM0007)",
+   "principle": "robust_quantification",
+   "questions": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p210-18",
+     "page": 210,
+     "text": "GHG sources included in or excluded from project emission are listed in Section 3.1.3 Tier 2 \nemissions factors are used for the emission calculations from peat (same emissions factors as \nfor the baseline, see Climate Annex for details)."
+    },
+    {
+     "id": "p210-19",
+     "page": 210,
+     "text": "This section explains how the ex-ante estimations of expected project emissions are calculated. \nThe emissions will be recalculated for each monitoring period, reflecting any changes in the \nproject area during that period (deforestation, forest degradation, fires, change in drainage \nstatus or natural disturbances). For these re-calculations, the project will use the same strata \nand emission factors as those used below for the ex-ante calculations. These strata as well as \nany changes in the project area will be monitored for each monitoring period using a combination \nof field and remote sensing data, as explained in the monitoring plan, and results will be reported \nin each monitoring report."
+    },
+    {
+     "id": "p219-09",
+     "page": 219,
+     "text": "Figure 3.32 illustrates the locations of canal-blocking structures planned for the 2021–2030 \nperiod. Further details, including planned construction timelines for each structure, are provided in \nthe Climate Annex."
+    },
+    {
+     "id": "p235-18",
+     "page": 235,
+     "text": "t \n \n1, 2, 3, … t* time elapsed since the start of the project activity (years)"
+    },
+    {
+     "id": "p237-03",
+     "page": 237,
+     "text": "• Before constructing any canal block that could impact areas outside the project area, \nsurveys are conducted to determine whether the local population uses the canal (for example, for \ntransportation, agriculture, fishing, or other activities). If no such uses are identified, a full block is \ndesigned and built. However, if any uses are found, the blocks are constructed with spillways to \nensure that these activities are not affected. Spill gates regulate water flow and prevent any \nincrease in water table depth outside the project area, therefore avoiding any increased CH4 \nemissions or decreased vegetation production."
+    },
+    {
+     "id": "p237-05",
+     "page": 237,
+     "text": "3.2.5 Estimated GHG Emission Reductions and Carbon Dioxide Removals (VCS, 3.15,"
+    },
+    {
+     "id": "p238-21",
+     "page": 238,
+     "text": "• \n𝑡∗: Time elapsed since the project start (year)."
+    },
+    {
+     "id": "p238-22",
+     "page": 238,
+     "text": "The total uncertainty error in the project was calculated to be 2.44%. Considering the 15% \nuncertainty threshold, no VCU deductions were made due to uncertainty. Detailed annual \nuncertainty calculations for the REDD baseline scenario, including error propagation \nmethodology and bootstrap-derived uncertainty coefficients, are provided in the REDD \nUncertainty BSL Workbook."
+    },
+    {
+     "id": "p238-23",
+     "page": 238,
+     "text": "3.2.5.2 \nTotal net GHG emission reductions of the REDD project activity"
+    },
+    {
+     "id": "p351-07",
+     "page": 351,
+     "text": "Dissemination to stakeholders and communities:"
+    }
+   ],
+   "excerpt_chars": 2490
+  },
+  {
+   "item_id": "VCS1477-no_double_counting",
+   "project_id": "VCS1477",
+   "project_name": "Katingan Peatland Restoration and Conservation Project",
+   "category": "REDD+ / peatland (VM0007)",
+   "principle": "no_double_counting",
+   "questions": [
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p6-13",
+     "page": 6,
+     "text": "2.5.12 \nApprovals (CCB, G5.7) ............................................................................................. 95"
+    },
+    {
+     "id": "p6-14",
+     "page": 6,
+     "text": "2.5.13 \nDouble Counting and Participation under Other GHG Programs (VCS, 3.23; CCB \nG5.9) \n96"
+    },
+    {
+     "id": "p6-15",
+     "page": 6,
+     "text": "2.6 \nAdditional Information Relevant to the Project ............................................................ 97"
+    },
+    {
+     "id": "p96-19",
+     "page": 96,
+     "text": "in 2021, name of \npermit changes \nfrom IUPHHK into \nPBPH (multi-\nbusiness forestry \nutilisation)"
+    },
+    {
+     "id": "p96-20",
+     "page": 96,
+     "text": "2.5.13 Double Counting and Participation under Other GHG Programs (VCS, 3.23; CCB"
+    },
+    {
+     "id": "p97-15",
+     "page": 97,
+     "text": "2.6.2 Double Claiming, Other Forms of Credit, and Scope 3 Emissions (VCS, 3.24)"
+    },
+    {
+     "id": "p97-16",
+     "page": 97,
+     "text": "2.6.2.1 \nNo Double Claiming with Emissions Trading Programs or Binding Emission Limits"
+    },
+    {
+     "id": "p97-17",
+     "page": 97,
+     "text": "Are project reductions and removals or project activities also included in an emissions trading \nprogram or binding emission limit? See the VCS Program Definitions for definitions of \nemissions trading program and binding emission limit."
+    },
+    {
+     "id": "p98-02",
+     "page": 98,
+     "text": "2.6.2.2 \nNo Double Claiming with Other Forms of Environmental Credit"
+    },
+    {
+     "id": "p98-03",
+     "page": 98,
+     "text": "Has the project activity sought, received, or is planning to receive credit from another GHG-\nrelated environmental credit system? See the VCS Program Definitions for definition of GHG-\nrelated environmental credit system."
+    },
+    {
+     "id": "p102-13",
+     "page": 102,
+     "text": "Condition met. The project \ndoes not cause increases in \nN2O emissions."
+    },
+    {
+     "id": "p102-14",
+     "page": 102,
+     "text": "It must be demonstrated by using the latest \nversion of the CDM A/R methodological tool: \n“Tool for testing significance of GHG \nemissions in A/R CDM project activities” (T-\nSIG) that N2O emissions in the project \nscenario are not significant, or it must be \ndemonstrated that N2O emissions will not \nincrease in the project scenario compared to \nthe baseline scenario, and therefore N2O \nemissions need not be accounted for."
+    },
+    {
+     "id": "p107-05",
+     "page": 107,
+     "text": "Condition met. T-SIG was \nused, \nhowever \nno \nsignificance \ncalculations \nneeded to be performed as \ncarbon pools and sources of \nGHG emissions were only \nneglected where it was \ndemonstrably conservative."
+    },
+    {
+     "id": "p107-06",
+     "page": 107,
+     "text": "The tool shall be used in the application of an \nA/R CDM approved methodology to an A/R \nCDM \nproject \nactivity:  \na) To determine which decreases in carbon \npool and increases in emissions of the \ngreenhouse \ngases \nmeasured \nin \nCO2 \nequivalents \nthat \nresults \nfrom \nthe \nimplementation of the A/R project activity, \nare insignificant and can be neglected \nb) To ensure that it is valid to neglect \ndecreases in carbon pools and increases \nGHG emission by source stated as being \ninsignificant in the applicability conditions of \nan A/R CDM methodology"
+    }
+   ],
+   "excerpt_chars": 2459
+  },
+  {
+   "item_id": "VCS1477-safeguards",
+   "project_id": "VCS1477",
+   "project_name": "Katingan Peatland Restoration and Conservation Project",
+   "category": "REDD+ / peatland (VM0007)",
+   "principle": "safeguards",
+   "questions": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p60-04",
+     "page": 60,
+     "text": "2.3.12 Continued Consultation and Adaptive Management (VCS, 3.18; CCB, G3.4)"
+    },
+    {
+     "id": "p61-02",
+     "page": 61,
+     "text": "The project is also committed to a philosophy of continuous learning, using insights from its \ndiverse experiences to refine and innovate its approaches. This commitment to learning and \nimprovement ensures that the project remains responsive to new challenges and opportunities, \ncontinually enhancing its effectiveness and the benefits it delivers to the communities it serves."
+    },
+    {
+     "id": "p66-04",
+     "page": 66,
+     "text": "• \nNature of the grievance – a clear description of the issue raised. \n• \nStakeholders involved – the individuals or groups affected by or reporting the grievance. \n• \nProject responses – actions taken by the project team to address the concern. \n• \nResolution status – whether the grievance has been resolved, is under review, or \nrequires further action."
+    },
+    {
+     "id": "p67-03",
+     "page": 67,
+     "text": "2.3.18 Worker Training (VCS, 3.19; CCB, G3.9)"
+    },
+    {
+     "id": "p93-05",
+     "page": 93,
+     "text": "2.5.10 Illegal Activity Identification (VCS, 3.19; CCB, G5.4)"
+    },
+    {
+     "id": "p285-03",
+     "page": 285,
+     "text": "4.1.2 Interactions between Communities and Community Groups (VCS, 3.19; CCB,"
+    },
+    {
+     "id": "p291-03",
+     "page": 291,
+     "text": "4.2.3 Net Positive Community Well-Being (VCS, 3.19; CCB, CM2.3, GL1.4)"
+    },
+    {
+     "id": "p301-03",
+     "page": 301,
+     "text": "4.5.3 Community Participation Risks (CCB, GL2.3)"
+    },
+    {
+     "id": "p307-03",
+     "page": 307,
+     "text": "4.5.9 Smallholders/Community Members Capacity Development (CCB, GL2.9)"
+    },
+    {
+     "id": "p343-06",
+     "page": 343,
+     "text": "Objective 5: Capacity building and engagement with the biodiversity team, project partners \nand key stakeholders for biodiversity conservation. \n \nOutput 5.1. Capacity building of the internal Katingan Mentaya Project biodiversity team, \nproject partners and key stakeholders through training and workshops (e.g., on scientific \nmonitoring methods, species identification, biodiversity conservation). \nOutput 5.2. Development and dissemination of educational materials (e.g., posters, \nleaflets, reports) related to biodiversity conservation to promote public awareness and \nengagement of key stakeholders.  \nOutput 5.3. Establishment of communication channels (e.g., social media platforms, \nWhatsApp groups, online newsletters) and collaborative platforms (e.g., forums, \ndiscussion/working groups) to facilitate ongoing engagement and knowledge exchange. \n \nOutcome 5.1. Increased knowledge and skills among biodiversity team members, project \npartners and stakeholders regarding biodiversity conservation principles and practices. \nOutcome 5.2. Enhanced collaboration and networking among project partners and \nstakeholders, leading to improved coordination and synergy of conservation efforts. \nOutcome 5.3. Strengthened engagement and participation of local communities in \nbiodiversity conservation initiatives."
+    }
+   ],
+   "excerpt_chars": 2499
+  },
+  {
+   "item_id": "VCS1851-additionality",
+   "project_id": "VCS1851",
+   "project_name": "Renewable Solar Power Project by ReNew Solar Power Private Limited",
+   "category": "Grid-connected solar (ACM0002)",
+   "principle": "additionality",
+   "questions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p29-02",
+     "page": 29,
+     "text": "establish additionality of the project activity has been followed, details of which are provided in the \nfollowing paragraphs:"
+    },
+    {
+     "id": "p29-03",
+     "page": 29,
+     "text": "In line with VCS Standard version 3.7, the additionality of the Project activity is ascertained in line \nwith the applicable guidance from the UNFCCC. The demonstration of additionality for the \nproposed Project activity is being carried out in accordance with the additionality tool provided by \nthe UNFCCC i.e. “Tool for demonstration and assessment of Additionality” Version 07.0.0,. The \ntool provides a step-wise approach to demonstrate additionality which is displayed below:"
+    },
+    {
+     "id": "p29-04",
+     "page": 29,
+     "text": "Step 0: Demonstration whether the proposed project activity is the first-of-its-kind"
+    },
+    {
+     "id": "p32-02",
+     "page": 32,
+     "text": "In the absence of the project activity grid electricity would have been the obvious choice for the \nProject which requires no investment. Hence investment comparison analysis (Option II) is also \nnot appropriate for the project activity.  \n \nAfter eliminating Option I and Option II, the use of Benchmark analysis (Option III) is the method \nof analysis that has been selected as the most suitable method. This method determines the \nattractiveness of the project activity for the investors, as well as provides a measure of the \nviability of the investment to generate revenues during its operation, as compared with other \navenues and investment options. Hence, the Benchmark analysis method is to be employed for \nanalysis of the said project. \n \nSub-step 2b (Option III): Apply benchmark analysis"
+    },
+    {
+     "id": "p32-03",
+     "page": 32,
+     "text": "The investment analysis using Benchmark analysis approach (Option III) has been chosen. \nFurther, this method illustrates the evaluation of the Project by the PP before the decision to \nundertake the project was taken and management approval granted. \n \nChoice of Financial Indicator: \n \nAccording to the “Tool for demonstration and assessment of Additionality”, the financial indicator \ncan be based either on (1) project IRR or (2) equity IRR. There is no general preference between \nthe approaches (1) or (2). The benchmark chosen for analysis shall be fully consistent with the \nchoice of approach. Therefore in accordance with the guidance, the relevant financial indicator for \nproject activity has been chosen as post tax equity IRR. \n \nChoice of Benchmark:"
+    },
+    {
+     "id": "p46-04",
+     "page": 46,
+     "text": "Key Assumptions supporting financial projections are provided in excel spreadsheet to the DOE \nand the same has been summarized in Appendix-1 of this report."
+    },
+    {
+     "id": "p47-04",
+     "page": 47,
+     "text": "Barrier analysis has not been used.  \n \nStep 4: Common practice analysis"
+    }
+   ],
+   "excerpt_chars": 2484
+  },
+  {
+   "item_id": "VCS1851-robust_quantification",
+   "project_id": "VCS1851",
+   "project_name": "Renewable Solar Power Project by ReNew Solar Power Private Limited",
+   "category": "Grid-connected solar (ACM0002)",
+   "principle": "robust_quantification",
+   "questions": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p28-02",
+     "page": 28,
+     "text": "In the absence of the project activity, the equivalent amount of power would have been drawn \nfrom the Indian grid. Hence, the baseline for the project activity is the equivalent amount of \npower from the Indian grid.  \n \nThe combined margin (EFgrid,CM,y) is the result of a weighted average of two emission factor \npertaining to the electricity system: the operating margin (OM) and build margin (BM). \nCalculations for this combined margin must be based on data from an official source (where \navailable) and made publically available. The CEA database version 13 is the latest available \ndata at the time of PD submission to DOE for validation, hence same is considered for emission \nfactor calculations. \n \nThe combined margin of the Indian grid used for the project activity is as follows:"
+    },
+    {
+     "id": "p28-03",
+     "page": 28,
+     "text": "Parameter \nValue \nNomenclature \nSource \nEFgrid,CM,y \n0.9475 \ntCO2/MWh"
+    },
+    {
+     "id": "p53-02",
+     "page": 53,
+     "text": "time of PD submission to the DOE for validation. For the second crediting period, the build margin \nemission factor should be updated based on the most recent information available on units \nalready built at the time of submission of the request for renewal of the crediting period to the \nDOE. For the third crediting period, the build margin emission factor calculated for the second \ncrediting period should be used. This option does not require monitoring the emission factor \nduring the crediting period."
+    },
+    {
+     "id": "p54-11",
+     "page": 54,
+     "text": "PEy  \n = Project emissions in year y (tCO2e/yr)  \nPEFF,y  = Project emissions from fossil fuel consumption in year y (tCO2/yr)  \nPEGP,y  = Project emissions from the operation of dry, flash steam or binary geothermal power \nplants in year y (tCO2e/yr) \nPEHP,y = Project emissions from water reservoirs of hydro power plants in year y (tCO2e/yr)"
+    },
+    {
+     "id": "p61-05",
+     "page": 61,
+     "text": "The monitoring plan is developed in accordance with the modalities and procedures for CDM \nproject activities and is proposed for grid-connected solar power project being implemented. The \nmonitoring plan, which will be implemented by the project participant describes about the \nmonitoring organisation, parameters to be monitored, monitoring practices, quality assurance, \nquality control procedures, data storage and archiving. \n \nThe authority and responsibility for registration, monitoring, measurement, reporting and \nreviewing of the data rests with the project participant. PP proposed the following structure for \ndata monitoring, collection, data archiving and calibration of equipments for this project activity. \nThe team comprises of the following members:"
+    }
+   ],
+   "excerpt_chars": 2486
+  },
+  {
+   "item_id": "VCS1851-no_double_counting",
+   "project_id": "VCS1851",
+   "project_name": "Renewable Solar Power Project by ReNew Solar Power Private Limited",
+   "category": "Grid-connected solar (ACM0002)",
+   "principle": "no_double_counting",
+   "questions": [
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p5-15",
+     "page": 5,
+     "text": "As per the applicable methodology, a Greenfield power plant is defined as “a new renewable \nenergy power plant that is constructed and operated at a site where no renewable energy power \nplant was operated prior to the implementation of the project activity”. \n \nAs the project activity falls under the definition of a Greenfield power plant, the baseline scenario \nas per paragraph 22 of Section 5.2.1 of applied methodology is the following: \n \nIf the project activity is the installation of a Greenfield power plant, the baseline scenario is \nelectricity delivered to the grid by the project activity would have otherwise been generated by the \noperation of grid-connected power plants and by the addition of new generation sources, as \nreflected in the combined margin (CM) calculations described in the “Tool to calculate the \nemission factor for an electricity system”. \n \nHence, pre-project scenario and baseline scenario are the same. \n \nTotal emission reductions achieved in this monitoring period:"
+    },
+    {
+     "id": "p5-16",
+     "page": 5,
+     "text": "2 http://cdm.unfccc.int/methodologies/PAmethodologies/tools/am-tool-07-v7.0.pdf \n3 http://cdm.unfccc.int/methodologies/PAmethodologies/tools/am-tool-01-v7.0.0.pdf"
+    },
+    {
+     "id": "p21-06",
+     "page": 21,
+     "text": "Net GHG emission reductions or removals generated by the Project will not be used for \ncompliance with an emissions trading program or to meet binding limits on GHG emissions in any \nEmission Trading program or other binding limits."
+    },
+    {
+     "id": "p21-07",
+     "page": 21,
+     "text": "1.12.3 Other Forms of Environmental Credit"
+    },
+    {
+     "id": "p21-09",
+     "page": 21,
+     "text": "However it can be crosschecked that PP is not claiming REC benefits, the same can be verified \nwith the REC accreditation body of India31."
+    },
+    {
+     "id": "p23-16",
+     "page": 23,
+     "text": " \ninstall a Greenfield power plant; \n \ninvolve a capacity addition to (an) \nexisting plant(s); \n \ninvolve \na retrofit of (an) existing \noperating plants/units; \n \ninvolve a rehabilitation of (an) existing \nplant(s)/unit(s) or \n \ninvolve a replacement of (an) existing \nplant(s)/unit(s)."
+    },
+    {
+     "id": "p23-17",
+     "page": 23,
+     "text": "32 http://cdm.unfccc.int/methodologies/DB/VJI9AX539D9MLOPXN2AY9UR1N4IYGD  \n33 http://cdm.unfccc.int/methodologies/PAmethodologies/tools/am-tool-07-v7.0.pdf  \n34 http://cdm.unfccc.int/methodologies/PAmethodologies/tools/am-tool-01-v7.0.0.pdf"
+    },
+    {
+     "id": "p48-02",
+     "page": 48,
+     "text": "(f) The projects started commercial operation before the project design document (CDM-PDD) is \npublished for global stakeholder consultation or before the start date of proposed project activity, \nwhichever is earlier for the proposed project activity.  \n \nIdentification of the similar projects (CDM and non-CDM) is carried out as per sub-steps of Step \n(2) as follows:"
+    }
+   ],
+   "excerpt_chars": 2482
+  },
+  {
+   "item_id": "VCS1851-safeguards",
+   "project_id": "VCS1851",
+   "project_name": "Renewable Solar Power Project by ReNew Solar Power Private Limited",
+   "category": "Grid-connected solar (ACM0002)",
+   "principle": "safeguards",
+   "questions": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p48-02",
+     "page": 48,
+     "text": "(f) The projects started commercial operation before the project design document (CDM-PDD) is \npublished for global stakeholder consultation or before the start date of proposed project activity, \nwhichever is earlier for the proposed project activity.  \n \nIdentification of the similar projects (CDM and non-CDM) is carried out as per sub-steps of Step \n(2) as follows:"
+    },
+    {
+     "id": "p65-14",
+     "page": 65,
+     "text": "The details of the Stakeholder Meetings are as follows:"
+    },
+    {
+     "id": "p65-15",
+     "page": 65,
+     "text": "Name of Investor \nCapacity \nProject Location \nDate of \nDate of"
+    },
+    {
+     "id": "p67-22",
+     "page": 67,
+     "text": "Prathamesh \nSolarfarms Limited \n50 \nDodaguntapally \nMahabubnagar \n12/09/2015 \n19/09/2015"
+    },
+    {
+     "id": "p67-23",
+     "page": 67,
+     "text": "In the introductory speech, the representatives of ReNew Solar Power Private Limited (Project \nInvestor), welcomed the gathering and given a brief about the climate mitigation project activity. \nSubsequent to the introductory speech, stakeholders were explained about the electricity \ngeneration from solar project is an environmental friendly power generation technology \ncontributing to reduction in GHG emissions. They were also explained about the benefits of the \nsolar power projects like, increasing energy availability and improving quality of power and its \nassistance to the local population by providing employment opportunities to both skilled & \nunskilled labours."
+    },
+    {
+     "id": "p67-24",
+     "page": 67,
+     "text": "The Minutes of meeting with commenting sheet from LSH, invitation letter receipt copy are \nsubmitted to the DOE."
+    },
+    {
+     "id": "p67-25",
+     "page": 67,
+     "text": "Meeting started with opening speech by representative of project participant. He introduced all \nguests on dais. The representative of project participant explained Technical aspects of project to \nstakeholders. He also explained about social, environmental & economical benefits of the project. \nHe also elaborated about carbon mechanism & its requirement for the current project. After the \ndetailed discussions, the session was open for questions from stakeholders."
+    }
+   ],
+   "excerpt_chars": 1832
+  },
+  {
+   "item_id": "VCS138-additionality",
+   "project_id": "VCS138",
+   "project_name": "Greater New Bedford LFG Utilization Project",
+   "category": "Landfill gas (ACM0001)",
+   "principle": "additionality",
+   "questions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p13-02",
+     "page": 13,
+     "text": "Step 1:  Assess the validity of the current baseline for the next crediting period \n \nStep 1.1:  Assess compliance of the current baseline with relevant mandatory national and/or \nsectoral policies \nThe baseline continues to be compliant with relevant mandatory national and/or sectoral policies.  There \nare no new local, regional or national requirements that would alter the continued implementation of the \nbaseline scenario.  A discussion of the relevant regulations is presented in Section 1.11. \n \nStep 1.2:  Assess the impact of circumstances \nThe baseline is not affected by any changes to market conditions such as raw material, electricity or other \nprice fluctuations given the nature of the most plausible baseline scenario.  The District Initial System was \nimplemented solely to mitigate potential odor complaints.  This driver would prompt the District to continue \nthe system but not to expand or improve it over time as demonstrated in the initial validated baseline \nanalysis. \n \nStep 1.3:  Assess whether the continuation of use of current baseline equipment(s) or an \ninvestment is the most likely scenario for the crediting period for which renewal is requested. \nThe District Initial System has not had any portions replaced during the initial Project crediting period and \nit is not anticipated to replace any equipment during the second crediting period.  There would be no \nmotivation for the District to replace functioning equipment with different models in a voluntary system \nthat was performing well.  Therefore the use of current baseline equipment is the most likely scenario for \nthe second crediting period. \n \nStep 1.4:  Assessment of the validity of the data and parameters \nSince the original validation, the applicable methodology, ACM001, has been revised numerous times \nand now uses different formulas.  As such, the data and parameters collected for the Project should be \nupdated to reflect the latest version of the methodology as required by the VCS Standard. \n \nStep 2: Update the current baseline and the data and parameters \nThe current baseline and data and parameters have been updated and the changes are reflected in the \nemissions reductions estimates and Sections 3 and 4 of this document. \n \nThis analysis concludes that the baseline remains valid for the second crediting period.  The methodology \nused to quantify the emissions reductions from the Project will be updated to reflect the latest available \nmethodology and tools."
+    }
+   ],
+   "excerpt_chars": 2485
+  },
+  {
+   "item_id": "VCS138-robust_quantification",
+   "project_id": "VCS138",
+   "project_name": "Greater New Bedford LFG Utilization Project",
+   "category": "Landfill gas (ACM0001)",
+   "principle": "robust_quantification",
+   "questions": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p10-07",
+     "page": 10,
+     "text": "Eligibility Criteria \nThis is not a group project so this section is not relevant."
+    },
+    {
+     "id": "p10-08",
+     "page": 10,
+     "text": "Leakage Management \nThis Project does not require a leakage management plan per ACM0001."
+    },
+    {
+     "id": "p14-02",
+     "page": 14,
+     "text": "Additional deviations from the latest methodology are:"
+    },
+    {
+     "id": "p15-02",
+     "page": 15,
+     "text": "4 \nQUANTIFICATION OF GHG EMISSION REDUCTIONS AND REMOVALS"
+    },
+    {
+     "id": "p15-03",
+     "page": 15,
+     "text": "4.1 \nBaseline Emissions \n \nThe following equation is used to determine baseline emissions per ACM0001: \n \nBEy = BECH4,y + BEEC,y + BEHG, y + BENG,y (Eq. 1) \n \nWhere: \nBEy = Baseline emission in year y (tCO2e/yr) \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e/yr) \nBEEC,y = Baseline emissions associated with electricity generation in year y (tCO2e/yr) \nBEHG,y = Baseline emissions associated with heat generation in year y (tCO2e/yr) \nBENG,y = Baseline emissions associated with natural gas use in year y (tCO2e/yr) \n \nBaseline emissions associated with electricity generation and heat generation are excluded as the Project \nis not seeking carbon credits for the displacement of grid electricity or the beneficial reuse of the Project’s \nwaste heat.  The Project is only seeking credits for emissions reductions resulting from the destruction of \nmethane collected from the Landfill.  The Project does not include natural gas replacement so the final \nparameter is also not relevant.  The equation simplifies to: \n \nBEy = BECH4,y  (Project modified Eq.1) \n \nWhere: \nBEy = Baseline emission in year y (tCO2e) \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e) \n \nBaseline emissions of methane from the SWDS in year y are found as follows: \n \nBECH4,y = ((1-OXtop_layer) x FCH4,PJ,y – FCH,BL,y) x GWPCH4  (Eq. 2) \n \nWhere: \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e/yr) \nOXtop_layer = Fraction of methane in the LFG that would be oxidized in the top layer of the SWDS in the \nbaseline (dimensionless) \nFCH4,PJ,y = Amount of methane in the LFG which is flared and/or used in the project activity in year y \n(tCH4/yr) \nFCH,BL,y= Amount of methane in the LFG that would be flared in the baseline in year y (tCH4/yr)"
+    },
+    {
+     "id": "p18-03",
+     "page": 18,
+     "text": "COEF Diesel,y = NCV Diesel,y * EFCO2, Diesel,y   \n \n(Eq 4 in the fossil fuel tool) \nWhere: \nCOEF Diesel,y = the CO2 emission coefficient of diesel used (tCO2/gallon); \nNCV Diesel,y = the weighted average net calorific value of diesel (MMBtu/gallon) \nEFCO2, Diesel,y = the weighted average CO2 emission factor of diesel (tCO2/MMBtu)"
+    },
+    {
+     "id": "p19-02",
+     "page": 19,
+     "text": "Per ACM0001, no leakage effects need to be accounted."
+    },
+    {
+     "id": "p29-05",
+     "page": 29,
+     "text": "Frequency of monitoring/recording: \nAnnual"
+    }
+   ],
+   "excerpt_chars": 2493
+  },
+  {
+   "item_id": "VCS138-no_double_counting",
+   "project_id": "VCS138",
+   "project_name": "Greater New Bedford LFG Utilization Project",
+   "category": "Landfill gas (ACM0001)",
+   "principle": "no_double_counting",
+   "questions": [
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p9-03",
+     "page": 9,
+     "text": "The Project is not participating in nor is required to participate in any compliance emissions trading \nscheme and is not located in a jurisdiction with binding greenhouse gas emissions limits.  This Project \ndoes not fall under the umbrella of the Regional Greenhouse Gas Initiative program either as a regulated \nemitter or a credit provider. \n \n2.12.3 Other Forms of Environmental Credit"
+    },
+    {
+     "id": "p9-04",
+     "page": 9,
+     "text": "The Project is claiming carbon credits only for the destruction of landfill methane that would otherwise \nhave been released to the atmosphere.  The Project is not claiming credits associated with the electricity \nproduced from the landfill methane that displaces fossil–fuel-generated grid electricity.  These potential \ncarbon credits are owned by CNBE, which chooses to obtain Renewable Energy Credits (REC’s) instead \nof the carbon credits.  The Project is also choosing not to claim credits associated with the beneficial use \nof the waste heat, which displaces fossil fuel use by the anaerobic digestion operation."
+    },
+    {
+     "id": "p10-02",
+     "page": 10,
+     "text": "2.12.4 Participation under Other GHG Programs"
+    },
+    {
+     "id": "p10-03",
+     "page": 10,
+     "text": "The only other active GHG Program under which the Project is registered is the American Carbon \nRegistry – Project ID of ACR 113.  The Project has neither verified emissions reductions under nor \nrequested issuance of credits under ACR since 2008's emission reductions and does not plan to do so \nduring its second crediting period under VCS."
+    },
+    {
+     "id": "p10-04",
+     "page": 10,
+     "text": "2.12.5 Projects Rejected by Other GHG Programs"
+    },
+    {
+     "id": "p10-05",
+     "page": 10,
+     "text": "The Project has not been rejected under any program."
+    },
+    {
+     "id": "p12-20",
+     "page": 12,
+     "text": "This Project has a single end use for the LFG collected: electricity generation.  This use was not in \noperation prior to the implementation of the Project activity so ACM001 does not require an end of the \nremaining lifetime analysis."
+    },
+    {
+     "id": "p12-21",
+     "page": 12,
+     "text": "3.4 \nBaseline Scenario \nThe previously validated baseline scenario and additionality analysis are presented in the original PDD \nand discussed in Section 3.5.  The CDM Tool, “Assessment of the validity of the original/current baseline \nand update of the baseline at the renewal of the crediting period”, Version 3.0.1 is used below to assess \nthe validity of the original baseline.  The original baseline was found to be the continued operation of the \nDistrict Initial System (LFG collection system comprised of 21 vertical and horizontal wells, piping, blower, \nand flare)."
+    },
+    {
+     "id": "p14-02",
+     "page": 14,
+     "text": "Additional deviations from the latest methodology are:"
+    },
+    {
+     "id": "p21-08",
+     "page": 21,
+     "text": "Description \nQuantity of methane oxidized during combustion for electricity \ngeneration"
+    },
+    {
+     "id": "p21-09",
+     "page": 21,
+     "text": "Source of data \nCDM Methodologies and Tools"
+    }
+   ],
+   "excerpt_chars": 2489
+  },
+  {
+   "item_id": "VCS138-safeguards",
+   "project_id": "VCS138",
+   "project_name": "Greater New Bedford LFG Utilization Project",
+   "category": "Landfill gas (ACM0001)",
+   "principle": "safeguards",
+   "questions": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p32-03",
+     "page": 32,
+     "text": "5.3.4 \nInternal Review \nThe Project uses several layers of review to ensure proper operations, data collection and quantification \nof emissions reductions.   \n \nThe monthly quantification spreadsheet calculates several key performance parameters each day that are \ncompared a few times per week to the expected performance range of each parameter. If the calculations \nshow a significant deviation, corrective actions are taken. Corrective actions involve repairing equipment \nthat is performing outside its normal range or correcting data that may have been reported in error. \nEquipment problems and corrective actions are noted in the “Service Section” of the monthly reports. \nCNBE includes notes to fully explain the problem and corrective action to the extent necessary.  This \ninformation also identifies any deviations from this monitoring plan which can then be recorded in the \nverified Monitoring Report. \n \nCNBE has established monthly operations meetings at the Facility between CNBE’s contract operator \nand the owners of CNBE. During each monthly meeting CNBE and the operator review the prior month \noperations performance including the production reports, work order list, unscheduled repairs and \nmaintenance, and routine maintenance; the current month’s additions to the work orders that would \nprevent and correct deficiencies discovered and make overall improvements in performance of the \nFacility; review reports including monthly outage report, methane calibration logs, exhaust gas oxygen \nlogs, lubricating oil logs, spare parts inventory report and others that may be relevant. In addition, CNBE \nmeets with the District to review the status of the LFG collection system performance and work required \nto prevent and correct deficiencies discovered and make overall improvements in performance of the \nsystem. \n \nCNBE annually calculates the project emissions from electricity use and emergency generator use as \noutlined in this PD."
+    }
+   ],
+   "excerpt_chars": 1960
+  },
+  {
+   "item_id": "VCS2505-additionality",
+   "project_id": "VCS2505",
+   "project_name": "Fuel Efficient Cooking in South Africa",
+   "category": "Cookstoves (VMR0006) - optional",
+   "principle": "additionality",
+   "questions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p2-18",
+     "page": 2,
+     "text": "1.16 \nOther Forms of Credit ....................................................................................................... 21"
+    },
+    {
+     "id": "p2-19",
+     "page": 2,
+     "text": "1.17 \nAdditional Information Relevant to the Project ........................................................... 21"
+    },
+    {
+     "id": "p2-20",
+     "page": 2,
+     "text": "2 \nSAFEGUARDS ..................................................................................................... 22"
+    },
+    {
+     "id": "p2-29",
+     "page": 2,
+     "text": "3.3 \nProject Boundary .............................................................................................................. 39"
+    },
+    {
+     "id": "p2-30",
+     "page": 2,
+     "text": "3.4 \nBaseline Scenario ............................................................................................................. 43"
+    },
+    {
+     "id": "p2-31",
+     "page": 2,
+     "text": "3.5 \nAdditionality ...................................................................................................................... 45"
+    },
+    {
+     "id": "p3-01",
+     "page": 3,
+     "text": "3.6 \nMethodology Deviations ................................................................................................. 45"
+    },
+    {
+     "id": "p5-08",
+     "page": 5,
+     "text": "A brief description of the scenario existing prior to the implementation of the project."
+    },
+    {
+     "id": "p5-09",
+     "page": 5,
+     "text": "The continuation of the baseline scenario would see:"
+    },
+    {
+     "id": "p5-10",
+     "page": 5,
+     "text": "1. an increase in wood-fuel use and degradation of biodiversity in the region."
+    },
+    {
+     "id": "p8-05",
+     "page": 8,
+     "text": "The ICS distributed in the PIs \nwill adhere to the GP description \nand replace biomass burned in \nthe baseline scenario."
+    },
+    {
+     "id": "p8-11",
+     "page": 8,
+     "text": "in the monitoring and data \ncollection database."
+    },
+    {
+     "id": "p8-16",
+     "page": 8,
+     "text": "baseline scenario described in \nSection 3.4 \nin \nthis \nProject \nDescription as identified by a \nbaseline survey."
+    },
+    {
+     "id": "p8-17",
+     "page": 8,
+     "text": "All new PIs will use the activity \nmethod for demonstration of \nadditionality and of:"
+    },
+    {
+     "id": "p8-19",
+     "page": 8,
+     "text": "1. There \nis \nno \ngovernment \nmandated programme or policy \nin South Africa ensuring the \ndistribution \nof \nnew \nproject \nactivity \ninstances \nor \nfuel \nefficient cookstoves."
+    },
+    {
+     "id": "p8-20",
+     "page": 8,
+     "text": "5 \nHave characteristics with \nrespect to additionality \nthat are consistent with \nthe initial instances for the \nspecified project activity \nand geographic area."
+    },
+    {
+     "id": "p8-21",
+     "page": 8,
+     "text": "There \nis \nno \ngovernment \nmandated programme or policy"
+    },
+    {
+     "id": "p17-08",
+     "page": 17,
+     "text": "List of facilities, systems and equipment in operation under the existing scenario prior \nto the implementation of the project."
+    },
+    {
+     "id": "p17-09",
+     "page": 17,
+     "text": "Under the baseline scenario, households use non-renewable woody biomass for their fuel \nneeds. The baseline appliance being replaced by the project is an open fire (typically based \non the three-stone concept). No improvement projects are being implemented under the \nbaseline scenario. Wood fuel use has steadily been increasing as economic pressure has"
+    },
+    {
+     "id": "p21-08",
+     "page": 21,
+     "text": "1.17 Additional Information Relevant to the Project"
+    },
+    {
+     "id": "p45-07",
+     "page": 45,
+     "text": "The methodology VMR0006 v1.1 uses activity method for the demonstration of \nadditionality."
+    }
+   ],
+   "excerpt_chars": 2500
+  },
+  {
+   "item_id": "VCS2505-robust_quantification",
+   "project_id": "VCS2505",
+   "project_name": "Fuel Efficient Cooking in South Africa",
+   "category": "Cookstoves (VMR0006) - optional",
+   "principle": "robust_quantification",
+   "questions": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p3-09",
+     "page": 3,
+     "text": "5.2 \nData and Parameters Monitored ................................................................................... 54"
+    },
+    {
+     "id": "p3-10",
+     "page": 3,
+     "text": "5.3 \nMonitoring Plan ................................................................................................................. 61"
+    },
+    {
+     "id": "p11-11",
+     "page": 11,
+     "text": "9 \nBe included in the \nmonitoring report with \nsufficient technical, \nfinancial, geographic, and \nother relevant information \nto demonstrate \ncompliance with the \napplicable set of eligibility \ncriteria and enable \nsampling by the \nvalidation/verification \nbody."
+    },
+    {
+     "id": "p55-08",
+     "page": 55,
+     "text": "Data from the monitoring survey will be collected at least \nbiennially and applied to the emissions reductions \ncalculations during that monitoring period. Where the required \nlevel of precision is not met either additional surveys may be \ncompleted, or the lower bound value applied."
+    },
+    {
+     "id": "p55-09",
+     "page": 55,
+     "text": "Purpose of data \nCalculation of emission reductions in Equation 2"
+    },
+    {
+     "id": "p58-09",
+     "page": 58,
+     "text": "Data from the monitoring survey will be collected at least \nonce every two years and applied to the emissions reductions \ncalculations during that monitoring period. Where the required \nlevel of precision is not met either additional surveys may be \ncompleted, or the lower bound value applied."
+    },
+    {
+     "id": "p58-10",
+     "page": 58,
+     "text": "Purpose of data \nCalculation of emission reduction in Equation 6."
+    },
+    {
+     "id": "p62-08",
+     "page": 62,
+     "text": "The sample size for each monitoring activity will be the total number of ICS distributed and included \nin the monitoring database. A sample size calculation sheet will be used to calculate the number of \nsamples."
+    },
+    {
+     "id": "p62-09",
+     "page": 62,
+     "text": "Oversampling will be conducted to ensure that the required level of precision is met."
+    },
+    {
+     "id": "p64-05",
+     "page": 64,
+     "text": "Completed survey questionnaires and KPT/WBT data will be collected by the monitoring team and \ndelivered to the TASC SA Carbon Project Manager for analysis. These shall be checked through \nfor errors and completeness, and compiled into a monitoring report. Any incomplete or missing \ndata shall be documented clearly. The monitoring report will include:"
+    },
+    {
+     "id": "p64-06",
+     "page": 64,
+     "text": "• \nSummary of activities undertaken, at which location and on which dates"
+    },
+    {
+     "id": "p64-10",
+     "page": 64,
+     "text": "The implementation of this monitoring plan will be the responsibility of the TASC SA and its \nspecifically trained monitoring team. This team will comprise local operatives who are conversant \nin local languages and customs of rural South Africa. Individuals will be selected based on their \ncompetence and experience for each monitoring activity, and trained accordingly. Training records \nwill be maintained."
+    },
+    {
+     "id": "p64-11",
+     "page": 64,
+     "text": "There will be no incentives provided for these individuals for the type of data provided, to prevent \nany conflict of interest."
+    }
+   ],
+   "excerpt_chars": 2488
+  },
+  {
+   "item_id": "VCS2505-no_double_counting",
+   "project_id": "VCS2505",
+   "project_name": "Fuel Efficient Cooking in South Africa",
+   "category": "Cookstoves (VMR0006) - optional",
+   "principle": "no_double_counting",
+   "questions": [
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p2-16",
+     "page": 2,
+     "text": "1.14 \nCompliance with Laws, Statutes and Other Regulatory Frameworks ....................... 20"
+    },
+    {
+     "id": "p2-17",
+     "page": 2,
+     "text": "1.15 \nParticipation under Other GHG Programs .................................................................... 20"
+    },
+    {
+     "id": "p2-18",
+     "page": 2,
+     "text": "1.16 \nOther Forms of Credit ....................................................................................................... 21"
+    },
+    {
+     "id": "p20-07",
+     "page": 20,
+     "text": "There are no laws or regulations for the use of improved cookstoves in South African \nhouseholds."
+    },
+    {
+     "id": "p20-08",
+     "page": 20,
+     "text": "1.15 Participation under Other GHG Programs"
+    },
+    {
+     "id": "p20-09",
+     "page": 20,
+     "text": "Projects Registered (or seeking registration) under Other GHG Program(s)"
+    },
+    {
+     "id": "p20-10",
+     "page": 20,
+     "text": "This is a new project and has not been registered or seeking registration under any other \nGHG programs."
+    },
+    {
+     "id": "p21-02",
+     "page": 21,
+     "text": "This is a new project and has not been rejected by any other GHG program."
+    },
+    {
+     "id": "p35-06",
+     "page": 35,
+     "text": "VMR0006: Methodology for installation of High Efficiency Firewood Cookstoves v1.1.20"
+    },
+    {
+     "id": "p35-07",
+     "page": 35,
+     "text": "CDM Guideline: Sampling and surveys for CDM project activities and programmes of \nactivities, v421"
+    },
+    {
+     "id": "p35-08",
+     "page": 35,
+     "text": "CDM Tool 30: Calculation of the fraction of non-renewable biomass, v322"
+    },
+    {
+     "id": "p39-08",
+     "page": 39,
+     "text": "Project participants28 to calculate project- or \nPoA-specific fNRB values"
+    },
+    {
+     "id": "p39-09",
+     "page": 39,
+     "text": "CDM Guideline: Sampling and surveys for CDM project activities and programmes of \nactivities, v4"
+    },
+    {
+     "id": "p39-10",
+     "page": 39,
+     "text": "The guideline is applicable as the GP under VCS is equivalent to a PoA and complies to the \napplicability of the guideline."
+    },
+    {
+     "id": "p44-03",
+     "page": 44,
+     "text": "The baseline scenario in the PI has been identified as the continued use of non-renewable \nbiomass in the absence of the project activity. A desktop30 and field31 baseline wood fuel \nuse survey, as well as a fraction of non-renewable biomass survey32 was carried out in the \nPI area. The desktop baseline survey concluded that although the available literature \nsources are eligible for use (as stipulated by the CDM TOOL30), the sources are fairly old, \npublished in 2012 and 2013 respectively, and may not accurately reflect the current \nconditions.  A field baseline survey was therefore recommended and carried out."
+    },
+    {
+     "id": "p44-05",
+     "page": 44,
+     "text": "The fNRB has been calculated according to the provision of the VCS methodology \nVMR0006, Methodology for Installation of High Efficiency Firewood Cookstoves, \nVersion 1.1. VMR0006 requires the use of the CDM’s TOOL30 “Calculation of the fraction \nof non-renewable biomass” Version 3.0.34"
+    },
+    {
+     "id": "p61-13",
+     "page": 61,
+     "text": "The sampling plan is intended to enable the discovery of unbiased and reliable estimates of \nmonitored parameter values used in the GHG emission reduction calculations. The sampling plan \ndesign is based on the CDM Guideline: Sampling and surveys for CDM project activities and \nprogrammes of activities, version 4."
+    }
+   ],
+   "excerpt_chars": 2500
+  },
+  {
+   "item_id": "VCS2505-safeguards",
+   "project_id": "VCS2505",
+   "project_name": "Fuel Efficient Cooking in South Africa",
+   "category": "Cookstoves (VMR0006) - optional",
+   "principle": "safeguards",
+   "questions": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p22-16",
+     "page": 22,
+     "text": "Procedures or methods used for engaging local stakeholders"
+    },
+    {
+     "id": "p23-03",
+     "page": 23,
+     "text": "In light of the COVID-\n19 pandemic, the CME \nconfirmed an LSC Plan \nwith Verra which was \napproved \non \n17/02/2021.10 \n \nThe CME implemented \nthe LSC Plan for the \nfirst Project Instance \nand documented the \napproach in an LSC \nreport, \ndated \n15/06/2021, submitted \nwith this PDD.11 \n \nThe \nstakeholder \nconsultations that were \nconducted \nprior \nto \nimplementation \nare \nlisted as follows:"
+    },
+    {
+     "id": "p23-04",
+     "page": 23,
+     "text": "Local stakeholder consultations \n(LSCs) will be arranged prior to \nthe project validation to inform \nstakeholders of the project \ndesign, and to maximise \nparticipation and input from local \nstakeholders.  \n \nThese LSCs will be conducted via \nsmall gatherings if permitted by \nand in accordance with national \nlockdown \nrestrictions. \nTo \neffectively maximize the number \nof stakeholders reached, the \nLSCs will also be conducted via a \nZoom \nvideo \nconferencing \nsession. Stakeholders identified \nas not having access to stable \ninternet connection will be invited \nto \na \nsmall, \nphysical \nLSC \nmeetings. Stakeholders unable to \nattend the physical or Zoom \nmeetings will be notified about the \nproject \nvia \nemail \nand \ntheir \nfeedback or input requested. \nStakeholders will be invited via \nemail, \nor \nvia \nphysical \nor \ntelephonic invitation with the help \nof \nthe \non-the-ground \nimplementation partners (IPs). \nThe following information will be \nincluded in the LSC meetings and \nemails:"
+    },
+    {
+     "id": "p23-05",
+     "page": 23,
+     "text": "i. \nNon-technical \nsummary of the \nproject in English and \nproject instance- \napplicable official \nlocal languages;"
+    },
+    {
+     "id": "p26-02",
+     "page": 26,
+     "text": "held by local \nstakeholders; \n3) A description of the \nsocial, economic \nand cultural diversity \nwithin local \nstakeholder groups \nand the differences \nand interactions \nbetween the \nstakeholder groups; \n4) Any significant \nchanges in the \nmakeup of local \nstakeholders over \ntime; \n5) The expected \nchanges in well-\nbeing and other \nstakeholder \ncharacteristics under \nthe baseline \nscenario, including \nchanges to \necosystem services \nidentified as \nimportant to local \nstakeholders; \n6) The location of \ncommunities, local \nstakeholders and \nareas outside the \nproject area that are \npredicted to be \nimpacted by the \nproject; and \n7) The location of \nterritories and \nresources which \nlocal stakeholders \nown or to which they \nhave customary \naccess."
+    },
+    {
+     "id": "p27-05",
+     "page": 27,
+     "text": "No \nrisks \nto \nstakeholders \nwere \nidentified."
+    },
+    {
+     "id": "p30-05",
+     "page": 30,
+     "text": "1) The project proponent \nshall \nattempt \nto \namicably \nresolve \nall \ngrievances and provide \na written response to \nthe grievances in a"
+    }
+   ],
+   "excerpt_chars": 2494
+  },
+  {
+   "item_id": "VCS1742-additionality",
+   "project_id": "VCS1742",
+   "project_name": "Hydroelectric Project in Kinnaur District in Himachal Pradesh",
+   "category": "Hydropower (ACM0002)",
+   "principle": "additionality",
+   "questions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "paragraphs": [
+    {
+     "id": "x1-p17-25",
+     "page": 17,
+     "text": "Step 1. Identification of alternatives to the project activity consistent with current laws and \nregulations"
+    },
+    {
+     "id": "x1-p19-09",
+     "page": 19,
+     "text": "17 Article 6.7, Executive Summary of Environmental Assessment for Rampur Hydropower Project in Himachal \nPradesh, India - http://sjvnindia.com/projects/rampurpdf/final-executive-summary.pdf"
+    },
+    {
+     "id": "x1-p21-01",
+     "page": 21,
+     "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 21 \n \n \nWACC = [D/ (D+E)]*[Cost of Debt] + [E/ (D+E)]*[Cost of Equity] \n \nOf the examples suggested by the additionality tool, the project proponent has identified the Government \nbond rates, increased by a suitable risk premium to reflect private investment and/or the project type \n[paragraph 6(a) of sub-step 2b)] as the cost of equity. The appropriate cost of debt has been taken as the \nPrime lending rate prevailing at the time of investment decision in accordance with “Guidance on the \nAssessment of Investment analysis”, (EB 51, Annex 58). The same has been adjusted to tax rate in order \nto serve as a benchmark comparable to post tax IRR computations. \n \nCost of Debt: \nCost of debt is defined as the rate at which lenders agree to lend money to a project. The additionality \ntool and the guidance to investment analysis clarify that the benchmark for projects with more than one \npotential developer should not be based on project specific parameters but should represent the standard \nin the market. Accordingly, the  Reserve Bank of India prime lending rate prevailing at the time of \nproject start date has been considered as the cost of debt. The prime lending rate at the time of \ninvestment was in the range of 10.25% - 10.75% [Source Reserve Bank Web-link]18, the average PLR of \n10.50% has thus been considered as appropriate cost of debt.  \n \nThe post tax cost of debt therefore works out to: 10.50% * (1-8.415%) = 9.616% \n \nCalculation of Required rate of return on Equity: \nGovernment bond rates, increased by a suitable risk premium to reflect private investment and/or project \ntype, which is nothing but CAPM has been used to compute the cost of equity. This is in conformity with \nthe recommendation of EB vide paragraph 6(a) of step 2(b) of Additionality Tool. Return on equity has \nbeen computed using the formula: \n \nKe = Rf + β x (Rm - Rf) \n \nWhere:"
+    },
+    {
+     "id": "x1-p27-03",
+     "page": 27,
+     "text": "Project Cost \n9.56% \n9.80% \n10.14% \nThe IRR remains lesser than the \nbenchmark even after an unanticipated"
+    },
+    {
+     "id": "x1-p32-02",
+     "page": 32,
+     "text": "29 Paragraph 3.2, Preliminary Ranking Study of Hydro Electric Schemes published by CEA"
+    }
+   ],
+   "excerpt_chars": 2469
+  },
+  {
+   "item_id": "VCS1742-robust_quantification",
+   "project_id": "VCS1742",
+   "project_name": "Hydroelectric Project in Kinnaur District in Himachal Pradesh",
+   "category": "Hydropower (ACM0002)",
+   "principle": "robust_quantification",
+   "questions": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+   ],
+   "paragraphs": [
+    {
+     "id": "x1-p40-08",
+     "page": 40,
+     "text": "EGPJ,y \n= \nQuantity of net electricity generation that is produced and fed into the grid as a result \nof the implementation of the CDM project activity in year y (MWh/yr) \nEGfacility,y \n= \nQuantity of net electricity generation supplied by the project plant/unit to the grid in \nyear y (MWh/yr)"
+    },
+    {
+     "id": "x1-p40-09",
+     "page": 40,
+     "text": "Calculation of EFgrid,CM, y \n \nIn accordance with the “Tool to calculate the emission factor for an electricity system” Version 02, \ncombined margin CO2 emission factor for grid connected power generation is calculated stepwise as \nbelow: \n \nThe data used for the calculation of the baseline emission factor was obtained from the baseline \ncalculations published by the CEA, Baseline Carbon Dioxide Emissions from Power Sector – Version \n4.0, which uses ACM0002. The relevant parts of the calculations are referenced in the methodology \noutline below, with detailed data provided in Annex 3. A complete explanation of the assumptions \nemployed by the CEA can be obtained from the CO2 Baseline Database for the Indian Power Sector \nUser Guide - Version 4.0. \n \n \nStep 1. Identify the relevant electric power system  \n \nFor the purpose of determining electricity emission factors, a project electricity system is defined by the \nspatial extent of power plants that are physically connected through transmission and distribution lines to \nthe project activity (e.g. the renewable power plant location or the consumers where electricity is being \nsaved) and that can be dispatched without significant transmission constraints.  \n \nThe Indian power system is divided into five independent regional grids, namely Northern, Eastern, \nWestern, Southern, and North-Eastern. Each grid covers several states. Power generation and supply \nwithin the regional grid is managed by Regional Load Dispatch Centre (RLDC). The Regional Power"
+    },
+    {
+     "id": "x1-p41-01",
+     "page": 41,
+     "text": "Northern \nWestern \nSouthern \nEastern \nNorth Eastern"
+    },
+    {
+     "id": "x1-p43-01",
+     "page": 43,
+     "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 43"
+    },
+    {
+     "id": "x1-p44-02",
+     "page": 44,
+     "text": "a) The set of five power units that have been built most recently, or  \nb) The set of power capacity additions in the electricity system that comprise 20% of the system"
+    },
+    {
+     "id": "x1-p45-01",
+     "page": 45,
+     "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 45 \n \n \n \nWhere:"
+    },
+    {
+     "id": "x1-p45-05",
+     "page": 45,
+     "text": "41 http://www.cea.nic.in/reports/planning/cdm_co2/cdm_co2.htm"
+    },
+    {
+     "id": "x1-p46-11",
+     "page": 46,
+     "text": "B.6.2.  Data and parameters that are available at validation: \n(Copy this table for each data and parameter)"
+    },
+    {
+     "id": "x1-p50-20",
+     "page": 50,
+     "text": "Measured at Project activity site. (Pothead Yard)"
+    }
+   ],
+   "excerpt_chars": 2471
+  },
+  {
+   "item_id": "VCS1742-no_double_counting",
+   "project_id": "VCS1742",
+   "project_name": "Hydroelectric Project in Kinnaur District in Himachal Pradesh",
+   "category": "Hydropower (ACM0002)",
+   "principle": "no_double_counting",
+   "questions": [
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "paragraphs": [
+    {
+     "id": "x1-p13-07",
+     "page": 13,
+     "text": "B.4. \nDescription of how the  baseline scenario is identified and description of the identified \nbaseline scenario:  \n \n>> \nAs the project activity is the installation of a new grid-connected hydro power plant/unit, as per \nACM0002, Version 12.1.0, the baseline scenario is the following: \nElectricity delivered to the grid by the project activity would have otherwise been generated by the \noperation of grid-connected power plants and by the addition of new generation sources, as reflected in \nthe combined margin (CM) calculations described in the “Tool to calculate the emission factor for an \nelectricity system” (Version 02) described step wise under section B.6. \n \nB.5. \nDescription of how the anthropogenic emissions of GHG by sources are reduced below \nthose that would have occurred in the absence of the registered CDM project activity (assessment \nand demonstration of additionality):  \n>> \nAs per the decision 17/cp.7, paragraph 43, a CDM project activity is additional if anthropogenic \nemissions of green house gases by sources are reduced below those that would have occurred in absence \nof registered CDM project activity. The methodology requires the project proponent to determine the \nadditionality based on ‘Tool for the demonstration and assessment of additionality’, Version 05.2. The \nstep-wise approach to establish additionality of the project activity as per the additionality tool is \nprovided below. \n \nPrior Consideration of CDM: \n \n“Guidance on the demonstration and assessment of prior consideration of the CDM” (EB49, Annex 22), \nstates that for project activities with a start date before 2nd August 2008, for which the start date is prior \nto the date of publication of the PDD for global stakeholder consultation, the serious consideration of \nCDM in the decision to proceed with the implementation of the project activity is to be demonstrated. \nThe following elements demonstrate project proponent’s serious consideration of CDM: \n \na) During the project evaluation in June 2003, the JKHCL Board considered the necessity of CDM"
+    },
+    {
+     "id": "x1-p13-08",
+     "page": 13,
+     "text": "funds to mitigate various risks associated with the project activity. The minutes of the meeting of the \nBoard of Directors of JKHCL held on 2nd June 2003 clearly state that the CDM revenues were \nessential to mitigate various risks inherent to the project activity. Subsequent to the in principal \ndecision to take up the project for further evaluation and mandatory clearances, JKHCL entered into"
+    }
+   ],
+   "excerpt_chars": 2465
+  },
+  {
+   "item_id": "VCS1742-safeguards",
+   "project_id": "VCS1742",
+   "project_name": "Hydroelectric Project in Kinnaur District in Himachal Pradesh",
+   "category": "Hydropower (ACM0002)",
+   "principle": "safeguards",
+   "questions": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "paragraphs": [
+    {
+     "id": "x1-p60-13",
+     "page": 60,
+     "text": "- \nEnvironmental monitoring will be ensured through a District level Inter Departmental \nMonitoring Committee under the Chairmanship of Deputy Commissioner, Kinnaur with \nrepresentatives from all the concerned departments and the Proponents.   This Committee will \nmeet periodically for compliance of the recommendations as detailed in Table 9.1 of Vol. I. of \nEIA Report.     \n \nThe Project Proponents have made sufficient provision in the Project Cost to carryout CAT Plan and \nEMP to mitigate adverse impacts and maximize beneficial impacts. Further, the detailed measures and \ncosts related to the EMP have been provided in Appendix II."
+    },
+    {
+     "id": "x1-p61-02",
+     "page": 61,
+     "text": "1. Identification of stakeholders with respect to the project activity. \n2. Discussions/Interaction with stakeholders and sharing of information.  \nThe interactions and assessments were conducted using the following tools: \n- \nFocus Group Discussions (FGD) \n- \nParticipatory Rural Appraisal (PRA) \n- \nSocial mapping \n- \nSemi-structured Interview (SSI) \n- \nKey Informant Interview \n3. Inviting comments and concerns from stakeholders inter-alia through a ‘Survey Questionnaire’ \nand compilation of the same along with identification of actual impacts on the local community \nand region \n \nThe following diagram represents the knowledge loop that was followed:"
+    },
+    {
+     "id": "x1-p63-01",
+     "page": 63,
+     "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 63"
+    },
+    {
+     "id": "x1-p66-02",
+     "page": 66,
+     "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 66 \n \n \nThe Stakeholder Consultation Report primarily deals with socio-economic impact of the project activity \nand provided an opportunity for the local population to express their viewpoints and comments with \nrespect to the project. \n \nA total of eighteen community level consultation events were held during the study wherein \napproximately 412 people participated. In addition, 29 other stakeholders from PRIs, Government \ndepartments and local NGOs were covered. A summary of the various categories of stakeholders \nconsulted during this process is provided in the table below. This table also provides data on the number \nof stakeholders consulted, issues discussed and tools used with respect to different stakeholders are \nmentioned in the following table:  \n \nStakeholders \nStakeholder Type \nNumber \nPurpose of \nConsultation"
+    },
+    {
+     "id": "x1-p71-04",
+     "page": 71,
+     "text": "2 \n• Understanding \nissues pertinent \nto the region, \ncommunity          \n• Understanding \nthe status of \ndifferences \nbetween \nproponents and \nthe community"
+    }
+   ],
+   "excerpt_chars": 2491
+  },
+  {
+   "item_id": "VCS1728-additionality",
+   "project_id": "VCS1728",
+   "project_name": "Bundled Wind Power Project by Mytrah Group",
+   "category": "Onshore wind (ACM0002)",
+   "principle": "additionality",
+   "questions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p37-02",
+     "page": 37,
+     "text": "avenues and investment options. Hence, the Benchmark analysis method is to be employed for \nanalysis of the said project. \n \nSub-step 2b (Option III): Apply benchmark analysis \nThe investment analysis using Benchmark analysis approach (Option III) has been chosen. \nFurther, this method illustrates the evaluation of the Project by the PP before the decision to \nundertake the project was taken and management approval granted. \n \nChoice of Financial Indicator: \n \nAccording to the “Tool for demonstration and assessment of Additionality”, the financial indicator \ncan be based either on (1) project IRR or (2) equity IRR. There is no general preference between \nthe approaches (1) or (2). The benchmark chosen for analysis shall be fully consistent with the \nchoice of approach. Therefore in accordance with the guidance, the relevant financial indicator for \nproject activity has been chosen as post tax equity IRR. \n \nChoice of Benchmark: \nAs per Investment Analysis tool, Required/expected returns on equity are appropriate \nbenchmarks for an equity IRR. The Equity IRR is considered as the financial indicator and the \nbenchmarks used is cost of equity. Hence the benchmarks used are applicable to the project \nactivity and the type of IRR calculation presented \n \nAt the time of decision made of project activity, Version 06 of methodological tool \"Investment \nAnalysis\" (EB 85 Annex 12) was the latest available tool to PP, hence PP has considered the \nsame tool for default value of return on equity. The default value of Return on Equity for Group-1 \nprojects in India is 11.10%. \n  \nAs per paragraph 7 of Appendix A of the above mentioned document, “In situations where an \ninvestment analysis is carried out in nominal terms, project participants can convert the real term \nvalues provided in the table below to nominal values by adding the inflation rate. The inflation rate \nshall be obtained from the inflation forecast of the central bank of the host country for the \nduration of the crediting period. If this information is not available, the target inflation rate of the \ncentral bank shall be used. If this information is also not available, then the average forecasted \ninflation rate for the host country published by the IMF (International Monetary Fund World \nEconomic Outlook) or the World Bank for the next five years after the start of the project activity \nshall be used”. \n \nDefault Value Benchmark:"
+    },
+    {
+     "id": "p38-12",
+     "page": 38,
+     "text": "11 https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=16402"
+    }
+   ],
+   "excerpt_chars": 2490
+  },
+  {
+   "item_id": "VCS1728-robust_quantification",
+   "project_id": "VCS1728",
+   "project_name": "Bundled Wind Power Project by Mytrah Group",
+   "category": "Onshore wind (ACM0002)",
+   "principle": "robust_quantification",
+   "questions": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p33-02",
+     "page": 33,
+     "text": "In the absence of the project activity, the equivalent amount of power would have been drawn \nfrom the Indian grid. Hence, the baseline for the project activity is the equivalent amount of \npower from the Indian grid.  \n \nThe combined margin (EFgrid, CM,y) is the result of a weighted average of two emission factor \npertaining to the electricity system: the operating margin (OM) and build margin (BM). \nCalculations for this combined margin must be based on data from an official source (where \navailable) and made publically available. The CEA database version 12 is the latest available \ndata at the time of PD submission to DOE for validation, hence same is considered for emission \nfactor calculations. \n \nThe combined margin of the Indian grid used for the project activity is as follows:"
+    },
+    {
+     "id": "p50-17",
+     "page": 50,
+     "text": "The monitoring plan is developed in accordance with the modalities and procedures for CDM \nproject activities and is proposed for grid-connected wind power project. The monitoring plan, \nwhich will be implemented by the project participant describes about the monitoring organisation, \nparameters to be monitored, monitoring practices, quality assurance, quality control procedures, \ndata storage and archiving. \n \nThe authority and responsibility for registration, monitoring, measurement, reporting and \nreviewing of the data rests with the project participant. PP proposed the following structure for"
+    },
+    {
+     "id": "p72-03",
+     "page": 72,
+     "text": "Since metering arrangement, monitoring practice, accuracy class, calibration interval is under \ncontrol of state electricity board, the PP do not have any control on monitoring practice and \ncalibration of meters.  \nBeing Green field project activity and commissioned within 2 years, all meters are used for \nmonitoring purpose are pre calibrated before installation as per state electricity board regulations, \nthus installed pre calibrated meters have validity of calibration till 5 years of commissioning date. \nThe current monitoring period is within 2 years of commissioning date, thus all meters initial \ncalibration is valid for current monitoring period. The meters are tested by state electricity board \nduring commissioning, thus all meters have valid calibration period during current monitoring \nperiod. \nThe below mentioned meter and calibration details  are for current monitoring period, and the \nsame will be changed in future. \n \nThe Energy Meters details used for commissioned project activity is as below. \n \nThe Main and Check meter details of Nazeerabad Site are as follows:"
+    }
+   ],
+   "excerpt_chars": 2493
+  },
+  {
+   "item_id": "VCS1728-no_double_counting",
+   "project_id": "VCS1728",
+   "project_name": "Bundled Wind Power Project by Mytrah Group",
+   "category": "Onshore wind (ACM0002)",
+   "principle": "no_double_counting",
+   "questions": [
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p25-09",
+     "page": 25,
+     "text": "1.12.2 Emissions Trading Programs and Other Binding Limits"
+    },
+    {
+     "id": "p25-10",
+     "page": 25,
+     "text": "Net GHG emission reductions or removals generated by the Project will not be used for \ncompliance with an emissions trading program or to meet binding limits on GHG emissions in any \nEmission Trading program or other binding limits."
+    },
+    {
+     "id": "p25-11",
+     "page": 25,
+     "text": "1.12.3 Other Forms of Environmental Credit"
+    },
+    {
+     "id": "p25-13",
+     "page": 25,
+     "text": "1.12.4 Participation under Other GHG Programs"
+    },
+    {
+     "id": "p40-07",
+     "page": 40,
+     "text": "+50% \n740.25 \nMW \nCapacity of the proposed project activity \n493.5 \nMW \n-50% \n246.75 \nMW \n \nStep (2): Identify similar projects (both CDM and non-CDM) which fulfil all of the following \nconditions: \n \n(a) The projects are located in the applicable geographical area;  \n \n(b) The projects apply the same measure as the proposed project activity;  \n \n(c) The projects use the same energy source/fuel and feedstock as the proposed project activity, \nif a technology switch measure is implemented by the proposed project activity;  \n \n(d) The plants in which the projects are implemented produce goods or services with comparable \nquality, properties and applications areas (e.g. clinker) as the proposed project plant;  \n \n(e) The capacity or output of the projects is within the applicable capacity or output range \ncalculated in Step 1;  \n \n(f) The projects started commercial operation before the project design document (CDM-PDD) is \npublished for global stakeholder consultation or before the start date of proposed project activity, \nwhichever is earlier for the proposed project activity.  \n \nIdentification of the similar projects (CDM and non-CDM) is carried out as per sub-steps of Step \n(2) as follows:"
+    },
+    {
+     "id": "p40-08",
+     "page": 40,
+     "text": "a) As the projects are located in Rajasthan, Andhra Pradesh, Madhya Pradesh and Telangana \nstate of India, therefore, projects in the geographical area of Rajasthan, Andhra Pradesh, Madhya \nPradesh and Telangana have been chosen for analysis. The project activity involves generation \nof electricity from wind energy. The project activity is located in the different states in India and \nthe policy applicable for the wind projects is regulated by respective state policy. The \npolicies/tariff for each state is regulated by State Electricity Regulatory Commissions of respective"
+    },
+    {
+     "id": "p53-04",
+     "page": 53,
+     "text": "There were no other major comments or protest raised by the stakeholders and they were totally \nin support for setting up of these kinds of projects in the region.  The PP also placed an grievance \nregister onsite in where the stakeholder can put down his/her complain and the same if found \ngenuine will be addressed immediately."
+    }
+   ],
+   "excerpt_chars": 2496
+  },
+  {
+   "item_id": "VCS1728-safeguards",
+   "project_id": "VCS1728",
+   "project_name": "Bundled Wind Power Project by Mytrah Group",
+   "category": "Onshore wind (ACM0002)",
+   "principle": "safeguards",
+   "questions": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p52-10",
+     "page": 52,
+     "text": "The local stakeholder consultation for all the project activity instances have been carried out. The \ndetails of which are as follows: The Local Stakeholder consultation will be provided to DOE during \nvalidation of project activity."
+    },
+    {
+     "id": "p52-11",
+     "page": 52,
+     "text": "Sr. No. \nProject Activity Name \nNotice Date \nStakeholder \nConsultation date"
+    },
+    {
+     "id": "p52-12",
+     "page": 52,
+     "text": "1.  Mytrah Vayu (Indravati) Pvt. Ltd. \n10/11/2015 \n21/11/2015"
+    },
+    {
+     "id": "p53-02",
+     "page": 53,
+     "text": "The Minutes of meeting with commenting sheet from LSH, invitation letter receipt copy shall be is \nsubmitted to the DOE for further check."
+    },
+    {
+     "id": "p53-03",
+     "page": 53,
+     "text": "Few queries raised during local stakeholder consultation are addressed satisfactorily."
+    },
+    {
+     "id": "p53-04",
+     "page": 53,
+     "text": "There were no other major comments or protest raised by the stakeholders and they were totally \nin support for setting up of these kinds of projects in the region.  The PP also placed an grievance \nregister onsite in where the stakeholder can put down his/her complain and the same if found \ngenuine will be addressed immediately."
+    },
+    {
+     "id": "p54-02",
+     "page": 54,
+     "text": "Looks like the consultant does not want to share any information with the stakeholders on which \nthey give comments.  \nPP Response – The final VCS PD have all information of LSC meeting. The main purpose of \nLSC is to take concerns of stakeholders and to check if project design need to be update. The \nproject activity has taken local and state government approvals.  \nThe PP have established the mechanisms for ongoing communication with local stakeholders to \nallow stakeholders to raise concerns about potential negative impacts during project \nimplementation. There are no any negative comments received from local stakeholders. \n \nThe revised VCS PD has been submitted to DOE with mention of Public comments and PP \nresponse.  There is no changes required in VCS PD due to public comments other than \ndiscussion of comments as above. \n \nThis VCS PD was revised on 05/01/2018 to include an assessment of how the project proponent \ntook comments received during the public comment period into account, which were not \nforwarded by VCS until 02/01/2018. No changes were necessary to the project documentation, \nand the comments have no effect on the project. Therefore, the official date of VCS PD remains \n20/12/2017"
+    },
+    {
+     "id": "p54-03",
+     "page": 54,
+     "text": "6 \nACHIEVED GHG EMISSION REDUCTIONS AND REMOVALS"
+    }
+   ],
+   "excerpt_chars": 2191
+  },
+  {
+   "item_id": "VCS2609-additionality",
+   "project_id": "VCS2609",
+   "project_name": "Kuamut Rainforest Conservation Project",
+   "category": "Improved forest management (VM0010)",
+   "principle": "additionality",
+   "questions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p45-07",
+     "page": 45,
+     "text": "2.2 \nWithout-project Land Use Scenario and Additionality"
+    },
+    {
+     "id": "p81-06",
+     "page": 81,
+     "text": "For scenario i. (palm oil), barriers exist consisting of barriers related to local ecological conditions and \ntechnological barriers. The barriers related to the local ecological conditions have to do with the fact that \nthe conditions in the project area, especially when it comes to soils and topography (slopes), are sub-\noptimal for establishing large scale industrial palm oil plantations. Although this hasn’t always stopped the \nestablishment of palm oil plantations in other areas, in the case of the project area there are additional \ntechnological barriers since the area is relatively far removed from suitable roads and milling facilities, \nmaking it unattractive to develop palm oil plantations in the project area. The combination of these barriers \nwould have prevented scenario i. from occurring."
+    },
+    {
+     "id": "p82-05",
+     "page": 82,
+     "text": "As shown in the previous step, the baseline scenario is one of planned timber harvest combination of \nselective logging (Natural Forest Management) and the relatively new Mosaic Planting Approach. The \nmethodology requires that the project proponent must determine how to model the baseline management \nscenario with a choice between two options: a Historical Baseline Scenario or a Common Practice Baseline \nScenario. As explained earlier, timber harvesting in the natural forests of the YSFMA is managed by \nRakyat Berjaya Sdn. Bhd while annual coupe permits are issued by the Sabah Forestry Department. \nBecause of this system, there are no long-term harvest plans for the area that are being implemented and \nthe implementation of the project is preventing the issuance of new coupe permits. In addition, the most \nlikely baseline scenario includes the relatively new Mosaic Planting Approach. Because of the absence of \nthe long-term management plan for Natural Forest Management and the fact that the Mosaic Planting \nApproach has not been applied yet in the project area, a Common Practice Baseline Scenario was applied \nto model the baseline scenario."
+    },
+    {
+     "id": "p82-06",
+     "page": 82,
+     "text": "In accordance with the methodology, common practice is defined as timber harvest under the legal \nrequirements for forest management and have been determined from a timber harvest plan developed \nfrom:"
+    },
+    {
+     "id": "p107-08",
+     "page": 107,
+     "text": "In accordance with the requirements of the methodology, the additionality of the project is demonstrated \nusing the most recent version of VCS tool, VT0001 VCS Tool for the Demonstration and Assessment of \nAdditionality in AFOLU Project Activities."
+    }
+   ],
+   "excerpt_chars": 2476
+  },
+  {
+   "item_id": "VCS2609-permanence",
+   "project_id": "VCS2609",
+   "project_name": "Kuamut Rainforest Conservation Project",
+   "category": "Improved forest management (VM0010)",
+   "principle": "permanence",
+   "questions": [
+    "P1",
+    "P2",
+    "P3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p38-17",
+     "page": 38,
+     "text": "The overarching objectives of the project include \nthe conservation and restoration of forest \necosystems which would enable reducing the \nnatural risks. Furthermore, the project activities \nwill also include early detection of fires through \nreal-time monitoring system, although there are \nno records of fire occurrence in the project area \nneither the project zone."
+    },
+    {
+     "id": "p38-18",
+     "page": 38,
+     "text": "Natural Risks \nNatural risks to the climate change \nbenefits of the project are \nconsidered low, both in the short \nand long-term. Such risks, including \nnatural fires, pests & disease, \nextreme weather, geological events \nand other natural risks are \nconsidered in detail in the non-\npermanence risk assessment."
+    },
+    {
+     "id": "p38-19",
+     "page": 38,
+     "text": "As above, natural risks to the \ncommunity benefits of the project, \nboth in the short-term and long-\nterm, are considered low, and such \nrisks are considered to be lowered \nfurther by the activities of the \nproject."
+    },
+    {
+     "id": "p39-09",
+     "page": 39,
+     "text": "Human-induced threats to the \ncommunity benefits of the project"
+    },
+    {
+     "id": "p39-10",
+     "page": 39,
+     "text": "nclude the willingness of \ncommunities to participate in \nproject activities, both in the short \nand long-term, external pressures, \nand long-term climate change. In \nparticular, there is a risk that and"
+    },
+    {
+     "id": "p39-11",
+     "page": 39,
+     "text": "nitial willingness to accept and \nparticipate with the project may \nchange if the project fails to deliver \ntangible benefits over the long-term \nto communities."
+    },
+    {
+     "id": "p90-04",
+     "page": 90,
+     "text": "Independent of the forest management, some parts of the project area would not have been subjected to \nmanagement practices according to common practice within the YSFMA. This involves:"
+    },
+    {
+     "id": "p90-05",
+     "page": 90,
+     "text": "• \nRoads Buffers: 10m from roads \n• \nRiverine Buffers: 30m from rivers \n• \nLarge riverine Buffers: 100m from major waterways (Kuamut River) \n• \nProtected Area Buffers: 50m from protected areas \n• \nSteep Slopes: Above 25 ̊"
+    },
+    {
+     "id": "p90-06",
+     "page": 90,
+     "text": "The project area has therefore been divided in different baseline strata to reflect the different management \npractices under the baseline and the differences in existing vegetation. The following strata have been \ndefined:"
+    },
+    {
+     "id": "p161-21",
+     "page": 161,
+     "text": "Bu|IFM-VCS \nTotal number of credits withheld in VCS AFOLU pooled buffer account"
+    },
+    {
+     "id": "p161-22",
+     "page": 161,
+     "text": "An ex-ante estimation of the risks has been performed using the VCS AFOLU Non-Permanence Risk \nTool. The assessment is annexed to this PD and shows that the non-permanence risk rating for this \nproject is 10 which is the minimum risks rating to be applied according to the tool."
+    },
+    {
+     "id": "p161-23",
+     "page": 161,
+     "text": "Applying this to the numbers in Table 32 gives the following ex-ante estimates of the number of \ncredits to be withheld in VCS AFOLU pooled buffer account"
+    }
+   ],
+   "excerpt_chars": 2462
+  },
+  {
+   "item_id": "VCS2609-robust_quantification",
+   "project_id": "VCS2609",
+   "project_name": "Kuamut Rainforest Conservation Project",
+   "category": "Improved forest management (VM0010)",
+   "principle": "robust_quantification",
+   "questions": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p154-11",
+     "page": 154,
+     "text": "Table 30: Calculated deduction factors (LFME)"
+    },
+    {
+     "id": "p155-04",
+     "page": 155,
+     "text": "Table 31: Emission as a result of leakage."
+    },
+    {
+     "id": "p175-07",
+     "page": 175,
+     "text": "Figure 38: Data management QA/QC procedures"
+    },
+    {
+     "id": "p176-05",
+     "page": 176,
+     "text": "A series of brochures have been produced in the Malay language, which offer written summaries of \nthe project objectives and implementing bodies and describe some of the underlying principles \ngoverning the project such biodiversity, carbon sequestration (including monitoring), global warming \nand the principles of FPIC."
+    },
+    {
+     "id": "p176-06",
+     "page": 176,
+     "text": "Going forward, summary information of key project documents will be prepared in the Malay \nlanguage and disseminated among communities in printed format. These will include the project PD \n(including the monitoring plan), monitoring reports, a schematic for the project’s grievance and \nredress mechanism, and any other appropriate documentation which may be requested by \ncommunities. The complete PD and the verified Monitoring Reports will be disseminated and made \npublicly available on the internet and this will ne communicated to the communities and other \nstakeholders through other means such as community notice boards as appropriate."
+    },
+    {
+     "id": "p176-07",
+     "page": 176,
+     "text": "3.4 \nOptional Criterion: Climate Change Adaptation Benefits"
+    },
+    {
+     "id": "p201-09",
+     "page": 201,
+     "text": "4.4.1 \nCommunity Monitoring Plan (CM4.1, CM4.2, GL1.4, GL2.2, GL2.3, GL2.5)"
+    },
+    {
+     "id": "p201-10",
+     "page": 201,
+     "text": "Monitoring of the impacts of project activities will be comprised of several mutually reinforcing methods \nwhich will be conducted over differing timescales. It is envisaged that a project Community Engagement \nTeam will work with Project Zone communities over the long term in the implementation of project activities, \nand will also be responsible for the collection, collation and reporting of monitoring data. Methods to assess \nproject impacts will include periodic household surveys, community-level engagements to assess project \nprogress, smaller engagements targeting specific community groups, and communications via the \ngrievance mechanism and other channels. Monitoring will thus constitute an ongoing aspect of project \nimplementation, the results of which will be collated into regular (annual or biennial) monitoring reports."
+    },
+    {
+     "id": "p201-11",
+     "page": 201,
+     "text": "Household surveys will be conducted among a randomly-selected sample of Project Zone community \nhouseholds every two years. These will aim to update the demographic and income baseline data reported \nin Section 4.1.1, and to record information related to impact indicators. Selected indicators will follow the"
+    },
+    {
+     "id": "p221-04",
+     "page": 221,
+     "text": "5.4.1 \nBiodiversity Monitoring Plan (B4.1, B4.2, GL1.4, GL3.4)"
+    },
+    {
+     "id": "p222-04",
+     "page": 222,
+     "text": "5.5 \nOptional Criterion: Exceptional Biodiversity Benefits"
+    }
+   ],
+   "excerpt_chars": 2500
+  },
+  {
+   "item_id": "VCS2609-no_double_counting",
+   "project_id": "VCS2609",
+   "project_name": "Kuamut Rainforest Conservation Project",
+   "category": "Improved forest management (VM0010)",
+   "principle": "no_double_counting",
+   "questions": [
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p68-06",
+     "page": 68,
+     "text": "The right of use of the entire project area was conferred by Yayasan Sabah to Permian Malaysia Sdn. Bhd. \nThis right of use includes the right to generate and sell carbon offset credits derived from forest protection \nand regeneration. Through this contract Permian has project ownership as defined in the VCS Standard as \n“arising by virtue of a statutory, property or contractual right in the land, vegetation or conservational or \nmanagement process that generates GHG emission reductions and/or removals (where the project \nproponent has not been divested of such project ownership)”."
+    },
+    {
+     "id": "p68-07",
+     "page": 68,
+     "text": "2.5.10 Management of Double Counting Risk (G5.9)"
+    },
+    {
+     "id": "p68-08",
+     "page": 68,
+     "text": "The Kuamut Rainforest Conservation Project has not been registered under any emissions trading \nprograms or any program involving environmental or social credits. The project will not claim credit for the \nsame GHG emission reduction under another program."
+    },
+    {
+     "id": "p68-09",
+     "page": 68,
+     "text": "2.5.11 Emissions Trading Programs and Other Binding Limits"
+    },
+    {
+     "id": "p68-10",
+     "page": 68,
+     "text": "Not applicable, the project is not part of any Emissions Trading Programs and is not subject to Other \nBinding Limits"
+    },
+    {
+     "id": "p68-11",
+     "page": 68,
+     "text": "2.5.12 Other Forms of Environmental Credit"
+    },
+    {
+     "id": "p68-12",
+     "page": 68,
+     "text": "The project will not claim other Forms of Environmental Credit under another program."
+    },
+    {
+     "id": "p68-13",
+     "page": 68,
+     "text": "2.5.13 Participation under Other GHG Programs"
+    },
+    {
+     "id": "p68-14",
+     "page": 68,
+     "text": "The Kuamut Rainforest Conservation Project has not been registered under any emissions trading \nprograms. The project will not claim credit for the same GHG emission reduction under another program."
+    },
+    {
+     "id": "p68-15",
+     "page": 68,
+     "text": "2.5.14 Projects Rejected by Other GHG Programs"
+    },
+    {
+     "id": "p68-16",
+     "page": 68,
+     "text": "The Kuamut Rainforest Conservation Project has not applied for or been rejected by any other GHG \nprograms."
+    },
+    {
+     "id": "p68-18",
+     "page": 68,
+     "text": "Not applicable. There is no double counting since the project is not part of any Emissions Trading \nPrograms and is not subject to Other Binding Limits or compliance mechanism."
+    }
+   ],
+   "excerpt_chars": 1766
+  },
+  {
+   "item_id": "VCS2609-safeguards",
+   "project_id": "VCS2609",
+   "project_name": "Kuamut Rainforest Conservation Project",
+   "category": "Improved forest management (VM0010)",
+   "principle": "safeguards",
+   "questions": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p26-03",
+     "page": 26,
+     "text": "Institutional/non-community stakeholders (such as, relevant governmental and non-governmental \norganisations) were initially identified through discussions with the principal project partners: the Sabah \nForestry Department (SFD) and Yayasan Sabah/Rakyat Berjaya (RBJ). As a result of these discussions, \nthe project initiated communications with those stakeholders responsible for the developmental \nadministration of the project zone (including the District Office of Tongod) and NGOs with a history of \ncommunity work in the area (including the PACOS Trust)."
+    },
+    {
+     "id": "p26-05",
+     "page": 26,
+     "text": "2.1.9 \nStakeholder Descriptions (G1.6, G1.13)"
+    },
+    {
+     "id": "p47-04",
+     "page": 47,
+     "text": "2.3.1 \nStakeholder Access to Project Documents (G3.1)"
+    },
+    {
+     "id": "p47-06",
+     "page": 47,
+     "text": "2.3.2 \nDissemination of Summary Project Documents (G3.1)"
+    },
+    {
+     "id": "p47-08",
+     "page": 47,
+     "text": "2.3.3 \nInformational Meetings with Stakeholders (G3.1)"
+    },
+    {
+     "id": "p47-10",
+     "page": 47,
+     "text": "Furthermore, the project has conducted an extensive series of household surveys to provide data on the \ncommunity socio-economic baseline. At the beginning of each individual interview conducted as part of \nthese surveys, respondents are again given a brief overview of the project structure and objectives, and are \nasked for their consent before the interview proper is initiated."
+    },
+    {
+     "id": "p52-03",
+     "page": 52,
+     "text": "2.3.8 \nContinued Consultation and Adaptive Management (G3.4)"
+    },
+    {
+     "id": "p55-06",
+     "page": 55,
+     "text": "2.3.9 \nStakeholder Consultation Channels (G3.5)"
+    },
+    {
+     "id": "p55-07",
+     "page": 55,
+     "text": "Engagements have been conducted via a number of fora, including community workshops and informal \nmeetings with community leaders. In addition, the team has established a social media discussion group \nwith leaders of all Project Zone communities to facilitate communication relating to project activities. The \nKuamut project continues to hold regular community engagements during which the project objectives and \nstructure are explained and discussed. A series of brochures have been produced in the Malay language, \nwhich offer written summaries of the project objectives and implementing bodies and describe some of the \nunderlying principles governing the project such biodiversity, carbon sequestration, global warming and the \nprinciples of FPIC. These brochures have been given to community leaders who are then asked to \ndisseminate them amongst the wider community. The project will also provide access to documentation via \nthe project website, and other means such as community notice boards as appropriate."
+    },
+    {
+     "id": "p55-08",
+     "page": 55,
+     "text": "2.3.10 Stakeholder Participation in Decision-Making and Implementation (G3.6)"
+    },
+    {
+     "id": "p56-04",
+     "page": 56,
+     "text": "2.3.12 Feedback and Grievance Redress Procedure (G3.8)"
+    },
+    {
+     "id": "p64-07",
+     "page": 64,
+     "text": "2.5.2 \nRecognition of Property Rights (G5.1)"
+    },
+    {
+     "id": "p65-04",
+     "page": 65,
+     "text": "2.5.3 \nFree, Prior and Informed Consent (G5.2)"
+    }
+   ],
+   "excerpt_chars": 2499
+  },
+  {
+   "item_id": "VCS673-additionality",
+   "project_id": "VCS673",
+   "project_name": "Natural High Forest Rehabilitation Project on degraded land of Kibale National Park",
+   "category": "Natural forest rehabilitation (AR-ACM0001)",
+   "principle": "additionality",
+   "questions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p35-04",
+     "page": 35,
+     "text": "d)  Litter shall remain on site and not be removed into the A/R CDM project"
+    },
+    {
+     "id": "p35-06",
+     "page": 35,
+     "text": "e) Ploughing/ripping/scarification attributable to the A/R CDM project activity if"
+    },
+    {
+     "id": "p36-06",
+     "page": 36,
+     "text": "No burning of \nbiomass takes \nplace in the \nproject \n \n \n2.4 Description of how the baseline scenario is identified and description \nof the identified baseline scenario:"
+    },
+    {
+     "id": "p37-02",
+     "page": 37,
+     "text": "absence of the project activity (assessment and demonstration of \nadditionality): \n \nThe “Combined tool to identify the baseline scenario and demonstrate \nadditionality in ARR CDM project activities” is used to both identify  the baseline \nscenario and to demonstrate additionally: \n \nSTEP 0: Preliminary screening based on the starting date of the ARR project \nactivity \n \nThe proposed ARR VCS project was started in 1995 and since then, it has applied \nan externally reviewed methodology and engaged independent carbon \nmonitoring experts to assess and quantify the project’s baseline scenario and net \nemissions reductions or removals resulting in carbon crediting under the SGS \nstandard. In 2003 Face contracted the certification Société Générale de \nSurveillance (SGS) to validate and verify Kibale, based on SGS’ GHG Validation and \nVerification program. In the absence of an international standard defined or \naccepted by the UNFCCC Secretariat, SGS had prepared a set of criteria based on \nDecision 17/C.P7 of the Marrakech accords. These criteria act as a standard and the \nKibale project was validated against it twice: in 2003 and 2008 respectively. \nReports of these assessments were published in 2004 and 2009. Since then, \nproject activity has been geared towards future crediting under VCS.  The \nincentive of planned sale of GHG emission allowances is evidenced in the steps \nfurther below of the additionality test. Without the GHG allowance sales, the \nproject would not be economically attractive, and would face significant barriers.  \n \nSTEP 1: Identification of alternative land use scenarios to the proposed ARR VCS \nproject activity \n \nSub-step 1a: Identification of credible alternative land use scenarios to the project \nactivity \nSince the lands to be planted are restricted to forestry purposes by government, \nother land uses are practically impossible, therefore the identified alternative land \nuses include three that were historically possible and one that relates to \nafforestation as recommended by the tool."
+    },
+    {
+     "id": "p39-07",
+     "page": 39,
+     "text": "specimens; \nh. the implementation of relevant international treaties conventions,"
+    },
+    {
+     "id": "p42-05",
+     "page": 42,
+     "text": "**) Corrected value of that reported by Meijer."
+    }
+   ],
+   "excerpt_chars": 2498
+  },
+  {
+   "item_id": "VCS673-permanence",
+   "project_id": "VCS673",
+   "project_name": "Natural High Forest Rehabilitation Project on degraded land of Kibale National Park",
+   "category": "Natural forest rehabilitation (AR-ACM0001)",
+   "principle": "permanence",
+   "questions": [
+    "P1",
+    "P2",
+    "P3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p5-02",
+     "page": 5,
+     "text": "change mitigation, biodiversity conservation and soil erosion control) through \nrestoring forest vegetation on degraded lands.  \n \nSpecific project objectives are to:"
+    },
+    {
+     "id": "p18-02",
+     "page": 18,
+     "text": "Spot slashing: In the second year after planting, spot slashing was carried out at \nintervals of three months in the second and third year. In the fourth and fifth year, \nspot slashing was carried   at four month intervals to harden off planted crop and \nreduce maintenance costs.  \n \nSpot hoeing: this was only carried out in the new crop during the second rains \nafter planting. This was done in order to allow easy penetration of water and \nreduce weed competition. \n \nFire Protection:  Fires are a major factor preventing forest regeneration. Elephant \ngrass and spear grass provide excellent combustible material especially during the \ndry seasons. Planted areas are completely surrounded by a 15 m external fire line \nor by non-combustible riverine vegetation. In the centre of each 15 m firebreak 4 \nm are scrapped clean of all vegetation. Furthermore, each compartment is divided \ninto manageable blocks, which are separated by 10 m wide internal fire lines. \nThree meters of all internal fire lines is also scrapped clean. All fire lines are \naccessible by cars during the dry season. Training and retraining workers in fire \nfighting techniques is done. Another vital component of fire protection is fire \nawareness campaigns among the local populations neighbouring the park, \nincluding schools.   \n \nGIS technology:"
+    },
+    {
+     "id": "p34-05",
+     "page": 34,
+     "text": "b) If at least a part of the project activity is implemented on organic soils,"
+    },
+    {
+     "id": "p37-03",
+     "page": 37,
+     "text": "1. Continued encroachment at a scale and rate  of before project activities \nstarted 1993 This alternative comprises of a mix of grassland, shrub land \nand banana plantations.  \n2. Continued but less intensive encroachment, assuming that UWA would \nhave limited success in keeping encroachers at bay. This would mean that \nfires continue to roam the formerly encroached land and the carbon stock \nwould be the result of a mix between agricultural activities, fire and partial \nregeneration of pioneer vegetation (grass, shrubs and bananas).  \n3. No human encroachment, assuming that the park would have some \nsuccess in protecting the area, but no investment in forest rehabilitation, \nwhile widespread and frequent perturbation by fire continues.  The \nresulting fire regime would favour elephant grass which would in turn \nsuppress natural regeneration of trees."
+    },
+    {
+     "id": "p42-02",
+     "page": 42,
+     "text": "Vegetation type \nArea\nC content, no fire and"
+    }
+   ],
+   "excerpt_chars": 2479
+  },
+  {
+   "item_id": "VCS673-robust_quantification",
+   "project_id": "VCS673",
+   "project_name": "Natural High Forest Rehabilitation Project on degraded land of Kibale National Park",
+   "category": "Natural forest rehabilitation (AR-ACM0001)",
+   "principle": "robust_quantification",
+   "questions": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p36-04",
+     "page": 36,
+     "text": "CO2 \nExcluded \nCH4 \nExcluded \nBurning of woody \nbiomass"
+    },
+    {
+     "id": "p50-02",
+     "page": 50,
+     "text": "3.4.1  Information on how geographic coordinates of the project boundary are \nestablished, recorded and archived:  \n \nThe project boundary is used to delineate the project area. The location of each \nnode of the project boundary will be measured during fieldwork and archived in \nthe database. The project boundary is monitored at during events such as site \npreparation, planting, permanent sampling operations, fire monitoring events, \ncarbon monitoring campaign, etc., during which compartment IDs and \ncompartment areas are required to be entered. \n \nTwo major activities are implemented with regards to the monitoring of the \nproject boundary.  \n \nOne of the major activities for monitoring utilizes a computer program called \nMONIS (Monitoring and Information System) which was developed with the \nspecific aim to monitor the progress of the project over the lifetime of the \ncontract. The program makes use of satellite images, ground photographs and \ntopographic maps of the region. In addition to this program, Geographic \nPositioning System (GPS) is utilized in order to locate the specific boundaries of \nthe project area and the National Park at large.  An in-house training program was \ndeveloped and implemented for relevant staff members and they were trained on \nthe use of GPS technology. In order to store basic data in a logical order, data \nentry into MONIS is carried out on a monthly basis after the monthly reports have \nbeen submitted from the field.  \n \nThe second major activity that is carried out is mapping of project and planted \ncompartment boundaries using a hand-held GPS. Coordinates at each turning \npoint on the compartment boundary are recorded in order to show proper \nboundaries of planted areas and to determine the actual planted areas. Mapping \nis carried out every year after planting targets have been achieved. The end \nproduct of the mapping exercises are maps of the rehabilitated areas.  \n \nAll spatial data are archived at the UWA-Face office in Kibale and at the Face the \nFuture office in the Netherlands.  \n \nTable 3.4.1 Data to be used for monitoring project boundary."
+    },
+    {
+     "id": "p59-03",
+     "page": 59,
+     "text": "Carbon stock in the above- and below-ground tree biomass (CTREE,i,t ) is estimated \nusing the allometric equation method  as recommended  in the methodology (AR-\nACM0001, version 05.0.0.).  The allometric equations are developed as follows:"
+    },
+    {
+     "id": "p62-03",
+     "page": 62,
+     "text": "Table 4.2.1 Estimation of the ex ante baseline net GHG removals by sinks."
+    }
+   ],
+   "excerpt_chars": 2489
+  },
+  {
+   "item_id": "VCS673-no_double_counting",
+   "project_id": "VCS673",
+   "project_name": "Natural High Forest Rehabilitation Project on degraded land of Kibale National Park",
+   "category": "Natural forest rehabilitation (AR-ACM0001)",
+   "principle": "no_double_counting",
+   "questions": [
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p26-03",
+     "page": 26,
+     "text": "Private and/or public entity(ies) project"
+    },
+    {
+     "id": "p34-02",
+     "page": 34,
+     "text": "a) The A/R CDM activity is implemented on degraded lands, which are expected"
+    },
+    {
+     "id": "p34-05",
+     "page": 34,
+     "text": "b) If at least a part of the project activity is implemented on organic soils,"
+    },
+    {
+     "id": "p42-05",
+     "page": 42,
+     "text": "**) Corrected value of that reported by Meijer."
+    },
+    {
+     "id": "p58-02",
+     "page": 58,
+     "text": "3.4.2.6 Plot Monumentation  \n \nIn order to comply with the requirement of the methodology (AR-ACM0001-\nVersion 05.0.0) for permanent sampling plots, all inventory plots are measured in \na local Cartesian co-ordinate system with the center in the middle of inventory \nplot. The project utilizes both the Laser and GPS technologies to locate plot \ncenters. The GPS is used in Global Coordinate System (i.e. on the navigation plot) \nwhere as the Laser is utilized on both the local and global coordinate systems. The \nLaser is reliable for navigation under canopy, provides a precise navigation to the \nplot center and is utilized for all measurements carried out within the inventory \nplot.  \n \nFrom the  center of an inventory plot, a position of marked tree is measured. This \nmarked tree is then painted and if necessary some more descriptive comments \nare entered into the database. Selection of the tree to be painted is based on the \nsize and type of the tree. For example , a tree of 20cm DBH,  belonging to the \nclimax species group and not edible to wildlife, is preferably selected because it is \nmore likely to still be alive during the next carbon monitoring campaign, 5 years \nlater.  Therefore, during the repeated measurements the geo-reference is taken \nfrom the painted tree. This means that upon reaching the inventory plot, the Field \nTeam immediately searches around for painted tree and uses the positioning \nroutine to get a reference from it.  \n \nIn order to improve the permanent visibility of the plots and especially the plot \ncentres, concrete markers will be placed in the plot centres by the end of 2011.   \n \n3.4.2.7 Precision requirements \n \nThe number of permanent sampling plots and the targeted precision level for the \nbiomass estimation is ± 10% of the mean at a 90% confidence level and was \ndetermined using the approved CDM  tool for “Calculation of the number of \nsample plots for measurements within A/R CDM project activities”  version 02.1.0 as \nrequired by the CDM methodology AR-ACM0001, version 05.0.0. \n \n3.4.2.8 Monitoring of the baseline net GHG removals by sinks, if required by the \nselected approved methodology"
+    },
+    {
+     "id": "p67-15",
+     "page": 67,
+     "text": "Table 4.4.1 Summary of results obtained in Sections 4.2 and 4.3."
+    }
+   ],
+   "excerpt_chars": 2467
+  },
+  {
+   "item_id": "VCS673-safeguards",
+   "project_id": "VCS673",
+   "project_name": "Natural High Forest Rehabilitation Project on degraded land of Kibale National Park",
+   "category": "Natural forest rehabilitation (AR-ACM0001)",
+   "principle": "safeguards",
+   "questions": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p5-02",
+     "page": 5,
+     "text": "change mitigation, biodiversity conservation and soil erosion control) through \nrestoring forest vegetation on degraded lands.  \n \nSpecific project objectives are to:"
+    },
+    {
+     "id": "p69-15",
+     "page": 69,
+     "text": "5 Environmental Impact: \n \nThere are some low level environmental impacts of the project activity:"
+    },
+    {
+     "id": "p69-16",
+     "page": 69,
+     "text": "• collection of soil for nursery activities \n• disposal of plastic pots from seedlings \n• collection of wildlings from the forest \n \nHowever, from 2001 onwards seedlings raised in the communities are purchased, \nas a way of promoting further income generation activities within the local \ncommunities. The nursery farmers raise seedlings adjacent to the project \nnurseries not only for easy supervision by Project staff, but also for proper \nrehabilitation of areas where nursery soil is collected. Plastic pots are generally re-\nused by local communities and the pots are bio-degradable. Collection of wildings \nis not considered to be on such a scale that it would have a significant impact.  \nThere is no road construction or harvesting activities and no chemicals or exotic \nspecies are being utilised. The re-establishment of natural forest is seen as a \npositive impact, enlarging the habitat for native species, protecting the park’s \nbiodiversity and enhancing its tourism value. Native grasslands located in the \nproject area need to be protected; they are not reforested. \n \nDetailed documentation on the analysis of environmental impacts are contained \nin the “Environmental Impact Study (EIS) report for the future operations of the \nUWA-Face Project” prepared by Environmental Monitoring Associates (EMA) Ltd \nin 1999."
+    },
+    {
+     "id": "p72-02",
+     "page": 72,
+     "text": "Comments from the local stakeholders at the St. Joseph’s Inn where taken into \naccount by proposing training of target groups including the task force members \nof Kibale National Park, formation of vermin control units and units at the district \nlevel to help address the problem. \n \n6.2.3 Meeting with the LCS and community of Beseri, Nkongoro Parish, \nKamwenge sub-county, Kamwnge Distrtict on 27th November 2007 \n \nThe Warden for Community Conservation Mr. Muhabwe appealed to all \ncommunity members to work together in order to access better programs from \nthe government.  He also highlighted some of the important benefits from \nProtected Areas such as access to select resources under agreements, \nemployment, education, and support for infrastructure among others.  \n \n6.2.4 Translated from Orukurato RWA PARK Katebe which means meeting with \nthe community of Katebe on 21-11-2008"
+    }
+   ],
+   "excerpt_chars": 2483
+  },
+  {
+   "item_id": "VCS2846-additionality",
+   "project_id": "VCS2846",
+   "project_name": "FSW AMMS GHG Mitigation Project in Nanyang City",
+   "category": "Manure biodigester (ACM0010)",
+   "principle": "additionality",
+   "questions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p33-02",
+     "page": 33,
+     "text": "3.4 \nBaseline Scenario \nBaseline scenario has been identified using the methodological tool 02 “Combined tool to identify \nthe baseline scenario and demonstrate additionality (Version07.0)” considering the requirements \nof the methodology and assessing the possible waste management options as described in 2006 \nIPCC Guidelines for National Greenhouse Gas Inventories (Volume 4, Chapter 10, Table 10.17). \nThe most plausible baseline scenario is identified in the following steps: \nStep 0. Demonstration that a proposed project activity is the First-of-its-kind; \nStep 1. Identification of alternative scenarios; \nStep 2. Barrier analysis; \nStep 3. Investment analysis (if applicable); \nStep 4. Common practice analysis. \n \nStep 0: As per Tool 02“Combined tool to identify the baseline scenario and demonstrate \nadditionality” (Version07.0), this step is optional. So, it is not necessary to analyse this step. \n \nStep1: Identification of alternative scenarios \nStep 1a: Define alternative scenarios to the proposed CDM project activity \nPrior to the implementation of the project, all manure waste produced from the existing 9 swine \nfarms was left to decay in 9 uncovered anaerobic lagoons at the livestock farms and methane is \nemitted to the atmosphere directly without any methane recovery and destruction facility. The \nuncovered anaerobic lagoons were replaced by 9 sets of AWMSs in these 9 swine farms for this \nproject. Therefore, it belongs to the existing facilities. \n \nAccording to methodology, baseline alternatives for managing the manure for the existing \nfacilities, shall take into consideration, inter alia, the complete set of existing/possible manure \nmanagement systems listed in the 2006 IPCC Guidelines for National Greenhouse Gas \nInventories (Volume 4, Chapter 10, Table 10.17). \nThe baseline and available alternatives for the manure management are listed as below table as \n2006 IPCC:"
+    },
+    {
+     "id": "p33-03",
+     "page": 33,
+     "text": "No. \nIPCC Alternatives \nApplicability \nJustification"
+    },
+    {
+     "id": "p37-03",
+     "page": 37,
+     "text": "Table 3-2 Investment analysis of the uncovered anaerobic lagoon （10"
+    },
+    {
+     "id": "p41-11",
+     "page": 41,
+     "text": "Item \nWithout income from VCUs \nBenchmark IRR \nWith income from VCUs"
+    },
+    {
+     "id": "p44-02",
+     "page": 44,
+     "text": "3.5 \nAdditionality \nAdditionality for the project activity is demonstrated using Tool 02 Combined tool to identify the \nbaseline scenario and demonstrate additionality (Version 07.0). Step 1-3 were already done in \nsection 3.4 of this JPM. \nAs per Tool 24 Common practice (Version 03.1), Step 4 common practice analysis will be \nconducted as follows: \n \nStep 4: Common practice analysis"
+    }
+   ],
+   "excerpt_chars": 2486
+  },
+  {
+   "item_id": "VCS2846-robust_quantification",
+   "project_id": "VCS2846",
+   "project_name": "FSW AMMS GHG Mitigation Project in Nanyang City",
+   "category": "Manure biodigester (ACM0010)",
+   "principle": "robust_quantification",
+   "questions": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p103-10",
+     "page": 103,
+     "text": "Implementation and Monitoring frequency \nThe sampling process will start as soon as the target population is determined, and the sampling \nshould be done once a month. The Sampling process will be determined by the VCS monitoring \nteam. \n \nThe one monthly monitoring activity of the samples will be completed in the 9 swine farms during \neach monitoring periods. \n \nBecause the sampling activity is once a month, all the samples will be changed in the next month. \nThe monitoring data will be collected and recorded throughout the entire crediting period. All \narchived data and documentation will be kept for at least 2 years after the end of the last \ncrediting period. \n \nProcedures for Administering Data Collection and Minimizing Non-sampling Errors"
+    },
+    {
+     "id": "p103-11",
+     "page": 103,
+     "text": "During the monthly monitoring activities, the weight of the month's sample was recorded in the \nweight record table by the monitoring team member in the 9 swine farms. Then average animal \nweight of a defined livestock population at the project site was calculated based on these data \nby the monitoring team member. The data will be reviewed by the project developer and VVB. \nIf the recorded raw data on the monitoring form are reasonable and basically consistent with the \nactual growth state, the raw data will be archived. \n \nIf the data record is missing or damaged or the target animal was dead during the monitoring \nperiods, the following makeup process will be conducted: \n1) The general principle is that zero value will be used for the missing or damaged data. This is \nmost conservative approach. The monitoring personnel will be trained before the starting of the \nproject operation to ensure that each team member is fully aware of and able to strictly follow \nthis conservative principle. During the monitoring process, the monitoring personnel will be \nrequired to strictly abide by the above conservative principle in data recording, i.e., use zero \nvalues for all the missing or damaged data. \n2) If this is due to the working error of the monitoring personnel, further train the person until he \nor she can perform the job properly. And in the meantime, use zero value for the missing or \ndamaged data;"
+    },
+    {
+     "id": "p127-02",
+     "page": 127,
+     "text": "i) Project emissions associated with the anaerobic digester in year y (PEAD,y) \nFor PEAD,y, according to the Tool14” Project and leakage emissions from anaerobic digesters \n(Version 02.0)”, the project emissions associated with the anaerobic digester (PEAD,y) are \ndetermined by 𝑃𝐸𝐴𝐷,𝑦= 𝑃𝐸𝐸𝐶,𝑦+ 𝑃𝐸𝐹𝐶,𝑦+ 𝑃𝐸𝐶𝐻4,𝑦+ 𝑃𝐸𝑓𝑙𝑎𝑟𝑒,𝑦"
+    }
+   ],
+   "excerpt_chars": 2497
+  },
+  {
+   "item_id": "VCS2846-no_double_counting",
+   "project_id": "VCS2846",
+   "project_name": "FSW AMMS GHG Mitigation Project in Nanyang City",
+   "category": "Manure biodigester (ACM0010)",
+   "principle": "no_double_counting",
+   "questions": [
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p2-16",
+     "page": 2,
+     "text": "1.14 \nCompliance with Laws, Statutes and Other Regulatory Frameworks ....................... 17"
+    },
+    {
+     "id": "p18-02",
+     "page": 18,
+     "text": "1.15 Participation under Other GHG Programs"
+    },
+    {
+     "id": "p18-05",
+     "page": 18,
+     "text": "1.15.2 Projects Rejected by Other GHG Programs"
+    },
+    {
+     "id": "p18-08",
+     "page": 18,
+     "text": "1.16.1 Emissions Trading Programs and Other Binding Limits"
+    },
+    {
+     "id": "p18-09",
+     "page": 18,
+     "text": "The project proponent is not part of any emission trading program. The project does not reduce \nGHG emissions from activities that are included in an emissions trading program or any other \nmechanism that includes GHG allowance trading. There is a cap & trade scheme in China. \nHowever, China’s national emissions trading scheme (ETS), which is at its very early stage, only \nincludes 2,225 fossil fuel-fired power plants in the power sector5, and the project proponent is \nnot included in the list. China’s ETS is expected to include all companies with annual GHG \nemissions greater than 26,000 tCO2e in eight emission-intensive industries including power \ngeneration, petrochemicals, chemicals, building materials, non-ferrous metals, papermaking, \nsteel and aviation6. As the annual GHG emissions of the project proponent will not be greater \nthan 26,000 tCO2e, it will not be included in the national ETS; no emission cap will be enforced \non the project proponent, nor can it participate in carbon transactions in the national ETS. \nTherefore, the net GHG emission reductions from the Project will not be used for compliance with \nemission trading programs or to meet binding limits on GHG emissions. \nIn addition, the project owner has signed the Declaration of No Double Counting Statement and \nDeclaration of not involved in other GHG scheme to ensure that the project will not apply for \nemission reduction credits or labels under any other schemes other than VCS."
+    },
+    {
+     "id": "p18-10",
+     "page": 18,
+     "text": "1.16.2 Other Forms of Environmental Credit"
+    },
+    {
+     "id": "p56-20",
+     "page": 56,
+     "text": "Estimation of various variables and parameters for above equations: \n(A) Quantity of methane produced in the anaerobic digester QCH4,y \nAccording to the Tool14” Project and leakage emissions from anaerobic digesters (Version 02.0)”. \nThere are two different procedures to determine the quantity of methane produced in the digester"
+    },
+    {
+     "id": "p56-21",
+     "page": 56,
+     "text": "in year y (𝑄𝐶𝐻4,𝑦). For large scale projects defined by CDM only Option 1 shall be used. For small \nscale projects defined by CDM, project participants may choose between Option 1 or Option 2. \nThe proposed project belongs to large scale projects defined by CDM, so QCH4,y was determined \nfollowing step 1 and Option 1 of the applied tool. Below is the formula used for the calculation of \nQCH4,y."
+    }
+   ],
+   "excerpt_chars": 2484
+  },
+  {
+   "item_id": "VCS2846-safeguards",
+   "project_id": "VCS2846",
+   "project_name": "FSW AMMS GHG Mitigation Project in Nanyang City",
+   "category": "Manure biodigester (ACM0010)",
+   "principle": "safeguards",
+   "questions": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p2-22",
+     "page": 2,
+     "text": "2.1 \nNo Net Harm ..................................................................................................................... 21"
+    },
+    {
+     "id": "p2-23",
+     "page": 2,
+     "text": "2.2 \nLocal Stakeholder Consultation ..................................................................................... 21"
+    },
+    {
+     "id": "p17-05",
+     "page": 17,
+     "text": "1.14 Compliance with Laws, Statutes and Other Regulatory Frameworks"
+    },
+    {
+     "id": "p21-08",
+     "page": 21,
+     "text": "Local stakeholder consultation was conducted by project owner before the construction of the \nproject and during the monitoring period through the means of questionnaire. \nLocal stakeholder consultation before the construction of the project \nIn order to solicit the opinions and attitudes of various stakeholders on the construction of this \nproject, the project owner issued a stakeholder survey opinion form at each project site from 04-\nNovember-2019 to 09-November-2019 investigate the opinions of local residents on the \nconstruction of this project. Since the farm has been in operation for a long time, local \nstakeholders or farmers have a better understanding of the situation of the farm. Therefore, for \nthe stakeholder investigation of the project which can bring economic and environment benefits \nto the local people, the Local stakeholders or farmers is more willing to participate in the survey. \nThe questionnaire mainly contains the following content: \n1. Do you know the purpose of this project? \n2. What do you think is the impact of the implementation of this project on the local environment? \n3. What impact do you think the implementation of this project will have on your life? \n4. Do you think the implementation of this project is in harmony with the local ecosystem? \n5. What impact do you think the implementation of this project will have on the social economy? \n6. What effect do you think the implementation of this project will have on local sustainable \ndevelopment? \n7. What effect do you think the implementation of this project will have on local employment? \n8. Do you think other regions should also vigorously promote this type of technology? \n9. Do you support the construction and implementation of this project? \n10. Do you have any suggestions and comments on this project? \nA total of 180 questionnaires were issued for this project, 20 copies for each project site, and \n180 copies were collected. The basic information about the survey respondents is listed in Table \n2-1.  \nTable 2-1 Structure of stakeholder survey"
+    },
+    {
+     "id": "p24-12",
+     "page": 24,
+     "text": "8 \nDo you think other regions \nshould \nalso \nvigorously \npromote \nthis \ntype \nof \ntechnology?"
+    }
+   ],
+   "excerpt_chars": 2485
+  },
+  {
+   "item_id": "VCS985-additionality",
+   "project_id": "VCS985",
+   "project_name": "Cordillera Azul National Park REDD Project",
+   "category": "REDD+ (VM0007)",
+   "principle": "additionality",
+   "questions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p1-15",
+     "page": 1,
+     "text": "1400 South Lake Shore Drive, Chicago, IL 60605 \ncmagerkurth@fieldmuseum.org, p: 630-947-9563"
+    },
+    {
+     "id": "p60-01",
+     "page": 60,
+     "text": "In addition, CIMA has volunteers in protection activities. CIMA offers a small ‘incentivo’ for the time of \nwork and specific activity. Communal park guards fall under this category. The volunteers are not staff \nand do not receive staff benefits; the relationships is purely of volunteerism and of learning through the \nactivities. The communal park guards are members of the villages in the buffer zone and they work \nalongside the official park guards. CIMA provides these volunteers with training, equipment, and food for \ntheir rotations of up to two months. \n \nIn addition to the staff available to CIMA, the institution enters into contracts with selected consultants, \nallowing CIMA to meet its commitments to PNCAZ. As appropriate, CIMA complies with all tax obligations \nthat relate to these contracts. \n \nSpecific regulations regarding worker rights include: \n1. Current Constitution (Art.25) Workshop, resting right, regulating compensation. \n2. D.S. N ° 003-97-TR, Competitiveness Act and Labor Productivity. (a) promoting job training and \neducation of workers; (b) Provide transfer of persons engaged in urban and rural areas of low productivity \nand income to other more productive activities, (c) Ensure the incomes of workers and protection against \narbitrary dismissal; (d) Unify works procurement rules and strengthen existing social benefits. \n3. D.S. N ° 007-2002-TR Amended Text of Legislative Decree. Act No. 854 Workshop, Modification by \nLaw No. 27,671. \n4. D.Leg. No. 910, General Law on Labour Inspection and Labor Defense \n5. D. Leg. No. 728 Ley de Fomento al Empleo"
+    },
+    {
+     "id": "p74-13",
+     "page": 74,
+     "text": "2.4 \nBaseline Scenario (G1.7, G2.1, G2.4, G2.5, G3.6)"
+    },
+    {
+     "id": "p74-15",
+     "page": 74,
+     "text": "The project meets the applicability requirements of VT0001 as follows:"
+    },
+    {
+     "id": "p78-03",
+     "page": 78,
+     "text": "The project applied the steps outlined in the VCS Tool, VT0001, “Tool for the Demonstration and \nAssessment of Additionality in VCS Agriculture, Forestry and Other Land Use (AFOLU) Project Activities” \nto demonstrate the additionality of the project.  The baseline scenarios discussed are presented more \nfully in Section 2.4."
+    },
+    {
+     "id": "p79-02",
+     "page": 79,
+     "text": "2.5.2 \nCommon Practice \nStep 4: Common Practice Assessment \nThere are twelve designated national parks in Peru. Two non-profit organizations have management \ncontracts with the Peruvian government over two of these national parks.  Cordillera Azul is managed by"
+    },
+    {
+     "id": "p154-01",
+     "page": 154,
+     "text": "Figure 4.2: Forest cover benchmark map for project area, August 2008"
+    }
+   ],
+   "excerpt_chars": 2465
+  },
+  {
+   "item_id": "VCS985-permanence",
+   "project_id": "VCS985",
+   "project_name": "Cordillera Azul National Park REDD Project",
+   "category": "REDD+ (VM0007)",
+   "principle": "permanence",
+   "questions": [
+    "P1",
+    "P2",
+    "P3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p62-02",
+     "page": 62,
+     "text": "1.13.3 Commercially Sensitive Information  \nThe contracts between CIMA and the Peruvian government, the contract between CIMA and The Field \nMuseum and the details of the project’s financial plan are commercially sensitive information.  These \ndocuments will be made available to the validators but will not be made publicly available."
+    },
+    {
+     "id": "p63-01",
+     "page": 63,
+     "text": "activities will be further defined once the regional meetings with communities have taken place to allow \ncommunities to provide their input into the design process. \n \nIllegal activities in the buffer zone – Illegal activities in the buffer zone place additional deforestation \npressure on the park by increasing deforestation in the buffer zone and pushing immigrants closer to and \neventually into the park.  \n \nMitigation strategy: CIMA will raise awareness of laws and regulations in the communities to enable \ncommunities also to monitor and report illegal activities to the proper authorities. Because many illegal \nactivities are driven by a need for additional resources, CIMA will work to train local communities in \nsustainable land-use practices; to facilitate land-tenure processes; to ensure constant communication \nwith as many communities as possible, and to strengthen and improve the quality of life in the \ncommunities (as mentioned above).     \n \nIncreased tensions between communities CIMA is initially working with and those that will be worked with \nin the future – There is a possibility that communities not located in the critical areas will become jealous \nof the communities that have received priority.  On the one hand, this would indicate a major success in \nthat jealousy will only arise if CIMA’s activities are perceived as having value and improving the quality of \nlife for buffer zone communities.  On the other hand, increased tensions might be a negative issue and \nmay pose a risk to the project if raids or land grabs occurred as a result. For example, some communities \nmay become jealous of others who have been formally granted land tenure or zoning.   \n \nMitigation strategy: CIMA will work to ensure constant communication with as many communities as \npossible to identify and address concerns as quickly as possible and to institute a strong, proactive \ncommunication program and complaint-resolution process.  CIMA will never be able to work with all \ncommunities simultaneously but these measures will assist communities in understanding the priority-\nsetting process and to be able to voice concerns."
+    }
+   ],
+   "excerpt_chars": 2485
+  },
+  {
+   "item_id": "VCS985-robust_quantification",
+   "project_id": "VCS985",
+   "project_name": "Cordillera Azul National Park REDD Project",
+   "category": "REDD+ (VM0007)",
+   "principle": "robust_quantification",
+   "questions": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p6-03",
+     "page": 6,
+     "text": "forest class \nTable 3.13: Baseline projections (ha deforested) for baseline period 2009-2018 for the leakage belt by"
+    },
+    {
+     "id": "p24-04",
+     "page": 24,
+     "text": "2009 \nDevelop large-scale buffer zone activity strategy based on community input"
+    },
+    {
+     "id": "p152-03",
+     "page": 152,
+     "text": "● \nEmissions due to deforestation and natural disturbance \n● \nEmissions due to illegal degradation \n● \nEmissions due to biomass burning \n \n \nProcedures and responsibilities for monitoring each of the above sources of emissions are detailed \nbelow."
+    },
+    {
+     "id": "p154-01",
+     "page": 154,
+     "text": "Figure 4.2: Forest cover benchmark map for project area, August 2008"
+    },
+    {
+     "id": "p154-02",
+     "page": 154,
+     "text": "Data collection and analysis to determine forest cover change at each monitoring event will follow the \nprocedures detailed below. The resulting classified image is compared with the preceding forest cover \nbenchmark map to detect forest cover change for the monitoring period, and becomes the updated forest \ncover benchmark map for the subsequent monitoring period. Thus, the forest benchmark map is updated \nat each monitoring event. \n \n4.3.3.2 \nData acquisition  \nTo estimate the change of forest cover within the project area, the benchmark map generated at the \nprevious monitoring event (or at project start August 2008 for the first monitoring event) will be compared \nwith a newly-generated classified forest cover map for the monitoring date. The new forest cover map for \nthe project area will comply with the following requirements.  \n \nBase satellite imagery will cover both the project area and leakage belt (i.e. monitoring of project area and \nleakage belt will use the same data source) and will be from a single year, though it may include a mosaic"
+    },
+    {
+     "id": "p163-01",
+     "page": 163,
+     "text": "4.3.6 \nMonitoring of leakage carbon stock changes \nActivity-shifting leakage in the leakage belt will be monitored by tracking forest cover change in the \nleakage belt (ADefLB,u,i,t), using classified satellite imagery produced following the same procedures \noutlined above in Section 4.2.1, referencing the 2008 forest cover benchmark map for the leakage belt \n(Figure 4.3). All changes in forest cover detected for the monitoring interval will be annualized (to produce \nestimates of ha for each year) by dividing the area by the number of years in the period. \n \nNote that the leakage belt includes private inholdings and ineligible areas (without forest >10 years old) \nwithin PNCAZ as well as planned deforestation areas for oil palm production in the northeast. The initial \narea of forest in the leakage belt is 1,920,311 ha. \n \nFigure 4.3: Benchmark map of forest cover in 2008 in the leakage belt"
+    }
+   ],
+   "excerpt_chars": 2482
+  },
+  {
+   "item_id": "VCS985-no_double_counting",
+   "project_id": "VCS985",
+   "project_name": "Cordillera Azul National Park REDD Project",
+   "category": "REDD+ (VM0007)",
+   "principle": "no_double_counting",
+   "questions": [
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p1-15",
+     "page": 1,
+     "text": "1400 South Lake Shore Drive, Chicago, IL 60605 \ncmagerkurth@fieldmuseum.org, p: 630-947-9563"
+    },
+    {
+     "id": "p61-02",
+     "page": 61,
+     "text": "1.12.2 Emissions Trading Programs and Other Binding Limits (CCB: CL1.5) \nThe avoided emissions from this project will not be used for compliance purposes in a regional or national \ncompliance program or to demonstrate conformance with a binding limit on GHG emissions.  Neither Peru \nnor regional or local governments have established a national target, a compliance program or a cap and \ntrade system."
+    },
+    {
+     "id": "p61-03",
+     "page": 61,
+     "text": "1.12.3 Participation under Other GHG Programs (CCB: CL1.5) \nThis project is only seeking registration under the VCS and CCB programs.  CCB does not issue carbon \ncredits and the project is not seeking to register credits with any other program."
+    },
+    {
+     "id": "p61-04",
+     "page": 61,
+     "text": "1.12.4 Other Forms of Environmental Credit (CCB: CL1.5) \nThis project has not and will not seek to generate any other form of environmental credit."
+    },
+    {
+     "id": "p61-05",
+     "page": 61,
+     "text": "1.12.5 Projects Rejected by Other GHG Programs \nThis project has not been rejected by any other GHG program."
+    },
+    {
+     "id": "p61-06",
+     "page": 61,
+     "text": "1.13 Additional Information Relevant to the Project"
+    },
+    {
+     "id": "p70-14",
+     "page": 70,
+     "text": "T-BAR “Tool for AFOLU non-permanence risk analysis and buffer determination”, version 3.1"
+    },
+    {
+     "id": "p70-15",
+     "page": 70,
+     "text": "T-SIG CDM “Tool for testing significance of GHG emissions in A/R CDM project activities”, version 1.0"
+    },
+    {
+     "id": "p71-11",
+     "page": 71,
+     "text": "Baselines shall be renewed every 10 years after \nthe start of the project."
+    },
+    {
+     "id": "p71-12",
+     "page": 71,
+     "text": "No land areas within the project area are \ncurrently registered under the CDM or any other \ncarbon trading scheme (neither voluntary nor \ncompliance-based). The exclusion of land in the \nproject area from any other carbon trading \nscheme shall be monitored over time and \nreported in the monitoring reports."
+    },
+    {
+     "id": "p71-13",
+     "page": 71,
+     "text": "All land areas registered under the CDM or \nunder any other carbon trading scheme (both \nvoluntary and compliance-oriented) must be \ntransparently reported and excluded from the \nproject area. The exclusion of land in the project \narea from any other carbon trading scheme shall \nbe monitored over time and reported in the \nmonitoring reports."
+    },
+    {
+     "id": "p71-14",
+     "page": 71,
+     "text": "If land is not being converted to an alternative \nuse but will be allowed to naturally regrow (i.e. \ntemporarily unstocked), this framework shall not \nbe used."
+    }
+   ],
+   "excerpt_chars": 2117
+  },
+  {
+   "item_id": "VCS985-safeguards",
+   "project_id": "VCS985",
+   "project_name": "Cordillera Azul National Park REDD Project",
+   "category": "REDD+ (VM0007)",
+   "principle": "safeguards",
+   "questions": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p21-35",
+     "page": 21,
+     "text": "CIMA’s ability now to receive park guard reports directly, rather than wait for copies to be provided by \nSERNANP in Lima, will allow for more immediate response to identified threats or community questions \nor complaints."
+    },
+    {
+     "id": "p35-01",
+     "page": 35,
+     "text": "representing 91% of the critical-area communities, defined as communities with immediate access to the \nproject area. In 2008, 89 communities participated in the MUF (Wali et al 2003)."
+    },
+    {
+     "id": "p35-02",
+     "page": 35,
+     "text": "The MUF process has evolved over time. For the 2003 MUF, communities elected their local facilitator. \nDepending on the size of the community, more than one facilitator was elected. For example, for the 2003 \nMUF, 53 facilitators, 5% women, were hired for the two month period while for the 2008 MUF, 345 \ncommunity representatives were hired, 19% women. CIMA and The Field Museum personnel trained the \nfacilitators and community representatives on data collection and provided information regarding PNCAZ \nand CIMA. In 2003, facilitators collected data on social organizations and use of natural resources over a \ntwo month period, using community assemblies and household interviews to conduct structured and \nsemi-structured interviews. Eight focus groups were used in each community along with individual \ninterviews: four focus groups included residents of both genders and all age groups, two focus groups \nincluded only women, one group was of community leaders, and one included only specialists or experts \n(e.g., the best hunters). Individual interviews were conducted with health workers, teachers, and directors \nof the local school if one is present, and other significant individuals like shamans, healers, and \ncommunity leaders or founders. In 2008, a change was made to the process to improve data collection \nand workshops were held with community representatives from each geographic area. Three to four \nrepresentatives from each community participated in the process to update the data from the previous \nMUF."
+    },
+    {
+     "id": "p35-03",
+     "page": 35,
+     "text": "For the MUFs, data are collected on a variety of topics including community identity, migration, visions for \nthe future, local myths and legends, resource consumption, social organization, agriculture, timber and \nnon-timber products, and economic activities. At the end of the period, CIMA staff members collect and \ncompile the information for analysis. Reports summarizing the digitized databases are available to the \npublic."
+    },
+    {
+     "id": "p180-02",
+     "page": 180,
+     "text": "5.2 \nBiodiversity Monitoring (CCB: B3.1, B3.2, B3.3)"
+    },
+    {
+     "id": "p187-06",
+     "page": 187,
+     "text": "Contact \nPosition \nContact Information \nKey Involvement in the Project"
+    }
+   ],
+   "excerpt_chars": 2489
+  },
+  {
+   "item_id": "VCS4150-additionality",
+   "project_id": "VCS4150",
+   "project_name": "DelAgua Clean Cooking Grouped Project in Rwanda",
+   "category": "Cookstoves (VM0050 + VMR0006)",
+   "principle": "additionality",
+   "questions": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p10-15",
+     "page": 10,
+     "text": "All the factors relevant to the \ndetermination of baseline or \ndemonstration of \nadditionality shall be done \nfor the geographical \nboundary of the grouped \nproject"
+    },
+    {
+     "id": "p10-16",
+     "page": 10,
+     "text": "3.6.15 \nWhere factors relevant to the \ndetermination of the baseline \nscenario or demonstration of \nadditionality require \nassessment across a given \narea, the area shall be, at a \nminimum, the grouped \nproject geographic area. \nExamples of such factors \ninclude, inter alia, common \npractice; laws, statutes, \nregulatory frameworks, or \npolicies relevant to"
+    },
+    {
+     "id": "p10-17",
+     "page": 10,
+     "text": "Assessment of baseline and \ndemonstration of additionality \nfor GP has been done for \nRwanda. \n \nThe baseline factors, \nregulatory surplus and \nadditionality have been \nestablished using national \nlevel reports and data \nsources, and are applicable \nto the entire designated \ngeographic area of Rwanda."
+    },
+    {
+     "id": "p49-03",
+     "page": 49,
+     "text": "16 As per applied methodology page 12: The project activity without being registered as a project activity under a GHG program \nmust be included as an alternative. \n17 Add 3-4 policies from 4151"
+    },
+    {
+     "id": "p52-02",
+     "page": 52,
+     "text": "Kg/person/day assessment\nBaseline KPT\nNumber of Samples\n128.00\nMedian\n2.39\nQuartile (Q1)\n1.69\nQuartile (Q3)\n3.38\nIQR\n1.69\nUpper Quartile limit\n5.91\nLower Quartile limit\n0.00\n95-10 Precision Assessment\nBaseline KPT\nAverage consumption (kg/person/day)\n2.57\nStandard Deviation \n1.14\nCoefficient Of variance (CV)\n0.44\nLower Bound value of confidence interval\n2.37\nUpper Bound value of confidence interval\n2.77\nConfidence interval\n0.40\nPrecision (2-sided)\n0.08\n95-10 Rule Met?\nYES\nHousehold Size (HHi)\n4.31\nAverage consumption (tons/HH/year)\n4.04"
+    },
+    {
+     "id": "p52-03",
+     "page": 52,
+     "text": "As per National Survey on Cooking Fuel Energy and Technologies in Households, Commercial \nand Public Institutions in Rwanda, a report by Ministry of Infrastructure and Finance (Govt. of \nRwanda), the consumption of traditional biomass is around 6.75 tonnes/HH/year. Therefore, \nthe applied baseline fuel consumption value of 4.04 tonnes per household per year by PP is \n40% lower than the government literature's value, making it the most conservative. \n \n3.5 \nAdditionality \n \nThe additionality of the project is demonstrated as per the requirements outlined in Section 7 \nof the applied methodology: \n \n3.5.1 Regulatory Surplus  \nIs the project located in an UNFCCC Annex 1 or Non-Annex 1 country?"
+    },
+    {
+     "id": "p52-04",
+     "page": 52,
+     "text": "☐   Annex 1 country  \n \n ☒   Non-Annex 1 country \nAre the project activities mandated by any law, statute, or other regulatory framework?"
+    },
+    {
+     "id": "p53-03",
+     "page": 53,
+     "text": "𝐵𝐸𝑦 = Σ𝐸𝐶𝑖,𝑦 × 𝑁𝑗,𝑘,𝑦 × 𝑛𝑗,𝑘,𝑦 × (𝐸𝐹𝑏,𝑖,𝐶𝑂2 × 𝑓𝑁𝑅𝐵,𝑦 + 𝐸𝐹𝑏,𝑖,𝑛𝑜𝑛𝐶𝑂2) \n(1) \n \nWhere:"
+    }
+   ],
+   "excerpt_chars": 2478
+  },
+  {
+   "item_id": "VCS4150-robust_quantification",
+   "project_id": "VCS4150",
+   "project_name": "DelAgua Clean Cooking Grouped Project in Rwanda",
+   "category": "Cookstoves (VM0050 + VMR0006)",
+   "principle": "robust_quantification",
+   "questions": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p24-06",
+     "page": 24,
+     "text": "Available Data: Regarding indicator 3.9.1, at every project ICS beneficiary HHs, ones who are \nexperiencing any improvement (or no improvement or deterioration) in their ambient air quality \nas compared to pre-project scenario will be considered as an input."
+    },
+    {
+     "id": "p24-16",
+     "page": 24,
+     "text": "5. SDG-8: Decent Work and Economic Growth"
+    },
+    {
+     "id": "p62-04",
+     "page": 62,
+     "text": "Purpose of data \nCalculation of baseline and project emissions \nCalculation method \nThe value of 0.8872, registered in the Project Design Document \n(PD) under TOOL30 Version 4 for Rwanda, is adjusted to \naccount for uncertainty in accordance with VM0050. A 26% \nuncertainty discount is applied, resulting in the following \nadjusted value: \n0.8872 × (1−0.26) =0.6565 \nComments \nThis data has been fixed for entire crediting period. The applied \nfNRB value has been calculated by using the latest available data \nsources. As per the fNRB calculation done by PP, the value is \n91% however as a measure of conservativeness, PP used the \nfNRB value from another registered projects which was lesser \nthan 91%. Hence, the value has changed to 88.72% and finally \nto 0.6565 with uncertainty discount consideration."
+    },
+    {
+     "id": "p62-05",
+     "page": 62,
+     "text": "Data / Parameter \nBCb,i,y \nData unit \nTonnes/HH/Year \nDescription \nFuel used per baseline device type i during year y \nEquations \n(2) \nSource of data \nOption 1: A measurement campaign following the Kitchen \nPerformance Test Protocol in control households that do not \nparticipate in the project, established prior to validation as \nstatistically equivalent to the pre-project conditions of project \nhouseholds regarding baseline fuel consumption \nDescription of \nmeasurement methods \nand procedures to be \napplied"
+    },
+    {
+     "id": "p64-07",
+     "page": 64,
+     "text": "Value applied \nKuniokoa Generation 2 \nRated Thermal efficiency (with pot skirt) – 0.5130  \nRated Thermal efficiency (without pot skirt) – 0.4340  \n \nEcoa wood Generation 3 \nRated Thermal efficiency (with pot skirt) – 0.5200  \nRated Thermal efficiency (without pot skirt) – 0.4550 \n \n \nSSM S32-X  \nRated Thermal efficiency with Pot Skirt – 0.501  \nRated Thermal efficiency without Pot Skirt – 0.457 \n \n(for ex-ante estimation only) (For more details refer \npreviously registered 4150 PDMR dated 03-December-\n2023) \nMonitoring equipment \n- \nQA/QC procedures to \nbe applied"
+    },
+    {
+     "id": "p64-09",
+     "page": 64,
+     "text": "Data / Parameter \nBCp,j,k,y \nData unit \nTonnes/HH/Year"
+    },
+    {
+     "id": "p68-02",
+     "page": 68,
+     "text": "operation of the units. The results of this spot check are recorded electronically and compared \nagainst the initial distribution logs. The data collected in the database is verified and controlled \nin the following way:"
+    }
+   ],
+   "excerpt_chars": 2463
+  },
+  {
+   "item_id": "VCS4150-no_double_counting",
+   "project_id": "VCS4150",
+   "project_name": "DelAgua Clean Cooking Grouped Project in Rwanda",
+   "category": "Cookstoves (VM0050 + VMR0006)",
+   "principle": "no_double_counting",
+   "questions": [
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "paragraphs": [
+    {
+     "id": "p22-03",
+     "page": 22,
+     "text": "☐   Yes \n \n \n ☒   No \n1.16.2 Registration in Other GHG Programs \nHas the project registered under any other GHG programs?"
+    },
+    {
+     "id": "p22-04",
+     "page": 22,
+     "text": "☐   Yes \n \n \n ☒   No \n1.16.3 Projects Rejected by Other GHG Programs \nHas the project been rejected by any other GHG programs?"
+    },
+    {
+     "id": "p22-05",
+     "page": 22,
+     "text": "☐   Yes \n \n \n ☒   No \n \n1.17 Double Claiming, Other Forms of Credit, and Scope 3 Emissions \n1.17.1 No Double Claiming with Emissions Trading Programs or Binding Emission Limits \nAre project reductions and removals or project activities also included in an emissions trading \nprogram or binding emission limit? See the VCS Program Definitions for definitions of \nemissions trading program and binding emission limit."
+    },
+    {
+     "id": "p22-06",
+     "page": 22,
+     "text": "6 https://www.reg.rw/fileadmin/user_upload/Final_ESSP.pdf"
+    },
+    {
+     "id": "p23-02",
+     "page": 23,
+     "text": "☐  Yes  \n \n☒  No \nIf yes, provide all required evidence of no double claiming as outlined by the VCS Standard. \n \n1.17.2 No Double Claiming with Other Forms of Environmental Credit \nHas the project activity sought, received, or is planning to receive credit from another GHG-\nrelated environmental credit system? See the VCS Program Definitions for definition of GHG-\nrelated environmental credit system."
+    },
+    {
+     "id": "p23-03",
+     "page": 23,
+     "text": "☐  Yes  \n \n☒  No \nIf yes, provide all required evidence of no double claiming as outlined by the VCS Standard. \n \n1.17.3 Supply Chain (Scope 3) Emissions \nDo the project activities specified in Section 0 affect the emissions footprint of any product(s) \n(goods or services) that are part of a supply chain?"
+    },
+    {
+     "id": "p36-09",
+     "page": 36,
+     "text": "Applicability condition \nJustification of compliance"
+    },
+    {
+     "id": "p36-10",
+     "page": 36,
+     "text": "• \nCDM Guideline “Sampling and surveys of CDM project activities and programmes \nof activities” version 04;9 \n• \nCDM Standard “Sampling and surveys for CDM project activities and programmes \nof activities” version 09.10 \n \n3.2 \nApplicability of Methodology \n \nThe applicability criteria of the methodologies and tools used are justified at the project activity \nlevel. This is reflected in the table below. \nThe applicability of methodology VM0050 is justified as below: \n \nMethodol\nogy ID"
+    },
+    {
+     "id": "p36-11",
+     "page": 36,
+     "text": "VM0050 \nReplacement \nof \nnon-renewable \nbiomass (e.g., firewood, charcoal)-fired \ncookstoves with:"
+    },
+    {
+     "id": "p65-02",
+     "page": 65,
+     "text": "Description \nAverage quantity of fuel used by project device type j \nfrom batch k during year y \nEquations \n(4), (7) \nSource of data \nMonitoring (Project KPT campaign) \nDescription of \nmeasurement methods \nand procedures to be \napplied"
+    },
+    {
+     "id": "p65-04",
+     "page": 65,
+     "text": "Biennial or annual for Option 1  \nContinuous and aggregated annually for Options 2 \nValue applied \n1.19 \nMonitoring equipment \nN/A \nQA/QC procedures to \nbe applied"
+    }
+   ],
+   "excerpt_chars": 2466
+  },
+  {
+   "item_id": "VCS4150-safeguards",
+   "project_id": "VCS4150",
+   "project_name": "DelAgua Clean Cooking Grouped Project in Rwanda",
+   "category": "Cookstoves (VM0050 + VMR0006)",
+   "principle": "safeguards",
+   "questions": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "paragraphs": [
+    {
+     "id": "p26-03",
+     "page": 26,
+     "text": "Monitoring Requirement(s): This parameter is fixed for per HH level firewood consumption, \nwhich is then multiplied with monitored values (such as usage rate), other relevant values as \nper the equations provided in the methodology applied for VCS GP. Based on the calculations, \nper HH level firewood savings are calculated"
+    },
+    {
+     "id": "p26-04",
+     "page": 26,
+     "text": "1.19 Additional Information Relevant to the Project  \n \n1.19.1 Leakage Management \nNot applicable as the project adopts a net gross adjustment factor of 95% to account for \nleakage. \n \n1.19.2 Commercially Sensitive Information  \nNo commercially sensitive information has been excluded from the public version of the \nproject description. \n \n1.19.3 Further Information \nN/A as there is no other bearing on the eligibility of the project. \n \n2 SAFEGUARDS AND STAKEHOLDER \nENGAGEMENT \n2.1 \nStakeholder Engagement and Consultation \n2.1.1 Stakeholder Identification \nStakeholder \nIdentification"
+    },
+    {
+     "id": "p28-04",
+     "page": 28,
+     "text": "The project ensures continuous engagement with stakeholders \nthrough multiple communication channels."
+    },
+    {
+     "id": "p28-05",
+     "page": 28,
+     "text": "• \nCall Center Support – A dedicated DelAgua call center \nassists stakeholders in Kinyarwanda, English, and French. \n• \nEmail Communication – Stakeholders can directly contact \nDelAgua through the official email address for inquiries and \nfeedback. \n• \nCommunity Health Workers (CHWs) – As trusted \ncommunity representatives, CHWs act as a primary point of \ncontact for stakeholders, ensuring accessibility and \neffective communication. \n• \nFollow-Up Visits – DelAgua staff conduct regular \nhousehold visits to monitor progress, address concerns, \nand ensure the proper use of distributed cookstoves \nStakeholder input \nAll stakeholder input received during the consultation was carefully \nreviewed. Feedback was addressed through clarifications on \nproject benefits, distribution areas, and implementation details.  \n \nBelow are the queries raised by the attendees  \n \nQ.1. Whether current grouped project activity of DelAgua involves \nonly improved cookstove distribution? \n \n Ans: The project activity involves only Improved cookstove \ndistribution.  \nQ.2. Which districts/region the project is planned under the current \nproject activity?  \n \nAns: The PP representative explained that the project boundary for \nthe grouped project activity is host country Rwanda and various"
+    },
+    {
+     "id": "p29-04",
+     "page": 29,
+     "text": "2.1.4 Grievance Redress Procedure \nDevelopment \nprocess"
+    },
+    {
+     "id": "p29-06",
+     "page": 29,
+     "text": "To address continuous grievances from local stakeholders, \nmeasures have been put in place to allow grievances to be reported \nthrough multiple channels:"
+    }
+   ],
+   "excerpt_chars": 2500
+  }
+ ],
+ "labels_total": 177
+}

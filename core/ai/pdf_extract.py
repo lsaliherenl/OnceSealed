@@ -33,7 +33,7 @@ def file_sha256(path: Path) -> str:
     return h.hexdigest()
 
 
-def extract(path: str | Path, min_chars: int = 3) -> Document:
+def extract(path: str | Path, min_chars: int = 3, id_prefix: str = "") -> Document:
     """Split every page into text blocks; each block becomes one paragraph."""
     path = Path(path)
     paragraphs: list[Paragraph] = []
@@ -51,5 +51,17 @@ def extract(path: str | Path, min_chars: int = 3) -> Document:
                     continue
                 n += 1
                 page = page_index + 1
-                paragraphs.append(Paragraph(id=f"p{page}-{n:02d}", page=page, text=text))
+                paragraphs.append(Paragraph(id=f"{id_prefix}p{page}-{n:02d}", page=page, text=text))
     return Document(path=str(path), sha256=file_sha256(path), page_count=page_count, paragraphs=paragraphs)
+
+
+def extract_many(main: str | Path, extra: list[str | Path]) -> Document:
+    """Treat a project document plus the documents it relies on (e.g. a CDM PDD referenced by a VCS
+    project description) as one document. Paragraph ids of extra file k get the prefix ``x<k>-``."""
+    docs = [extract(main)] + [extract(p, id_prefix=f"x{k}-") for k, p in enumerate(extra, start=1)]
+    if len(docs) == 1:
+        return docs[0]
+    combined = hashlib.sha256("".join(d.sha256 for d in docs).encode()).hexdigest()
+    return Document(path=" + ".join(d.path for d in docs), sha256=combined,
+                    page_count=sum(d.page_count for d in docs),
+                    paragraphs=[p for d in docs for p in d.paragraphs])

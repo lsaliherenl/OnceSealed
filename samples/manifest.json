@@ -70,7 +70,15 @@
       "methodology": "ACM0002",
       "methodology_version": null,
       "reversal_risk": false,
-      "evaluation_set": "D1"
+      "evaluation_set": "D1",
+      "extra_files": [
+        {
+          "file_name": "4993 PDD.pdf",
+          "doc_type": "CDM Project Design Document (referenced by the VCS PD)",
+          "local_path": "samples/pdfs/VCS1742_CDM_PDD.pdf",
+          "sha256": "5b628305c25ac13b2bb4020de96d072e3148701bb0e7635fbfe0b964ed7f0401"
+        }
+      ]
     },
     {
       "project_id": "VCS1728",

@@ -18,7 +18,7 @@ import time
 
 from core.ai.client import ChatClient
 from core.ai.decision import JevDecisionModel, build_questions, QUESTION_SET_VERSION
-from core.ai.pdf_extract import extract
+from core.ai.pdf_extract import extract_many, file_sha256
 from core.ai.principles import BY_KEY, PRINCIPLES
 from core.ai.report import build_report, report_hash
 from core.config import PROJECT_ROOT
@@ -38,9 +38,11 @@ def main() -> None:
     if project is None:
         sys.exit(f"{args.project_id} not in samples/manifest.json")
 
-    doc = extract(PROJECT_ROOT / project["local_path"])
-    if project.get("sha256") and project["sha256"] != doc.sha256:
-        sys.exit("PDF does not match the sha256 recorded in the manifest")
+    files = [project] + project.get("extra_files", [])
+    for f in files:
+        if f.get("sha256") and f["sha256"] != file_sha256(PROJECT_ROOT / f["local_path"]):
+            sys.exit(f"{f['local_path']} does not match the sha256 recorded in the manifest")
+    doc = extract_many(PROJECT_ROOT / project["local_path"], [PROJECT_ROOT / f["local_path"] for f in files[1:]])
 
     cache = None if args.no_cache else PROJECT_ROOT / "data" / "cache" / "llm"
     report, run_log = build_report(doc, project, ChatClient(), JevDecisionModel(), args.principles, cache)
