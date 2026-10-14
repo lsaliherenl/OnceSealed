@@ -74,10 +74,10 @@ Ayrı FastAPI servisi yok: Streamlit doğrudan `core` Python paketini çağırı
 ## Kimlik ve kodlama kuralları (Python ↔ Solidity birebir aynı olmalı)
 
 - Tüm metin kimlikleri `bytes32` olarak: `Web3.keccak(text=<kanonik string>)`. **`hashlib.sha3_256` kullanma** (NIST SHA-3, keccak256 ile aynı değil).
-- `projectId = keccak(text="VCS-<verra_id>")` (ör. `"VCS-1748"`; OffsetsDB `project_id` biçimiyle aynı tut).
-- `batchId = keccak(text=<seri numarasının aralık hariç kısmı>)` (bkz. Veri / seri numarası).
+- `projectId = keccak(text=<OffsetsDB project_id>)`, tire yok: `"VCS1477"` (14 Ekim düzeltmesi: eski taslaktaki `"VCS-1748"` örneği OffsetsDB biçimiyle çelişiyordu).
+- `batchId = keccak(text=<kanonik parti anahtarı>)`. Anahtarın biçimi `core/data` (iş paketi 4) içinde tek yerde tanımlanır; sözleşme biçimden bağımsızdır.
 - `buyerId = keccak(text="LEI:" + <20 karakter LEI, büyük harf>)`. LEI = ISO 17442 Legal Entity Identifier. **Demoda gerçek şirket kullanılmaz:** kurgusal şirketler, geçerli mod-97 kontrol haneli LEI biçimiyle üretilir.
-- `buyerCommitment = keccak256(abi.encodePacked(buyerId, salt))` → Python: `Web3.solidity_keccak(['bytes32','bytes32'], [buyerId, salt])`. `salt = secrets.token_bytes(32)`.
+- **`buyerCommitment = keccak256(abi.encode(buyerId, salt, batchId, start, end))`** (14 Ekim değişikliği; eski taslak `encodePacked(buyerId, salt)` idi). Taahhüt iptal aralığına bağlıdır: ifşa edilen bir tuz yalnızca o iptali kanıtlar, başka bir iptale kopyalanan taahhüt doğrulanmaz. Python: `keccak(eth_abi.encode(['bytes32','bytes32','bytes32','uint64','uint64'], [...]))`. Sözleşmede `commitmentOf(...)` pure fonksiyonu aynı hesabı yapar. `cast` ile Python'un aynı sonucu verdiği doğrulandı. `salt = secrets.token_bytes(32)`.
 - Python (pytest) ve Foundry aynı sabit test vektörlerini kullanır; `tests/vectors.json` iki tarafın da okuduğu tek kaynak.
 
 ## Gizlilik mekanizması
@@ -88,7 +88,20 @@ Ayrı FastAPI servisi yok: Streamlit doğrudan `core` Python paketini çağırı
 4. **Seçici ifşa:** Alıcı isterse LEI + tuzu paylaşır; herkes `verifyClaim` (view, işlem yayınlamaz) ile doğrular.
 5. **İptal makbuzu:** İptal sonunda alıcıya bir kez `retirement_receipt.json` indirilir: `{retirementId, chainId, contract, txHash, serial, lei, salt}`. Tuz sunucuda düz metin tutulmaz (sadece kasada şifreli). Arayüzde uyarı: "Bu dosyaya sahip olan herkes iptali sizin adınıza iddia edebilir, gizli tutun."
 
-## Akıllı sözleşme: `RetirementRegistry` (Solidity ^0.8.20, OpenZeppelin `AccessControl`)
+## Akıllı sözleşme: `RetirementRegistry` (Solidity ^0.8.24, solc 0.8.28, OpenZeppelin `AccessControl` + `SafeCast`)
+
+**Durum (14 Ekim): yazıldı, 27 Foundry testi geçiyor (2 fuzz testi × 1000 senaryo dahil), lint uyarısı yok, CI'da.** Dosyalar: `contracts/src/RetirementRegistry.sol`, `contracts/test/RetirementRegistry.t.sol`. Gaz: `retire` ~150-215k (partide her önceki iptal birkaç bin gaz ekler), `registerBatch` ~72k, `attestRetirement` ~29k.
+
+14 Ekim'de taslağa göre yapılan iyileştirmeler:
+- Taahhüt iptal aralığına bağlandı (bkz. Kimlik kuralları).
+- Sıfır değer kontrolleri: sıfır taahhüt, kasa hash'i, rapor hash'i, yöntem hash'i, parti/proje kimliği → `ZeroValue`.
+- Denetçi onayı **tek seferlik ve kesin**: `Pending → Verified | Rejected`; ikinci onay `AlreadyAttested`.
+- Rapor sürümleri 1'den başlar; iptal kaydındaki `reportVersion = 0` "iptal anında rapor yoktu" demektir.
+- Arayüz için ek view'lar: `getBatch`, `batchRetirements`, `retirementOf` (seriyi kapsayan iptal id'si), `reportCount`, `commitmentOf`, `retirementCount`.
+- Bilinmeyen kayıtlar için `UnknownRetirement`, `UnknownReport` hataları.
+- `retire` sadece operator'e açık olduğu için doğrusal örtüşme taraması dışarıdan şişirilemez (DoS riski yok); ölçek notu README'ye.
+
+Aşağıdaki özgün tasarım metni bağlam için duruyor; çelişki varsa yukarıdaki ve kod esastır.
 
 Roller: `DEFAULT_ADMIN_ROLE` (rol atar), `ASSESSOR_ROLE` (kalite raporu), `OPERATOR_ROLE` (ihraç partisi + iptal), `AUDITOR_ROLE` (onay).
 

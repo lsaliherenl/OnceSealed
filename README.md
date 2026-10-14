@@ -62,10 +62,25 @@ published file and compare.
 **Threat model:** privacy is against the public, not against the registry (which already knows its account holders).
 This is a hash commitment + encryption design, **not** a zero-knowledge proof system.
 
-### 3. Smart contract — TODO
+### 3. Smart contract
 
-`RetirementRegistry` (Solidity, Foundry, OpenZeppelin AccessControl) on Sepolia: issuance batches, versioned quality
-reports, range-based retirements with overlap rejection, auditor attestations.
+[`RetirementRegistry`](contracts/src/RetirementRegistry.sol) (Solidity 0.8.28, OpenZeppelin AccessControl):
+
+| Function | Role | What it does |
+|---|---|---|
+| `registerBatch` | operator | Declares an issuance batch and its serial range. |
+| `registerQualityReport` | assessor | Anchors a report hash, score and method hash; versions are kept. |
+| `retire` | operator | Retires serials `[start, end]`; rejects any range that overlaps a previous retirement (`AlreadyRetired`). Records the project's report version at that moment. |
+| `attestRetirement` | auditor | One-time, final `Verified` / `Rejected` status after checking the vault off-chain. |
+| `verifyClaim` | anyone (view) | Checks a disclosed `(buyerId, salt)` against the commitment. |
+
+The commitment is `keccak256(abi.encode(buyerId, salt, batchId, start, end))`, so a disclosed salt proves exactly one
+retirement and cannot be reused for another. There is no transfer or mint function: retired credits cannot become
+tradable again.
+
+Tested with Foundry (27 tests, including fuzz tests that check, over thousands of random ranges, that no serial is ever
+retired twice). The overlap check scans a batch's retirements linearly; that is fine at prototype scale and only the
+operator can add entries, but a production registry would use an ordered interval structure. **TODO:** Sepolia deployment.
 
 ## Design decisions
 
@@ -93,7 +108,7 @@ evaluation set is planned (**TODO**).
 ## Repository layout
 
 ```
-contracts/      Foundry project (RetirementRegistry - TODO)
+contracts/      Foundry project: RetirementRegistry + tests
 core/ai/        PDF extraction, quote verification, LLM client, decision model, report builder
 core/hashing.py canonical JSON + keccak256
 scripts/        assess_project.py (build a report), jev_smoke_test.py (evidence extraction only)
@@ -145,7 +160,8 @@ python scripts/assess_project.py VCS1851
 
 ## Roadmap
 
-- [ ] `RetirementRegistry` contract + Foundry tests, Sepolia deployment
+- [x] `RetirementRegistry` contract + Foundry tests
+- [ ] Sepolia deployment + Etherscan verification
 - [ ] Privacy module (commitments, sealed-box audit vault) with Python ↔ Solidity test vectors
 - [ ] Streamlit app: buyer, public verification, auditor and project quality views
 - [ ] Anonymity statistic from OffsetsDB
