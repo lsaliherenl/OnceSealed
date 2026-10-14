@@ -1,0 +1,1031 @@
+{
+  "contractName": "RetirementRegistry",
+  "compiler": "0.8.28+commit.7893614a",
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "prague"
+  },
+  "abi": [
+    {
+      "type": "constructor",
+      "inputs": [
+        {
+          "name": "admin",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "ASSESSOR_ROLE",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "AUDITOR_ROLE",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "DEFAULT_ADMIN_ROLE",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "OPERATOR_ROLE",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "attestRetirement",
+      "inputs": [
+        {
+          "name": "retirementId",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "valid",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "batchRetirements",
+      "inputs": [
+        {
+          "name": "batchId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[]",
+          "internalType": "uint256[]"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "commitmentOf",
+      "inputs": [
+        {
+          "name": "buyerId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "salt",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "batchId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "start",
+          "type": "uint64",
+          "internalType": "uint64"
+        },
+        {
+          "name": "end",
+          "type": "uint64",
+          "internalType": "uint64"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "pure"
+    },
+    {
+      "type": "function",
+      "name": "getBatch",
+      "inputs": [
+        {
+          "name": "batchId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple",
+          "internalType": "struct RetirementRegistry.Batch",
+          "components": [
+            {
+              "name": "projectId",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "firstSerial",
+              "type": "uint64",
+              "internalType": "uint64"
+            },
+            {
+              "name": "lastSerial",
+              "type": "uint64",
+              "internalType": "uint64"
+            },
+            {
+              "name": "exists",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getReport",
+      "inputs": [
+        {
+          "name": "projectId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "version",
+          "type": "uint32",
+          "internalType": "uint32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple",
+          "internalType": "struct RetirementRegistry.QualityReport",
+          "components": [
+            {
+              "name": "reportHash",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "methodHash",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "score",
+              "type": "uint16",
+              "internalType": "uint16"
+            },
+            {
+              "name": "registeredAt",
+              "type": "uint64",
+              "internalType": "uint64"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getRetirement",
+      "inputs": [
+        {
+          "name": "retirementId",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple",
+          "internalType": "struct RetirementRegistry.Retirement",
+          "components": [
+            {
+              "name": "batchId",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "start",
+              "type": "uint64",
+              "internalType": "uint64"
+            },
+            {
+              "name": "end",
+              "type": "uint64",
+              "internalType": "uint64"
+            },
+            {
+              "name": "buyerCommitment",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "auditVaultHash",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "reportVersion",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "retiredAt",
+              "type": "uint64",
+              "internalType": "uint64"
+            },
+            {
+              "name": "audit",
+              "type": "uint8",
+              "internalType": "enum RetirementRegistry.AuditStatus"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getRoleAdmin",
+      "inputs": [
+        {
+          "name": "role",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "grantRole",
+      "inputs": [
+        {
+          "name": "role",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "account",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "hasRole",
+      "inputs": [
+        {
+          "name": "role",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "account",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "isRetired",
+      "inputs": [
+        {
+          "name": "batchId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "serial",
+          "type": "uint64",
+          "internalType": "uint64"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "latestReport",
+      "inputs": [
+        {
+          "name": "projectId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple",
+          "internalType": "struct RetirementRegistry.QualityReport",
+          "components": [
+            {
+              "name": "reportHash",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "methodHash",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "score",
+              "type": "uint16",
+              "internalType": "uint16"
+            },
+            {
+              "name": "registeredAt",
+              "type": "uint64",
+              "internalType": "uint64"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "registerBatch",
+      "inputs": [
+        {
+          "name": "batchId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "projectId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "firstSerial",
+          "type": "uint64",
+          "internalType": "uint64"
+        },
+        {
+          "name": "lastSerial",
+          "type": "uint64",
+          "internalType": "uint64"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "registerQualityReport",
+      "inputs": [
+        {
+          "name": "projectId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "reportHash",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "score",
+          "type": "uint16",
+          "internalType": "uint16"
+        },
+        {
+          "name": "methodHash",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "version",
+          "type": "uint32",
+          "internalType": "uint32"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "renounceRole",
+      "inputs": [
+        {
+          "name": "role",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "callerConfirmation",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "reportCount",
+      "inputs": [
+        {
+          "name": "projectId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint32",
+          "internalType": "uint32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "retire",
+      "inputs": [
+        {
+          "name": "batchId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "start",
+          "type": "uint64",
+          "internalType": "uint64"
+        },
+        {
+          "name": "end",
+          "type": "uint64",
+          "internalType": "uint64"
+        },
+        {
+          "name": "buyerCommitment",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "auditVaultHash",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "retirementId",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "retirementCount",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "retirementOf",
+      "inputs": [
+        {
+          "name": "batchId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "serial",
+          "type": "uint64",
+          "internalType": "uint64"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "revokeRole",
+      "inputs": [
+        {
+          "name": "role",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "account",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "supportsInterface",
+      "inputs": [
+        {
+          "name": "interfaceId",
+          "type": "bytes4",
+          "internalType": "bytes4"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "verifyClaim",
+      "inputs": [
+        {
+          "name": "retirementId",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "buyerId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "salt",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "event",
+      "name": "BatchRegistered",
+      "inputs": [
+        {
+          "name": "batchId",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "projectId",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "firstSerial",
+          "type": "uint64",
+          "indexed": false,
+          "internalType": "uint64"
+        },
+        {
+          "name": "lastSerial",
+          "type": "uint64",
+          "indexed": false,
+          "internalType": "uint64"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "CreditRetired",
+      "inputs": [
+        {
+          "name": "retirementId",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "batchId",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "projectId",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "start",
+          "type": "uint64",
+          "indexed": false,
+          "internalType": "uint64"
+        },
+        {
+          "name": "end",
+          "type": "uint64",
+          "indexed": false,
+          "internalType": "uint64"
+        },
+        {
+          "name": "buyerCommitment",
+          "type": "bytes32",
+          "indexed": false,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "auditVaultHash",
+          "type": "bytes32",
+          "indexed": false,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "reportVersion",
+          "type": "uint32",
+          "indexed": false,
+          "internalType": "uint32"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "QualityReportRegistered",
+      "inputs": [
+        {
+          "name": "projectId",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "version",
+          "type": "uint32",
+          "indexed": true,
+          "internalType": "uint32"
+        },
+        {
+          "name": "reportHash",
+          "type": "bytes32",
+          "indexed": false,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "methodHash",
+          "type": "bytes32",
+          "indexed": false,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "score",
+          "type": "uint16",
+          "indexed": false,
+          "internalType": "uint16"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "RetirementAttested",
+      "inputs": [
+        {
+          "name": "retirementId",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "valid",
+          "type": "bool",
+          "indexed": false,
+          "internalType": "bool"
+        },
+        {
+          "name": "auditor",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "RoleAdminChanged",
+      "inputs": [
+        {
+          "name": "role",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "previousAdminRole",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "newAdminRole",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "RoleGranted",
+      "inputs": [
+        {
+          "name": "role",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "account",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "sender",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "RoleRevoked",
+      "inputs": [
+        {
+          "name": "role",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "account",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "sender",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "AccessControlBadConfirmation",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "AccessControlUnauthorizedAccount",
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "neededRole",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "AlreadyAttested",
+      "inputs": [
+        {
+          "name": "retirementId",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "AlreadyRetired",
+      "inputs": [
+        {
+          "name": "conflictingRetirementId",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "BatchExists",
+      "inputs": [
+        {
+          "name": "batchId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "InvalidRange",
+      "inputs": [
+        {
+          "name": "start",
+          "type": "uint64",
+          "internalType": "uint64"
+        },
+        {
+          "name": "end",
+          "type": "uint64",
+          "internalType": "uint64"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "InvalidScore",
+      "inputs": [
+        {
+          "name": "score",
+          "type": "uint16",
+          "internalType": "uint16"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "SafeCastOverflowedUintDowncast",
+      "inputs": [
+        {
+          "name": "bits",
+          "type": "uint8",
+          "internalType": "uint8"
+        },
+        {
+          "name": "value",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "UnknownBatch",
+      "inputs": [
+        {
+          "name": "batchId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "UnknownReport",
+      "inputs": [
+        {
+          "name": "projectId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "version",
+          "type": "uint32",
+          "internalType": "uint32"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "UnknownRetirement",
+      "inputs": [
+        {
+          "name": "retirementId",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "ZeroValue",
+      "inputs": []
+    }
+  ],
+  "bytecode": "0x608060405234801561000f575f5ffd5b5060405161194138038061194183398101604081905261002e9161010f565b6001600160a01b03811661005557604051637c946ed760e01b815260040160405180910390fd5b61005f5f82610066565b505061013c565b5f828152602081815260408083206001600160a01b038516845290915281205460ff16610106575f838152602081815260408083206001600160a01b03861684529091529020805460ff191660011790556100be3390565b6001600160a01b0316826001600160a01b0316847f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d60405160405180910390a4506001610109565b505f5b92915050565b5f6020828403121561011f575f5ffd5b81516001600160a01b0381168114610135575f5ffd5b9392505050565b6117f8806101495f395ff3fe608060405234801561000f575f5ffd5b506004361061016d575f3560e01c80636e1d616e116100d9578063a217fddf11610093578063d750b2021161006e578063d750b202146103b5578063ec9a191f146103c8578063ed42136f146103db578063f5b541a614610439575f5ffd5b8063a217fddf14610388578063a6bfdd5a1461038f578063d547741f146103a2575f5ffd5b80636e1d616e146102b557806378362acd146102dc578063818f0df0146102fc57806382392b511461034f57806391d1485414610362578063974c417914610375575f5ffd5b80632f2ff15d1161012a5780632f2ff15d1461022157806336568abe1461023457806336a562ba146102475780633c5005e21461026f578063501a736e146102825780635d024dec14610295575f5ffd5b806301ffc9a7146101715780630a0042f7146101995780631dcc791c146101b0578063212753e4146101c5578063248a9ca3146101ec578063288defdb1461020e575b5f5ffd5b61018461017f366004611412565b610460565b60405190151581526020015b60405180910390f35b6101a260055481565b604051908152602001610190565b6101c36101be366004611440565b610496565b005b6101a27f9f4de61ee0a27bbb9b31d54eb4763d20f594fd4e21db4df58a141f10a97b356781565b6101a26101fa366004611472565b5f9081526020819052604090206001015490565b61018461021c366004611489565b61058a565b6101c361022f3660046114b2565b6105d2565b6101c36102423660046114b2565b6105fc565b61025a6102553660046114e0565b610634565b60405163ffffffff9091168152602001610190565b6101a261027d366004611538565b6107e0565b6101a2610290366004611582565b610bb3565b6102a86102a3366004611472565b610c73565b60405161019091906115ac565b6101a27f59a1c48e5837ad7a7f3dcedcbe129bf3249ec4fbf651fd4f5e2600ead39fe2f581565b6102ef6102ea366004611472565b610cd2565b6040516101909190611622565b61030f61030a3660046116ac565b610dc7565b6040516101909190815181526020808301519082015260408083015161ffff16908201526060918201516001600160401b03169181019190915260800190565b6101c361035d3660046116d7565b610ec5565b6101846103703660046114b2565b61105b565b61030f610383366004611472565b611083565b6101a25f81565b6101a261039d36600461171a565b6110c3565b6101c36103b03660046114b2565b611112565b61025a6103c3366004611472565b611136565b6101846103d6366004611582565b61114d565b6103ee6103e9366004611472565b611161565b60405161019091905f608082019050825182526001600160401b0360208401511660208301526001600160401b03604084015116604083015260608301511515606083015292915050565b6101a27f97667070c54ef182b0f5858b034beac1b6f3089aa2d3188bb1e8929f4fa9b92981565b5f6001600160e01b03198216637965db0b60e01b148061049057506301ffc9a760e01b6001600160e01b03198316145b92915050565b7f59a1c48e5837ad7a7f3dcedcbe129bf3249ec4fbf651fd4f5e2600ead39fe2f56104c081611219565b5f6104ca84611226565b90505f6004820154600160601b900460ff1660028111156104ed576104ed6115ee565b1461051357604051630d1177f560e01b8152600481018590526024015b60405180910390fd5b8261051f576002610522565b60015b60048201805460ff60601b1916600160601b836002811115610546576105466115ee565b02179055506040518315158152339085907f0a25b54f44642dbab9aaac0c44c8297799ae71db4605d36901900522b80183879060200160405180910390a350505050565b5f5f61059585611226565b60028101548154600183015492935090916105c89187918791906001600160401b0380821691600160401b9004166110c3565b1495945050505050565b5f828152602081905260409020600101546105ec81611219565b6105f68383611274565b50505050565b6001600160a01b03811633146106255760405163334bd91960e11b815260040160405180910390fd5b61062f8282611303565b505050565b5f7f9f4de61ee0a27bbb9b31d54eb4763d20f594fd4e21db4df58a141f10a97b356761065f81611219565b85158061066a575084155b80610673575082155b1561069157604051637c946ed760e01b815260040160405180910390fd5b60648461ffff1611156106bd57604051636ae3930f60e11b815261ffff8516600482015260240161050a565b60035f8781526020019081526020015f2060405180608001604052808781526020018581526020018661ffff1681526020016106f84261136c565b6001600160401b039081169091528254600181810185555f948552602080862085516003948502909101908155818601519281019290925560408086015160029093018054606090970151909516620100000269ffffffffffffffffffff1990961661ffff909316929092179490941790925589845290915290205461077d906113a5565b91508163ffffffff16867fa8c58d113802c654333a0e9d0e4974a10bb148f0c04c91165fd84390bad095dd8786886040516107cf93929190928352602083019190915261ffff16604082015260600190565b60405180910390a350949350505050565b5f7f97667070c54ef182b0f5858b034beac1b6f3089aa2d3188bb1e8929f4fa9b92961080b81611219565b5f87815260016020819052604090912090810154600160801b900460ff1661084957604051630877402b60e41b81526004810189905260240161050a565b856001600160401b0316876001600160401b03161180610879575060018101546001600160401b03908116908816105b8061089b575060018101546001600160401b03600160401b9091048116908716115b156108cc57604051633c21b0ff60e11b81526001600160401b0380891660048301528716602482015260440161050a565b8415806108d7575083155b156108f557604051637c946ed760e01b815260040160405180910390fd5b5f888152600260205260408120905b81548110156109c9575f60045f84848154811061092357610923611766565b905f5260205f20015481526020019081526020015f2090508060010160089054906101000a90046001600160401b03166001600160401b03168a6001600160401b031611158015610984575060018101546001600160401b03808b16911611155b156109c05782828154811061099b5761099b611766565b905f5260205f200154604051630d5f568d60e01b815260040161050a91815260200190565b50600101610904565b5060055f81546109d89061178e565b918290555082545f90815260036020526040812054919550906109fa906113a5565b90506040518061010001604052808b81526020018a6001600160401b03168152602001896001600160401b031681526020018881526020018781526020018263ffffffff168152602001610a4d4261136c565b6001600160401b0390811682525f602092830181905288815260048084526040918290208551815593850151600185018054938701518516600160401b026001600160801b0319909416918516919091179290921790915560608401516002808501919091556080850151600385015560a0850151918401805460c0870151909416640100000000026bffffffffffffffffffffffff1990941663ffffffff909316929092179290921780825560e08501519260ff60601b1990911690600160601b908490811115610b2157610b216115ee565b02179055505082546001810184555f8481526020908190209091018790558454604080516001600160401b03808f1682528d169381019390935282018a90526060820189905263ffffffff8416608083015291508b9087907f1db2c54d18cb338535dc3a454338dcb1f6b46e72b7aea86d8b0c7b09b8b734859060a00160405180910390a45050505095945050505050565b5f828152600260205260408120815b8154811015610c69575f60045f848481548110610be157610be1611766565b5f9182526020808320909101548352820192909252604001902060018101549091506001600160401b03808716911611801590610c36575060018101546001600160401b03600160401b909104811690861611155b15610c6057828281548110610c4d57610c4d611766565b905f5260205f2001549350505050610490565b50600101610bc2565b505f949350505050565b5f81815260026020908152604091829020805483518184028101840190945280845260609392830182828015610cc657602002820191905f5260205f20905b815481526020019060010190808311610cb2575b50505050509050919050565b610d1660408051610100810182525f80825260208201819052918101829052606081018290526080810182905260a0810182905260c081018290529060e082015290565b610d1f82611226565b60408051610100810182528254815260018301546001600160401b038082166020840152600160401b909104811692820192909252600280840154606083015260038401546080830152600484015463ffffffff811660a0840152640100000000810490931660c083015290929160e0840191600160601b90910460ff1690811115610dad57610dad6115ee565b6002811115610dbe57610dbe6115ee565b90525092915050565b604080516080810182525f80825260208201819052918101829052606081019190915263ffffffff82161580610e0f57505f8381526003602052604090205463ffffffff8316115b15610e3c576040516377b843df60e01b81526004810184905263ffffffff8316602482015260440161050a565b5f838152600360205260409020610e546001846117a6565b63ffffffff1681548110610e6a57610e6a611766565b5f918252602091829020604080516080810182526003939093029091018054835260018101549383019390935260029092015461ffff811692820192909252620100009091046001600160401b031660608201529392505050565b7f97667070c54ef182b0f5858b034beac1b6f3089aa2d3188bb1e8929f4fa9b929610eef81611219565b841580610efa575083155b15610f1857604051637c946ed760e01b815260040160405180910390fd5b816001600160401b0316836001600160401b03161115610f5e57604051633c21b0ff60e11b81526001600160401b0380851660048301528316602482015260440161050a565b5f8581526001602081905260409091200154600160801b900460ff1615610f9b57604051638367361d60e01b81526004810186905260240161050a565b604080516080810182528581526001600160401b0385811660208084018281528784168587018181526001606088018181525f8f81528287528a902098518955935197018054915193511515600160801b0260ff60801b19948816600160401b026001600160801b03199093169890971697909717179190911693909317909355835190815291820152859187917f1fda4cc3c0cb92b4fb447c837a6de62619ec4dd8922f5bb6be3c659e492339fc910160405180910390a35050505050565b5f918252602082815260408084206001600160a01b0393909316845291905290205460ff1690565b604080516080810182525f8082526020820181905291810182905260608101919091525f8281526003602052604090205461049090839061030a906113a5565b604080516020808201979097528082019590955260608501939093526001600160401b0391821660808501521660a0808401919091528151808403909101815260c09092019052805191012090565b5f8281526020819052604090206001015461112c81611219565b6105f68383611303565b5f81815260036020526040812054610490906113a5565b5f6111588383610bb3565b15159392505050565b604080516080810182525f8082526020820181905291810182905260608101919091525f8281526001602081905260409091200154600160801b900460ff166111c057604051630877402b60e41b81526004810183905260240161050a565b505f908152600160208181526040928390208351608081018552815481529201546001600160401b0380821692840192909252600160401b810490911692820192909252600160801b90910460ff161515606082015290565b61122381336113d5565b50565b5f81815260046020819052604082209081015490916401000000009091046001600160401b0316900361126f57604051637884566960e01b81526004810183905260240161050a565b919050565b5f61127f838361105b565b6112fc575f838152602081815260408083206001600160a01b03861684529091529020805460ff191660011790556112b43390565b6001600160a01b0316826001600160a01b0316847f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d60405160405180910390a4506001610490565b505f610490565b5f61130e838361105b565b156112fc575f838152602081815260408083206001600160a01b0386168085529252808320805460ff1916905551339286917ff6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b9190a4506001610490565b5f6001600160401b038211156113a157604080516306dfcc6560e41b815260048101919091526024810183905260440161050a565b5090565b5f63ffffffff8211156113a1576040516306dfcc6560e41b8152602060048201526024810183905260440161050a565b6113df828261105b565b61140e5760405163e2517d3f60e01b81526001600160a01b03821660048201526024810183905260440161050a565b5050565b5f60208284031215611422575f5ffd5b81356001600160e01b031981168114611439575f5ffd5b9392505050565b5f5f60408385031215611451575f5ffd5b8235915060208301358015158114611467575f5ffd5b809150509250929050565b5f60208284031215611482575f5ffd5b5035919050565b5f5f5f6060848603121561149b575f5ffd5b505081359360208301359350604090920135919050565b5f5f604083850312156114c3575f5ffd5b8235915060208301356001600160a01b0381168114611467575f5ffd5b5f5f5f5f608085870312156114f3575f5ffd5b8435935060208501359250604085013561ffff81168114611512575f5ffd5b9396929550929360600135925050565b80356001600160401b038116811461126f575f5ffd5b5f5f5f5f5f60a0868803121561154c575f5ffd5b8535945061155c60208701611522565b935061156a60408701611522565b94979396509394606081013594506080013592915050565b5f5f60408385031215611593575f5ffd5b823591506115a360208401611522565b90509250929050565b602080825282518282018190525f918401906040840190835b818110156115e35783518352602093840193909201916001016115c5565b509095945050505050565b634e487b7160e01b5f52602160045260245ffd5b6003811061161e57634e487b7160e01b5f52602160045260245ffd5b9052565b5f61010082019050825182526001600160401b0360208401511660208301526001600160401b036040840151166040830152606083015160608301526080830151608083015263ffffffff60a08401511660a083015260c083015161169260c08401826001600160401b03169052565b5060e08301516116a560e0840182611602565b5092915050565b5f5f604083850312156116bd575f5ffd5b82359150602083013563ffffffff81168114611467575f5ffd5b5f5f5f5f608085870312156116ea575f5ffd5b843593506020850135925061170160408601611522565b915061170f60608601611522565b905092959194509250565b5f5f5f5f5f60a0868803121561172e575f5ffd5b85359450602086013593506040860135925061174c60608701611522565b915061175a60808701611522565b90509295509295909350565b634e487b7160e01b5f52603260045260245ffd5b634e487b7160e01b5f52601160045260245ffd5b5f6001820161179f5761179f61177a565b5060010190565b63ffffffff82811682821603908111156104905761049061177a56fea26469706673582212208086b6098b46888ef4983989469419612c873340ae6ada882f534a4fb2b8153364736f6c634300081c0033"
+}

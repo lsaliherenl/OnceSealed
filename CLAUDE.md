@@ -84,7 +84,7 @@ Ayrı FastAPI servisi yok: Streamlit doğrudan `core` Python paketini çağırı
 
 ## Gizlilik mekanizması
 
-**Durum (14 Ekim): `core/privacy/` yazıldı ve test edildi.** `identity.py` (LEI doğrulama/kurgusal LEI üretimi, `text_id`, `project_id`, `buyer_id`), `commitment.py` (aralığa bağlı taahhüt, tuz), `vault.py` (SealedBox kasası, `audit()` 5 kontrol: kasa hash'i, kasa açılıyor mu, aralık, LEI↔buyerId, taahhüt; SQLite `VaultStore`), `receipt.py` (makbuz + çevrimdışı taahhüt kontrolü). Ortak vektörler: `scripts/gen_vectors.py` → `tests/vectors.json`, hem `tests/test_privacy.py` hem `contracts/test/Vectors.t.sol` doğrular. Denetçi kasa anahtarları `scripts/gen_auditor_keys.py` ile `.env`'ye yazıldı (demo: tüm roller tek makinede). **Testlerde bile gerçek LEI kullanılmaz** (`ONCE00SEALEDDEMO0143` gibi kurgusal kodlar).
+**Durum (14 Ekim): `core/privacy/` yazıldı ve test edildi.** `identity.py` (LEI doğrulama/kurgusal LEI üretimi, `text_id`, `project_id`, `buyer_id`), `commitment.py` (aralığa bağlı taahhüt, tuz), `vault.py` (SealedBox kasası, `audit()` 6 kontrol: kasa hash'i, kasa açılıyor mu, aralık, LEI geçerli mi, LEI↔buyerId, taahhüt; SQLite `VaultStore`), `receipt.py` (makbuz + çevrimdışı taahhüt kontrolü). Ortak vektörler: `scripts/gen_vectors.py` → `tests/vectors.json`, hem `tests/test_privacy.py` hem `contracts/test/Vectors.t.sol` doğrular. Denetçi kasa anahtarları `scripts/gen_auditor_keys.py` ile `.env`'ye yazıldı (demo: tüm roller tek makinede). **Testlerde bile gerçek LEI kullanılmaz** (`ONCE00SEALEDDEMO0143` gibi kurgusal kodlar).
 
 1. **İptal:** Backend tuzu üretir, taahhüdü hesaplar, zincire sadece taahhüdü yazar.
 2. **Denetçi kasası:** `{batch_id, start, end, lei, buyer_id, salt, version}` kanonik JSON'u denetçinin açık anahtarıyla **PyNaCl `SealedBox`** ile şifrelenir, SQLite'ta saklanır. Zincire `auditVaultHash = keccak256(ciphertext)` yazılır.
@@ -123,6 +123,18 @@ Fonksiyonlar:
 Foundry testleri: başarılı iptal; tam/kısmi örtüşmede revert; bitişik aralıklar (100-199 ve 200-299) kabul; parti dışı revert; yetkisiz çağrı revert; doğru/yanlış tuzla `verifyClaim`; skor > 100 revert; iptal kaydında rapor sürümü; onay olayı; Python ile ortak test vektörleri.
 
 Not: Taslakta anılan önceki `ClimateRegistry.sol` bu klasörde yok; sıfırdan yazılacak.
+
+## Zincir istemcisi ve uçtan uca akış
+
+**Durum (14 Ekim): yazıldı ve test edildi.**
+- `core/chain/registry.py`: `Registry.deploy` (deployer admin olur, assessor/operator/auditor rollerini verir), yazma işlemleri **önce simüle edilir** (`eth_call`), revert'ler okunur `RegistryError("AlreadyRetired", {...})` olarak döner; okuma fonksiyonları dataclass döndürür. web3.py 8.0.0.
+- `core/chain/artifacts/RetirementRegistry.json`: commit'lenen ABI + bytecode (`scripts/export_artifact.py` ile `forge build` çıktısından). Sözleşme değişince yeniden dışa aktar; CI ABI'nin güncel olduğunu kontrol eder.
+- `core/chain/deployments.py` → `deployments/<chain_id>.json` (Sepolia commit'lenir, Anvil `31337` gitignore'da). `core/chain/anvil.py`: Anvil başlatma ve `anvil_setBalance` ile fonlama.
+- `core/data/batches.py`: `IssuanceBatch`, kanonik parti anahtarı `"<project>|<vintage>|<batch_no:03d>"` (ör. `VCS1477|2020|001`), görüntü etiketi `SIM-...` (simüle olduğu belli olsun).
+- `core/service.py` (`OnceSealed`): Streamlit'in kullanacağı akışlar: `ensure_batch`, `publish_report` (yayımlanan rapor dosyasının hash'i + method hash + toplam skor), `retire` (tuz → taahhüt → kasa şifreleme → **önce simülasyon**, sonra kasa kaydı + iptal + makbuz; reddedilen iptal kasada artık bırakmaz), `audit` (kasa aç, 6 kontrol, zincire onay), `verify_receipt`, `public_record`.
+- Betikler: `python scripts/demo_e2e.py` (geçici Anvil başlatır, videodaki akışı 7 adımda oynatır), `python scripts/deploy.py --network anvil|sepolia`.
+- Testler: `tests/test_chain_e2e.py` (6 test, geçici Anvil + geçici anahtarlar; `.env` gerektirmez, CI'da Foundry toolchain ile koşar). Kötü niyetli operator senaryosu (taahhüt A'ya, kasa B'ye) denetçi tarafından yakalanıp `REJECTED` yazılıyor.
+- Ölçülen gaz (Anvil): deploy 1,41M, `registerBatch` 72k, `retire` 214k (ilk), `attestRetirement` 31k.
 
 ## AI kalite servisi
 

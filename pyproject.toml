@@ -16,6 +16,7 @@ dependencies = [
     "pynacl",
     "pymupdf",
     "python-dotenv",
+    "web3",
 ]
 
 [project.optional-dependencies]

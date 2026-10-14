@@ -12,4 +12,5 @@ pydantic==2.14.1
 pynacl==1.6.2
 pymupdf==1.28.2
 python-dotenv==1.2.4
+web3==8.0.0
 pytest==9.1.1

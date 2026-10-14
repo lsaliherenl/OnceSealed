@@ -33,3 +33,8 @@ Thumbs.db
 *.egg-info/
 build/
 dist/
+
+# Local chain artifacts (Sepolia deployments are committed)
+deployments/31337.json
+data/vault/
+data/receipts/

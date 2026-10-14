@@ -1,7 +1,7 @@
 # OnceSealed — Sunum Notları
 
 > Ekip içi çalışma dosyası (Türkçe). Video, README ve Devpost metni İngilizce olacak; İngilizce
-> cümleler aşağıda hazır duruyor. **Her önemli adımdan sonra güncellenir.** Son güncelleme: 14 Ekim 2026.
+> cümleler aşağıda hazır duruyor. **Her önemli adımdan sonra güncellenir.** Son güncelleme: 14 Ekim 2026 (iş paketi 3 sonrası).
 
 ---
 
@@ -69,12 +69,14 @@ Bugün ikisi aynı anda sağlanamıyor. OnceSealed ikisini birlikte sağlıyor.
 |---|---|---|
 | Foundry testleri | **30 test** geçiyor (27 sözleşme + 3 Python vektörü) | 14 Ekim |
 | Fuzz testleri | 2 test × 1000 rastgele senaryo: hiçbir seri iki kez iptal edilemedi | 14 Ekim |
-| Python testleri | **40 test** (alıntı doğrulama, rapor, gizlilik, kasa, denetim, makbuz) | 14 Ekim |
+| Python testleri | **46 test** (alıntı doğrulama, rapor, gizlilik, kasa, denetim, makbuz + 6 uçtan uca zincir testi) | 14 Ekim |
+| Uçtan uca senaryo | `scripts/demo_e2e.py` tek komutla: parti → rapor → iptal → örtüşme reddi → denetim → ifşa; sahte makbuzlar reddediliyor | 14 Ekim |
+| Kötü niyetli operator testi | Taahhüt A şirketine, kasa B şirketine yazılırsa denetçi yakalıyor ve zincire `REJECTED` yazıyor | 14 Ekim |
 | Ortak test vektörleri | Python ve Solidity aynı hash'leri üretiyor (uint64 üst sınırı dahil) | 14 Ekim |
 | AI alıntıları | İlk ölçümde 72/72, yayımlanan 4 raporda 64/64 alıntı PDF'te doğrulandı, 0 atılan | 13 Ekim |
 | Rapor hash'leri | 4 raporun hash'i yayımlanan dosyadan yeniden hesaplanıyor | 13 Ekim |
 | AI maliyeti | 4 proje × 5 ilke ≈ 0,05 $ (LLM) + ≈ 0,001 $ (Jev) | 13 Ekim |
-| Gaz | `retire` ~150-215k, `registerBatch` ~72k, `attestRetirement` ~29k | 14 Ekim |
+| Gaz | deploy 1,41M; `retire` ~150-215k; `registerBatch` ~72k; `attestRetirement` ~29-31k | 14 Ekim |
 | Sepolia sözleşme adresi / Etherscan | **TODO** (iş paketi 7) | |
 
 ## 6. Jüri soruları ve cevapları
@@ -99,8 +101,10 @@ Evet, bilerek. Gizlilik kamuya karşı. Gerçekte de Verra hesap sahibini KYC'de
 aralığı, miktar, zaman. Görünmeyen: alıcı.
 
 **"Şifreli kasanın içinin doğru olduğunu nereden bileceğiz?"**
-Denetçi kasayı açar; hem kasanın parmak izini hem taahhüdü yeniden hesaplayıp zincirdekiyle karşılaştırır ve sonucu
-zincire yazar. Herkese açık ekranda "denetçi tarafından doğrulandı" görünür, kimlik görünmez. Onay tek seferlik.
+Denetçi kasayı açar ve 6 kontrol yapar: kasanın parmak izi, kasa açılıyor mu, seri aralığı, şirket kodu geçerli mi,
+kod ile alıcı kimliği tutarlı mı, taahhüt eşleşiyor mu. Sonucu zincire yazar. Herkese açık ekranda "denetçi tarafından
+doğrulandı" görünür, kimlik görünmez. Onay tek seferlik. Testimizde operator kasaya yanlış şirketi koyduğunda denetçi
+bunu yakaladı ve iptal zincirde "reddedildi" olarak işaretlendi.
 
 **"Alıcı tuzu başkasına verirse ne olur? Biri tuzu başka bir iptal için kullanabilir mi?"**
 Taahhüt iptal edilen aralığa bağlı. Paylaşılan tuz yalnızca o tek iptali kanıtlar; başka bir iptale kopyalanan
@@ -131,6 +135,10 @@ projenin değerlendirmesi birkaç sentlik maliyet.
 
 **"Alıcı şirketler gerçek mi?"**
 Hayır. Demo şirketleri kurgusal; kimlik kodları gerçek LEI biçiminde ve kontrol haneleri geçerli ama kayıtlı değil.
+
+**"Kayıt sistemi (operator) hile yaparsa?"**
+Zincire yazılan taahhüt ile denetçi kasası birbirini tutmazsa denetçi bunu görür ve zincire "reddedildi" yazar; bu kayıt
+silinemez. Operator'ün kasaya yazdığını değiştirmesi de mümkün değil, çünkü kasanın parmak izi zincirde.
 
 ## 7. Hedef kullanıcı, benimsenme, ölçeklenebilirlik (Devpost için)
 

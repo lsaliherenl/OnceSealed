@@ -111,6 +111,8 @@ evaluation set is planned (**TODO**).
 contracts/      Foundry project: RetirementRegistry + tests
 core/ai/        PDF extraction, quote verification, LLM client, decision model, report builder
 core/privacy/   buyer identities (LEI), commitments, sealed-box audit vault, receipts
+core/chain/     web3.py client, deployment records, committed ABI
+core/service.py end-to-end flows used by the app (retire, audit, verify a receipt)
 core/hashing.py canonical JSON + keccak256
 scripts/        assess_project.py (build a report), jev_smoke_test.py (evidence extraction only)
 tests/          unit tests (no API calls) + vectors.json shared with the Foundry tests
@@ -130,7 +132,8 @@ python -m venv .venv
 .venv/Scripts/activate          # Windows; use `source .venv/bin/activate` on macOS/Linux
 python -m pip install -r requirements.txt
 python -m pip install -e . --no-deps
-python -m pytest -q             # unit tests, no API key needed
+python -m pytest -q             # unit + end-to-end tests, no API key needed (end-to-end needs Foundry's anvil)
+python scripts/demo_e2e.py      # full flow on a throwaway local chain: retire, overlap rejected, audit, disclosure
 ```
 
 To regenerate a report you need an OpenRouter API key in `.env` (copy `.env.example`) and the project PDF in
@@ -164,6 +167,7 @@ python scripts/assess_project.py VCS1851
 - [x] `RetirementRegistry` contract + Foundry tests
 - [ ] Sepolia deployment + Etherscan verification
 - [x] Privacy module (commitments, sealed-box audit vault) with Python ↔ Solidity test vectors
+- [x] Python chain client and end-to-end flow on a local chain (`scripts/demo_e2e.py`)
 - [ ] Streamlit app: buyer, public verification, auditor and project quality views
 - [ ] Anonymity statistic from OffsetsDB
 - [ ] Human-labelled evaluation set; compare decision models on it

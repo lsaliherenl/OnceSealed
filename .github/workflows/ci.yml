@@ -18,7 +18,10 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
           python -m pip install -e . --no-deps
-      - name: Unit tests (no API calls)
+      - uses: foundry-rs/foundry-toolchain@v1  # anvil for the end-to-end chain tests
+        with:
+          version: v1.8.5
+      - name: Unit and end-to-end tests (local anvil, no API calls)
         run: python -m pytest -q
 
   contracts:
@@ -39,3 +42,12 @@ jobs:
         run: forge build
       - name: Tests (incl. fuzz)
         run: forge test -vv
+      - name: Committed ABI matches the contract (run scripts/export_artifact.py after changes)
+        run: |
+          python3 -c "
+          import json
+          built = json.load(open('out/RetirementRegistry.sol/RetirementRegistry.json'))['abi']
+          committed = json.load(open('../core/chain/artifacts/RetirementRegistry.json'))['abi']
+          assert built == committed, 'core/chain/artifacts/RetirementRegistry.json is stale'
+          print('ABI up to date')
+          "
