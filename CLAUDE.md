@@ -19,7 +19,7 @@ Bu dosya projenin iç bağlamıdır. Her oturumda önce bunu oku, tasarım kural
 ## Takım
 
 - 2 kişi, ikisi de ilk kez blokzincir yarışmasında. Kapsam buna göre sade tutuldu (ayrı backend servisi yok, bkz. Mimari).
-- Görev bölümü: **Kişi A** — sözleşme, zincir istemcisi, gizlilik modülü. **Kişi B** — AI hattı, OffsetsDB verisi, Streamlit arayüzü. Video ve README ortak.
+- Görev bölümü (14 Ekim): Proje geliştirmesini (sözleşme, gizlilik, zincir istemcisi, arayüz, README, video) kullanıcı yürütüyor. İkinci ekip üyesi Turnike'yi geliştiren arkadaş; Turnike-Carbon hazır olursa karar katmanında Jev'in yerine entegre edilir. Şimdilik odak geliştirmede, Turnike entegrasyonu sonraya.
 
 ## Problem (sunumda kullanılacak)
 
