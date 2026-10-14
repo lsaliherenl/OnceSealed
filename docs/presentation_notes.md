@@ -86,7 +86,12 @@ anonim sayılmıyor.
 | Rapor hash'leri | 4 raporun hash'i yayımlanan dosyadan yeniden hesaplanıyor | 13 Ekim |
 | AI maliyeti | 4 proje × 5 ilke ≈ 0,05 $ (LLM) + ≈ 0,001 $ (Jev) | 13 Ekim |
 | Gaz | deploy 1,41M; `retire` ~150-215k; `registerBatch` ~72k; `attestRetirement` ~29-31k | 14 Ekim |
-| Sepolia sözleşme adresi / Etherscan | **TODO** (iş paketi 7) | |
+| **Ölçek (gerçek veri)** | VCS766'nın 38.382 gerçek iptali oynatıldı: eski tasarım **7.467.'de blok sınırında çöktü**; yeni tasarım her iptalde **sabit 211k gaz** | 15 Ekim |
+| Gerçek kayıtlar | OffsetsDB'de iptalin ihracı aştığı 11 vaka (235.932 t); sözleşme 76 iptali reddederdi | 15 Ekim |
+| Gizlilik ölçümü | Tonların %88,7'si (proje + miktar) ile tekil; 1.000 t lotla %95,8'i 61 eş lot arasına karışır | 15 Ekim |
+| Güvenlik | Slither temiz (2 yanlış alarm gerekçeli), 2 adımlı yönetici devri, rol iptali; 13 tehdit senaryosu belgelendi | 15 Ekim |
+| AI tutarlılığı | Jev 3 çalıştırmada %99,4 aynı cevap (LLM %96); Jev 6 kat hızlı, 20 kat ucuz | 15 Ekim |
+| Sepolia sözleşme adresi / Etherscan | **TODO** | |
 
 ## 6. Jüri soruları ve cevapları
 
@@ -148,6 +153,17 @@ Hayır. Demo şirketleri kurgusal; kimlik kodları gerçek LEI biçiminde ve kon
 **"Kayıt sistemi (operator) hile yaparsa?"**
 Zincire yazılan taahhüt ile denetçi kasası birbirini tutmazsa denetçi bunu görür ve zincire "reddedildi" yazar; bu kayıt
 silinemez. Operator'ün kasaya yazdığını değiştirmesi de mümkün değil, çünkü kasanın parmak izi zincirde.
+
+**"Gerçek ölçekte çalışır mı?"**
+Ölçtük. En kalabalık gerçek partilerden birinin (VCS766, 38.382 iptal) geçmişini zincire oynattık. İlk tasarımımız her iptalde
+öncekilerin hepsini kontrol ediyordu ve 7.467. iptalde blok gaz sınırına çarptı. Tasarımı değiştirdik: iptaller sıralı bir
+liste olarak tutuluyor, yeni iptal sadece iki komşusuyla karşılaştırılıyor. Her iptal artık sabit 211 bin gaz. Yanlış veya
+kötü niyetli bir "komşu ipucu" bile çifte iptale yol açamıyor; bunu rastgele testlerle kanıtladık.
+
+**"Zincirde isim yok ama yine de kim olduğu anlaşılır mı?"**
+Kısmen, ve bunu açıkça ölçtük: gerçek iptallerin ton bazında %88,7'si sadece proje ve miktarla tekil. Bir şirket raporunda
+"şu projeden şu kadar ton" yazarsa eşleşir. Önerimiz standart lotlar (1.000 t ile tonların %95,8'i ortalama 61 eş lot arasına
+karışıyor) ve toplu yayın; miktarı tamamen gizlemek sıfır bilgi kanıtı gerektirir (gelecek çalışma).
 
 ## 7. Hedef kullanıcı, benimsenme, ölçeklenebilirlik (Devpost için)
 
