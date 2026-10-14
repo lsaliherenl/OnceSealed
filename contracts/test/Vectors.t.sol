@@ -11,7 +11,7 @@ contract VectorsTest is Test {
     string internal json;
 
     function setUp() public {
-        reg = new RetirementRegistry(address(this));
+        reg = new RetirementRegistry(0, address(this));
         json = vm.readFile(string.concat(vm.projectRoot(), "/../tests/vectors.json"));
     }
 
@@ -57,7 +57,7 @@ contract VectorsTest is Test {
 
         reg.grantRole(reg.OPERATOR_ROLE(), address(this));
         reg.registerBatch(batchId, keccak256("VCS1851"), start, end);
-        uint256 id = reg.retire(batchId, start, end, c, keccak256("vault"));
+        uint256 id = reg.retire(batchId, start, end, c, keccak256("vault"), 0);
         assertTrue(reg.verifyClaim(id, buyerId, salt));
         assertFalse(reg.verifyClaim(id, buyerId, bytes32(uint256(salt) ^ 1)));
     }

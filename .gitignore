@@ -38,3 +38,6 @@ dist/
 deployments/31337.json
 data/vault/
 data/receipts/
+
+# Experiment logs
+data/derived/scale/log-*.txt

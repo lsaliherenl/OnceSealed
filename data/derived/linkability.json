@@ -1,0 +1,39 @@
+{
+  "snapshot": "2026-06-01",
+  "retirements": 495403,
+  "unique": {
+    "project + quantity": {
+      "records": 0.30598119107070404,
+      "tonnes": 0.886943829684631
+    },
+    "project + quantity + month": {
+      "records": 0.48151303080522323,
+      "tonnes": 0.9390333924597841
+    },
+    "project + quantity + day": {
+      "records": 0.6038336465463471,
+      "tonnes": 0.9449400260099438
+    },
+    "project + day": {
+      "records": 0.22038219389063046,
+      "tonnes": 0.3164532803585594
+    }
+  },
+  "lots": {
+    "100": {
+      "tonnes_in_lots": 0.9936809055061875,
+      "tonnes_in_remainders": 0.006319094493812475,
+      "median_anonymity_set": 594
+    },
+    "1000": {
+      "tonnes_in_lots": 0.9575841105225817,
+      "tonnes_in_remainders": 0.042415889477418284,
+      "median_anonymity_set": 61
+    },
+    "10000": {
+      "tonnes_in_lots": 0.7837182822605262,
+      "tonnes_in_remainders": 0.21628171773947377,
+      "median_anonymity_set": 9
+    }
+  }
+}

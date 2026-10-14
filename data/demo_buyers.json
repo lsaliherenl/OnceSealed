@@ -1,0 +1,35 @@
+{
+  "note": "Fictional companies for the OnceSealed demo. LEIs have valid check digits but are not registered.",
+  "buyers": [
+    {
+      "name": "Quillmere Freight",
+      "lei": "DCSU00021CXRPPEV3E59",
+      "fictional": true
+    },
+    {
+      "name": "Vantorra Cement",
+      "lei": "ZB3H004MFHPB120YSR90",
+      "fictional": true
+    },
+    {
+      "name": "Aerolune Airways",
+      "lei": "A0SV00374CY2SZDU1T58",
+      "fictional": true
+    },
+    {
+      "name": "Glimmerstack Data",
+      "lei": "ZBHF00O886J22OWMFQ76",
+      "fictional": true
+    },
+    {
+      "name": "Orchardine Retail",
+      "lei": "TT0I00D2J8FUSWPHFB10",
+      "fictional": true
+    },
+    {
+      "name": "Ferrowick Steel",
+      "lei": "Q0R700PUZ7C7PMM32577",
+      "fictional": true
+    }
+  ]
+}

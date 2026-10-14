@@ -6,6 +6,7 @@ before any gas is spent.
 """
 
 import json
+import os
 from dataclasses import dataclass
 from enum import IntEnum
 from functools import lru_cache
@@ -24,11 +25,14 @@ from core.config import ChainSettings
 
 ARTIFACT_PATH = Path(__file__).parent / "artifacts" / "RetirementRegistry.json"
 ROLE_NAMES = {"assessor": "ASSESSOR_ROLE", "operator": "OPERATOR_ROLE", "auditor": "AUDITOR_ROLE"}
+DEFAULT_ADMIN_DELAY = 2 * 24 * 3600  # an admin handover must wait two days before it can be accepted
 
 
 @lru_cache(maxsize=1)
 def load_artifact() -> dict[str, Any]:
-    return json.loads(ARTIFACT_PATH.read_text(encoding="utf-8"))
+    # ONCESEALED_ARTIFACT lets the scale experiment deploy an older contract version for comparison.
+    path = Path(os.environ.get("ONCESEALED_ARTIFACT", ARTIFACT_PATH))
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 class AuditStatus(IntEnum):
@@ -138,12 +142,16 @@ class Registry:
     # --- deployment -------------------------------------------------------------------------
 
     @classmethod
-    def deploy(cls, w3: Web3, accounts: dict[str, LocalAccount]) -> tuple["Registry", TxResult]:
-        """Deploy with the deployer as admin, then grant the three working roles."""
+    def deploy(cls, w3: Web3, accounts: dict[str, LocalAccount],
+               admin_delay: int = DEFAULT_ADMIN_DELAY) -> tuple["Registry", TxResult]:
+        """Deploy with the deployer as admin (two-step handover after `admin_delay` seconds),
+        then grant the three working roles."""
         art = load_artifact()
         deployer = accounts["deployer"]
         factory = w3.eth.contract(abi=art["abi"], bytecode=art["bytecode"])
-        tx = factory.constructor(deployer.address).build_transaction(_base_tx(w3, deployer))
+        ctor = next((e for e in art["abi"] if e["type"] == "constructor"), {"inputs": []})
+        args = (admin_delay, deployer.address) if len(ctor["inputs"]) == 2 else (deployer.address,)
+        tx = factory.constructor(*args).build_transaction(_base_tx(w3, deployer))
         result = _send(w3, deployer, tx, art["abi"])
         reg = cls(w3, result.receipt["contractAddress"], accounts)
         for role, const in ROLE_NAMES.items():
@@ -171,16 +179,35 @@ class Registry:
         ev = self.contract.events.QualityReportRegistered().process_receipt(res.receipt)
         return ev[0]["args"]["version"], res
 
+    def hint_for(self, batch_id: bytes, start: int) -> int:
+        """Predecessor retirement for a new range (walks the list in an eth_call; fine at demo scale,
+        large batches would derive it from CreditRetired events)."""
+        return self._call(self.contract.functions.hintFor(batch_id, start)) if self.uses_hints else 0
+
     def retire(self, batch_id: bytes, start: int, end: int, commitment: bytes,
                vault_hash: bytes) -> tuple[int, TxResult]:
-        res = self._transact("operator", self.contract.functions.retire(batch_id, start, end, commitment, vault_hash))
+        fn = self.retire_fn(batch_id, start, end, commitment, vault_hash, self.hint_for(batch_id, start))
+        res = self._transact("operator", fn)
         ev = self.contract.events.CreditRetired().process_receipt(res.receipt)
         return ev[0]["args"]["retirementId"], res
+
+    @property
+    def uses_hints(self) -> bool:
+        """True if this contract version takes a prevHint argument in retire()."""
+        fn = next(e for e in self.abi if e.get("type") == "function" and e.get("name") == "retire")
+        return len(fn["inputs"]) == 6
+
+    def retire_fn(self, batch_id: bytes, start: int, end: int, commitment: bytes, vault_hash: bytes,
+                  prev_hint: int = 0):
+        """The retire() call for either contract version (used by the scale replay)."""
+        if self.uses_hints:
+            return self.contract.functions.retire(batch_id, start, end, commitment, vault_hash, prev_hint)
+        return self.contract.functions.retire(batch_id, start, end, commitment, vault_hash)
 
     def simulate_retire(self, batch_id: bytes, start: int, end: int, commitment: bytes, vault_hash: bytes) -> None:
         """Raise RegistryError if retire would revert (e.g. overlap), without sending."""
         try:
-            self.contract.functions.retire(batch_id, start, end, commitment, vault_hash).call(
+            self.retire_fn(batch_id, start, end, commitment, vault_hash, self.hint_for(batch_id, start)).call(
                 {"from": self.accounts["operator"].address})
         except (ContractCustomError, ContractLogicError) as e:
             raise decode_revert(getattr(e, "data", None), self.abi) from None
@@ -215,6 +242,10 @@ class Registry:
 
     def batch_retirements(self, batch_id: bytes) -> list[int]:
         return list(self._call(self.contract.functions.batchRetirements(batch_id)))
+
+    def ordered_retirements(self, batch_id: bytes) -> list[int]:
+        """Retirement ids of a batch in serial order."""
+        return list(self._call(self.contract.functions.orderedRetirements(batch_id)))
 
     def retirement_of(self, batch_id: bytes, serial: int) -> int:
         return self._call(self.contract.functions.retirementOf(batch_id, serial))

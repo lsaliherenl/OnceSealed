@@ -1,0 +1,144 @@
+{
+  "snapshot": "2026-06-01",
+  "total": {
+    "cases": 11,
+    "retirements": 1100,
+    "rejected": 76,
+    "excess_tonnes": 235931.6,
+    "rejected_tonnes": 476358
+  },
+  "cases": [
+    {
+      "project_id": "GLD1083",
+      "vintage": 2013,
+      "issued": 638969.0,
+      "retired": 645789.0,
+      "excess": 6820.0,
+      "retirements": 127,
+      "accepted": 126,
+      "rejected": 1,
+      "rejected_tonnes": 28457,
+      "first_rejected_retirement": 126
+    },
+    {
+      "project_id": "GLD440",
+      "vintage": 2012,
+      "issued": 458832.0,
+      "retired": 459427.0,
+      "excess": 595.0,
+      "retirements": 40,
+      "accepted": 39,
+      "rejected": 1,
+      "rejected_tonnes": 190748,
+      "first_rejected_retirement": 40
+    },
+    {
+      "project_id": "GLD816",
+      "vintage": 2012,
+      "issued": 108554.0,
+      "retired": 116799.0,
+      "excess": 8245.0,
+      "retirements": 18,
+      "accepted": 17,
+      "rejected": 1,
+      "rejected_tonnes": 18899,
+      "first_rejected_retirement": 17
+    },
+    {
+      "project_id": "ISOV093",
+      "vintage": 2024,
+      "issued": 1701.4,
+      "retired": 2050.0,
+      "excess": 348.5999999999999,
+      "retirements": 3,
+      "accepted": 2,
+      "rejected": 1,
+      "rejected_tonnes": 1250,
+      "first_rejected_retirement": 3
+    },
+    {
+      "project_id": "VCS11",
+      "vintage": 2007,
+      "issued": 42753.0,
+      "retired": 55959.0,
+      "excess": 13206.0,
+      "retirements": 7,
+      "accepted": 6,
+      "rejected": 1,
+      "rejected_tonnes": 19712,
+      "first_rejected_retirement": 5
+    },
+    {
+      "project_id": "VCS514",
+      "vintage": 2016,
+      "issued": 82647.0,
+      "retired": 85778.0,
+      "excess": 3131.0,
+      "retirements": 5,
+      "accepted": 4,
+      "rejected": 1,
+      "rejected_tonnes": 9680,
+      "first_rejected_retirement": 5
+    },
+    {
+      "project_id": "VCS562",
+      "vintage": 2016,
+      "issued": 191400.0,
+      "retired": 289291.0,
+      "excess": 97891.0,
+      "retirements": 172,
+      "accepted": 171,
+      "rejected": 1,
+      "rejected_tonnes": 100000,
+      "first_rejected_retirement": 171
+    },
+    {
+      "project_id": "VCS57",
+      "vintage": 2007,
+      "issued": 162103.0,
+      "retired": 172486.0,
+      "excess": 10383.0,
+      "retirements": 14,
+      "accepted": 3,
+      "rejected": 11,
+      "rejected_tonnes": 10383,
+      "first_rejected_retirement": 3
+    },
+    {
+      "project_id": "VCS612",
+      "vintage": 2015,
+      "issued": 1015740.0,
+      "retired": 1097616.0,
+      "excess": 81876.0,
+      "retirements": 640,
+      "accepted": 588,
+      "rejected": 52,
+      "rejected_tonnes": 81876,
+      "first_rejected_retirement": 528
+    },
+    {
+      "project_id": "VCS67",
+      "vintage": 2008,
+      "issued": 2569.0,
+      "retired": 2953.0,
+      "excess": 384.0,
+      "retirements": 2,
+      "accepted": 1,
+      "rejected": 1,
+      "rejected_tonnes": 2069,
+      "first_rejected_retirement": 2
+    },
+    {
+      "project_id": "VCS673",
+      "vintage": 2017,
+      "issued": 216765.0,
+      "retired": 229817.0,
+      "excess": 13052.0,
+      "retirements": 72,
+      "accepted": 67,
+      "rejected": 5,
+      "rejected_tonnes": 13284,
+      "first_rejected_retirement": 61
+    }
+  ]
+}

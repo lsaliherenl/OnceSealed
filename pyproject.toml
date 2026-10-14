@@ -7,6 +7,7 @@ dependencies = [
     "eth-abi",
     "eth-account",
     "eth-utils",
+    "fastapi",
     "httpx",
     "json-repair",
     "openai",
@@ -15,6 +16,7 @@ dependencies = [
     "pydantic",
     "pynacl",
     "pymupdf",
+    "uvicorn",
     "python-dotenv",
     "web3",
 ]
@@ -27,7 +29,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["core*"]
+include = ["core*", "api*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import {AccessControl} from "@openzeppelin/contracts/access/AccessControl.sol";
+import {
+    AccessControlDefaultAdminRules
+} from "@openzeppelin/contracts/access/extensions/AccessControlDefaultAdminRules.sol";
 import {SafeCast} from "@openzeppelin/contracts/utils/math/SafeCast.sol";
 
 /// @title RetirementRegistry
@@ -9,7 +11,9 @@ import {SafeCast} from "@openzeppelin/contracts/utils/math/SafeCast.sol";
 ///         the buyer is recorded only as a salted commitment, and an auditor can attest each retirement.
 /// @dev Prototype of a verification layer on top of existing registries. It performs no real
 ///      retirements and never mints tokens: retired credits must not become tradable again.
-contract RetirementRegistry is AccessControl {
+///      Admin handover is two-step with a delay (AccessControlDefaultAdminRules), so a single
+///      mistaken or stolen transaction cannot hand over the registry.
+contract RetirementRegistry is AccessControlDefaultAdminRules {
     bytes32 public constant ASSESSOR_ROLE = keccak256("ASSESSOR_ROLE");
     bytes32 public constant OPERATOR_ROLE = keccak256("OPERATOR_ROLE");
     bytes32 public constant AUDITOR_ROLE = keccak256("AUDITOR_ROLE");
@@ -49,6 +53,9 @@ contract RetirementRegistry is AccessControl {
     mapping(bytes32 batchId => uint256[]) private _batchRetirements;
     mapping(bytes32 projectId => QualityReport[]) private _reports;
     mapping(uint256 retirementId => Retirement) private _retirements;
+    // Retirements of a batch as a linked list sorted by serial: head = lowest range.
+    mapping(bytes32 batchId => uint256) private _head;
+    mapping(uint256 retirementId => uint256) private _next;
     uint256 public retirementCount; // ids start at 1
 
     event BatchRegistered(bytes32 indexed batchId, bytes32 indexed projectId, uint64 firstSerial, uint64 lastSerial);
@@ -76,11 +83,10 @@ contract RetirementRegistry is AccessControl {
     error UnknownRetirement(uint256 retirementId);
     error AlreadyAttested(uint256 retirementId);
     error UnknownReport(bytes32 projectId, uint32 version);
+    error InvalidHint(uint256 prevHint);
 
-    constructor(address admin) {
-        if (admin == address(0)) revert ZeroValue();
-        _grantRole(DEFAULT_ADMIN_ROLE, admin);
-    }
+    /// @param adminDelay seconds a scheduled admin handover must wait before it can be accepted
+    constructor(uint48 adminDelay, address admin) AccessControlDefaultAdminRules(adminDelay, admin) {}
 
     // ---------------------------------------------------------------------------------------------
     // Writes
@@ -115,27 +121,49 @@ contract RetirementRegistry is AccessControl {
 
     /// @notice Retire serials [start, end] of a batch. Reverts if any serial in the range was retired before.
     /// @param buyerCommitment keccak256(abi.encode(buyerId, salt, batchId, start, end)); see commitmentOf.
-    /// @dev Overlap check is a linear scan over the batch's retirements: fine for a prototype, and only the
-    ///      operator can add entries. A production registry would keep an ordered interval structure.
-    function retire(bytes32 batchId, uint64 start, uint64 end, bytes32 buyerCommitment, bytes32 auditVaultHash)
-        external
-        onlyRole(OPERATOR_ROLE)
-        returns (uint256 retirementId)
-    {
+    /// @param prevHint id of the batch's retirement that ends right before `start`, or 0 if the new range comes
+    ///        first. Clients get it from hintFor() or from CreditRetired events.
+    /// @dev Retirements of a batch form a sorted, non-overlapping linked list. Given the immediate predecessor,
+    ///      checking the two neighbours proves the new range overlaps nothing, so gas stays constant however
+    ///      many retirements the batch has (a linear scan reached the block gas limit at a few thousand).
+    ///      A wrong hint can only make the call revert; it can never let an overlapping range in.
+    function retire(
+        bytes32 batchId,
+        uint64 start,
+        uint64 end,
+        bytes32 buyerCommitment,
+        bytes32 auditVaultHash,
+        uint256 prevHint
+    ) external onlyRole(OPERATOR_ROLE) returns (uint256 retirementId) {
         Batch storage batch = _batches[batchId];
         if (!batch.exists) revert UnknownBatch(batchId);
         if (start > end || start < batch.firstSerial || end > batch.lastSerial) revert InvalidRange(start, end);
         if (buyerCommitment == bytes32(0) || auditVaultHash == bytes32(0)) revert ZeroValue();
 
-        uint256[] storage ids = _batchRetirements[batchId];
-        for (uint256 i = 0; i < ids.length; ++i) {
-            Retirement storage r = _retirements[ids[i]];
-            // Reverting inside the loop is intended: any intersection with a past retirement is fatal.
-            // forge-lint: disable-next-line(require-revert-in-loop)
-            if (start <= r.end && r.start <= end) revert AlreadyRetired(ids[i]);
+        uint256 next;
+        if (prevHint == 0) {
+            next = _head[batchId];
+        } else {
+            Retirement storage p = _retirements[prevHint];
+            if (p.retiredAt == 0 || p.batchId != batchId) revert InvalidHint(prevHint);
+            if (p.end >= start) {
+                if (p.start <= end) revert AlreadyRetired(prevHint);
+                revert InvalidHint(prevHint); // the hinted retirement lies after the new range
+            }
+            next = _next[prevHint];
+        }
+        if (next != 0) {
+            Retirement storage n = _retirements[next];
+            if (n.start <= end) {
+                if (start <= n.end) revert AlreadyRetired(next);
+                revert InvalidHint(prevHint); // the hint is not the immediate predecessor
+            }
         }
 
         retirementId = ++retirementCount;
+        _next[retirementId] = next;
+        if (prevHint == 0) _head[batchId] = retirementId;
+        else _next[prevHint] = retirementId;
         uint32 reportVersion = SafeCast.toUint32(_reports[batch.projectId].length);
         _retirements[retirementId] = Retirement({
             batchId: batchId,
@@ -147,7 +175,7 @@ contract RetirementRegistry is AccessControl {
             retiredAt: SafeCast.toUint64(block.timestamp),
             audit: AuditStatus.Pending
         });
-        ids.push(retirementId);
+        _batchRetirements[batchId].push(retirementId);
         emit CreditRetired(
             retirementId, batchId, batch.projectId, start, end, buyerCommitment, auditVaultHash, reportVersion
         );
@@ -195,13 +223,33 @@ contract RetirementRegistry is AccessControl {
     }
 
     /// @notice Returns the retirement id covering `serial`, or 0 if it has not been retired.
+    /// @dev Walks the sorted list; meant for off-chain reads (eth_call), not for other contracts.
     function retirementOf(bytes32 batchId, uint64 serial) public view returns (uint256) {
-        uint256[] storage ids = _batchRetirements[batchId];
-        for (uint256 i = 0; i < ids.length; ++i) {
-            Retirement storage r = _retirements[ids[i]];
-            if (r.start <= serial && serial <= r.end) return ids[i];
+        for (uint256 id = _head[batchId]; id != 0; id = _next[id]) {
+            Retirement storage r = _retirements[id];
+            if (serial < r.start) return 0;
+            if (serial <= r.end) return id;
         }
         return 0;
+    }
+
+    /// @notice The prevHint to pass to retire() for a range starting at `start`: the last retirement in the
+    ///         batch that starts before it (0 if none). If that retirement overlaps, retire() reports it.
+    /// @dev Walks the sorted list; for very large batches compute the hint off-chain from CreditRetired events.
+    function hintFor(bytes32 batchId, uint64 start) external view returns (uint256 prev) {
+        for (uint256 id = _head[batchId]; id != 0; id = _next[id]) {
+            if (_retirements[id].start >= start) break;
+            prev = id;
+        }
+    }
+
+    /// @notice Retirement ids of a batch in serial order.
+    function orderedRetirements(bytes32 batchId) external view returns (uint256[] memory out) {
+        out = new uint256[](_batchRetirements[batchId].length);
+        uint256 i = 0;
+        for (uint256 id = _head[batchId]; id != 0; id = _next[id]) {
+            out[i++] = id;
+        }
     }
 
     function isRetired(bytes32 batchId, uint64 serial) external view returns (bool) {

@@ -27,11 +27,11 @@ def free_port() -> int:
         return s.getsockname()[1]
 
 
-def start_anvil(port: int) -> subprocess.Popen:
+def start_anvil(port: int, extra_args: list[str] | None = None) -> subprocess.Popen:
     binary = anvil_binary()
     if binary is None:
         raise FileNotFoundError("anvil not found; install Foundry (https://getfoundry.sh)")
-    proc = subprocess.Popen([binary, "--port", str(port), "--silent"],
+    proc = subprocess.Popen([binary, "--port", str(port), "--silent", *(extra_args or [])],
                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
                             creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0) if os.name == "nt" else 0)
     w3 = Web3(Web3.HTTPProvider(f"http://127.0.0.1:{port}"))
