@@ -1,5 +1,6 @@
 # Pinned versions tested with Python 3.14 on Windows. Install with:
 #   python -m pip install -r requirements.txt && python -m pip install -e .
+eth-abi==6.0.0
 eth-account==0.14.0
 eth-utils==6.0.0
 httpx==0.28.1
@@ -8,6 +9,7 @@ openai==3.29.0
 pandas==3.0.6
 pyarrow==26.0.0
 pydantic==2.14.1
+pynacl==1.6.2
 pymupdf==1.28.2
 python-dotenv==1.2.4
 pytest==9.1.1

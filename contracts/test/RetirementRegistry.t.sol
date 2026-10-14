@@ -20,7 +20,7 @@ contract RetirementRegistryTest is Test {
     uint64 internal constant FIRST = 1;
     uint64 internal constant LAST = 1000;
 
-    bytes32 internal constant BUYER = keccak256("LEI:529900T8BM49AURSDO55");
+    bytes32 internal constant BUYER = keccak256("LEI:ONCE00SEALEDDEMO0143");
     bytes32 internal constant SALT = keccak256("salt-1");
     bytes32 internal constant VAULT = keccak256("vault-ciphertext");
     bytes32 internal constant REPORT = keccak256("report-v1");

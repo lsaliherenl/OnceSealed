@@ -3,6 +3,8 @@
 Proje adı **OnceSealed** ("once": her kredi bir kez iptal edilir; "sealed": alıcı kimliği mühürlü). GitHub repo: https://github.com/lsaliherenl/OnceSealed (**şimdilik private**; teslimden önce public yapılacak, o zaman CLAUDE.md'nin repoda kalıp kalmayacağına yeniden karar verilecek). Yerel klasör adı `ClimateChain` olarak kalır. Foundry kütüphaneleri git submodule (`git clone --recurse-submodules`). CI: `.github/workflows/ci.yml` (pytest).
 
 Bu dosya projenin iç bağlamıdır. Her oturumda önce bunu oku, tasarım kurallarına uy.
+
+**Sunum notları:** `docs/presentation_notes.md` (Türkçe, ekip içi). Her iş paketi bittiğinde veya sunuma girecek bir rakam/karar değiştiğinde güncelle: teknik kanıtlar tablosu, jüri soruları, demo akışı, yapılacaklar. Video metni ve Devpost açıklaması bu dosyadan çıkarılacak.
 **Teslim edilen her şey İngilizce:** kod, kod yorumları, commit mesajları, README, arayüz metinleri, video, Devpost açıklaması. Bu dosya ekip içi olduğu için Türkçe.
 
 ## Yarışma (Devpost'tan doğrulandı, 13 Ekim 2026)
@@ -82,8 +84,10 @@ Ayrı FastAPI servisi yok: Streamlit doğrudan `core` Python paketini çağırı
 
 ## Gizlilik mekanizması
 
+**Durum (14 Ekim): `core/privacy/` yazıldı ve test edildi.** `identity.py` (LEI doğrulama/kurgusal LEI üretimi, `text_id`, `project_id`, `buyer_id`), `commitment.py` (aralığa bağlı taahhüt, tuz), `vault.py` (SealedBox kasası, `audit()` 5 kontrol: kasa hash'i, kasa açılıyor mu, aralık, LEI↔buyerId, taahhüt; SQLite `VaultStore`), `receipt.py` (makbuz + çevrimdışı taahhüt kontrolü). Ortak vektörler: `scripts/gen_vectors.py` → `tests/vectors.json`, hem `tests/test_privacy.py` hem `contracts/test/Vectors.t.sol` doğrular. Denetçi kasa anahtarları `scripts/gen_auditor_keys.py` ile `.env`'ye yazıldı (demo: tüm roller tek makinede). **Testlerde bile gerçek LEI kullanılmaz** (`ONCE00SEALEDDEMO0143` gibi kurgusal kodlar).
+
 1. **İptal:** Backend tuzu üretir, taahhüdü hesaplar, zincire sadece taahhüdü yazar.
-2. **Denetçi kasası:** `{batchId, start, end, lei, buyerId, salt}` kanonik JSON'u denetçinin açık anahtarıyla **PyNaCl `SealedBox`** ile şifrelenir, SQLite'ta saklanır. Zincire `auditVaultHash = keccak256(ciphertext)` yazılır.
+2. **Denetçi kasası:** `{batch_id, start, end, lei, buyer_id, salt, version}` kanonik JSON'u denetçinin açık anahtarıyla **PyNaCl `SealedBox`** ile şifrelenir, SQLite'ta saklanır. Zincire `auditVaultHash = keccak256(ciphertext)` yazılır.
 3. **Denetçi doğrulaması:** Denetçi kasayı açar, kasa hash'ini ve taahhüdü yeniden hesaplar, zincirdekiyle karşılaştırır, sonra `attestRetirement(id, valid)` ile sonucu **zincire yazar**. Herkese açık ekran "iptal edildi + denetçi tarafından doğrulandı" gösterir, kimliği göstermez.
 4. **Seçici ifşa:** Alıcı isterse LEI + tuzu paylaşır; herkes `verifyClaim` (view, işlem yayınlamaz) ile doğrular.
 5. **İptal makbuzu:** İptal sonunda alıcıya bir kez `retirement_receipt.json` indirilir: `{retirementId, chainId, contract, txHash, serial, lei, salt}`. Tuz sunucuda düz metin tutulmaz (sadece kasada şifreli). Arayüzde uyarı: "Bu dosyaya sahip olan herkes iptali sizin adınıza iddia edebilir, gizli tutun."
@@ -257,4 +261,4 @@ docs/               mimari diyagram, demo senaryosu, değerlendirme sonuçları
 
 - Etiketli test kümesi: yapılıp yapılmayacağı ve zamanı, Turnike-Carbon'un hazır olma tarihine bağlı (ertelendi).
 - Jev'e alıntılar mı, ham bölümler mi verilecek (etiketli kümeyle karşılaştırılacak).
-- Repo public yapılmadan önce CLAUDE.md repoda kalacak mı?
+- Repo public yapılmadan önce CLAUDE.md ve `docs/presentation_notes.md` (ikisi de Türkçe, ekip içi) repoda kalacak mı?

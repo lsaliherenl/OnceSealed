@@ -110,9 +110,10 @@ evaluation set is planned (**TODO**).
 ```
 contracts/      Foundry project: RetirementRegistry + tests
 core/ai/        PDF extraction, quote verification, LLM client, decision model, report builder
+core/privacy/   buyer identities (LEI), commitments, sealed-box audit vault, receipts
 core/hashing.py canonical JSON + keccak256
 scripts/        assess_project.py (build a report), jev_smoke_test.py (evidence extraction only)
-tests/          unit tests (no API calls)
+tests/          unit tests (no API calls) + vectors.json shared with the Foundry tests
 reports/        published quality reports
 data/evidence/  verified evidence + question set per project (for evaluating other decision models)
 samples/        manifest of demo documents (URLs + SHA-256); PDFs are downloaded manually
@@ -162,7 +163,7 @@ python scripts/assess_project.py VCS1851
 
 - [x] `RetirementRegistry` contract + Foundry tests
 - [ ] Sepolia deployment + Etherscan verification
-- [ ] Privacy module (commitments, sealed-box audit vault) with Python ↔ Solidity test vectors
+- [x] Privacy module (commitments, sealed-box audit vault) with Python ↔ Solidity test vectors
 - [ ] Streamlit app: buyer, public verification, auditor and project quality views
 - [ ] Anonymity statistic from OffsetsDB
 - [ ] Human-labelled evaluation set; compare decision models on it
