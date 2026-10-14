@@ -1,6 +1,6 @@
 # OnceSealed — Gizli ama Denetlenebilir Karbon Kredisi İptali
 
-Proje adı **OnceSealed** ("once": her kredi bir kez iptal edilir; "sealed": alıcı kimliği mühürlü). GitHub repo adı `OnceSealed`; yerel klasör adı `ClimateChain` olarak kalır (önemi yok).
+Proje adı **OnceSealed** ("once": her kredi bir kez iptal edilir; "sealed": alıcı kimliği mühürlü). GitHub repo: https://github.com/lsaliherenl/OnceSealed (**şimdilik private**; teslimden önce public yapılacak, o zaman CLAUDE.md'nin repoda kalıp kalmayacağına yeniden karar verilecek). Yerel klasör adı `ClimateChain` olarak kalır. Foundry kütüphaneleri git submodule (`git clone --recurse-submodules`). CI: `.github/workflows/ci.yml` (pytest).
 
 Bu dosya projenin iç bağlamıdır. Her oturumda önce bunu oku, tasarım kurallarına uy.
 **Teslim edilen her şey İngilizce:** kod, kod yorumları, commit mesajları, README, arayüz metinleri, video, Devpost açıklaması. Bu dosya ekip içi olduğu için Türkçe.
@@ -57,7 +57,7 @@ Kredinin iptal edildiği **herkese açık ve tek seferlik** olur, alıcının ki
 Ayrı FastAPI servisi yok: Streamlit doğrudan `core` Python paketini çağırır (2 kişilik takım için daha az parça). Benimsenme hikâyesinde "kayıt sistemleri bu katmanı API olarak entegre eder" denir; zaman kalırsa ince bir FastAPI eklenir.
 
 ```
-[Verra PDD/izleme PDF'leri] ─► core/ai (Jev Router via OpenRouter) ─► kalite raporu JSON (+ doğrulanmış alıntılar)
+[Verra PDD/izleme PDF'leri] ─► core/ai (LLM + Jev 1.13 via OpenRouter) ─► kalite raporu JSON (+ doğrulanmış alıntılar)
                                          │                                  │ reports/ klasöründe yayımlanır
 [OffsetsDB anlık görüntüsü] ─► core/data │                                  ▼
                                          ▼                    [RetirementRegistry @ Sepolia]
@@ -129,11 +129,11 @@ Not: Taslakta anılan önceki `ClimateRegistry.sol` bu klasörde yok; sıfırdan
   2. Her ilke için anahtar kelimeyle ilgili paragrafları seç (baseline, additionality, investment/barrier analysis, monitoring, leakage, permanence, non-permanence risk/buffer, double counting/registration, safeguards, stakeholder consultation, FPIC) ve bağlama sığacak şekilde gönder.
   3. Model ilke başına JSON döndürür; her bulgu `paragraph_id` + kısa birebir alıntı içerir.
   4. **Alıntı doğrulama:** Alıntı önce **belirtilen paragrafın içinde** aranır. Normalizasyon: Unicode NFKC, ligatür açma (ﬁ→fi), satır sonu tirelerini birleştirme (`-\n`), tırnak/tire karakterlerini tekleştirme, boşluk sıkıştırma, küçük harf. Yedek: sadece harf-rakam karşılaştırması, **yalnızca ≥ 40 karakterlik alıntılar için**. Bulunamazsa bulgu atılır, `dropped_findings` artar.
-  5. Doğrulanmış alıntısı kalmayan ilke → `no_evidence`, skor 0.
-  6. Toplam skor = ilke skorlarının ağırlıklı ortalaması (ağırlıklar config'te); arayüzde ilke skorları her zaman ayrı gösterilir.
+  5. Doğrulanmış alıntısı kalmayan ilke → `no_evidence`, skor 0 (karar modeline gönderilmez).
+  6. Toplam skor = sayısal skoru olan ilkelerin ağırlıklı ortalaması (ağırlıklar `principles.py`'de, yeniden normalize edilir); arayüzde ilke skorları her zaman ayrı gösterilir.
   7. Rapor kanonik JSON (`sort_keys=True`, `separators=(",", ":")`, `ensure_ascii=False`, UTF-8) → `keccak256` → zincire. **Rapor JSON'u `reports/` altında yayımlanır** ki herkes hash'i yeniden hesaplayabilsin.
   8. Model geçersiz JSON döndürürse bir kez yeniden dene ("sadece JSON" uyarısıyla); yine olmazsa ilke `assessment_failed`, skor `null` (toplam skora girmez; "kanıt yok" değildir), hata loglanır.
-  9. `not_applicable` (ör. güneş/çöp gazı/ocak projelerinde kalıcılık): skor `null`, toplam skora girmez, ama aktivite türünü gösteren doğrulanmış alıntı ister.
+  9. `not_applicable`: skor `null`, toplam skora girmez. Kalıcılık için karar kuraldan gelir (`reversal_risk: false`); diğer ilkelerde LLM `not_applicable` derse aktivite türünü gösteren doğrulanmış alıntı gerekir.
 - **Kod:** `core/ai/` (`pdf_extract`, `quotes`, `principles`, `select`, `client`, `assess` = katman 2; `methodology` + `methodology_status.json` = katman 1; `decision` = katman 3; `report` = birleştirme). `core/hashing.py` kanonik JSON + keccak (zincir istemcisi de kullanacak).
   - Rapor üret: `python scripts/assess_project.py VCS1851 [--principles ...] [--no-cache]` → `reports/<id>.json` (yayımlanır), `data/runs/reports/` (maliyet/log), `data/evidence/<id>.jsonl` (Turnike için kanıt + soru şeması; Jev cevapları bilerek dışarıda).
   - Eski deneme betiği: `scripts/jev_smoke_test.py` (sadece katman 2).
@@ -148,17 +148,8 @@ Not: Taslakta anılan önceki `ClimateRegistry.sol` bu klasörde yok; sıfırdan
 - **Rapor meta verisi:** PDF SHA-256, istenen model, cevap veren model, prompt sürümü, çıkarım aracı sürümü, tarih.
 - **Ölçüt — ICVCM Core Carbon Principles** (https://icvcm.org/?p=2349). ICVCM'de 10 ilke var; biz belgeden kanıtlanabilen 5'ini puanlıyoruz, diğerleri (program yönetişimi, izleme/kayıt, bağımsız doğrulama, şeffaflık, net sıfır uyumu, sürdürülebilir kalkınma etkileri) kapsam dışı diye belirtilir:
   - `additionality` · `permanence` · `robust_quantification` · `no_double_counting` · `safeguards`
-- **Çıktı şeması (ilke başına):**
-```json
-{
-  "principle": "additionality",
-  "score": 0,
-  "status": "evidence_found | evidence_weak | no_evidence | not_applicable",
-  "rationale": "short rationale",
-  "quotes": [{"paragraph_id": "p12-03", "page": 12, "text": "verbatim quote from the document"}]
-}
-```
-- **Model değerlendirmesi (Jev'i tutup tutmama kararı için):** 3-5 PDD üzerinde JSON geçerlilik oranı, alıntı doğrulama oranı (doğrulanan / toplam), aynı belgede iki çalıştırma arası skor farkı, beklenen sonuçla uyum. Referans: ICVCM Ağustos 2024'te 8 şebekeye bağlı yenilenebilir enerji metodolojisini **ek katkı** gerekçesiyle reddetti (https://icvcm.org/carbon-credits-from-current-renewable-energy-methodologies-will-not-receive-high-integrity-ccp-label/); bir yenilenebilir enerji projesinde additionality'nin zayıf çıkması beklenir. Sonuçlar README'de bir tablo olur.
+- **LLM çıktı şeması (ilke başına, katman 2):** `{principle, status: evidence_found|evidence_weak|no_evidence|not_applicable, score, rationale, quotes: [{paragraph_id, text}]}`. Nihai rapor şeması (`report-v1`) için örnek: `reports/VCS1851.json`.
+- **Not (ICVCM ile karşılaştırma):** İlk denemede belge kanıtı ICVCM'in metodoloji kararlarıyla örtüşmedi (güneş belgesi ayrıntılı IRR analizi içeriyor). Bu beklenen bir durum: belge kanıtı ≠ metodoloji sağlamlığı. Bu yüzden katman 1 ayrı ve deterministik.
 
 ## Veri kaynakları
 
@@ -185,7 +176,7 @@ Not: Taslakta anılan önceki `ClimateRegistry.sol` bu klasörde yok; sıfırdan
 | Zincir istemcisi | web3.py |
 | Çekirdek | Python 3.11+ paket (`core/`) |
 | PDF | PyMuPDF |
-| AI | OpenRouter `typesafe/jev-router` (OpenAI uyumlu istemci) |
+| AI | OpenRouter: LLM `deepseek/deepseek-v4.1-flash` (chat API) + karar modeli `typesafe/jev-1.13` (decisions API) |
 | Şifreleme | PyNaCl (`SealedBox`) |
 | Depolama | SQLite (kasa), `reports/` (yayımlanan rapor JSON'ları) |
 | Arayüz | Streamlit |
@@ -221,18 +212,23 @@ docs/               mimari diyagram, demo senaryosu, değerlendirme sonuçları
 7. Etherscan (Sepolia): doğrulanmış sözleşme ve işlemler.
 8. Kapanış: neden token yok (Verra 2022), neden ZK değil, gerçek dünyada kayıt sistemlerine nasıl eklenir.
 
-## Takvim (13-25 Ekim)
+## Takvim (14 Ekim'de güncellendi)
 
-| Tarih | İş |
-|---|---|
-| 13-14 Ekim | Proje adı; Python/Foundry kurulumu; test cüzdanları + Sepolia test ETH'si; OpenRouter anahtarı; **Jev ile ilk deneme** (bir PDD bölümü → JSON); OffsetsDB indir; 3-5 PDF seç |
-| 15-16 Ekim | A: sözleşme + Foundry testleri, Anvil deploy. B: gizlilik modülü + ortak test vektörleri, PDF çıkarımı |
-| 17-19 Ekim | B: AI hattı (paragraf kimlikleri, alıntı doğrulama, puanlama, rapor hash'i) + model değerlendirmesi. A: web3.py entegrasyonu, Anvil'de uçtan uca iptal + onay |
-| 20-21 Ekim | Streamlit ekranları (alıcı, herkese açık doğrulama, denetçi, proje kalitesi); anonimlik notebook'u |
-| 22 Ekim | Sepolia deploy + Etherscan doğrulama, uçtan uca test, hata düzeltme |
-| 23 Ekim | Tampon; README, mimari diyagram, değerlendirme tablosu |
-| 24 Ekim | Demo videosu, Devpost açıklaması. **Gece itibarıyla her şey bitmiş olmalı** |
-| 25 Ekim | Sabah teslim; son saat 17:00 TR |
+**Bitti (13 Ekim):** kurulum (Python, Foundry, cüzdanlar, 0,05 Sepolia ETH, OpenRouter), OffsetsDB, 4 PDF, AI hattının üç katmanı + 4 rapor, GitHub (private) + CI. AI hattı planın ~3 gün önünde.
+
+| # | Tarih | İş paketi | Bitti sayılması için |
+|---|---|---|---|
+| 1 | 14-15 Ekim | `RetirementRegistry` + Foundry testleri | Tüm testler geçer; `forge test` CI'da |
+| 2 | 15-16 Ekim | Gizlilik modülü (`core/privacy`): kurgusal LEI üretimi (mod-97), taahhüt, SealedBox kasası (SQLite), makbuz; `tests/vectors.json` | Python ve Foundry aynı vektörlerle aynı hash'i üretir |
+| 3 | 16-17 Ekim | Zincir istemcisi (`core/chain`, web3.py) + deploy betiği; Anvil'de uçtan uca senaryo | Parti → rapor → iptal → örtüşme reddi → denetçi onayı → `verifyClaim`, tek komutla |
+| 4 | 17 Ekim | Simüle seri verisi (`core/data`): OffsetsDB ihraç kayıtlarından Verra biçiminde partiler | 4 proje için partiler hazır |
+| 5 | 18 Ekim | Anonimlik notebook'u (OffsetsDB) | Sunum için kendi hesapladığımız oran + grafik |
+| 6 | 18-20 Ekim | Streamlit: alıcı, herkese açık doğrulama, denetçi, proje kalitesi ekranları | Demo senaryosu arayüzden baştan sona oynar |
+| 7 | 21 Ekim | Sepolia deploy + Etherscan doğrulama; raporların zincire yazılması | Etherscan'de doğrulanmış sözleşme ve işlemler |
+| 8 | 21-22 Ekim | (Opsiyonel) etiketli küme / Turnike karşılaştırması | Turnike durumuna göre karar |
+| 9 | 22-23 Ekim | Tampon; README son hâli, mimari diyagram, repo public | README eksiksiz, repo public |
+| 10 | 24 Ekim | Demo videosu (3-5 dk), Devpost açıklaması. **Gece itibarıyla her şey bitmiş olmalı** | Video yüklü, Devpost taslağı dolu |
+| 11 | 25 Ekim | Sabah teslim; son saat 17:00 TR | Gönderildi |
 
 ## Kapsam dışı
 
@@ -246,5 +242,6 @@ docs/               mimari diyagram, demo senaryosu, değerlendirme sonuçları
 
 ## Açık konular
 
-- Proje adı (adaylar: OnceSealed, QuietTonne, SealedTonne, Hushproof). Seçilince GitHub ve Devpost'ta çakışma kontrolü.
-- Jev Router'ın bağlam penceresi ve gerçek yapılandırılmış çıktı başarısı: 13-14 Ekim denemesinde ölçülecek.
+- Etiketli test kümesi: yapılıp yapılmayacağı ve zamanı, Turnike-Carbon'un hazır olma tarihine bağlı (ertelendi).
+- Jev'e alıntılar mı, ham bölümler mi verilecek (etiketli kümeyle karşılaştırılacak).
+- Repo public yapılmadan önce CLAUDE.md repoda kalacak mı?
