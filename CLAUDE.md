@@ -4,6 +4,10 @@ Proje adı **OnceSealed** ("once": her kredi bir kez iptal edilir; "sealed": al�
 
 Bu dosya projenin iç bağlamıdır. Her oturumda önce bunu oku, tasarım kurallarına uy.
 
+**Kararlar (14 Ekim akşamı):**
+- **Arayüz: Next.js (React) + ince FastAPI** (Streamlit yerine). FastAPI `core/service.py`'yi sarar ve operator/denetçi anahtarlarını tutar (demo). **Herkese açık doğrulama sayfası sunucuya uğramaz:** tarayıcı sözleşmeyi viem ile doğrudan Sepolia'dan okur, makbuz kontrolü tarayıcıda hesaplanır ("bize güvenmeniz gerekmiyor"). Tasarım taslağını kullanıcı Claude Design'da hazırlıyor.
+- **Derinlik (D1-D4), yeni özellik değil ölçüm:** ayrıntılı plan `docs/evaluation_plan.md`. D1 AI doğruluğu (evet/hayır kontrol listesi etiketi + P/R/F1 + kappa, etiketsiz sağlamlık testleri, CCQI/BeZero/Calyx/Probst 2024 dış referansları; 11 belge), D2 ölçek (Katingan'ın 4.477 gerçek iptalini oynatma → doğrusal tarama kırılır → ipuçlu sıralı liste), D3 tehdit modeli + `AccessControlDefaultAdminRules` + Slither + meta veriden kimlik eşleştirme riski ölçümü, D4 gerçek kayıtlar (OffsetsDB'de iptal > ihraç olan 11 proje-vintage, 235.932 ton).
+
 **Sunum notları:** `docs/presentation_notes.md` (Türkçe, ekip içi). Her iş paketi bittiğinde veya sunuma girecek bir rakam/karar değiştiğinde güncelle: teknik kanıtlar tablosu, jüri soruları, demo akışı, yapılacaklar. Video metni ve Devpost açıklaması bu dosyadan çıkarılacak.
 **Teslim edilen her şey İngilizce:** kod, kod yorumları, commit mesajları, README, arayüz metinleri, video, Devpost açıklaması. Bu dosya ekip içi olduğu için Türkçe.
 
@@ -257,7 +261,8 @@ docs/               mimari diyagram, demo senaryosu, değerlendirme sonuçları
 | 3 | 14 Ekim ✓ | Zincir istemcisi (`core/chain`, web3.py) + deploy betiği; Anvil'de uçtan uca senaryo | Parti → rapor → iptal → örtüşme reddi → denetçi onayı → `verifyClaim`, tek komutla |
 | 4 | ~~17 Ekim~~ **14 Ekim ✓** | Simüle seri verisi: `scripts/build_batches.py` → `data/batches.json` (64 parti, gerçek vintage/tarih/miktar, seriler 1..miktar) | Bitti |
 | 5 | ~~18 Ekim~~ **14 Ekim ✓** | Anonimlik analizi (notebook yerine betik + rapor + grafik) | Bitti |
-| 6 | 18-20 Ekim | Streamlit: alıcı, herkese açık doğrulama, denetçi, proje kalitesi ekranları | Demo senaryosu arayüzden baştan sona oynar |
+| 6 | 15-17 Ekim | **Next.js + FastAPI** (Streamlit iptal): proje kalitesi, iptal, herkese açık doğrulama (tarayıcıdan zincir), denetçi ekranları | Demo senaryosu arayüzden baştan sona oynar |
+| 6b | 15-21 Ekim | **Derinlik D1-D4** (`docs/evaluation_plan.md` takvimi) | Ölçümler README'de |
 | 7 | 21 Ekim | Sepolia deploy + Etherscan doğrulama; raporların zincire yazılması | Etherscan'de doğrulanmış sözleşme ve işlemler |
 | 8 | 21-22 Ekim | (Opsiyonel) etiketli küme / Turnike karşılaştırması | Turnike durumuna göre karar |
 | 9 | 22-23 Ekim | Tampon; README son hâli, mimari diyagram, repo public | README eksiksiz, repo public |
