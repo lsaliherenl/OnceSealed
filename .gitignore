@@ -41,3 +41,6 @@ data/receipts/
 
 # Experiment logs
 data/derived/scale/log-*.txt
+
+# Design handoff (source is integrated into web/)
+design/
