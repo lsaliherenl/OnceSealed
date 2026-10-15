@@ -76,22 +76,23 @@ anonim sayılmıyor.
 
 | Ne | Değer | Ne zaman |
 |---|---|---|
-| Foundry testleri | **30 test** geçiyor (27 sözleşme + 3 Python vektörü) | 14 Ekim |
-| Fuzz testleri | 2 test × 1000 rastgele senaryo: hiçbir seri iki kez iptal edilemedi | 14 Ekim |
-| Python testleri | **46 test** (alıntı doğrulama, rapor, gizlilik, kasa, denetim, makbuz + 6 uçtan uca zincir testi) | 14 Ekim |
-| Uçtan uca senaryo | `scripts/demo_e2e.py` tek komutla: parti → rapor → iptal → örtüşme reddi → denetim → ifşa; sahte makbuzlar reddediliyor | 14 Ekim |
+| Foundry testleri | **46 test** geçiyor (43 sözleşme + 3 ortak vektör) | 15 Ekim |
+| Fuzz testleri | 4 test × 1000 rastgele senaryo (aralık, ipucu, kötü niyetli ipucu, lot): hiçbir seri iki kez iptal edilemedi | 15 Ekim |
+| Python testleri | **55 test** (alıntı doğrulama, rapor, gizlilik, kasa, denetim, makbuz paketi, API, olay dizini + 8 uçtan uca zincir testi) | 15 Ekim |
+| Temiz kurulum | `.env` ve API anahtarı olmadan testler ve `demo_e2e.py` çalışıyor (jüri repoyu indirip deneyebilir; 15 Ekim'de düzeltildi, öncesinde demo `.env` istiyordu) | 15 Ekim |
+| Uçtan uca senaryo | `scripts/demo_e2e.py` tek komutla: parti → rapor → 5 lotluk iptal → örtüşme ve yarım lot reddi → denetim → paket makbuzla ifşa; sahte makbuzlar reddediliyor | 15 Ekim |
 | Kötü niyetli operator testi | Taahhüt A şirketine, kasa B şirketine yazılırsa denetçi yakalıyor ve zincire `REJECTED` yazıyor | 14 Ekim |
 | Ortak test vektörleri | Python ve Solidity aynı hash'leri üretiyor (uint64 üst sınırı dahil) | 14 Ekim |
 | AI alıntıları | İlk ölçümde 72/72, yayımlanan 4 raporda 64/64 alıntı PDF'te doğrulandı, 0 atılan | 13 Ekim |
 | Rapor hash'leri | 4 raporun hash'i yayımlanan dosyadan yeniden hesaplanıyor | 13 Ekim |
 | AI maliyeti | 4 proje × 5 ilke ≈ 0,05 $ (LLM) + ≈ 0,001 $ (Jev) | 13 Ekim |
 | Gaz (Anvil, eski kurallar) | deploy 2,24M; lot iptali ~204k; aralık iptali ~211k; `registerBatch` ~73k; `attestRetirement` ~31k | 15 Ekim |
-| Gaz (Sepolia, gerçek ağ) | deploy 15,66M (işlem sınırı ~16,8M'e yakın!); lot iptali 1,02M ilk / 828k sonraki; rapor 463k; parti 243k; onay 33k. Yeni depolama yazımı pahalı; maliyet yine ihmal edilebilir (gaz fiyatı ~0,001 gwei) | 15 Ekim |
-| **Ölçek (gerçek veri)** | VCS766'nın 38.382 gerçek iptali oynatıldı: eski tasarım **7.467.'de blok sınırında çöktü**; yeni tasarım her iptalde **sabit 211k gaz** | 15 Ekim |
+| Gaz (Sepolia, gerçek ağ) | deploy 15,66M (işlem sınırı ~16,8M'e yakın!); lot iptali 1,02M ilk / 828k sonraki; rapor 463k; parti 243k; onay 33k. İki yükleme + tüm demo işlemleri toplam **0,00078 test ETH** (gaz fiyatı ~0,001 gwei) | 15 Ekim |
+| **Ölçek (gerçek veri)** | VCS766'nın 38.382 gerçek iptali oynatıldı: eski tasarım **7.467.'de 36M gaz sınırını aştı** (her önceki iptal ~4.800 gaz ekliyordu); yeni tasarım her iptalde **sabit 211k gaz** (Anvil). "Blok sınırı" deme, "36M gaz sınırı" de: Sepolia'nın blok sınırı artık 200M, ama maliyet sınırsız büyüdüğü için her sabit sınır er geç aşılır | 15 Ekim |
 | Sorgu ölçeği | Zincirdeki liste yürüyüşü (`hintFor`/`retirementOf`) iptal başına ~4.400 gaz büyür: 5.000 iptalde sorgu başına 22M gaz, ~11 bin iptalde RPC'lerin 50M `eth_call` sınırını aşar. İstemci bunun yerine `CreditRetired` olaylarından dizin kuruyor: 5.000 iptal 1,5 sn, sonra sorgu ~1 ms. Lot partilerinde sözleşme zaten sabit sürede cevaplıyor (`scripts/index_benchmark.py`) | 15 Ekim |
 | Gerçek kayıtlar | OffsetsDB'de iptalin ihracı aştığı 11 vaka (235.932 t); sözleşme 76 iptali reddederdi. **Dikkat:** bunlar büyük ihtimalle veri tutarsızlığı (vintage ataması, yeniden ihraç), kanıtlanmış çifte sayım değil. "Kamuya açık verideki tutarsızlıkları otomatik işaretlerdi" de | 15 Ekim |
 | Gizlilik ölçümü | Tonların %88,7'si (proje + miktar) ile tekil. **Standart lotlar artık sözleşmede zorunlu** (1.000 t). Zamanlama hâlâ bağlıyor: lot + operatörün dönemsel toplu yayını ile tamamen açıkta kalan tonlar günlükte %36,8, çeyrekte %14,5. Eski "61 eş lot" rakamı zamanlamayı yok sayıyordu, **kullanma** | 15 Ekim |
-| Güvenlik | Slither temiz (2 yanlış alarm gerekçeli), 2 adımlı yönetici devri, rol iptali; 13 tehdit senaryosu belgelendi | 15 Ekim |
+| Güvenlik | Slither lot sürümünde yeniden çalıştırıldı: 1 yanlış alarm + 1 bilgilendirme, ikisi de gerekçeli; 2 adımlı yönetici devri, rol iptali; 13 tehdit senaryosu belgelendi | 15 Ekim |
 | AI tutarlılığı | Jev 3 çalıştırmada %99,4 aynı cevap (LLM %96); Jev 6 kat hızlı, 20 kat ucuz | 15 Ekim |
 | Sepolia sözleşme adresi / Etherscan | **`0xBb88057576b92Ef27753A6b2a4Df83bE444F1308`** (lot sürümü, kaynak doğrulandı): https://sepolia.etherscan.io/address/0xBb88057576b92Ef27753A6b2a4Df83bE444F1308#code . 4 rapor, 4 parti, 2 lotluk bir alım + 2 denetçi onayı; işlemler `deployments/11155111-seed.json`. İlk sürüm `0x7D17…e675` `previous` altında kayıtlı | 15 Ekim |
 
@@ -154,13 +155,18 @@ Hayır. Demo şirketleri kurgusal; kimlik kodları gerçek LEI biçiminde ve kon
 
 **"Kayıt sistemi (operator) hile yaparsa?"**
 Zincire yazılan taahhüt ile denetçi kasası birbirini tutmazsa denetçi bunu görür ve zincire "reddedildi" yazar; bu kayıt
-silinemez. Operator'ün kasaya yazdığını değiştirmesi de mümkün değil, çünkü kasanın parmak izi zincirde.
+silinemez. Operator'ün kasaya yazdığını değiştirmesi de mümkün değil, çünkü kasanın parmak izi zincirde. Dürüst sınır:
+operator hem taahhüde hem kasaya **tutarlı biçimde** yanlış şirketi yazarsa denetçi bunu yakalayamaz; orada kayıt
+sisteminin kendi müşteri kimlik kontrolüne (KYC) güveniyoruz. Bunu README'de de açıkça yazdık.
 
 **"Gerçek ölçekte çalışır mı?"**
 Ölçtük. En kalabalık gerçek partilerden birinin (VCS766, 38.382 iptal) geçmişini zincire oynattık. İlk tasarımımız her iptalde
-öncekilerin hepsini kontrol ediyordu ve 7.467. iptalde blok gaz sınırına çarptı. Tasarımı değiştirdik: iptaller sıralı bir
+öncekilerin hepsini kontrol ediyordu ve 7.467. iptalde 36 milyon gaz sınırını aştı. Tasarımı değiştirdik: iptaller sıralı bir
 liste olarak tutuluyor, yeni iptal sadece iki komşusuyla karşılaştırılıyor. Her iptal artık sabit 211 bin gaz. Yanlış veya
-kötü niyetli bir "komşu ipucu" bile çifte iptale yol açamıyor; bunu rastgele testlerle kanıtladık.
+kötü niyetli bir "komşu ipucu" bile çifte iptale yol açamıyor; bunu rastgele testlerle kanıtladık. Okuma tarafını da ölçtük:
+zincirdeki listeyi baştan yürüyen sorgu ~11 bin iptalde RPC sınırını aşıyor, bu yüzden istemci zincir olaylarından bir
+dizin kuruyor (5.000 iptal 1,5 sn, sorgu ~1 ms). Standart lotlu partilerde ise sözleşme her soruyu doğrudan, sabit sürede
+cevaplıyor.
 
 **"Zincirde isim yok ama yine de kim olduğu anlaşılır mı?"**
 Kısmen, ve bunu açıkça ölçtük: gerçek iptallerin ton bazında %88,7'si sadece proje ve miktarla tekil. Bir şirket raporunda
@@ -188,8 +194,8 @@ sıfır bilgi kanıtı gerektirir (gelecek çalışma).
 | 0:00-0:40 | Problem | Anonimlik oranı (kendi hesabımız), greenhushing gerilimi |
 | 0:40-1:00 | Çözüm özeti | Üç parça şeması |
 | 1:00-1:50 | Kalite raporu | Bir Verra PDF'i → ilke puanları, belgeden vurgulanmış alıntılar, ICVCM metodoloji durumu, rapor hash'i zincirde |
-| 1:50-2:30 | İptal | Kurgusal şirket bir aralığı iptal eder; zincirde sadece taahhüt; makbuz indirilir |
-| 2:30-2:50 | Çifte iptal | Örtüşen aralık → `AlreadyRetired` |
+| 1:50-2:30 | İptal | Kurgusal şirket 5.000 t alır → zincirde birbirine bağlanamayan 5 özdeş lot, isim yok; makbuz paketi indirilir |
+| 2:30-2:50 | Çifte iptal | Örtüşen aralık → `AlreadyRetired`; yarım lot → `NotALot` |
 | 2:50-3:30 | Denetçi | Kasa açılır, kontroller yeşil, onay zincire yazılır, herkese açık ekranda "audited ✓" |
 | 3:30-3:55 | Seçici ifşa | Makbuz yüklenir → "claim verified" |
 | 3:55-4:20 | Etherscan | Doğrulanmış sözleşme ve işlemler |
@@ -206,7 +212,8 @@ sıfır bilgi kanıtı gerektirir (gelecek çalışma).
 ## 10. Yapılacaklar (sunum için)
 
 - [x] Anonimlik oranı ve grafik (`docs/figures/anonymity_trend.png`)
-- [ ] Sepolia adresi ve Etherscan bağlantıları (iş paketi 7)
+- [x] Sepolia adresi ve Etherscan bağlantıları (Bölüm 5)
+- [x] README son hâline yakın (15 Ekim; etiket sonuçları ve arayüz gelince güncellenecek)
 - [ ] Arayüz ekran görüntüleri (iş paketi 6)
 - [ ] Mimari diyagram
 - [ ] Video metni (İngilizce) bu dosyadan çıkarılacak

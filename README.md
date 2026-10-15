@@ -2,194 +2,206 @@
 
 **Confidential but auditable carbon credit retirement, with evidence-backed quality signals.**
 
-> **Status: work in progress (draft README).** Built for the IEEE ClimateChain Global Hackathon 2026,
-> track *Improve trust, transparency, and efficiency in carbon markets*. Sections marked **TODO** are not built yet.
+Built for the IEEE ClimateChain Global Hackathon 2026, track *Improve trust, transparency, and efficiency in carbon
+markets*: smart contracts that prevent double counting, and verification of carbon credit quality.
 
 OnceSealed is a prototype verification and privacy layer that could sit on top of existing carbon registries:
 
-- **Once:** every credit can be retired only once. Overlapping serial ranges are rejected by a smart contract.
+- **Once:** every credit can be retired only once. A smart contract rejects any serial range that overlaps an
+  earlier retirement.
 - **Sealed:** the buyer's identity is never written on-chain. Only a salted commitment is public; an authorized
-  auditor can open an encrypted vault and attest on-chain that the commitment is correct.
-- **Evidence-backed quality:** project documents are assessed against ICVCM Core Carbon Principles. Every finding
-  quotes the source document verbatim, and code checks each quote against the PDF before it counts.
+  auditor opens an encrypted vault and records on-chain whether it matches.
+- **Evidence-backed quality:** project documents are checked against ICVCM Core Carbon Principles. Every AI finding
+  quotes the document verbatim, and code finds each quote in the PDF before it counts.
 
-> **This is not a real registry and performs no real retirements.** Real retirements happen in official registries
-> such as Verra. OnceSealed uses real project data and simulated serial numbers to show how such a layer would work.
+> **What is real and what is simulated.** Project data, issuance quantities and retirement histories are real
+> (CarbonPlan OffsetsDB, Verra documents). Serial numbers are simulated (labelled `SIM-...`), buyers are fictional
+> companies, and no real credit is retired: real retirements happen in registries such as Verra. The contract runs
+> on the Sepolia test network.
+
+**Live on Sepolia:** [`0xBb88057576b92Ef27753A6b2a4Df83bE444F1308`](https://sepolia.etherscan.io/address/0xBb88057576b92Ef27753A6b2a4Df83bE444F1308#code)
+(source verified on Etherscan). It holds four anchored quality reports, four issuance batches and one audited purchase
+of 2,000 t retired as two lots; every transaction is listed in [`deployments/11155111-seed.json`](deployments/11155111-seed.json).
 
 ---
 
 ## The problem
 
-Companies increasingly hide who retires carbon credits ("greenhushing"), while the market needs auditability.
+Companies increasingly hide who retires carbon credits ("greenhushing"), while the market needs proof that each
+credit was retired once and that quality claims rest on evidence.
 
-Our analysis of 495,000 retirement records (1.59 billion tonnes, 7 registries) in CarbonPlan's OffsetsDB
-([full method and tables](docs/anonymity_stats.md)):
+Our analysis of all 495,403 retirement records (1.59 billion tonnes, 7 registries) in CarbonPlan's OffsetsDB
+snapshot of 2026-06-01 ([method and tables](docs/anonymity_stats.md)):
 
-- Retired tonnes **explicitly marked "not disclosed", "not public" or "anonymous" rose from 0.4% (up to 2018) to 17.2%
-  (2023–2026)**.
-- In 2023–2026, **53–55%** of retired tonnes name no identifiable beneficiary at all.
+- Retired tonnes **explicitly marked "not disclosed", "not public", "anonymous" or "private offset" rose from 0.4%
+  (up to 2018) to 17.2% (2023-2026)**. This is a conservative lower bound for deliberate anonymity.
+- In 2023-2026, **52.9-55.5%** of retired tonnes name no identifiable beneficiary at all. Part of this reflects how
+  registries publish data, not only buyer choice.
 
 ![Explicitly undisclosed retirements are rising](docs/figures/anonymity_trend.png)
 
-The tension: buyers want confidentiality; regulators, auditors and the public want proof that each credit was
-retired exactly once and that its quality claims are grounded in evidence.
+Buyers want confidentiality; auditors and the public want proof. Today a buyer gets one or the other.
 
 ## How it works
 
-### 1. Quality assessment (three layers)
+### 1. Each credit retired once
+
+The operator (the registry's role) registers an **issuance batch** with its serial range and a **lot size**, then
+records retirements as serial ranges. The contract [`RetirementRegistry`](contracts/src/RetirementRegistry.sol)
+rejects any range that overlaps an earlier one (`AlreadyRetired`). There is no transfer or mint function: retired
+credits never become tradable tokens (Verra [prohibited](https://verra.org/verra-bans-greenwashing-cryptos-using-retired-credits/)
+tokenizing retired credits in 2022).
+
+### 2. Buyer sealed, auditor can check
+
+1. A purchase is split into **standard lots** (1,000 t in the demo). In a lot batch the contract accepts only exactly
+   one aligned lot per retirement (`NotALot` otherwise), so retired amounts look alike on-chain.
+2. For each lot the operator writes a commitment
+   `keccak256(abi.encode(buyerId, salt, batchId, start, end))` with a fresh 32-byte salt and
+   `buyerId = keccak256("LEI:" + LEI)` ([LEI](https://www.gleif.org/) = legal entity identifier). Different salts
+   mean the lots of one purchase cannot be linked through their commitments.
+3. `{range, LEI, buyerId, salt}` is encrypted to the auditor's public key (libsodium sealed box) and kept off-chain;
+   only `keccak256(ciphertext)` goes on-chain.
+4. The auditor decrypts, runs six checks (vault hash, decryption, range, LEI validity, LEI to buyerId, commitment)
+   and records `Verified` or `Rejected` on-chain, once and for good.
+5. The buyer receives a receipt with the salts. Sharing it is selective disclosure: anyone can check it against the
+   chain with the `verifyClaim` view. Because the commitment includes the range, a salt proves exactly one retirement.
+
+This is a hash commitment plus encryption design, **not** a zero-knowledge proof system. Privacy is against the
+public, not against the registry, which already knows its account holders.
+
+### 3. Quality signal in three layers
 
 | Layer | What it does | AI? |
 |---|---|---|
-| **Methodology status** | Looks up the ICVCM decision for the project's methodology in a sourced, versioned table ([`core/ai/methodology_status.json`](core/ai/methodology_status.json)). | No |
-| **Evidence extraction** | An LLM (`deepseek/deepseek-v4.1-flash` via OpenRouter) reads the relevant parts of the project document and returns verbatim quotes per principle. Code verifies every quote against the PDF text; unverifiable quotes are dropped. | Yes |
-| **Evidence judgement** | A decision model answers closed questions about the verified evidence and returns probabilities. Currently **TypeSafe Jev 1.13** (third-party model via OpenRouter). The model sits behind a swappable interface so other decision models can be evaluated on the same question set. | Yes |
+| **Methodology status** | Looks up the ICVCM decision on the project's methodology in a sourced, versioned table ([`methodology_status.json`](core/ai/methodology_status.json)). | No |
+| **Evidence extraction** | An LLM (`deepseek/deepseek-v4.1-flash` via OpenRouter) reads paragraphs selected by keyword scoring (up to 30,000 characters per principle) and returns verbatim quotes. Code finds every quote in the PDF text; quotes it cannot find are dropped. | Yes |
+| **Evidence judgement** | A decision model (TypeSafe **Jev 1.13**, a third-party model via OpenRouter) rates the verified evidence on closed questions with probabilities. It sits behind a swappable interface so other models can be compared on the same questions. | Yes |
 
-Principles assessed (5 of ICVCM's 10, the ones a project document can evidence): additionality, permanence,
-robust quantification, no double counting, social and environmental safeguards.
+Five of ICVCM's ten principles can be evidenced in a project document and are scored: additionality, permanence,
+robust quantification, no double counting, social and environmental safeguards. The report is published as JSON in
+[`reports/`](reports/); its `keccak256` over canonical JSON and a `method_hash` (models, prompt and question set
+versions) are anchored on-chain, so anyone can re-hash the published file and compare.
 
-The report is published as JSON in [`reports/`](reports/). Its `keccak256` hash over canonical JSON, plus a
-`method_hash` that pins the models and question set used, are anchored on-chain, so anyone can re-hash the
-published file and compare.
+> **Signal, not verdict.** A score says how well the submitted document evidences a principle. It is not an ICVCM
+> assessment, a rating of the project, or a statement about its climate impact.
 
-> **Signal, not verdict.** Scores describe how well the submitted document evidences each principle. They are not an
-> ICVCM assessment, a rating of the project, or a statement about its real-world climate impact.
-
-### 2. Confidential retirement
-
-1. The registry operator retires a serial range on-chain with
-   `buyerCommitment = keccak256(abi.encode(buyerId, salt, batchId, start, end))`, where `salt` is 32 random bytes and
-   `buyerId = keccak256("LEI:" + LEI)`. A purchase is retired as standard lots (1,000 t in the demo), each with its own
-   salt, so the amount and the lots of one purchase cannot be linked on-chain (see the limits below).
-2. `{serial range, LEI, buyerId, salt}` is encrypted to the auditor's public key (libsodium sealed box) and stored
-   off-chain; only `keccak256(ciphertext)` goes on-chain.
-3. The auditor decrypts, recomputes both hashes, and records an attestation on-chain.
-4. The buyer can selectively disclose by sharing the salt; anyone can check it with the `verifyClaim` view function.
-
-**Threat model:** privacy is against the public, not against the registry (which already knows its account holders).
-This is a hash commitment + encryption design, **not** a zero-knowledge proof system.
-
-### 3. Smart contract
-
-[`RetirementRegistry`](contracts/src/RetirementRegistry.sol) (Solidity 0.8.28, OpenZeppelin AccessControl):
-
-| Function | Role | What it does |
+| Project | Methodology, ICVCM status | Evidence signal (0-100) |
 |---|---|---|
-| `registerBatch` | operator | Declares an issuance batch, its serial range and its lot size (0 = free ranges). |
-| `registerQualityReport` | assessor | Anchors a report hash, score and method hash; versions are kept. |
-| `retire` | operator | Retires serials `[start, end]`; rejects any range that overlaps a previous retirement (`AlreadyRetired`). In a lot batch the range must be exactly one aligned lot (`NotALot`). Records the project's report version at that moment. |
-| `attestRetirement` | auditor | One-time, final `Verified` / `Rejected` status after checking the vault off-chain. |
-| `verifyClaim` | anyone (view) | Checks a disclosed `(buyerId, salt)` against the commitment. |
+| [VCS1851](reports/VCS1851.json) grid-connected solar, India | ACM0002 v19: not approved (additionality) | 64 |
+| [VCS1477](reports/VCS1477.json) Katingan peatland REDD+, Indonesia | VM0007 v1.5: not CCP-approved (successor VM0048 approved) | 61 |
+| [VCS138](reports/VCS138.json) landfill gas, USA | ACM0001 v16: approved with conditions | 57 |
+| [VCS2505](reports/VCS2505.json) cookstoves, South Africa | VMR0006: not CCP-approved (successor VM0050 approved) | 56 |
 
-The commitment is `keccak256(abi.encode(buyerId, salt, batchId, start, end))`, so a disclosed salt proves exactly one
-retirement and cannot be reused for another. There is no transfer or mint function: retired credits cannot become
-tradable again.
+The two columns disagree on purpose: a well-documented project can use a methodology ICVCM rejected (the solar
+project includes a detailed investment analysis). Document evidence and methodology soundness are different things,
+which is why layer 1 is separate and deterministic.
 
-Tested with Foundry (46 tests, including fuzz tests that check, over thousands of random ranges and hints, that no
-serial is ever retired twice). Overlap checks cost the same however many retirements a batch has: lot batches look
-up the lot index directly, and free-range batches keep a sorted linked list where the caller passes the predecessor
-as a hint (a wrong hint can only make the call revert). A first version scanned the list linearly; replaying 38,382
-real retirements of one Verra batch, it hit the block gas limit at retirement 7,467
-([scale results](data/derived/scale/summary.json), [chart](docs/figures/scale_gas.png)).
-Reads scale too: the contract's `hintFor` / `retirementOf` views walk a free-range batch's list (about 4,400 gas per
-retirement, 22M gas per call at 5,000 retirements, beyond typical 50M `eth_call` caps at roughly 11,000), so the
-client answers them from an index of `CreditRetired` events instead: built in 1.5 s for 5,000 retirements, then
-about 1 ms per lookup (`scripts/index_benchmark.py`). Lot batches are answered by the contract in constant time.
+## What we measured
 
-**Privacy limits, measured** ([threat model](docs/threat_model.md), T12): for 88.7% of retired tonnes in OffsetsDB,
-project + quantity alone single out one retirement. Standard lots remove the quantity; timing still links lots unless
-the operator publishes them in shuffled periodic batches, and even then 14.5% (quarterly) to 36.8% (daily) of tonnes
-have no other purchase in the same project and period to hide among.
-
-## Design decisions
-
-- **Retired credits never become tradable tokens.** The chain only stores proof records. Verra
-  [prohibited](https://verra.org/verra-bans-greenwashing-cryptos-using-retired-credits/) tokenizing retired credits in 2022.
-- **No personal data on-chain:** only hashes, commitments, scores and serial ranges.
-- **Every AI finding must quote the document verbatim**, and the quote must be found in the PDF by code.
-- **AI scores are signals, not verdicts**, and are shown next to the deterministic methodology status.
-- **Honest model attribution:** each report records which models produced it.
-
-## Current results (draft)
-
-Reports for four real Verra projects (project documents are not redistributed; see [`samples/manifest.json`](samples/manifest.json)):
-
-| Project | Methodology (ICVCM status) | Overall evidence signal |
+| Claim | Result | Source |
 |---|---|---|
-| VCS1851 grid-connected solar, India | ACM0002 (not approved, additionality) | see [`reports/VCS1851.json`](reports/VCS1851.json) |
-| VCS138 landfill gas, USA | ACM0001 v16 (approved with conditions) | see [`reports/VCS138.json`](reports/VCS138.json) |
-| VCS1477 Katingan REDD+, Indonesia | VM0007 (no CCP approval; successor VM0048 approved) | see [`reports/VCS1477.json`](reports/VCS1477.json) |
-| VCS2505 cookstoves, South Africa | VMR0006 (no CCP approval; successor VM0050 approved) | see [`reports/VCS2505.json`](reports/VCS2505.json) |
+| No serial is retired twice | 46 Foundry tests, including fuzz tests over thousands of random ranges, lots and (malicious) hints; 55 Python tests including end-to-end runs on a local chain | `contracts/test/`, `tests/` |
+| Retirement cost does not grow with history | Replaying all **38,382 real retirements** of VCS766 vintage 2009: a first version that scanned past retirements added ~4,800 gas per retirement and passed 36M gas at retirement **7,467**; the sorted list stays at **~211k gas** for all 38,382 (a lot retirement costs ~204k) | [summary](data/derived/scale/summary.json), [chart](docs/figures/scale_gas.png), `scripts/scale_replay.py` |
+| Lookups stay cheap | The contract's list-walking views cost ~4,400 gas per retirement (22M per call at 5,000, past the usual 50M `eth_call` cap at ~11,000), so clients use an index built from `CreditRetired` events: 1.5 s to build for 5,000 retirements, ~1 ms per lookup. Lot batches are answered by the contract in constant time | `scripts/index_benchmark.py` |
+| Real network cost (Sepolia, current gas schedule) | Deploy 15.66M gas; retire one lot 1.02M (first in a batch) / 0.83M; anchor a report 463k; register a batch 243k; attest 33k. Storage writes cost far more than on the local chain; at Sepolia's ~0.001 gwei gas price, two deployments and all demo transactions cost 0.00078 test ETH in total | [`deployments/11155111-seed.json`](deployments/11155111-seed.json) |
+| Public data has inconsistencies a contract would flag | In OffsetsDB, 11 project-vintages record more retirements than issuance (235,932 t). Replayed through the contract, 76 of 1,100 retirements are rejected. These are most likely data errors (vintage attribution, reissuance), **not proven double counting** | [`over_retirement.json`](data/derived/over_retirement.json), `scripts/over_retirement_replay.py` |
+| How much does on-chain metadata reveal? | Project + quantity single out one retirement for **88.7%** of retired tonnes. With standard lots and the operator publishing lots once per period, 36.8% (daily) to 14.5% (quarterly) of tonnes still have no other purchase to hide among | [threat model T12](docs/threat_model.md), `scripts/linkability_stats.py` |
+| AI quotes are real | 64 of 64 quotes in the four published reports were found in the PDFs; 0 dropped | [`reports/`](reports/) |
+| AI consistency, speed, cost (no labels needed) | On 177 yes/no questions over 48 excerpts from 11 projects: Jev gives the same answer in 3 runs 99.4% of the time (LLM 96.0%), 0.8 s vs 4.9 s per item, $0.04 vs $0.79 per 1,000 items; the two models agree 90.4% | [`docs/ai_evaluation.md`](docs/ai_evaluation.md) |
+| **AI accuracy** | **Not measured yet.** Two team members label the same 177 questions independently; precision, recall, F1, Cohen's kappa and Brier score are computed by `scripts/eval_metrics.py` when the labels are in | [evaluation plan](docs/evaluation_plan.md) (Turkish) |
+| Security | Slither: no findings beyond two documented false positives and one informational note; admin handover is two-step with a two-day delay; 13 threats analysed | [threat model](docs/threat_model.md) |
 
-So far every quote returned by the LLM was found in the source PDF. **We make no accuracy claim yet:** a human-labelled
-evaluation set is planned (**TODO**).
+Consistency is not accuracy: a model can repeat the same wrong answer. Until the labels are in, we make no claim
+about how often the AI is right.
+
+## Trust assumptions and limitations
+
+- **Prototype, simulated serials, fictional buyers.** No integration with a real registry.
+- **The operator knows the buyer.** Privacy is against the public. A dishonest operator who seals one buyer in the
+  vault but commits to another is caught by the auditor (tested); an operator who records a false buyer consistently
+  in both is not, so the design relies on the registry's own customer checks (KYC).
+- **One auditor, demo key handling.** All role keys live on one machine for the demo. Several auditors, key escrow
+  and rotation are future work ([threat model](docs/threat_model.md), T10-T11).
+- **Privacy needs a crowd.** Lots hide amounts, but if a project has a single buyer in a period, the project and time
+  still point to that buyer. Batched publication is an operating rule the contract cannot enforce. Amounts that are
+  not whole lots cannot be retired privately in a lot batch.
+- **AI signals depend on the excerpt.** Paragraphs are chosen by keywords from documents of hundreds of pages, so
+  evidence outside the selection is missed. Reports exist for 4 of the 11 evaluation projects so far, and the
+  methodology table covers the methodologies of those four.
+- **Gas figures differ by network.** Scale experiments ran on a local Anvil chain; Sepolia's current schedule makes
+  storage writes several times more expensive. The deployment uses 15.66M gas, close to the per-transaction limit of
+  newer Ethereum versions, so the contract cannot grow much further without being split.
 
 ## Repository layout
 
 ```
-contracts/      Foundry project: RetirementRegistry + tests
-core/ai/        PDF extraction, quote verification, LLM client, decision model, report builder
-core/privacy/   buyer identities (LEI), commitments, sealed-box audit vault, receipts
-core/chain/     web3.py client, deployment records, committed ABI
-core/service.py end-to-end flows used by the app (retire, audit, verify a receipt)
-core/hashing.py canonical JSON + keccak256
-scripts/        assess_project.py (build a report), jev_smoke_test.py (evidence extraction only)
-tests/          unit tests (no API calls) + vectors.json shared with the Foundry tests
+contracts/      Foundry project: RetirementRegistry + tests (OpenZeppelin as a git submodule)
+core/chain/     web3.py client (simulate before sending, event index), deployment records, committed ABI
+core/privacy/   LEI identities, commitments, sealed-box audit vault, receipts
+core/ai/        PDF extraction, quote verification, LLM client, decision model, report builder, checklist
+core/data/      OffsetsDB loading, anonymity classes, simulated issuance batches
+core/service.py end-to-end flows: anchor a report, retire lots, audit, verify a receipt
+api/            FastAPI layer (public reads; operator and auditor actions need a role token)
+web/            Next.js front end (in progress)
+scripts/        demo, deployment, report generation and every measurement in the table above
+tests/          pytest suite + vectors.json shared with the Foundry tests
 reports/        published quality reports
-data/evidence/  verified evidence + question set per project (for evaluating other decision models)
-samples/        manifest of demo documents (URLs + SHA-256); PDFs are downloaded manually
+data/           simulated batches, demo buyers, evaluation set, derived measurements
+deployments/    Sepolia deployment record and demo transactions
+docs/           threat model, anonymity statistics, AI evaluation, figures
+samples/        manifest of project documents (URLs + SHA-256); PDFs are downloaded manually
 ```
 
 ## Quick start
 
-Requirements: Python 3.11+ (tested on 3.14), [Foundry](https://getfoundry.sh) for the contracts.
+Requirements: Python 3.11+ (tested on 3.14) and [Foundry](https://getfoundry.sh) (the end-to-end tests and the demo
+start a throwaway local chain with Foundry's `anvil`). No API key and no `.env` are needed for the following:
 
 ```bash
-git clone --recurse-submodules <repo-url>
+git clone --recurse-submodules https://github.com/lsaliherenl/OnceSealed
 cd OnceSealed
 python -m venv .venv
 .venv/Scripts/activate          # Windows; use `source .venv/bin/activate` on macOS/Linux
 python -m pip install -r requirements.txt
 python -m pip install -e . --no-deps
-python -m pytest -q             # unit + end-to-end tests, no API key needed (end-to-end needs Foundry's anvil)
-python scripts/demo_e2e.py      # full flow on a throwaway local chain: retire, overlap rejected, audit, disclosure
+python -m pytest -q             # 55 tests
+python scripts/demo_e2e.py      # full story on a local chain: lots retired, overlap and partial lot rejected,
+                                # auditor attests, receipt verified, forged receipts fail
+(cd contracts && forge test)    # 46 contract tests
 ```
 
-To regenerate a report you need an OpenRouter API key in `.env` (copy `.env.example`) and the project PDF in
-`samples/pdfs/` (download it manually from the Verra registry link in `samples/manifest.json`):
+With a `.env` (copy [`.env.example`](.env.example)):
 
 ```bash
-python scripts/assess_project.py VCS1851
+uvicorn api.server:app                                     # API on a local chain (start `anvil` first)
+python scripts/assess_project.py VCS1851                   # rebuild a report: OpenRouter key + the PDF in samples/pdfs/
+python scripts/deploy.py --network sepolia                 # deploy, then scripts/verify_etherscan.py, scripts/seed_sepolia.py
 ```
 
 ## Data sources and attribution
 
-- **[CarbonPlan OffsetsDB](https://carbonplan.org/research/offsets-db)** — project, issuance and retirement data from
-  ACR, ART, CAR, Cercarbono, Gold Standard, Isometric and Verra. Snapshot generated 2026-06-01. Used under the
+- **[CarbonPlan OffsetsDB](https://carbonplan.org/research/offsets-db)**: project, issuance and retirement data from
+  ACR, ART, CAR, Cercarbono, Gold Standard, Isometric and Verra; snapshot generated 2026-06-01. Used under the
   [OffsetsDB Terms of Data Access](https://offsets-db-data.readthedocs.io/en/stable/TERMS-OF-DATA-ACCESS.html);
   CarbonPlan claims no copyright in the data, and the underlying records belong to the registries.
-- **[Verra Registry](https://registry.verra.org)** — public project documents (not redistributed in this repository).
-- **[ICVCM Core Carbon Principles](https://icvcm.org/?p=2349)** and ICVCM methodology decisions (sources listed per
-  entry in `core/ai/methodology_status.json`).
-- **Models:** `deepseek/deepseek-v4.1-flash` and TypeSafe `jev-1.13`, both accessed through [OpenRouter](https://openrouter.ai).
-  Neither model was developed by this team.
-
-## Limitations
-
-- Simulated retirements and serial numbers; no integration with a real registry.
-- Quality signals depend on what the project document says; they cannot detect misreporting that is internally consistent.
-- LLM and decision-model outputs vary slightly between runs; the on-chain hash pins the exact published report.
-- Decision-model confidence values are not calibrated against labelled data yet.
+- **[Verra Registry](https://registry.verra.org)**: public project documents, not redistributed here
+  ([`samples/manifest.json`](samples/manifest.json) lists URLs and SHA-256 hashes).
+- **[ICVCM Core Carbon Principles](https://icvcm.org/?p=2349)** and ICVCM methodology decisions (sources per entry in
+  `core/ai/methodology_status.json`).
+- **Models:** `deepseek/deepseek-v4.1-flash` and TypeSafe `jev-1.13`, both through [OpenRouter](https://openrouter.ai).
+  Neither model was developed by this team; every report records which models produced it.
 
 ## Roadmap
 
-- [x] `RetirementRegistry` contract + Foundry tests
-- [x] Sepolia deployment + Etherscan verification: [`0xBb88…1308`](https://sepolia.etherscan.io/address/0xBb88057576b92Ef27753A6b2a4Df83bE444F1308#code) (demo transactions in `deployments/11155111-seed.json`)
-- [x] Privacy module (commitments, sealed-box audit vault) with Python ↔ Solidity test vectors
-- [x] Python chain client and end-to-end flow on a local chain (`scripts/demo_e2e.py`)
-- [ ] Streamlit app: buyer, public verification, auditor and project quality views
-- [x] Anonymity statistic from OffsetsDB ([docs/anonymity_stats.md](docs/anonymity_stats.md))
-- [x] Issuance batches from real OffsetsDB issuance records (`data/batches.json`, simulated serials)
-- [ ] Human-labelled evaluation set; compare decision models on it
+- [x] `RetirementRegistry` with standard lots, constant-cost overlap checks and two-step admin handover
+- [x] Sepolia deployment, Etherscan verification and demo transactions
+- [x] Privacy layer: commitments, sealed-box audit vault, receipt bundles, Python and Solidity test vectors
+- [x] Scale, privacy and data-quality measurements on real OffsetsDB histories
+- [x] FastAPI layer
+- [ ] Web app: public verification (reads the chain directly in the browser), buyer, auditor and project views
+- [ ] Human-labelled evaluation of the AI layer; compare decision models on it
+- [ ] Reports for the remaining evaluation projects
 - [ ] Demo video
 
 ## License

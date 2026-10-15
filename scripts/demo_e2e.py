@@ -19,13 +19,15 @@ import sys
 import tempfile
 from pathlib import Path
 
+from eth_account import Account
+
 from core.chain import anvil
 from core.chain.registry import Registry, RegistryError, connect
-from core.config import PROJECT_ROOT, auditor_box_keys, chain_settings
+from core.config import PROJECT_ROOT, ROLES, ChainSettings, auditor_box_keys, chain_settings
 from core.data.batches import load_batches
 from core.privacy.commitment import new_salt, to_hex
 from core.privacy.identity import fictional_lei
-from core.privacy.vault import VaultStore
+from core.privacy.vault import VaultStore, generate_keypair
 from core.service import OnceSealed
 
 
@@ -53,12 +55,18 @@ def main() -> None:
 
 
 def run(rpc: str) -> None:
-    w3, accounts = connect(chain_settings("anvil", rpc))
+    try:
+        settings = chain_settings("anvil", rpc)
+        pub, priv = auditor_box_keys()
+    except RuntimeError:  # no .env (fresh clone): throwaway role wallets and auditor keys, local chain only
+        settings = ChainSettings("anvil", rpc, {r: "0x" + Account.create().key.hex().removeprefix("0x") for r in ROLES})
+        pub, priv = generate_keypair()
+        print("No .env found: using throwaway role wallets and auditor keys for this local run.")
+    w3, accounts = connect(settings)
     anvil.fund(w3, [a.address for a in accounts.values()])
     registry, deploy_tx = Registry.deploy(w3, accounts)
     print(f"RetirementRegistry deployed at {registry.address} (gas {deploy_tx.gas_used})")
 
-    pub, priv = auditor_box_keys()
     workdir = Path(tempfile.mkdtemp(prefix="oncesealed-demo-"))
     app = OnceSealed(registry, VaultStore(workdir / "vault.sqlite"), pub, priv)
     rng = random.Random(7)

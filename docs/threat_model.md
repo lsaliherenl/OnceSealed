@@ -94,12 +94,13 @@ registry, not something the contract can enforce; the contract enforces the lot 
 
 ## Static analysis (Slither 0.11.6)
 
-Run: `slither contracts --filter-paths "lib/|test/"` (102 detectors).
+Run: `slither contracts --filter-paths "lib/|test/"` (102 detectors), re-run on the lot-enabled contract on 2026-10-15.
 
 | Finding | Assessment |
 |---|---|
-| `uninitialized-state`: `_batchRetirements` "never initialized" | False positive (array pushed through a local storage reference). Code simplified to push directly; the finding is gone. |
 | `timestamp` in `hintFor` | False positive: the comparison is between serial numbers (`start`), not timestamps; Slither flags it because the struct also stores `retiredAt`. |
-| `cyclomatic-complexity` of `retire` (12) | Informational. Every branch is a distinct safety check and is covered by unit and fuzz tests. |
+| `assembly` in `orderedRetirements` | Informational. One `mstore` shortens the returned array to the number of list entries (lot batches keep no list). It only lowers the length of a freshly allocated memory array, marked `memory-safe`, and is covered by `test_LotBatchAcceptsExactlyOneAlignedLot`. |
 
-No other findings. Foundry's linter (`forge build`) reports no warnings.
+Earlier findings that no longer appear: `uninitialized-state` on `_batchRetirements` (false positive; code simplified)
+and `cyclomatic-complexity` of `retire` (resolved when the lot and range checks moved into separate functions).
+Foundry's linter (`forge lint`) reports no warnings.
