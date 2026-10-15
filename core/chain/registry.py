@@ -7,6 +7,7 @@ before any gas is spent.
 
 import json
 import os
+import time
 from dataclasses import dataclass
 from enum import IntEnum
 from functools import lru_cache
@@ -19,7 +20,7 @@ from eth_account.signers.local import LocalAccount
 from eth_utils import keccak
 from web3 import Web3
 from web3.contract import Contract
-from web3.exceptions import ContractCustomError, ContractLogicError
+from web3.exceptions import BadFunctionCallOutput, ContractCustomError, ContractLogicError
 
 from core.config import ChainSettings
 
@@ -154,10 +155,20 @@ class Registry:
         tx = factory.constructor(*args).build_transaction(_base_tx(w3, deployer))
         result = _send(w3, deployer, tx, art["abi"])
         reg = cls(w3, result.receipt["contractAddress"], accounts)
-        for role, const in ROLE_NAMES.items():
-            role_id = getattr(reg.contract.functions, const)().call()
-            reg._transact("deployer", reg.contract.functions.grantRole(role_id, accounts[role].address))
+        reg.grant_roles()
         return reg, result
+
+    def grant_roles(self) -> list[TxResult]:
+        """Grant the working roles that are still missing (safe to re-run after an interrupted deploy).
+        Role ids are computed locally: a load-balanced public RPC may not see a just-deployed contract yet."""
+        done = []
+        for role, const in ROLE_NAMES.items():
+            role_id = keccak(text=const)
+            addr = self.accounts[role].address
+            if _retry(lambda: self.contract.functions.hasRole(role_id, addr).call()):
+                continue
+            done.append(self._transact("deployer", self.contract.functions.grantRole(role_id, addr)))
+        return done
 
     # --- writes -----------------------------------------------------------------------------
 
@@ -264,6 +275,17 @@ class Registry:
         return self._call(self.contract.functions.verifyClaim(retirement_id, buyer_id, salt))
 
 
+def _retry(fn, attempts: int = 8, delay: float = 1.5):
+    """Read through a load-balanced RPC: a node that is a block behind returns empty data for new state."""
+    for i in range(attempts):
+        try:
+            return fn()
+        except BadFunctionCallOutput:
+            if i == attempts - 1:
+                raise
+            time.sleep(delay)
+
+
 def _base_tx(w3: Web3, acct: LocalAccount) -> dict[str, Any]:
     return {"from": acct.address, "nonce": w3.eth.get_transaction_count(acct.address, "pending")}
 
@@ -274,4 +296,11 @@ def _send(w3: Web3, acct: LocalAccount, tx: dict[str, Any], abi: list[dict[str, 
     receipt = w3.eth.wait_for_transaction_receipt(tx_hash, timeout=300)
     if receipt["status"] != 1:
         raise RegistryError("TransactionFailed", {"tx": tx_hash.hex()})
+    if w3.eth.chain_id != 31337:
+        # A load-balanced public RPC can route the next read to a node that has not seen this block yet;
+        # wait until the RPC reports a later block so the next simulation sees the new state.
+        for _ in range(20):
+            if w3.eth.block_number > receipt["blockNumber"]:
+                break
+            time.sleep(1.5)
     return TxResult("0x" + bytes(tx_hash).hex(), receipt["blockNumber"], receipt["gasUsed"], receipt)

@@ -1,0 +1,15 @@
+{
+  "network": "sepolia",
+  "chain_id": 11155111,
+  "address": "0x7D17ebA028c6d4e77A28fC487C59F0f68aa1e675",
+  "tx_hash": "0xbb1b14a04402e3f5129b26392a6bb2efa76b44c153e65e06f4c0b584f5239698",
+  "block": 11920940,
+  "roles": {
+    "deployer": "0xd1bB1963D2e7eC72dc7B9ec4D649959556597108",
+    "assessor": "0x708E5433e7ed481729D4579f60431fb3924F5C76",
+    "operator": "0x209de952F4a78819cdc5f4d31e019a4473fDF790",
+    "auditor": "0x7fEb8DBd85553192F7bBB872547861e1aF3d9a2D"
+  },
+  "compiler": "0.8.28+commit.7893614a",
+  "deployed_at": "2026-10-15T14:12:37+00:00"
+}
