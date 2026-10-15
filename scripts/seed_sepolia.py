@@ -1,4 +1,4 @@
-"""Put the public demo state on Sepolia: anchored reports, issuance batches, one audited retirement.
+"""Put the public demo state on Sepolia: anchored reports, issuance batches, one audited purchase (two lots).
 
     python scripts/seed_sepolia.py            # idempotent: skips reports and batches already on-chain
 
@@ -36,7 +36,9 @@ def main() -> None:
     public, private = auditor_box_keys()
     svc = OnceSealed(registry, VaultStore(PROJECT_ROOT / "data" / "vault" / f"{SEPOLIA}.sqlite"), public, private)
     out_path = PROJECT_ROOT / "deployments" / f"{SEPOLIA}-seed.json"
-    log = json.loads(out_path.read_text(encoding="utf-8")) if out_path.exists() else {"txs": []}
+    log = json.loads(out_path.read_text(encoding="utf-8")) if out_path.exists() else {}
+    if log.get("contract") != registry.address:  # new deployment: start a new log
+        log = {"contract": registry.address, "deploy_gas": record.get("gas_used"), "txs": []}
 
     def note(kind: str, tx, **extra) -> None:
         log["txs"].append({"kind": kind, "tx": tx.tx_hash, "block": tx.block_number, "gas": tx.gas_used, **extra})
@@ -52,33 +54,36 @@ def main() -> None:
         version, tx, report_hash = svc.publish_report(report)
         note("registerQualityReport", tx, project=pid, version=version, report_hash=report_hash)
 
-    print("issuance batches (first batch of each project; simulated serials)")
+    print("issuance batches (first batch of each project; simulated serials, standard lots)")
     batches = {pid: load_batches(pid)[0] for pid in DEMO_PROJECTS}
     for pid, b in batches.items():
         tx = svc.ensure_batch(b)
         if tx is None:
             print(f"  {b.key}: already registered")
         else:
-            note("registerBatch", tx, batch=b.key, serials=[b.first_serial, b.last_serial])
+            note("registerBatch", tx, batch=b.key, serials=[b.first_serial, b.last_serial], lot_size=b.lot_size)
 
     if any(t["kind"] == "retire" for t in log["txs"]):
         print("demo retirement already done")
         return
-    print("one retirement by a fictional buyer, then the auditor's attestation")
+    print("a fictional buyer retires 2,000 t as two standard lots, then the auditor attests both")
     buyer = json.loads((PROJECT_ROOT / "data" / "demo_buyers.json").read_text(encoding="utf-8"))["buyers"][0]
     batch = batches["VCS1477"]
-    outcome = svc.retire(batch, 1, 1000, buyer["lei"])
-    note("retire", outcome.tx, retirement_id=outcome.retirement_id, batch=batch.key, range=[1, 1000])
+    out = svc.retire_lots(batch, 1, 2000, buyer["lei"])
+    for o in out.lots:
+        note("retire", o.tx, retirement_id=o.retirement_id, batch=batch.key,
+             range=[o.receipt["start"], o.receipt["end"]])
     receipts = PROJECT_ROOT / "data" / "receipts"
     receipts.mkdir(parents=True, exist_ok=True)
-    (receipts / f"sepolia-{outcome.retirement_id}.json").write_text(json.dumps(outcome.receipt, indent=2) + "\n",
-                                                                    encoding="utf-8")
-    result, tx = svc.audit(outcome.retirement_id)
-    print(f"  audit checks: {result.checks}")
-    if tx:
-        note("attestRetirement", tx, retirement_id=outcome.retirement_id, valid=result.valid)
-    check = svc.verify_receipt(outcome.receipt)
-    print(f"  receipt verifies against Sepolia: {check.valid}")
+    path = receipts / f"sepolia-{out.lots[0].retirement_id}.json"
+    path.write_text(json.dumps(out.receipt, indent=2) + "\n", encoding="utf-8")
+    for o in out.lots:
+        result, tx = svc.audit(o.retirement_id)
+        print(f"  #{o.retirement_id} audit: {sum(result.checks.values())}/{len(result.checks)} checks ok")
+        if tx:
+            note("attestRetirement", tx, retirement_id=o.retirement_id, valid=result.valid)
+    check = svc.verify_receipt(out.receipt)
+    print(f"  receipt bundle verifies against Sepolia: {check.valid} (audit {check.audit_status.name})")
 
 
 if __name__ == "__main__":

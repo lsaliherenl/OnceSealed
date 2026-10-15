@@ -14,7 +14,7 @@ from core.data.batches import IssuanceBatch
 from core.hashing import hash_json
 from core.privacy.commitment import commitment, from_hex, new_salt, to_hex
 from core.privacy.identity import buyer_id, project_id
-from core.privacy.receipt import build_receipt, receipt_commitment
+from core.privacy.receipt import build_bundle, build_receipt, receipt_commitment
 from core.privacy.vault import AuditResult, VaultPayload, VaultStore, audit, seal, vault_hash
 
 
@@ -25,6 +25,16 @@ class RetireOutcome:
     receipt: dict[str, Any]
     vault_hash: str
     serial_label: str
+
+
+@dataclass(frozen=True)
+class LotsOutcome:
+    lots: list[RetireOutcome]
+    receipt: dict[str, Any]  # a single receipt for one lot, otherwise a bundle
+
+    @property
+    def gas_used(self) -> int:
+        return sum(o.tx.gas_used for o in self.lots)
 
 
 @dataclass(frozen=True)
@@ -50,7 +60,7 @@ class OnceSealed:
         if self.registry.batch_exists(batch.batch_id):
             return None
         return self.registry.register_batch(batch.batch_id, batch.project_id_bytes, batch.first_serial,
-                                            batch.last_serial)
+                                            batch.last_serial, batch.lot_size)
 
     def publish_report(self, report: dict[str, Any]) -> tuple[int, TxResult, str]:
         """Anchor a report exactly as published in reports/<id>.json. Returns (version, tx, report_hash)."""
@@ -85,6 +95,21 @@ class OnceSealed:
                                 batch_key=batch.key, start=start, end=end, lei=lei, salt=salt)
         return RetireOutcome(retirement_id, tx, receipt, stored, batch.serial_label(start, end))
 
+    def retire_lots(self, batch: IssuanceBatch, start: int, end: int, lei: str) -> LotsOutcome:
+        """Retire [start, end] as the batch's standard lots, one retirement (and salt) per lot.
+
+        Every lot is checked against the chain before the first one is sent, so an overlap or a
+        misaligned range fails without retiring anything. (Lots are separate transactions: if the
+        network fails midway, the receipt still covers the lots that went through.)"""
+        ranges = batch.lot_ranges(start, end)
+        for s, e in ranges:  # a lot is retired as a whole, so checking its ends covers it
+            hit = self.registry.retirement_of(batch.batch_id, s) or self.registry.retirement_of(batch.batch_id, e)
+            if hit:
+                raise RegistryError("AlreadyRetired", {"conflictingRetirementId": hit})
+        outcomes = [self.retire(batch, s, e, lei) for s, e in ranges]
+        receipt = outcomes[0].receipt if len(outcomes) == 1 else build_bundle([o.receipt for o in outcomes])
+        return LotsOutcome(outcomes, receipt)
+
     # --- audit ------------------------------------------------------------------------------
 
     def audit(self, retirement_id: int, attest: bool = True) -> tuple[AuditResult, TxResult | None]:
@@ -109,6 +134,8 @@ class OnceSealed:
         return self.registry.get_retirement(retirement_id)
 
     def verify_receipt(self, receipt: dict[str, Any]) -> ClaimCheck:
+        if "lots" in receipt:
+            return self._verify_bundle(receipt)
         checks: dict[str, bool] = {}
         try:
             checks["same_chain_and_contract"] = (
@@ -124,3 +151,17 @@ class OnceSealed:
         except (KeyError, ValueError, TypeError, RegistryError) as e:
             return ClaimCheck(False, checks, None, f"{e.__class__.__name__}: {e}")
         return ClaimCheck(all(checks.values()), checks, record.audit)
+
+    def _verify_bundle(self, bundle: dict[str, Any]) -> ClaimCheck:
+        """Valid only if every lot verifies and all lots name the same buyer as the bundle."""
+        results = [self.verify_receipt(r) for r in bundle.get("lots") or []]
+        if not results:
+            return ClaimCheck(False, {}, None, "empty bundle")
+        checks = {f"lot_{i + 1}_{k}": v for i, r in enumerate(results) for k, v in r.checks.items()}
+        checks["same_buyer_in_all_lots"] = all(
+            str(r.get("lei", "")).upper() == str(bundle.get("lei", "")).upper() for r in bundle["lots"])
+        statuses = {r.audit_status for r in results}
+        status = (AuditStatus.REJECTED if AuditStatus.REJECTED in statuses else
+                  AuditStatus.PENDING if AuditStatus.PENDING in statuses or None in statuses else AuditStatus.VERIFIED)
+        error = next((r.error for r in results if r.error), None)
+        return ClaimCheck(all(checks.values()) and all(r.valid for r in results), checks, status, error)

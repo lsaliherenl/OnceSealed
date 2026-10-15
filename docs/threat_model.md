@@ -52,25 +52,45 @@ Measured on all 495,403 retirements in OffsetsDB (snapshot 2026-06-01) with `scr
 **Interpretation.** The commitment hides the name, but a distinctive quantity can give the buyer away if the buyer
 (or someone else) publishes it. For 88.7% of retired tonnes, project and quantity alone single out one retirement.
 
-**Mitigation we can measure: standard lots.** If retirements were recorded as standard-size lots (remainder as a
-separate lot), lots of the same project and size become indistinguishable:
+**Mitigation, now enforced by the contract: standard lots.** A batch can be registered with a lot size
+(`registerBatch(..., lotSize)`, 1,000 t for the demo batches). In such a batch every retirement must be exactly one
+aligned lot (only the batch's final lot may be shorter), and each lot gets its own salt and commitment. A purchase
+of 5,000 t appears on-chain as five identical-looking lots, so the quantity no longer points at a buyer. Amounts
+that are not whole lots cannot be retired privately in a lot batch.
 
-| Lot size | Tonnes in standard lots | Tonnes in (still distinctive) remainders | Median anonymity set per project |
-|---|---|---|---|
-| 100 t | 99.4% | 0.6% | 594 lots |
-| 1,000 t | 95.8% | 4.2% | 61 lots |
-| 10,000 t | 78.4% | 21.6% | 9 lots |
+| Lot size | Tonnes in whole lots | Tonnes in remainders (not private) |
+|---|---|---|
+| 100 t | 99.4% | 0.6% |
+| 1,000 t | 95.8% | 4.2% |
+| 10,000 t | 78.4% | 21.6% |
 
-Lots alone are not enough: timing must also be decorrelated (e.g. publishing retirements in periodic batches).
-Hiding the quantity entirely would need zero-knowledge range proofs (future work).
+**But timing still links lots.** An earlier version of this document quoted a "median anonymity set of 61 lots"
+(the median number of lots per project). That ignored time: a buyer's five lots are retired together, so if
+nobody else retires from the same project around then, the lots are trivially grouped. We therefore model an
+operator that publishes all lots of a project once per epoch, in shuffled order. The anonymity set of a purchase is
+the number of purchases (OffsetsDB retirement records) with lots in the same project and epoch:
+
+| Lots of 1,000 t, published once per | Median anonymity set | Tonnes with no other purchase (fully exposed) | Tonnes in sets of >= 5 | Tonnes in sets of >= 10 |
+|---|---|---|---|---|
+| day | 2 | 36.8% | 17.0% | 4.6% |
+| week | 2 | 30.5% | 22.9% | 7.2% |
+| month | 3 | 21.4% | 35.4% | 15.2% |
+| quarter | 5 | 14.5% | 49.7% | 27.4% |
+
+**Interpretation.** Lots plus batched publication cut the exposed share from 88.7% of tonnes (project + quantity)
+to 14.5-36.8%, depending on how long the operator waits. They cannot do better than the crowd: when a project has
+only one buyer in a period, any record that shows the project and the period exposes that buyer. Hiding the project
+itself would need zero-knowledge proofs (future work). The epoch-based publication is an operating rule for the
+registry, not something the contract can enforce; the contract enforces the lot rule.
 
 ## Mitigations for the open limitations (future work, not implemented)
 
 - **T10 dishonest auditor:** k-of-n auditors (several auditors must attest), or a regulator able to re-open an audit.
 - **T11 key loss:** seal each vault to two keys (auditor and a regulator escrow key) and support key rotation by
   re-sealing vaults to a new key with an on-chain record of the key version.
-- **T12 linkability:** standard lots plus batched publication; longer term, zero-knowledge proofs of
-  "this retirement belongs to an entity in sector S" without revealing quantity or identity.
+- **T12 linkability:** standard lots are enforced on-chain; batched publication per epoch is an operator rule
+  (measured above). Longer term, zero-knowledge proofs of "this retirement belongs to an entity in sector S"
+  without revealing project, quantity or identity.
 
 ## Static analysis (Slither 0.11.6)
 

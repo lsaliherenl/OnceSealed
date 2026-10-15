@@ -63,26 +63,33 @@ def test_projects_and_report_anchoring(client):
 
 
 def test_retire_overlap_audit_and_disclosure(client):
-    body = {"batch_key": BATCH.key, "start": 1, "end": 500, "lei": LEI_A}
+    assert BATCH.lot_size == 1000
+    body = {"batch_key": BATCH.key, "start": 1, "end": 2000, "lei": LEI_A}
     assert client.post("/api/retirements", json=body).status_code == 401
     r = client.post("/api/retirements", json=body, headers=OP)
     assert r.status_code == 200, r.text
     out = r.json()
-    rid, receipt = out["retirement"]["retirement_id"], out["receipt"]
-    assert out["retirement"]["audit_status"] == "pending"
-    assert "lei" not in out["retirement"] and receipt["lei"] == LEI_A
+    lots, bundle = out["retirements"], out["receipt"]
+    assert [(x["start"], x["end"]) for x in lots] == [(1, 1000), (1001, 2000)]  # one retirement per lot
+    assert all(x["audit_status"] == "pending" and "lei" not in x for x in lots)
+    assert bundle["lei"] == LEI_A and bundle["quantity"] == 2000 and len(bundle["lots"]) == 2
+    rid, receipt = lots[0]["retirement_id"], bundle["lots"][0]
+    assert receipt["salt"] != bundle["lots"][1]["salt"]  # lots cannot be linked through a shared salt
 
-    clash = client.post("/api/retirements", json={**body, "start": 400, "end": 900, "lei": LEI_B}, headers=OP)
+    clash = client.post("/api/retirements", json={**body, "start": 1001, "end": 3000, "lei": LEI_B}, headers=OP)
     assert clash.status_code == 409
-    assert clash.json()["error"] == "AlreadyRetired" and clash.json()["args"]["conflictingRetirementId"] == rid
+    assert clash.json()["error"] == "AlreadyRetired"
+    assert clash.json()["args"]["conflictingRetirementId"] == lots[1]["retirement_id"]
+    misaligned = client.post("/api/retirements", json={**body, "start": 2001, "end": 2500, "lei": LEI_B}, headers=OP)
+    assert misaligned.status_code == 400 and "lot" in misaligned.text
 
-    bad = client.post("/api/retirements", json={**body, "start": 600, "end": 700, "lei": "NOTALEI"}, headers=OP)
+    bad = client.post("/api/retirements", json={**body, "start": 3001, "end": 4000, "lei": "NOTALEI"}, headers=OP)
     assert bad.status_code == 400
 
     look = client.get("/api/lookup", params={"batch_key": BATCH.key, "serial": 250}).json()
     assert look["retired"] and look["retirement"]["retirement_id"] == rid
     batches = {b["key"]: b for b in client.get("/api/projects/VCS1477/batches").json()}
-    assert batches[BATCH.key]["retired_quantity"] == 500
+    assert batches[BATCH.key]["retired_quantity"] == 2000 and batches[BATCH.key]["lot_size"] == 1000
 
     assert client.get("/api/audit/pending").status_code == 401
     assert rid in [p["retirement_id"] for p in client.get("/api/audit/pending", headers=AUD).json()]
@@ -98,3 +105,6 @@ def test_retire_overlap_audit_and_disclosure(client):
     assert ok["valid"] and ok["audit_status"] == "verified"
     forged = client.post("/api/receipts/verify", json={**receipt, "salt": to_hex(new_salt())}).json()
     assert not forged["valid"]
+    # the bundle verifies as a whole, but stays pending until every lot is audited
+    whole = client.post("/api/receipts/verify", json=bundle).json()
+    assert whole["valid"] and whole["audit_status"] == "pending"

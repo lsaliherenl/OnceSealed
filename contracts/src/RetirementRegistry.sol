@@ -13,6 +13,9 @@ import {SafeCast} from "@openzeppelin/contracts/utils/math/SafeCast.sol";
 ///      retirements and never mints tokens: retired credits must not become tradable again.
 ///      Admin handover is two-step with a delay (AccessControlDefaultAdminRules), so a single
 ///      mistaken or stolen transaction cannot hand over the registry.
+///      Privacy against amount matching: a batch registered with a lot size only accepts retirements of
+///      exactly one aligned lot (the batch's final lot may be shorter), so every private retirement in it
+///      looks the same on-chain. Free-range batches (lot size 0) accept any range.
 contract RetirementRegistry is AccessControlDefaultAdminRules {
     bytes32 public constant ASSESSOR_ROLE = keccak256("ASSESSOR_ROLE");
     bytes32 public constant OPERATOR_ROLE = keccak256("OPERATOR_ROLE");
@@ -28,6 +31,7 @@ contract RetirementRegistry is AccessControlDefaultAdminRules {
         bytes32 projectId;
         uint64 firstSerial;
         uint64 lastSerial;
+        uint64 lotSize; // 0 = free ranges; otherwise every retirement is exactly one aligned lot
         bool exists;
     }
 
@@ -56,9 +60,13 @@ contract RetirementRegistry is AccessControlDefaultAdminRules {
     // Retirements of a batch as a linked list sorted by serial: head = lowest range.
     mapping(bytes32 batchId => uint256) private _head;
     mapping(uint256 retirementId => uint256) private _next;
+    // Lot batches: lot index -> retirement id (constant-time overlap check and lookup, no list needed).
+    mapping(bytes32 batchId => mapping(uint64 lotIndex => uint256)) private _lotRetirement;
     uint256 public retirementCount; // ids start at 1
 
-    event BatchRegistered(bytes32 indexed batchId, bytes32 indexed projectId, uint64 firstSerial, uint64 lastSerial);
+    event BatchRegistered(
+        bytes32 indexed batchId, bytes32 indexed projectId, uint64 firstSerial, uint64 lastSerial, uint64 lotSize
+    );
     event QualityReportRegistered(
         bytes32 indexed projectId, uint32 indexed version, bytes32 reportHash, bytes32 methodHash, uint16 score
     );
@@ -84,6 +92,7 @@ contract RetirementRegistry is AccessControlDefaultAdminRules {
     error AlreadyAttested(uint256 retirementId);
     error UnknownReport(bytes32 projectId, uint32 version);
     error InvalidHint(uint256 prevHint);
+    error NotALot(uint64 start, uint64 end, uint64 lotSize);
 
     /// @param adminDelay seconds a scheduled admin handover must wait before it can be accepted
     constructor(uint48 adminDelay, address admin) AccessControlDefaultAdminRules(adminDelay, admin) {}
@@ -93,15 +102,16 @@ contract RetirementRegistry is AccessControlDefaultAdminRules {
     // ---------------------------------------------------------------------------------------------
 
     /// @notice Declare an issuance batch and its serial range. Retirements must fall inside it.
-    function registerBatch(bytes32 batchId, bytes32 projectId, uint64 firstSerial, uint64 lastSerial)
+    /// @param lotSize 0 for free ranges, or the standard lot size every retirement in this batch must have.
+    function registerBatch(bytes32 batchId, bytes32 projectId, uint64 firstSerial, uint64 lastSerial, uint64 lotSize)
         external
         onlyRole(OPERATOR_ROLE)
     {
         if (batchId == bytes32(0) || projectId == bytes32(0)) revert ZeroValue();
         if (firstSerial > lastSerial) revert InvalidRange(firstSerial, lastSerial);
         if (_batches[batchId].exists) revert BatchExists(batchId);
-        _batches[batchId] = Batch(projectId, firstSerial, lastSerial, true);
-        emit BatchRegistered(batchId, projectId, firstSerial, lastSerial);
+        _batches[batchId] = Batch(projectId, firstSerial, lastSerial, lotSize, true);
+        emit BatchRegistered(batchId, projectId, firstSerial, lastSerial, lotSize);
     }
 
     /// @notice Anchor a new version of a project's quality report. Earlier versions are kept.
@@ -121,8 +131,9 @@ contract RetirementRegistry is AccessControlDefaultAdminRules {
 
     /// @notice Retire serials [start, end] of a batch. Reverts if any serial in the range was retired before.
     /// @param buyerCommitment keccak256(abi.encode(buyerId, salt, batchId, start, end)); see commitmentOf.
-    /// @param prevHint id of the batch's retirement that ends right before `start`, or 0 if the new range comes
-    ///        first. Clients get it from hintFor() or from CreditRetired events.
+    /// @param prevHint free-range batches: id of the batch's retirement that ends right before `start`, or 0 if
+    ///        the new range comes first (clients get it from hintFor() or CreditRetired events). Ignored for
+    ///        lot batches, where the lot index is checked directly.
     /// @dev Retirements of a batch form a sorted, non-overlapping linked list. Given the immediate predecessor,
     ///      checking the two neighbours proves the new range overlaps nothing, so gas stays constant however
     ///      many retirements the batch has (a linear scan reached the block gas limit at a few thousand).
@@ -140,6 +151,51 @@ contract RetirementRegistry is AccessControlDefaultAdminRules {
         if (start > end || start < batch.firstSerial || end > batch.lastSerial) revert InvalidRange(start, end);
         if (buyerCommitment == bytes32(0) || auditVaultHash == bytes32(0)) revert ZeroValue();
 
+        if (batch.lotSize != 0) {
+            retirementId = _retireLot(batchId, batch, start, end);
+        } else {
+            retirementId = _retireRange(batchId, start, end, prevHint);
+        }
+        uint32 reportVersion = SafeCast.toUint32(_reports[batch.projectId].length);
+        _retirements[retirementId] = Retirement({
+            batchId: batchId,
+            start: start,
+            end: end,
+            buyerCommitment: buyerCommitment,
+            auditVaultHash: auditVaultHash,
+            reportVersion: reportVersion,
+            retiredAt: SafeCast.toUint64(block.timestamp),
+            audit: AuditStatus.Pending
+        });
+        _batchRetirements[batchId].push(retirementId);
+        emit CreditRetired(
+            retirementId, batchId, batch.projectId, start, end, buyerCommitment, auditVaultHash, reportVersion
+        );
+    }
+
+    /// @dev One aligned lot; only the batch's final lot may be shorter than lotSize.
+    function _retireLot(bytes32 batchId, Batch storage batch, uint64 start, uint64 end)
+        private
+        returns (uint256 retirementId)
+    {
+        uint64 lot = batch.lotSize;
+        uint64 offset = start - batch.firstSerial;
+        uint64 size = end - start + 1;
+        if (offset % lot != 0 || (size != lot && !(size < lot && end == batch.lastSerial))) {
+            revert NotALot(start, end, lot);
+        }
+        uint64 index = offset / lot;
+        uint256 existing = _lotRetirement[batchId][index];
+        if (existing != 0) revert AlreadyRetired(existing);
+        retirementId = ++retirementCount;
+        _lotRetirement[batchId][index] = retirementId;
+    }
+
+    /// @dev Insert into the batch's sorted list after checking the hinted neighbours.
+    function _retireRange(bytes32 batchId, uint64 start, uint64 end, uint256 prevHint)
+        private
+        returns (uint256 retirementId)
+    {
         uint256 next;
         if (prevHint == 0) {
             next = _head[batchId];
@@ -164,21 +220,6 @@ contract RetirementRegistry is AccessControlDefaultAdminRules {
         _next[retirementId] = next;
         if (prevHint == 0) _head[batchId] = retirementId;
         else _next[prevHint] = retirementId;
-        uint32 reportVersion = SafeCast.toUint32(_reports[batch.projectId].length);
-        _retirements[retirementId] = Retirement({
-            batchId: batchId,
-            start: start,
-            end: end,
-            buyerCommitment: buyerCommitment,
-            auditVaultHash: auditVaultHash,
-            reportVersion: reportVersion,
-            retiredAt: SafeCast.toUint64(block.timestamp),
-            audit: AuditStatus.Pending
-        });
-        _batchRetirements[batchId].push(retirementId);
-        emit CreditRetired(
-            retirementId, batchId, batch.projectId, start, end, buyerCommitment, auditVaultHash, reportVersion
-        );
     }
 
     /// @notice Record the auditor's off-chain check of the vault against the commitment. One-time and final.
@@ -223,8 +264,13 @@ contract RetirementRegistry is AccessControlDefaultAdminRules {
     }
 
     /// @notice Returns the retirement id covering `serial`, or 0 if it has not been retired.
-    /// @dev Walks the sorted list; meant for off-chain reads (eth_call), not for other contracts.
+    /// @dev Constant time for lot batches; walks the sorted list for free-range batches (off-chain reads).
     function retirementOf(bytes32 batchId, uint64 serial) public view returns (uint256) {
+        Batch storage b = _batches[batchId];
+        if (b.lotSize != 0) {
+            if (serial < b.firstSerial || serial > b.lastSerial) return 0;
+            return _lotRetirement[batchId][(serial - b.firstSerial) / b.lotSize];
+        }
         for (uint256 id = _head[batchId]; id != 0; id = _next[id]) {
             Retirement storage r = _retirements[id];
             if (serial < r.start) return 0;
@@ -243,12 +289,15 @@ contract RetirementRegistry is AccessControlDefaultAdminRules {
         }
     }
 
-    /// @notice Retirement ids of a batch in serial order.
+    /// @notice Retirement ids of a free-range batch in serial order (empty for lot batches; see batchRetirements).
     function orderedRetirements(bytes32 batchId) external view returns (uint256[] memory out) {
         out = new uint256[](_batchRetirements[batchId].length);
         uint256 i = 0;
         for (uint256 id = _head[batchId]; id != 0; id = _next[id]) {
             out[i++] = id;
+        }
+        assembly ("memory-safe") {
+            mstore(out, i)
         }
     }
 

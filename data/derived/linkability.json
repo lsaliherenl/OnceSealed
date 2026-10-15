@@ -35,5 +35,35 @@
       "tonnes_in_remainders": 0.21628171773947377,
       "median_anonymity_set": 9
     }
+  },
+  "lots_with_epochs": {
+    "lot_size": 1000,
+    "note": "anonymity set = purchases with lots in the same project and epoch; share of tonnes retired in whole lots",
+    "epochs": {
+      "day": {
+        "median_set": 2.0,
+        "tonnes_exposed_k1": 0.3682812969562024,
+        "tonnes_k_ge_5": 0.1700343065919028,
+        "tonnes_k_ge_10": 0.04615574811320321
+      },
+      "week": {
+        "median_set": 2.0,
+        "tonnes_exposed_k1": 0.3045993980399803,
+        "tonnes_k_ge_5": 0.2291373901081016,
+        "tonnes_k_ge_10": 0.07241801303216482
+      },
+      "month": {
+        "median_set": 3.0,
+        "tonnes_exposed_k1": 0.21371684994860915,
+        "tonnes_k_ge_5": 0.3544396359831893,
+        "tonnes_k_ge_10": 0.1524404237788017
+      },
+      "quarter": {
+        "median_set": 5.0,
+        "tonnes_exposed_k1": 0.1454429837857459,
+        "tonnes_k_ge_5": 0.4968432280155376,
+        "tonnes_k_ge_10": 0.27425677270781396
+      }
+    }
   }
 }

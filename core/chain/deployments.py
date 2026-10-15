@@ -18,12 +18,15 @@ def path_for(chain_id: int) -> Path:
 
 
 def save(chain_id: int, network: str, address: str, tx_hash: str, block: int,
-         roles: dict[str, str], artifact_compiler: str | None) -> dict[str, Any]:
+         roles: dict[str, str], artifact_compiler: str | None, gas_used: int | None = None) -> dict[str, Any]:
     record = {
         "network": network, "chain_id": chain_id, "address": address, "tx_hash": tx_hash, "block": block,
-        "roles": roles, "compiler": artifact_compiler,
+        "gas_used": gas_used, "roles": roles, "compiler": artifact_compiler,
         "deployed_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
     }
+    old = load(chain_id)
+    if old and old["address"] != address:  # keep earlier contract versions findable
+        record["previous"] = [*old.get("previous", []), {k: old.get(k) for k in ("address", "tx_hash", "deployed_at")}]
     DEPLOYMENTS_DIR.mkdir(exist_ok=True)
     path_for(chain_id).write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
     return record

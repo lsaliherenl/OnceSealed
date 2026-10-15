@@ -57,8 +57,9 @@ published file and compare.
 ### 2. Confidential retirement
 
 1. The registry operator retires a serial range on-chain with
-   `buyerCommitment = keccak256(abi.encodePacked(buyerId, salt))`, where `salt` is 32 random bytes and
-   `buyerId = keccak256("LEI:" + LEI)`.
+   `buyerCommitment = keccak256(abi.encode(buyerId, salt, batchId, start, end))`, where `salt` is 32 random bytes and
+   `buyerId = keccak256("LEI:" + LEI)`. A purchase is retired as standard lots (1,000 t in the demo), each with its own
+   salt, so the amount and the lots of one purchase cannot be linked on-chain (see the limits below).
 2. `{serial range, LEI, buyerId, salt}` is encrypted to the auditor's public key (libsodium sealed box) and stored
    off-chain; only `keccak256(ciphertext)` goes on-chain.
 3. The auditor decrypts, recomputes both hashes, and records an attestation on-chain.
@@ -73,9 +74,9 @@ This is a hash commitment + encryption design, **not** a zero-knowledge proof sy
 
 | Function | Role | What it does |
 |---|---|---|
-| `registerBatch` | operator | Declares an issuance batch and its serial range. |
+| `registerBatch` | operator | Declares an issuance batch, its serial range and its lot size (0 = free ranges). |
 | `registerQualityReport` | assessor | Anchors a report hash, score and method hash; versions are kept. |
-| `retire` | operator | Retires serials `[start, end]`; rejects any range that overlaps a previous retirement (`AlreadyRetired`). Records the project's report version at that moment. |
+| `retire` | operator | Retires serials `[start, end]`; rejects any range that overlaps a previous retirement (`AlreadyRetired`). In a lot batch the range must be exactly one aligned lot (`NotALot`). Records the project's report version at that moment. |
 | `attestRetirement` | auditor | One-time, final `Verified` / `Rejected` status after checking the vault off-chain. |
 | `verifyClaim` | anyone (view) | Checks a disclosed `(buyerId, salt)` against the commitment. |
 
@@ -83,9 +84,17 @@ The commitment is `keccak256(abi.encode(buyerId, salt, batchId, start, end))`, s
 retirement and cannot be reused for another. There is no transfer or mint function: retired credits cannot become
 tradable again.
 
-Tested with Foundry (27 tests, including fuzz tests that check, over thousands of random ranges, that no serial is ever
-retired twice). The overlap check scans a batch's retirements linearly; that is fine at prototype scale and only the
-operator can add entries, but a production registry would use an ordered interval structure. **TODO:** Sepolia deployment.
+Tested with Foundry (46 tests, including fuzz tests that check, over thousands of random ranges and hints, that no
+serial is ever retired twice). Overlap checks cost the same however many retirements a batch has: lot batches look
+up the lot index directly, and free-range batches keep a sorted linked list where the caller passes the predecessor
+as a hint (a wrong hint can only make the call revert). A first version scanned the list linearly; replaying 38,382
+real retirements of one Verra batch, it hit the block gas limit at retirement 7,467
+([scale results](data/derived/scale/summary.json), [chart](docs/figures/scale_gas.png)).
+
+**Privacy limits, measured** ([threat model](docs/threat_model.md), T12): for 88.7% of retired tonnes in OffsetsDB,
+project + quantity alone single out one retirement. Standard lots remove the quantity; timing still links lots unless
+the operator publishes them in shuffled periodic batches, and even then 14.5% (quarterly) to 36.8% (daily) of tonnes
+have no other purchase in the same project and period to hide among.
 
 ## Design decisions
 

@@ -255,6 +255,11 @@ export const registryAbi = [
             "internalType": "uint64"
           },
           {
+            "name": "lotSize",
+            "type": "uint64",
+            "internalType": "uint64"
+          },
+          {
             "name": "exists",
             "type": "bool",
             "internalType": "bool"
@@ -612,6 +617,11 @@ export const registryAbi = [
         "name": "lastSerial",
         "type": "uint64",
         "internalType": "uint64"
+      },
+      {
+        "name": "lotSize",
+        "type": "uint64",
+        "internalType": "uint64"
       }
     ],
     "outputs": [],
@@ -866,6 +876,12 @@ export const registryAbi = [
       },
       {
         "name": "lastSerial",
+        "type": "uint64",
+        "indexed": false,
+        "internalType": "uint64"
+      },
+      {
+        "name": "lotSize",
         "type": "uint64",
         "indexed": false,
         "internalType": "uint64"
@@ -1231,6 +1247,27 @@ export const registryAbi = [
         "name": "score",
         "type": "uint16",
         "internalType": "uint16"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "NotALot",
+    "inputs": [
+      {
+        "name": "start",
+        "type": "uint64",
+        "internalType": "uint64"
+      },
+      {
+        "name": "end",
+        "type": "uint64",
+        "internalType": "uint64"
+      },
+      {
+        "name": "lotSize",
+        "type": "uint64",
+        "internalType": "uint64"
       }
     ]
   },

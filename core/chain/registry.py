@@ -67,6 +67,7 @@ class Batch:
     project_id: bytes
     first_serial: int
     last_serial: int
+    lot_size: int = 0  # 0 = free ranges; otherwise each retirement is exactly one aligned lot
 
 
 @dataclass(frozen=True)
@@ -180,8 +181,16 @@ class Registry:
             raise decode_revert(getattr(e, "data", None), self.abi) from None
         return _send(self.w3, acct, fn.build_transaction(_base_tx(self.w3, acct)), self.abi)
 
-    def register_batch(self, batch_id: bytes, project_id: bytes, first: int, last: int) -> TxResult:
-        return self._transact("operator", self.contract.functions.registerBatch(batch_id, project_id, first, last))
+    def register_batch(self, batch_id: bytes, project_id: bytes, first: int, last: int,
+                       lot_size: int = 0) -> TxResult:
+        fn = next(e for e in self.abi if e.get("type") == "function" and e.get("name") == "registerBatch")
+        if len(fn["inputs"]) == 5:
+            call = self.contract.functions.registerBatch(batch_id, project_id, first, last, lot_size)
+        elif lot_size == 0:  # older contract versions (scale experiment) have no lot sizes
+            call = self.contract.functions.registerBatch(batch_id, project_id, first, last)
+        else:
+            raise ValueError("this contract version does not support lot sizes")
+        return self._transact("operator", call)
 
     def register_quality_report(self, project_id: bytes, report_hash: bytes, score: int,
                                 method_hash: bytes) -> tuple[int, TxResult]:
@@ -240,7 +249,7 @@ class Registry:
 
     def get_batch(self, batch_id: bytes) -> Batch:
         b = self._call(self.contract.functions.getBatch(batch_id))
-        return Batch(batch_id, b[0], b[1], b[2])
+        return Batch(batch_id, b[0], b[1], b[2], b[3] if len(b) > 4 else 0)
 
     def batch_exists(self, batch_id: bytes) -> bool:
         try:

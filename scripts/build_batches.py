@@ -11,7 +11,7 @@ import json
 
 from core.config import PROJECT_ROOT
 from core.data import offsetsdb
-from core.data.batches import IssuanceBatch
+from core.data.batches import DEFAULT_LOT_SIZE, IssuanceBatch
 
 
 def main() -> None:
@@ -24,11 +24,12 @@ def main() -> None:
     batches = []
     for (pid, vintage), group in iss.groupby(["project_id", "vintage"], sort=True):
         for n, row in enumerate(group.itertuples(), start=1):
-            b = IssuanceBatch(pid, int(vintage), n, 1, int(row.quantity))
+            b = IssuanceBatch(pid, int(vintage), n, 1, int(row.quantity), DEFAULT_LOT_SIZE)
             batches.append({
                 "key": b.key, "batch_id": "0x" + b.batch_id.hex(), "project_id": pid, "vintage": int(vintage),
                 "batch_no": n, "first_serial": b.first_serial, "last_serial": b.last_serial,
-                "quantity": b.quantity, "issued_on": row.transaction_date.date().isoformat(),
+                "quantity": b.quantity, "lot_size": b.lot_size,
+                "issued_on": row.transaction_date.date().isoformat(),
             })
     out = {
         "note": "Simulated serial ranges sized from real OffsetsDB issuance records. Not real Verra serial numbers.",

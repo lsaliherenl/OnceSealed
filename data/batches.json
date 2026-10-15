@@ -11,6 +11,7 @@
       "first_serial": 1,
       "last_serial": 56520,
       "quantity": 56520,
+      "lot_size": 1000,
       "issued_on": "2010-04-08"
     },
     {
@@ -22,6 +23,7 @@
       "first_serial": 1,
       "last_serial": 59245,
       "quantity": 59245,
+      "lot_size": 1000,
       "issued_on": "2010-06-04"
     },
     {
@@ -33,6 +35,7 @@
       "first_serial": 1,
       "last_serial": 52406,
       "quantity": 52406,
+      "lot_size": 1000,
       "issued_on": "2010-10-07"
     },
     {
@@ -44,6 +47,7 @@
       "first_serial": 1,
       "last_serial": 47744,
       "quantity": 47744,
+      "lot_size": 1000,
       "issued_on": "2011-05-06"
     },
     {
@@ -55,6 +59,7 @@
       "first_serial": 1,
       "last_serial": 48781,
       "quantity": 48781,
+      "lot_size": 1000,
       "issued_on": "2014-07-07"
     },
     {
@@ -66,6 +71,7 @@
       "first_serial": 1,
       "last_serial": 49652,
       "quantity": 49652,
+      "lot_size": 1000,
       "issued_on": "2015-01-27"
     },
     {
@@ -77,6 +83,7 @@
       "first_serial": 1,
       "last_serial": 50719,
       "quantity": 50719,
+      "lot_size": 1000,
       "issued_on": "2013-09-24"
     },
     {
@@ -88,6 +95,7 @@
       "first_serial": 1,
       "last_serial": 51915,
       "quantity": 51915,
+      "lot_size": 1000,
       "issued_on": "2013-12-18"
     },
     {
@@ -99,6 +107,7 @@
       "first_serial": 1,
       "last_serial": 46948,
       "quantity": 46948,
+      "lot_size": 1000,
       "issued_on": "2014-01-08"
     },
     {
@@ -110,6 +119,7 @@
       "first_serial": 1,
       "last_serial": 47514,
       "quantity": 47514,
+      "lot_size": 1000,
       "issued_on": "2015-01-27"
     },
     {
@@ -121,6 +131,7 @@
       "first_serial": 1,
       "last_serial": 24173,
       "quantity": 24173,
+      "lot_size": 1000,
       "issued_on": "2015-04-17"
     },
     {
@@ -132,6 +143,7 @@
       "first_serial": 1,
       "last_serial": 74554,
       "quantity": 74554,
+      "lot_size": 1000,
       "issued_on": "2016-01-19"
     },
     {
@@ -143,6 +155,7 @@
       "first_serial": 1,
       "last_serial": 69777,
       "quantity": 69777,
+      "lot_size": 1000,
       "issued_on": "2016-01-28"
     },
     {
@@ -154,6 +167,7 @@
       "first_serial": 1,
       "last_serial": 23980,
       "quantity": 23980,
+      "lot_size": 1000,
       "issued_on": "2018-01-05"
     },
     {
@@ -165,6 +179,7 @@
       "first_serial": 1,
       "last_serial": 45697,
       "quantity": 45697,
+      "lot_size": 1000,
       "issued_on": "2017-08-30"
     },
     {
@@ -176,6 +191,7 @@
       "first_serial": 1,
       "last_serial": 48627,
       "quantity": 48627,
+      "lot_size": 1000,
       "issued_on": "2018-01-05"
     },
     {
@@ -187,6 +203,7 @@
       "first_serial": 1,
       "last_serial": 27799,
       "quantity": 27799,
+      "lot_size": 1000,
       "issued_on": "2017-08-30"
     },
     {
@@ -198,6 +215,7 @@
       "first_serial": 1,
       "last_serial": 56613,
       "quantity": 56613,
+      "lot_size": 1000,
       "issued_on": "2019-02-04"
     },
     {
@@ -209,6 +227,7 @@
       "first_serial": 1,
       "last_serial": 76930,
       "quantity": 76930,
+      "lot_size": 1000,
       "issued_on": "2020-03-27"
     },
     {
@@ -220,6 +239,7 @@
       "first_serial": 1,
       "last_serial": 56788,
       "quantity": 56788,
+      "lot_size": 1000,
       "issued_on": "2019-11-20"
     },
     {
@@ -231,6 +251,7 @@
       "first_serial": 1,
       "last_serial": 22070,
       "quantity": 22070,
+      "lot_size": 1000,
       "issued_on": "2020-09-14"
     },
     {
@@ -242,6 +263,7 @@
       "first_serial": 1,
       "last_serial": 44475,
       "quantity": 44475,
+      "lot_size": 1000,
       "issued_on": "2020-08-28"
     },
     {
@@ -253,6 +275,7 @@
       "first_serial": 1,
       "last_serial": 45597,
       "quantity": 45597,
+      "lot_size": 1000,
       "issued_on": "2021-06-22"
     },
     {
@@ -264,6 +287,7 @@
       "first_serial": 1,
       "last_serial": 24402,
       "quantity": 24402,
+      "lot_size": 1000,
       "issued_on": "2021-07-07"
     },
     {
@@ -275,6 +299,7 @@
       "first_serial": 1,
       "last_serial": 78585,
       "quantity": 78585,
+      "lot_size": 1000,
       "issued_on": "2022-05-12"
     },
     {
@@ -286,6 +311,7 @@
       "first_serial": 1,
       "last_serial": 67565,
       "quantity": 67565,
+      "lot_size": 1000,
       "issued_on": "2023-01-18"
     },
     {
@@ -297,6 +323,7 @@
       "first_serial": 1,
       "last_serial": 69463,
       "quantity": 69463,
+      "lot_size": 1000,
       "issued_on": "2023-10-09"
     },
     {
@@ -308,6 +335,7 @@
       "first_serial": 1,
       "last_serial": 98230,
       "quantity": 98230,
+      "lot_size": 1000,
       "issued_on": "2024-10-25"
     },
     {
@@ -319,6 +347,7 @@
       "first_serial": 1,
       "last_serial": 32417,
       "quantity": 32417,
+      "lot_size": 1000,
       "issued_on": "2025-12-15"
     },
     {
@@ -330,6 +359,7 @@
       "first_serial": 1,
       "last_serial": 110197,
       "quantity": 110197,
+      "lot_size": 1000,
       "issued_on": "2026-04-14"
     },
     {
@@ -341,6 +371,7 @@
       "first_serial": 1,
       "last_serial": 14165124,
       "quantity": 14165124,
+      "lot_size": 1000,
       "issued_on": "2017-05-31"
     },
     {
@@ -352,6 +383,7 @@
       "first_serial": 1,
       "last_serial": 4339233,
       "quantity": 4339233,
+      "lot_size": 1000,
       "issued_on": "2018-08-02"
     },
     {
@@ -363,6 +395,7 @@
       "first_serial": 1,
       "last_serial": 4830311,
       "quantity": 4830311,
+      "lot_size": 1000,
       "issued_on": "2019-01-16"
     },
     {
@@ -374,6 +407,7 @@
       "first_serial": 1,
       "last_serial": 5133319,
       "quantity": 5133319,
+      "lot_size": 1000,
       "issued_on": "2019-09-27"
     },
     {
@@ -385,6 +419,7 @@
       "first_serial": 1,
       "last_serial": 5646054,
       "quantity": 5646054,
+      "lot_size": 1000,
       "issued_on": "2021-05-17"
     },
     {
@@ -396,6 +431,7 @@
       "first_serial": 1,
       "last_serial": 5884249,
       "quantity": 5884249,
+      "lot_size": 1000,
       "issued_on": "2022-03-24"
     },
     {
@@ -407,6 +443,7 @@
       "first_serial": 1,
       "last_serial": 562006,
       "quantity": 562006,
+      "lot_size": 1000,
       "issued_on": "2021-10-14"
     },
     {
@@ -418,6 +455,7 @@
       "first_serial": 1,
       "last_serial": 1422028,
       "quantity": 1422028,
+      "lot_size": 1000,
       "issued_on": "2020-06-16"
     },
     {
@@ -429,6 +467,7 @@
       "first_serial": 1,
       "last_serial": 309222,
       "quantity": 309222,
+      "lot_size": 1000,
       "issued_on": "2021-07-02"
     },
     {
@@ -440,6 +479,7 @@
       "first_serial": 1,
       "last_serial": 1725763,
       "quantity": 1725763,
+      "lot_size": 1000,
       "issued_on": "2021-07-02"
     },
     {
@@ -451,6 +491,7 @@
       "first_serial": 1,
       "last_serial": 40386,
       "quantity": 40386,
+      "lot_size": 1000,
       "issued_on": "2021-11-03"
     },
     {
@@ -462,6 +503,7 @@
       "first_serial": 1,
       "last_serial": 1709793,
       "quantity": 1709793,
+      "lot_size": 1000,
       "issued_on": "2021-10-28"
     },
     {
@@ -473,6 +515,7 @@
       "first_serial": 1,
       "last_serial": 944387,
       "quantity": 944387,
+      "lot_size": 1000,
       "issued_on": "2022-05-16"
     },
     {
@@ -484,6 +527,7 @@
       "first_serial": 1,
       "last_serial": 746718,
       "quantity": 746718,
+      "lot_size": 1000,
       "issued_on": "2022-09-13"
     },
     {
@@ -495,6 +539,7 @@
       "first_serial": 1,
       "last_serial": 944966,
       "quantity": 944966,
+      "lot_size": 1000,
       "issued_on": "2023-01-25"
     },
     {
@@ -506,6 +551,7 @@
       "first_serial": 1,
       "last_serial": 786749,
       "quantity": 786749,
+      "lot_size": 1000,
       "issued_on": "2023-10-04"
     },
     {
@@ -517,6 +563,7 @@
       "first_serial": 1,
       "last_serial": 489201,
       "quantity": 489201,
+      "lot_size": 1000,
       "issued_on": "2024-03-04"
     },
     {
@@ -528,6 +575,7 @@
       "first_serial": 1,
       "last_serial": 491900,
       "quantity": 491900,
+      "lot_size": 1000,
       "issued_on": "2024-05-07"
     },
     {
@@ -539,6 +587,7 @@
       "first_serial": 1,
       "last_serial": 782757,
       "quantity": 782757,
+      "lot_size": 1000,
       "issued_on": "2024-08-05"
     },
     {
@@ -550,6 +599,7 @@
       "first_serial": 1,
       "last_serial": 454139,
       "quantity": 454139,
+      "lot_size": 1000,
       "issued_on": "2025-05-05"
     },
     {
@@ -561,6 +611,7 @@
       "first_serial": 1,
       "last_serial": 1182942,
       "quantity": 1182942,
+      "lot_size": 1000,
       "issued_on": "2025-09-03"
     },
     {
@@ -572,6 +623,7 @@
       "first_serial": 1,
       "last_serial": 148730,
       "quantity": 148730,
+      "lot_size": 1000,
       "issued_on": "2025-09-03"
     },
     {
@@ -583,6 +635,7 @@
       "first_serial": 1,
       "last_serial": 98995,
       "quantity": 98995,
+      "lot_size": 1000,
       "issued_on": "2022-06-24"
     },
     {
@@ -594,6 +647,7 @@
       "first_serial": 1,
       "last_serial": 4852,
       "quantity": 4852,
+      "lot_size": 1000,
       "issued_on": "2022-06-21"
     },
     {
@@ -605,6 +659,7 @@
       "first_serial": 1,
       "last_serial": 801138,
       "quantity": 801138,
+      "lot_size": 1000,
       "issued_on": "2023-07-07"
     },
     {
@@ -616,6 +671,7 @@
       "first_serial": 1,
       "last_serial": 117049,
       "quantity": 117049,
+      "lot_size": 1000,
       "issued_on": "2023-07-07"
     },
     {
@@ -627,6 +683,7 @@
       "first_serial": 1,
       "last_serial": 1203743,
       "quantity": 1203743,
+      "lot_size": 1000,
       "issued_on": "2024-06-05"
     },
     {
@@ -638,6 +695,7 @@
       "first_serial": 1,
       "last_serial": 1255174,
       "quantity": 1255174,
+      "lot_size": 1000,
       "issued_on": "2024-06-06"
     },
     {
@@ -649,6 +707,7 @@
       "first_serial": 1,
       "last_serial": 269467,
       "quantity": 269467,
+      "lot_size": 1000,
       "issued_on": "2024-06-06"
     },
     {
@@ -660,6 +719,7 @@
       "first_serial": 1,
       "last_serial": 1621768,
       "quantity": 1621768,
+      "lot_size": 1000,
       "issued_on": "2025-06-10"
     },
     {
@@ -671,6 +731,7 @@
       "first_serial": 1,
       "last_serial": 1678463,
       "quantity": 1678463,
+      "lot_size": 1000,
       "issued_on": "2025-06-13"
     },
     {
@@ -682,6 +743,7 @@
       "first_serial": 1,
       "last_serial": 263288,
       "quantity": 263288,
+      "lot_size": 1000,
       "issued_on": "2025-06-13"
     },
     {
@@ -693,6 +755,7 @@
       "first_serial": 1,
       "last_serial": 2155013,
       "quantity": 2155013,
+      "lot_size": 1000,
       "issued_on": "2026-05-11"
     },
     {
@@ -704,6 +767,7 @@
       "first_serial": 1,
       "last_serial": 1897296,
       "quantity": 1897296,
+      "lot_size": 1000,
       "issued_on": "2026-05-21"
     }
   ]

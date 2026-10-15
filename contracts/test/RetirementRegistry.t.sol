@@ -39,7 +39,7 @@ contract RetirementRegistryTest is Test {
         vm.stopPrank();
 
         vm.prank(operator);
-        reg.registerBatch(BATCH, PROJECT, FIRST, LAST);
+        reg.registerBatch(BATCH, PROJECT, FIRST, LAST, 0);
     }
 
     function _retire(uint64 start, uint64 end) internal returns (uint256) {
@@ -95,13 +95,13 @@ contract RetirementRegistryTest is Test {
     function test_RevertWhen_BatchRegisteredTwice() public {
         vm.prank(operator);
         vm.expectRevert(abi.encodeWithSelector(RetirementRegistry.BatchExists.selector, BATCH));
-        reg.registerBatch(BATCH, PROJECT, 1, 10);
+        reg.registerBatch(BATCH, PROJECT, 1, 10, 0);
     }
 
     function test_RevertWhen_BatchRangeInverted() public {
         vm.prank(operator);
         vm.expectRevert(abi.encodeWithSelector(RetirementRegistry.InvalidRange.selector, 10, 5));
-        reg.registerBatch(BATCH_2, PROJECT, 10, 5);
+        reg.registerBatch(BATCH_2, PROJECT, 10, 5, 0);
     }
 
     // --- retirement and double counting ---------------------------------------------------------
@@ -158,7 +158,7 @@ contract RetirementRegistryTest is Test {
 
     function test_SameSerialsInAnotherBatchAllowed() public {
         vm.prank(operator);
-        reg.registerBatch(BATCH_2, PROJECT, FIRST, LAST);
+        reg.registerBatch(BATCH_2, PROJECT, FIRST, LAST, 0);
         _retire(BATCH, 100, 199);
         assertEq(_retire(BATCH_2, 100, 199), 2);
     }
@@ -252,7 +252,7 @@ contract RetirementRegistryTest is Test {
 
     function test_RevertWhen_HintIsUnknownOrFromAnotherBatch() public {
         vm.prank(operator);
-        reg.registerBatch(BATCH_2, PROJECT, FIRST, LAST);
+        reg.registerBatch(BATCH_2, PROJECT, FIRST, LAST, 0);
         uint256 other = _retire(BATCH_2, 1, 10);
         _expectHintRevert(100, 199, 99, abi.encodeWithSelector(RetirementRegistry.InvalidHint.selector, 99));
         _expectHintRevert(100, 199, other, abi.encodeWithSelector(RetirementRegistry.InvalidHint.selector, other));
@@ -284,7 +284,7 @@ contract RetirementRegistryTest is Test {
 
     function test_GasDoesNotGrowWithBatchSize() public {
         vm.prank(operator);
-        reg.registerBatch(BATCH_2, PROJECT, 1, 1_000_000);
+        reg.registerBatch(BATCH_2, PROJECT, 1, 1_000_000, 0);
         uint256 prev;
         uint256 firstGas;
         uint256 lastGas;
@@ -411,7 +411,7 @@ contract RetirementRegistryTest is Test {
 
         vm.prank(assessor);
         _expectUnauthorized(assessor, operatorRole);
-        reg.registerBatch(BATCH_2, PROJECT, 1, 10);
+        reg.registerBatch(BATCH_2, PROJECT, 1, 10, 0);
 
         vm.prank(operator);
         _expectUnauthorized(operator, assessorRole);
@@ -471,5 +471,104 @@ contract RetirementRegistryTest is Test {
         vm.prank(admin);
         vm.expectRevert(IAccessControlDefaultAdminRules.AccessControlEnforcedDefaultAdminRules.selector);
         reg.grantRole(adminRole, stranger);
+    }
+
+    // --- standard lots (privacy against amount matching) --------------------------------------
+
+    bytes32 internal constant LOTS = keccak256("VCS1477|lots");
+    uint64 internal constant LOT = 100;
+    uint64 internal constant LOT_LAST = 1050; // 10 full lots + a final lot of 50
+
+    function _lotBatch() internal {
+        vm.prank(operator);
+        reg.registerBatch(LOTS, PROJECT, FIRST, LOT_LAST, LOT);
+    }
+
+    function _retireLot(uint64 start, uint64 end) internal returns (uint256) {
+        bytes32 c = reg.commitmentOf(BUYER, SALT, LOTS, start, end);
+        vm.prank(operator);
+        return reg.retire(LOTS, start, end, c, VAULT, 0);
+    }
+
+    function _expectLotRevert(uint64 start, uint64 end, bytes memory err) internal {
+        bytes32 c = reg.commitmentOf(BUYER, SALT, LOTS, start, end);
+        vm.prank(operator);
+        vm.expectRevert(err);
+        reg.retire(LOTS, start, end, c, VAULT, 0);
+    }
+
+    function test_LotBatchAcceptsExactlyOneAlignedLot() public {
+        _lotBatch();
+        assertEq(reg.getBatch(LOTS).lotSize, LOT);
+        uint256 a = _retireLot(1, 100);
+        uint256 b = _retireLot(301, 400);
+        assertEq(reg.retirementOf(LOTS, 1), a);
+        assertEq(reg.retirementOf(LOTS, 100), a);
+        assertEq(reg.retirementOf(LOTS, 350), b);
+        assertEq(reg.retirementOf(LOTS, 101), 0);
+        assertEq(reg.retirementOf(LOTS, 5000), 0);
+        assertEq(reg.batchRetirements(LOTS).length, 2);
+        assertEq(reg.orderedRetirements(LOTS).length, 0, "lot batches keep no sorted list");
+    }
+
+    function test_RevertWhen_LotMisalignedOrWrongSize() public {
+        _lotBatch();
+        bytes4 sel = RetirementRegistry.NotALot.selector;
+        _expectLotRevert(2, 101, abi.encodeWithSelector(sel, 2, 101, LOT)); // not aligned
+        _expectLotRevert(1, 99, abi.encodeWithSelector(sel, 1, 99, LOT)); // too short
+        _expectLotRevert(1, 200, abi.encodeWithSelector(sel, 1, 200, LOT)); // two lots in one retirement
+        _expectLotRevert(1001, 1040, abi.encodeWithSelector(sel, 1001, 1040, LOT)); // partial final lot
+    }
+
+    function test_FinalShortLotOnlyAtBatchEnd() public {
+        _lotBatch();
+        uint256 id = _retireLot(1001, 1050);
+        assertEq(reg.retirementOf(LOTS, 1050), id);
+    }
+
+    function test_RevertWhen_LotRetiredTwice() public {
+        _lotBatch();
+        uint256 id = _retireLot(201, 300);
+        _expectLotRevert(201, 300, abi.encodeWithSelector(RetirementRegistry.AlreadyRetired.selector, id));
+    }
+
+    /// Lots never overlap and every accepted retirement is one aligned lot, whatever the operator sends.
+    function testFuzz_LotBatchNeverRetiresASerialTwice(uint64[10] memory starts, uint64[10] memory lens) public {
+        _lotBatch();
+        for (uint256 i = 0; i < 10; ++i) {
+            uint64 s = uint64(bound(starts[i], FIRST, LOT_LAST));
+            uint64 e = uint64(bound(lens[i], 0, 250)) + s;
+            if (e > LOT_LAST) e = LOT_LAST;
+            bytes32 c = reg.commitmentOf(BUYER, SALT, LOTS, s, e);
+            vm.prank(operator);
+            try reg.retire(LOTS, s, e, c, VAULT, 0) {} catch {}
+        }
+        uint256[] memory ids = reg.batchRetirements(LOTS);
+        for (uint256 i = 0; i < ids.length; ++i) {
+            RetirementRegistry.Retirement memory r = reg.getRetirement(ids[i]);
+            assertEq((r.start - FIRST) % LOT, 0, "aligned");
+            assertTrue(r.end - r.start + 1 == LOT || r.end == LOT_LAST, "one lot");
+            for (uint256 j = 0; j < i; ++j) {
+                RetirementRegistry.Retirement memory o = reg.getRetirement(ids[j]);
+                assertTrue(r.end < o.start || o.end < r.start, "disjoint");
+            }
+        }
+    }
+
+    function test_LotGasDoesNotGrowWithBatchSize() public {
+        vm.prank(operator);
+        reg.registerBatch(LOTS, PROJECT, 1, 1_000_000, 10);
+        uint256 firstGas;
+        uint256 lastGas;
+        for (uint64 i = 0; i < 400; ++i) {
+            bytes32 c = reg.commitmentOf(BUYER, SALT, LOTS, i * 10 + 1, i * 10 + 10);
+            vm.prank(operator);
+            uint256 g = gasleft();
+            reg.retire(LOTS, i * 10 + 1, i * 10 + 10, c, VAULT, 0);
+            uint256 used = g - gasleft();
+            if (i == 1) firstGas = used;
+            if (i == 399) lastGas = used;
+        }
+        assertApproxEqAbs(lastGas, firstGas, 1_000, "lot retire gas is constant");
     }
 }

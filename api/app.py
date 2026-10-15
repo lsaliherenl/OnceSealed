@@ -169,6 +169,7 @@ def create_app(service: OnceSealed, network: str, tokens: dict[str, str],
             retired = sum(r.end - r.start + 1 for r in (reg.get_retirement(i) for i in ids))
             out.append({"key": b.key, "batch_id": to_hex(b.batch_id), "vintage": b.vintage, "batch_no": b.batch_no,
                         "first_serial": b.first_serial, "last_serial": b.last_serial, "quantity": b.quantity,
+                        "lot_size": b.lot_size,
                         "registered": registered, "retirements": len(ids), "retired_quantity": retired})
         return out
 
@@ -216,10 +217,12 @@ def create_app(service: OnceSealed, network: str, tokens: dict[str, str],
         if not is_valid_lei(lei):
             raise ValueError("invalid LEI")
         service.ensure_batch(batch)
-        out = service.retire(batch, req.start, req.end, lei)
-        # The receipt (with the salt) is returned once and never stored in plain text on the server.
-        return {"retirement": _public(reg.get_retirement(out.retirement_id)), "tx_hash": out.tx.tx_hash,
-                "gas_used": out.tx.gas_used, "receipt": out.receipt}
+        out = service.retire_lots(batch, req.start, req.end, lei)
+        # The receipt (with the salts) is returned once and never stored in plain text on the server.
+        # Lot batches give one retirement per standard lot; the receipt is then a bundle.
+        return {"retirements": [_public(reg.get_retirement(o.retirement_id)) for o in out.lots],
+                "tx_hashes": [o.tx.tx_hash for o in out.lots], "gas_used": out.gas_used,
+                "lot_size": batch.lot_size, "receipt": out.receipt}
 
     # --- auditor ---------------------------------------------------------------------------
 

@@ -40,7 +40,7 @@ def main() -> None:
     else:
         reg, tx = Registry.deploy(w3, accounts)
     record = deployments.save(chain_id, args.network, reg.address, tx.tx_hash, tx.block_number,
-                              {r: a.address for r, a in accounts.items()}, load_artifact()["compiler"])
+                              {r: a.address for r, a in accounts.items()}, load_artifact()["compiler"], tx.gas_used)
     print(f"RetirementRegistry deployed on {args.network} (chain {chain_id}) at {reg.address}")
     print(f"tx {tx.tx_hash}, block {tx.block_number}, gas {tx.gas_used}")
     print(f"-> deployments/{chain_id}.json  roles: {record['roles']}")

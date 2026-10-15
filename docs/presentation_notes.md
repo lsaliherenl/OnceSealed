@@ -85,13 +85,14 @@ anonim sayılmıyor.
 | AI alıntıları | İlk ölçümde 72/72, yayımlanan 4 raporda 64/64 alıntı PDF'te doğrulandı, 0 atılan | 13 Ekim |
 | Rapor hash'leri | 4 raporun hash'i yayımlanan dosyadan yeniden hesaplanıyor | 13 Ekim |
 | AI maliyeti | 4 proje × 5 ilke ≈ 0,05 $ (LLM) + ≈ 0,001 $ (Jev) | 13 Ekim |
-| Gaz | deploy 1,41M; `retire` ~150-215k; `registerBatch` ~72k; `attestRetirement` ~29-31k | 14 Ekim |
+| Gaz (Anvil, eski kurallar) | deploy 2,24M; lot iptali ~204k; aralık iptali ~211k; `registerBatch` ~73k; `attestRetirement` ~31k | 15 Ekim |
+| Gaz (Sepolia, gerçek ağ) | deploy 14,19M; `retire` 1,02M; rapor 463k; parti 242k; onay 33k (yeni depolama yazımı pahalı; maliyet yine ihmal edilebilir, gaz fiyatı ~0,001 gwei). Lot sürümü yeniden yüklenince güncellenecek | 15 Ekim |
 | **Ölçek (gerçek veri)** | VCS766'nın 38.382 gerçek iptali oynatıldı: eski tasarım **7.467.'de blok sınırında çöktü**; yeni tasarım her iptalde **sabit 211k gaz** | 15 Ekim |
-| Gerçek kayıtlar | OffsetsDB'de iptalin ihracı aştığı 11 vaka (235.932 t); sözleşme 76 iptali reddederdi | 15 Ekim |
-| Gizlilik ölçümü | Tonların %88,7'si (proje + miktar) ile tekil; 1.000 t lotla %95,8'i 61 eş lot arasına karışır | 15 Ekim |
+| Gerçek kayıtlar | OffsetsDB'de iptalin ihracı aştığı 11 vaka (235.932 t); sözleşme 76 iptali reddederdi. **Dikkat:** bunlar büyük ihtimalle veri tutarsızlığı (vintage ataması, yeniden ihraç), kanıtlanmış çifte sayım değil. "Kamuya açık verideki tutarsızlıkları otomatik işaretlerdi" de | 15 Ekim |
+| Gizlilik ölçümü | Tonların %88,7'si (proje + miktar) ile tekil. **Standart lotlar artık sözleşmede zorunlu** (1.000 t). Zamanlama hâlâ bağlıyor: lot + operatörün dönemsel toplu yayını ile tamamen açıkta kalan tonlar günlükte %36,8, çeyrekte %14,5. Eski "61 eş lot" rakamı zamanlamayı yok sayıyordu, **kullanma** | 15 Ekim |
 | Güvenlik | Slither temiz (2 yanlış alarm gerekçeli), 2 adımlı yönetici devri, rol iptali; 13 tehdit senaryosu belgelendi | 15 Ekim |
 | AI tutarlılığı | Jev 3 çalıştırmada %99,4 aynı cevap (LLM %96); Jev 6 kat hızlı, 20 kat ucuz | 15 Ekim |
-| Sepolia sözleşme adresi / Etherscan | **TODO** | |
+| Sepolia sözleşme adresi / Etherscan | İlk sürüm `0x7D17ebA0…e675` (doğrulandı). Lot sürümü yeniden yüklenecek, adres güncellenecek | 15 Ekim |
 
 ## 6. Jüri soruları ve cevapları
 
@@ -162,8 +163,11 @@ kötü niyetli bir "komşu ipucu" bile çifte iptale yol açamıyor; bunu rastge
 
 **"Zincirde isim yok ama yine de kim olduğu anlaşılır mı?"**
 Kısmen, ve bunu açıkça ölçtük: gerçek iptallerin ton bazında %88,7'si sadece proje ve miktarla tekil. Bir şirket raporunda
-"şu projeden şu kadar ton" yazarsa eşleşir. Önerimiz standart lotlar (1.000 t ile tonların %95,8'i ortalama 61 eş lot arasına
-karışıyor) ve toplu yayın; miktarı tamamen gizlemek sıfır bilgi kanıtı gerektirir (gelecek çalışma).
+"şu projeden şu kadar ton" yazarsa eşleşir. Bu yüzden sözleşme lot partilerinde her iptalin tam bir standart lot (1.000 t)
+olmasını zorunlu kılıyor: 5.000 t'luk alım zincirde birbirine bağlanamayan beş özdeş lot olarak görünür. Zamanlama hâlâ
+ipucu verir; operatör lotları dönemsel ve karışık yayınlarsa tamamen açıkta kalan tonlar %88,7'den %14,5-36,8'e iner.
+Bir projeden o dönemde tek alıcı varsa hiçbir yöntem onu gizleyemez ("gizlilik kalabalık ister"); projeyi de gizlemek
+sıfır bilgi kanıtı gerektirir (gelecek çalışma).
 
 ## 7. Hedef kullanıcı, benimsenme, ölçeklenebilirlik (Devpost için)
 

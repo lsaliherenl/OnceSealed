@@ -95,6 +95,40 @@ def test_full_flow_retire_overlap_audit_disclose(app):
     assert not app.verify_receipt({**b.receipt, "retirement_id": a.retirement_id}).valid
 
 
+LOT_BATCH = IssuanceBatch("VCS1477", vintage=2021, batch_no=1, first_serial=1, last_serial=1_050, lot_size=100)
+
+
+def test_lot_batch_splits_purchase_into_unlinkable_lots(app):
+    a_lei, b_lei = leis(2, seed=4)
+    app.ensure_batch(LOT_BATCH)
+    assert app.registry.get_batch(LOT_BATCH.batch_id).lot_size == 100
+
+    out = app.retire_lots(LOT_BATCH, 1, 300, a_lei)
+    assert [(o.receipt["start"], o.receipt["end"]) for o in out.lots] == [(1, 100), (101, 200), (201, 300)]
+    commitments = {to_hex(app.public_record(o.retirement_id).buyer_commitment) for o in out.lots}
+    assert len(commitments) == 3  # different salts: nothing on-chain ties the three lots together
+    assert app.verify_receipt(out.receipt).valid
+
+    app.retire_lots(LOT_BATCH, 501, 600, b_lei)
+    count = app.registry.retirement_count()
+    with pytest.raises(RegistryError) as err:  # 401-500 is free but 501-600 is taken: nothing at all is sent
+        app.retire_lots(LOT_BATCH, 401, 600, b_lei)
+    assert err.value.name == "AlreadyRetired" and app.registry.retirement_count() == count
+    with pytest.raises(ValueError, match="lot boundary"):
+        app.retire_lots(LOT_BATCH, 650, 749, b_lei)
+    with pytest.raises(RegistryError) as err:  # the contract enforces the rule even without the client check
+        app.retire(LOT_BATCH, 650, 749, b_lei)
+    assert err.value.name == "NotALot"
+    tail = app.retire_lots(LOT_BATCH, 1001, 1050, b_lei)  # the batch's final lot may be shorter
+    assert app.registry.retirement_of(LOT_BATCH.batch_id, 1050) == tail.lots[0].retirement_id
+
+    for o in out.lots:
+        assert app.audit(o.retirement_id)[0].valid
+    assert app.verify_receipt(out.receipt).audit_status == AuditStatus.VERIFIED
+    swapped = {**out.receipt, "lots": [*out.receipt["lots"][:2], tail.receipt]}  # another buyer's lot slipped in
+    assert not app.verify_receipt(swapped).valid
+
+
 def test_auditor_rejects_vault_that_does_not_match_commitment(app):
     """A dishonest operator commits to buyer A but seals buyer B's identity in the vault."""
     a_lei, b_lei = leis(2, seed=2)
