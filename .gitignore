@@ -4,6 +4,7 @@
 
 # Python
 .venv/
+.venv-*/
 __pycache__/
 *.pyc
 .pytest_cache/
@@ -44,3 +45,7 @@ data/derived/scale/log-*.txt
 
 # Design handoff (source is integrated into web/)
 design/
+
+# Provisional AI labels and pilot results: kept local until both human annotators have exported their labels
+data/eval/silver/
+docs/ai_evaluation_pilot.md

@@ -82,7 +82,7 @@ def main() -> None:
           "on exactly the same code-selected excerpts (48 items, 177 questions, 11 Verra projects).", ""]
 
     # --- label-free metrics -------------------------------------------------------------------
-    md += ["## Label-free metrics", "", "| | " + " | ".join(LABELS.get(n, models[n].get("model", n)) for n in models)
+    md += ["## Label-free metrics", "", "| | " + " | ".join(LABELS.get(n, models[n].get("label", n)) for n in models)
            + " |", "|---|" + "---|" * len(models)]
     rows = defaultdict(dict)
     for name, a in models.items():
@@ -163,7 +163,7 @@ def main() -> None:
     for name, a in models.items():
         if all("p_yes" in a["runs"][0][k] for k in gkeys):
             brier = st.mean((a["runs"][0][k]["p_yes"] - gi) ** 2 for k, gi in zip(gkeys, g))
-            md += ["", f"{LABELS.get(name, name)} calibration: Brier score **{brier:.3f}** (0 is perfect; always "
+            md += ["", f"{LABELS.get(name, a.get('label', name))} calibration: Brier score **{brier:.3f}** (0 is perfect; always "
                    f"answering the base rate would score {base:.3f})."]
     md += ["", "### Per question (F1)", "", "| Question | Principle | n | " + " | ".join(models) + " |",
            "|---|---|---|" + "---|" * len(models)]
