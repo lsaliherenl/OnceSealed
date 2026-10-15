@@ -17,6 +17,7 @@ Bu dosya projenin iç bağlamıdır. Her oturumda önce bunu oku, tasarım kural
 - **Web (iskelet):** `web/` Next.js 16.4.1 + viem 2.57.7; ABI `web/src/lib/registryAbi.ts` (`scripts/export_artifact.py` üretir). `web/AGENTS.md` Next.js'in kendi notu: bu sürümde API'ler değişmiş olabilir, kod yazmadan `web/node_modules/next/dist/docs/` okunmalı. npm audit: yalnızca ESLint geliştirme bağımlılığında açık var, üretimde 0.
 - **Demo alıcılar:** `data/demo_buyers.json` (açıkça uydurma isimler + geçerli kontrol haneli LEI).
 - **Sepolia için hazır:** `scripts/fund_roles.py` (kullanıcı `--send` ile çalıştırır), sonra `scripts/deploy.py --network sepolia`.
+- **Sepolia gaz kuralları değişti (15 Ekim):** boş (yeni) hesaba ETH göndermek artık ~207k gaz istiyor (hesap oluşturma ücreti); betikteki sabit 21.000 gaz yüzünden ilk 6 fonlama işlemi "out of gas" ile düştü (kayıp ~0,00013 ETH). Betik artık `estimate_gas` kullanıyor. **Asla sabit gaz yazma.** D2 gaz rakamları Anvil'in eski kurallarıyla ölçüldü; Sepolia'da yeni depolama yazımı daha pahalı olabilir → deploy sonrası gerçek `retire` gazını ölç, README/sunumda ikisini ayrı göster (sabit-vs-doğrusal sonucu değişmez).
 - Ortam notu: Slither proje ortamına kurulunca web3'ü 7.16'ya düşürdü; Slither ayrı ortamda çalıştırılmalı.
 
 **Sunum notları:** `docs/presentation_notes.md` (Türkçe, ekip içi). Her iş paketi bittiğinde veya sunuma girecek bir rakam/karar değiştiğinde güncelle: teknik kanıtlar tablosu, jüri soruları, demo akışı, yapılacaklar. Video metni ve Devpost açıklaması bu dosyadan çıkarılacak.

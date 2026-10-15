@@ -36,7 +36,9 @@ def main() -> None:
         bal = w3.eth.get_balance(addr)
         need = max(0, TARGET - bal)
         plan.append((role, addr, need))
-        print(f"{role:9s} {addr}: {Web3.from_wei(bal, 'ether')} ETH -> send {Web3.from_wei(need, 'ether')} ETH")
+        gas = w3.eth.estimate_gas({"from": deployer.address, "to": addr, "value": need}) if need else 0
+        print(f"{role:9s} {addr}: {Web3.from_wei(bal, 'ether')} ETH -> send {Web3.from_wei(need, 'ether')} ETH "
+              f"(estimated gas {gas:,})")
 
     if not args.send:
         print("\ndry run; add --send to transfer")
@@ -45,12 +47,18 @@ def main() -> None:
     for role, addr, need in plan:
         if need == 0:
             continue
-        tx = {"to": addr, "value": need, "nonce": nonce, "gas": 21_000, "chainId": 11155111,
+        # Never hard-code 21,000: Sepolia now charges extra gas for creating a new (empty) account,
+        # so a plain transfer to a fresh wallet needs ~207k gas and fails out of gas at 21k.
+        gas = w3.eth.estimate_gas({"from": deployer.address, "to": addr, "value": need})
+        tx = {"to": addr, "value": need, "nonce": nonce, "gas": gas * 12 // 10, "chainId": 11155111,
               "maxFeePerGas": 2 * w3.eth.get_block("latest")["baseFeePerGas"] + w3.to_wei(1, "gwei"),
               "maxPriorityFeePerGas": w3.to_wei(1, "gwei")}
         h = w3.eth.send_raw_transaction(deployer.sign_transaction(tx).raw_transaction)
-        w3.eth.wait_for_transaction_receipt(h, timeout=300)
-        print(f"sent {Web3.from_wei(need, 'ether')} ETH to {role}: https://sepolia.etherscan.io/tx/0x{bytes(h).hex()}")
+        receipt = w3.eth.wait_for_transaction_receipt(h, timeout=300)
+        url = f"https://sepolia.etherscan.io/tx/0x{bytes(h).hex()}"
+        if receipt["status"] != 1:
+            sys.exit(f"transfer to {role} FAILED (gas used {receipt['gasUsed']}): {url}")
+        print(f"sent {Web3.from_wei(need, 'ether')} ETH to {role} (gas {receipt['gasUsed']:,}): {url}")
         nonce += 1
 
 
