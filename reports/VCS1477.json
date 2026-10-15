@@ -21,7 +21,7 @@
       "https://icvcm.org/integrity-council-approves-three-redd-methodologies/",
       "https://www.jonesday.com/en/insights/2025/03/the-icvcm-and-redd-standards-implications-for-voluntary-carbon-markets"
     ],
-    "table_version": "2026-10-13"
+    "table_version": "2026-10-15"
   },
   "method": {
     "report_schema": "report-v1",
@@ -30,10 +30,10 @@
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "decision_model": "typesafe/jev-1.13",
     "decision_input": "verified_quotes",
-    "methodology_table_version": "2026-10-13",
+    "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0x77db5fd6b725dc8d6f2e2b1447ec2f91b8433a5f1eedfcbc811383577c657bdf",
+  "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
   "principles": [
     {
       "principle": "additionality",
@@ -74,24 +74,24 @@
         "evidence_level": "assertion_only",
         "evidence_probabilities": {
           "quantified_verifiable": 0.0,
-          "documentary": 0.44,
-          "assertion_only": 0.56,
+          "documentary": 0.49,
+          "assertion_only": 0.51,
           "not_addressed": 0.0
         },
-        "evidence_confidence": 0.41,
-        "independent_sources": 0.36,
-        "strength": 1.73,
+        "evidence_confidence": 0.35,
+        "independent_sources": 0.34,
+        "strength": 1.7,
         "strength_probabilities": {
           "0": 0.0,
-          "1": 0.27,
-          "2": 0.72,
+          "1": 0.3,
+          "2": 0.69,
           "3": 0.01
         },
-        "strength_confidence": 0.72,
+        "strength_confidence": 0.69,
         "model": "typesafe/jev-1.13-20260917"
       },
       "status": "partial_evidence",
-      "score": 58,
+      "score": 57,
       "review_flags": []
     },
     {
@@ -132,15 +132,15 @@
           "not_addressed": 0.0
         },
         "evidence_confidence": 0.87,
-        "independent_sources": 0.25,
-        "strength": 2.4,
+        "independent_sources": 0.24,
+        "strength": 2.41,
         "strength_probabilities": {
           "0": 0.0,
           "1": 0.06,
-          "2": 0.48,
-          "3": 0.46
+          "2": 0.47,
+          "3": 0.47
         },
-        "strength_confidence": 0.48,
+        "strength_confidence": 0.47,
         "model": "typesafe/jev-1.13-20260917"
       },
       "status": "partial_evidence",
@@ -185,25 +185,25 @@
       "decision": {
         "evidence_level": "quantified_verifiable",
         "evidence_probabilities": {
-          "quantified_verifiable": 0.56,
-          "documentary": 0.41,
+          "quantified_verifiable": 0.62,
+          "documentary": 0.35,
           "assertion_only": 0.03,
           "not_addressed": 0.0
         },
-        "evidence_confidence": 0.41,
-        "independent_sources": 0.27,
-        "strength": 2.38,
+        "evidence_confidence": 0.49,
+        "independent_sources": 0.26,
+        "strength": 2.35,
         "strength_probabilities": {
           "0": 0.0,
-          "1": 0.07,
-          "2": 0.47,
-          "3": 0.46
+          "1": 0.08,
+          "2": 0.49,
+          "3": 0.43
         },
-        "strength_confidence": 0.47,
+        "strength_confidence": 0.49,
         "model": "typesafe/jev-1.13-20260917"
       },
       "status": "partial_evidence",
-      "score": 79,
+      "score": 78,
       "review_flags": []
     },
     {
@@ -245,20 +245,20 @@
         "evidence_level": "assertion_only",
         "evidence_probabilities": {
           "quantified_verifiable": 0.0,
-          "documentary": 0.09,
-          "assertion_only": 0.63,
+          "documentary": 0.1,
+          "assertion_only": 0.62,
           "not_addressed": 0.28
         },
-        "evidence_confidence": 0.51,
-        "independent_sources": 0.31,
+        "evidence_confidence": 0.49,
+        "independent_sources": 0.32,
         "strength": 1.03,
         "strength_probabilities": {
-          "0": 0.01,
-          "1": 0.95,
-          "2": 0.04,
+          "0": 0.02,
+          "1": 0.93,
+          "2": 0.05,
           "3": 0.0
         },
-        "strength_confidence": 0.95,
+        "strength_confidence": 0.93,
         "model": "typesafe/jev-1.13-20260917"
       },
       "status": "assertion_only",
@@ -304,29 +304,29 @@
         "evidence_level": "documentary",
         "evidence_probabilities": {
           "quantified_verifiable": 0.0,
-          "documentary": 0.92,
-          "assertion_only": 0.08,
+          "documentary": 0.91,
+          "assertion_only": 0.09,
           "not_addressed": 0.0
         },
-        "evidence_confidence": 0.89,
-        "independent_sources": 0.17,
-        "strength": 1.09,
+        "evidence_confidence": 0.88,
+        "independent_sources": 0.16,
+        "strength": 1.1,
         "strength_probabilities": {
           "0": 0.0,
-          "1": 0.91,
-          "2": 0.09,
+          "1": 0.9,
+          "2": 0.1,
           "3": 0.0
         },
-        "strength_confidence": 0.91,
+        "strength_confidence": 0.9,
         "model": "typesafe/jev-1.13-20260917"
       },
       "status": "assertion_only",
-      "score": 36,
+      "score": 37,
       "review_flags": []
     }
   ],
   "overall": {
-    "score": 61,
+    "score": 60,
     "included": [
       "additionality",
       "permanence",
@@ -344,5 +344,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-13T19:51:25+00:00"
+  "generated_at": "2026-10-15T17:31:02+00:00"
 }

@@ -14,6 +14,7 @@ from core.chain import deployments
 from core.chain.registry import Registry, connect
 from core.config import PROJECT_ROOT, auditor_box_keys, chain_settings
 from core.data.batches import load_batches
+from core.hashing import hash_json
 from core.privacy.identity import project_id
 from core.privacy.vault import VaultStore
 from core.service import OnceSealed
@@ -45,12 +46,14 @@ def main() -> None:
         out_path.write_text(json.dumps(log, indent=2) + "\n", encoding="utf-8")
         print(f"  {kind:22s} gas {tx.gas_used:>10,}  {link(tx.tx_hash)}")
 
-    print("quality reports")
-    for pid in DEMO_PROJECTS:
-        if registry.report_count(project_id(pid)) > 0:
-            print(f"  {pid}: already anchored")
+    print("quality reports (a new version is anchored whenever the published file changed)")
+    for path in sorted((PROJECT_ROOT / "reports").glob("*.json")):
+        pid = path.stem
+        report = json.loads(path.read_text(encoding="utf-8"))
+        n = registry.report_count(project_id(pid))
+        if n and "0x" + registry.get_report(project_id(pid), n).report_hash.hex() == hash_json(report):
+            print(f"  {pid}: version {n} matches the published file")
             continue
-        report = json.loads((PROJECT_ROOT / "reports" / f"{pid}.json").read_text(encoding="utf-8"))
         version, tx, report_hash = svc.publish_report(report)
         note("registerQualityReport", tx, project=pid, version=version, report_hash=report_hash)
 

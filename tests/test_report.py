@@ -51,6 +51,17 @@ def test_methodology_lookup():
     assert methodology_status("acm0001", "16")["status"] == "approved_with_conditions"
     assert methodology_status("ACM0001", "12")["status"] == "not_ccp_approved"
     assert methodology_status("VM9999")["status"] == "unknown"
+    assert methodology_status("VM0050", "1.0")["status"] == "approved_with_conditions"
+    assert methodology_status("VM0010", "1.4")["status"] == "under_assessment"
+    assert methodology_status("VM0010", "1.2")["status"] == "not_ccp_approved"  # decision covers v1.4 only
+
+
+def test_methodology_table_is_sourced():
+    from core.ai.methodology import load_table
+    table = load_table()
+    for entry in table["methodologies"]:
+        assert entry["status"] in table["statuses"], entry["code"]
+        assert entry["sources"] and all(s.startswith("https://") for s in entry["sources"]), entry["code"]
 
 
 def test_judge_uses_decision_model_score_not_llm_score():

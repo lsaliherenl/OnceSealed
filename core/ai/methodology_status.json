@@ -1,21 +1,25 @@
 {
-  "table_version": "2026-10-13",
+  "table_version": "2026-10-15",
   "note": "ICVCM Core Carbon Principles (CCP) decisions at methodology level, compiled by hand from the cited public sources. This is not an assessment of individual projects.",
   "statuses": {
     "approved_with_conditions": "ICVCM approved the methodology (or these versions) for the CCP label; project-level conditions apply.",
     "not_approved": "ICVCM assessed the methodology and decided it does not meet the CCPs.",
     "not_ccp_approved": "The methodology has no CCP approval (not assessed or superseded); a successor methodology may be approved.",
-    "unknown": "No ICVCM decision recorded in this table."
+    "under_assessment": "Submitted to ICVCM; no decision published yet.",
+    "unknown": "No ICVCM decision found for this methodology in the sources checked (it may not have been submitted)."
   },
   "methodologies": [
     {
       "code": "ACM0002",
-      "versions": "all current",
+      "versions": "1.0-21.0",
       "status": "not_approved",
       "principle": "additionality",
       "summary": "In August 2024 ICVCM rejected current grid-connected renewable energy methodologies because their additionality tests were insufficiently rigorous.",
       "decided": "2024-08",
-      "sources": ["https://icvcm.org/carbon-credits-from-current-renewable-energy-methodologies-will-not-receive-high-integrity-ccp-label/"]
+      "sources": [
+        "https://icvcm.org/carbon-credits-from-current-renewable-energy-methodologies-will-not-receive-high-integrity-ccp-label/",
+        "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker"
+      ]
     },
     {
       "code": "ACM0001",
@@ -53,6 +57,62 @@
       "sources": [
         "https://icvcm.org/integrity-council-approves-three-cookstove-methodologies/",
         "https://www.calyxglobal.com/research-hub/research/how-the-ICVCM-CCP-labels-are-raising-the-quality-of-cookstoves-and-household-biodigester-projects"
+      ]
+    },
+    {
+      "code": "VM0050",
+      "versions": "1.0",
+      "min_version": 1.0,
+      "max_version": 1.0,
+      "status": "approved_with_conditions",
+      "principle": null,
+      "summary": "ICVCM approved VM0050 v1.0 in March 2025. CCP labels need extra conditions: fNRB from CDM Tool 33 (for reductions up to 2025) or the MoFuSS model, fuel use measured by kitchen performance or controlled cooking tests (or defaults with cross-checks), and set charcoal factors. Calyx Global found none of 203 rated cookstove and biodigester projects met all of them.",
+      "decided": "2025-03",
+      "sources": [
+        "https://icvcm.org/integrity-council-approves-three-cookstove-methodologies/",
+        "https://verra.org/a-new-era-for-high-integrity-cookstove-credits-as-verras-methodology-is-approved-by-icvcm/",
+        "https://calyxglobal.com/research-hub/research/how-the-ICVCM-CCP-labels-are-raising-the-quality-of-cookstoves-and-household-biodigester-projects/"
+      ]
+    },
+    {
+      "code": "VM0010",
+      "versions": "1.4",
+      "min_version": 1.4,
+      "max_version": 1.4,
+      "status": "under_assessment",
+      "principle": null,
+      "summary": "VM0010 v1.4 (improved forest management: conversion from logged to protected forest) is listed as under ICVCM assessment with no decision published (Calyx tracker, May 2026). ICVCM has approved other IFM methodologies, e.g. Verra VM0045 v1.2 (August 2025). Earlier VM0010 versions are not covered.",
+      "decided": null,
+      "sources": [
+        "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker",
+        "https://icvcm.org/integrity-council-approves-biochar-amp-improved-forest-management-methodologies/",
+        "https://verra.org/methodologies/vm0010-methodology-for-improved-forest-management-conversion-from-logged-to-protected-forest-v1-4/"
+      ]
+    },
+    {
+      "code": "AR-ACM0001",
+      "versions": "all",
+      "status": "not_ccp_approved",
+      "principle": null,
+      "summary": "No ICVCM decision found for this CDM afforestation methodology. Its CDM successor AR-ACM0003 was inactivated in the VCS Program in September 2023 in favour of VM0047, which ICVCM approved; ICVCM also approved ACR's afforestation methodology (v1.0-1.2, natural forests) and Isometric's reforestation protocol.",
+      "decided": null,
+      "sources": [
+        "https://verra.org/methodologies/ar-acm0003-afforestation-and-reforestation-of-lands-except-wetlands/",
+        "https://verra.org/icvcm-approves-updated-version-of-verras-afforestation-reforestation-and-revegetation-methodology/",
+        "https://icvcm.org/integrity-council-approves-second-afforestation-reforestation-and-revegetation-methodology/",
+        "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker"
+      ]
+    },
+    {
+      "code": "ACM0010",
+      "versions": "all",
+      "status": "unknown",
+      "principle": null,
+      "summary": "No ICVCM decision found for ACM0010 (manure management): it is not in the Calyx CCP-label tracker (May 2026) and no ICVCM announcement covers livestock manure methodologies. The methodology remains active in the VCS Program.",
+      "decided": null,
+      "sources": [
+        "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker",
+        "https://verra.org/methodologies/ghg-emission-reductions-from-manure-management-systems/"
       ]
     }
   ]

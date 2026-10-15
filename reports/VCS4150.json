@@ -1,0 +1,308 @@
+{
+  "schema": "report-v1",
+  "project": {
+    "project_id": "VCS4150",
+    "project_name": "DelAgua Clean Cooking Grouped Project in Rwanda",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/4150",
+    "methodology": "VM0050",
+    "methodology_version": "1.0"
+  },
+  "document": {
+    "file_name": "VCS 4150 ReQ PD v6.0 11082025_clean.pdf",
+    "sha256": "573d9046347e8ce1a9198ca57286cd0d81c2e41bc67edf1f2fbb4c85e234742b",
+    "pages": 78
+  },
+  "methodology_status": {
+    "code": "VM0050",
+    "version": "1.0",
+    "status": "approved_with_conditions",
+    "summary": "ICVCM approved VM0050 v1.0 in March 2025. CCP labels need extra conditions: fNRB from CDM Tool 33 (for reductions up to 2025) or the MoFuSS model, fuel use measured by kitchen performance or controlled cooking tests (or defaults with cross-checks), and set charcoal factors. Calyx Global found none of 203 rated cookstove and biodigester projects met all of them.",
+    "sources": [
+      "https://icvcm.org/integrity-council-approves-three-cookstove-methodologies/",
+      "https://verra.org/a-new-era-for-high-integrity-cookstove-credits-as-verras-methodology-is-approved-by-icvcm/",
+      "https://calyxglobal.com/research-hub/research/how-the-ICVCM-CCP-labels-are-raising-the-quality-of-cookstoves-and-household-biodigester-projects/"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v1",
+    "prompt_version": "v1",
+    "question_set_version": "qs-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "decision_model": "typesafe/jev-1.13",
+    "decision_input": "verified_quotes",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+  "principles": [
+    {
+      "principle": "additionality",
+      "rationale": "The document shows regulatory surplus, a financial barrier, and positive-list automatic additionality. It states ICS are distributed free and the project relies solely on VCU revenue, with no other revenue source. Baseline scenario is described. However, no investment analysis (IRR vs benchmark) or common practice analysis is provided; additionality rests on methodology positive list and assertions.",
+      "quotes": [
+        {
+          "text": "Since the Project Proponent (PP) distributes improved cookstoves (ICS) free of cost to end users, the project relies solely on revenue from the sale of Verified Carbon Units (VCUs) to sustain its operations.",
+          "page": 49,
+          "paragraph_id": "p49-02",
+          "verification": "exact"
+        },
+        {
+          "text": "Without registration under a GHG program, the project would lack a financial mechanism to cover the costs of cookstove production, distribution, and monitoring.",
+          "page": 49,
+          "paragraph_id": "p49-02",
+          "verification": "exact"
+        },
+        {
+          "text": "Since the project operates in Rwanda, a UNFCCC non-Annex I country, and there are no systematically enforced laws or regulations requiring the distribution or adoption of improved cookstoves, the project qualifies as additional.",
+          "page": 53,
+          "paragraph_id": "p53-02",
+          "verification": "exact"
+        },
+        {
+          "text": "It distributes improved cookstoves at free of cost to end users, with no revenue source other than the sale of Verified Carbon Units (VCUs), satisfying Condition 2 of Section 7 of the methodology.",
+          "page": 53,
+          "paragraph_id": "p53-02",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 80,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "assertion_only",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.23,
+          "assertion_only": 0.77,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.69,
+        "independent_sources": 0.15,
+        "strength": 1.08,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.93,
+          "2": 0.06,
+          "3": 0.01
+        },
+        "strength_confidence": 0.92,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "assertion_only",
+      "score": 36,
+      "review_flags": []
+    },
+    {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "quotes": [],
+      "dropped_findings": 0,
+      "llm": null,
+      "decision": null,
+      "rule": "no_reversal_risk"
+    },
+    {
+      "principle": "robust_quantification",
+      "rationale": "Document shows baseline/project parameter derivation, IPCC default factors, a 26% fNRB uncertainty discount, KPT sampling at 90/10 precision, and database QA/QC. Leakage calculation is not detailed in the excerpts. Quantification and monitoring evidence is specific and conservative.",
+      "quotes": [
+        {
+          "text": "The value of BCp,j,k,y is derived from the project KPT and Hhj,k (same as Hhi) is derived from the Baseline KPT in line with the applied methodology.",
+          "page": 55,
+          "paragraph_id": "p55-02",
+          "verification": "exact"
+        },
+        {
+          "text": "The value of 0.8872, registered in the Project Design Document (PD) under TOOL30 Version 4 for Rwanda, is adjusted to account for uncertainty in accordance with VM0050. A 26% uncertainty discount is applied, resulting in the following adjusted value: 0.8872 × (1−0.26) =0.6565",
+          "page": 62,
+          "paragraph_id": "p62-04",
+          "verification": "exact"
+        },
+        {
+          "text": "The campaign must achieve confidence and precision of at least 90/10 for the target parameter of average daily fuel consumption per adult equivalent.",
+          "page": 65,
+          "paragraph_id": "p65-03",
+          "verification": "exact"
+        },
+        {
+          "text": "Data validation is conducted on the database to ensure that values are numerically consistent, i.e. multiple choice values add up to 100% of respondents.",
+          "page": 68,
+          "paragraph_id": "p68-03",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "quantified_verifiable",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.87,
+          "documentary": 0.12,
+          "assertion_only": 0.01,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.83,
+        "independent_sources": 0.26,
+        "strength": 2.75,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.01,
+          "2": 0.23,
+          "3": 0.76
+        },
+        "strength_confidence": 0.75,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "strong_evidence",
+      "score": 92,
+      "review_flags": []
+    },
+    {
+      "principle": "no_double_counting",
+      "rationale": "Document includes checked 'No' for emissions trading and other environmental credits. It describes unique stove IDs and a sales database to avoid double counting, and reports no overlap with REDD+ projects or registries. Evidence is specific, but excerpts do not show corresponding adjustments or direct answers on double issuance.",
+      "quotes": [
+        {
+          "text": "The PP ensures that each distributed improved cookstove (ICS) is uniquely identified to avoid double counting of emission reductions. Each stove is marked with a program logo and assigned a unique identification number at the time of distribution.",
+          "page": 39,
+          "paragraph_id": "p39-07",
+          "verification": "exact"
+        },
+        {
+          "text": "Also, a review of other registries viz Gold Standard and UNFCCC CDM also did not yield any REDD project in Rwanda. Additionally, the grouped project’s fuel sourcing area does not overlap with any operational REDD+ projects or jurisdictional REDD+ programs generating carbon credits.",
+          "page": 40,
+          "paragraph_id": "p40-03",
+          "verification": "exact"
+        },
+        {
+          "text": "☐  Yes  \n \n☒  No \nIf yes, provide all required evidence of no double claiming as outlined by the VCS Standard.",
+          "page": 23,
+          "paragraph_id": "p23-02",
+          "verification": "exact"
+        },
+        {
+          "text": "☐  Yes  \n \n☒  No \nIf yes, provide all required evidence of no double claiming as outlined by the VCS Standard.",
+          "page": 23,
+          "paragraph_id": "p23-03",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.75,
+          "assertion_only": 0.24,
+          "not_addressed": 0.01
+        },
+        "evidence_confidence": 0.67,
+        "independent_sources": 0.38,
+        "strength": 1.38,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.64,
+          "2": 0.33,
+          "3": 0.03
+        },
+        "strength_confidence": 0.61,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "assertion_only",
+      "score": 46,
+      "review_flags": []
+    },
+    {
+      "principle": "safeguards",
+      "rationale": "The document includes a dedicated safeguards and stakeholder engagement section. It describes stakeholder identification and consultation, FPIC and consent, grievance channels, risk mitigation, and biodiversity/ecosystem statements. Some mitigation measures are asserted rather than detailed, but specific mechanisms and dates are provided.",
+      "quotes": [
+        {
+          "text": "The program engaged stakeholders through newspaper ads, emails, and radio announcements before the LSC meeting on 1st March 2023. The meeting was held from 9:00 AM to 11:00 AM at Gorillas Golf Hotel, Nyautarama, Rwanda, ensuring gender-inclusive participation.",
+          "page": 27,
+          "paragraph_id": "p27-07",
+          "verification": "alnum"
+        },
+        {
+          "text": "Prior to distribution all potential ICS recipients are gathered to introduce the project. They are invited to receive a ICS free of charge.",
+          "page": 29,
+          "paragraph_id": "p29-03",
+          "verification": "exact"
+        },
+        {
+          "text": "The grievance redress procedure was developed to ensure that local stakeholders have accessible and culturally appropriate channels to raise concerns. The process includes receiving, hearing, responding to, and resolving grievances within a reasonable time frame.",
+          "page": 29,
+          "paragraph_id": "p29-05",
+          "verification": "exact"
+        },
+        {
+          "text": "The ICSs decreases the GHG emission levels attributed to improved performance and design of the project ICSs. It does not involve change in baseline fuel or any other major interventions that negatively impacts biodiversity or ecosystems.",
+          "page": 34,
+          "paragraph_id": "p34-05",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.96,
+          "assertion_only": 0.04,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.95,
+        "independent_sources": 0.11,
+        "strength": 1.89,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.27,
+          "2": 0.56,
+          "3": 0.16
+        },
+        "strength_confidence": 0.57,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 63,
+      "review_flags": []
+    }
+  ],
+  "overall": {
+    "score": 60,
+    "included": [
+      "additionality",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [
+      "permanence"
+    ],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-15T17:29:59+00:00"
+}

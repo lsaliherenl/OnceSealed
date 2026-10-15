@@ -20,7 +20,7 @@ OnceSealed is a prototype verification and privacy layer that could sit on top o
 > on the Sepolia test network.
 
 **Live on Sepolia:** [`0xBb88057576b92Ef27753A6b2a4Df83bE444F1308`](https://sepolia.etherscan.io/address/0xBb88057576b92Ef27753A6b2a4Df83bE444F1308#code)
-(source verified on Etherscan). It holds four anchored quality reports, four issuance batches and one audited purchase
+(source verified on Etherscan). It holds 11 anchored quality reports (15 versions), four issuance batches and one audited purchase
 of 2,000 t retired as two lots; every transaction is listed in [`deployments/11155111-seed.json`](deployments/11155111-seed.json).
 
 ---
@@ -86,16 +86,38 @@ versions) are anchored on-chain, so anyone can re-hash the published file and co
 > **Signal, not verdict.** A score says how well the submitted document evidences a principle. It is not an ICVCM
 > assessment, a rating of the project, or a statement about its climate impact.
 
-| Project | Methodology, ICVCM status | Evidence signal (0-100) |
-|---|---|---|
-| [VCS1851](reports/VCS1851.json) grid-connected solar, India | ACM0002 v19: not approved (additionality) | 64 |
-| [VCS1477](reports/VCS1477.json) Katingan peatland REDD+, Indonesia | VM0007 v1.5: not CCP-approved (successor VM0048 approved) | 61 |
-| [VCS138](reports/VCS138.json) landfill gas, USA | ACM0001 v16: approved with conditions | 57 |
-| [VCS2505](reports/VCS2505.json) cookstoves, South Africa | VMR0006: not CCP-approved (successor VM0050 approved) | 56 |
+Reports for all 11 evaluation projects (overall signal, then the five principle scores: additionality, permanence,
+quantification, double counting, safeguards; `-` = not applicable):
 
-The two columns disagree on purpose: a well-documented project can use a methodology ICVCM rejected (the solar
-project includes a detailed investment analysis). Document evidence and methodology soundness are different things,
-which is why layer 1 is separate and deterministic.
+| Project | Methodology, ICVCM status | Overall | A | P | Q | D | S |
+|---|---|---|---|---|---|---|---|
+| [VCS673](reports/VCS673.json) Kibale forest rehabilitation, Uganda | AR-ACM0001 v5: no CCP approval (successor VM0047 approved) | 65 | 44 | 84 | 84 | 33 | 74 |
+| [VCS985](reports/VCS985.json) Cordillera Azul REDD+, Peru | VM0007 v1.3: not CCP-approved (successor VM0048 approved) | 64 | 57 | 65 | 82 | 36 | 71 |
+| [VCS1851](reports/VCS1851.json) grid-connected solar, India | ACM0002 v19: not approved (additionality) | 62 | 59 | - | 75 | 61 | 49 |
+| [VCS2609](reports/VCS2609.json) Kuamut forest protection, Malaysia | VM0010 v1.4: under ICVCM assessment | 61 | 52 | 65 | 78 | 36 | 69 |
+| [VCS4150](reports/VCS4150.json) DelAgua cookstoves, Rwanda | VM0050 v1.0: approved with conditions | 60 | 36 | - | 92 | 46 | 63 |
+| [VCS1477](reports/VCS1477.json) Katingan peatland REDD+, Indonesia | VM0007 v1.5: not CCP-approved (successor VM0048 approved) | 60 | 57 | 80 | 78 | 34 | 37 |
+| [VCS2846](reports/VCS2846.json) manure biodigesters, China | ACM0010 v8: no ICVCM decision found | 58 | 64 | - | 60 | 37 | 67 |
+| [VCS138](reports/VCS138.json) landfill gas, USA | ACM0001 v16: approved with conditions | 56 | 43 | - | 66 | 62 | 54 |
+| [VCS2505](reports/VCS2505.json) cookstoves, South Africa | VMR0006: not CCP-approved (successor VM0050 approved) | 55 | 40 | - | 87 | 40 | 42 |
+| [VCS1742](reports/VCS1742.json) hydropower, India | ACM0002 v12.1: not approved (additionality) | 54 | 89 | - | 54 | 0 | 52 |
+| [VCS1728](reports/VCS1728.json) onshore wind, India | ACM0002 v17: not approved (additionality) | 52 | 54 | - | 61 | 36 | 50 |
+
+How to read this, honestly:
+
+- **Read the principle scores, not the overall.** The overall signal of 11 very different projects falls between 52
+  and 65, while principle scores range from 0 to 92. Averaging hides most of the information.
+- **Document evidence is not methodology soundness.** The hydropower project scores 89 on additionality because its
+  document contains a detailed investment analysis, yet ICVCM rejected the methodology's additionality test. That is
+  why layer 1 is shown separately.
+- **A well-written document can still be contested.** Cordillera Azul (VCS985) is among the highest signals here,
+  while BeZero downgraded its rating in 2024 over its baseline deforestation rate. The tool checks whether evidence is
+  *present* in the document; it cannot tell whether a baseline is inflated. External ratings are the right
+  complement.
+
+All 11 reports share one `method_hash`; anchoring them on Sepolia added a second on-chain version for the four
+reports first published on 2026-10-13 (re-run with the updated methodology table; scores moved by 1-2 points,
+the decision model's known run-to-run variation).
 
 ## What we measured
 
@@ -107,7 +129,7 @@ which is why layer 1 is separate and deterministic.
 | Real network cost (Sepolia, current gas schedule) | Deploy 15.66M gas; retire one lot 1.02M (first in a batch) / 0.83M; anchor a report 463k; register a batch 243k; attest 33k. Storage writes cost far more than on the local chain; at Sepolia's ~0.001 gwei gas price, two deployments and all demo transactions cost 0.00078 test ETH in total | [`deployments/11155111-seed.json`](deployments/11155111-seed.json) |
 | Public data has inconsistencies a contract would flag | In OffsetsDB, 11 project-vintages record more retirements than issuance (235,932 t). Replayed through the contract, 76 of 1,100 retirements are rejected. These are most likely data errors (vintage attribution, reissuance), **not proven double counting** | [`over_retirement.json`](data/derived/over_retirement.json), `scripts/over_retirement_replay.py` |
 | How much does on-chain metadata reveal? | Project + quantity single out one retirement for **88.7%** of retired tonnes. With standard lots and the operator publishing lots once per period, 36.8% (daily) to 14.5% (quarterly) of tonnes still have no other purchase to hide among | [threat model T12](docs/threat_model.md), `scripts/linkability_stats.py` |
-| AI quotes are real | 64 of 64 quotes in the four published reports were found in the PDFs; 0 dropped | [`reports/`](reports/) |
+| AI quotes are real | 179 of 179 quotes in the 11 published reports were found in the PDFs; 0 dropped | [`reports/`](reports/) |
 | AI consistency, speed, cost (no labels needed) | On 177 yes/no questions over 48 excerpts from 11 projects: Jev gives the same answer in 3 runs 99.4% of the time (LLM 96.0%), 0.8 s vs 4.9 s per item, $0.04 vs $0.79 per 1,000 items; the two models agree 90.4% | [`docs/ai_evaluation.md`](docs/ai_evaluation.md) |
 | **AI accuracy** | **Not measured yet.** Two team members label the same 177 questions independently; precision, recall, F1, Cohen's kappa and Brier score are computed by `scripts/eval_metrics.py` when the labels are in | [evaluation plan](docs/evaluation_plan.md) (Turkish) |
 | Security | Slither: no findings beyond two documented false positives and one informational note; admin handover is two-step with a two-day delay; 13 threats analysed | [threat model](docs/threat_model.md) |
@@ -127,8 +149,8 @@ about how often the AI is right.
   still point to that buyer. Batched publication is an operating rule the contract cannot enforce. Amounts that are
   not whole lots cannot be retired privately in a lot batch.
 - **AI signals depend on the excerpt.** Paragraphs are chosen by keywords from documents of hundreds of pages, so
-  evidence outside the selection is missed. Reports exist for 4 of the 11 evaluation projects so far, and the
-  methodology table covers the methodologies of those four.
+  evidence outside the selection is missed. The overall score barely separates projects (52-65 across 11). The
+  methodology table covers only the methodologies of the 11 evaluation projects.
 - **Gas figures differ by network.** Scale experiments ran on a local Anvil chain; Sepolia's current schedule makes
   storage writes several times more expensive. The deployment uses 15.66M gas, close to the per-transaction limit of
   newer Ethereum versions, so the contract cannot grow much further without being split.
@@ -201,7 +223,7 @@ python scripts/deploy.py --network sepolia                 # deploy, then script
 - [x] FastAPI layer
 - [ ] Web app: public verification (reads the chain directly in the browser), buyer, auditor and project views
 - [ ] Human-labelled evaluation of the AI layer; compare decision models on it
-- [ ] Reports for the remaining evaluation projects
+- [x] Reports for all 11 evaluation projects
 - [ ] Demo video
 
 ## License

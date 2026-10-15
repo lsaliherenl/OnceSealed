@@ -83,7 +83,11 @@ anonim sayılmıyor.
 | Uçtan uca senaryo | `scripts/demo_e2e.py` tek komutla: parti → rapor → 5 lotluk iptal → örtüşme ve yarım lot reddi → denetim → paket makbuzla ifşa; sahte makbuzlar reddediliyor | 15 Ekim |
 | Kötü niyetli operator testi | Taahhüt A şirketine, kasa B şirketine yazılırsa denetçi yakalıyor ve zincire `REJECTED` yazıyor | 14 Ekim |
 | Ortak test vektörleri | Python ve Solidity aynı hash'leri üretiyor (uint64 üst sınırı dahil) | 14 Ekim |
-| AI alıntıları | İlk ölçümde 72/72, yayımlanan 4 raporda 64/64 alıntı PDF'te doğrulandı, 0 atılan | 13 Ekim |
+| AI alıntıları | 11 raporda **179/179** alıntı PDF'te doğrulandı, 0 atılan | 15 Ekim |
+| 11 proje raporu | Hepsi aynı `method_hash`; 7 yeni rapor ~0,10 $ (LLM). Sepolia'da 11 rapor, 15 sürüm (ilk 4 rapor güncel tabloyla yeniden üretildi → sürüm 2, puanlar 1-2 oynadı) | 15 Ekim |
+| **Dürüst AI bulgusu 1** | Genel puan ayırt etmiyor: 11 farklı proje 52-65 arası. İlke puanları 0-92. **Sunumda ilke puanlarını göster, genel puanı öne çıkarma** | 15 Ekim |
+| **Dürüst AI bulgusu 2** | VCS985 Cordillera Azul en yüksek puanlılardan (64), oysa BeZero 2024'te temel ormansızlaşma oranı yüzünden notunu düşürdü. Araç "belgede kanıt var mı"ya bakar, şişirilmiş baseline'ı göremez → dış derecelendirme tamamlayıcı. Jüri sorusuna iyi cevap | 15 Ekim |
+| Metodoloji tablosu | 9 metodoloji, hepsi kaynaklı: VM0050 v1.0 koşullu onaylı (Mar 2025); VM0010 v1.4 değerlendirmede; AR-ACM0001 onaysız (halefi VM0047 onaylı); ACM0010 için karar bulunamadı (`unknown`, tahmin yazmadık) | 15 Ekim |
 | Rapor hash'leri | 4 raporun hash'i yayımlanan dosyadan yeniden hesaplanıyor | 13 Ekim |
 | AI maliyeti | 4 proje × 5 ilke ≈ 0,05 $ (LLM) + ≈ 0,001 $ (Jev) | 13 Ekim |
 | Gaz (Anvil, eski kurallar) | deploy 2,24M; lot iptali ~204k; aralık iptali ~211k; `registerBatch` ~73k; `attestRetirement` ~31k | 15 Ekim |

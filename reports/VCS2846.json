@@ -1,0 +1,307 @@
+{
+  "schema": "report-v1",
+  "project": {
+    "project_id": "VCS2846",
+    "project_name": "FSW AMMS GHG Mitigation Project in Nanyang City",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/2846",
+    "methodology": "ACM0010",
+    "methodology_version": "8"
+  },
+  "document": {
+    "file_name": "VCS-Joint-Project-Description-Monitoring-Report-Muanyuan FSW-version03-clean.pdf",
+    "sha256": "29955d5d170062c4913c6e3d7c570d0e56b7c933c5a861312604a09770b6e3e3",
+    "pages": 137
+  },
+  "methodology_status": {
+    "code": "ACM0010",
+    "version": "8",
+    "status": "unknown",
+    "summary": "No ICVCM decision found for ACM0010 (manure management): it is not in the Calyx CCP-label tracker (May 2026) and no ICVCM announcement covers livestock manure methodologies. The methodology remains active in the VCS Program.",
+    "sources": [
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker",
+      "https://verra.org/methodologies/ghg-emission-reductions-from-manure-management-systems/"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v1",
+    "prompt_version": "v1",
+    "question_set_version": "qs-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "decision_model": "typesafe/jev-1.13",
+    "decision_input": "verified_quotes",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+  "principles": [
+    {
+      "principle": "additionality",
+      "rationale": "The document presents a full additionality case: baseline alternatives screened against IPCC options, regulatory surplus (no law mandating anaerobic digestion), barrier analysis, benchmark IRR comparison (5.38% vs 9.5% without VCU revenue; 10.69% with), sensitivity analysis on investment, fertilizer sales and O&M, and a common practice test yielding Nall-Ndiff=0. Evidence is specific and quantified, though largely self-reported.",
+      "quotes": [
+        {
+          "text": "Without income from selling VCUs, the IRR of the project is 5.38%, lower than the benchmark IRR 9.5% and the project is financially unacceptable because of its low profitability.",
+          "page": 41,
+          "paragraph_id": "p41-10",
+          "verification": "exact"
+        },
+        {
+          "text": "There are no technology barriers, acceptability barriers and financial barriers that may prevent these two alternative scenarios to occur. As per Tool 02 Combined tool to identify the baseline scenario and demonstrate additionality (Version 07.0), go to Step 3 investment analysis.",
+          "page": 37,
+          "paragraph_id": "p37-02",
+          "verification": "exact"
+        },
+        {
+          "text": "According to the analysis above, Nall= Ndiff =0, and the factor F=1-Ndiff/Nall=1-1 =0< 0.2. Therefore, the result of common practice assessment is: Nall-Ndiff=0 < 3 Therefore, the project activity is not a common practice in the region.",
+          "page": 46,
+          "paragraph_id": "p46-05",
+          "verification": "exact"
+        },
+        {
+          "text": "To summarize, “the project is undertaken without being registered as a VCS project activity” is not financially attractive to investors, thus it is not feasible. Being registered as a VCS project, the VCUs revenues can alleviate the identified barriers, therefore the project is additional.",
+          "page": 46,
+          "paragraph_id": "p46-06",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 88,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "quantified_verifiable",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.88,
+          "documentary": 0.03,
+          "assertion_only": 0.09,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.84,
+        "independent_sources": 0.16,
+        "strength": 1.92,
+        "strength_probabilities": {
+          "0": 0.01,
+          "1": 0.28,
+          "2": 0.48,
+          "3": 0.23
+        },
+        "strength_confidence": 0.47,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 64,
+      "review_flags": []
+    },
+    {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "quotes": [],
+      "dropped_findings": 0,
+      "llm": null,
+      "decision": null,
+      "rule": "no_reversal_risk"
+    },
+    {
+      "principle": "robust_quantification",
+      "rationale": "Document applies ACM0010 and tools, defines emission reductions as baseline minus project emissions and leakage, includes leakage in calculations, uses conservative parameter values, and describes calibration, QA/QC and monitoring plan. It provides substantive quantification evidence, though not all uncertainty details are shown.",
+      "quotes": [
+        {
+          "text": "The emission reduction ERy by the project activity during a given year y is the difference between the baseline emissions (BEy) and the sum of project emissions (PEy) and leakage, as follows:",
+          "page": 63,
+          "paragraph_id": "p63-12",
+          "verification": "exact"
+        },
+        {
+          "text": "The project participants have no authority, intervention or control over the leakage of organic fertilizer into the soil. Moreover, this leakage has been included in the emission reductions calculation as per the applied methodology and tool.",
+          "page": 20,
+          "paragraph_id": "p20-17",
+          "verification": "exact"
+        },
+        {
+          "text": "As this parameter is not monitored in the actual operation. So, in the monitoring period, to be conservative, the value of this parameter in the emission reduction calculation is 100%.",
+          "page": 84,
+          "paragraph_id": "p84-11",
+          "verification": "exact"
+        },
+        {
+          "text": "In order to ensure measurements with a low degree of uncertainty, the data metering equipment will be calibrated and checked by an appropriately qualified third party according to an appropriate national standard.",
+          "page": 95,
+          "paragraph_id": "p95-02",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.01,
+          "documentary": 0.83,
+          "assertion_only": 0.16,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.77,
+        "independent_sources": 0.49,
+        "strength": 1.79,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.33,
+          "2": 0.54,
+          "3": 0.13
+        },
+        "strength_confidence": 0.54,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 60,
+      "review_flags": []
+    },
+    {
+      "principle": "no_double_counting",
+      "rationale": "The document addresses double counting directly: it states the project is registered only under VCS, is outside China's ETS, has not sought other environmental credits, and that a no-double-counting declaration was signed. Evidence is specific to project-level registration and credit issuance. The excerpts do not discuss host-country corresponding adjustments or Article 6 authorisation, so coverage of that element is absent.",
+      "quotes": [
+        {
+          "text": "The project has neither been registered nor seeking registration under any other GHG programs. The project is seeking registration only in VCS program.",
+          "page": 18,
+          "paragraph_id": "p18-04",
+          "verification": "exact"
+        },
+        {
+          "text": "The project proponent is not part of any emission trading program. The project does not reduce GHG emissions from activities that are included in an emissions trading program or any other mechanism that includes GHG allowance trading.",
+          "page": 18,
+          "paragraph_id": "p18-09",
+          "verification": "exact"
+        },
+        {
+          "text": "The project hasn’t sought or received another form of environmental credits.",
+          "page": 18,
+          "paragraph_id": "p18-11",
+          "verification": "exact"
+        },
+        {
+          "text": "The project will sign an agreement that it will not participate in other environment credits, other GHG programs and has not been rejected by any other GHG Programs.",
+          "page": 99,
+          "paragraph_id": "p99-02",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 78,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "assertion_only",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.22,
+          "assertion_only": 0.78,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.71,
+        "independent_sources": 0.11,
+        "strength": 1.12,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.9,
+          "2": 0.08,
+          "3": 0.02
+        },
+        "strength_confidence": 0.88,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "assertion_only",
+      "score": 37,
+      "review_flags": []
+    },
+    {
+      "principle": "safeguards",
+      "rationale": "Document provides EIA approval, mitigation measures, pre-construction and monitoring stakeholder questionnaires, and a grievance book. It reports no net harm and local support. However, it lacks specific FPIC, indigenous peoples, labour and gender safeguards, so evidence is substantive but not comprehensive.",
+      "quotes": [
+        {
+          "text": "report with corresponding measures during project development, the construction of the project is in line with national policies and no net harm has been detected. Meanwhile, the implementation of the project will improve local-socio economic development through creating career opportunities.",
+          "page": 21,
+          "paragraph_id": "p21-06",
+          "verification": "exact"
+        },
+        {
+          "text": "Local stakeholder consultation was conducted by project owner before the construction of the project and during the monitoring period through the means of questionnaire.",
+          "page": 21,
+          "paragraph_id": "p21-08",
+          "verification": "exact"
+        },
+        {
+          "text": "In addition, in order to set up the mechanism for on-going communication with local stakeholders, a grievance book was put at the entrance of each swine farm. All stakeholders are allowed to record their grievances or comments in the book at any time.",
+          "page": 24,
+          "paragraph_id": "p24-13",
+          "verification": "exact"
+        },
+        {
+          "text": "The Environmental Impact Assessment (EIA) Report for the project has been approved by local governmental authorities. The environmental impacts and mitigation measures during the construction period and the operation period are summarized as follows.",
+          "page": 24,
+          "paragraph_id": "p24-15",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 80,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 1.0,
+          "assertion_only": 0.0,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 1.0,
+        "independent_sources": 0.44,
+        "strength": 2.01,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.06,
+          "2": 0.87,
+          "3": 0.07
+        },
+        "strength_confidence": 0.87,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 67,
+      "review_flags": []
+    }
+  ],
+  "overall": {
+    "score": 58,
+    "included": [
+      "additionality",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [
+      "permanence"
+    ],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-15T17:25:49+00:00"
+}

@@ -21,7 +21,7 @@
       "https://verra.org/verras-rice-cultivation-and-landfill-gas-methodologies-receive-icvcm-approval/",
       "https://verra.org/methodologies/acm0001-flaring-or-use-of-landfill-gas/"
     ],
-    "table_version": "2026-10-13"
+    "table_version": "2026-10-15"
   },
   "method": {
     "report_schema": "report-v1",
@@ -30,10 +30,10 @@
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "decision_model": "typesafe/jev-1.13",
     "decision_input": "verified_quotes",
-    "methodology_table_version": "2026-10-13",
+    "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0x77db5fd6b725dc8d6f2e2b1447ec2f91b8433a5f1eedfcbc811383577c657bdf",
+  "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
   "principles": [
     {
       "principle": "additionality",
@@ -68,24 +68,24 @@
         "evidence_level": "assertion_only",
         "evidence_probabilities": {
           "quantified_verifiable": 0.0,
-          "documentary": 0.46,
-          "assertion_only": 0.54,
+          "documentary": 0.47,
+          "assertion_only": 0.53,
           "not_addressed": 0.0
         },
-        "evidence_confidence": 0.39,
+        "evidence_confidence": 0.37,
         "independent_sources": 0.2,
-        "strength": 1.31,
+        "strength": 1.28,
         "strength_probabilities": {
           "0": 0.0,
-          "1": 0.72,
-          "2": 0.25,
+          "1": 0.75,
+          "2": 0.22,
           "3": 0.03
         },
-        "strength_confidence": 0.69,
+        "strength_confidence": 0.72,
         "model": "typesafe/jev-1.13-20260917"
       },
       "status": "assertion_only",
-      "score": 44,
+      "score": 43,
       "review_flags": []
     },
     {
@@ -138,24 +138,24 @@
         "evidence_level": "documentary",
         "evidence_probabilities": {
           "quantified_verifiable": 0.15,
-          "documentary": 0.74,
-          "assertion_only": 0.1,
+          "documentary": 0.71,
+          "assertion_only": 0.13,
           "not_addressed": 0.01
         },
-        "evidence_confidence": 0.65,
-        "independent_sources": 0.29,
-        "strength": 2.02,
+        "evidence_confidence": 0.61,
+        "independent_sources": 0.28,
+        "strength": 1.98,
         "strength_probabilities": {
           "0": 0.01,
-          "1": 0.19,
-          "2": 0.58,
-          "3": 0.22
+          "1": 0.21,
+          "2": 0.59,
+          "3": 0.19
         },
-        "strength_confidence": 0.57,
+        "strength_confidence": 0.58,
         "model": "typesafe/jev-1.13-20260917"
       },
       "status": "partial_evidence",
-      "score": 67,
+      "score": 66,
       "review_flags": []
     },
     {
@@ -197,24 +197,24 @@
         "evidence_level": "documentary",
         "evidence_probabilities": {
           "quantified_verifiable": 0.05,
-          "documentary": 0.84,
-          "assertion_only": 0.11,
+          "documentary": 0.86,
+          "assertion_only": 0.09,
           "not_addressed": 0.0
         },
-        "evidence_confidence": 0.79,
-        "independent_sources": 0.24,
-        "strength": 1.99,
+        "evidence_confidence": 0.81,
+        "independent_sources": 0.25,
+        "strength": 1.87,
         "strength_probabilities": {
           "0": 0.0,
-          "1": 0.4,
-          "2": 0.21,
-          "3": 0.39
+          "1": 0.47,
+          "2": 0.2,
+          "3": 0.33
         },
-        "strength_confidence": 0.01,
+        "strength_confidence": 0.14,
         "model": "typesafe/jev-1.13-20260917"
       },
       "status": "partial_evidence",
-      "score": 66,
+      "score": 62,
       "review_flags": []
     },
     {
@@ -250,11 +250,11 @@
         "evidence_level": "documentary",
         "evidence_probabilities": {
           "quantified_verifiable": 0.0,
-          "documentary": 0.7,
-          "assertion_only": 0.28,
+          "documentary": 0.69,
+          "assertion_only": 0.29,
           "not_addressed": 0.02
         },
-        "evidence_confidence": 0.6,
+        "evidence_confidence": 0.59,
         "independent_sources": 0.22,
         "strength": 1.63,
         "strength_probabilities": {
@@ -272,7 +272,7 @@
     }
   ],
   "overall": {
-    "score": 57,
+    "score": 56,
     "included": [
       "additionality",
       "robust_quantification",
@@ -291,5 +291,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-13T19:51:20+00:00"
+  "generated_at": "2026-10-15T17:31:11+00:00"
 }

@@ -68,7 +68,7 @@
       "local_path": "samples/pdfs/VCS1742_PD.pdf",
       "sha256": "0c7e213fc085b1df66f32eb6ddc5ad27a3980ec781ba52677f26a58dbf31aa4b",
       "methodology": "ACM0002",
-      "methodology_version": null,
+      "methodology_version": "12.1.0",
       "reversal_risk": false,
       "evaluation_set": "D1",
       "extra_files": [
@@ -91,7 +91,7 @@
       "local_path": "samples/pdfs/VCS1728_PD.pdf",
       "sha256": "5c879cd740a01ed857dbd050d40df237c7eb5168fffe173e0e34889190368f7c",
       "methodology": "ACM0002",
-      "methodology_version": null,
+      "methodology_version": "17.0",
       "reversal_risk": false,
       "evaluation_set": "D1"
     },
@@ -121,7 +121,7 @@
       "local_path": "samples/pdfs/VCS673_PD.pdf",
       "sha256": "cbfb2a9fd2ac091ff985c80c5ab8cec857adc699e396425920653318f096e1b1",
       "methodology": "AR-ACM0001",
-      "methodology_version": null,
+      "methodology_version": "5.0.0",
       "reversal_risk": true,
       "evaluation_set": "D1"
     },
@@ -166,7 +166,7 @@
       "local_path": "samples/pdfs/VCS4150_PD.pdf",
       "sha256": "573d9046347e8ce1a9198ca57286cd0d81c2e41bc67edf1f2fbb4c85e234742b",
       "methodology": "VM0050",
-      "methodology_version": null,
+      "methodology_version": "1.0",
       "reversal_risk": false,
       "evaluation_set": "D1"
     }
