@@ -1,9 +1,11 @@
 {
+  "contract": "0xBb88057576b92Ef27753A6b2a4Df83bE444F1308",
+  "deploy_gas": 15656604,
   "txs": [
     {
       "kind": "registerQualityReport",
-      "tx": "0xc9651417e096e87499b1a1badbece23a20fe5bd220fe442c1e8ca25aa0219991",
-      "block": 11920969,
+      "tx": "0x7285d7a1f70a1a32e1413b9367ba5c6c5f57edf991f4878574aabe7cb12534e0",
+      "block": 11921134,
       "gas": 463129,
       "project": "VCS1477",
       "version": 1,
@@ -11,8 +13,8 @@
     },
     {
       "kind": "registerQualityReport",
-      "tx": "0x6ca34995c7ccf708060940e39717d8dbfe595dee39c2c318f58f973602925576",
-      "block": 11920971,
+      "tx": "0x88f9ba58c18e37f5625500566bc167b5016a1396d3b1d6711a1484d405d9fff7",
+      "block": 11921136,
       "gas": 463129,
       "project": "VCS1851",
       "version": 1,
@@ -20,8 +22,8 @@
     },
     {
       "kind": "registerQualityReport",
-      "tx": "0xd6dd4b6839953b77cdc01b7347ff2fda4e6cd07d1c682274a61915cca3404051",
-      "block": 11920973,
+      "tx": "0x69e8ad5712743babc2ef690683a307c9ba433ddd84019b3d8827df64eb9bbe83",
+      "block": 11921138,
       "gas": 463129,
       "project": "VCS138",
       "version": 1,
@@ -29,8 +31,8 @@
     },
     {
       "kind": "registerQualityReport",
-      "tx": "0xdc0db4b003e153ff0482b74158c02a9b5999ad94add7f85c6874f17b81625ead",
-      "block": 11920975,
+      "tx": "0x3964e840ab865cf1a2a6676a2de6e470d28a581f464cbb67a4921a938dd72f98",
+      "block": 11921140,
       "gas": 463129,
       "project": "VCS2505",
       "version": 1,
@@ -38,53 +40,57 @@
     },
     {
       "kind": "registerBatch",
-      "tx": "0x5a1d691057204a8c24824d16da78578e9a4d0fb3a749537fe125fde89a87bba2",
-      "block": 11920977,
-      "gas": 242226,
+      "tx": "0xf8c634ebef85bcfeffe410e37a56237f0a3568ff238a29e2ba76fad0a56b31f8",
+      "block": 11921142,
+      "gas": 242940,
       "batch": "VCS1477|2015|001",
       "serials": [
         1,
         14165124
-      ]
+      ],
+      "lot_size": 1000
     },
     {
       "kind": "registerBatch",
-      "tx": "0x9300a2165b78668e1f33e43d8315e919b89c7ffa0280b60dba56ec60d6b04ae2",
-      "block": 11920979,
-      "gas": 242226,
+      "tx": "0xe36d0f6b6a1781753dfa964cac38881b839d1e8c6904db34946532f8db313392",
+      "block": 11921144,
+      "gas": 242940,
       "batch": "VCS1851|2017|001",
       "serials": [
         1,
         562006
-      ]
+      ],
+      "lot_size": 1000
     },
     {
       "kind": "registerBatch",
-      "tx": "0x7bf6fc009421facb7b319bcfac9f971433a503192473f61db1c7d1d2b9c4313c",
-      "block": 11920981,
-      "gas": 242214,
+      "tx": "0x356ca86246717b2dbe126ce5336d927e9f61ff7f6391d45360e10563a9059001",
+      "block": 11921146,
+      "gas": 242928,
       "batch": "VCS138|2009|001",
       "serials": [
         1,
         56520
-      ]
+      ],
+      "lot_size": 1000
     },
     {
       "kind": "registerBatch",
-      "tx": "0x6aea97f3c4e1a53c2affbfce685c99106d8267856e8f9e5781b97f083d06bbec",
-      "block": 11920983,
-      "gas": 242226,
+      "tx": "0xf86a6f5963f80ed02df16f7d984bba90dd7f60244712540f413762e99920dfc5",
+      "block": 11921148,
+      "gas": 242940,
       "batch": "VCS2505|2021|001",
       "serials": [
         1,
         98995
-      ]
+      ],
+      "lot_size": 1000
     },
     {
       "kind": "retire",
-      "tx": "0x37084364117fe0773fbc62549629806caedeeca193d98ec1edbd08ac818bc8e2",
-      "block": 11920985,
-      "gas": 1024676,
+      "tx": "0x4e76c0f842dec06b9e1bc5572344e4b533d5aa4527ce932da7048087a9a25188",
+      "block": 11921150,
+      "gas": 1023696,
       "retirement_id": 1,
       "batch": "VCS1477|2015|001",
       "range": [
@@ -93,11 +99,31 @@
       ]
     },
     {
+      "kind": "retire",
+      "tx": "0xf3737080241aa614d17b83a7875530c8e560c3c491b55033343c6ccec721096f",
+      "block": 11921152,
+      "gas": 827868,
+      "retirement_id": 2,
+      "batch": "VCS1477|2015|001",
+      "range": [
+        1001,
+        2000
+      ]
+    },
+    {
       "kind": "attestRetirement",
-      "tx": "0x069b00d35b9ec31de4a2eaf57d98509830cdcc042db079e5a7b242915b9a5b8d",
-      "block": 11920987,
+      "tx": "0x569ead7f81f5ed6f65a04bccbb0ab9203fc0950c08b78c6e60830d08f22aa294",
+      "block": 11921154,
       "gas": 32637,
       "retirement_id": 1,
+      "valid": true
+    },
+    {
+      "kind": "attestRetirement",
+      "tx": "0xb45ca0091ac00ca79698278b2675bc68101be97e9e611397bf22dc4773a89e09",
+      "block": 11921156,
+      "gas": 32637,
+      "retirement_id": 2,
       "valid": true
     }
   ]

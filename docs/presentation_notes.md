@@ -86,13 +86,13 @@ anonim sayılmıyor.
 | Rapor hash'leri | 4 raporun hash'i yayımlanan dosyadan yeniden hesaplanıyor | 13 Ekim |
 | AI maliyeti | 4 proje × 5 ilke ≈ 0,05 $ (LLM) + ≈ 0,001 $ (Jev) | 13 Ekim |
 | Gaz (Anvil, eski kurallar) | deploy 2,24M; lot iptali ~204k; aralık iptali ~211k; `registerBatch` ~73k; `attestRetirement` ~31k | 15 Ekim |
-| Gaz (Sepolia, gerçek ağ) | deploy 14,19M; `retire` 1,02M; rapor 463k; parti 242k; onay 33k (yeni depolama yazımı pahalı; maliyet yine ihmal edilebilir, gaz fiyatı ~0,001 gwei). Lot sürümü yeniden yüklenince güncellenecek | 15 Ekim |
+| Gaz (Sepolia, gerçek ağ) | deploy 15,66M (işlem sınırı ~16,8M'e yakın!); lot iptali 1,02M ilk / 828k sonraki; rapor 463k; parti 243k; onay 33k. Yeni depolama yazımı pahalı; maliyet yine ihmal edilebilir (gaz fiyatı ~0,001 gwei) | 15 Ekim |
 | **Ölçek (gerçek veri)** | VCS766'nın 38.382 gerçek iptali oynatıldı: eski tasarım **7.467.'de blok sınırında çöktü**; yeni tasarım her iptalde **sabit 211k gaz** | 15 Ekim |
 | Gerçek kayıtlar | OffsetsDB'de iptalin ihracı aştığı 11 vaka (235.932 t); sözleşme 76 iptali reddederdi. **Dikkat:** bunlar büyük ihtimalle veri tutarsızlığı (vintage ataması, yeniden ihraç), kanıtlanmış çifte sayım değil. "Kamuya açık verideki tutarsızlıkları otomatik işaretlerdi" de | 15 Ekim |
 | Gizlilik ölçümü | Tonların %88,7'si (proje + miktar) ile tekil. **Standart lotlar artık sözleşmede zorunlu** (1.000 t). Zamanlama hâlâ bağlıyor: lot + operatörün dönemsel toplu yayını ile tamamen açıkta kalan tonlar günlükte %36,8, çeyrekte %14,5. Eski "61 eş lot" rakamı zamanlamayı yok sayıyordu, **kullanma** | 15 Ekim |
 | Güvenlik | Slither temiz (2 yanlış alarm gerekçeli), 2 adımlı yönetici devri, rol iptali; 13 tehdit senaryosu belgelendi | 15 Ekim |
 | AI tutarlılığı | Jev 3 çalıştırmada %99,4 aynı cevap (LLM %96); Jev 6 kat hızlı, 20 kat ucuz | 15 Ekim |
-| Sepolia sözleşme adresi / Etherscan | İlk sürüm `0x7D17ebA0…e675` (doğrulandı). Lot sürümü yeniden yüklenecek, adres güncellenecek | 15 Ekim |
+| Sepolia sözleşme adresi / Etherscan | **`0xBb88057576b92Ef27753A6b2a4Df83bE444F1308`** (lot sürümü, kaynak doğrulandı): https://sepolia.etherscan.io/address/0xBb88057576b92Ef27753A6b2a4Df83bE444F1308#code . 4 rapor, 4 parti, 2 lotluk bir alım + 2 denetçi onayı; işlemler `deployments/11155111-seed.json`. İlk sürüm `0x7D17…e675` `previous` altında kayıtlı | 15 Ekim |
 
 ## 6. Jüri soruları ve cevapları
 

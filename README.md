@@ -179,7 +179,7 @@ python scripts/assess_project.py VCS1851
 ## Roadmap
 
 - [x] `RetirementRegistry` contract + Foundry tests
-- [ ] Sepolia deployment + Etherscan verification
+- [x] Sepolia deployment + Etherscan verification: [`0xBb88…1308`](https://sepolia.etherscan.io/address/0xBb88057576b92Ef27753A6b2a4Df83bE444F1308#code) (demo transactions in `deployments/11155111-seed.json`)
 - [x] Privacy module (commitments, sealed-box audit vault) with Python ↔ Solidity test vectors
 - [x] Python chain client and end-to-end flow on a local chain (`scripts/demo_e2e.py`)
 - [ ] Streamlit app: buyer, public verification, auditor and project quality views

@@ -1,9 +1,10 @@
 {
   "network": "sepolia",
   "chain_id": 11155111,
-  "address": "0x7D17ebA028c6d4e77A28fC487C59F0f68aa1e675",
-  "tx_hash": "0xbb1b14a04402e3f5129b26392a6bb2efa76b44c153e65e06f4c0b584f5239698",
-  "block": 11920940,
+  "address": "0xBb88057576b92Ef27753A6b2a4Df83bE444F1308",
+  "tx_hash": "0x2d2e6a24314251a1e5d6c8e2e0dc8d9de448ca332f1558f4fac2d3917cfd4c49",
+  "block": 11921118,
+  "gas_used": 15656604,
   "roles": {
     "deployer": "0xd1bB1963D2e7eC72dc7B9ec4D649959556597108",
     "assessor": "0x708E5433e7ed481729D4579f60431fb3924F5C76",
@@ -11,5 +12,12 @@
     "auditor": "0x7fEb8DBd85553192F7bBB872547861e1aF3d9a2D"
   },
   "compiler": "0.8.28+commit.7893614a",
-  "deployed_at": "2026-10-15T14:12:37+00:00"
+  "deployed_at": "2026-10-15T14:48:49+00:00",
+  "previous": [
+    {
+      "address": "0x7D17ebA028c6d4e77A28fC487C59F0f68aa1e675",
+      "tx_hash": "0xbb1b14a04402e3f5129b26392a6bb2efa76b44c153e65e06f4c0b584f5239698",
+      "deployed_at": "2026-10-15T14:12:37+00:00"
+    }
+  ]
 }
