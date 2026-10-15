@@ -32,7 +32,7 @@ def main() -> None:
     if w3.eth.chain_id != SEPOLIA:
         sys.exit("not Sepolia")
     record = deployments.load(SEPOLIA)
-    registry = Registry(w3, record["address"], accounts)
+    registry = Registry(w3, record["address"], accounts, from_block=record["block"])
     public, private = auditor_box_keys()
     svc = OnceSealed(registry, VaultStore(PROJECT_ROOT / "data" / "vault" / f"{SEPOLIA}.sqlite"), public, private)
     out_path = PROJECT_ROOT / "deployments" / f"{SEPOLIA}-seed.json"

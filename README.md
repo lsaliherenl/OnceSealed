@@ -90,6 +90,10 @@ up the lot index directly, and free-range batches keep a sorted linked list wher
 as a hint (a wrong hint can only make the call revert). A first version scanned the list linearly; replaying 38,382
 real retirements of one Verra batch, it hit the block gas limit at retirement 7,467
 ([scale results](data/derived/scale/summary.json), [chart](docs/figures/scale_gas.png)).
+Reads scale too: the contract's `hintFor` / `retirementOf` views walk a free-range batch's list (about 4,400 gas per
+retirement, 22M gas per call at 5,000 retirements, beyond typical 50M `eth_call` caps at roughly 11,000), so the
+client answers them from an index of `CreditRetired` events instead: built in 1.5 s for 5,000 retirements, then
+about 1 ms per lookup (`scripts/index_benchmark.py`). Lot batches are answered by the contract in constant time.
 
 **Privacy limits, measured** ([threat model](docs/threat_model.md), T12): for 88.7% of retired tonnes in OffsetsDB,
 project + quantity alone single out one retirement. Standard lots remove the quantity; timing still links lots unless

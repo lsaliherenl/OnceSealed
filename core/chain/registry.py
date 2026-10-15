@@ -3,11 +3,16 @@
 Every write is simulated first (eth_call from the sending role), so a revert surfaces
 as a readable ``RegistryError`` such as ``AlreadyRetired(conflictingRetirementId=1)``
 before any gas is spent.
+
+Lookups stay cheap at any batch size: lot batches are answered by the contract in constant
+time; for free-range batches the contract's views would walk a list, so the client keeps a
+sorted index built from CreditRetired events and answers hints and lookups by binary search.
 """
 
 import json
 import os
 import time
+from bisect import bisect_left, bisect_right, insort
 from dataclasses import dataclass
 from enum import IntEnum
 from functools import lru_cache
@@ -27,6 +32,7 @@ from core.config import ChainSettings
 ARTIFACT_PATH = Path(__file__).parent / "artifacts" / "RetirementRegistry.json"
 ROLE_NAMES = {"assessor": "ASSESSOR_ROLE", "operator": "OPERATOR_ROLE", "auditor": "AUDITOR_ROLE"}
 DEFAULT_ADMIN_DELAY = 2 * 24 * 3600  # an admin handover must wait two days before it can be accepted
+LOG_CHUNK = 50_000  # blocks per eth_getLogs request (public RPCs cap the range)
 
 
 @lru_cache(maxsize=1)
@@ -133,13 +139,44 @@ def connect(settings: ChainSettings) -> tuple[Web3, dict[str, LocalAccount]]:
     return w3, accounts
 
 
+class _RangeIndex:
+    """Retirements of one free-range batch sorted by start serial, rebuilt from CreditRetired events."""
+
+    def __init__(self, from_block: int):
+        self.scanned_to = from_block - 1
+        self.starts: list[int] = []
+        self.rows: list[tuple[int, int, int]] = []  # (start, end, retirement id), sorted like starts
+        self.ids: set[int] = set()
+
+    def add(self, retirement_id: int, start: int, end: int) -> None:
+        if retirement_id in self.ids:
+            return
+        self.ids.add(retirement_id)
+        i = bisect_left(self.starts, start)
+        self.starts.insert(i, start)
+        self.rows.insert(i, (start, end, retirement_id))
+
+    def predecessor(self, start: int) -> int:
+        """The last retirement starting before `start` (what the contract's hintFor returns)."""
+        i = bisect_left(self.starts, start)
+        return self.rows[i - 1][2] if i else 0
+
+    def covering(self, serial: int) -> int:
+        i = bisect_right(self.starts, serial) - 1
+        return self.rows[i][2] if i >= 0 and self.rows[i][1] >= serial else 0
+
+
 class Registry:
-    def __init__(self, w3: Web3, address: str, accounts: dict[str, LocalAccount]):
+    def __init__(self, w3: Web3, address: str, accounts: dict[str, LocalAccount], from_block: int = 0):
+        """`from_block`: the deployment block, where event scans start (0 is fine on a local chain)."""
         self.w3 = w3
         self.accounts = accounts
         self.abi = load_artifact()["abi"]
         self.contract: Contract = w3.eth.contract(address=Web3.to_checksum_address(address), abi=self.abi)
         self.address = self.contract.address
+        self.from_block = from_block
+        self._lot_sizes: dict[bytes, int] = {}  # immutable once a batch is registered
+        self._indexes: dict[bytes, _RangeIndex] = {}
 
     # --- deployment -------------------------------------------------------------------------
 
@@ -155,7 +192,7 @@ class Registry:
         args = (admin_delay, deployer.address) if len(ctor["inputs"]) == 2 else (deployer.address,)
         tx = factory.constructor(*args).build_transaction(_base_tx(w3, deployer))
         result = _send(w3, deployer, tx, art["abi"])
-        reg = cls(w3, result.receipt["contractAddress"], accounts)
+        reg = cls(w3, result.receipt["contractAddress"], accounts, from_block=result.block_number)
         reg.grant_roles()
         return reg, result
 
@@ -200,16 +237,45 @@ class Registry:
         return ev[0]["args"]["version"], res
 
     def hint_for(self, batch_id: bytes, start: int) -> int:
-        """Predecessor retirement for a new range (walks the list in an eth_call; fine at demo scale,
-        large batches would derive it from CreditRetired events)."""
-        return self._call(self.contract.functions.hintFor(batch_id, start)) if self.uses_hints else 0
+        """prevHint for retire(): 0 for lot batches (ignored there), otherwise the predecessor from the
+        event index. A stale index can only make retire() revert with InvalidHint, never accept an overlap."""
+        if not self.uses_hints or self._lot_size(batch_id) != 0:
+            return 0
+        return self._range_index(batch_id).predecessor(start)
 
     def retire(self, batch_id: bytes, start: int, end: int, commitment: bytes,
                vault_hash: bytes) -> tuple[int, TxResult]:
         fn = self.retire_fn(batch_id, start, end, commitment, vault_hash, self.hint_for(batch_id, start))
         res = self._transact("operator", fn)
         ev = self.contract.events.CreditRetired().process_receipt(res.receipt)
-        return ev[0]["args"]["retirementId"], res
+        rid = ev[0]["args"]["retirementId"]
+        if batch_id in self._indexes:
+            self._indexes[batch_id].add(rid, start, end)  # do not wait for the RPC to serve the new log
+        return rid, res
+
+    def _lot_size(self, batch_id: bytes) -> int | None:
+        """The batch's lot size (0 = free ranges), or None if the batch is not registered."""
+        if batch_id not in self._lot_sizes:
+            try:
+                self._lot_sizes[batch_id] = self.get_batch(batch_id).lot_size
+            except RegistryError as e:
+                if e.name != "UnknownBatch":
+                    raise
+                return None
+        return self._lot_sizes[batch_id]
+
+    def _range_index(self, batch_id: bytes) -> _RangeIndex:
+        """Bring the batch's event index up to the latest block (incremental, chunked eth_getLogs)."""
+        index = self._indexes.setdefault(batch_id, _RangeIndex(self.from_block))
+        head = self.w3.eth.block_number
+        event = self.contract.events.CreditRetired()
+        while index.scanned_to < head:
+            lo, hi = index.scanned_to + 1, min(index.scanned_to + LOG_CHUNK, head)
+            for log in event.get_logs(from_block=lo, to_block=hi, argument_filters={"batchId": batch_id}):
+                a = log["args"]
+                index.add(a["retirementId"], a["start"], a["end"])
+            index.scanned_to = hi
+        return index
 
     @property
     def uses_hints(self) -> bool:
@@ -268,6 +334,10 @@ class Registry:
         return list(self._call(self.contract.functions.orderedRetirements(batch_id)))
 
     def retirement_of(self, batch_id: bytes, serial: int) -> int:
+        """Retirement covering `serial`, or 0. Constant-time contract view for lot batches; event index for
+        free-range batches (the contract's view would walk the whole list)."""
+        if self._lot_size(batch_id) == 0 and self.uses_hints:
+            return self._range_index(batch_id).covering(serial)
         return self._call(self.contract.functions.retirementOf(batch_id, serial))
 
     def retirement_count(self) -> int:

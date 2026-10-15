@@ -25,7 +25,7 @@ def build():
     record = deployments.load(chain_id)
     live = record is not None and len(w3.eth.get_code(record["address"])) > 0
     if live:
-        registry = Registry(w3, record["address"], accounts)
+        registry = Registry(w3, record["address"], accounts, from_block=record.get("block", 0))
     elif network == "anvil":
         anvil.fund(w3, [a.address for a in accounts.values()])
         registry, tx = Registry.deploy(w3, accounts)

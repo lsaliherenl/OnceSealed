@@ -129,6 +129,29 @@ def test_lot_batch_splits_purchase_into_unlinkable_lots(app):
     assert not app.verify_receipt(swapped).valid
 
 
+def test_event_index_matches_contract_views(app):
+    """Free-range batches: hints and lookups from the CreditRetired index equal the contract's list walk."""
+    batch = IssuanceBatch("VCS1477", vintage=2022, batch_no=1, first_serial=1, last_serial=5_000)
+    app.ensure_batch(batch)
+    rng = random.Random(11)
+    reg, done = app.registry, 0
+    for _ in range(200):  # random ranges in random order; overlapping ones are rejected by the contract
+        s = rng.randint(1, 4_950)
+        try:
+            reg.retire(batch.batch_id, s, s + rng.randint(0, 40), new_salt(), new_salt())
+            done += 1
+        except RegistryError as err:
+            assert err.name == "AlreadyRetired"
+        if done == 25:
+            break
+    assert done == 25
+    fresh = Registry(reg.w3, reg.address, reg.accounts)  # rebuilt purely from logs
+    for serial in [1, 5_000, *(rng.randint(1, 5_000) for _ in range(300))]:
+        on_chain = reg.contract.functions.retirementOf(batch.batch_id, serial).call()
+        assert reg.retirement_of(batch.batch_id, serial) == on_chain == fresh.retirement_of(batch.batch_id, serial)
+        assert fresh.hint_for(batch.batch_id, serial) == reg.contract.functions.hintFor(batch.batch_id, serial).call()
+
+
 def test_auditor_rejects_vault_that_does_not_match_commitment(app):
     """A dishonest operator commits to buyer A but seals buyer B's identity in the vault."""
     a_lei, b_lei = leis(2, seed=2)
