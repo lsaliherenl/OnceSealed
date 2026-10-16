@@ -7,7 +7,9 @@ import { VerifyPanel } from "@/components/verify-panel";
 
 export const metadata: Metadata = { title: "Verify a retirement" };
 
-export default function VerifyPage() {
+type SearchParams = Promise<{ q?: string | string[] }>;
+
+export default function VerifyPage({ searchParams }: { searchParams: SearchParams }) {
   return (
     <main className="reveal mx-auto flex max-w-[1200px] flex-col gap-7 px-6 md:px-8 pt-10 pb-[72px]">
       <PageHeader
@@ -21,9 +23,16 @@ export default function VerifyPage() {
           </Callout>
         }
       />
-      <Suspense>
-        <VerifyPanel />
+      <Suspense fallback={<p className="text-muted-foreground">Loading…</p>}>
+        <VerifyPanelFromQuery searchParams={searchParams} />
       </Suspense>
     </main>
   );
+}
+
+/** The lookup box in the top bar sends ?q=1 or ?q=SIM-…; a new query remounts the panel. */
+async function VerifyPanelFromQuery({ searchParams }: { searchParams: SearchParams }) {
+  const raw = (await searchParams).q;
+  const q = (Array.isArray(raw) ? raw[0] : raw) ?? "";
+  return <VerifyPanel key={q} q={q} />;
 }

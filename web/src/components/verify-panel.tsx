@@ -1,7 +1,6 @@
 "use client";
 
 import { Check, FileText, LoaderCircle, Lock, Search, TriangleAlert, Upload, X } from "lucide-react";
-import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { EtherscanLink, HashChip } from "@/components/hash";
 import { TransitionLink } from "@/components/transition-link";
@@ -61,13 +60,8 @@ async function lookupOnChain(m: Mode, value: string): Promise<Lookup> {
   }
 }
 
-/** The lookup box in the top bar sends ?q=1 or ?q=SIM-…; a new query remounts the panel. */
-export function VerifyPanel() {
-  const q = useSearchParams().get("q") ?? "";
-  return <VerifyPanelFor key={q} q={q} />;
-}
-
-function VerifyPanelFor({ q }: { q: string }) {
+/** `q` is a retirement number or a simulated serial from the URL (?q=…). */
+export function VerifyPanel({ q }: { q: string }) {
   const initialMode: Mode = q && !/^#?\d+$/.test(q) ? "serial" : "id";
   const [mode, setMode] = useState<Mode>(initialMode);
   const [qId, setQId] = useState(initialMode === "id" && q ? q.replace(/^#/, "") : "1");

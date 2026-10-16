@@ -26,5 +26,5 @@ npx eslint src
 - The proxy forwards only the routes the two role screens use and adds `OPERATOR_API_TOKEN` / `AUDITOR_API_TOKEN`
   from the environment or the repository's `.env`. API address: `ONCESEALED_API_URL` (default `http://127.0.0.1:8000`).
   Demo only: do not expose a server with the tokens configured.
-- Known dev-mode quirk: opening `/verify?q=…` directly under `next dev` can leave the panel unrendered; the production
-  build renders it.
+- Cache Components: route params and the `?q=` query are read inside `<Suspense>`, so every page keeps a prerendered
+  shell (no "URL data outside of Suspense" insights in `next dev`).

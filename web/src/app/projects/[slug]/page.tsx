@@ -1,6 +1,7 @@
 import { Check, ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { AnchorCheck } from "@/components/anchor-check";
 import { EtherscanLink, HashChip } from "@/components/hash";
 import { DeterministicTag, IcvcmStamp, ScoreBar, SignalBanner } from "@/components/quality";
@@ -33,7 +34,20 @@ const FLAG_TEXT: Record<string, string> = {
   decision_questions_disagree: "The decision model's two questions disagreed by two or more levels; worth a human look.",
 };
 
-export default async function ProjectReportPage({ params }: { params: Promise<Params> }) {
+/** Params are read inside Suspense so the route keeps an instant static shell (Cache Components). */
+export default function ProjectReportPage({ params }: { params: Promise<Params> }) {
+  return (
+    <Suspense
+      fallback={
+        <main className="mx-auto max-w-[1200px] px-6 pt-10 pb-[72px] text-muted-foreground md:px-8">Loading report…</main>
+      }
+    >
+      <ProjectReport params={params} />
+    </Suspense>
+  );
+}
+
+async function ProjectReport({ params }: { params: Promise<Params> }) {
   const project = getProject((await params).slug);
   if (!project || !project.report) notFound();
   const report = project.report;
