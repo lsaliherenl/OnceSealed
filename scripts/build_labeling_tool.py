@@ -33,12 +33,10 @@ TEMPLATE = r"""<!doctype html>
   .bar > div { height:100%; background:var(--accent); width:0; }
   button, select { font:inherit; padding:6px 12px; border-radius:6px; border:1px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer; }
   button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
-  main { max-width:1180px; margin:0 auto; padding:16px; display:grid; grid-template-columns: 1.2fr 1fr; gap:16px; }
-  @media (max-width: 860px) { main { grid-template-columns: 1fr; } }
+  main { max-width:920px; margin:0 auto; padding:16px; display:flex; flex-direction:column; gap:16px; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; }
   .meta { color:var(--ink2); font-size:13px; margin-bottom:8px; }
-  .excerpt { max-height: calc(100vh - 170px); overflow:auto; }
-  .para { margin:0 0 10px; white-space:pre-wrap; }
+  .para { margin:0 0 12px; white-space:pre-line; overflow-wrap:anywhere; }
   .pid { display:inline-block; font:12px ui-monospace, Consolas, monospace; color:var(--accent); margin-right:6px; user-select:all; }
   .q { border-top:1px solid var(--line); padding:12px 0; }
   .q:first-of-type { border-top:none; }
@@ -52,7 +50,7 @@ TEMPLATE = r"""<!doctype html>
   .opts input[value=yes]:checked + span { color:var(--yes); font-weight:700; }
   .opts input[value=no]:checked + span { color:var(--no); font-weight:700; }
   .opts input[value=unclear]:checked + span { color:var(--unc); font-weight:700; }
-  .opts input[type=text] { font:13px ui-monospace, Consolas, monospace; padding:4px 6px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--ink); width:150px; }
+  .opts input[type=text] { font:13px ui-monospace, Consolas, monospace; padding:4px 6px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--ink); width:190px; }
   .nav { display:flex; justify-content:space-between; gap:8px; margin-top:12px; }
   .intro { max-width:760px; margin:40px auto; }
   .intro li { margin-bottom:6px; }
@@ -73,6 +71,32 @@ function save() { try { localStorage.setItem(key(), JSON.stringify({answers, idx
 const total = DATA.items.reduce((n, it) => n + it.questions.length, 0);
 const answered = () => Object.values(answers).filter(a => a && a.answer).length;
 const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// PDF text keeps the PDF's line breaks, so table cells arrive one word per line and sentences break mid-way.
+// Join wrapped lines for reading; keep blank lines, headings, bullets and numbered items on their own line.
+// Only whitespace changes; the words, including any hyphen at a line end, are unchanged.
+const BULLET = /^[•▪●·–-]$/;
+const NEW_ITEM = /^([•▪●·–]|-\s|\(?[a-z0-9ivx]{1,4}[.)]\s)/i;
+const ENDS_SENTENCE = /[.:;!?)]$/;
+function reflow(text) {
+  return text.replace(/\r/g, '').split(/\n\s*\n/).map(block => {
+    let out = '', prev = '', prevStartsLine = true;
+    for (const line of block.split('\n').map(l => l.trim()).filter(Boolean)) {
+      // A short line that starts a line, starts with a capital and has no closing punctuation, followed by a
+      // capitalised line, is a heading ("Baseline Scenario" / "In the absence of ...").
+      const heading = prevStartsLine && prev.length < 70 && /^[A-Z0-9]/.test(prev) && !ENDS_SENTENCE.test(prev)
+                      && /^[A-Z]/.test(line);
+      let startsLine = false;
+      if (!out) { out = line; startsLine = true; }
+      else if (BULLET.test(out.split('\n').pop())) out += ' ' + line;  // a bullet alone on its line: join its text
+      else if (NEW_ITEM.test(line) || heading) { out += '\n' + line; startsLine = true; }
+      else if (/[a-z]-$/.test(out) && /^[a-z]/.test(line)) out += line;  // keep the hyphen: it may be part of the word
+      else out += ' ' + line;
+      prevStartsLine = startsLine || ENDS_SENTENCE.test(prev);
+      prev = line;
+    }
+    return out;
+  }).filter(Boolean).join('\n\n');
+}
 
 function intro() {
   document.getElementById('app').innerHTML = `
@@ -111,7 +135,7 @@ function render() {
       <div class="opts">${opt('yes','Evet')}${opt('no','Hayır')}${opt('unclear','Belirsiz')}
         <input type="text" data-q="${qid}" placeholder="paragraf (ör. p32-03)" value="${esc(a.evidence||'')}"></div></div>`;
   }).join('');
-  const paras = it.paragraphs.map(p => `<p class="para"><span class="pid">${p.id}</span>${esc(p.text)}</p>`).join('')
+  const paras = it.paragraphs.map(p => `<p class="para"><span class="pid">${p.id}</span>${esc(reflow(p.text))}</p>`).join('')
               || '<p class="meta">Bu ilke için belgede anahtar kelimeyle eşleşen paragraf bulunamadı. Tüm sorulara Hayır deyin.</p>';
   document.getElementById('app').innerHTML = `
   <header><b>${esc(annotator)}</b><span>${idx+1} / ${items.length}</span>
@@ -120,7 +144,7 @@ function render() {
     <select id="jump">${items.map((x,i)=>`<option value="${i}" ${i===idx?'selected':''}>${x.item_id}${x.questions.every(q=>(answers[x.item_id+'|'+q]||{}).answer)?' ✓':''}</option>`).join('')}</select>
     <button id="export" class="primary">Dışa aktar</button></header>
   <main>
-    <section class="card excerpt"><div class="meta">${esc(it.project_id)} · ${esc(it.project_name)} · ${esc(it.category)}<br>
+    <section class="card"><div class="meta">${esc(it.project_id)} · ${esc(it.project_name)} · ${esc(it.category)}<br>
       İlke: <b>${esc(it.principle)}</b> · ${it.excerpt_chars.toLocaleString()} karakter</div>${paras}</section>
     <section class="card">${qs}
       <div class="nav"><button id="prev" ${idx===0?'disabled':''}>← Önceki</button>
