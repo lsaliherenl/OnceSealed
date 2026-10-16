@@ -147,7 +147,9 @@ metodolojinin sağlam olduğu anlamına gelmez.
 **"Hangi AI modellerini kullanıyorsunuz, sizin mi?"**
 Belgeden alıntı çıkarmak için `deepseek-v4.1-flash`, kanıtı puanlamak için TypeSafe'in Jev 1.13 karar modeli; ikisi de
 OpenRouter üzerinden ve ikisi de bizim değil. Karar modeli değiştirilebilir bir arayüzün arkasında; ekibimizin kendi
-modeli Turnike'yi aynı sorularla takıp karşılaştırabiliriz (henüz entegre edilmedi).
+modeli Turnike-JEV-4B'yi aynı 177 soruyla yerelde çalıştırıp karşılaştırdık: 3 çalıştırmada %100 aynı cevap,
+maliyet 0, laptop'ta (FP8) parça başına 0,65 sn, Colab L4'te (BF16) 0,32 sn. FP8 ile BF16 177 sorunun 176'sında aynı
+cevabı veriyor. Doğruluk insan etiketleri gelince ölçülecek; henüz rapor hattına entegre edilmedi.
 
 **"Ölçeklenir mi?"**
 Prototipte örtüşme kontrolü bir partideki iptalleri tek tek tarıyor; demo ölçeğinde sorun değil ve sadece yetkili

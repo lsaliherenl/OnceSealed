@@ -1,0 +1,3204 @@
+{
+ "question_set_version": "qs-v2-checklist",
+ "model": "turnike_bf16",
+ "label": "Turnike-JEV-4B (BF16)",
+ "weights": "berkay123001/turnike-jev-4b-merged",
+ "weights_revision": "f10d80bc9ba3793d6081e5308a7662c08c5e33e8",
+ "karar_py_revision": "e65dc05482a4854c7122821db02ee04c63075bb6",
+ "device": "NVIDIA L4",
+ "load_seconds": 61.3,
+ "runs": [
+  {
+   "VCS1477-additionality|A1": {
+    "p_yes": 0.11868292838335037,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 1894,
+    "cost": 0
+   },
+   "VCS1477-additionality|A2": {
+    "p_yes": 0.6061524748802185,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 1894,
+    "cost": 0
+   },
+   "VCS1477-additionality|A3": {
+    "p_yes": 0.8508299589157104,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 1894,
+    "cost": 0
+   },
+   "VCS1477-additionality|A4": {
+    "p_yes": 0.12363632023334503,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 1894,
+    "cost": 0
+   },
+   "VCS1477-permanence|P1": {
+    "p_yes": 0.15716490149497986,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 293,
+    "cost": 0
+   },
+   "VCS1477-permanence|P2": {
+    "p_yes": 0.12561888992786407,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 293,
+    "cost": 0
+   },
+   "VCS1477-permanence|P3": {
+    "p_yes": 0.917267918586731,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 293,
+    "cost": 0
+   },
+   "VCS1477-robust_quantification|Q1": {
+    "p_yes": 0.19769543409347534,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 329,
+    "cost": 0
+   },
+   "VCS1477-robust_quantification|Q2": {
+    "p_yes": 0.5484179854393005,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 329,
+    "cost": 0
+   },
+   "VCS1477-robust_quantification|Q3": {
+    "p_yes": 0.9085292816162109,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 329,
+    "cost": 0
+   },
+   "VCS1477-robust_quantification|Q4": {
+    "p_yes": 0.5955145955085754,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 329,
+    "cost": 0
+   },
+   "VCS1477-no_double_counting|D1": {
+    "p_yes": 0.8189132213592529,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS1477-no_double_counting|D2": {
+    "p_yes": 0.9051482677459717,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS1477-no_double_counting|D3": {
+    "p_yes": 0.13563911616802216,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS1477-safeguards|S1": {
+    "p_yes": 0.15085777640342712,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 342,
+    "cost": 0
+   },
+   "VCS1477-safeguards|S2": {
+    "p_yes": 0.8190857172012329,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 342,
+    "cost": 0
+   },
+   "VCS1477-safeguards|S3": {
+    "p_yes": 0.12110655754804611,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 342,
+    "cost": 0
+   },
+   "VCS1477-safeguards|S4": {
+    "p_yes": 0.22460755705833435,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 342,
+    "cost": 0
+   },
+   "VCS1851-additionality|A1": {
+    "p_yes": 0.16921676695346832,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 313,
+    "cost": 0
+   },
+   "VCS1851-additionality|A2": {
+    "p_yes": 0.25863948464393616,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 313,
+    "cost": 0
+   },
+   "VCS1851-additionality|A3": {
+    "p_yes": 0.31747668981552124,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 313,
+    "cost": 0
+   },
+   "VCS1851-additionality|A4": {
+    "p_yes": 0.6451877951622009,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 313,
+    "cost": 0
+   },
+   "VCS1851-robust_quantification|Q1": {
+    "p_yes": 0.7993967533111572,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS1851-robust_quantification|Q2": {
+    "p_yes": 0.11079507321119308,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS1851-robust_quantification|Q3": {
+    "p_yes": 0.10755953192710876,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS1851-robust_quantification|Q4": {
+    "p_yes": 0.24831323325634003,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS1851-no_double_counting|D1": {
+    "p_yes": 0.2462553232908249,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS1851-no_double_counting|D2": {
+    "p_yes": 0.876496434211731,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS1851-no_double_counting|D3": {
+    "p_yes": 0.12019645422697067,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS1851-safeguards|S1": {
+    "p_yes": 0.8831551671028137,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 275,
+    "cost": 0
+   },
+   "VCS1851-safeguards|S2": {
+    "p_yes": 0.11873470991849899,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 275,
+    "cost": 0
+   },
+   "VCS1851-safeguards|S3": {
+    "p_yes": 0.14469397068023682,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 275,
+    "cost": 0
+   },
+   "VCS1851-safeguards|S4": {
+    "p_yes": 0.172875314950943,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 275,
+    "cost": 0
+   },
+   "VCS138-additionality|A1": {
+    "p_yes": 0.11585478484630585,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 301,
+    "cost": 0
+   },
+   "VCS138-additionality|A2": {
+    "p_yes": 0.12854865193367004,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 301,
+    "cost": 0
+   },
+   "VCS138-additionality|A3": {
+    "p_yes": 0.3457607924938202,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 301,
+    "cost": 0
+   },
+   "VCS138-additionality|A4": {
+    "p_yes": 0.12468884140253067,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 301,
+    "cost": 0
+   },
+   "VCS138-robust_quantification|Q1": {
+    "p_yes": 0.9144262671470642,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 394,
+    "cost": 0
+   },
+   "VCS138-robust_quantification|Q2": {
+    "p_yes": 0.8806599974632263,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 394,
+    "cost": 0
+   },
+   "VCS138-robust_quantification|Q3": {
+    "p_yes": 0.10148105025291443,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 394,
+    "cost": 0
+   },
+   "VCS138-robust_quantification|Q4": {
+    "p_yes": 0.19303669035434723,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 394,
+    "cost": 0
+   },
+   "VCS138-no_double_counting|D1": {
+    "p_yes": 0.9044516086578369,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 302,
+    "cost": 0
+   },
+   "VCS138-no_double_counting|D2": {
+    "p_yes": 0.908183217048645,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 302,
+    "cost": 0
+   },
+   "VCS138-no_double_counting|D3": {
+    "p_yes": 0.12896426022052765,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 302,
+    "cost": 0
+   },
+   "VCS138-safeguards|S1": {
+    "p_yes": 0.16520580649375916,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 260,
+    "cost": 0
+   },
+   "VCS138-safeguards|S2": {
+    "p_yes": 0.10370217263698578,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 260,
+    "cost": 0
+   },
+   "VCS138-safeguards|S3": {
+    "p_yes": 0.12076753377914429,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 260,
+    "cost": 0
+   },
+   "VCS138-safeguards|S4": {
+    "p_yes": 0.09768043458461761,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 260,
+    "cost": 0
+   },
+   "VCS2505-additionality|A1": {
+    "p_yes": 0.116356261074543,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 334,
+    "cost": 0
+   },
+   "VCS2505-additionality|A2": {
+    "p_yes": 0.16885575652122498,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 334,
+    "cost": 0
+   },
+   "VCS2505-additionality|A3": {
+    "p_yes": 0.8871392011642456,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 334,
+    "cost": 0
+   },
+   "VCS2505-additionality|A4": {
+    "p_yes": 0.12133198231458664,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 334,
+    "cost": 0
+   },
+   "VCS2505-robust_quantification|Q1": {
+    "p_yes": 0.18221910297870636,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 315,
+    "cost": 0
+   },
+   "VCS2505-robust_quantification|Q2": {
+    "p_yes": 0.10781263560056686,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 315,
+    "cost": 0
+   },
+   "VCS2505-robust_quantification|Q3": {
+    "p_yes": 0.7422305345535278,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 315,
+    "cost": 0
+   },
+   "VCS2505-robust_quantification|Q4": {
+    "p_yes": 0.660078227519989,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 315,
+    "cost": 0
+   },
+   "VCS2505-no_double_counting|D1": {
+    "p_yes": 0.12997354567050934,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 331,
+    "cost": 0
+   },
+   "VCS2505-no_double_counting|D2": {
+    "p_yes": 0.2687393128871918,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 331,
+    "cost": 0
+   },
+   "VCS2505-no_double_counting|D3": {
+    "p_yes": 0.12719127535820007,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 331,
+    "cost": 0
+   },
+   "VCS2505-safeguards|S1": {
+    "p_yes": 0.8009724617004395,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2505-safeguards|S2": {
+    "p_yes": 0.21461939811706543,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2505-safeguards|S3": {
+    "p_yes": 0.10472385585308075,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2505-safeguards|S4": {
+    "p_yes": 0.29931098222732544,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS1742-additionality|A1": {
+    "p_yes": 0.8465104699134827,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 352,
+    "cost": 0
+   },
+   "VCS1742-additionality|A2": {
+    "p_yes": 0.12752023339271545,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 352,
+    "cost": 0
+   },
+   "VCS1742-additionality|A3": {
+    "p_yes": 0.18859191238880157,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 352,
+    "cost": 0
+   },
+   "VCS1742-additionality|A4": {
+    "p_yes": 0.1220836341381073,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 352,
+    "cost": 0
+   },
+   "VCS1742-robust_quantification|Q1": {
+    "p_yes": 0.49103307723999023,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 337,
+    "cost": 0
+   },
+   "VCS1742-robust_quantification|Q2": {
+    "p_yes": 0.10803905874490738,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 337,
+    "cost": 0
+   },
+   "VCS1742-robust_quantification|Q3": {
+    "p_yes": 0.12832841277122498,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 337,
+    "cost": 0
+   },
+   "VCS1742-robust_quantification|Q4": {
+    "p_yes": 0.11987520009279251,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 337,
+    "cost": 0
+   },
+   "VCS1742-no_double_counting|D1": {
+    "p_yes": 0.7230526208877563,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1742-no_double_counting|D2": {
+    "p_yes": 0.14713582396507263,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1742-no_double_counting|D3": {
+    "p_yes": 0.11715364456176758,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1742-safeguards|S1": {
+    "p_yes": 0.6324934363365173,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1742-safeguards|S2": {
+    "p_yes": 0.16344204545021057,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1742-safeguards|S3": {
+    "p_yes": 0.8527635931968689,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1742-safeguards|S4": {
+    "p_yes": 0.19841188192367554,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1728-additionality|A1": {
+    "p_yes": 0.715237557888031,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 320,
+    "cost": 0
+   },
+   "VCS1728-additionality|A2": {
+    "p_yes": 0.11384216696023941,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 320,
+    "cost": 0
+   },
+   "VCS1728-additionality|A3": {
+    "p_yes": 0.17266446352005005,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 320,
+    "cost": 0
+   },
+   "VCS1728-additionality|A4": {
+    "p_yes": 0.1347864717245102,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 320,
+    "cost": 0
+   },
+   "VCS1728-robust_quantification|Q1": {
+    "p_yes": 0.4360140562057495,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 303,
+    "cost": 0
+   },
+   "VCS1728-robust_quantification|Q2": {
+    "p_yes": 0.12317803502082825,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 303,
+    "cost": 0
+   },
+   "VCS1728-robust_quantification|Q3": {
+    "p_yes": 0.11280409246683121,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 303,
+    "cost": 0
+   },
+   "VCS1728-robust_quantification|Q4": {
+    "p_yes": 0.3857901096343994,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 303,
+    "cost": 0
+   },
+   "VCS1728-no_double_counting|D1": {
+    "p_yes": 0.258318692445755,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1728-no_double_counting|D2": {
+    "p_yes": 0.8575083613395691,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1728-no_double_counting|D3": {
+    "p_yes": 0.10950789600610733,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1728-safeguards|S1": {
+    "p_yes": 0.8942888975143433,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 314,
+    "cost": 0
+   },
+   "VCS1728-safeguards|S2": {
+    "p_yes": 0.9020049571990967,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 314,
+    "cost": 0
+   },
+   "VCS1728-safeguards|S3": {
+    "p_yes": 0.12163928151130676,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 314,
+    "cost": 0
+   },
+   "VCS1728-safeguards|S4": {
+    "p_yes": 0.13356955349445343,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 314,
+    "cost": 0
+   },
+   "VCS2609-additionality|A1": {
+    "p_yes": 0.11556048691272736,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS2609-additionality|A2": {
+    "p_yes": 0.8824694156646729,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS2609-additionality|A3": {
+    "p_yes": 0.23408333957195282,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS2609-additionality|A4": {
+    "p_yes": 0.12124112248420715,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS2609-permanence|P1": {
+    "p_yes": 0.9161756634712219,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS2609-permanence|P2": {
+    "p_yes": 0.19895635545253754,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS2609-permanence|P3": {
+    "p_yes": 0.8668317198753357,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS2609-robust_quantification|Q1": {
+    "p_yes": 0.1390221118927002,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 333,
+    "cost": 0
+   },
+   "VCS2609-robust_quantification|Q2": {
+    "p_yes": 0.24540206789970398,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 333,
+    "cost": 0
+   },
+   "VCS2609-robust_quantification|Q3": {
+    "p_yes": 0.10013466328382492,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 333,
+    "cost": 0
+   },
+   "VCS2609-robust_quantification|Q4": {
+    "p_yes": 0.8587902188301086,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 333,
+    "cost": 0
+   },
+   "VCS2609-no_double_counting|D1": {
+    "p_yes": 0.32139861583709717,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 274,
+    "cost": 0
+   },
+   "VCS2609-no_double_counting|D2": {
+    "p_yes": 0.8786078691482544,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 274,
+    "cost": 0
+   },
+   "VCS2609-no_double_counting|D3": {
+    "p_yes": 0.1191447526216507,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 274,
+    "cost": 0
+   },
+   "VCS2609-safeguards|S1": {
+    "p_yes": 0.17848430573940277,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 350,
+    "cost": 0
+   },
+   "VCS2609-safeguards|S2": {
+    "p_yes": 0.3357471823692322,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 350,
+    "cost": 0
+   },
+   "VCS2609-safeguards|S3": {
+    "p_yes": 0.1070256307721138,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 350,
+    "cost": 0
+   },
+   "VCS2609-safeguards|S4": {
+    "p_yes": 0.8956518173217773,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 350,
+    "cost": 0
+   },
+   "VCS673-additionality|A1": {
+    "p_yes": 0.13259077072143555,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS673-additionality|A2": {
+    "p_yes": 0.1510094702243805,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS673-additionality|A3": {
+    "p_yes": 0.3510781228542328,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS673-additionality|A4": {
+    "p_yes": 0.8404505252838135,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS673-permanence|P1": {
+    "p_yes": 0.2145456224679947,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 299,
+    "cost": 0
+   },
+   "VCS673-permanence|P2": {
+    "p_yes": 0.1153024360537529,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 299,
+    "cost": 0
+   },
+   "VCS673-permanence|P3": {
+    "p_yes": 0.9066438674926758,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 299,
+    "cost": 0
+   },
+   "VCS673-robust_quantification|Q1": {
+    "p_yes": 0.15224482119083405,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS673-robust_quantification|Q2": {
+    "p_yes": 0.11591614037752151,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS673-robust_quantification|Q3": {
+    "p_yes": 0.10041256994009018,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS673-robust_quantification|Q4": {
+    "p_yes": 0.8950157165527344,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS673-no_double_counting|D1": {
+    "p_yes": 0.507555365562439,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS673-no_double_counting|D2": {
+    "p_yes": 0.1737464964389801,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS673-no_double_counting|D3": {
+    "p_yes": 0.11471440643072128,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS673-safeguards|S1": {
+    "p_yes": 0.9001827836036682,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 320,
+    "cost": 0
+   },
+   "VCS673-safeguards|S2": {
+    "p_yes": 0.14090639352798462,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 320,
+    "cost": 0
+   },
+   "VCS673-safeguards|S3": {
+    "p_yes": 0.8941227793693542,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 320,
+    "cost": 0
+   },
+   "VCS673-safeguards|S4": {
+    "p_yes": 0.37205055356025696,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 320,
+    "cost": 0
+   },
+   "VCS2846-additionality|A1": {
+    "p_yes": 0.6912034749984741,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS2846-additionality|A2": {
+    "p_yes": 0.8747750520706177,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS2846-additionality|A3": {
+    "p_yes": 0.26576730608940125,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS2846-additionality|A4": {
+    "p_yes": 0.18735690414905548,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS2846-robust_quantification|Q1": {
+    "p_yes": 0.27956047654151917,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 338,
+    "cost": 0
+   },
+   "VCS2846-robust_quantification|Q2": {
+    "p_yes": 0.2587912976741791,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 338,
+    "cost": 0
+   },
+   "VCS2846-robust_quantification|Q3": {
+    "p_yes": 0.736864447593689,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 338,
+    "cost": 0
+   },
+   "VCS2846-robust_quantification|Q4": {
+    "p_yes": 0.8210988640785217,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 338,
+    "cost": 0
+   },
+   "VCS2846-no_double_counting|D1": {
+    "p_yes": 0.2049490064382553,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2846-no_double_counting|D2": {
+    "p_yes": 0.8909479379653931,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2846-no_double_counting|D3": {
+    "p_yes": 0.8130658268928528,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2846-safeguards|S1": {
+    "p_yes": 0.8869775533676147,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 312,
+    "cost": 0
+   },
+   "VCS2846-safeguards|S2": {
+    "p_yes": 0.14219722151756287,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 312,
+    "cost": 0
+   },
+   "VCS2846-safeguards|S3": {
+    "p_yes": 0.18163813650608063,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 312,
+    "cost": 0
+   },
+   "VCS2846-safeguards|S4": {
+    "p_yes": 0.22041700780391693,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 312,
+    "cost": 0
+   },
+   "VCS985-additionality|A1": {
+    "p_yes": 0.11924037337303162,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 356,
+    "cost": 0
+   },
+   "VCS985-additionality|A2": {
+    "p_yes": 0.8136444687843323,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 356,
+    "cost": 0
+   },
+   "VCS985-additionality|A3": {
+    "p_yes": 0.2676129639148712,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 356,
+    "cost": 0
+   },
+   "VCS985-additionality|A4": {
+    "p_yes": 0.11618360877037048,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 356,
+    "cost": 0
+   },
+   "VCS985-permanence|P1": {
+    "p_yes": 0.12454058229923248,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 277,
+    "cost": 0
+   },
+   "VCS985-permanence|P2": {
+    "p_yes": 0.10319429636001587,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 277,
+    "cost": 0
+   },
+   "VCS985-permanence|P3": {
+    "p_yes": 0.7779414057731628,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 277,
+    "cost": 0
+   },
+   "VCS985-robust_quantification|Q1": {
+    "p_yes": 0.13356271386146545,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 333,
+    "cost": 0
+   },
+   "VCS985-robust_quantification|Q2": {
+    "p_yes": 0.8883920311927795,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 333,
+    "cost": 0
+   },
+   "VCS985-robust_quantification|Q3": {
+    "p_yes": 0.10232564061880112,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 333,
+    "cost": 0
+   },
+   "VCS985-robust_quantification|Q4": {
+    "p_yes": 0.8844341039657593,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 333,
+    "cost": 0
+   },
+   "VCS985-no_double_counting|D1": {
+    "p_yes": 0.6163061261177063,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 314,
+    "cost": 0
+   },
+   "VCS985-no_double_counting|D2": {
+    "p_yes": 0.8773286938667297,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 314,
+    "cost": 0
+   },
+   "VCS985-no_double_counting|D3": {
+    "p_yes": 0.31485599279403687,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 314,
+    "cost": 0
+   },
+   "VCS985-safeguards|S1": {
+    "p_yes": 0.8127204775810242,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS985-safeguards|S2": {
+    "p_yes": 0.3076370358467102,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS985-safeguards|S3": {
+    "p_yes": 0.14040160179138184,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS985-safeguards|S4": {
+    "p_yes": 0.19751201570034027,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS4150-additionality|A1": {
+    "p_yes": 0.12633799016475677,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 408,
+    "cost": 0
+   },
+   "VCS4150-additionality|A2": {
+    "p_yes": 0.7402130365371704,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 408,
+    "cost": 0
+   },
+   "VCS4150-additionality|A3": {
+    "p_yes": 0.3005438446998596,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 408,
+    "cost": 0
+   },
+   "VCS4150-additionality|A4": {
+    "p_yes": 0.12543997168540955,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 408,
+    "cost": 0
+   },
+   "VCS4150-robust_quantification|Q1": {
+    "p_yes": 0.8841216564178467,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 349,
+    "cost": 0
+   },
+   "VCS4150-robust_quantification|Q2": {
+    "p_yes": 0.11292517930269241,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 349,
+    "cost": 0
+   },
+   "VCS4150-robust_quantification|Q3": {
+    "p_yes": 0.9167537093162537,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 349,
+    "cost": 0
+   },
+   "VCS4150-robust_quantification|Q4": {
+    "p_yes": 0.15211980044841766,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 349,
+    "cost": 0
+   },
+   "VCS4150-no_double_counting|D1": {
+    "p_yes": 0.36211758852005005,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 323,
+    "cost": 0
+   },
+   "VCS4150-no_double_counting|D2": {
+    "p_yes": 0.874367356300354,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 323,
+    "cost": 0
+   },
+   "VCS4150-no_double_counting|D3": {
+    "p_yes": 0.114792101085186,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 323,
+    "cost": 0
+   },
+   "VCS4150-safeguards|S1": {
+    "p_yes": 0.8211239576339722,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 316,
+    "cost": 0
+   },
+   "VCS4150-safeguards|S2": {
+    "p_yes": 0.8918434381484985,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 316,
+    "cost": 0
+   },
+   "VCS4150-safeguards|S3": {
+    "p_yes": 0.09615404158830643,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 316,
+    "cost": 0
+   },
+   "VCS4150-safeguards|S4": {
+    "p_yes": 0.14474402368068695,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 316,
+    "cost": 0
+   }
+  },
+  {
+   "VCS1477-additionality|A1": {
+    "p_yes": 0.11868292838335037,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 339,
+    "cost": 0
+   },
+   "VCS1477-additionality|A2": {
+    "p_yes": 0.6061524748802185,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 339,
+    "cost": 0
+   },
+   "VCS1477-additionality|A3": {
+    "p_yes": 0.8508299589157104,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 339,
+    "cost": 0
+   },
+   "VCS1477-additionality|A4": {
+    "p_yes": 0.12363632023334503,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 339,
+    "cost": 0
+   },
+   "VCS1477-permanence|P1": {
+    "p_yes": 0.15716490149497986,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 280,
+    "cost": 0
+   },
+   "VCS1477-permanence|P2": {
+    "p_yes": 0.12561888992786407,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 280,
+    "cost": 0
+   },
+   "VCS1477-permanence|P3": {
+    "p_yes": 0.917267918586731,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 280,
+    "cost": 0
+   },
+   "VCS1477-robust_quantification|Q1": {
+    "p_yes": 0.19769543409347534,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 339,
+    "cost": 0
+   },
+   "VCS1477-robust_quantification|Q2": {
+    "p_yes": 0.5484179854393005,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 339,
+    "cost": 0
+   },
+   "VCS1477-robust_quantification|Q3": {
+    "p_yes": 0.9085292816162109,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 339,
+    "cost": 0
+   },
+   "VCS1477-robust_quantification|Q4": {
+    "p_yes": 0.5955145955085754,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 339,
+    "cost": 0
+   },
+   "VCS1477-no_double_counting|D1": {
+    "p_yes": 0.8189132213592529,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 334,
+    "cost": 0
+   },
+   "VCS1477-no_double_counting|D2": {
+    "p_yes": 0.9051482677459717,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 334,
+    "cost": 0
+   },
+   "VCS1477-no_double_counting|D3": {
+    "p_yes": 0.13563911616802216,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 334,
+    "cost": 0
+   },
+   "VCS1477-safeguards|S1": {
+    "p_yes": 0.15085777640342712,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS1477-safeguards|S2": {
+    "p_yes": 0.8190857172012329,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS1477-safeguards|S3": {
+    "p_yes": 0.12110655754804611,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS1477-safeguards|S4": {
+    "p_yes": 0.22460755705833435,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS1851-additionality|A1": {
+    "p_yes": 0.16921676695346832,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS1851-additionality|A2": {
+    "p_yes": 0.25863948464393616,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS1851-additionality|A3": {
+    "p_yes": 0.31747668981552124,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS1851-additionality|A4": {
+    "p_yes": 0.6451877951622009,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS1851-robust_quantification|Q1": {
+    "p_yes": 0.7993967533111572,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS1851-robust_quantification|Q2": {
+    "p_yes": 0.11079507321119308,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS1851-robust_quantification|Q3": {
+    "p_yes": 0.10755953192710876,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS1851-robust_quantification|Q4": {
+    "p_yes": 0.24831323325634003,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS1851-no_double_counting|D1": {
+    "p_yes": 0.2462553232908249,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 323,
+    "cost": 0
+   },
+   "VCS1851-no_double_counting|D2": {
+    "p_yes": 0.876496434211731,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 323,
+    "cost": 0
+   },
+   "VCS1851-no_double_counting|D3": {
+    "p_yes": 0.12019645422697067,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 323,
+    "cost": 0
+   },
+   "VCS1851-safeguards|S1": {
+    "p_yes": 0.8831551671028137,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 279,
+    "cost": 0
+   },
+   "VCS1851-safeguards|S2": {
+    "p_yes": 0.11873470991849899,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 279,
+    "cost": 0
+   },
+   "VCS1851-safeguards|S3": {
+    "p_yes": 0.14469397068023682,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 279,
+    "cost": 0
+   },
+   "VCS1851-safeguards|S4": {
+    "p_yes": 0.172875314950943,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 279,
+    "cost": 0
+   },
+   "VCS138-additionality|A1": {
+    "p_yes": 0.11585478484630585,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS138-additionality|A2": {
+    "p_yes": 0.12854865193367004,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS138-additionality|A3": {
+    "p_yes": 0.3457607924938202,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS138-additionality|A4": {
+    "p_yes": 0.12468884140253067,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS138-robust_quantification|Q1": {
+    "p_yes": 0.9144262671470642,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 393,
+    "cost": 0
+   },
+   "VCS138-robust_quantification|Q2": {
+    "p_yes": 0.8806599974632263,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 393,
+    "cost": 0
+   },
+   "VCS138-robust_quantification|Q3": {
+    "p_yes": 0.10148105025291443,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 393,
+    "cost": 0
+   },
+   "VCS138-robust_quantification|Q4": {
+    "p_yes": 0.19303669035434723,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 393,
+    "cost": 0
+   },
+   "VCS138-no_double_counting|D1": {
+    "p_yes": 0.9044516086578369,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS138-no_double_counting|D2": {
+    "p_yes": 0.908183217048645,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS138-no_double_counting|D3": {
+    "p_yes": 0.12896426022052765,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS138-safeguards|S1": {
+    "p_yes": 0.16520580649375916,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 267,
+    "cost": 0
+   },
+   "VCS138-safeguards|S2": {
+    "p_yes": 0.10370217263698578,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 267,
+    "cost": 0
+   },
+   "VCS138-safeguards|S3": {
+    "p_yes": 0.12076753377914429,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 267,
+    "cost": 0
+   },
+   "VCS138-safeguards|S4": {
+    "p_yes": 0.09768043458461761,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 267,
+    "cost": 0
+   },
+   "VCS2505-additionality|A1": {
+    "p_yes": 0.116356261074543,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS2505-additionality|A2": {
+    "p_yes": 0.16885575652122498,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS2505-additionality|A3": {
+    "p_yes": 0.8871392011642456,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS2505-additionality|A4": {
+    "p_yes": 0.12133198231458664,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 336,
+    "cost": 0
+   },
+   "VCS2505-robust_quantification|Q1": {
+    "p_yes": 0.18221910297870636,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 317,
+    "cost": 0
+   },
+   "VCS2505-robust_quantification|Q2": {
+    "p_yes": 0.10781263560056686,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 317,
+    "cost": 0
+   },
+   "VCS2505-robust_quantification|Q3": {
+    "p_yes": 0.7422305345535278,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 317,
+    "cost": 0
+   },
+   "VCS2505-robust_quantification|Q4": {
+    "p_yes": 0.660078227519989,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 317,
+    "cost": 0
+   },
+   "VCS2505-no_double_counting|D1": {
+    "p_yes": 0.12997354567050934,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS2505-no_double_counting|D2": {
+    "p_yes": 0.2687393128871918,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS2505-no_double_counting|D3": {
+    "p_yes": 0.12719127535820007,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS2505-safeguards|S1": {
+    "p_yes": 0.8009724617004395,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS2505-safeguards|S2": {
+    "p_yes": 0.21461939811706543,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS2505-safeguards|S3": {
+    "p_yes": 0.10472385585308075,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS2505-safeguards|S4": {
+    "p_yes": 0.29931098222732544,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS1742-additionality|A1": {
+    "p_yes": 0.8465104699134827,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 352,
+    "cost": 0
+   },
+   "VCS1742-additionality|A2": {
+    "p_yes": 0.12752023339271545,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 352,
+    "cost": 0
+   },
+   "VCS1742-additionality|A3": {
+    "p_yes": 0.18859191238880157,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 352,
+    "cost": 0
+   },
+   "VCS1742-additionality|A4": {
+    "p_yes": 0.1220836341381073,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 352,
+    "cost": 0
+   },
+   "VCS1742-robust_quantification|Q1": {
+    "p_yes": 0.49103307723999023,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 338,
+    "cost": 0
+   },
+   "VCS1742-robust_quantification|Q2": {
+    "p_yes": 0.10803905874490738,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 338,
+    "cost": 0
+   },
+   "VCS1742-robust_quantification|Q3": {
+    "p_yes": 0.12832841277122498,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 338,
+    "cost": 0
+   },
+   "VCS1742-robust_quantification|Q4": {
+    "p_yes": 0.11987520009279251,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 338,
+    "cost": 0
+   },
+   "VCS1742-no_double_counting|D1": {
+    "p_yes": 0.7230526208877563,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 302,
+    "cost": 0
+   },
+   "VCS1742-no_double_counting|D2": {
+    "p_yes": 0.14713582396507263,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 302,
+    "cost": 0
+   },
+   "VCS1742-no_double_counting|D3": {
+    "p_yes": 0.11715364456176758,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 302,
+    "cost": 0
+   },
+   "VCS1742-safeguards|S1": {
+    "p_yes": 0.6324934363365173,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1742-safeguards|S2": {
+    "p_yes": 0.16344204545021057,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1742-safeguards|S3": {
+    "p_yes": 0.8527635931968689,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1742-safeguards|S4": {
+    "p_yes": 0.19841188192367554,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 305,
+    "cost": 0
+   },
+   "VCS1728-additionality|A1": {
+    "p_yes": 0.715237557888031,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS1728-additionality|A2": {
+    "p_yes": 0.11384216696023941,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS1728-additionality|A3": {
+    "p_yes": 0.17266446352005005,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS1728-additionality|A4": {
+    "p_yes": 0.1347864717245102,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS1728-robust_quantification|Q1": {
+    "p_yes": 0.4360140562057495,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 307,
+    "cost": 0
+   },
+   "VCS1728-robust_quantification|Q2": {
+    "p_yes": 0.12317803502082825,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 307,
+    "cost": 0
+   },
+   "VCS1728-robust_quantification|Q3": {
+    "p_yes": 0.11280409246683121,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 307,
+    "cost": 0
+   },
+   "VCS1728-robust_quantification|Q4": {
+    "p_yes": 0.3857901096343994,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 307,
+    "cost": 0
+   },
+   "VCS1728-no_double_counting|D1": {
+    "p_yes": 0.258318692445755,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 308,
+    "cost": 0
+   },
+   "VCS1728-no_double_counting|D2": {
+    "p_yes": 0.8575083613395691,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 308,
+    "cost": 0
+   },
+   "VCS1728-no_double_counting|D3": {
+    "p_yes": 0.10950789600610733,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 308,
+    "cost": 0
+   },
+   "VCS1728-safeguards|S1": {
+    "p_yes": 0.8942888975143433,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS1728-safeguards|S2": {
+    "p_yes": 0.9020049571990967,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS1728-safeguards|S3": {
+    "p_yes": 0.12163928151130676,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS1728-safeguards|S4": {
+    "p_yes": 0.13356955349445343,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS2609-additionality|A1": {
+    "p_yes": 0.11556048691272736,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 320,
+    "cost": 0
+   },
+   "VCS2609-additionality|A2": {
+    "p_yes": 0.8824694156646729,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 320,
+    "cost": 0
+   },
+   "VCS2609-additionality|A3": {
+    "p_yes": 0.23408333957195282,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 320,
+    "cost": 0
+   },
+   "VCS2609-additionality|A4": {
+    "p_yes": 0.12124112248420715,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 320,
+    "cost": 0
+   },
+   "VCS2609-permanence|P1": {
+    "p_yes": 0.9161756634712219,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS2609-permanence|P2": {
+    "p_yes": 0.19895635545253754,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS2609-permanence|P3": {
+    "p_yes": 0.8668317198753357,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS2609-robust_quantification|Q1": {
+    "p_yes": 0.1390221118927002,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 334,
+    "cost": 0
+   },
+   "VCS2609-robust_quantification|Q2": {
+    "p_yes": 0.24540206789970398,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 334,
+    "cost": 0
+   },
+   "VCS2609-robust_quantification|Q3": {
+    "p_yes": 0.10013466328382492,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 334,
+    "cost": 0
+   },
+   "VCS2609-robust_quantification|Q4": {
+    "p_yes": 0.8587902188301086,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 334,
+    "cost": 0
+   },
+   "VCS2609-no_double_counting|D1": {
+    "p_yes": 0.32139861583709717,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 277,
+    "cost": 0
+   },
+   "VCS2609-no_double_counting|D2": {
+    "p_yes": 0.8786078691482544,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 277,
+    "cost": 0
+   },
+   "VCS2609-no_double_counting|D3": {
+    "p_yes": 0.1191447526216507,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 277,
+    "cost": 0
+   },
+   "VCS2609-safeguards|S1": {
+    "p_yes": 0.17848430573940277,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 351,
+    "cost": 0
+   },
+   "VCS2609-safeguards|S2": {
+    "p_yes": 0.3357471823692322,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 351,
+    "cost": 0
+   },
+   "VCS2609-safeguards|S3": {
+    "p_yes": 0.1070256307721138,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 351,
+    "cost": 0
+   },
+   "VCS2609-safeguards|S4": {
+    "p_yes": 0.8956518173217773,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 351,
+    "cost": 0
+   },
+   "VCS673-additionality|A1": {
+    "p_yes": 0.13259077072143555,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 324,
+    "cost": 0
+   },
+   "VCS673-additionality|A2": {
+    "p_yes": 0.1510094702243805,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 324,
+    "cost": 0
+   },
+   "VCS673-additionality|A3": {
+    "p_yes": 0.3510781228542328,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 324,
+    "cost": 0
+   },
+   "VCS673-additionality|A4": {
+    "p_yes": 0.8404505252838135,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 324,
+    "cost": 0
+   },
+   "VCS673-permanence|P1": {
+    "p_yes": 0.2145456224679947,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 304,
+    "cost": 0
+   },
+   "VCS673-permanence|P2": {
+    "p_yes": 0.1153024360537529,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 304,
+    "cost": 0
+   },
+   "VCS673-permanence|P3": {
+    "p_yes": 0.9066438674926758,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 304,
+    "cost": 0
+   },
+   "VCS673-robust_quantification|Q1": {
+    "p_yes": 0.15224482119083405,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 314,
+    "cost": 0
+   },
+   "VCS673-robust_quantification|Q2": {
+    "p_yes": 0.11591614037752151,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 314,
+    "cost": 0
+   },
+   "VCS673-robust_quantification|Q3": {
+    "p_yes": 0.10041256994009018,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 314,
+    "cost": 0
+   },
+   "VCS673-robust_quantification|Q4": {
+    "p_yes": 0.8950157165527344,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 314,
+    "cost": 0
+   },
+   "VCS673-no_double_counting|D1": {
+    "p_yes": 0.507555365562439,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS673-no_double_counting|D2": {
+    "p_yes": 0.1737464964389801,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS673-no_double_counting|D3": {
+    "p_yes": 0.11471440643072128,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS673-safeguards|S1": {
+    "p_yes": 0.9001827836036682,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS673-safeguards|S2": {
+    "p_yes": 0.14090639352798462,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS673-safeguards|S3": {
+    "p_yes": 0.8941227793693542,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS673-safeguards|S4": {
+    "p_yes": 0.37205055356025696,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS2846-additionality|A1": {
+    "p_yes": 0.6912034749984741,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 340,
+    "cost": 0
+   },
+   "VCS2846-additionality|A2": {
+    "p_yes": 0.8747750520706177,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 340,
+    "cost": 0
+   },
+   "VCS2846-additionality|A3": {
+    "p_yes": 0.26576730608940125,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 340,
+    "cost": 0
+   },
+   "VCS2846-additionality|A4": {
+    "p_yes": 0.18735690414905548,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 340,
+    "cost": 0
+   },
+   "VCS2846-robust_quantification|Q1": {
+    "p_yes": 0.27956047654151917,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 340,
+    "cost": 0
+   },
+   "VCS2846-robust_quantification|Q2": {
+    "p_yes": 0.2587912976741791,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 340,
+    "cost": 0
+   },
+   "VCS2846-robust_quantification|Q3": {
+    "p_yes": 0.736864447593689,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 340,
+    "cost": 0
+   },
+   "VCS2846-robust_quantification|Q4": {
+    "p_yes": 0.8210988640785217,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 340,
+    "cost": 0
+   },
+   "VCS2846-no_double_counting|D1": {
+    "p_yes": 0.2049490064382553,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS2846-no_double_counting|D2": {
+    "p_yes": 0.8909479379653931,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS2846-no_double_counting|D3": {
+    "p_yes": 0.8130658268928528,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS2846-safeguards|S1": {
+    "p_yes": 0.8869775533676147,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 315,
+    "cost": 0
+   },
+   "VCS2846-safeguards|S2": {
+    "p_yes": 0.14219722151756287,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 315,
+    "cost": 0
+   },
+   "VCS2846-safeguards|S3": {
+    "p_yes": 0.18163813650608063,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 315,
+    "cost": 0
+   },
+   "VCS2846-safeguards|S4": {
+    "p_yes": 0.22041700780391693,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 315,
+    "cost": 0
+   },
+   "VCS985-additionality|A1": {
+    "p_yes": 0.11924037337303162,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 360,
+    "cost": 0
+   },
+   "VCS985-additionality|A2": {
+    "p_yes": 0.8136444687843323,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 360,
+    "cost": 0
+   },
+   "VCS985-additionality|A3": {
+    "p_yes": 0.2676129639148712,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 360,
+    "cost": 0
+   },
+   "VCS985-additionality|A4": {
+    "p_yes": 0.11618360877037048,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 360,
+    "cost": 0
+   },
+   "VCS985-permanence|P1": {
+    "p_yes": 0.12454058229923248,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 277,
+    "cost": 0
+   },
+   "VCS985-permanence|P2": {
+    "p_yes": 0.10319429636001587,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 277,
+    "cost": 0
+   },
+   "VCS985-permanence|P3": {
+    "p_yes": 0.7779414057731628,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 277,
+    "cost": 0
+   },
+   "VCS985-robust_quantification|Q1": {
+    "p_yes": 0.13356271386146545,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 335,
+    "cost": 0
+   },
+   "VCS985-robust_quantification|Q2": {
+    "p_yes": 0.8883920311927795,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 335,
+    "cost": 0
+   },
+   "VCS985-robust_quantification|Q3": {
+    "p_yes": 0.10232564061880112,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 335,
+    "cost": 0
+   },
+   "VCS985-robust_quantification|Q4": {
+    "p_yes": 0.8844341039657593,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 335,
+    "cost": 0
+   },
+   "VCS985-no_double_counting|D1": {
+    "p_yes": 0.6163061261177063,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS985-no_double_counting|D2": {
+    "p_yes": 0.8773286938667297,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS985-no_double_counting|D3": {
+    "p_yes": 0.31485599279403687,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 318,
+    "cost": 0
+   },
+   "VCS985-safeguards|S1": {
+    "p_yes": 0.8127204775810242,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 337,
+    "cost": 0
+   },
+   "VCS985-safeguards|S2": {
+    "p_yes": 0.3076370358467102,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 337,
+    "cost": 0
+   },
+   "VCS985-safeguards|S3": {
+    "p_yes": 0.14040160179138184,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 337,
+    "cost": 0
+   },
+   "VCS985-safeguards|S4": {
+    "p_yes": 0.19751201570034027,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 337,
+    "cost": 0
+   },
+   "VCS4150-additionality|A1": {
+    "p_yes": 0.12633799016475677,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 406,
+    "cost": 0
+   },
+   "VCS4150-additionality|A2": {
+    "p_yes": 0.7402130365371704,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 406,
+    "cost": 0
+   },
+   "VCS4150-additionality|A3": {
+    "p_yes": 0.3005438446998596,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 406,
+    "cost": 0
+   },
+   "VCS4150-additionality|A4": {
+    "p_yes": 0.12543997168540955,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 406,
+    "cost": 0
+   },
+   "VCS4150-robust_quantification|Q1": {
+    "p_yes": 0.8841216564178467,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 354,
+    "cost": 0
+   },
+   "VCS4150-robust_quantification|Q2": {
+    "p_yes": 0.11292517930269241,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 354,
+    "cost": 0
+   },
+   "VCS4150-robust_quantification|Q3": {
+    "p_yes": 0.9167537093162537,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 354,
+    "cost": 0
+   },
+   "VCS4150-robust_quantification|Q4": {
+    "p_yes": 0.15211980044841766,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 354,
+    "cost": 0
+   },
+   "VCS4150-no_double_counting|D1": {
+    "p_yes": 0.36211758852005005,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 328,
+    "cost": 0
+   },
+   "VCS4150-no_double_counting|D2": {
+    "p_yes": 0.874367356300354,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 328,
+    "cost": 0
+   },
+   "VCS4150-no_double_counting|D3": {
+    "p_yes": 0.114792101085186,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 328,
+    "cost": 0
+   },
+   "VCS4150-safeguards|S1": {
+    "p_yes": 0.8211239576339722,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS4150-safeguards|S2": {
+    "p_yes": 0.8918434381484985,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS4150-safeguards|S3": {
+    "p_yes": 0.09615404158830643,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS4150-safeguards|S4": {
+    "p_yes": 0.14474402368068695,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   }
+  },
+  {
+   "VCS1477-additionality|A1": {
+    "p_yes": 0.11868292838335037,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 346,
+    "cost": 0
+   },
+   "VCS1477-additionality|A2": {
+    "p_yes": 0.6061524748802185,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 346,
+    "cost": 0
+   },
+   "VCS1477-additionality|A3": {
+    "p_yes": 0.8508299589157104,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 346,
+    "cost": 0
+   },
+   "VCS1477-additionality|A4": {
+    "p_yes": 0.12363632023334503,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 346,
+    "cost": 0
+   },
+   "VCS1477-permanence|P1": {
+    "p_yes": 0.15716490149497986,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 282,
+    "cost": 0
+   },
+   "VCS1477-permanence|P2": {
+    "p_yes": 0.12561888992786407,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 282,
+    "cost": 0
+   },
+   "VCS1477-permanence|P3": {
+    "p_yes": 0.917267918586731,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 282,
+    "cost": 0
+   },
+   "VCS1477-robust_quantification|Q1": {
+    "p_yes": 0.19769543409347534,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS1477-robust_quantification|Q2": {
+    "p_yes": 0.5484179854393005,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS1477-robust_quantification|Q3": {
+    "p_yes": 0.9085292816162109,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS1477-robust_quantification|Q4": {
+    "p_yes": 0.5955145955085754,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS1477-no_double_counting|D1": {
+    "p_yes": 0.8189132213592529,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 335,
+    "cost": 0
+   },
+   "VCS1477-no_double_counting|D2": {
+    "p_yes": 0.9051482677459717,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 335,
+    "cost": 0
+   },
+   "VCS1477-no_double_counting|D3": {
+    "p_yes": 0.13563911616802216,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 335,
+    "cost": 0
+   },
+   "VCS1477-safeguards|S1": {
+    "p_yes": 0.15085777640342712,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS1477-safeguards|S2": {
+    "p_yes": 0.8190857172012329,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS1477-safeguards|S3": {
+    "p_yes": 0.12110655754804611,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS1477-safeguards|S4": {
+    "p_yes": 0.22460755705833435,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS1851-additionality|A1": {
+    "p_yes": 0.16921676695346832,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 328,
+    "cost": 0
+   },
+   "VCS1851-additionality|A2": {
+    "p_yes": 0.25863948464393616,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 328,
+    "cost": 0
+   },
+   "VCS1851-additionality|A3": {
+    "p_yes": 0.31747668981552124,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 328,
+    "cost": 0
+   },
+   "VCS1851-additionality|A4": {
+    "p_yes": 0.6451877951622009,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 328,
+    "cost": 0
+   },
+   "VCS1851-robust_quantification|Q1": {
+    "p_yes": 0.7993967533111572,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS1851-robust_quantification|Q2": {
+    "p_yes": 0.11079507321119308,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS1851-robust_quantification|Q3": {
+    "p_yes": 0.10755953192710876,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS1851-robust_quantification|Q4": {
+    "p_yes": 0.24831323325634003,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS1851-no_double_counting|D1": {
+    "p_yes": 0.2462553232908249,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS1851-no_double_counting|D2": {
+    "p_yes": 0.876496434211731,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS1851-no_double_counting|D3": {
+    "p_yes": 0.12019645422697067,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 325,
+    "cost": 0
+   },
+   "VCS1851-safeguards|S1": {
+    "p_yes": 0.8831551671028137,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 280,
+    "cost": 0
+   },
+   "VCS1851-safeguards|S2": {
+    "p_yes": 0.11873470991849899,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 280,
+    "cost": 0
+   },
+   "VCS1851-safeguards|S3": {
+    "p_yes": 0.14469397068023682,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 280,
+    "cost": 0
+   },
+   "VCS1851-safeguards|S4": {
+    "p_yes": 0.172875314950943,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 280,
+    "cost": 0
+   },
+   "VCS138-additionality|A1": {
+    "p_yes": 0.11585478484630585,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 311,
+    "cost": 0
+   },
+   "VCS138-additionality|A2": {
+    "p_yes": 0.12854865193367004,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 311,
+    "cost": 0
+   },
+   "VCS138-additionality|A3": {
+    "p_yes": 0.3457607924938202,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 311,
+    "cost": 0
+   },
+   "VCS138-additionality|A4": {
+    "p_yes": 0.12468884140253067,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 311,
+    "cost": 0
+   },
+   "VCS138-robust_quantification|Q1": {
+    "p_yes": 0.9144262671470642,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 394,
+    "cost": 0
+   },
+   "VCS138-robust_quantification|Q2": {
+    "p_yes": 0.8806599974632263,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 394,
+    "cost": 0
+   },
+   "VCS138-robust_quantification|Q3": {
+    "p_yes": 0.10148105025291443,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 394,
+    "cost": 0
+   },
+   "VCS138-robust_quantification|Q4": {
+    "p_yes": 0.19303669035434723,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 394,
+    "cost": 0
+   },
+   "VCS138-no_double_counting|D1": {
+    "p_yes": 0.9044516086578369,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 307,
+    "cost": 0
+   },
+   "VCS138-no_double_counting|D2": {
+    "p_yes": 0.908183217048645,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 307,
+    "cost": 0
+   },
+   "VCS138-no_double_counting|D3": {
+    "p_yes": 0.12896426022052765,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 307,
+    "cost": 0
+   },
+   "VCS138-safeguards|S1": {
+    "p_yes": 0.16520580649375916,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 269,
+    "cost": 0
+   },
+   "VCS138-safeguards|S2": {
+    "p_yes": 0.10370217263698578,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 269,
+    "cost": 0
+   },
+   "VCS138-safeguards|S3": {
+    "p_yes": 0.12076753377914429,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 269,
+    "cost": 0
+   },
+   "VCS138-safeguards|S4": {
+    "p_yes": 0.09768043458461761,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 269,
+    "cost": 0
+   },
+   "VCS2505-additionality|A1": {
+    "p_yes": 0.116356261074543,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 335,
+    "cost": 0
+   },
+   "VCS2505-additionality|A2": {
+    "p_yes": 0.16885575652122498,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 335,
+    "cost": 0
+   },
+   "VCS2505-additionality|A3": {
+    "p_yes": 0.8871392011642456,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 335,
+    "cost": 0
+   },
+   "VCS2505-additionality|A4": {
+    "p_yes": 0.12133198231458664,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 335,
+    "cost": 0
+   },
+   "VCS2505-robust_quantification|Q1": {
+    "p_yes": 0.18221910297870636,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2505-robust_quantification|Q2": {
+    "p_yes": 0.10781263560056686,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2505-robust_quantification|Q3": {
+    "p_yes": 0.7422305345535278,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2505-robust_quantification|Q4": {
+    "p_yes": 0.660078227519989,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2505-no_double_counting|D1": {
+    "p_yes": 0.12997354567050934,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS2505-no_double_counting|D2": {
+    "p_yes": 0.2687393128871918,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS2505-no_double_counting|D3": {
+    "p_yes": 0.12719127535820007,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS2505-safeguards|S1": {
+    "p_yes": 0.8009724617004395,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 317,
+    "cost": 0
+   },
+   "VCS2505-safeguards|S2": {
+    "p_yes": 0.21461939811706543,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 317,
+    "cost": 0
+   },
+   "VCS2505-safeguards|S3": {
+    "p_yes": 0.10472385585308075,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 317,
+    "cost": 0
+   },
+   "VCS2505-safeguards|S4": {
+    "p_yes": 0.29931098222732544,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 317,
+    "cost": 0
+   },
+   "VCS1742-additionality|A1": {
+    "p_yes": 0.8465104699134827,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 356,
+    "cost": 0
+   },
+   "VCS1742-additionality|A2": {
+    "p_yes": 0.12752023339271545,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 356,
+    "cost": 0
+   },
+   "VCS1742-additionality|A3": {
+    "p_yes": 0.18859191238880157,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 356,
+    "cost": 0
+   },
+   "VCS1742-additionality|A4": {
+    "p_yes": 0.1220836341381073,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 356,
+    "cost": 0
+   },
+   "VCS1742-robust_quantification|Q1": {
+    "p_yes": 0.49103307723999023,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS1742-robust_quantification|Q2": {
+    "p_yes": 0.10803905874490738,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS1742-robust_quantification|Q3": {
+    "p_yes": 0.12832841277122498,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS1742-robust_quantification|Q4": {
+    "p_yes": 0.11987520009279251,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS1742-no_double_counting|D1": {
+    "p_yes": 0.7230526208877563,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 307,
+    "cost": 0
+   },
+   "VCS1742-no_double_counting|D2": {
+    "p_yes": 0.14713582396507263,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 307,
+    "cost": 0
+   },
+   "VCS1742-no_double_counting|D3": {
+    "p_yes": 0.11715364456176758,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 307,
+    "cost": 0
+   },
+   "VCS1742-safeguards|S1": {
+    "p_yes": 0.6324934363365173,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 308,
+    "cost": 0
+   },
+   "VCS1742-safeguards|S2": {
+    "p_yes": 0.16344204545021057,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 308,
+    "cost": 0
+   },
+   "VCS1742-safeguards|S3": {
+    "p_yes": 0.8527635931968689,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 308,
+    "cost": 0
+   },
+   "VCS1742-safeguards|S4": {
+    "p_yes": 0.19841188192367554,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 308,
+    "cost": 0
+   },
+   "VCS1728-additionality|A1": {
+    "p_yes": 0.715237557888031,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 323,
+    "cost": 0
+   },
+   "VCS1728-additionality|A2": {
+    "p_yes": 0.11384216696023941,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 323,
+    "cost": 0
+   },
+   "VCS1728-additionality|A3": {
+    "p_yes": 0.17266446352005005,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 323,
+    "cost": 0
+   },
+   "VCS1728-additionality|A4": {
+    "p_yes": 0.1347864717245102,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 323,
+    "cost": 0
+   },
+   "VCS1728-robust_quantification|Q1": {
+    "p_yes": 0.4360140562057495,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 309,
+    "cost": 0
+   },
+   "VCS1728-robust_quantification|Q2": {
+    "p_yes": 0.12317803502082825,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 309,
+    "cost": 0
+   },
+   "VCS1728-robust_quantification|Q3": {
+    "p_yes": 0.11280409246683121,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 309,
+    "cost": 0
+   },
+   "VCS1728-robust_quantification|Q4": {
+    "p_yes": 0.3857901096343994,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 309,
+    "cost": 0
+   },
+   "VCS1728-no_double_counting|D1": {
+    "p_yes": 0.258318692445755,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 308,
+    "cost": 0
+   },
+   "VCS1728-no_double_counting|D2": {
+    "p_yes": 0.8575083613395691,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 308,
+    "cost": 0
+   },
+   "VCS1728-no_double_counting|D3": {
+    "p_yes": 0.10950789600610733,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 308,
+    "cost": 0
+   },
+   "VCS1728-safeguards|S1": {
+    "p_yes": 0.8942888975143433,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS1728-safeguards|S2": {
+    "p_yes": 0.9020049571990967,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS1728-safeguards|S3": {
+    "p_yes": 0.12163928151130676,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS1728-safeguards|S4": {
+    "p_yes": 0.13356955349445343,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS2609-additionality|A1": {
+    "p_yes": 0.11556048691272736,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2609-additionality|A2": {
+    "p_yes": 0.8824694156646729,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2609-additionality|A3": {
+    "p_yes": 0.23408333957195282,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2609-additionality|A4": {
+    "p_yes": 0.12124112248420715,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS2609-permanence|P1": {
+    "p_yes": 0.9161756634712219,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 316,
+    "cost": 0
+   },
+   "VCS2609-permanence|P2": {
+    "p_yes": 0.19895635545253754,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 316,
+    "cost": 0
+   },
+   "VCS2609-permanence|P3": {
+    "p_yes": 0.8668317198753357,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 316,
+    "cost": 0
+   },
+   "VCS2609-robust_quantification|Q1": {
+    "p_yes": 0.1390221118927002,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 342,
+    "cost": 0
+   },
+   "VCS2609-robust_quantification|Q2": {
+    "p_yes": 0.24540206789970398,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 342,
+    "cost": 0
+   },
+   "VCS2609-robust_quantification|Q3": {
+    "p_yes": 0.10013466328382492,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 342,
+    "cost": 0
+   },
+   "VCS2609-robust_quantification|Q4": {
+    "p_yes": 0.8587902188301086,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 342,
+    "cost": 0
+   },
+   "VCS2609-no_double_counting|D1": {
+    "p_yes": 0.32139861583709717,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 280,
+    "cost": 0
+   },
+   "VCS2609-no_double_counting|D2": {
+    "p_yes": 0.8786078691482544,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 280,
+    "cost": 0
+   },
+   "VCS2609-no_double_counting|D3": {
+    "p_yes": 0.1191447526216507,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 280,
+    "cost": 0
+   },
+   "VCS2609-safeguards|S1": {
+    "p_yes": 0.17848430573940277,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 355,
+    "cost": 0
+   },
+   "VCS2609-safeguards|S2": {
+    "p_yes": 0.3357471823692322,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 355,
+    "cost": 0
+   },
+   "VCS2609-safeguards|S3": {
+    "p_yes": 0.1070256307721138,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 355,
+    "cost": 0
+   },
+   "VCS2609-safeguards|S4": {
+    "p_yes": 0.8956518173217773,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 355,
+    "cost": 0
+   },
+   "VCS673-additionality|A1": {
+    "p_yes": 0.13259077072143555,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 324,
+    "cost": 0
+   },
+   "VCS673-additionality|A2": {
+    "p_yes": 0.1510094702243805,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 324,
+    "cost": 0
+   },
+   "VCS673-additionality|A3": {
+    "p_yes": 0.3510781228542328,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 324,
+    "cost": 0
+   },
+   "VCS673-additionality|A4": {
+    "p_yes": 0.8404505252838135,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 324,
+    "cost": 0
+   },
+   "VCS673-permanence|P1": {
+    "p_yes": 0.2145456224679947,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 306,
+    "cost": 0
+   },
+   "VCS673-permanence|P2": {
+    "p_yes": 0.1153024360537529,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 306,
+    "cost": 0
+   },
+   "VCS673-permanence|P3": {
+    "p_yes": 0.9066438674926758,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 306,
+    "cost": 0
+   },
+   "VCS673-robust_quantification|Q1": {
+    "p_yes": 0.15224482119083405,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 324,
+    "cost": 0
+   },
+   "VCS673-robust_quantification|Q2": {
+    "p_yes": 0.11591614037752151,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 324,
+    "cost": 0
+   },
+   "VCS673-robust_quantification|Q3": {
+    "p_yes": 0.10041256994009018,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 324,
+    "cost": 0
+   },
+   "VCS673-robust_quantification|Q4": {
+    "p_yes": 0.8950157165527344,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 324,
+    "cost": 0
+   },
+   "VCS673-no_double_counting|D1": {
+    "p_yes": 0.507555365562439,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS673-no_double_counting|D2": {
+    "p_yes": 0.1737464964389801,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS673-no_double_counting|D3": {
+    "p_yes": 0.11471440643072128,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 322,
+    "cost": 0
+   },
+   "VCS673-safeguards|S1": {
+    "p_yes": 0.9001827836036682,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS673-safeguards|S2": {
+    "p_yes": 0.14090639352798462,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS673-safeguards|S3": {
+    "p_yes": 0.8941227793693542,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS673-safeguards|S4": {
+    "p_yes": 0.37205055356025696,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS2846-additionality|A1": {
+    "p_yes": 0.6912034749984741,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 344,
+    "cost": 0
+   },
+   "VCS2846-additionality|A2": {
+    "p_yes": 0.8747750520706177,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 344,
+    "cost": 0
+   },
+   "VCS2846-additionality|A3": {
+    "p_yes": 0.26576730608940125,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 344,
+    "cost": 0
+   },
+   "VCS2846-additionality|A4": {
+    "p_yes": 0.18735690414905548,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 344,
+    "cost": 0
+   },
+   "VCS2846-robust_quantification|Q1": {
+    "p_yes": 0.27956047654151917,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS2846-robust_quantification|Q2": {
+    "p_yes": 0.2587912976741791,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS2846-robust_quantification|Q3": {
+    "p_yes": 0.736864447593689,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS2846-robust_quantification|Q4": {
+    "p_yes": 0.8210988640785217,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 345,
+    "cost": 0
+   },
+   "VCS2846-no_double_counting|D1": {
+    "p_yes": 0.2049490064382553,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS2846-no_double_counting|D2": {
+    "p_yes": 0.8909479379653931,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS2846-no_double_counting|D3": {
+    "p_yes": 0.8130658268928528,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 321,
+    "cost": 0
+   },
+   "VCS2846-safeguards|S1": {
+    "p_yes": 0.8869775533676147,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 317,
+    "cost": 0
+   },
+   "VCS2846-safeguards|S2": {
+    "p_yes": 0.14219722151756287,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 317,
+    "cost": 0
+   },
+   "VCS2846-safeguards|S3": {
+    "p_yes": 0.18163813650608063,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 317,
+    "cost": 0
+   },
+   "VCS2846-safeguards|S4": {
+    "p_yes": 0.22041700780391693,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 317,
+    "cost": 0
+   },
+   "VCS985-additionality|A1": {
+    "p_yes": 0.11924037337303162,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 363,
+    "cost": 0
+   },
+   "VCS985-additionality|A2": {
+    "p_yes": 0.8136444687843323,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 363,
+    "cost": 0
+   },
+   "VCS985-additionality|A3": {
+    "p_yes": 0.2676129639148712,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 363,
+    "cost": 0
+   },
+   "VCS985-additionality|A4": {
+    "p_yes": 0.11618360877037048,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 363,
+    "cost": 0
+   },
+   "VCS985-permanence|P1": {
+    "p_yes": 0.12454058229923248,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 279,
+    "cost": 0
+   },
+   "VCS985-permanence|P2": {
+    "p_yes": 0.10319429636001587,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 279,
+    "cost": 0
+   },
+   "VCS985-permanence|P3": {
+    "p_yes": 0.7779414057731628,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 279,
+    "cost": 0
+   },
+   "VCS985-robust_quantification|Q1": {
+    "p_yes": 0.13356271386146545,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 341,
+    "cost": 0
+   },
+   "VCS985-robust_quantification|Q2": {
+    "p_yes": 0.8883920311927795,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 341,
+    "cost": 0
+   },
+   "VCS985-robust_quantification|Q3": {
+    "p_yes": 0.10232564061880112,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 341,
+    "cost": 0
+   },
+   "VCS985-robust_quantification|Q4": {
+    "p_yes": 0.8844341039657593,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 341,
+    "cost": 0
+   },
+   "VCS985-no_double_counting|D1": {
+    "p_yes": 0.6163061261177063,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 315,
+    "cost": 0
+   },
+   "VCS985-no_double_counting|D2": {
+    "p_yes": 0.8773286938667297,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 315,
+    "cost": 0
+   },
+   "VCS985-no_double_counting|D3": {
+    "p_yes": 0.31485599279403687,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 315,
+    "cost": 0
+   },
+   "VCS985-safeguards|S1": {
+    "p_yes": 0.8127204775810242,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS985-safeguards|S2": {
+    "p_yes": 0.3076370358467102,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS985-safeguards|S3": {
+    "p_yes": 0.14040160179138184,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS985-safeguards|S4": {
+    "p_yes": 0.19751201570034027,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 343,
+    "cost": 0
+   },
+   "VCS4150-additionality|A1": {
+    "p_yes": 0.12633799016475677,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 414,
+    "cost": 0
+   },
+   "VCS4150-additionality|A2": {
+    "p_yes": 0.7402130365371704,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 414,
+    "cost": 0
+   },
+   "VCS4150-additionality|A3": {
+    "p_yes": 0.3005438446998596,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 414,
+    "cost": 0
+   },
+   "VCS4150-additionality|A4": {
+    "p_yes": 0.12543997168540955,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 414,
+    "cost": 0
+   },
+   "VCS4150-robust_quantification|Q1": {
+    "p_yes": 0.8841216564178467,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 356,
+    "cost": 0
+   },
+   "VCS4150-robust_quantification|Q2": {
+    "p_yes": 0.11292517930269241,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 356,
+    "cost": 0
+   },
+   "VCS4150-robust_quantification|Q3": {
+    "p_yes": 0.9167537093162537,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 356,
+    "cost": 0
+   },
+   "VCS4150-robust_quantification|Q4": {
+    "p_yes": 0.15211980044841766,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 356,
+    "cost": 0
+   },
+   "VCS4150-no_double_counting|D1": {
+    "p_yes": 0.36211758852005005,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 329,
+    "cost": 0
+   },
+   "VCS4150-no_double_counting|D2": {
+    "p_yes": 0.874367356300354,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 329,
+    "cost": 0
+   },
+   "VCS4150-no_double_counting|D3": {
+    "p_yes": 0.114792101085186,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 329,
+    "cost": 0
+   },
+   "VCS4150-safeguards|S1": {
+    "p_yes": 0.8211239576339722,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS4150-safeguards|S2": {
+    "p_yes": 0.8918434381484985,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS4150-safeguards|S3": {
+    "p_yes": 0.09615404158830643,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   },
+   "VCS4150-safeguards|S4": {
+    "p_yes": 0.14474402368068695,
+    "model": "berkay123001/turnike-jev-4b-merged",
+    "latency_ms": 319,
+    "cost": 0
+   }
+  }
+ ]
+}
