@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { AnchorCheck } from "@/components/anchor-check";
+import { DataChecks } from "@/components/data-checks";
 import { EtherscanLink, HashChip } from "@/components/hash";
 import { DeterministicTag, IcvcmStamp, ScoreBar, SignalBanner } from "@/components/quality";
 import { TransitionLink } from "@/components/transition-link";
@@ -167,6 +168,8 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
           </KeyValue>
         </Card>
       </div>
+
+      {project.checks && <DataChecks projectId={project.id} checks={project.checks} />}
 
       <section aria-labelledby="ccp-h" className="flex flex-col gap-4 pt-3">
         <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-3">

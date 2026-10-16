@@ -1,0 +1,138 @@
+{
+ "schema": "checks-v1",
+ "project_id": "VCS4150",
+ "inputs": {
+  "documents": [
+   {
+    "role": "project_description",
+    "file": "samples/pdfs/VCS4150_PD.pdf",
+    "sha256": "573d9046347e8ce1a9198ca57286cd0d81c2e41bc67edf1f2fbb4c85e234742b",
+    "pages": 78,
+    "pages_without_text": [],
+    "tables": 98
+   }
+  ],
+  "offsetsdb_snapshot": "2026-06-01"
+ },
+ "checks": [
+  {
+   "id": "document_coverage",
+   "title": "Documents read",
+   "status": "flag",
+   "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "details": {
+    "held": {
+     "project_description": 1
+    },
+    "missing": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ]
+   }
+  },
+  {
+   "id": "issuance_vs_estimate",
+   "title": "Issued credits vs the document's own yearly figures",
+   "status": "info",
+   "summary": "Over the whole span issuance is within 20% of the document (2022-2025: issued 8,551,795 t, document 7,257,613 t (1.18x, table on page 17)), though single vintages exceed it (2023, 2024).",
+   "details": {
+    "ratio": 1.178,
+    "candidates": [
+     {
+      "file": "samples/pdfs/VCS4150_PD.pdf",
+      "table_id": "p17-t3",
+      "page": 17,
+      "column": "Estimated GHG emission reductions or removals (tCO e) 2",
+      "rows_read": [
+       "11 Oct 2021- 31 Dec 2021 | 350",
+       "01 Jan 2022-31 Dec-2022 | 1,179,567",
+       "01 Jan 2023-31 Dec-2023 | 1,729,420",
+       "01 Jan 2024-31 Dec-2024 | 1,729,420",
+       "01 Jan 2025-31 Dec-2025 | 2,619,206",
+       "01 Jan 2026-31 Dec-2026 | 2,705,308",
+       "01 Jan 2027-31 Dec-2027 | 2,792,820",
+       "01 Jan 2028-10 Oct-2028 | 2,108,128",
+       "Total estimated ERRs during the first or fixed crediting period | 14,864,219"
+      ],
+      "partial_years": [
+       2021,
+       2028
+      ],
+      "multi_year_rows": [],
+      "document_total": 14864219.0,
+      "comparison": {
+       "span": [
+        2022,
+        2025
+       ],
+       "document_sum": 7257613.0,
+       "issued_sum": 8551795.0,
+       "ratio": 1.178,
+       "per_vintage": [
+        {
+         "vintage": 2022,
+         "document": 1179567.0,
+         "issued": 1274805.0,
+         "ratio": 1.081
+        },
+        {
+         "vintage": 2023,
+         "document": 1729420.0,
+         "issued": 3255069.0,
+         "ratio": 1.882
+        },
+        {
+         "vintage": 2024,
+         "document": 1729420.0,
+         "issued": 2812257.0,
+         "ratio": 1.626
+        },
+        {
+         "vintage": 2025,
+         "document": 2619206.0,
+         "issued": 1209664.0,
+         "ratio": 0.462
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "retired_vs_issued",
+   "title": "Retirements never exceed issuance",
+   "status": "pass",
+   "summary": "Across 5 vintages, retired volume never exceeds issued volume.",
+   "details": {}
+  },
+  {
+   "id": "methodology_matches_registry",
+   "title": "Methodology matches the registry listing",
+   "status": "not_available",
+   "summary": "OffsetsDB lists no methodology for this project; the document states VM0050.",
+   "details": {}
+  },
+  {
+   "id": "similar_listings",
+   "title": "Similar listings in other registries or programmes",
+   "status": "flag",
+   "summary": "VCS2749 (verra) has a similar name ('DelAgua Clean Cooking Grouped Project') and issued credits for the same vintages (2021). A name match is a lead, not proof: check whether these are the same activity.",
+   "details": {
+    "listings": [
+     {
+      "project_id": "VCS2749",
+      "registry": "verra",
+      "name": "DelAgua Clean Cooking Grouped Project",
+      "country": "Rwanda",
+      "similarity": 0.75,
+      "vintages_issued_in_both": [
+       2021
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

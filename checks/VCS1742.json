@@ -1,0 +1,157 @@
+{
+ "schema": "checks-v1",
+ "project_id": "VCS1742",
+ "inputs": {
+  "documents": [
+   {
+    "role": "project_description",
+    "file": "samples/pdfs/VCS1742_PD.pdf",
+    "sha256": "0c7e213fc085b1df66f32eb6ddc5ad27a3980ec781ba52677f26a58dbf31aa4b",
+    "pages": 12,
+    "pages_without_text": [],
+    "tables": 5
+   },
+   {
+    "role": "supporting",
+    "file": "samples/pdfs/VCS1742_CDM_PDD.pdf",
+    "sha256": "5b628305c25ac13b2bb4020de96d072e3148701bb0e7635fbfe0b964ed7f0401",
+    "pages": 92,
+    "pages_without_text": [],
+    "tables": 81
+   }
+  ],
+  "offsetsdb_snapshot": "2026-06-01"
+ },
+ "checks": [
+  {
+   "id": "document_coverage",
+   "title": "Documents read",
+   "status": "flag",
+   "summary": "Read: Project description (PD) ×1, Supporting document ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "details": {
+    "held": {
+     "project_description": 1,
+     "supporting": 1
+    },
+    "missing": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ]
+   }
+  },
+  {
+   "id": "issuance_vs_estimate",
+   "title": "Issued credits vs the document's own yearly figures",
+   "status": "pass",
+   "summary": "Issuance is within 20% of the document: 2012-2020: issued 24,671,871 t, document 31,877,253 t (0.77x, table on page 9).",
+   "details": {
+    "ratio": 0.774,
+    "candidates": [
+     {
+      "file": "samples/pdfs/VCS1742_CDM_PDD.pdf",
+      "table_id": "p9-t2",
+      "page": 9,
+      "column": "Annual estimation of emission reductions in tonnes of CO e 2",
+      "rows_read": [
+       "2012-13 | 3,541,917",
+       "2013-14 | 3,541,917",
+       "2014-15 | 3,541,917",
+       "2015-16 | 3,541,917",
+       "2016-17 | 3,541,917",
+       "2017-18 | 3,541,917",
+       "2018-19 | 3,541,917",
+       "2019-201 | 3,541,917",
+       "2020-21 | 3,541,917",
+       "Total estimated reductions (tonnes of CO e) 2 | 35,419,166"
+      ],
+      "partial_years": [],
+      "multi_year_rows": [
+       "2011-12 (August 2011 to March 2012) | 1,066,123",
+       "2021-22 (April 2022 to July 2022) | 2,475,793"
+      ],
+      "document_total": 35419166.0,
+      "comparison": {
+       "span": [
+        2012,
+        2020
+       ],
+       "document_sum": 31877253.0,
+       "issued_sum": 24671871.0,
+       "ratio": 0.774,
+       "per_vintage": [
+        {
+         "vintage": 2014,
+         "document": 3541917.0,
+         "issued": 3403883.0,
+         "ratio": 0.961
+        },
+        {
+         "vintage": 2015,
+         "document": 3541917.0,
+         "issued": 3763516.0,
+         "ratio": 1.063
+        },
+        {
+         "vintage": 2016,
+         "document": 3541917.0,
+         "issued": 3504652.0,
+         "ratio": 0.989
+        },
+        {
+         "vintage": 2017,
+         "document": 3541917.0,
+         "issued": 3648031.0,
+         "ratio": 1.03
+        },
+        {
+         "vintage": 2018,
+         "document": 3541917.0,
+         "issued": 3163013.0,
+         "ratio": 0.893
+        },
+        {
+         "vintage": 2019,
+         "document": 3541917.0,
+         "issued": 3683633.0,
+         "ratio": 1.04
+        },
+        {
+         "vintage": 2020,
+         "document": 3541917.0,
+         "issued": 3505143.0,
+         "ratio": 0.99
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "retired_vs_issued",
+   "title": "Retirements never exceed issuance",
+   "status": "pass",
+   "summary": "Across 9 vintages, retired volume never exceeds issued volume.",
+   "details": {}
+  },
+  {
+   "id": "methodology_matches_registry",
+   "title": "Methodology matches the registry listing",
+   "status": "pass",
+   "summary": "Document and registry both give ACM0002.",
+   "details": {
+    "registry": [
+     "ACM0002"
+    ]
+   }
+  },
+  {
+   "id": "similar_listings",
+   "title": "Similar listings in other registries or programmes",
+   "status": "pass",
+   "summary": "No project in the same country with a closely matching name.",
+   "details": {}
+  }
+ ]
+}

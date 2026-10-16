@@ -3,7 +3,7 @@
 The project pages are static: they show the published reports in reports/, the methodology table,
 the simulated issuance batches and the Sepolia deployment, all read here at build time. Each report
 carries the hash the contract should hold (`hash_json` of the published file), so the browser can
-compare it with `latestReport` on-chain without trusting this file. Run after a report, batch or
+compare it with `latestReport` on-chain without trusting this file. Run after a report, data check, batch or
 deployment changes:
 
     python scripts/export_web_data.py
@@ -70,7 +70,18 @@ def main() -> None:
                          "batch_no": b.batch_no, "first_serial": b.first_serial, "last_serial": b.last_serial,
                          "quantity": b.quantity, "lot_size": b.lot_size} for b in load_batches(pid)],
             "report": None,
+            "checks": None,
         }
+        checks_path = PROJECT_ROOT / "checks" / f"{pid}.json"
+        if checks_path.exists():
+            checks = json.loads(checks_path.read_text(encoding="utf-8"))
+            coverage = next(c for c in checks["checks"] if c["id"] == "document_coverage")
+            project["checks"] = {
+                "offsetsdb_snapshot": checks["inputs"]["offsetsdb_snapshot"],
+                "documents": [{k: d[k] for k in ("role", "pages", "tables")} for d in checks["inputs"]["documents"]],
+                "missing_documents": coverage["details"]["missing"],
+                "results": [{k: c[k] for k in ("id", "title", "status", "summary")} for c in checks["checks"]],
+            }
         if report:
             project["report"] = {
                 "hash": hash_json(report), "generated_at": report["generated_at"],

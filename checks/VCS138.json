@@ -1,0 +1,167 @@
+{
+ "schema": "checks-v1",
+ "project_id": "VCS138",
+ "inputs": {
+  "documents": [
+   {
+    "role": "project_description",
+    "file": "samples/pdfs/VCS138_PD.pdf",
+    "sha256": "8c22eb7d83ff957fa785940a206c03b5adc4b0f7506ea2d98d5fd455ab44e104",
+    "pages": 37,
+    "pages_without_text": [],
+    "tables": 34
+   }
+  ],
+  "offsetsdb_snapshot": "2026-06-01"
+ },
+ "checks": [
+  {
+   "id": "document_coverage",
+   "title": "Documents read",
+   "status": "flag",
+   "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "details": {
+    "held": {
+     "project_description": 1
+    },
+    "missing": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ]
+   }
+  },
+  {
+   "id": "issuance_vs_estimate",
+   "title": "Issued credits vs the document's own yearly figures",
+   "status": "info",
+   "summary": "Over the whole span issuance is within 20% of the document (2017-2024: issued 811,131 t, document 707,496 t (1.15x, table on page 4)), though single vintages exceed it (2022, 2023, 2024).",
+   "details": {
+    "ratio": 1.146,
+    "candidates": [
+     {
+      "file": "samples/pdfs/VCS138_PD.pdf",
+      "table_id": "p4-t2",
+      "page": 4,
+      "column": "Estimated GHG emission reductions or removals (tCO e) 2",
+      "rows_read": [
+       "2016 (March 29 - December 31) | 67,357",
+       "2017 | 88,437",
+       "2018 | 88,437",
+       "2019 | 88,437",
+       "2020 | 88,437",
+       "2021 | 88,437",
+       "2022 | 88,437",
+       "2023 | 88,437",
+       "2024 | 88,437",
+       "2025 | 88,437",
+       "2026 (January 1 - March 28) | 21,080",
+       "Total estimated ERs | 884,374"
+      ],
+      "partial_years": [
+       2016,
+       2026
+      ],
+      "multi_year_rows": [],
+      "document_total": 884374.0,
+      "comparison": {
+       "span": [
+        2017,
+        2024
+       ],
+       "document_sum": 707496.0,
+       "issued_sum": 811131.0,
+       "ratio": 1.146,
+       "per_vintage": [
+        {
+         "vintage": 2017,
+         "document": 88437.0,
+         "issued": 84412.0,
+         "ratio": 0.954
+        },
+        {
+         "vintage": 2018,
+         "document": 88437.0,
+         "issued": 76930.0,
+         "ratio": 0.87
+        },
+        {
+         "vintage": 2019,
+         "document": 88437.0,
+         "issued": 78858.0,
+         "ratio": 0.892
+        },
+        {
+         "vintage": 2020,
+         "document": 88437.0,
+         "issued": 90072.0,
+         "ratio": 1.018
+        },
+        {
+         "vintage": 2021,
+         "document": 88437.0,
+         "issued": 102987.0,
+         "ratio": 1.165
+        },
+        {
+         "vintage": 2022,
+         "document": 88437.0,
+         "issued": 137028.0,
+         "ratio": 1.549
+        },
+        {
+         "vintage": 2023,
+         "document": 88437.0,
+         "issued": 130647.0,
+         "ratio": 1.477
+        },
+        {
+         "vintage": 2024,
+         "document": 88437.0,
+         "issued": 110197.0,
+         "ratio": 1.246
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "retired_vs_issued",
+   "title": "Retirements never exceed issuance",
+   "status": "pass",
+   "summary": "Across 16 vintages, retired volume never exceeds issued volume.",
+   "details": {}
+  },
+  {
+   "id": "methodology_matches_registry",
+   "title": "Methodology matches the registry listing",
+   "status": "pass",
+   "summary": "Document and registry both give ACM0001.",
+   "details": {
+    "registry": [
+     "ACM0001"
+    ]
+   }
+  },
+  {
+   "id": "similar_listings",
+   "title": "Similar listings in other registries or programmes",
+   "status": "info",
+   "summary": "1 similarly named project(s), with no vintage issued in both: ACR113 (american-carbon-registry).",
+   "details": {
+    "listings": [
+     {
+      "project_id": "ACR113",
+      "registry": "american-carbon-registry",
+      "name": "Greater New Bedford LFG",
+      "country": "United States",
+      "similarity": 0.87,
+      "vintages_issued_in_both": []
+     }
+    ]
+   }
+  }
+ ]
+}

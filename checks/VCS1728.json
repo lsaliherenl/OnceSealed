@@ -1,0 +1,67 @@
+{
+ "schema": "checks-v1",
+ "project_id": "VCS1728",
+ "inputs": {
+  "documents": [
+   {
+    "role": "project_description",
+    "file": "samples/pdfs/VCS1728_PD.pdf",
+    "sha256": "5c879cd740a01ed857dbd050d40df237c7eb5168fffe173e0e34889190368f7c",
+    "pages": 75,
+    "pages_without_text": [],
+    "tables": 139
+   }
+  ],
+  "offsetsdb_snapshot": "2026-06-01"
+ },
+ "checks": [
+  {
+   "id": "document_coverage",
+   "title": "Documents read",
+   "status": "flag",
+   "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "details": {
+    "held": {
+     "project_description": 1
+    },
+    "missing": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ]
+   }
+  },
+  {
+   "id": "issuance_vs_estimate",
+   "title": "Issued credits vs the document's own yearly figures",
+   "status": "not_available",
+   "summary": "No table of yearly net emission reductions could be read from the documents.",
+   "details": {}
+  },
+  {
+   "id": "retired_vs_issued",
+   "title": "Retirements never exceed issuance",
+   "status": "pass",
+   "summary": "Across 9 vintages, retired volume never exceeds issued volume.",
+   "details": {}
+  },
+  {
+   "id": "methodology_matches_registry",
+   "title": "Methodology matches the registry listing",
+   "status": "pass",
+   "summary": "Document and registry both give ACM0002.",
+   "details": {
+    "registry": [
+     "ACM0002"
+    ]
+   }
+  },
+  {
+   "id": "similar_listings",
+   "title": "Similar listings in other registries or programmes",
+   "status": "pass",
+   "summary": "No project in the same country with a closely matching name.",
+   "details": {}
+  }
+ ]
+}

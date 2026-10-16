@@ -1,0 +1,129 @@
+{
+ "schema": "checks-v1",
+ "project_id": "VCS673",
+ "inputs": {
+  "documents": [
+   {
+    "role": "project_description",
+    "file": "samples/pdfs/VCS673_PD.pdf",
+    "sha256": "cbfb2a9fd2ac091ff985c80c5ab8cec857adc699e396425920653318f096e1b1",
+    "pages": 77,
+    "pages_without_text": [],
+    "tables": 44
+   }
+  ],
+  "offsetsdb_snapshot": "2026-06-01"
+ },
+ "checks": [
+  {
+   "id": "document_coverage",
+   "title": "Documents read",
+   "status": "flag",
+   "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "details": {
+    "held": {
+     "project_description": 1
+    },
+    "missing": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ]
+   }
+  },
+  {
+   "id": "issuance_vs_estimate",
+   "title": "Issued credits vs the document's own yearly figures",
+   "status": "info",
+   "summary": "Issuance is far below the document's figures (2009-2017: issued 788,228 t, document 9,695,423 t (0.08x, table on page 67)). Either the project delivered much less than projected, or the table holds cumulative stocks rather than yearly figures (common for afforestation projects); check the table.",
+   "details": {
+    "ratio": 0.081,
+    "candidates": [
+     {
+      "file": "samples/pdfs/VCS673_PD.pdf",
+      "table_id": "p67-t2",
+      "page": 67,
+      "column": "Estimation of net anthropogenic GHG removals by sinks (tonnes of anthropogenic GHG removals by sinks (tonnes of CO e) 2",
+      "rows_read": [
+       "2009 | 768,776",
+       "2010 | 837,011",
+       "2011 | 907,066",
+       "2012 | 981,625",
+       "2013 | 1,061,257",
+       "2014 | 1,145,904",
+       "2015 | 1,235,693",
+       "2016 | 1,329,890",
+       "2017 | 1,428,201"
+      ],
+      "partial_years": [],
+      "multi_year_rows": [],
+      "document_total": null,
+      "comparison": {
+       "span": [
+        2009,
+        2017
+       ],
+       "document_sum": 9695423.0,
+       "issued_sum": 788228.0,
+       "ratio": 0.081,
+       "per_vintage": [
+        {
+         "vintage": 2011,
+         "document": 907066.0,
+         "issued": 372381.0,
+         "ratio": 0.411
+        },
+        {
+         "vintage": 2014,
+         "document": 1145904.0,
+         "issued": 199082.0,
+         "ratio": 0.174
+        },
+        {
+         "vintage": 2017,
+         "document": 1428201.0,
+         "issued": 216765.0,
+         "ratio": 0.152
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "retired_vs_issued",
+   "title": "Retirements never exceed issuance",
+   "status": "flag",
+   "summary": "More credits retired than issued for vintage 2017 (+13,052 t). Likely a data inconsistency in the registry records; worth a reconciliation.",
+   "details": {
+    "vintages": [
+     {
+      "vintage": 2017,
+      "issued": 216765.0,
+      "retired": 229817.0,
+      "excess": 13052.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "methodology_matches_registry",
+   "title": "Methodology matches the registry listing",
+   "status": "pass",
+   "summary": "Document and registry both give AR-ACM0001.",
+   "details": {
+    "registry": [
+     "AR-ACM0001"
+    ]
+   }
+  },
+  {
+   "id": "similar_listings",
+   "title": "Similar listings in other registries or programmes",
+   "status": "pass",
+   "summary": "No project in the same country with a closely matching name.",
+   "details": {}
+  }
+ ]
+}

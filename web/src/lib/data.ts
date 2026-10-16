@@ -110,6 +110,38 @@ export type Batch = {
   lot_size: number;
 };
 
+export type CheckStatus = "pass" | "flag" | "info" | "not_available";
+
+export const CHECK_LABEL: Record<CheckStatus, string> = {
+  pass: "Pass",
+  flag: "Flag",
+  info: "Info",
+  not_available: "Not available",
+};
+
+export const CHECK_TONE = {
+  pass: "ok",
+  flag: "warn",
+  info: "neutral",
+  not_available: "ghost",
+} as const satisfies Record<CheckStatus, string>;
+
+export const DOCUMENT_ROLE: Record<string, string> = {
+  project_description: "Project description",
+  validation_report: "Validation report",
+  monitoring_report: "Monitoring reports",
+  verification_report: "Verification reports",
+  supporting: "Supporting document",
+};
+
+/** Deterministic data checks (scripts/run_checks.py): no model involved. */
+export type Checks = {
+  offsetsdb_snapshot: string;
+  documents: { role: string; pages: number; tables: number }[];
+  missing_documents: string[];
+  results: { id: string; title: string; status: CheckStatus; summary: string }[];
+};
+
 export type Project = {
   id: string;
   name: string;
@@ -123,6 +155,7 @@ export type Project = {
   anchors: Anchor[];
   batches: Batch[];
   report: Report | null;
+  checks: Checks | null;
 };
 
 export type Buyer = { name: string; lei: string; fictional: boolean };

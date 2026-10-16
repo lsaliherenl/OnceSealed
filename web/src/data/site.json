@@ -207,6 +207,53 @@
       ]
      }
     ]
+   },
+   "checks": {
+    "offsetsdb_snapshot": "2026-06-01",
+    "documents": [
+     {
+      "role": "project_description",
+      "pages": 77,
+      "tables": 44
+     }
+    ],
+    "missing_documents": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ],
+    "results": [
+     {
+      "id": "document_coverage",
+      "title": "Documents read",
+      "status": "flag",
+      "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+     },
+     {
+      "id": "issuance_vs_estimate",
+      "title": "Issued credits vs the document's own yearly figures",
+      "status": "info",
+      "summary": "Issuance is far below the document's figures (2009-2017: issued 788,228 t, document 9,695,423 t (0.08x, table on page 67)). Either the project delivered much less than projected, or the table holds cumulative stocks rather than yearly figures (common for afforestation projects); check the table."
+     },
+     {
+      "id": "retired_vs_issued",
+      "title": "Retirements never exceed issuance",
+      "status": "flag",
+      "summary": "More credits retired than issued for vintage 2017 (+13,052 t). Likely a data inconsistency in the registry records; worth a reconciliation."
+     },
+     {
+      "id": "methodology_matches_registry",
+      "title": "Methodology matches the registry listing",
+      "status": "pass",
+      "summary": "Document and registry both give AR-ACM0001."
+     },
+     {
+      "id": "similar_listings",
+      "title": "Similar listings in other registries or programmes",
+      "status": "pass",
+      "summary": "No project in the same country with a closely matching name."
+     }
+    ]
    }
   },
   {
@@ -405,6 +452,53 @@
         "verification": "exact"
        }
       ]
+     }
+    ]
+   },
+   "checks": {
+    "offsetsdb_snapshot": "2026-06-01",
+    "documents": [
+     {
+      "role": "project_description",
+      "pages": 198,
+      "tables": 136
+     }
+    ],
+    "missing_documents": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ],
+    "results": [
+     {
+      "id": "document_coverage",
+      "title": "Documents read",
+      "status": "flag",
+      "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+     },
+     {
+      "id": "issuance_vs_estimate",
+      "title": "Issued credits vs the document's own yearly figures",
+      "status": "flag",
+      "summary": "Issuance exceeds the document's own figures by more than 20% over 2009-2018: issued 27,135,368 t, document 15,752,684 t (1.72x, table on page 133). Ex-ante figures in a project description can legitimately differ from monitored results; the monitoring and verification reports explain the issued volume."
+     },
+     {
+      "id": "retired_vs_issued",
+      "title": "Retirements never exceed issuance",
+      "status": "pass",
+      "summary": "Across 9 vintages, retired volume never exceeds issued volume."
+     },
+     {
+      "id": "methodology_matches_registry",
+      "title": "Methodology matches the registry listing",
+      "status": "pass",
+      "summary": "Document and registry both give VM0007."
+     },
+     {
+      "id": "similar_listings",
+      "title": "Similar listings in other registries or programmes",
+      "status": "pass",
+      "summary": "No project in the same country with a closely matching name."
      }
     ]
    }
@@ -753,6 +847,52 @@
       ]
      }
     ]
+   },
+   "checks": {
+    "offsetsdb_snapshot": "2026-06-01",
+    "documents": [
+     {
+      "role": "project_description",
+      "pages": 128,
+      "tables": 223
+     }
+    ],
+    "missing_documents": [
+     "validation_report",
+     "verification_report"
+    ],
+    "results": [
+     {
+      "id": "document_coverage",
+      "title": "Documents read",
+      "status": "flag",
+      "summary": "Read: Project description (PD) ×1, Monitoring report ×1. Not read: Validation report (VVB), Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+     },
+     {
+      "id": "issuance_vs_estimate",
+      "title": "Issued credits vs the document's own yearly figures",
+      "status": "info",
+      "summary": "Over the whole span issuance is within 20% of the document (2017-2018: issued 2,293,256 t, document 1,984,034 t (1.16x, table on page 70)), though single vintages exceed it (2018)."
+     },
+     {
+      "id": "retired_vs_issued",
+      "title": "Retirements never exceed issuance",
+      "status": "pass",
+      "summary": "Across 9 vintages, retired volume never exceeds issued volume."
+     },
+     {
+      "id": "methodology_matches_registry",
+      "title": "Methodology matches the registry listing",
+      "status": "pass",
+      "summary": "Document and registry both give ACM0002."
+     },
+     {
+      "id": "similar_listings",
+      "title": "Similar listings in other registries or programmes",
+      "status": "info",
+      "summary": "1 similarly named project(s), with no vintage issued in both: VCS2035 (verra)."
+     }
+    ]
    }
   },
   {
@@ -957,6 +1097,53 @@
         "verification": "exact"
        }
       ]
+     }
+    ]
+   },
+   "checks": {
+    "offsetsdb_snapshot": "2026-06-01",
+    "documents": [
+     {
+      "role": "project_description",
+      "pages": 225,
+      "tables": 151
+     }
+    ],
+    "missing_documents": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ],
+    "results": [
+     {
+      "id": "document_coverage",
+      "title": "Documents read",
+      "status": "flag",
+      "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+     },
+     {
+      "id": "issuance_vs_estimate",
+      "title": "Issued credits vs the document's own yearly figures",
+      "status": "info",
+      "summary": "Over the whole span issuance is within 20% of the document (2016-2023: issued 5,833,782 t, document 5,509,337 t (1.06x, table on page 162, one of 2 tables)), though single vintages exceed it (2019, 2020, 2021)."
+     },
+     {
+      "id": "retired_vs_issued",
+      "title": "Retirements never exceed issuance",
+      "status": "pass",
+      "summary": "Across 8 vintages, retired volume never exceeds issued volume."
+     },
+     {
+      "id": "methodology_matches_registry",
+      "title": "Methodology matches the registry listing",
+      "status": "pass",
+      "summary": "Document and registry both give VM0010."
+     },
+     {
+      "id": "similar_listings",
+      "title": "Similar listings in other registries or programmes",
+      "status": "pass",
+      "summary": "No project in the same country with a closely matching name."
      }
     ]
    }
@@ -1226,6 +1413,53 @@
       ]
      }
     ]
+   },
+   "checks": {
+    "offsetsdb_snapshot": "2026-06-01",
+    "documents": [
+     {
+      "role": "project_description",
+      "pages": 396,
+      "tables": 213
+     }
+    ],
+    "missing_documents": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ],
+    "results": [
+     {
+      "id": "document_coverage",
+      "title": "Documents read",
+      "status": "flag",
+      "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+     },
+     {
+      "id": "issuance_vs_estimate",
+      "title": "Issued credits vs the document's own yearly figures",
+      "status": "not_available",
+      "summary": "The document's yearly figures do not overlap any issued vintage."
+     },
+     {
+      "id": "retired_vs_issued",
+      "title": "Retirements never exceed issuance",
+      "status": "pass",
+      "summary": "Across 6 vintages, retired volume never exceeds issued volume."
+     },
+     {
+      "id": "methodology_matches_registry",
+      "title": "Methodology matches the registry listing",
+      "status": "pass",
+      "summary": "Document and registry both give VM0007."
+     },
+     {
+      "id": "similar_listings",
+      "title": "Similar listings in other registries or programmes",
+      "status": "pass",
+      "summary": "No project in the same country with a closely matching name."
+     }
+    ]
    }
   },
   {
@@ -1411,6 +1645,53 @@
       ]
      }
     ]
+   },
+   "checks": {
+    "offsetsdb_snapshot": "2026-06-01",
+    "documents": [
+     {
+      "role": "project_description",
+      "pages": 78,
+      "tables": 98
+     }
+    ],
+    "missing_documents": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ],
+    "results": [
+     {
+      "id": "document_coverage",
+      "title": "Documents read",
+      "status": "flag",
+      "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+     },
+     {
+      "id": "issuance_vs_estimate",
+      "title": "Issued credits vs the document's own yearly figures",
+      "status": "info",
+      "summary": "Over the whole span issuance is within 20% of the document (2022-2025: issued 8,551,795 t, document 7,257,613 t (1.18x, table on page 17)), though single vintages exceed it (2023, 2024)."
+     },
+     {
+      "id": "retired_vs_issued",
+      "title": "Retirements never exceed issuance",
+      "status": "pass",
+      "summary": "Across 5 vintages, retired volume never exceeds issued volume."
+     },
+     {
+      "id": "methodology_matches_registry",
+      "title": "Methodology matches the registry listing",
+      "status": "not_available",
+      "summary": "OffsetsDB lists no methodology for this project; the document states VM0050."
+     },
+     {
+      "id": "similar_listings",
+      "title": "Similar listings in other registries or programmes",
+      "status": "flag",
+      "summary": "VCS2749 (verra) has a similar name ('DelAgua Clean Cooking Grouped Project') and issued credits for the same vintages (2021). A name match is a lead, not proof: check whether these are the same activity."
+     }
+    ]
    }
   },
   {
@@ -1593,6 +1874,53 @@
         "verification": "exact"
        }
       ]
+     }
+    ]
+   },
+   "checks": {
+    "offsetsdb_snapshot": "2026-06-01",
+    "documents": [
+     {
+      "role": "project_description",
+      "pages": 137,
+      "tables": 194
+     }
+    ],
+    "missing_documents": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ],
+    "results": [
+     {
+      "id": "document_coverage",
+      "title": "Documents read",
+      "status": "flag",
+      "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+     },
+     {
+      "id": "issuance_vs_estimate",
+      "title": "Issued credits vs the document's own yearly figures",
+      "status": "pass",
+      "summary": "Issuance is within 20% of the document: 2021-2022: issued 468,854 t, document 729,500 t (0.64x, table on page 68, one of 2 tables)."
+     },
+     {
+      "id": "retired_vs_issued",
+      "title": "Retirements never exceed issuance",
+      "status": "pass",
+      "summary": "Across 3 vintages, retired volume never exceeds issued volume."
+     },
+     {
+      "id": "methodology_matches_registry",
+      "title": "Methodology matches the registry listing",
+      "status": "pass",
+      "summary": "Document and registry both give ACM0010."
+     },
+     {
+      "id": "similar_listings",
+      "title": "Similar listings in other registries or programmes",
+      "status": "pass",
+      "summary": "No project in the same country with a closely matching name."
      }
     ]
    }
@@ -2076,6 +2404,53 @@
       ]
      }
     ]
+   },
+   "checks": {
+    "offsetsdb_snapshot": "2026-06-01",
+    "documents": [
+     {
+      "role": "project_description",
+      "pages": 37,
+      "tables": 34
+     }
+    ],
+    "missing_documents": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ],
+    "results": [
+     {
+      "id": "document_coverage",
+      "title": "Documents read",
+      "status": "flag",
+      "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+     },
+     {
+      "id": "issuance_vs_estimate",
+      "title": "Issued credits vs the document's own yearly figures",
+      "status": "info",
+      "summary": "Over the whole span issuance is within 20% of the document (2017-2024: issued 811,131 t, document 707,496 t (1.15x, table on page 4)), though single vintages exceed it (2022, 2023, 2024)."
+     },
+     {
+      "id": "retired_vs_issued",
+      "title": "Retirements never exceed issuance",
+      "status": "pass",
+      "summary": "Across 16 vintages, retired volume never exceeds issued volume."
+     },
+     {
+      "id": "methodology_matches_registry",
+      "title": "Methodology matches the registry listing",
+      "status": "pass",
+      "summary": "Document and registry both give ACM0001."
+     },
+     {
+      "id": "similar_listings",
+      "title": "Similar listings in other registries or programmes",
+      "status": "info",
+      "summary": "1 similarly named project(s), with no vintage issued in both: ACR113 (american-carbon-registry)."
+     }
+    ]
    }
   },
   {
@@ -2387,6 +2762,53 @@
       ]
      }
     ]
+   },
+   "checks": {
+    "offsetsdb_snapshot": "2026-06-01",
+    "documents": [
+     {
+      "role": "project_description",
+      "pages": 64,
+      "tables": 56
+     }
+    ],
+    "missing_documents": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ],
+    "results": [
+     {
+      "id": "document_coverage",
+      "title": "Documents read",
+      "status": "flag",
+      "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+     },
+     {
+      "id": "issuance_vs_estimate",
+      "title": "Issued credits vs the document's own yearly figures",
+      "status": "not_available",
+      "summary": "No table of yearly net emission reductions could be read from the documents."
+     },
+     {
+      "id": "retired_vs_issued",
+      "title": "Retirements never exceed issuance",
+      "status": "pass",
+      "summary": "Across 5 vintages, retired volume never exceeds issued volume."
+     },
+     {
+      "id": "methodology_matches_registry",
+      "title": "Methodology matches the registry listing",
+      "status": "pass",
+      "summary": "Document and registry both give VMR0006."
+     },
+     {
+      "id": "similar_listings",
+      "title": "Similar listings in other registries or programmes",
+      "status": "pass",
+      "summary": "No project in the same country with a closely matching name."
+     }
+    ]
    }
   },
   {
@@ -2554,6 +2976,58 @@
         "verification": "exact"
        }
       ]
+     }
+    ]
+   },
+   "checks": {
+    "offsetsdb_snapshot": "2026-06-01",
+    "documents": [
+     {
+      "role": "project_description",
+      "pages": 12,
+      "tables": 5
+     },
+     {
+      "role": "supporting",
+      "pages": 92,
+      "tables": 81
+     }
+    ],
+    "missing_documents": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ],
+    "results": [
+     {
+      "id": "document_coverage",
+      "title": "Documents read",
+      "status": "flag",
+      "summary": "Read: Project description (PD) ×1, Supporting document ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+     },
+     {
+      "id": "issuance_vs_estimate",
+      "title": "Issued credits vs the document's own yearly figures",
+      "status": "pass",
+      "summary": "Issuance is within 20% of the document: 2012-2020: issued 24,671,871 t, document 31,877,253 t (0.77x, table on page 9)."
+     },
+     {
+      "id": "retired_vs_issued",
+      "title": "Retirements never exceed issuance",
+      "status": "pass",
+      "summary": "Across 9 vintages, retired volume never exceeds issued volume."
+     },
+     {
+      "id": "methodology_matches_registry",
+      "title": "Methodology matches the registry listing",
+      "status": "pass",
+      "summary": "Document and registry both give ACM0002."
+     },
+     {
+      "id": "similar_listings",
+      "title": "Similar listings in other registries or programmes",
+      "status": "pass",
+      "summary": "No project in the same country with a closely matching name."
      }
     ]
    }
@@ -2733,6 +3207,53 @@
         "verification": "exact"
        }
       ]
+     }
+    ]
+   },
+   "checks": {
+    "offsetsdb_snapshot": "2026-06-01",
+    "documents": [
+     {
+      "role": "project_description",
+      "pages": 75,
+      "tables": 139
+     }
+    ],
+    "missing_documents": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ],
+    "results": [
+     {
+      "id": "document_coverage",
+      "title": "Documents read",
+      "status": "flag",
+      "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+     },
+     {
+      "id": "issuance_vs_estimate",
+      "title": "Issued credits vs the document's own yearly figures",
+      "status": "not_available",
+      "summary": "No table of yearly net emission reductions could be read from the documents."
+     },
+     {
+      "id": "retired_vs_issued",
+      "title": "Retirements never exceed issuance",
+      "status": "pass",
+      "summary": "Across 9 vintages, retired volume never exceeds issued volume."
+     },
+     {
+      "id": "methodology_matches_registry",
+      "title": "Methodology matches the registry listing",
+      "status": "pass",
+      "summary": "Document and registry both give ACM0002."
+     },
+     {
+      "id": "similar_listings",
+      "title": "Similar listings in other registries or programmes",
+      "status": "pass",
+      "summary": "No project in the same country with a closely matching name."
      }
     ]
    }

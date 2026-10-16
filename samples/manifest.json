@@ -27,7 +27,10 @@
       "sha256": "ec4a5b85922c7a42435d783dbecdbe0c31b534b1870ebf61eae0b9f6bdfe8fc3",
       "methodology": "ACM0002",
       "methodology_version": "19",
-      "reversal_risk": false
+      "reversal_risk": false,
+      "covers": [
+        "monitoring_report"
+      ]
     },
     {
       "project_id": "VCS138",
@@ -76,7 +79,8 @@
           "file_name": "4993 PDD.pdf",
           "doc_type": "CDM Project Design Document (referenced by the VCS PD)",
           "local_path": "samples/pdfs/VCS1742_CDM_PDD.pdf",
-          "sha256": "5b628305c25ac13b2bb4020de96d072e3148701bb0e7635fbfe0b964ed7f0401"
+          "sha256": "5b628305c25ac13b2bb4020de96d072e3148701bb0e7635fbfe0b964ed7f0401",
+          "role": "supporting"
         }
       ]
     },

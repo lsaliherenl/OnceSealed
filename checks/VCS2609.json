@@ -1,0 +1,208 @@
+{
+ "schema": "checks-v1",
+ "project_id": "VCS2609",
+ "inputs": {
+  "documents": [
+   {
+    "role": "project_description",
+    "file": "samples/pdfs/VCS2609_PD.pdf",
+    "sha256": "0967d5670ec19d4b0190194d57022f6520836359874691613a48d36034543a2e",
+    "pages": 225,
+    "pages_without_text": [],
+    "tables": 151
+   }
+  ],
+  "offsetsdb_snapshot": "2026-06-01"
+ },
+ "checks": [
+  {
+   "id": "document_coverage",
+   "title": "Documents read",
+   "status": "flag",
+   "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "details": {
+    "held": {
+     "project_description": 1
+    },
+    "missing": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ]
+   }
+  },
+  {
+   "id": "issuance_vs_estimate",
+   "title": "Issued credits vs the document's own yearly figures",
+   "status": "info",
+   "summary": "Over the whole span issuance is within 20% of the document (2016-2023: issued 5,833,782 t, document 5,509,337 t (1.06x, table on page 162, one of 2 tables)), though single vintages exceed it (2019, 2020, 2021).",
+   "details": {
+    "ratio": 1.059,
+    "candidates": [
+     {
+      "file": "samples/pdfs/VCS2609_PD.pdf",
+      "table_id": "p36-t2",
+      "page": 36,
+      "column": "stimated GHG emission ductions or removals CO e) 2",
+      "rows_read": [
+       "2016 | 571,929",
+       "2017 | 616,953"
+      ],
+      "partial_years": [],
+      "multi_year_rows": [],
+      "document_total": null,
+      "comparison": {
+       "span": [
+        2016,
+        2017
+       ],
+       "document_sum": 1188882.15,
+       "issued_sum": 579764.0,
+       "ratio": 0.488,
+       "per_vintage": [
+        {
+         "vintage": 2016,
+         "document": 571929.05,
+         "issued": 196145.0,
+         "ratio": 0.343
+        },
+        {
+         "vintage": 2017,
+         "document": 616953.1,
+         "issued": 383619.0,
+         "ratio": 0.622
+        }
+       ]
+      }
+     },
+     {
+      "file": "samples/pdfs/VCS2609_PD.pdf",
+      "table_id": "p162-t1",
+      "page": 162,
+      "column": "Estimated net GHG emission reductions (tCO2e)",
+      "rows_read": [
+       "2016 | 571,929",
+       "2017 | 616,953",
+       "2018 | 621,917",
+       "2019 | 721,572",
+       "2020 | 753,290",
+       "2021 | 773,560",
+       "2022 | 725,058",
+       "2023 | 725,058",
+       "2024 | 775,985",
+       "2025 | 874,704",
+       "2026 | 798,785",
+       "2027 | 742,268",
+       "2028 | 776,318",
+       "2029 | 575,302",
+       "2030 | 475,794",
+       "2031 | 411,779",
+       "2032 | 450,636",
+       "2033 | 469,360",
+       "2034 | 449,040",
+       "2035 | 375,256",
+       "2036 | 328,577",
+       "2037 | 277,339",
+       "2038 | 193,301",
+       "2039 | 254,059",
+       "2040 | 364,522",
+       "2041 | 390,383",
+       "2042 | 424,574",
+       "2043 | 519,370",
+       "2044 | 434,569",
+       "2045 | 420,233",
+       "Total | 16,291,489"
+      ],
+      "partial_years": [],
+      "multi_year_rows": [],
+      "document_total": 16291489.0,
+      "comparison": {
+       "span": [
+        2016,
+        2023
+       ],
+       "document_sum": 5509337.0,
+       "issued_sum": 5833782.0,
+       "ratio": 1.059,
+       "per_vintage": [
+        {
+         "vintage": 2016,
+         "document": 571929.0,
+         "issued": 196145.0,
+         "ratio": 0.343
+        },
+        {
+         "vintage": 2017,
+         "document": 616953.0,
+         "issued": 383619.0,
+         "ratio": 0.622
+        },
+        {
+         "vintage": 2018,
+         "document": 621917.0,
+         "issued": 586156.0,
+         "ratio": 0.942
+        },
+        {
+         "vintage": 2019,
+         "document": 721572.0,
+         "issued": 987084.0,
+         "ratio": 1.368
+        },
+        {
+         "vintage": 2020,
+         "document": 753290.0,
+         "issued": 1108187.0,
+         "ratio": 1.471
+        },
+        {
+         "vintage": 2021,
+         "document": 773560.0,
+         "issued": 997778.0,
+         "ratio": 1.29
+        },
+        {
+         "vintage": 2022,
+         "document": 725058.0,
+         "issued": 788266.0,
+         "ratio": 1.087
+        },
+        {
+         "vintage": 2023,
+         "document": 725058.0,
+         "issued": 786547.0,
+         "ratio": 1.085
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "retired_vs_issued",
+   "title": "Retirements never exceed issuance",
+   "status": "pass",
+   "summary": "Across 8 vintages, retired volume never exceeds issued volume.",
+   "details": {}
+  },
+  {
+   "id": "methodology_matches_registry",
+   "title": "Methodology matches the registry listing",
+   "status": "pass",
+   "summary": "Document and registry both give VM0010.",
+   "details": {
+    "registry": [
+     "VM0010"
+    ]
+   }
+  },
+  {
+   "id": "similar_listings",
+   "title": "Similar listings in other registries or programmes",
+   "status": "pass",
+   "summary": "No project in the same country with a closely matching name.",
+   "details": {}
+  }
+ ]
+}

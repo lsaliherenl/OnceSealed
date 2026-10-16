@@ -1,0 +1,146 @@
+{
+ "schema": "checks-v1",
+ "project_id": "VCS985",
+ "inputs": {
+  "documents": [
+   {
+    "role": "project_description",
+    "file": "samples/pdfs/VCS985_PD.pdf",
+    "sha256": "dac2ea6448372916437480321cc7de2719e770b28f22e6ce8a1ef15ef3504487",
+    "pages": 198,
+    "pages_without_text": [],
+    "tables": 136
+   }
+  ],
+  "offsetsdb_snapshot": "2026-06-01"
+ },
+ "checks": [
+  {
+   "id": "document_coverage",
+   "title": "Documents read",
+   "status": "flag",
+   "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "details": {
+    "held": {
+     "project_description": 1
+    },
+    "missing": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ]
+   }
+  },
+  {
+   "id": "issuance_vs_estimate",
+   "title": "Issued credits vs the document's own yearly figures",
+   "status": "flag",
+   "summary": "Issuance exceeds the document's own figures by more than 20% over 2009-2018: issued 27,135,368 t, document 15,752,684 t (1.72x, table on page 133). Ex-ante figures in a project description can legitimately differ from monitored results; the monitoring and verification reports explain the issued volume.",
+   "details": {
+    "ratio": 1.723,
+    "candidates": [
+     {
+      "file": "samples/pdfs/VCS985_PD.pdf",
+      "table_id": "p133-t1",
+      "page": 133,
+      "column": "Estimated net GHG emission reductions or removals (tCO2e)",
+      "rows_read": [
+       "2009 | 997,497",
+       "2010 | 1,066,047",
+       "2011 | 726,995",
+       "2012 | 876,887",
+       "2013 | 1,109,247",
+       "2014 | 1,473,343",
+       "2015 | 1,846,955",
+       "2016 | 2,215,939",
+       "2017 | 2,524,164",
+       "2018 | 2,915,610",
+       "Total | 15,752,683"
+      ],
+      "partial_years": [],
+      "multi_year_rows": [],
+      "document_total": 15752683.0,
+      "comparison": {
+       "span": [
+        2009,
+        2018
+       ],
+       "document_sum": 15752684.0,
+       "issued_sum": 27135368.0,
+       "ratio": 1.723,
+       "per_vintage": [
+        {
+         "vintage": 2012,
+         "document": 876887.0,
+         "issued": 5772071.0,
+         "ratio": 6.582
+        },
+        {
+         "vintage": 2013,
+         "document": 1109247.0,
+         "issued": 1771437.0,
+         "ratio": 1.597
+        },
+        {
+         "vintage": 2014,
+         "document": 1473343.0,
+         "issued": 2374091.0,
+         "ratio": 1.611
+        },
+        {
+         "vintage": 2015,
+         "document": 1846955.0,
+         "issued": 3036823.0,
+         "ratio": 1.644
+        },
+        {
+         "vintage": 2016,
+         "document": 2215939.0,
+         "issued": 3667145.0,
+         "ratio": 1.655
+        },
+        {
+         "vintage": 2017,
+         "document": 2524164.0,
+         "issued": 4040852.0,
+         "ratio": 1.601
+        },
+        {
+         "vintage": 2018,
+         "document": 2915610.0,
+         "issued": 6472949.0,
+         "ratio": 2.22
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "retired_vs_issued",
+   "title": "Retirements never exceed issuance",
+   "status": "pass",
+   "summary": "Across 9 vintages, retired volume never exceeds issued volume.",
+   "details": {}
+  },
+  {
+   "id": "methodology_matches_registry",
+   "title": "Methodology matches the registry listing",
+   "status": "pass",
+   "summary": "Document and registry both give VM0007.",
+   "details": {
+    "registry": [
+     "VM0007"
+    ]
+   }
+  },
+  {
+   "id": "similar_listings",
+   "title": "Similar listings in other registries or programmes",
+   "status": "pass",
+   "summary": "No project in the same country with a closely matching name.",
+   "details": {}
+  }
+ ]
+}

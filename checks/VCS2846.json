@@ -1,0 +1,146 @@
+{
+ "schema": "checks-v1",
+ "project_id": "VCS2846",
+ "inputs": {
+  "documents": [
+   {
+    "role": "project_description",
+    "file": "samples/pdfs/VCS2846_PD.pdf",
+    "sha256": "29955d5d170062c4913c6e3d7c570d0e56b7c933c5a861312604a09770b6e3e3",
+    "pages": 137,
+    "pages_without_text": [],
+    "tables": 194
+   }
+  ],
+  "offsetsdb_snapshot": "2026-06-01"
+ },
+ "checks": [
+  {
+   "id": "document_coverage",
+   "title": "Documents read",
+   "status": "flag",
+   "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "details": {
+    "held": {
+     "project_description": 1
+    },
+    "missing": [
+     "validation_report",
+     "monitoring_report",
+     "verification_report"
+    ]
+   }
+  },
+  {
+   "id": "issuance_vs_estimate",
+   "title": "Issued credits vs the document's own yearly figures",
+   "status": "pass",
+   "summary": "Issuance is within 20% of the document: 2021-2022: issued 468,854 t, document 729,500 t (0.64x, table on page 68, one of 2 tables).",
+   "details": {
+    "ratio": 0.643,
+    "candidates": [
+     {
+      "file": "samples/pdfs/VCS2846_PD.pdf",
+      "table_id": "p68-t3",
+      "page": 68,
+      "column": "Estimated net GHG emission reductions or removals (tCO e) 2",
+      "rows_read": [
+       "05-August- 2020-31- December- 2020 | 148,898",
+       "01-January- 2021-31- December- 2021 | 364,750",
+       "01-January- 2022-31- December- 2022 | 364,750",
+       "01-January- 2023-31- December- 2023 | 364,750",
+       "01-January- 2024-31- December- 2024 | 364,750"
+      ],
+      "partial_years": [
+       2020
+      ],
+      "multi_year_rows": [],
+      "document_total": null,
+      "comparison": {
+       "span": [
+        2021,
+        2022
+       ],
+       "document_sum": 729500.0,
+       "issued_sum": 468854.0,
+       "ratio": 0.643,
+       "per_vintage": [
+        {
+         "vintage": 2021,
+         "document": 364750.0,
+         "issued": 313227.0,
+         "ratio": 0.859
+        },
+        {
+         "vintage": 2022,
+         "document": 364750.0,
+         "issued": 155627.0,
+         "ratio": 0.427
+        }
+       ]
+      }
+     },
+     {
+      "file": "samples/pdfs/VCS2846_PD.pdf",
+      "table_id": "p135-t1",
+      "page": 135,
+      "column": "Net GHG emission reductions or removals (tCO e) 2",
+      "rows_read": [
+       "05-August-2020-31- December-2020 | 16,758",
+       "01-January-2021-31- December-2021 | 41,287",
+       "01-January-2022-30-June- 2022 Total | 20,506"
+      ],
+      "partial_years": [
+       2020,
+       2022
+      ],
+      "multi_year_rows": [],
+      "document_total": null,
+      "comparison": {
+       "span": [
+        2021,
+        2021
+       ],
+       "document_sum": 41287.0,
+       "issued_sum": 313227.0,
+       "ratio": 7.587,
+       "per_vintage": [
+        {
+         "vintage": 2021,
+         "document": 41287.0,
+         "issued": 313227.0,
+         "ratio": 7.587
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "retired_vs_issued",
+   "title": "Retirements never exceed issuance",
+   "status": "pass",
+   "summary": "Across 3 vintages, retired volume never exceeds issued volume.",
+   "details": {}
+  },
+  {
+   "id": "methodology_matches_registry",
+   "title": "Methodology matches the registry listing",
+   "status": "pass",
+   "summary": "Document and registry both give ACM0010.",
+   "details": {
+    "registry": [
+     "ACM0010"
+    ]
+   }
+  },
+  {
+   "id": "similar_listings",
+   "title": "Similar listings in other registries or programmes",
+   "status": "pass",
+   "summary": "No project in the same country with a closely matching name.",
+   "details": {}
+  }
+ ]
+}

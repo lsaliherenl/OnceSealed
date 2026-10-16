@@ -77,6 +77,7 @@ public, not against the registry, which already knows its account holders.
 | **Methodology status** | Looks up the ICVCM decision on the project's methodology in a sourced, versioned table ([`methodology_status.json`](core/ai/methodology_status.json)). | No |
 | **Evidence extraction** | An LLM (`deepseek/deepseek-v4.1-flash` via OpenRouter) reads paragraphs selected by keyword scoring (up to 30,000 characters per principle) and returns verbatim quotes. Code finds every quote in the PDF text; quotes it cannot find are dropped. | Yes |
 | **Evidence judgement** | A decision model (TypeSafe **Jev 1.13**, a third-party model via OpenRouter) rates the verified evidence on closed questions with probabilities. It sits behind a swappable interface so other models can be compared on the same questions. | Yes |
+| **Data checks** | Reads the document's tables of yearly net emission reductions and compares them with the credits actually issued (OffsetsDB); checks that retirements never exceed issuance, that the methodology matches the registry listing, and whether a similarly named project issued credits for the same years elsewhere; and states which documents were read and which were not ([`docs/data_checks.md`](docs/data_checks.md)). | No |
 
 Five of ICVCM's ten principles can be evidenced in a project document and are scored: additionality, permanence,
 robust quantification, no double counting, social and environmental safeguards. The report is published as JSON in
@@ -113,7 +114,9 @@ How to read this, honestly:
 - **A well-written document can still be contested.** Cordillera Azul (VCS985) is among the highest signals here,
   while BeZero downgraded its rating in 2024 over its baseline deforestation rate. The tool checks whether evidence is
   *present* in the document; it cannot tell whether a baseline is inflated. External ratings are the right
-  complement.
+  complement. The data checks give a first quantitative lead on this case: credits issued for 2009-2018 are **1.72×**
+  the project description's own yearly figures (table on page 133). That alone does not prove over-crediting (the
+  monitoring and verification reports, not read yet, explain issued volumes), but no reading of the text surfaces it.
 
 All 11 reports share one `method_hash`; anchoring them on Sepolia added a second on-chain version for the four
 reports first published on 2026-10-13 (re-run with the updated methodology table; scores moved by 1-2 points,
@@ -123,12 +126,13 @@ the decision model's known run-to-run variation).
 
 | Claim | Result | Source |
 |---|---|---|
-| No serial is retired twice | 46 Foundry tests, including fuzz tests over thousands of random ranges, lots and (malicious) hints; 55 Python tests including end-to-end runs on a local chain | `contracts/test/`, `tests/` |
+| No serial is retired twice | 46 Foundry tests, including fuzz tests over thousands of random ranges, lots and (malicious) hints; 69 Python tests including end-to-end runs on a local chain | `contracts/test/`, `tests/` |
 | Retirement cost does not grow with history | Replaying all **38,382 real retirements** of VCS766 vintage 2009: a first version that scanned past retirements added ~4,800 gas per retirement and passed 36M gas at retirement **7,467**; the sorted list stays at **~211k gas** for all 38,382 (a lot retirement costs ~204k) | [summary](data/derived/scale/summary.json), [chart](docs/figures/scale_gas.png), `scripts/scale_replay.py` |
 | Lookups stay cheap | The contract's list-walking views cost ~4,400 gas per retirement (22M per call at 5,000, past the usual 50M `eth_call` cap at ~11,000), so clients use an index built from `CreditRetired` events: 1.5 s to build for 5,000 retirements, ~1 ms per lookup. Lot batches are answered by the contract in constant time | `scripts/index_benchmark.py` |
 | Real network cost (Sepolia, current gas schedule) | Deploy 15.66M gas; retire one lot 1.02M (first in a batch) / 0.83M; anchor a report 463k; register a batch 243k; attest 33k. Storage writes cost far more than on the local chain; at Sepolia's ~0.001 gwei gas price, two deployments and all demo transactions cost 0.00078 test ETH in total | [`deployments/11155111-seed.json`](deployments/11155111-seed.json) |
 | Public data has inconsistencies a contract would flag | In OffsetsDB, 11 project-vintages record more retirements than issuance (235,932 t). Replayed through the contract, 76 of 1,100 retirements are rejected. These are most likely data errors (vintage attribution, reissuance), **not proven double counting** | [`over_retirement.json`](data/derived/over_retirement.json), `scripts/over_retirement_replay.py` |
 | How much does on-chain metadata reveal? | Project + quantity single out one retirement for **88.7%** of retired tonnes. With standard lots and the operator publishing lots once per period, 36.8% (daily) to 14.5% (quarterly) of tonnes still have no other purchase to hide among | [threat model T12](docs/threat_model.md), `scripts/linkability_stats.py` |
+| Document figures vs registry records | Yearly net-reduction tables read for 9 of 11 projects (the parser finds none it can use in the other 2); 8 overlap issued vintages. Credits issued exceed the document's own figures by more than 20% over the covered years for 1 project (VCS985, 1.72×); 4 more have single vintages above it. 1 project retires more than was issued (VCS673, vintage 2017, +13,052 t); 1 shares its name and an issued vintage with another listing (VCS4150 / VCS2749, both DelAgua, Rwanda). Each flag is a lead, not a finding. Every project so far has only its project description read | [`docs/data_checks.md`](docs/data_checks.md), [`checks/`](checks/), `scripts/run_checks.py` |
 | AI quotes are real | 179 of 179 quotes in the 11 published reports were found in the PDFs; 0 dropped | [`reports/`](reports/) |
 | AI consistency, speed, cost (no labels needed) | On 177 yes/no questions over 48 excerpts from 11 projects, same answer in 3 runs: Jev 99.4%, LLM 96.0%, Turnike-JEV-4B 100% (both FP8 and BF16). Median time per excerpt: 0.8 s, 4.9 s, and 0.65 s for Turnike FP8 on a laptop RTX 4060 under WSL2 or 0.32 s for Turnike BF16 on a Colab L4 (both without its optional fast kernels; the API models include network time). Cost per 1,000 excerpts: $0.04, $0.79, $0 (local). FP8 and BF16 Turnike give the same yes/no answer on 176 of 177 questions (mean probability difference 0.014) | [`docs/ai_evaluation.md`](docs/ai_evaluation.md), `scripts/run_turnike.py` |
 | **AI accuracy** | **Not measured yet.** Two team members label the same 177 questions independently; precision, recall, F1, Cohen's kappa and Brier score are computed by `scripts/eval_metrics.py` when the labels are in | [evaluation plan](docs/evaluation_plan.md) (Turkish) |
@@ -148,6 +152,9 @@ about how often the AI is right.
 - **Privacy needs a crowd.** Lots hide amounts, but if a project has a single buyer in a period, the project and time
   still point to that buyer. Batched publication is an operating rule the contract cannot enforce. Amounts that are
   not whole lots cannot be retired privately in a lot batch.
+- **Only project descriptions have been read.** None of the 11 projects has its validation, monitoring or
+  verification reports in the assessment yet, and that is where most monitored evidence sits; reports and data
+  checks say so per project. `scripts/add_document.py` registers further documents.
 - **AI signals depend on the excerpt.** Paragraphs are chosen by keywords from documents of hundreds of pages, so
   evidence outside the selection is missed. The overall score barely separates projects (52-65 across 11). The
   methodology table covers only the methodologies of the 11 evaluation projects.
@@ -169,6 +176,7 @@ web/            Next.js front end: project reports, retire, verify (reads Sepoli
 scripts/        demo, deployment, report generation and every measurement in the table above
 tests/          pytest suite + vectors.json shared with the Foundry tests
 reports/        published quality reports
+checks/         published data checks (deterministic): document figures vs registry records
 data/           simulated batches, demo buyers, evaluation set, derived measurements
 deployments/    Sepolia deployment record and demo transactions
 docs/           threat model, anonymity statistics, AI evaluation, figures
@@ -187,7 +195,7 @@ python -m venv .venv
 .venv/Scripts/activate          # Windows; use `source .venv/bin/activate` on macOS/Linux
 python -m pip install -r requirements.txt
 python -m pip install -e . --no-deps
-python -m pytest -q             # 56 tests
+python -m pytest -q             # 69 tests
 python scripts/demo_e2e.py      # full story on a local chain: lots retired, overlap and partial lot rejected,
                                 # auditor attests, receipt verified, forged receipts fail
 (cd contracts && forge test)    # 46 contract tests
@@ -198,6 +206,8 @@ With a `.env` (copy [`.env.example`](.env.example)):
 ```bash
 uvicorn api.server:app                                     # API on a local chain (start `anvil` first)
 python scripts/assess_project.py VCS1851                   # rebuild a report: OpenRouter key + the PDF in samples/pdfs/
+python scripts/run_checks.py                               # data checks: PDFs in samples/pdfs/ + OffsetsDB snapshot, no key
+python scripts/add_document.py VCS1477 monitoring_report <pdf> --url <registry url>   # register a further document
 python scripts/deploy.py --network sepolia                 # deploy, then scripts/verify_etherscan.py, scripts/seed_sepolia.py
 ```
 
