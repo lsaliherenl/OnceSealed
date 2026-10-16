@@ -165,7 +165,7 @@ core/ai/        PDF extraction, quote verification, LLM client, decision model, 
 core/data/      OffsetsDB loading, anonymity classes, simulated issuance batches
 core/service.py end-to-end flows: anchor a report, retire lots, audit, verify a receipt
 api/            FastAPI layer (public reads; operator and auditor actions need a role token)
-web/            Next.js front end (in progress)
+web/            Next.js front end: project reports, retire, verify (reads Sepolia in the browser), audit
 scripts/        demo, deployment, report generation and every measurement in the table above
 tests/          pytest suite + vectors.json shared with the Foundry tests
 reports/        published quality reports
@@ -187,7 +187,7 @@ python -m venv .venv
 .venv/Scripts/activate          # Windows; use `source .venv/bin/activate` on macOS/Linux
 python -m pip install -r requirements.txt
 python -m pip install -e . --no-deps
-python -m pytest -q             # 55 tests
+python -m pytest -q             # 56 tests
 python scripts/demo_e2e.py      # full story on a local chain: lots retired, overlap and partial lot rejected,
                                 # auditor attests, receipt verified, forged receipts fail
 (cd contracts && forge test)    # 46 contract tests
@@ -200,6 +200,26 @@ uvicorn api.server:app                                     # API on a local chai
 python scripts/assess_project.py VCS1851                   # rebuild a report: OpenRouter key + the PDF in samples/pdfs/
 python scripts/deploy.py --network sepolia                 # deploy, then scripts/verify_etherscan.py, scripts/seed_sepolia.py
 ```
+
+### Web app
+
+Requirements: Node.js 20.9+ (tested on 24). The project and verification pages need nothing else: the reports are
+built into the pages from `reports/` (`python scripts/export_web_data.py` refreshes `web/src/data/site.json`), and the
+verification page reads the Sepolia contract from the browser through a public RPC and checks receipts there.
+
+```bash
+cd web && npm ci && npm run build && npm start       # http://localhost:3000
+```
+
+The retire and audit screens call the API, which holds the demo operator and auditor keys
+(`.env` with the Sepolia keys and `OPERATOR_API_TOKEN` / `AUDITOR_API_TOKEN` from `scripts/gen_api_tokens.py`):
+
+```bash
+ONCESEALED_NETWORK=sepolia uvicorn api.server:app     # in the repository root, next to the web server
+```
+
+The web server adds the role tokens on the server side, so they never reach the browser; that also means anyone who
+can open it can act as the operator and the auditor. Run it locally for the demo and do not expose it publicly.
 
 ## Data sources and attribution
 
@@ -223,7 +243,7 @@ python scripts/deploy.py --network sepolia                 # deploy, then script
 - [x] Privacy layer: commitments, sealed-box audit vault, receipt bundles, Python and Solidity test vectors
 - [x] Scale, privacy and data-quality measurements on real OffsetsDB histories
 - [x] FastAPI layer
-- [ ] Web app: public verification (reads the chain directly in the browser), buyer, auditor and project views
+- [x] Web app: project reports, operator and auditor screens, public verification that reads the chain in the browser
 - [ ] Human-labelled evaluation of the AI layer; compare decision models on it
 - [x] Reports for all 11 evaluation projects
 - [ ] Demo video

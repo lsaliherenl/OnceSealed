@@ -1,0 +1,2779 @@
+{
+ "generated_by": "scripts/export_web_data.py",
+ "network": {
+  "name": "Sepolia",
+  "chain_id": 11155111,
+  "contract": "0xBb88057576b92Ef27753A6b2a4Df83bE444F1308",
+  "deploy_tx": "0x2d2e6a24314251a1e5d6c8e2e0dc8d9de448ca332f1558f4fac2d3917cfd4c49",
+  "deploy_block": 11921118,
+  "explorer": "https://sepolia.etherscan.io"
+ },
+ "methodology_statuses": {
+  "approved_with_conditions": "ICVCM approved the methodology (or these versions) for the CCP label; project-level conditions apply.",
+  "not_approved": "ICVCM assessed the methodology and decided it does not meet the CCPs.",
+  "not_ccp_approved": "The methodology has no CCP approval (not assessed or superseded); a successor methodology may be approved.",
+  "under_assessment": "Submitted to ICVCM; no decision published yet.",
+  "unknown": "No ICVCM decision found for this methodology in the sources checked (it may not have been submitted)."
+ },
+ "methodology_table_version": "2026-10-15",
+ "projects": [
+  {
+   "id": "VCS673",
+   "name": "Natural High Forest Rehabilitation Project on degraded land of Kibale National Park",
+   "country": "Uganda",
+   "category": "Natural forest rehabilitation (AR-ACM0001)",
+   "doc_type": "VCS Project Description",
+   "registry_url": "https://registry.verra.org/app/projectDetail/VCS/673",
+   "methodology": "AR-ACM0001",
+   "methodology_version": "5.0.0",
+   "reversal_risk": true,
+   "anchors": [
+    {
+     "version": 1,
+     "tx": "0x7efb6c6f775cda184d2392a7a985ef9c23f90cbef0e7ffa6ae3725f284d7605f",
+     "block": 11921951,
+     "report_hash": "0x3fc8a5dd7b09fa0fd16d10127ca9410c53d5849630a191a4ab33adbaf9d9a61a"
+    }
+   ],
+   "batches": [],
+   "report": {
+    "hash": "0x3fc8a5dd7b09fa0fd16d10127ca9410c53d5849630a191a4ab33adbaf9d9a61a",
+    "generated_at": "2026-10-15T17:24:59+00:00",
+    "document": {
+     "file_name": "PROJ_DESC_673_05SEP2011.pdf",
+     "sha256": "cbfb2a9fd2ac091ff985c80c5ab8cec857adc699e396425920653318f096e1b1",
+     "pages": 77
+    },
+    "method": {
+     "report_schema": "report-v1",
+     "prompt_version": "v1",
+     "question_set_version": "qs-v1",
+     "llm_model": "deepseek/deepseek-v4.1-flash",
+     "decision_model": "typesafe/jev-1.13",
+     "decision_input": "verified_quotes",
+     "methodology_table_version": "2026-10-15",
+     "pdf_extractor": "pymupdf 1.28.2"
+    },
+    "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+    "methodology_status": {
+     "code": "AR-ACM0001",
+     "version": "5.0.0",
+     "status": "not_ccp_approved",
+     "summary": "No ICVCM decision found for this CDM afforestation methodology. Its CDM successor AR-ACM0003 was inactivated in the VCS Program in September 2023 in favour of VM0047, which ICVCM approved; ICVCM also approved ACR's afforestation methodology (v1.0-1.2, natural forests) and Isometric's reforestation protocol.",
+     "sources": [
+      "https://verra.org/methodologies/ar-acm0003-afforestation-and-reforestation-of-lands-except-wetlands/",
+      "https://verra.org/icvcm-approves-updated-version-of-verras-afforestation-reforestation-and-revegetation-methodology/",
+      "https://icvcm.org/integrity-council-approves-second-afforestation-reforestation-and-revegetation-methodology/",
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker"
+     ],
+     "table_version": "2026-10-15"
+    },
+    "overall": 65,
+    "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+    "principles": [
+     {
+      "principle": "additionality",
+      "status": "assertion_only",
+      "score": 44,
+      "rationale": "The document applies the CDM combined baseline/additionality tool, identifies three alternative land-use scenarios, selects a conservative baseline, and presents detailed investment, institutional, technological and first-of-a-kind barrier analysis plus a common-practice review. It states investment analysis was not performed because the chosen baseline is most conservative, so no IRR-versus-benchmark test is shown.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "Without the GHG allowance sales, the project would not be economically attractive, and would face significant barriers.",
+        "page": 37,
+        "verification": "exact"
+       },
+       {
+        "text": "However, alternative land use 4 faces the following barriers, which prohibit it from getting implemented in the absence of income derived from the sale of carbon credits derived from the Project Activity.",
+        "page": 39,
+        "verification": "exact"
+       },
+       {
+        "text": "Was not carried out for this ARR project activity because the baseline scenario identified in sub-step 2c above allows for the highest baseline GHG removals by sinks.",
+        "page": 42,
+        "verification": "exact"
+       },
+       {
+        "text": "eliminated from consideration because it is prevented by all the barriers outlined in sub-step 2a. On the other hand, continuation of pre-project scenarios 1-3 are not prevented by any of the barriers listed above in sub-step 2a.",
+        "page": 41,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "permanence",
+      "status": "strong_evidence",
+      "score": 84,
+      "rationale": "The document reports a non-permanence risk assessment using the VCS AFOLU Non-Permanence Risk Tool, a low-risk rating, an 8.5% buffer requirement, and a 10% VCS buffer reserve. It also describes risk identification systems, targets, procedures, assigned responsibilities, internal auditing, reviews, training, and UWA control over national park land. This is specific substantive evidence for permanence.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "Non-permanence risk assessment was carried out using the VCS’  “AFOLU Non-Permanence Risk Tool” version 3 of 8 March 2011.  According to this tool, the project activity was rated at a low risk after yielding a 8.5% of buffer requirement.",
+        "page": 25,
+        "verification": "alnum"
+       },
+       {
+        "text": "The project has a system in place to identify risks and established targets to reduce any non-permanent risks. Procedures have been developed and responsibilities are well assigned with internal auditing, reviews and training in place.",
+        "page": 25,
+        "verification": "exact"
+       },
+       {
+        "text": "Additionally, the project will hold a 10%  VCS buffer in reserve for use in case of any loss of permanence.",
+        "page": 25,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "robust_quantification",
+      "status": "strong_evidence",
+      "score": 84,
+      "rationale": "Document specifies conservative baseline carbon stock (5.2 Mg/ha), omits dead wood/litter/SOC conservatively, uses permanent plots with ±10% precision at 90% confidence, and applies SOP/QA-QC. No explicit leakage assessment appears in excerpts.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The dead wood carbon pool increases less in the baseline than in the project scenario, and is therefore conservatively omitted from carbon accounting",
+        "page": 36,
+        "verification": "exact"
+       },
+       {
+        "text": "However, the more conservative figure of 5.2 Mg/ha, belonging to the stratum ‘banana plantation’, is adopted as the baseline carbon stock to be more conservative.",
+        "page": 41,
+        "verification": "exact"
+       },
+       {
+        "text": "The number of permanent sampling plots and the targeted precision level for the biomass estimation is ± 10% of the mean at a 90% confidence level",
+        "page": 58,
+        "verification": "exact"
+       },
+       {
+        "text": "Carbon monitoring campaigns are carried out following monitoring steps in the Standard Operating Procedures (SOP) and Standard of Quality Control and Quality Assurance developed specifically for Kibale (Annex I and II) by the Czech Republic based Institute of Forest Ecosystem Research (IFER).",
+        "page": 59,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "no_double_counting",
+      "status": "assertion_only",
+      "score": 33,
+      "rationale": "The document addresses other environmental credits and other GHG programs only by marking them 'NOT APPLICABLE' without explanation. It does not provide details on double issuance, corresponding adjustments, registries, or how reductions are counted only once. Evidence is therefore asserted rather than substantiated.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "1.13 Demonstration that the project has not created another form of environmental credit (for example renewable energy certificates).",
+        "page": 25,
+        "verification": "exact"
+       },
+       {
+        "text": "NOT APPLICABLE. 1.14 Project rejected under other GHG programs (if applicable): NOT APPLICABLE.",
+        "page": 26,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "safeguards",
+      "status": "partial_evidence",
+      "score": 74,
+      "rationale": "Document cites an EIS report, legal EIA requirement, community consultation records, and responses to stakeholder comments. It does not show FPIC, grievance mechanism, or gender-specific measures. Evidence is specific for environmental assessment and consultation, but incomplete on some safeguard elements.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "Detailed documentation on the analysis of environmental impacts are contained in the “Environmental Impact Study (EIS) report for the future operations of the UWA-Face Project” prepared by Environmental Monitoring Associates (EMA) Ltd in 1999.",
+        "page": 69,
+        "verification": "exact"
+       },
+       {
+        "text": "Community consultation was carried out at Kibale and all groups/individuals interviewed (e.g. the Nyabweya Parish Community, the Bigodi Women’s Group, the Mugume Clinic Nurse, Nursery workers) were well aware of the benefits of the forest, and how they could access these benefits.",
+        "page": 70,
+        "verification": "exact"
+       },
+       {
+        "text": "Comments from the local stakeholders at the St. Joseph’s Inn where taken into account by proposing training of target groups including the task force members of Kibale National Park, formation of vermin control units and units at the district level to help address the problem.",
+        "page": 72,
+        "verification": "exact"
+       },
+       {
+        "text": "Projects which must undergo the EIA process include forestry related activities such as reforestation and afforestation.",
+        "page": 38,
+        "verification": "exact_relocated"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "VCS985",
+   "name": "Cordillera Azul National Park REDD Project",
+   "country": "Peru",
+   "category": "REDD+ (VM0007)",
+   "doc_type": "VCS Project Description",
+   "registry_url": "https://registry.verra.org/app/projectDetail/VCS/985",
+   "methodology": "VM0007",
+   "methodology_version": "1.3",
+   "reversal_risk": true,
+   "anchors": [
+    {
+     "version": 1,
+     "tx": "0x4b29c3337a4e06dc4a53aa55b644b492e06603fed6ad4ea00e5eeda18a50ba8d",
+     "block": 11921953,
+     "report_hash": "0x9b9030e58dd0f07edd39b4e2aabc4ea585b8e5aaad4aadeca51076d1c652e42c"
+    }
+   ],
+   "batches": [],
+   "report": {
+    "hash": "0x9b9030e58dd0f07edd39b4e2aabc4ea585b8e5aaad4aadeca51076d1c652e42c",
+    "generated_at": "2026-10-15T17:27:25+00:00",
+    "document": {
+     "file_name": "PROJ_DESC_985_20DEC2012.pdf",
+     "sha256": "dac2ea6448372916437480321cc7de2719e770b28f22e6ce8a1ef15ef3504487",
+     "pages": 198
+    },
+    "method": {
+     "report_schema": "report-v1",
+     "prompt_version": "v1",
+     "question_set_version": "qs-v1",
+     "llm_model": "deepseek/deepseek-v4.1-flash",
+     "decision_model": "typesafe/jev-1.13",
+     "decision_input": "verified_quotes",
+     "methodology_table_version": "2026-10-15",
+     "pdf_extractor": "pymupdf 1.28.2"
+    },
+    "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+    "methodology_status": {
+     "code": "VM0007",
+     "version": "1.3",
+     "status": "not_ccp_approved",
+     "summary": "Verra excluded its older REDD+ methodologies (including VM0007) from ICVCM assessment; their credits cannot carry the CCP label. ICVCM approved the successor VM0048 v1.0 with conditions in November 2024.",
+     "sources": [
+      "https://icvcm.org/integrity-council-approves-three-redd-methodologies/",
+      "https://www.jonesday.com/en/insights/2025/03/the-icvcm-and-redd-standards-implications-for-voluntary-carbon-markets"
+     ],
+     "table_version": "2026-10-15"
+    },
+    "overall": 64,
+    "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+    "principles": [
+     {
+      "principle": "additionality",
+      "status": "partial_evidence",
+      "score": 57,
+      "rationale": "The document applies the VT0001 additionality tool, presenting a simple cost analysis showing no revenue besides carbon credits, a common practice assessment, elimination of alternative land-use scenarios, and a regulatory surplus statement. It asserts government would not have funded or designated the park without CIMA. Financial statements and detailed figures are promised to the validator rather than shown, so some support remains asserted.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "This project generates no financial or economic benefits other than VCS related income.  Therefore, Option 1, a simple cost analysis, is the appropriate analysis method.",
+        "page": 79,
+        "verification": "exact"
+       },
+       {
+        "text": "No additional sources of revenue exist for the project. Given the specific conditions under which PNCAZ was designated a national park, there is no established government funding for management of the park and protection of its intact forests.",
+        "page": 79,
+        "verification": "exact"
+       },
+       {
+        "text": "CIMA’s agreement to support the management of the park was a completely voluntary action; there was no regulatory obligation.",
+        "page": 60,
+        "verification": "exact"
+       },
+       {
+        "text": "The investment analysis in Section 2.5, Additionality, demonstrates that Alternative 5 is much less financially attractive than Alternative 1, which indicates that Alternative 1 is the most likely baseline scenario",
+        "page": 75,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "permanence",
+      "status": "partial_evidence",
+      "score": 65,
+      "rationale": "The document states a VCS AFOLU Non-Permanence Risk Tool analysis over 100 years, reports an overall risk rating of 3 and use of 10, references Appendix 3, and lists additional risks with mitigation strategies. It does not show buffer pool contribution details in these excerpts.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The risk analysis has been conducted in accordance with the Verified Carbon Standard, AFOLU Non-Permanence Risk Tool Version 3.1 dated February 1, 2012 (VCS Non-Permanence Tool).  Risks were assessed over a period of 100 years in accordance with the Tool’s requirements.",
+        "page": 62,
+        "verification": "alnum"
+       },
+       {
+        "text": "The Overall Risk Rating is 3.  Per the requirements of the tool, the project will use 10 for its risk rating since that is the lowest rating allowed.",
+        "page": 62,
+        "verification": "exact"
+       },
+       {
+        "text": "The Non-Permanence Risk Report details the analysis and is included in Appendix 3.",
+        "page": 62,
+        "verification": "exact"
+       },
+       {
+        "text": "Additional risks to the project not included in the VCS risk assessment include the following issues.  CIMA has worked and will continue to work actively to mitigate these potential threats as detailed below each risk.",
+        "page": 62,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "robust_quantification",
+      "status": "partial_evidence",
+      "score": 82,
+      "rationale": "Excerpts show a quantified leakage factor, monitoring of forest cover change, carbon stock estimates from inventory, and conservative assumptions. However, detailed baseline calculations, emission factors, uncertainty treatment, and QA/QC procedures are mostly referenced in the table of contents rather than shown in the provided excerpts.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "For ex ante purposes, a leakage factor of 20% is applied, i.e. 20% of deforestation caused by local agents is shifted outside of the project area due the project activity.",
+        "page": 123,
+        "verification": "exact"
+       },
+       {
+        "text": "Stock estimates from the initial field inventory completed in 2009, are valid for 10 years (per VM0007), minimally through 2018.",
+        "page": 152,
+        "verification": "exact"
+       },
+       {
+        "text": "Activity-shifting leakage in the leakage belt will be monitored by tracking forest cover change in the leakage belt (ADefLB,u,i,t), using classified satellite imagery produced following the same procedures outlined above in Section 4.2.1, referencing the 2008 forest cover benchmark map for the leakage belt (Figure 4.3).",
+        "page": 163,
+        "verification": "exact"
+       },
+       {
+        "text": "To be conservative, the financial statements assumed that only 80% of the project’s carbon credits would be available for sale, that the leakage would be 20% and that the risk rating would also be 20%.",
+        "page": 81,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "no_double_counting",
+      "status": "assertion_only",
+      "score": 36,
+      "rationale": "The excerpts include specific statements that the project seeks registration only under VCS and CCB, will not generate other environmental credits, and is not registered under the CDM or other carbon trading schemes. They also describe monitoring of land exclusion from other schemes. However, they do not show corresponding adjustments or host-country authorization details.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "This project is only seeking registration under the VCS and CCB programs.  CCB does not issue carbon credits and the project is not seeking to register credits with any other program.",
+        "page": 61,
+        "verification": "exact"
+       },
+       {
+        "text": "This project has not and will not seek to generate any other form of environmental credit.",
+        "page": 61,
+        "verification": "exact"
+       },
+       {
+        "text": "No land areas within the project area are currently registered under the CDM or any other carbon trading scheme (neither voluntary nor compliance-based).",
+        "page": 71,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "safeguards",
+      "status": "partial_evidence",
+      "score": 71,
+      "rationale": "Document shows community consultation, complaint handling, biodiversity monitoring, and social impact assessment via ICC/ROtI. It does not show explicit FPIC, labour safeguards, or a standalone environmental impact assessment. Evidence is substantive but incomplete for all safeguard sub-elements.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "If a community member has a suggestion, complaint or question that the technician cannot immediately settle, the item will be handled in accordance with the process outlined in the next section.",
+        "page": 190,
+        "verification": "exact"
+       },
+       {
+        "text": "Following the community meetings for discussing the design and needs for park management and avoiding deforestation, specific activities and an implementation plan will be developed, with input and feedback from the communities.",
+        "page": 22,
+        "verification": "exact"
+       },
+       {
+        "text": "At the landscape level, CIMA analyze annually with satellite images (and aerial overflights when feasible) to confirm that there is no deforestation inside the park. Deforestation in the park is the best indicator readily available to the project, of any negative impact to biodiversity.",
+        "page": 180,
+        "verification": "exact"
+       },
+       {
+        "text": "To complement the ICC and assess project impact on improvements to the quality of life of off-site communities, CIMA measures specific indicators drawn from the sustainable-livelihoods framework.",
+        "page": 185,
+        "verification": "exact"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "VCS1851",
+   "name": "Renewable Solar Power Project by ReNew Solar Power Private Limited",
+   "country": "India",
+   "category": "Grid-connected solar (ACM0002)",
+   "doc_type": "VCS Project Description (joint PD/MR)",
+   "registry_url": "https://registry.verra.org/app/projectDetail/VCS/1851",
+   "methodology": "ACM0002",
+   "methodology_version": "19",
+   "reversal_risk": false,
+   "anchors": [
+    {
+     "version": 1,
+     "tx": "0x88f9ba58c18e37f5625500566bc167b5016a1396d3b1d6711a1484d405d9fff7",
+     "block": 11921136,
+     "report_hash": "0x3b4fc978f258cd081cbf9107d6605ac6b313f57728ab9320e0537e72d9cb533e"
+    },
+    {
+     "version": 2,
+     "tx": "0xaf1d182c9948138cd2cd5c62bf82f23000d630382c089f4f7bbea6a45930ff93",
+     "block": 11921941,
+     "report_hash": "0x93879f7110b5f120a1a49606dbc5c7607c85292298dcf2b4e2bcfb111a8c70f3"
+    }
+   ],
+   "batches": [
+    {
+     "key": "VCS1851|2017|001",
+     "batch_id": "0x25843250e5d6851720c88797518a497d32600154a05fc5794ab381482d6664a0",
+     "vintage": 2017,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 562006,
+     "quantity": 562006,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2018|001",
+     "batch_id": "0xc091836c8e1c597e883bc31ccf9dd22e36ee0d14f188005c6b10778f5c2b8bd3",
+     "vintage": 2018,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 1422028,
+     "quantity": 1422028,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2018|002",
+     "batch_id": "0x3127bbae981dcf1513bdd1e53b7306c7b92cf33f3244e473f3e4c7bc9efb9384",
+     "vintage": 2018,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 309222,
+     "quantity": 309222,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2019|001",
+     "batch_id": "0x8b2bf233a835eedb1b1a10dbd790fdf708c9056a7af69f09bafe3a4cd326c59d",
+     "vintage": 2019,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 1725763,
+     "quantity": 1725763,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2019|002",
+     "batch_id": "0xb99d923526b3d5d16f003ec8ca6004397c5abb568bcb54c9a1b7eb44f4f3fb43",
+     "vintage": 2019,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 40386,
+     "quantity": 40386,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2020|001",
+     "batch_id": "0xd187c39fd480a36e305b343b6752aee170ef710076410ebb65ba7f78054a9db7",
+     "vintage": 2020,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 1709793,
+     "quantity": 1709793,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2021|001",
+     "batch_id": "0xddd8849f0b6cb714250e1de5494997bba1b894302e90c2dbafee755ca97d4f93",
+     "vintage": 2021,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 944387,
+     "quantity": 944387,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2021|002",
+     "batch_id": "0x02d41369f96270b12fd5495716e1c6ad0723d00eb5ec6e2c92af2478ad1e0bcb",
+     "vintage": 2021,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 746718,
+     "quantity": 746718,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2022|001",
+     "batch_id": "0xc968d43739edc18f132bc8110b24156aeb97d645ec2ce43e5140d78238b3f3d1",
+     "vintage": 2022,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 944966,
+     "quantity": 944966,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2022|002",
+     "batch_id": "0xe37d966ed593ea8d34353b9c94ade8b9c825d31e658563325f45b18a82d9d8a1",
+     "vintage": 2022,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 786749,
+     "quantity": 786749,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2023|001",
+     "batch_id": "0x23a547e4418ea1b1ceb4cc236c3eb2783df853ecdd7d49fb3fa24c595b1ec4b3",
+     "vintage": 2023,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 489201,
+     "quantity": 489201,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2023|002",
+     "batch_id": "0x9a961d6cc6c3b2d6c3f3595b1b5c68a4596ec677ebb9d7b346ff0dda3125f690",
+     "vintage": 2023,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 491900,
+     "quantity": 491900,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2023|003",
+     "batch_id": "0xc1e6c0b9c45c7fa03daa17e16422eedd864b85d79a8df5e5bf0d111f5e0940cf",
+     "vintage": 2023,
+     "batch_no": 3,
+     "first_serial": 1,
+     "last_serial": 782757,
+     "quantity": 782757,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2024|001",
+     "batch_id": "0x730ea7714895a06fb6c63c95835240d5625b72ea1b6960bcf6af8cc81cbd5f21",
+     "vintage": 2024,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 454139,
+     "quantity": 454139,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2024|002",
+     "batch_id": "0xa0baae9c0c4f354b69cde2cb0e9dde49234cd92a17cb2a8651a8313fa602b3b9",
+     "vintage": 2024,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 1182942,
+     "quantity": 1182942,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1851|2025|001",
+     "batch_id": "0x267173d700452932449317760ffa5d406f16b95aa853c3f0413da1a62505541c",
+     "vintage": 2025,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 148730,
+     "quantity": 148730,
+     "lot_size": 1000
+    }
+   ],
+   "report": {
+    "hash": "0x93879f7110b5f120a1a49606dbc5c7607c85292298dcf2b4e2bcfb111a8c70f3",
+    "generated_at": "2026-10-15T17:31:07+00:00",
+    "document": {
+     "file_name": "VCS Joint PDMR_Renew Power_V02_29.01.19.pdf",
+     "sha256": "ec4a5b85922c7a42435d783dbecdbe0c31b534b1870ebf61eae0b9f6bdfe8fc3",
+     "pages": 128
+    },
+    "method": {
+     "report_schema": "report-v1",
+     "prompt_version": "v1",
+     "question_set_version": "qs-v1",
+     "llm_model": "deepseek/deepseek-v4.1-flash",
+     "decision_model": "typesafe/jev-1.13",
+     "decision_input": "verified_quotes",
+     "methodology_table_version": "2026-10-15",
+     "pdf_extractor": "pymupdf 1.28.2"
+    },
+    "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+    "methodology_status": {
+     "code": "ACM0002",
+     "version": "19",
+     "status": "not_approved",
+     "summary": "In August 2024 ICVCM rejected current grid-connected renewable energy methodologies because their additionality tests were insufficiently rigorous.",
+     "sources": [
+      "https://icvcm.org/carbon-credits-from-current-renewable-energy-methodologies-will-not-receive-high-integrity-ccp-label/",
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker"
+     ],
+     "table_version": "2026-10-15"
+    },
+    "overall": 62,
+    "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+    "principles": [
+     {
+      "principle": "additionality",
+      "status": "partial_evidence",
+      "score": 59,
+      "rationale": "The document presents a benchmark investment analysis using post-tax equity IRR against a 15.10% benchmark, concluding IRR is below benchmark and sensitivity confirms additionality. Barrier analysis is not used and common practice analysis is not shown. Baseline scenario is defined.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "Based on result of IRR excel spreadsheets, equity IRR is less than Benchmark. \nThis substantiates that the investment is not financially attractive (Equity IRR for the project \nactivity is less than the Benchmark).",
+        "page": 46,
+        "verification": "exact"
+       },
+       {
+        "text": "As per Investment Analysis tool, Required/expected returns on equity are appropriate benchmarks for an equity IRR.",
+        "page": 32,
+        "verification": "exact"
+       },
+       {
+        "text": "The results of sensitivity analysis show that even with a variation of +10% & -10% in project cost, O&M cost, PLF and Tariff Rate Equity IRR is significantly lower than the benchmark.",
+        "page": 46,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": []
+     },
+     {
+      "principle": "robust_quantification",
+      "status": "partial_evidence",
+      "score": 75,
+      "rationale": "Document specifies baseline emissions formula, uses CEA database for combined margin EF, states project emissions zero for solar, and describes metering QA/QC with sealed utility meters and calibration. Leakage and uncertainty treatment are not detailed in excerpts.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "Baseline emissions include only CO2 emissions from electricity generation in fossil fuel fired power plants that are displaced due to the project activity.",
+        "page": 49,
+        "verification": "exact"
+       },
+       {
+        "text": "CO2 Baseline Database for the Indian Power Sector, Version 13, June 201863 published by Central Electricity Authority (CEA), Government of India has been used for the calculation of emission reduction.",
+        "page": 50,
+        "verification": "exact"
+       },
+       {
+        "text": "As the project activity is the installation of a new grid-connected Solar Power plant and does not involve any project emissions from fossil fuel, operation of dry, flash steam or binary geothermal power plants, and from water reservoirs of hydro power plants.",
+        "page": 54,
+        "verification": "exact"
+       },
+       {
+        "text": "The meters is approved, tested & sealed by the State Utility. The meters are in the custody of State Utility.",
+        "page": 57,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "no_double_counting",
+      "status": "partial_evidence",
+      "score": 61,
+      "rationale": "The document makes specific declarations addressing double counting: no use for emissions trading compliance, no other GHG-related environmental credit, no REC benefits, and no registration or registration-seeking under other GHG programs. It states the project seeks registration only in VCS. No corresponding adjustment discussion appears, but the excerpts directly address the principle.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "Net GHG emission reductions or removals generated by the Project will not be used for compliance with an emissions trading program or to meet binding limits on GHG emissions in any Emission Trading program or other binding limits.",
+        "page": 21,
+        "verification": "exact"
+       },
+       {
+        "text": "The Project has no intend to generate any other form of GHG-related environmental credit for GHG emission reductions or removals claimed under the VCS Program.",
+        "page": 21,
+        "verification": "exact"
+       },
+       {
+        "text": "However it can be crosschecked that PP is not claiming REC benefits, the same can be verified with the REC accreditation body of India31.",
+        "page": 21,
+        "verification": "exact"
+       },
+       {
+        "text": "The project has neither been registered nor seeking registration under any other GHG programs. The project is seeking registration only in VCS program.",
+        "page": 22,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "safeguards",
+      "status": "assertion_only",
+      "score": 49,
+      "rationale": "The table of contents lists safeguards sections (No Net Harm, Environmental Impact, Local Stakeholder Consultation, Public Comments), but excerpts only contain substance for stakeholder consultation: meetings held, presentation of social/environmental/economic benefits, and minutes submitted to the DOE. No content on risk assessment or mitigation, environmental impact assessment, biodiversity, grievance mechanisms, FPIC, indigenous peoples, labour or gender appears in the excerpts.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The details of the Stakeholder Meetings are as follows:",
+        "page": 65,
+        "verification": "exact"
+       },
+       {
+        "text": "In the introductory speech, the representatives of ReNew Solar Power Private Limited (Project Investor), welcomed the gathering and given a brief about the climate mitigation project activity.",
+        "page": 67,
+        "verification": "exact"
+       },
+       {
+        "text": "The representative of project participant explained Technical aspects of project to stakeholders. He also explained about social, environmental & economical benefits of the project.",
+        "page": 67,
+        "verification": "exact"
+       },
+       {
+        "text": "The Minutes of meeting with commenting sheet from LSH, invitation letter receipt copy are submitted to the DOE.",
+        "page": 67,
+        "verification": "exact"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "VCS2609",
+   "name": "Kuamut Rainforest Conservation Project",
+   "country": "Malaysia",
+   "category": "Improved forest management (VM0010)",
+   "doc_type": "VCS Project Description",
+   "registry_url": "https://registry.verra.org/app/projectDetail/VCS/2609",
+   "methodology": "VM0010",
+   "methodology_version": "1.4",
+   "reversal_risk": true,
+   "anchors": [
+    {
+     "version": 1,
+     "tx": "0x810b0a6aa67e130b3a470b7245b27d0ea937647af0e2f154275b5204a84fb38e",
+     "block": 11921945,
+     "report_hash": "0x326c6819e11e2fbed5bf089726c247082f5af6c49bec833376a40c08c3fd1880"
+    }
+   ],
+   "batches": [],
+   "report": {
+    "hash": "0x326c6819e11e2fbed5bf089726c247082f5af6c49bec833376a40c08c3fd1880",
+    "generated_at": "2026-10-15T17:23:28+00:00",
+    "document": {
+     "file_name": "PROJ_DESC_2609_07032023.pdf",
+     "sha256": "0967d5670ec19d4b0190194d57022f6520836359874691613a48d36034543a2e",
+     "pages": 225
+    },
+    "method": {
+     "report_schema": "report-v1",
+     "prompt_version": "v1",
+     "question_set_version": "qs-v1",
+     "llm_model": "deepseek/deepseek-v4.1-flash",
+     "decision_model": "typesafe/jev-1.13",
+     "decision_input": "verified_quotes",
+     "methodology_table_version": "2026-10-15",
+     "pdf_extractor": "pymupdf 1.28.2"
+    },
+    "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+    "methodology_status": {
+     "code": "VM0010",
+     "version": "1.4",
+     "status": "under_assessment",
+     "summary": "VM0010 v1.4 (improved forest management: conversion from logged to protected forest) is listed as under ICVCM assessment with no decision published (Calyx tracker, May 2026). ICVCM has approved other IFM methodologies, e.g. Verra VM0045 v1.2 (August 2025). Earlier VM0010 versions are not covered.",
+     "sources": [
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker",
+      "https://icvcm.org/integrity-council-approves-biochar-amp-improved-forest-management-methodologies/",
+      "https://verra.org/methodologies/vm0010-methodology-for-improved-forest-management-conversion-from-logged-to-protected-forest-v1-4/"
+     ],
+     "table_version": "2026-10-15"
+    },
+    "overall": 61,
+    "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+    "principles": [
+     {
+      "principle": "additionality",
+      "status": "partial_evidence",
+      "score": 52,
+      "rationale": "The document applies VT0001, identifies a most-likely baseline scenario, and reports barrier and common practice analyses. It states the protected-forest scenario faces financial barriers and that the project activity is not common practice and is additional. No detailed IRR benchmark appears in the excerpts, but the additionality evidence is substantive.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "Scenario v is a scenario where the project activity of converting the area to a protected forest would be performed without being registered as the VCS AFOLU project. This scenario faces financial barriers.",
+        "page": 81,
+        "verification": "exact"
+       },
+       {
+        "text": "There are no barriers preventing this scenario from occurring and therefore scenario iv. (combination of Natural Forest Management and the Mosaic Planting Approach) is considered as the most likely baseline scenario for this project.",
+        "page": 82,
+        "verification": "exact"
+       },
+       {
+        "text": "Other formerly Class II Forest Reserves (e.g. Ulu Segama and Malua) have primarily been protected because of external financial incentives; Therefore the outcome of the common practice analysis is that the project activity, without the prospect of the sale of GHG credits, is not common practice.",
+        "page": 112,
+        "verification": "exact"
+       },
+       {
+        "text": "Following the steps above, it is concluded that the proposed VCS AFOLU project activity is not the baseline scenario and, hence, it is additional",
+        "page": 112,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "permanence",
+      "status": "partial_evidence",
+      "score": 65,
+      "rationale": "The document applies the VCS AFOLU Non-Permanence Risk Tool, reports an ex-ante non-permanence risk rating of 10, and states credits will be withheld in the VCS AFOLU pooled buffer account. It identifies natural and human-induced reversal risks and describes monitoring for illegal logging and fire. The full risk assessment is referenced as annexed rather than reproduced, but the excerpts show specific risk identification and management measures.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "An ex-ante estimation of the risks has been performed using the VCS AFOLU Non-Permanence Risk Tool. The assessment is annexed to this PD and shows that the non-permanence risk rating for this project is 10 which is the minimum risks rating to be applied according to the tool.",
+        "page": 161,
+        "verification": "exact"
+       },
+       {
+        "text": "Applying this to the numbers in Table 32 gives the following ex-ante estimates of the number of credits to be withheld in VCS AFOLU pooled buffer account",
+        "page": 161,
+        "verification": "exact"
+       },
+       {
+        "text": "Natural risks to the climate change benefits of the project are considered low, both in the short and long-term. Such risks, including natural fires, pests & disease, extreme weather, geological events and other natural risks are considered in detail in the non-permanence risk assessment.",
+        "page": 38,
+        "verification": "alnum"
+       },
+       {
+        "text": "In addition, for illegal logging, a field team from Rakyat Berjaya Sdn. Bhd will monitor the project area on a regular basis.",
+        "page": 174,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "robust_quantification",
+      "status": "partial_evidence",
+      "score": 78,
+      "rationale": "The excerpts show an explicit conservative baseline assumption (VEX,INF set to zero), a market-leakage estimate using baseline harvest emissions multiplied by a leakage factor, an uncertainty estimate of 0.262% below the 15% threshold requiring no deduction, and QA/QC review with SOPs. These are specific elements relevant to robust and conservative quantification, though not every calculation step is shown.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "This parameter was therefore considered to be zero in the calculations. This is a conservative assumption since it underestimates the timber extracted, and therefore the carbon removed, in the baseline.",
+        "page": 115,
+        "verification": "exact"
+       },
+       {
+        "text": "When it comes to leakage due to market effects, this was estimated as the net emissions from planned timber harvest activities in the baseline scenario multiplied by an appropriate leakage factor:",
+        "page": 150,
+        "verification": "exact"
+       },
+       {
+        "text": "The resulting uncertainty if 0.262% is smaller than the 15% threshold indicated in the methodology, therefore no deduction for uncertainty is required.",
+        "page": 161,
+        "verification": "exact"
+       },
+       {
+        "text": "All data collected, recorded, stored and reported are subject to review and approval by team leaders and/or project managers with reference to written SOPs covering each level of data management (see Figure 38).",
+        "page": 175,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "no_double_counting",
+      "status": "assertion_only",
+      "score": 36,
+      "rationale": "The document states the project is not registered under emissions trading or other credit programs, will not claim the same reductions elsewhere, is not subject to binding limits, and has not been rejected by other GHG programs. It does not mention corresponding adjustments. These are specific declarations addressing double counting.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The Kuamut Rainforest Conservation Project has not been registered under any emissions trading \nprograms or any program involving environmental or social credits. The project will not claim credit for the \nsame GHG emission reduction under another program.",
+        "page": 68,
+        "verification": "exact"
+       },
+       {
+        "text": "Not applicable, the project is not part of any Emissions Trading Programs and is not subject to Other Binding Limits",
+        "page": 68,
+        "verification": "exact"
+       },
+       {
+        "text": "The project will not claim other Forms of Environmental Credit under another program.",
+        "page": 68,
+        "verification": "exact"
+       },
+       {
+        "text": "The Kuamut Rainforest Conservation Project has not applied for or been rejected by any other GHG programs.",
+        "page": 68,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "safeguards",
+      "status": "partial_evidence",
+      "score": 69,
+      "rationale": "Document shows stakeholder identification and rights assessment, extensive community engagement (11 workshops, 488 participants), FPIC-based continuous dialogue, and biodiversity risk discussion. Grievance redress is still being formalised, so mitigation is partly prospective. Evidence is substantive but some mechanisms not finalised.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The project has sought to identify all stakeholders with a relationship to the project and to undertake an assessment of their rights, interests and relevance to the project itself.",
+        "page": 25,
+        "verification": "exact"
+       },
+       {
+        "text": "Since the inception of community engagements in late 2017, the project has held a total of 11 community workshops and dialogue sessions, attended by a combined total of 488 community participants.",
+        "page": 47,
+        "verification": "exact"
+       },
+       {
+        "text": "The project is currently in the process of formalising redress mechanisms for any potential grievances arising from project zone communities or other stakeholders.",
+        "page": 56,
+        "verification": "exact"
+       },
+       {
+        "text": "Human-induced risks to the project’s biodiversity benefits, both in the short and long-term, are essentially the same to those related to climate change benefits (above) as they relate to the protection and regeneration of the natural ecosystem.",
+        "page": 39,
+        "verification": "exact"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "VCS1477",
+   "name": "Katingan Peatland Restoration and Conservation Project",
+   "country": "Indonesia",
+   "category": "REDD+ / peatland (VM0007)",
+   "doc_type": "VCS Project Description",
+   "registry_url": "https://registry.verra.org/app/projectDetail/VCS/1477",
+   "methodology": "VM0007",
+   "methodology_version": "1.5",
+   "reversal_risk": true,
+   "anchors": [
+    {
+     "version": 1,
+     "tx": "0x7285d7a1f70a1a32e1413b9367ba5c6c5f57edf991f4878574aabe7cb12534e0",
+     "block": 11921134,
+     "report_hash": "0xce3cf4ebd5996e4dd75d1e3802da74c68e7f1fd7706bfe8072ff75bd23e3cf3e"
+    },
+    {
+     "version": 2,
+     "tx": "0x357d4a290c2a9807834e0b7b74bc9db0dba7493e1937ec0547f1b1d54a0e4f1e",
+     "block": 11921935,
+     "report_hash": "0x1b97ae82ffdebfcf1f03a969a7215a3cc8d23d7f628b0776356c30ec08435bc7"
+    }
+   ],
+   "batches": [
+    {
+     "key": "VCS1477|2015|001",
+     "batch_id": "0xd40b5d34956a0309a1807cc57cb3d8df56287cde92521bb21a4060b2e3bc5d1d",
+     "vintage": 2015,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 14165124,
+     "quantity": 14165124,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1477|2016|001",
+     "batch_id": "0x0e75deaed825137f6ff08e728b552b91f68f7ef6a9920dff692746e2b59daa64",
+     "vintage": 2016,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 4339233,
+     "quantity": 4339233,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1477|2017|001",
+     "batch_id": "0x41f7a5a6909d98eecce1821a8c67462c2b1ab261480fc0263ddaeac74bb42123",
+     "vintage": 2017,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 4830311,
+     "quantity": 4830311,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1477|2018|001",
+     "batch_id": "0x5e957e20a91a6ab550d41160964da5a74e79820555f3f698b8cabacc02508519",
+     "vintage": 2018,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 5133319,
+     "quantity": 5133319,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1477|2019|001",
+     "batch_id": "0x1e9de5a15a492d0f27c41ca0ec2fdf5ac72da319c3f019d49f539a2bf53ba2c4",
+     "vintage": 2019,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 5646054,
+     "quantity": 5646054,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS1477|2020|001",
+     "batch_id": "0xcbfd4bce1fa1e63256b350323ebca0470172600233e5e6c0454a1b617b3b5474",
+     "vintage": 2020,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 5884249,
+     "quantity": 5884249,
+     "lot_size": 1000
+    }
+   ],
+   "report": {
+    "hash": "0x1b97ae82ffdebfcf1f03a969a7215a3cc8d23d7f628b0776356c30ec08435bc7",
+    "generated_at": "2026-10-15T17:31:02+00:00",
+    "document": {
+     "file_name": "CCB VCS PD 1477_30.11.2025_v4.pdf",
+     "sha256": "f2c4ea5cb1f617445cd4583a0835f21f3c853139bb9aff3df9f53e45c021b03f",
+     "pages": 396
+    },
+    "method": {
+     "report_schema": "report-v1",
+     "prompt_version": "v1",
+     "question_set_version": "qs-v1",
+     "llm_model": "deepseek/deepseek-v4.1-flash",
+     "decision_model": "typesafe/jev-1.13",
+     "decision_input": "verified_quotes",
+     "methodology_table_version": "2026-10-15",
+     "pdf_extractor": "pymupdf 1.28.2"
+    },
+    "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+    "methodology_status": {
+     "code": "VM0007",
+     "version": "1.5",
+     "status": "not_ccp_approved",
+     "summary": "Verra excluded its older REDD+ methodologies (including VM0007) from ICVCM assessment; their credits cannot carry the CCP label. ICVCM approved the successor VM0048 v1.0 with conditions in November 2024.",
+     "sources": [
+      "https://icvcm.org/integrity-council-approves-three-redd-methodologies/",
+      "https://www.jonesday.com/en/insights/2025/03/the-icvcm-and-redd-standards-implications-for-voluntary-carbon-markets"
+     ],
+     "table_version": "2026-10-15"
+    },
+    "overall": 60,
+    "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+    "principles": [
+     {
+      "principle": "additionality",
+      "status": "partial_evidence",
+      "score": 57,
+      "rationale": "The document states a most-likely baseline (industrial acacia plantation), lists economic, institutional and technological barriers, and asserts reliance on carbon finance. It also notes additionality was demonstrated in the first baseline period and not re-assessed at renewal. No investment analysis (IRR versus benchmark) is presented; the financial model is only offered to auditors on request, so quantitative support is absent.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The baseline scenario was determined for the first baseline period as industrial forestry (typically planting monoculture acacia) plantation and remains the most credible scenario for the second baseline period.",
+        "page": 42,
+        "verification": "exact"
+       },
+       {
+        "text": "The project overcomes these barriers through community conservation training, sustainable livelihoods, ecological monitoring systems, and legal support. Without carbon finance or similar performance-based payments, these interventions would not be viable.",
+        "page": 43,
+        "verification": "exact"
+       },
+       {
+        "text": "Furthermore, project activities rely on carbon finance to be implemented. Without the Verified Carbon Standard (VCS) mechanism and associated revenues, the project would not be financially viable.",
+        "page": 44,
+        "verification": "exact"
+       },
+       {
+        "text": "Additionality was demonstrated for the first baseline period (see PT. Rimba Makmur Utama 2016), and the project is therefore additional for its entire lifetime, not requiring a full additionality assessment for the baseline renewal.",
+        "page": 121,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "permanence",
+      "status": "partial_evidence",
+      "score": 80,
+      "rationale": "The document reports a formal non-permanence risk assessment using the AFOLU Non-Permanence Risk Tool v4.2, yielding a 14% buffer, and states a 60-year project/crediting lifetime. It also describes ongoing fire detection, monitoring and response systems addressing a principal reversal driver in this peatland REDD+ activity. Reversal monitoring and long-term commitments are therefore documented with specific figures and procedures.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "A non-permanence risk assessment was carried out in accordance with the most recent AFOLU Non-Permanence Risk Tool v.4.2 and the Risk Assessment Calculator. The resulting risk rating and non-permanence risk buffer is 14%.",
+        "page": 241,
+        "verification": "exact"
+       },
+       {
+        "text": "01 November 2010 – 31 October 2070; 60-year lifetime",
+        "page": 1,
+        "verification": "exact"
+       },
+       {
+        "text": "The technical and field team monitors the presence of fire within the project area and in the surrounding project zones (see Figure 3.37). If/when fire is detected, the team evaluates the risk and deploys the most appropriate protocol to stop the fire and avoid spread.",
+        "page": 252,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "robust_quantification",
+      "status": "partial_evidence",
+      "score": 78,
+      "rationale": "The document specifies Tier 2 emission factors, recalculation of project emissions each monitoring period, a 2.44% uncertainty calculation against a 15% threshold, leakage monitoring, and conservative baseline choices. It also references VM0007 equations and monitoring of ecological leakage. These are specific, substantive elements of robust and conservative quantification.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "GHG sources included in or excluded from project emission are listed in Section 3.1.3 Tier 2 emissions factors are used for the emission calculations from peat (same emissions factors as for the baseline, see Climate Annex for details).",
+        "page": 210,
+        "verification": "exact"
+       },
+       {
+        "text": "The total uncertainty error in the project was calculated to be 2.44%. Considering the 15% uncertainty threshold, no VCU deductions were made due to uncertainty.",
+        "page": 238,
+        "verification": "exact"
+       },
+       {
+        "text": "As there was no leakage during the previous baseline period, it is assumed that no leakage will occur. Actual leakage will be monitored throughout the project crediting period and will be reported at each monitoring event.",
+        "page": 235,
+        "verification": "exact"
+       },
+       {
+        "text": "This stratum is maintained in the baseline on a precautionary and conservative basis, resulting in a larger protected area than the current regulatory minimum requires and thereby reducing rather than inflating baseline emissions.",
+        "page": 391,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "no_double_counting",
+      "status": "assertion_only",
+      "score": 34,
+      "rationale": "The document addresses double counting through dedicated VCS/CCB sections: it answers \"No\" to receiving credit under another GHG programme, registering under other GHG programs, inclusion in an emissions trading program or binding limit, and seeking other GHG-related environmental credit. It also cites Indonesian SRN PPI registration and states the national registry prevents double counting. Evidence is checkbox-based with limited narrative detail, but specific and directly on point.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "Although the SRUK registry is not yet available at the time of the preparation of the PD, the recently launched registry system of Indonesia ensures transparency and prevents double counting",
+        "page": 80,
+        "verification": "exact"
+       },
+       {
+        "text": "Is the project receiving or seeking credit for reductions and removals from a project activity under another GHG programme, or any other form of community, social, or biodiversity unit or credit?",
+        "page": 96,
+        "verification": "exact"
+       },
+       {
+        "text": "Are project reductions and removals or project activities also included in an emissions trading program or binding emission limit? See the VCS Program Definitions for definitions of emissions trading program and binding emission limit.",
+        "page": 97,
+        "verification": "exact"
+       },
+       {
+        "text": "Has the project activity sought, received, or is planning to receive credit from another GHG-related environmental credit system? See the VCS Program Definitions for definition of GHG-related environmental credit system.",
+        "page": 98,
+        "verification": "alnum"
+       }
+      ]
+     },
+     {
+      "principle": "safeguards",
+      "status": "assertion_only",
+      "score": 37,
+      "rationale": "The document provides specific evidence of social and environmental risk assessment and mitigation: it describes risk assessments aligned with the precautionary principle, ongoing stakeholder consultation with legitimate representatives, a grievance redress mechanism with a database and multiple reporting channels, and FPIC processes. Biodiversity protection and monitoring are also detailed. This constitutes substantive evidence for the safeguards principle.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "In alignment with the precautionary principle (Rio Declaration, 1992), we conduct risk assessments that consider both scientifically substantiated risks and potential risks for which conclusive evidence may be lacking.",
+        "page": 291,
+        "verification": "exact"
+       },
+       {
+        "text": "By maintaining a comprehensive and organised record, the SIRETA database helps monitor grievance trends, improve response efficiency, and ensure that all concerns are handled fairly and consistently.",
+        "page": 66,
+        "verification": "exact"
+       },
+       {
+        "text": "The Project has demonstrated a comprehensive commitment to ensuring that all consultations and participatory processes are conducted directly with communities, stakeholders, and through their legitimate representatives, tailored to the context of the specific issues under consideration.",
+        "page": 61,
+        "verification": "exact"
+       },
+       {
+        "text": "Participatory planning and Free, Prior and Informed Consent (FPIC) processes empower communities to participate actively in governance and forest management, reinforcing trust, inclusion, and shared ownership of project outcomes.",
+        "page": 300,
+        "verification": "exact"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "VCS4150",
+   "name": "DelAgua Clean Cooking Grouped Project in Rwanda",
+   "country": "Rwanda",
+   "category": "Cookstoves (VM0050 + VMR0006)",
+   "doc_type": "VCS Project Description",
+   "registry_url": "https://registry.verra.org/app/projectDetail/VCS/4150",
+   "methodology": "VM0050",
+   "methodology_version": "1.0",
+   "reversal_risk": false,
+   "anchors": [
+    {
+     "version": 1,
+     "tx": "0x19c25926472a4e2681b223edd3d7298a727ca08726a6c9d54538ba2478560f58",
+     "block": 11921949,
+     "report_hash": "0x587372fbb233ce4cb4d9a55432112b6197c251fc6e72359b18a501fa9ef6635b"
+    }
+   ],
+   "batches": [],
+   "report": {
+    "hash": "0x587372fbb233ce4cb4d9a55432112b6197c251fc6e72359b18a501fa9ef6635b",
+    "generated_at": "2026-10-15T17:29:59+00:00",
+    "document": {
+     "file_name": "VCS 4150 ReQ PD v6.0 11082025_clean.pdf",
+     "sha256": "573d9046347e8ce1a9198ca57286cd0d81c2e41bc67edf1f2fbb4c85e234742b",
+     "pages": 78
+    },
+    "method": {
+     "report_schema": "report-v1",
+     "prompt_version": "v1",
+     "question_set_version": "qs-v1",
+     "llm_model": "deepseek/deepseek-v4.1-flash",
+     "decision_model": "typesafe/jev-1.13",
+     "decision_input": "verified_quotes",
+     "methodology_table_version": "2026-10-15",
+     "pdf_extractor": "pymupdf 1.28.2"
+    },
+    "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+    "methodology_status": {
+     "code": "VM0050",
+     "version": "1.0",
+     "status": "approved_with_conditions",
+     "summary": "ICVCM approved VM0050 v1.0 in March 2025. CCP labels need extra conditions: fNRB from CDM Tool 33 (for reductions up to 2025) or the MoFuSS model, fuel use measured by kitchen performance or controlled cooking tests (or defaults with cross-checks), and set charcoal factors. Calyx Global found none of 203 rated cookstove and biodigester projects met all of them.",
+     "sources": [
+      "https://icvcm.org/integrity-council-approves-three-cookstove-methodologies/",
+      "https://verra.org/a-new-era-for-high-integrity-cookstove-credits-as-verras-methodology-is-approved-by-icvcm/",
+      "https://calyxglobal.com/research-hub/research/how-the-ICVCM-CCP-labels-are-raising-the-quality-of-cookstoves-and-household-biodigester-projects/"
+     ],
+     "table_version": "2026-10-15"
+    },
+    "overall": 60,
+    "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+    "principles": [
+     {
+      "principle": "additionality",
+      "status": "assertion_only",
+      "score": 36,
+      "rationale": "The document shows regulatory surplus, a financial barrier, and positive-list automatic additionality. It states ICS are distributed free and the project relies solely on VCU revenue, with no other revenue source. Baseline scenario is described. However, no investment analysis (IRR vs benchmark) or common practice analysis is provided; additionality rests on methodology positive list and assertions.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "Since the Project Proponent (PP) distributes improved cookstoves (ICS) free of cost to end users, the project relies solely on revenue from the sale of Verified Carbon Units (VCUs) to sustain its operations.",
+        "page": 49,
+        "verification": "exact"
+       },
+       {
+        "text": "Without registration under a GHG program, the project would lack a financial mechanism to cover the costs of cookstove production, distribution, and monitoring.",
+        "page": 49,
+        "verification": "exact"
+       },
+       {
+        "text": "Since the project operates in Rwanda, a UNFCCC non-Annex I country, and there are no systematically enforced laws or regulations requiring the distribution or adoption of improved cookstoves, the project qualifies as additional.",
+        "page": 53,
+        "verification": "exact"
+       },
+       {
+        "text": "It distributes improved cookstoves at free of cost to end users, with no revenue source other than the sale of Verified Carbon Units (VCUs), satisfying Condition 2 of Section 7 of the methodology.",
+        "page": 53,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": []
+     },
+     {
+      "principle": "robust_quantification",
+      "status": "strong_evidence",
+      "score": 92,
+      "rationale": "Document shows baseline/project parameter derivation, IPCC default factors, a 26% fNRB uncertainty discount, KPT sampling at 90/10 precision, and database QA/QC. Leakage calculation is not detailed in the excerpts. Quantification and monitoring evidence is specific and conservative.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The value of BCp,j,k,y is derived from the project KPT and Hhj,k (same as Hhi) is derived from the Baseline KPT in line with the applied methodology.",
+        "page": 55,
+        "verification": "exact"
+       },
+       {
+        "text": "The value of 0.8872, registered in the Project Design Document (PD) under TOOL30 Version 4 for Rwanda, is adjusted to account for uncertainty in accordance with VM0050. A 26% uncertainty discount is applied, resulting in the following adjusted value: 0.8872 × (1−0.26) =0.6565",
+        "page": 62,
+        "verification": "exact"
+       },
+       {
+        "text": "The campaign must achieve confidence and precision of at least 90/10 for the target parameter of average daily fuel consumption per adult equivalent.",
+        "page": 65,
+        "verification": "exact"
+       },
+       {
+        "text": "Data validation is conducted on the database to ensure that values are numerically consistent, i.e. multiple choice values add up to 100% of respondents.",
+        "page": 68,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "no_double_counting",
+      "status": "assertion_only",
+      "score": 46,
+      "rationale": "Document includes checked 'No' for emissions trading and other environmental credits. It describes unique stove IDs and a sales database to avoid double counting, and reports no overlap with REDD+ projects or registries. Evidence is specific, but excerpts do not show corresponding adjustments or direct answers on double issuance.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The PP ensures that each distributed improved cookstove (ICS) is uniquely identified to avoid double counting of emission reductions. Each stove is marked with a program logo and assigned a unique identification number at the time of distribution.",
+        "page": 39,
+        "verification": "exact"
+       },
+       {
+        "text": "Also, a review of other registries viz Gold Standard and UNFCCC CDM also did not yield any REDD project in Rwanda. Additionally, the grouped project’s fuel sourcing area does not overlap with any operational REDD+ projects or jurisdictional REDD+ programs generating carbon credits.",
+        "page": 40,
+        "verification": "exact"
+       },
+       {
+        "text": "☐  Yes  \n \n☒  No \nIf yes, provide all required evidence of no double claiming as outlined by the VCS Standard.",
+        "page": 23,
+        "verification": "exact"
+       },
+       {
+        "text": "☐  Yes  \n \n☒  No \nIf yes, provide all required evidence of no double claiming as outlined by the VCS Standard.",
+        "page": 23,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "safeguards",
+      "status": "partial_evidence",
+      "score": 63,
+      "rationale": "The document includes a dedicated safeguards and stakeholder engagement section. It describes stakeholder identification and consultation, FPIC and consent, grievance channels, risk mitigation, and biodiversity/ecosystem statements. Some mitigation measures are asserted rather than detailed, but specific mechanisms and dates are provided.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The program engaged stakeholders through newspaper ads, emails, and radio announcements before the LSC meeting on 1st March 2023. The meeting was held from 9:00 AM to 11:00 AM at Gorillas Golf Hotel, Nyautarama, Rwanda, ensuring gender-inclusive participation.",
+        "page": 27,
+        "verification": "alnum"
+       },
+       {
+        "text": "Prior to distribution all potential ICS recipients are gathered to introduce the project. They are invited to receive a ICS free of charge.",
+        "page": 29,
+        "verification": "exact"
+       },
+       {
+        "text": "The grievance redress procedure was developed to ensure that local stakeholders have accessible and culturally appropriate channels to raise concerns. The process includes receiving, hearing, responding to, and resolving grievances within a reasonable time frame.",
+        "page": 29,
+        "verification": "exact"
+       },
+       {
+        "text": "The ICSs decreases the GHG emission levels attributed to improved performance and design of the project ICSs. It does not involve change in baseline fuel or any other major interventions that negatively impacts biodiversity or ecosystems.",
+        "page": 34,
+        "verification": "exact"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "VCS2846",
+   "name": "FSW AMMS GHG Mitigation Project in Nanyang City",
+   "country": "China",
+   "category": "Manure biodigester (ACM0010)",
+   "doc_type": "VCS Project Description",
+   "registry_url": "https://registry.verra.org/app/projectDetail/VCS/2846",
+   "methodology": "ACM0010",
+   "methodology_version": "8",
+   "reversal_risk": false,
+   "anchors": [
+    {
+     "version": 1,
+     "tx": "0xd81fadf067176be3813c373b76c52a1c42e6460d67d85e7a48be0a568bd70558",
+     "block": 11921947,
+     "report_hash": "0x84a67a4199f59d78c8453c8e1e3779256784130b5aea7ca41c5eac0bb9c032ba"
+    }
+   ],
+   "batches": [],
+   "report": {
+    "hash": "0x84a67a4199f59d78c8453c8e1e3779256784130b5aea7ca41c5eac0bb9c032ba",
+    "generated_at": "2026-10-15T17:25:49+00:00",
+    "document": {
+     "file_name": "VCS-Joint-Project-Description-Monitoring-Report-Muanyuan FSW-version03-clean.pdf",
+     "sha256": "29955d5d170062c4913c6e3d7c570d0e56b7c933c5a861312604a09770b6e3e3",
+     "pages": 137
+    },
+    "method": {
+     "report_schema": "report-v1",
+     "prompt_version": "v1",
+     "question_set_version": "qs-v1",
+     "llm_model": "deepseek/deepseek-v4.1-flash",
+     "decision_model": "typesafe/jev-1.13",
+     "decision_input": "verified_quotes",
+     "methodology_table_version": "2026-10-15",
+     "pdf_extractor": "pymupdf 1.28.2"
+    },
+    "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+    "methodology_status": {
+     "code": "ACM0010",
+     "version": "8",
+     "status": "unknown",
+     "summary": "No ICVCM decision found for ACM0010 (manure management): it is not in the Calyx CCP-label tracker (May 2026) and no ICVCM announcement covers livestock manure methodologies. The methodology remains active in the VCS Program.",
+     "sources": [
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker",
+      "https://verra.org/methodologies/ghg-emission-reductions-from-manure-management-systems/"
+     ],
+     "table_version": "2026-10-15"
+    },
+    "overall": 58,
+    "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+    "principles": [
+     {
+      "principle": "additionality",
+      "status": "partial_evidence",
+      "score": 64,
+      "rationale": "The document presents a full additionality case: baseline alternatives screened against IPCC options, regulatory surplus (no law mandating anaerobic digestion), barrier analysis, benchmark IRR comparison (5.38% vs 9.5% without VCU revenue; 10.69% with), sensitivity analysis on investment, fertilizer sales and O&M, and a common practice test yielding Nall-Ndiff=0. Evidence is specific and quantified, though largely self-reported.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "Without income from selling VCUs, the IRR of the project is 5.38%, lower than the benchmark IRR 9.5% and the project is financially unacceptable because of its low profitability.",
+        "page": 41,
+        "verification": "exact"
+       },
+       {
+        "text": "There are no technology barriers, acceptability barriers and financial barriers that may prevent these two alternative scenarios to occur. As per Tool 02 Combined tool to identify the baseline scenario and demonstrate additionality (Version 07.0), go to Step 3 investment analysis.",
+        "page": 37,
+        "verification": "exact"
+       },
+       {
+        "text": "According to the analysis above, Nall= Ndiff =0, and the factor F=1-Ndiff/Nall=1-1 =0< 0.2. Therefore, the result of common practice assessment is: Nall-Ndiff=0 < 3 Therefore, the project activity is not a common practice in the region.",
+        "page": 46,
+        "verification": "exact"
+       },
+       {
+        "text": "To summarize, “the project is undertaken without being registered as a VCS project activity” is not financially attractive to investors, thus it is not feasible. Being registered as a VCS project, the VCUs revenues can alleviate the identified barriers, therefore the project is additional.",
+        "page": 46,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": []
+     },
+     {
+      "principle": "robust_quantification",
+      "status": "partial_evidence",
+      "score": 60,
+      "rationale": "Document applies ACM0010 and tools, defines emission reductions as baseline minus project emissions and leakage, includes leakage in calculations, uses conservative parameter values, and describes calibration, QA/QC and monitoring plan. It provides substantive quantification evidence, though not all uncertainty details are shown.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The emission reduction ERy by the project activity during a given year y is the difference between the baseline emissions (BEy) and the sum of project emissions (PEy) and leakage, as follows:",
+        "page": 63,
+        "verification": "exact"
+       },
+       {
+        "text": "The project participants have no authority, intervention or control over the leakage of organic fertilizer into the soil. Moreover, this leakage has been included in the emission reductions calculation as per the applied methodology and tool.",
+        "page": 20,
+        "verification": "exact"
+       },
+       {
+        "text": "As this parameter is not monitored in the actual operation. So, in the monitoring period, to be conservative, the value of this parameter in the emission reduction calculation is 100%.",
+        "page": 84,
+        "verification": "exact"
+       },
+       {
+        "text": "In order to ensure measurements with a low degree of uncertainty, the data metering equipment will be calibrated and checked by an appropriately qualified third party according to an appropriate national standard.",
+        "page": 95,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "no_double_counting",
+      "status": "assertion_only",
+      "score": 37,
+      "rationale": "The document addresses double counting directly: it states the project is registered only under VCS, is outside China's ETS, has not sought other environmental credits, and that a no-double-counting declaration was signed. Evidence is specific to project-level registration and credit issuance. The excerpts do not discuss host-country corresponding adjustments or Article 6 authorisation, so coverage of that element is absent.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The project has neither been registered nor seeking registration under any other GHG programs. The project is seeking registration only in VCS program.",
+        "page": 18,
+        "verification": "exact"
+       },
+       {
+        "text": "The project proponent is not part of any emission trading program. The project does not reduce GHG emissions from activities that are included in an emissions trading program or any other mechanism that includes GHG allowance trading.",
+        "page": 18,
+        "verification": "exact"
+       },
+       {
+        "text": "The project hasn’t sought or received another form of environmental credits.",
+        "page": 18,
+        "verification": "exact"
+       },
+       {
+        "text": "The project will sign an agreement that it will not participate in other environment credits, other GHG programs and has not been rejected by any other GHG Programs.",
+        "page": 99,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "safeguards",
+      "status": "partial_evidence",
+      "score": 67,
+      "rationale": "Document provides EIA approval, mitigation measures, pre-construction and monitoring stakeholder questionnaires, and a grievance book. It reports no net harm and local support. However, it lacks specific FPIC, indigenous peoples, labour and gender safeguards, so evidence is substantive but not comprehensive.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "report with corresponding measures during project development, the construction of the project is in line with national policies and no net harm has been detected. Meanwhile, the implementation of the project will improve local-socio economic development through creating career opportunities.",
+        "page": 21,
+        "verification": "exact"
+       },
+       {
+        "text": "Local stakeholder consultation was conducted by project owner before the construction of the project and during the monitoring period through the means of questionnaire.",
+        "page": 21,
+        "verification": "exact"
+       },
+       {
+        "text": "In addition, in order to set up the mechanism for on-going communication with local stakeholders, a grievance book was put at the entrance of each swine farm. All stakeholders are allowed to record their grievances or comments in the book at any time.",
+        "page": 24,
+        "verification": "exact"
+       },
+       {
+        "text": "The Environmental Impact Assessment (EIA) Report for the project has been approved by local governmental authorities. The environmental impacts and mitigation measures during the construction period and the operation period are summarized as follows.",
+        "page": 24,
+        "verification": "exact"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "VCS138",
+   "name": "Greater New Bedford LFG Utilization Project",
+   "country": "United States",
+   "category": "Landfill gas (ACM0001)",
+   "doc_type": "VCS Project Description",
+   "registry_url": "https://registry.verra.org/app/projectDetail/VCS/138",
+   "methodology": "ACM0001",
+   "methodology_version": "16",
+   "reversal_risk": false,
+   "anchors": [
+    {
+     "version": 1,
+     "tx": "0x69e8ad5712743babc2ef690683a307c9ba433ddd84019b3d8827df64eb9bbe83",
+     "block": 11921138,
+     "report_hash": "0x1243b4641344857bd5fb5d749a4fa5c4bf74a0d5bd75992accb6544ece5188c2"
+    },
+    {
+     "version": 2,
+     "tx": "0xc854351d8e98f5e747abddfa0622fb7d7f48299f811a0ecb70a224adc7c166be",
+     "block": 11921933,
+     "report_hash": "0xa89a01890cf8dc2d5f6229af4244174fc0b1bd2f7345342b1c37770749100d18"
+    }
+   ],
+   "batches": [
+    {
+     "key": "VCS138|2009|001",
+     "batch_id": "0xa253fa1b46478fb18e32c9832e6380dc177d5026b0ce68d180e22e2eb68eb51d",
+     "vintage": 2009,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 56520,
+     "quantity": 56520,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2009|002",
+     "batch_id": "0xe3d460ecca9bdc727b959bed80f7b43182f491cfeedbd39f86506c1848f27ebb",
+     "vintage": 2009,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 59245,
+     "quantity": 59245,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2010|001",
+     "batch_id": "0x9f82ae4e79a9d5541b5b8b8cd594d499fb5fa0ad168979fb0e0c313a6de77cbc",
+     "vintage": 2010,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 52406,
+     "quantity": 52406,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2010|002",
+     "batch_id": "0xd44ece7b9fba84ac00bfd1be91d9b9ef71519d2366c04e02baabf8605197c771",
+     "vintage": 2010,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 47744,
+     "quantity": 47744,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2011|001",
+     "batch_id": "0xbe190dd5cc1a04f3d7fbcb4069df8082087536c5f6c12cc8d4dbe011f5cf1bd1",
+     "vintage": 2011,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 48781,
+     "quantity": 48781,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2011|002",
+     "batch_id": "0x9679b8db924716568e1efa169a5124f7db56542fd8377381524ca7b38cd79995",
+     "vintage": 2011,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 49652,
+     "quantity": 49652,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2012|001",
+     "batch_id": "0x8aac99e9265b8fecad1ef145f4426285654c8b015cd31a28d44dea91d69fdb49",
+     "vintage": 2012,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 50719,
+     "quantity": 50719,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2012|002",
+     "batch_id": "0x38e3098cb2fd7390e1fd6a30627d70fe6517e86f85540db9618885e21f5bd3e4",
+     "vintage": 2012,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 51915,
+     "quantity": 51915,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2013|001",
+     "batch_id": "0x2912fdabf565637c67b90632feb880076a1c00f532b94fa8fbef17024a3139b7",
+     "vintage": 2013,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 46948,
+     "quantity": 46948,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2013|002",
+     "batch_id": "0xc4e11ab8deb01efb9dfd81d961fb6984c4647633361f89e3a391bfe1d0040b93",
+     "vintage": 2013,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 47514,
+     "quantity": 47514,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2014|001",
+     "batch_id": "0x346cfd029b1d2f2a300283802669f94cc775940ba14d6256d504e00ba77da441",
+     "vintage": 2014,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 24173,
+     "quantity": 24173,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2014|002",
+     "batch_id": "0x561574a463c2801317da5554faa94965a4b85cd16528302b91e5bffde77404e2",
+     "vintage": 2014,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 74554,
+     "quantity": 74554,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2015|001",
+     "batch_id": "0x65cc983c016988202b4cb14466cb961774eddf63beeb001a7a87e2a09e731a86",
+     "vintage": 2015,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 69777,
+     "quantity": 69777,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2015|002",
+     "batch_id": "0xf76b489ad11a6644ef28b51c8bd834eae4b39596b57f0735ed72ed5033e29138",
+     "vintage": 2015,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 23980,
+     "quantity": 23980,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2016|001",
+     "batch_id": "0x937cbaf8fc2451cec7d2cc1b2196a18d0fbc55b0b5b8f059911a3387df2d08f5",
+     "vintage": 2016,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 45697,
+     "quantity": 45697,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2016|002",
+     "batch_id": "0xdd4016834a5666c475dccbf647759de8f43f69e5a66d9aec53699021715e428c",
+     "vintage": 2016,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 48627,
+     "quantity": 48627,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2017|001",
+     "batch_id": "0x325e3223e1d4702de7fa0f3f09758404a4654837eb6b8efd40796385a622b8d4",
+     "vintage": 2017,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 27799,
+     "quantity": 27799,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2017|002",
+     "batch_id": "0x6ebb798f1f0607f7b39af0b8c4ee4e97accc24c11dfd3e92dce77c1c7ee02d97",
+     "vintage": 2017,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 56613,
+     "quantity": 56613,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2018|001",
+     "batch_id": "0x692fffa81042e3ea796abbad40c37f24eba6928410ec02fe498ba18d58a38684",
+     "vintage": 2018,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 76930,
+     "quantity": 76930,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2019|001",
+     "batch_id": "0x7d8073e66057ea19b1c67b28a14c7d47fef20da609ca9ca507c479faae24f348",
+     "vintage": 2019,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 56788,
+     "quantity": 56788,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2019|002",
+     "batch_id": "0x99e343cc4eea821e969f45bb86f12fe23d498a55ae5b9a5c49990527777fe7ba",
+     "vintage": 2019,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 22070,
+     "quantity": 22070,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2020|001",
+     "batch_id": "0x838f7a841adb04d00beb68509075f4fe178502469977d05bfb39aad41ae50c26",
+     "vintage": 2020,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 44475,
+     "quantity": 44475,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2020|002",
+     "batch_id": "0xdbec73e58b9222f0fed0f80e5088484faf734c39fb38c27155a3ef385f8db87e",
+     "vintage": 2020,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 45597,
+     "quantity": 45597,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2021|001",
+     "batch_id": "0x06b807c3553a8c7f131fbec0129926263a8089d89805f657331e30dab18a28c9",
+     "vintage": 2021,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 24402,
+     "quantity": 24402,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2021|002",
+     "batch_id": "0x2e6f838cef75ca92a7f7e22f29bc9f4dade267b12faeaa01c6c5ff87727542e6",
+     "vintage": 2021,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 78585,
+     "quantity": 78585,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2022|001",
+     "batch_id": "0x52c0b14a27afb5200d7cc8675fbf6d1762476e1fe1a33a0291b31a63cda1e97d",
+     "vintage": 2022,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 67565,
+     "quantity": 67565,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2022|002",
+     "batch_id": "0xcba6b51ed84894d6776f27a06ae630bdc17018cc1ae6a87f4e91309e3c73e4ee",
+     "vintage": 2022,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 69463,
+     "quantity": 69463,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2023|001",
+     "batch_id": "0xe36d284974969485eec9aa16703a6a5d5977e67115a9b9362d0ddc4f14ef9add",
+     "vintage": 2023,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 98230,
+     "quantity": 98230,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2023|002",
+     "batch_id": "0x978b00c65c7438f5bb6234a97549bd287d1cb22a98718a4d80a558031c71f75f",
+     "vintage": 2023,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 32417,
+     "quantity": 32417,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS138|2024|001",
+     "batch_id": "0x66d1671e31627262906d0334a40e76c9e41761d854001dadf84c3e55543383d1",
+     "vintage": 2024,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 110197,
+     "quantity": 110197,
+     "lot_size": 1000
+    }
+   ],
+   "report": {
+    "hash": "0xa89a01890cf8dc2d5f6229af4244174fc0b1bd2f7345342b1c37770749100d18",
+    "generated_at": "2026-10-15T17:31:11+00:00",
+    "document": {
+     "file_name": "PROJ_DESC_138_12MAY2016.pdf",
+     "sha256": "8c22eb7d83ff957fa785940a206c03b5adc4b0f7506ea2d98d5fd455ab44e104",
+     "pages": 37
+    },
+    "method": {
+     "report_schema": "report-v1",
+     "prompt_version": "v1",
+     "question_set_version": "qs-v1",
+     "llm_model": "deepseek/deepseek-v4.1-flash",
+     "decision_model": "typesafe/jev-1.13",
+     "decision_input": "verified_quotes",
+     "methodology_table_version": "2026-10-15",
+     "pdf_extractor": "pymupdf 1.28.2"
+    },
+    "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+    "methodology_status": {
+     "code": "ACM0001",
+     "version": "16",
+     "status": "approved_with_conditions",
+     "summary": "ICVCM approved ACM0001 versions 15-19 for landfill gas projects, subject to additional criteria (including limits on electricity generation). Earlier versions are not eligible. Verra's successor VMR0016 was approved in August 2026.",
+     "sources": [
+      "https://verra.org/verras-rice-cultivation-and-landfill-gas-methodologies-receive-icvcm-approval/",
+      "https://verra.org/methodologies/acm0001-flaring-or-use-of-landfill-gas/"
+     ],
+     "table_version": "2026-10-15"
+    },
+    "overall": 56,
+    "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+    "principles": [
+     {
+      "principle": "additionality",
+      "status": "assertion_only",
+      "score": 43,
+      "rationale": "The document relies on a previously validated additionality analysis and states a full review is not required for renewal, demonstrating only regulatory surplus. It asserts the expansion would not have occurred under the baseline and was motivated by gas quality, but no investment, barrier, common-practice or carbon-revenue analysis is provided. Evidence is therefore incomplete.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "In accordance with VCS Standard Section 3.8.5.1, a full additionality review is not required for the renewal of the crediting period.  Only regulatory surplus need be demonstrated again and this is presented in Section 1.11.",
+        "page": 13,
+        "verification": "exact"
+       },
+       {
+        "text": "The expansion and improvement of the landfill gas collection system was motivated by the need for additional, higher quality gas for the electricity generation plant and would not have occurred under the voluntary collection and flaring of the landfill gas in the baseline scenario described in Section 2.4.",
+        "page": 5,
+        "verification": "exact"
+       },
+       {
+        "text": "The District Initial System was implemented solely to mitigate potential odor complaints.  This driver would prompt the District to continue the system but not to expand or improve it over time as demonstrated in the initial validated baseline analysis.",
+        "page": 13,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": []
+     },
+     {
+      "principle": "robust_quantification",
+      "status": "partial_evidence",
+      "score": 66,
+      "rationale": "Document provides baseline and project emission equations, leakage treatment, a conservative modification, and monitoring accuracy/QA. It also discloses deviations that decrease conservativeness. Evidence is specific and substantive, though not uniformly conservative.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "Baseline emissions associated with electricity generation and heat generation are excluded as the Project is not seeking carbon credits for the displacement of grid electricity or the beneficial reuse of the Project’s waste heat.",
+        "page": 15,
+        "verification": "exact"
+       },
+       {
+        "text": "Because electricity generation has a higher destruction efficiency than a flare, this is a conservative modification that reflects actual Project operations.",
+        "page": 16,
+        "verification": "exact"
+       },
+       {
+        "text": "This deviation decreases the conservativeness of the emissions reductions claimed but significantly increases the accuracy of the calculations as is allowable under VCS Standard v3.5, Section 3.5.1.",
+        "page": 14,
+        "verification": "exact"
+       },
+       {
+        "text": "The design data for the instrument specifies an accuracy of ± 0.6 percent of full scale and the capability of measuring flows from 0 to 1,600 actual cubic feet per minute.",
+        "page": 30,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "no_double_counting",
+      "status": "partial_evidence",
+      "score": 62,
+      "rationale": "The document explicitly addresses counting-once issues: no participation in a compliance emissions trading scheme or binding limits, no credits claimed for grid electricity or waste heat, disclosure that the only other GHG registration is ACR with no verified reductions or issuance since 2008 and none planned under VCS, and that environmental attributes belong to the Lessee. No corresponding-adjustment or retirement language appears.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The Project is not participating in nor is required to participate in any compliance emissions trading scheme and is not located in a jurisdiction with binding greenhouse gas emissions limits.",
+        "page": 9,
+        "verification": "exact"
+       },
+       {
+        "text": "The Project is not claiming credits associated with the electricity produced from the landfill methane that displaces fossil–fuel-generated grid electricity.",
+        "page": 9,
+        "verification": "exact"
+       },
+       {
+        "text": "The only other active GHG Program under which the Project is registered is the American Carbon Registry – Project ID of ACR 113.",
+        "page": 10,
+        "verification": "exact"
+       },
+       {
+        "text": "The Project has neither verified emissions reductions under nor requested issuance of credits under ACR since 2008's emission reductions and does not plan to do so during its second crediting period under VCS.",
+        "page": 10,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "safeguards",
+      "status": "partial_evidence",
+      "score": 54,
+      "rationale": "The document shows a MEPA environmental review and a public complaint process, but stakeholder consultation is dismissed as unnecessary, and there is no assessment of biodiversity, indigenous peoples, labour or gender risks. Safeguard treatment is generic and incomplete.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "In accordance with the requirements of the Massachusetts Environmental Policy Act (“MEPA”), prior to construction of the  Project and as a pre-requisite to Project permitting, CNBE submitted an Environmental Notification Form (“ENF”) to the Massachusetts Secretary of Environmental Affairs",
+        "page": 32,
+        "verification": "exact"
+       },
+       {
+        "text": "The Project stakeholders are the District and CNBE.  There are no other investment group or public groups involved in the Project.  Therefore, no formal stakeholder consultations are required.",
+        "page": 32,
+        "verification": "exact"
+       },
+       {
+        "text": "However, the District does have a formal process for receiving comments or complaints available to the public via email or telephone.  No comments regarding this Project have been received.",
+        "page": 32,
+        "verification": "exact"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "VCS2505",
+   "name": "Fuel Efficient Cooking in South Africa",
+   "country": "South Africa",
+   "category": "Cookstoves (VMR0006)",
+   "doc_type": "VCS Project Description",
+   "registry_url": "https://registry.verra.org/app/projectDetail/VCS/2505",
+   "methodology": "VMR0006",
+   "methodology_version": null,
+   "reversal_risk": false,
+   "anchors": [
+    {
+     "version": 1,
+     "tx": "0x3964e840ab865cf1a2a6676a2de6e470d28a581f464cbb67a4921a938dd72f98",
+     "block": 11921140,
+     "report_hash": "0x36d3531cc9094d44d4d06325e32a691168a27880078864bfd675459ce419585d"
+    },
+    {
+     "version": 2,
+     "tx": "0x5bc595da687b4bf292353072e9185fba230e54ca8a6ab6f357ecbf03b976cba6",
+     "block": 11921943,
+     "report_hash": "0x862cd10753b7262635d2dd5e037ce8d464b740aa786bf01f9057166eed5353b4"
+    }
+   ],
+   "batches": [
+    {
+     "key": "VCS2505|2021|001",
+     "batch_id": "0xf781d30d6f7ee40301863b1643f6dca2587fa895fcf73ce5b5415c96b2b7be15",
+     "vintage": 2021,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 98995,
+     "quantity": 98995,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS2505|2022|001",
+     "batch_id": "0x8bc29fd9f5c1fff6455fb1bef7225ca7f299d6baab01033aca701db7b7fd6020",
+     "vintage": 2022,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 4852,
+     "quantity": 4852,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS2505|2022|002",
+     "batch_id": "0x2dee07cbf7df37f683ac4d9349fe26355aa7113785861cae76a1584ca59f23cf",
+     "vintage": 2022,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 801138,
+     "quantity": 801138,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS2505|2023|001",
+     "batch_id": "0x03c3a6cb0083cd31b5ea68988ff9b7eca11da548901e4a31bececfa5184adca3",
+     "vintage": 2023,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 117049,
+     "quantity": 117049,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS2505|2023|002",
+     "batch_id": "0x77cc7ff374f12923247abae35c87252478ce03863b271ba7f61b4645c8f05598",
+     "vintage": 2023,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 1203743,
+     "quantity": 1203743,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS2505|2023|003",
+     "batch_id": "0x452a1ed090b92692362519240204ee482747885ac8854bde15cdc23318411c1d",
+     "vintage": 2023,
+     "batch_no": 3,
+     "first_serial": 1,
+     "last_serial": 1255174,
+     "quantity": 1255174,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS2505|2024|001",
+     "batch_id": "0xa029ea5ab79cfeb0d733502be1a6616d3c0fb384aad7c90c5531439068cfdff1",
+     "vintage": 2024,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 269467,
+     "quantity": 269467,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS2505|2024|002",
+     "batch_id": "0xf26a076ca633eb07f95ade1eb5e68ea9a3c7c2a97c63424826a5d1ae732f9abb",
+     "vintage": 2024,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 1621768,
+     "quantity": 1621768,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS2505|2024|003",
+     "batch_id": "0xc1e330317b00beb9523ef2634141f1906ead408b9b5e81add08a4e87f83ef085",
+     "vintage": 2024,
+     "batch_no": 3,
+     "first_serial": 1,
+     "last_serial": 1678463,
+     "quantity": 1678463,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS2505|2025|001",
+     "batch_id": "0x39f32620b71f27a0245554d0baa3ca7afb034d1a83fe7c372c3f346e922e20bc",
+     "vintage": 2025,
+     "batch_no": 1,
+     "first_serial": 1,
+     "last_serial": 263288,
+     "quantity": 263288,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS2505|2025|002",
+     "batch_id": "0xcd16ff2de767d3d80443e8eed6c0f9dc64c69f99d2f45609d150263e0ec1594b",
+     "vintage": 2025,
+     "batch_no": 2,
+     "first_serial": 1,
+     "last_serial": 2155013,
+     "quantity": 2155013,
+     "lot_size": 1000
+    },
+    {
+     "key": "VCS2505|2025|003",
+     "batch_id": "0xc74f1a7d5f7ccbff6ab57cc1c53305a85492b55b631912d2fb4f55d5fb978aaa",
+     "vintage": 2025,
+     "batch_no": 3,
+     "first_serial": 1,
+     "last_serial": 1897296,
+     "quantity": 1897296,
+     "lot_size": 1000
+    }
+   ],
+   "report": {
+    "hash": "0x862cd10753b7262635d2dd5e037ce8d464b740aa786bf01f9057166eed5353b4",
+    "generated_at": "2026-10-15T17:31:16+00:00",
+    "document": {
+     "file_name": "Fuel Efficient Cooking in South Africa Grouped PDD_v9_Clean.pdf",
+     "sha256": "1d09240addf6b933de31de7492b798775ddf16183425b8d0eff00e6f0e5d810a",
+     "pages": 64
+    },
+    "method": {
+     "report_schema": "report-v1",
+     "prompt_version": "v1",
+     "question_set_version": "qs-v1",
+     "llm_model": "deepseek/deepseek-v4.1-flash",
+     "decision_model": "typesafe/jev-1.13",
+     "decision_input": "verified_quotes",
+     "methodology_table_version": "2026-10-15",
+     "pdf_extractor": "pymupdf 1.28.2"
+    },
+    "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+    "methodology_status": {
+     "code": "VMR0006",
+     "version": null,
+     "status": "not_ccp_approved",
+     "summary": "No CCP approval for VMR0006. ICVCM approved Verra's successor cookstove methodology VM0050 v1.0 with conditions that constrain fNRB and require stricter fuel-use monitoring.",
+     "sources": [
+      "https://icvcm.org/integrity-council-approves-three-cookstove-methodologies/",
+      "https://www.calyxglobal.com/research-hub/research/how-the-ICVCM-CCP-labels-are-raising-the-quality-of-cookstoves-and-household-biodigester-projects"
+     ],
+     "table_version": "2026-10-15"
+    },
+    "overall": 55,
+    "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+    "principles": [
+     {
+      "principle": "additionality",
+      "status": "assertion_only",
+      "score": 40,
+      "rationale": "Document relies on VMR0006 activity method, regulatory surplus, and a deemed-additional rule for zero-cost stoves with no revenue other than GHG credits. It describes the baseline as continued non-renewable wood fuel use. However, excerpts do not provide investment/IRR, barrier, or common practice analysis, nor explicit confirmation that this project has no other revenue source. Additionality is therefore asserted through methodology criteria rather than substantively demonstrated.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The methodology VMR0006 v1.1 uses activity method for the demonstration of additionality.",
+        "page": 45,
+        "verification": "exact"
+       },
+       {
+        "text": "There is no government mandated programme or policy in South Africa ensuring the distribution of new project activity instances or fuel efficient cookstoves.",
+        "page": 8,
+        "verification": "exact"
+       },
+       {
+        "text": "Where the project activity installs or distributes stoves at zero cost to the end-user and has no other source of revenue other than the sale of GHG credits, the project activity shall be deemed additional.",
+        "page": 9,
+        "verification": "exact"
+       },
+       {
+        "text": "As per the VMR0006 methodology, the baseline scenario is the continued use of non-renewable wood fuel (firewood) by the target population to meet similar thermal energy needs as provided by project ICS in absence of project activity.",
+        "page": 43,
+        "verification": "alnum"
+       }
+      ]
+     },
+     {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": []
+     },
+     {
+      "principle": "robust_quantification",
+      "status": "strong_evidence",
+      "score": 87,
+      "rationale": "The excerpts show PI-level baseline surveys, fNRB calculation via CDM TOOL30, default emission factors, a 0.95 leakage factor, a 0.94 uncertainty adjustment, conservative ex-ante modelling, and QA/QC procedures with precision thresholds and lower-bound fallback. They also describe monitoring data collection and verification sampling. This is specific substantive evidence, though not all parameters are fully detailed in the excerpts.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "Based on the initial number of ICS planned for PI1-K2C and taking the expected 5-year operational lifetime of the ICS into account, the GP’s ex-ante ERs were modelled to represent a conservative approximation.",
+        "page": 15,
+        "verification": "exact"
+       },
+       {
+        "text": "The sample size and selection were determined in accordance with the CDM guidance on “Sampling and surveys for CDM project activities and programmes of activities v04.0” with a 90/10 confidence/precision level.",
+        "page": 44,
+        "verification": "exact"
+       },
+       {
+        "text": "Leakage shall be considered as default 0.95 in accordance with Section 8.3 of the applied methodology VRM0006 v1.",
+        "page": 46,
+        "verification": "exact"
+       },
+       {
+        "text": "Data from the monitoring survey will be collected at least biennially and applied to the emissions reductions calculations during that monitoring period. Where the required level of precision is not met either additional surveys may be completed, or the lower bound value applied.",
+        "page": 55,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "no_double_counting",
+      "status": "assertion_only",
+      "score": 40,
+      "rationale": "The PDD states the project is not registered or seeking registration under any other GHG program, is not in an emissions trading program, and has not sought or received other GHG-related environmental credits. It also describes unique cookstove serial numbers, a distribution database, and an End User Agreement assigning ER/VCU ownership to the CME.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "This is a new project and has not been registered or seeking registration under any other \nGHG programs.",
+        "page": 20,
+        "verification": "exact"
+       },
+       {
+        "text": "The project is not included in an emissions trading program or any other mechanism that \nincludes GHG allowance trading.",
+        "page": 21,
+        "verification": "exact"
+       },
+       {
+        "text": "The project has not sought, nor received another form of GHG-related environmental \ncredit.",
+        "page": 21,
+        "verification": "exact"
+       },
+       {
+        "text": "Each ICS will have a serial number, made to order by the manufacturer, to uniquely identify \nit. All rights to distribute the delivered stoves and claim the resultant emissions reductions \nbelong to the PP.",
+        "page": 38,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "safeguards",
+      "status": "assertion_only",
+      "score": 42,
+      "rationale": "The document includes a safeguards section with evidence of local stakeholder consultation (approved plan and implementation), a grievance redress mechanism, assessment of risks to local stakeholders (none identified), and environmental mitigation measures such as reducing wood cutting to protect biodiversity. It also addresses cultural and gender sensitivity. This constitutes specific, substantive evidence for the principle.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The project proponent shall conduct a local stakeholder consultation prior to validation as a way to inform the design of the project and maximize participation from stakeholders. Such consultations allow stakeholders to evaluate impacts, raise concerns about potential negative impacts and provide input on the project design.",
+        "page": 23,
+        "verification": "exact"
+       },
+       {
+        "text": "No natural and human-induced risks to local stakeholder well-being is expected arising from the project implementation during the project lifecycle.",
+        "page": 27,
+        "verification": "alnum"
+       },
+       {
+        "text": "A grievance redress mechanism will be developed specifically for each Project Instance and included in the project design documents. Each IP will define a grievance mechanism that is most appropriate to their operations and to the communities within the project boundary.",
+        "page": 30,
+        "verification": "exact"
+       },
+       {
+        "text": "- Reduce wood cutting which leads to deforestation and loss of biodiversity. Promote sustainable ecosystems and ecological balance.",
+        "page": 22,
+        "verification": "exact"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "VCS1742",
+   "name": "Hydroelectric Project in Kinnaur District in Himachal Pradesh",
+   "country": "India",
+   "category": "Hydropower (ACM0002)",
+   "doc_type": "VCS Project Description",
+   "registry_url": "https://registry.verra.org/app/projectDetail/VCS/1742",
+   "methodology": "ACM0002",
+   "methodology_version": "12.1.0",
+   "reversal_risk": false,
+   "anchors": [
+    {
+     "version": 1,
+     "tx": "0x46a4168f372db5c0d5aa53894fc2936945ad4c23112ae0ed1eac9f39efbba301",
+     "block": 11921939,
+     "report_hash": "0x4704757abecf7d7e9a2beb519826c47a2fe50a7ec7476b46cd3ffbc6ff278092"
+    }
+   ],
+   "batches": [],
+   "report": {
+    "hash": "0x4704757abecf7d7e9a2beb519826c47a2fe50a7ec7476b46cd3ffbc6ff278092",
+    "generated_at": "2026-10-15T17:21:40+00:00",
+    "document": {
+     "file_name": "PL1742_VCS PD_HBPCL_V02_17042018_Clean.pdf",
+     "sha256": "8b6a6c39c13b6e0b57404ccd3c8f7ca0d51f4139da1a18495534b53b0b77822f",
+     "pages": 104,
+     "extra_files": [
+      {
+       "file_name": "4993 PDD.pdf",
+       "sha256": "5b628305c25ac13b2bb4020de96d072e3148701bb0e7635fbfe0b964ed7f0401"
+      }
+     ]
+    },
+    "method": {
+     "report_schema": "report-v1",
+     "prompt_version": "v1",
+     "question_set_version": "qs-v1",
+     "llm_model": "deepseek/deepseek-v4.1-flash",
+     "decision_model": "typesafe/jev-1.13",
+     "decision_input": "verified_quotes",
+     "methodology_table_version": "2026-10-15",
+     "pdf_extractor": "pymupdf 1.28.2"
+    },
+    "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+    "methodology_status": {
+     "code": "ACM0002",
+     "version": "12.1.0",
+     "status": "not_approved",
+     "summary": "In August 2024 ICVCM rejected current grid-connected renewable energy methodologies because their additionality tests were insufficiently rigorous.",
+     "sources": [
+      "https://icvcm.org/carbon-credits-from-current-renewable-energy-methodologies-will-not-receive-high-integrity-ccp-label/",
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker"
+     ],
+     "table_version": "2026-10-15"
+    },
+    "overall": 54,
+    "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+    "principles": [
+     {
+      "principle": "additionality",
+      "status": "strong_evidence",
+      "score": 89,
+      "rationale": "The document provides a benchmark investment analysis using WACC, project IRR without and with CDM revenues, sensitivity analysis, prior CDM consideration, and a baseline scenario. It states barrier analysis was not opted for. Evidence is specific and substantive, though it relies on the project proponent's own financial assumptions.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The IRR of the project activity without considering CDM benefits has been estimated to be 9.80 % which is lower in comparison to benchmark WACC of 11.45%.",
+        "page": 27,
+        "verification": "exact"
+       },
+       {
+        "text": "The returns from the project after considering CDM revenues give a project IRR of 11.54%. Thus, with CDM benefits the project becomes financially attractive in as much as the project IRR crosses the benchmark.",
+        "page": 32,
+        "verification": "exact"
+       },
+       {
+        "text": "The minutes of the meeting of the Board of Directors of JKHCL held on 2nd June 2003 clearly state that the CDM revenues were essential to mitigate various risks inherent to the project activity.",
+        "page": 13,
+        "verification": "exact"
+       },
+       {
+        "text": "The results of the sensitivity analysis as presented in the table above, confirms that the project IRR remains below the benchmark (i.e. 11.45%) even after reasonable variations in the critical assumptions.",
+        "page": 28,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": []
+     },
+     {
+      "principle": "robust_quantification",
+      "status": "partial_evidence",
+      "score": 54,
+      "rationale": "The excerpts set out ACM0002-based baseline/project emission equations, a combined-margin factor sourced ex-ante from the CEA database and described as conservative, a power-density calculation giving zero project emissions, and zero leakage. A monitoring team, training and periodic data review are described. No uncertainty or sensitivity analysis is shown in the excerpts, and specific ex-post QA/QC procedures for metered generation are not detailed.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The baseline emission factor used in the calculation of baseline emissions for the proposed project activity is being referred from the same for transparency and conservativeness41.",
+        "page": 45,
+        "verification": "exact"
+       },
+       {
+        "text": "The power density of the project activity is 1699.52 W/m2. Since the power density of the project is greater than 10 W/m2:  PEy = 0.",
+        "page": 49,
+        "verification": "exact"
+       },
+       {
+        "text": "Project participants do not need to consider these emission sources as leakage in applying this methodology. Project activities using ACM0002 shall not claim any credit for the project on account of reducing these emissions below the level of the baseline scenario.",
+        "page": 46,
+        "verification": "exact"
+       },
+       {
+        "text": "A CDM project team would be constituted with participation from relevant departments. People will be trained on CDM concept and monitoring plan.",
+        "page": 52,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "no_double_counting",
+      "status": "no_evidence",
+      "score": 0,
+      "rationale": "The excerpts list section headings for ownership and other programs, but the body text of sections 1.12.2-1.12.5 is absent. No statements address registration under other GHG programs, other environmental credits, emissions trading schemes, double issuance, or corresponding adjustments. Only a CDM PDD form and methodology references appear.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": []
+     },
+     {
+      "principle": "safeguards",
+      "status": "partial_evidence",
+      "score": 52,
+      "rationale": "The document provides an EIA by NEERI, an Environment Management Plan, and a third-party stakeholder consultation covering 45 villages, with separate interactions for women and tribal groups. It also records comments and responses. It does not explicitly detail FPIC or a formal grievance mechanism, but the evidence is substantive for assessment and mitigation.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The report, completed in 2005, reviews the legal and administrative framework for the EIA and then describes the project in all these aspects.",
+        "page": 56,
+        "verification": "exact"
+       },
+       {
+        "text": "JKHCL has devised an Environment Management Plan (EMP) which will combat all the adverse environmental impacts and will ensure environment friendly operation of Karcham-Wangtoo hydroelectric power project.",
+        "page": 58,
+        "verification": "exact"
+       },
+       {
+        "text": "However, JKHCL being a socially and environmentally responsible organization has endeavoured to do a detailed stakeholder consultation process with special emphasis on the socio-environmental impact of the project on the region.",
+        "page": 61,
+        "verification": "exact"
+       },
+       {
+        "text": "The team also made sure that men and women from both tribal and non-tribal households and all possible socio-economic groups were covered and their views documented.",
+        "page": 63,
+        "verification": "exact"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "VCS1728",
+   "name": "Bundled Wind Power Project by Mytrah Group",
+   "country": "India",
+   "category": "Onshore wind (ACM0002)",
+   "doc_type": "VCS Project Description",
+   "registry_url": "https://registry.verra.org/app/projectDetail/VCS/1728",
+   "methodology": "ACM0002",
+   "methodology_version": "17.0",
+   "reversal_risk": false,
+   "anchors": [
+    {
+     "version": 1,
+     "tx": "0x10517d55545dff3604a557e3cbd9b3ecc3f71ef8b7e96bd3ea94c0b63af2dc19",
+     "block": 11921937,
+     "report_hash": "0x88e9513b76589dcf784730fb3d1d348cb43a69aab1a2c9f057f1f42d142ebb51"
+    }
+   ],
+   "batches": [],
+   "report": {
+    "hash": "0x88e9513b76589dcf784730fb3d1d348cb43a69aab1a2c9f057f1f42d142ebb51",
+    "generated_at": "2026-10-15T17:22:11+00:00",
+    "document": {
+     "file_name": "VCS Joint PD  MR_Mytrah_V03_20122017_Clean.pdf",
+     "sha256": "5c879cd740a01ed857dbd050d40df237c7eb5168fffe173e0e34889190368f7c",
+     "pages": 75
+    },
+    "method": {
+     "report_schema": "report-v1",
+     "prompt_version": "v1",
+     "question_set_version": "qs-v1",
+     "llm_model": "deepseek/deepseek-v4.1-flash",
+     "decision_model": "typesafe/jev-1.13",
+     "decision_input": "verified_quotes",
+     "methodology_table_version": "2026-10-15",
+     "pdf_extractor": "pymupdf 1.28.2"
+    },
+    "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+    "methodology_status": {
+     "code": "ACM0002",
+     "version": "17.0",
+     "status": "not_approved",
+     "summary": "In August 2024 ICVCM rejected current grid-connected renewable energy methodologies because their additionality tests were insufficiently rigorous.",
+     "sources": [
+      "https://icvcm.org/carbon-credits-from-current-renewable-energy-methodologies-will-not-receive-high-integrity-ccp-label/",
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker"
+     ],
+     "table_version": "2026-10-15"
+    },
+    "overall": 52,
+    "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+    "principles": [
+     {
+      "principle": "additionality",
+      "status": "partial_evidence",
+      "score": 54,
+      "rationale": "The document presents a step-wise additionality demonstration: baseline alternatives, benchmark investment analysis using post-tax equity IRR against a 15.32% benchmark, sensitivity analysis on PLF, O&M, project cost and tariff, regulatory surplus, and a common practice analysis. It states the equity IRR is below the benchmark and that the activity is not common practice. IRR spreadsheets are referenced as submitted to the DOE rather than reproduced in the excerpts.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The Post tax Equity IRR is evaluated for the entire lifetime of the project activity, i.e. 25 years. It is calculated based on the cash outflows from and cash inflows into the project activity.",
+        "page": 38,
+        "verification": "exact"
+       },
+       {
+        "text": "The results of sensitivity analysis show that even with a variation of +10% & -10% in project cost, O&M cost, PLF and Tariff Rate Equity IRR is significantly lower than the benchmark.",
+        "page": 39,
+        "verification": "exact"
+       },
+       {
+        "text": "Thus, the proposed project activity is not a “common practice” within a sector in the applicable geographical area.",
+        "page": 42,
+        "verification": "exact"
+       },
+       {
+        "text": "Power generation using wind energy is not a legal requirement or a mandatory option.",
+        "page": 36,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": []
+     },
+     {
+      "principle": "robust_quantification",
+      "status": "partial_evidence",
+      "score": 61,
+      "rationale": "Document specifies CEA combined-margin factors, ex-ante OM/BM, zero project emissions, and a monitoring plan with QA/QC, data storage and archiving. Leakage calculation is not shown in the excerpts. These are specific quantification elements, though conservative choices beyond ex-ante are not detailed.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The combined margin (EFgrid, CM,y) is the result of a weighted average of two emission factor pertaining to the electricity system: the operating margin (OM) and build margin (BM).",
+        "page": 33,
+        "verification": "exact"
+       },
+       {
+        "text": "PP has chosen ex-ante option for calculation of Simple OM emission factor using a 3-year generation-weighted average, based on the most recent data available at the time of submission of the PD to the DOE for validation.",
+        "page": 45,
+        "verification": "exact"
+       },
+       {
+        "text": "As the project activity is the installation of a new grid-connected Wind Power plant and does not involve any project emissions from fossil fuel, operation of dry, flash steam or binary geothermal power plants, and from water reservoirs of hydro power plants.",
+        "page": 47,
+        "verification": "exact"
+       },
+       {
+        "text": "The monitoring plan, which will be implemented by the project participant describes about the monitoring organisation, parameters to be monitored, monitoring practices, quality assurance, quality control procedures, data storage and archiving.",
+        "page": 50,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "no_double_counting",
+      "status": "assertion_only",
+      "score": 36,
+      "rationale": "The document states reductions will not be used for emissions trading compliance and no intent to generate other environmental credits, and not rejected by other GHG programs. However, the section on participation under other GHG programs is empty, and no evidence of registration status under other programs or corresponding adjustments is provided. Therefore, evidence is assertion-based and incomplete.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "Net GHG emission reductions or removals generated by the Project will not be used for compliance with an emissions trading program or to meet binding limits on GHG emissions in any Emission Trading program or other binding limits.",
+        "page": 25,
+        "verification": "exact"
+       },
+       {
+        "text": "The Project has no intend to generate any other form of GHG-related environmental credit for GHG emission reductions or removals claimed under the VCS Program.",
+        "page": 25,
+        "verification": "exact"
+       },
+       {
+        "text": "The Project is not rejected by other GHG programs.",
+        "page": 25,
+        "verification": "exact"
+       }
+      ]
+     },
+     {
+      "principle": "safeguards",
+      "status": "partial_evidence",
+      "score": 50,
+      "rationale": "The excerpts show a local stakeholder consultation, a public comment period, a grievance register and ongoing communication mechanisms, but the substance is deferred to the DOE and no environmental impact assessment, biodiversity, indigenous/FPIC, labour or gender content appears. Section 5 headings exist in the table of contents only; no assessment detail is provided in the excerpts.",
+      "dropped_findings": 0,
+      "review_flags": [],
+      "quotes": [
+       {
+        "text": "The local stakeholder consultation for all the project activity instances have been carried out. The details of which are as follows: The Local Stakeholder consultation will be provided to DOE during validation of project activity.",
+        "page": 52,
+        "verification": "exact"
+       },
+       {
+        "text": "The PP also placed an grievance register onsite in where the stakeholder can put down his/her complain and the same if found genuine will be addressed immediately.",
+        "page": 53,
+        "verification": "exact"
+       },
+       {
+        "text": "The PP have established the mechanisms for ongoing communication with local stakeholders to allow stakeholders to raise concerns about potential negative impacts during project implementation.",
+        "page": 54,
+        "verification": "exact"
+       },
+       {
+        "text": "The project activity was published for public comment and few comments were received during the one month commenting period.",
+        "page": 53,
+        "verification": "exact"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "name": "Quillmere Freight",
+   "lei": "DCSU00021CXRPPEV3E59",
+   "fictional": true
+  },
+  {
+   "name": "Vantorra Cement",
+   "lei": "ZB3H004MFHPB120YSR90",
+   "fictional": true
+  },
+  {
+   "name": "Aerolune Airways",
+   "lei": "A0SV00374CY2SZDU1T58",
+   "fictional": true
+  },
+  {
+   "name": "Glimmerstack Data",
+   "lei": "ZBHF00O886J22OWMFQ76",
+   "fictional": true
+  },
+  {
+   "name": "Orchardine Retail",
+   "lei": "TT0I00D2J8FUSWPHFB10",
+   "fictional": true
+  },
+  {
+   "name": "Ferrowick Steel",
+   "lei": "Q0R700PUZ7C7PMM32577",
+   "fictional": true
+  }
+ ],
+ "anonymity": {
+  "undisclosed_share_to_2018": 0.4,
+  "undisclosed_share_2023_2026": 17.2,
+  "snapshot": "CarbonPlan OffsetsDB, 2026-06-01",
+  "source": "docs/anonymity_stats.md"
+ }
+}

@@ -207,6 +207,8 @@ sıfır bilgi kanıtı gerektirir (gelecek çalışma).
 | 3:55-4:20 | Etherscan | Doğrulanmış sözleşme ve işlemler |
 | 4:20-4:50 | Kapanış | Neden token yok, neden ZK değil, gerçek dünyada nasıl eklenir; sınırlar |
 
+Arayüz eşlemesi (16 Ekim): kalite raporu `/projects/VCS985` (rapor hash'i "Matches on-chain version 1, read live from Sepolia"), iptal `/retire` (önce 1001-3000 → "Already retired by retirement #2", işlem gönderilmez; sonra boş lotlar), denetçi `/auditor` (bekleyen #3 hazır: Vantorra Cement, 6/6 kontrol; "Attest verified" videoda basılır), seçici ifşa `/verify` (makbuz bırak → "Claim verified"). Çekimden önce: `uvicorn` (Sepolia) + `cd web && npm run build && npm start`; her iptal lotu Sepolia'da ~12 sn sürer, 5 lot ≈ 1 dk → videoda 2 lot göster ya da kurguda kısalt. Sahte makbuz denemesi: tuzu değiştir → commitment ve verifyClaim "Fail".
+
 ## 9. Söylemememiz gerekenler
 
 - "Kendi AI modelimiz" (Jev ve deepseek bizim değil).
@@ -220,6 +222,7 @@ sıfır bilgi kanıtı gerektirir (gelecek çalışma).
 - [x] Anonimlik oranı ve grafik (`docs/figures/anonymity_trend.png`)
 - [x] Sepolia adresi ve Etherscan bağlantıları (Bölüm 5)
 - [x] README son hâline yakın (15 Ekim; etiket sonuçları ve arayüz gelince güncellenecek)
-- [ ] Arayüz ekran görüntüleri (iş paketi 6)
+- [x] Arayüz gerçek veriye bağlandı (iş paketi 6)
+- [ ] Arayüz ekran görüntüleri
 - [ ] Mimari diyagram
 - [ ] Video metni (İngilizce) bu dosyadan çıkarılacak

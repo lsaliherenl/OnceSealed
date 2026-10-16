@@ -1,26 +1,317 @@
 @import "tailwindcss";
 
+/* next-themes puts `class="dark"` on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ------------------------------------------------------------------ */
+/* Design tokens (shadcn-style CSS variables)                          */
+/* ------------------------------------------------------------------ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ease-calm: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  --bg: #f3f4ef;
+  --surface: #ffffff;
+  --surface-2: #ecf0ea;
+  --text: #13201b;
+  --muted: #43504a;
+  --border: #d8e0db;
+  --border-strong: #b7c3bd;
+  --primary: #1e5c47;
+  --primary-hover: #174a39;
+  --primary-fg: #ffffff;
+  --primary-soft: #e2eee8;
+  --link: #1e5c47;
+  --seal: #2f4c7a;
+  --seal-soft: #e5ebf4;
+  --ok: #1d6a44;
+  --ok-soft: #dff0e5;
+  --warn: #835500;
+  --warn-soft: #fbefd6;
+  --risk: #963a12;
+  --risk-soft: #f8e5da;
+  --bad: #a02b2b;
+  --bad-soft: #f8e0e0;
+  --na: #56605b;
+  --na-soft: #e9edea;
+  --ring: #2f7a5e;
+  --strip-bg: #13201b;
+  --strip-fg: #dce6e1;
+
+  /* Background landscape */
+  --sky-top: #e1eae3;
+  --sky-bot: #f2efe1;
+  --sun: #f3cf86;
+  --sun-o: 0.75;
+  --m1: #c8d6cc;
+  --m2: #b3c6ba;
+  --m3: #98b0a2;
+  --m4: #6f8e7e;
+  --river: #f5f2e6;
+  --mist: #ffffff;
+  --mist-o: 0.65;
+  --bird: #5d7b6c;
+
+  /* Side rail */
+  --rail: #1c2f28;
+  --rail-fg: #c3d3ca;
+  --rail-hover: rgb(255 255 255 / 0.08);
+  --rail-active: #e2eee8;
+  --rail-active-fg: #1e5c47;
+}
+
+.dark {
+  --bg: #0d1311;
+  --surface: #131b18;
+  --surface-2: #1a2420;
+  --text: #e3eae6;
+  --muted: #9aaaa3;
+  --border: #25322d;
+  --border-strong: #3a4a43;
+  --primary: #6bc39e;
+  --primary-hover: #86d2b1;
+  --primary-fg: #08110d;
+  --primary-soft: #16302a;
+  --link: #8ad3b3;
+  --seal: #a3b9e2;
+  --seal-soft: #192334;
+  --ok: #7cd1a2;
+  --ok-soft: #14301f;
+  --warn: #e6b657;
+  --warn-soft: #33270e;
+  --risk: #ef9a6c;
+  --risk-soft: #3a2016;
+  --bad: #f08a8a;
+  --bad-soft: #3a1919;
+  --na: #a5b0ab;
+  --na-soft: #1f2925;
+  --ring: #6bc39e;
+  --strip-bg: #1a2420;
+  --strip-fg: #c6d2cc;
+
+  --sky-top: #0b1210;
+  --sky-bot: #17231e;
+  --sun: #cfe3d8;
+  --sun-o: 0.12;
+  --m1: #263832;
+  --m2: #1e2d27;
+  --m3: #16231e;
+  --m4: #0f1714;
+  --river: #34493f;
+  --mist: #3a4f47;
+  --mist-o: 0.3;
+  --bird: #4a6158;
+
+  --rail: #111a17;
+  --rail-fg: #9aaaa3;
+  --rail-hover: rgb(255 255 255 / 0.06);
+  --rail-active: #6bc39e;
+  --rail-active-fg: #08110d;
+  color-scheme: dark;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --color-card: var(--surface);
+  --color-secondary: var(--surface-2);
+  --color-muted-foreground: var(--muted);
+  --color-border: var(--border);
+  --color-input: var(--border-strong);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-fg);
+  --color-primary-soft: var(--primary-soft);
+  --color-link: var(--link);
+  --color-seal: var(--seal);
+  --color-seal-soft: var(--seal-soft);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-risk: var(--risk);
+  --color-risk-soft: var(--risk-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-na: var(--na);
+  --color-na-soft: var(--na-soft);
+  --color-strip: var(--strip-bg);
+  --color-strip-foreground: var(--strip-fg);
+  --color-rail: var(--rail);
+  --color-rail-foreground: var(--rail-fg);
+  --color-rail-hover: var(--rail-hover);
+  --color-rail-active: var(--rail-active);
+  --color-rail-active-foreground: var(--rail-active-fg);
+
+  --animate-rise: rise 0.7s var(--ease-calm) backwards;
+  --animate-rise-fast: rise 0.5s var(--ease-calm) backwards;
+  --animate-fade: fade 0.5s ease backwards;
+  --animate-grow: grow 1.2s var(--ease-calm) backwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+@keyframes layer {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+@keyframes drift {
+  from {
+    transform: translateX(-70px);
+  }
+  to {
+    transform: translateX(70px);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Staggered entrance: set `--i` inline (see staggerStyle in lib/utils). */
+@utility stagger {
+  animation-delay: calc(var(--i, 0) * 70ms + 250ms);
+}
+@utility stagger-slow {
+  animation-delay: calc(var(--i, 0) * 90ms + 500ms);
+}
+
+@layer base {
+  html,
+  body {
+    background-color: var(--bg);
+  }
+  body {
+    @apply text-foreground font-sans antialiased;
+    font-size: 15px;
+    line-height: 1.55;
+    transition: background-color 0.35s ease, color 0.35s ease;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  a {
+    color: var(--link);
+  }
+  a:hover {
+    color: var(--text);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Page transitions                                                    */
+/* ------------------------------------------------------------------ */
+.page-stage {
+  transition: opacity 0.22s ease, transform 0.22s ease, filter 0.22s ease;
+}
+html[data-leaving] .page-stage {
+  opacity: 0;
+  transform: translateY(-6px);
+  filter: blur(3px);
+}
+/* Each top-level block of a page rises in, one after another. */
+.reveal > * {
+  animation: rise 0.7s var(--ease-calm) backwards;
+}
+.reveal > *:nth-child(2) { animation-delay: 0.08s; }
+.reveal > *:nth-child(3) { animation-delay: 0.16s; }
+.reveal > *:nth-child(4) { animation-delay: 0.24s; }
+.reveal > *:nth-child(5) { animation-delay: 0.32s; }
+.reveal > *:nth-child(n + 6) { animation-delay: 0.4s; }
+
+/* ------------------------------------------------------------------ */
+/* Background landscape                                                */
+/* ------------------------------------------------------------------ */
+.scene .l1 { animation: layer 1.8s var(--ease-calm) backwards; }
+.scene .l2 { animation: layer 1.8s 0.08s var(--ease-calm) backwards; }
+.scene .l3 { animation: layer 1.8s 0.16s var(--ease-calm) backwards; }
+.scene .l4 { animation: layer 1.8s 0.24s var(--ease-calm) backwards; }
+.scene .mist-a {
+  opacity: var(--mist-o);
+  animation: drift 36s ease-in-out infinite alternate;
+}
+.scene .mist-b {
+  opacity: var(--mist-o);
+  animation: drift 48s ease-in-out -12s infinite alternate-reverse;
+}
+.scene .sun {
+  opacity: var(--sun-o);
+  animation: fade 2.4s ease backwards, breathe 9s ease-in-out 2.4s infinite alternate;
+  transition: opacity 0.5s ease;
+}
+.scene .birds {
+  animation: fade 2s 0.6s ease backwards, float 7s ease-in-out infinite alternate;
+}
+.scene rect,
+.scene path,
+.scene ellipse,
+.scene circle {
+  transition: fill 0.5s ease, stroke 0.5s ease;
+}
+@keyframes breathe {
+  to {
+    transform: scale(1.06);
+  }
+}
+@keyframes float {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(18px, -8px);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Scrollbar                                                           */
+/* ------------------------------------------------------------------ */
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+::-webkit-scrollbar-thumb {
+  background-color: rgb(30 92 71 / 0.3);
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
+  min-height: 48px;
+}
+::-webkit-scrollbar-thumb:hover { background-color: rgb(30 92 71 / 0.55); }
+::-webkit-scrollbar-thumb:active { background-color: rgb(30 92 71 / 0.7); }
+.dark ::-webkit-scrollbar-thumb { background-color: rgb(107 195 158 / 0.28); }
+.dark ::-webkit-scrollbar-thumb:hover { background-color: rgb(107 195 158 / 0.5); }
+.dark ::-webkit-scrollbar-thumb:active { background-color: rgb(107 195 158 / 0.65); }
+@supports not selector(::-webkit-scrollbar) {
+  html { scrollbar-width: thin; scrollbar-color: rgb(30 92 71 / 0.4) transparent; }
+  html.dark { scrollbar-color: rgb(107 195 158 / 0.4) transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  html[data-leaving] .page-stage {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
 }

@@ -23,6 +23,28 @@ jobs:
           version: v1.8.5
       - name: Unit and end-to-end tests (local anvil, no API calls)
         run: python -m pytest -q
+      - name: Web data matches the repository (run scripts/export_web_data.py after changes)
+        run: |
+          python scripts/export_web_data.py
+          git diff --exit-code web/src/data/site.json
+
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - name: Lint
+        run: npx eslint src
+      - name: Build (type-checks and prerenders every page)
+        run: npm run build
 
   contracts:
     runs-on: ubuntu-latest
