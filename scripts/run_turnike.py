@@ -1,12 +1,14 @@
 """D1: answer the checklist with Turnike-JEV-4B (the teammate's decision model) on the same excerpts as Jev and the LLM.
 
-Runs in its own environment (torch + transformers 5.x), not the project venv:
+Runs in its own Linux environment (torch + transformers 5.x), not the project venv. Native Windows builds of
+PyTorch lack the row-wise FP8 matmul kernel, so on Windows use WSL2 (tested: RTX 4060 Laptop, sm_89):
 
-    uv venv .venv-turnike --python 3.12
-    uv pip install --python .venv-turnike/Scripts/python.exe torch --index-url https://download.pytorch.org/whl/cu128
-    uv pip install --python .venv-turnike/Scripts/python.exe "transformers>=5.17,<6" "peft>=0.21" safetensors accelerate torchao
-    .venv-turnike/Scripts/python.exe scripts/run_turnike.py --fp8          # FP8 weights, ~4.5 GB GPU (sm_89+)
-    python scripts/run_turnike.py --bf16                                    # merged bf16 weights, ~9 GB GPU (Colab)
+    uv venv ~/turnike-venv --python 3.12
+    uv pip install --python ~/turnike-venv/bin/python torch --index-url https://download.pytorch.org/whl/cu128
+    uv pip install --python ~/turnike-venv/bin/python "transformers>=5.17,<6" "peft>=0.21" safetensors accelerate torchao
+    HF_HOME=/mnt/c/Users/<you>/.cache/huggingface ~/turnike-venv/bin/python scripts/run_turnike.py --fp8
+                                            # FP8 weights, ~4.5 GB GPU (sm_89+); HF_HOME reuses a Windows download
+    python scripts/run_turnike.py --bf16    # merged bf16 weights, ~9 GB GPU (e.g. Colab)
 
 Reads data/eval/reranker_inputs.jsonl (scripts/export_reranker_inputs.py) and writes
 data/eval/answers_turnike_fp8.json or answers_turnike_bf16.json in the shape scripts/eval_metrics.py expects.
