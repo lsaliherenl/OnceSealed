@@ -39,7 +39,7 @@ function Tooltip({ children }: { children: React.ReactNode }) {
   );
 }
 
-function RailThemeToggle({ className }: { className?: string }) {
+function RailThemeToggle({ className, tooltip = true }: { className?: string; tooltip?: boolean }) {
   const { resolvedTheme, setTheme } = useTheme();
   return (
     <button
@@ -50,7 +50,7 @@ function RailThemeToggle({ className }: { className?: string }) {
     >
       <Sun aria-hidden className="hidden dark:block" />
       <Moon aria-hidden className="dark:hidden" />
-      <Tooltip>Light / dark</Tooltip>
+      {tooltip && <Tooltip>Light / dark</Tooltip>}
     </button>
   );
 }
@@ -118,7 +118,7 @@ export function SideRail() {
             <item.icon aria-hidden />
           </TransitionLink>
         ))}
-        <RailThemeToggle />
+        <RailThemeToggle tooltip={false} />
       </nav>
     </>
   );
