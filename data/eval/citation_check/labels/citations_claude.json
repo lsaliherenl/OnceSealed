@@ -1,0 +1,760 @@
+{
+ "annotator": "Claude Opus 5.5",
+ "kind": "ai",
+ "version": "citation-check-v1",
+ "note": "Labelled from units.json before opening key.json. Claude built the tool (knows how the set was made, not which unit is which), so these labels are AI-judged; a human spot check is recorded separately.",
+ "exported_at": "2026-10-19T16:43:25+00:00",
+ "answered": 107,
+ "total": 107,
+ "labels": [
+  {
+   "uid": "c001",
+   "question_id": "D1",
+   "paragraph_id": "p26-02",
+   "answer": "no",
+   "reason": "Only 'rejected under other GHG programs: not applicable'; the registration answer before it is cut off (R2)."
+  },
+  {
+   "uid": "c002",
+   "question_id": "S2",
+   "paragraph_id": "p56-04",
+   "answer": "no",
+   "reason": "Section heading only."
+  },
+  {
+   "uid": "c003",
+   "question_id": "S3",
+   "paragraph_id": "p191-02",
+   "answer": "no",
+   "reason": "Describes the complaint process, not an environmental impact assessment."
+  },
+  {
+   "uid": "c004",
+   "question_id": "D1",
+   "paragraph_id": "p96-23",
+   "answer": "no",
+   "reason": "The question is quoted but not answered (R2)."
+  },
+  {
+   "uid": "c005",
+   "question_id": "Q4",
+   "paragraph_id": "x1-p60-11",
+   "answer": "yes",
+   "reason": "Names what is monitored (disposal areas, land use) and the method (satellite imagery); lenient reading as in the gold set."
+  },
+  {
+   "uid": "c006",
+   "question_id": "A2",
+   "paragraph_id": "p5-03",
+   "answer": "no",
+   "reason": "Equipment description; technology availability is not common practice of the activity."
+  },
+  {
+   "uid": "c007",
+   "question_id": "P2",
+   "paragraph_id": "p25-02",
+   "answer": "yes",
+   "reason": "8.5% buffer requirement; 10% VCS buffer held."
+  },
+  {
+   "uid": "c008",
+   "question_id": "A1",
+   "paragraph_id": "p100-26",
+   "answer": "no",
+   "reason": "Tool name only."
+  },
+  {
+   "uid": "c009",
+   "question_id": "P1",
+   "paragraph_id": "p57-16",
+   "answer": "no",
+   "reason": "Training on risk assessment is not a reversal risk assessment."
+  },
+  {
+   "uid": "c010",
+   "question_id": "Q1",
+   "paragraph_id": "p61-02",
+   "answer": "no",
+   "reason": "Purpose 'calculation of baseline emissions' but no equation, value or result."
+  },
+  {
+   "uid": "c011",
+   "question_id": "A2",
+   "paragraph_id": "p40-05",
+   "answer": "yes",
+   "reason": "Describes the common practice analysis (step 1), more than a heading."
+  },
+  {
+   "uid": "c012",
+   "question_id": "S1",
+   "paragraph_id": "p23-06",
+   "answer": "yes",
+   "reason": "Consultation meetings with dates and places."
+  },
+  {
+   "uid": "c013",
+   "question_id": "S2",
+   "paragraph_id": "p56-05",
+   "answer": "no",
+   "reason": "Grievance procedure still being formalised; the steps are cut off (R2)."
+  },
+  {
+   "uid": "c014",
+   "question_id": "A1",
+   "paragraph_id": "p69-15",
+   "answer": "yes",
+   "reason": "Equity IRR 8.69% vs benchmark 15.32%."
+  },
+  {
+   "uid": "c015",
+   "question_id": "Q1",
+   "paragraph_id": "p50-20",
+   "answer": "yes",
+   "reason": "Baseline parameter value: emission factor 112 tCO2e/TJ."
+  },
+  {
+   "uid": "c016",
+   "question_id": "P1",
+   "paragraph_id": "p241-16",
+   "answer": "yes",
+   "reason": "Non-permanence risk tool, rating and buffer 14%."
+  },
+  {
+   "uid": "c017",
+   "question_id": "Q2",
+   "paragraph_id": "p9-13",
+   "answer": "yes",
+   "reason": "States there is no leakage beyond the methodology's requirement, hence no plan (brief justification)."
+  },
+  {
+   "uid": "c018",
+   "question_id": "A2",
+   "paragraph_id": "p42-07",
+   "answer": "no",
+   "reason": "Prevalence of oil palm as a baseline land use, not common practice of the project activity."
+  },
+  {
+   "uid": "c019",
+   "question_id": "Q2",
+   "paragraph_id": "p155-03",
+   "answer": "yes",
+   "reason": "Leakage quantified (activity leakage zero, results in Table 31)."
+  },
+  {
+   "uid": "c020",
+   "question_id": "Q1",
+   "paragraph_id": "p46-11",
+   "answer": "yes",
+   "reason": "Combined-margin baseline emission factor equation."
+  },
+  {
+   "uid": "c021",
+   "question_id": "A4",
+   "paragraph_id": "x1-p13-07",
+   "answer": "yes",
+   "reason": "Board considered CDM in June 2003 (date and board)."
+  },
+  {
+   "uid": "c022",
+   "question_id": "Q2",
+   "paragraph_id": "p35-11",
+   "answer": "no",
+   "reason": "Baseline alternatives; leakage not discussed."
+  },
+  {
+   "uid": "c023",
+   "question_id": "S2",
+   "paragraph_id": "p24-08",
+   "answer": "no",
+   "reason": "Gender SDG indicator, not a grievance mechanism."
+  },
+  {
+   "uid": "c024",
+   "question_id": "D2",
+   "paragraph_id": "p21-05",
+   "answer": "yes",
+   "reason": "Not included in an emissions trading program."
+  },
+  {
+   "uid": "c025",
+   "question_id": "A1",
+   "paragraph_id": "p118-21",
+   "answer": "yes",
+   "reason": "Equity IRR 9.51% vs benchmark 15.32%."
+  },
+  {
+   "uid": "c026",
+   "question_id": "D2",
+   "paragraph_id": "p26-02",
+   "answer": "no",
+   "reason": "About rejection by other GHG programs, not other credits or trading schemes."
+  },
+  {
+   "uid": "c027",
+   "question_id": "Q3",
+   "paragraph_id": "p152-04",
+   "answer": "yes",
+   "reason": "Conservative assumption on carbon stock of disturbed forest."
+  },
+  {
+   "uid": "c028",
+   "question_id": "Q1",
+   "paragraph_id": "p122-02",
+   "answer": "yes",
+   "reason": "Baseline equation BEy = BECH4,y + BEN2O,y, electricity part set to 0 conservatively."
+  },
+  {
+   "uid": "c029",
+   "question_id": "A2",
+   "paragraph_id": "p42-06",
+   "answer": "yes",
+   "reason": "Common practice analysis naming similar projects in Uganda."
+  },
+  {
+   "uid": "c030",
+   "question_id": "P3",
+   "paragraph_id": "p20-02",
+   "answer": "no",
+   "reason": "Tree species descriptions."
+  },
+  {
+   "uid": "c031",
+   "question_id": "A1",
+   "paragraph_id": "p41-10",
+   "answer": "yes",
+   "reason": "IRR 5.38% vs benchmark 9.5%."
+  },
+  {
+   "uid": "c032",
+   "question_id": "Q1",
+   "paragraph_id": "p123-13",
+   "answer": "no",
+   "reason": "Heading of a leakage equation; no baseline equation shown."
+  },
+  {
+   "uid": "c033",
+   "question_id": "D2",
+   "paragraph_id": "x1-p32-01",
+   "answer": "no",
+   "reason": "Investment and common practice analysis; no other credits or trading schemes."
+  },
+  {
+   "uid": "c034",
+   "question_id": "Q3",
+   "paragraph_id": "x1-p45-04",
+   "answer": "yes",
+   "reason": "Emission factor source chosen for transparency and conservativeness (stated conservative choice)."
+  },
+  {
+   "uid": "c035",
+   "question_id": "D3",
+   "paragraph_id": "p80-04",
+   "answer": "yes",
+   "reason": "Alignment with the national carbon trading framework and Indonesia's NDC."
+  },
+  {
+   "uid": "c036",
+   "question_id": "A2",
+   "paragraph_id": "p44-02",
+   "answer": "no",
+   "reason": "Announces the common practice analysis; content not shown."
+  },
+  {
+   "uid": "c037",
+   "question_id": "Q2",
+   "paragraph_id": "x1-p46-10",
+   "answer": "yes",
+   "reason": "Leakage nil, with the methodology's reasoning."
+  },
+  {
+   "uid": "c038",
+   "question_id": "Q1",
+   "paragraph_id": "p19-03",
+   "answer": "no",
+   "reason": "Net emission reduction equation, not how baseline emissions are calculated."
+  },
+  {
+   "uid": "c039",
+   "question_id": "S3",
+   "paragraph_id": "p39-13",
+   "answer": "yes",
+   "reason": "Analyses human-induced risks to biodiversity (hunting): an environmental risk analysis."
+  },
+  {
+   "uid": "c040",
+   "question_id": "A1",
+   "paragraph_id": "p33-02",
+   "answer": "no",
+   "reason": "Deforestation statistics; no financial indicator."
+  },
+  {
+   "uid": "c041",
+   "question_id": "A2",
+   "paragraph_id": "p42-05",
+   "answer": "yes",
+   "reason": "Concludes the activity is not common practice."
+  },
+  {
+   "uid": "c042",
+   "question_id": "S2",
+   "paragraph_id": "p32-05",
+   "answer": "yes",
+   "reason": "Formal complaint process via email or telephone."
+  },
+  {
+   "uid": "c043",
+   "question_id": "Q4",
+   "paragraph_id": "p33-02",
+   "answer": "no",
+   "reason": "Baseline emission factor description, not a monitoring plan."
+  },
+  {
+   "uid": "c044",
+   "question_id": "D3",
+   "paragraph_id": "p68-08",
+   "answer": "no",
+   "reason": "Other trading or credit programs, not national accounting."
+  },
+  {
+   "uid": "c045",
+   "question_id": "D2",
+   "paragraph_id": "p68-16",
+   "answer": "no",
+   "reason": "Other GHG programs, not other credits or trading schemes."
+  },
+  {
+   "uid": "c046",
+   "question_id": "Q4",
+   "paragraph_id": "x1-p60-12",
+   "answer": "no",
+   "reason": "Indicators named but frequency left to a committee; no method or frequency."
+  },
+  {
+   "uid": "c047",
+   "question_id": "Q1",
+   "paragraph_id": "x1-p40-02",
+   "answer": "no",
+   "reason": "Variable definitions only; consistent with the adjudicated VCS1742 Q1."
+  },
+  {
+   "uid": "c048",
+   "question_id": "A1",
+   "paragraph_id": "p36-06",
+   "answer": "no",
+   "reason": "No financial analysis."
+  },
+  {
+   "uid": "c049",
+   "question_id": "S3",
+   "paragraph_id": "p31-10",
+   "answer": "yes",
+   "reason": "No listed activity requiring an EIA under NEMA (EIA not required, with reason)."
+  },
+  {
+   "uid": "c050",
+   "question_id": "Q2",
+   "paragraph_id": "p48-16",
+   "answer": "yes",
+   "reason": "Net gross leakage factor 0.95."
+  },
+  {
+   "uid": "c051",
+   "question_id": "S1",
+   "paragraph_id": "p208-09",
+   "answer": "yes",
+   "reason": "Socio-economic survey in named community clusters with the priorities raised (place and comments)."
+  },
+  {
+   "uid": "c052",
+   "question_id": "S3",
+   "paragraph_id": "p41-03",
+   "answer": "no",
+   "reason": "General statements of benefit, no risk analysis."
+  },
+  {
+   "uid": "c053",
+   "question_id": "S4",
+   "paragraph_id": "p29-03",
+   "answer": "yes",
+   "reason": "FPIC process, consent at distribution, no displacement."
+  },
+  {
+   "uid": "c054",
+   "question_id": "D3",
+   "paragraph_id": "p22-03",
+   "answer": "no",
+   "reason": "Registration in other GHG programs, not national accounting."
+  },
+  {
+   "uid": "c055",
+   "question_id": "D2",
+   "paragraph_id": "p45-02",
+   "answer": "no",
+   "reason": "Common practice analysis."
+  },
+  {
+   "uid": "c056",
+   "question_id": "S3",
+   "paragraph_id": "p34-05",
+   "answer": "yes",
+   "reason": "Explains why biodiversity and HCV ecosystems are not affected (brief environmental risk analysis)."
+  },
+  {
+   "uid": "c057",
+   "question_id": "S4",
+   "paragraph_id": "p171-01",
+   "answer": "no",
+   "reason": "Biodiversity effects, not community rights."
+  },
+  {
+   "uid": "c058",
+   "question_id": "S2",
+   "paragraph_id": "p35-02",
+   "answer": "no",
+   "reason": "Community data collection process, not a grievance mechanism."
+  },
+  {
+   "uid": "c059",
+   "question_id": "P1",
+   "paragraph_id": "p25-02",
+   "answer": "yes",
+   "reason": "Non-permanence risk tool and rating."
+  },
+  {
+   "uid": "c060",
+   "question_id": "S1",
+   "paragraph_id": "p32-04",
+   "answer": "no",
+   "reason": "Environmental permitting, not a stakeholder consultation."
+  },
+  {
+   "uid": "c061",
+   "question_id": "D1",
+   "paragraph_id": "p22-03",
+   "answer": "yes",
+   "reason": "Neither registered nor seeking registration under any other GHG program."
+  },
+  {
+   "uid": "c062",
+   "question_id": "Q2",
+   "paragraph_id": "p46-08",
+   "answer": "yes",
+   "reason": "Leakage default factor 0.95."
+  },
+  {
+   "uid": "c063",
+   "question_id": "A3",
+   "paragraph_id": "p13-03",
+   "answer": "yes",
+   "reason": "Not required by any local, regional or national regulation."
+  },
+  {
+   "uid": "c064",
+   "question_id": "Q2",
+   "paragraph_id": "p67-14",
+   "answer": "no",
+   "reason": "'Leakage is not applicable' without a reason."
+  },
+  {
+   "uid": "c065",
+   "question_id": "S3",
+   "paragraph_id": "p291-02",
+   "answer": "yes",
+   "reason": "Risk assessment of pollution, waste and spills with mitigation."
+  },
+  {
+   "uid": "c066",
+   "question_id": "P2",
+   "paragraph_id": "p241-16",
+   "answer": "yes",
+   "reason": "Buffer 14%."
+  },
+  {
+   "uid": "c067",
+   "question_id": "Q3",
+   "paragraph_id": "p340-07",
+   "answer": "no",
+   "reason": "Biodiversity monitoring methods, not uncertainty of the emission estimate."
+  },
+  {
+   "uid": "c068",
+   "question_id": "A2",
+   "paragraph_id": "p112-03",
+   "answer": "yes",
+   "reason": "Common practice analysis and conclusion."
+  },
+  {
+   "uid": "c069",
+   "question_id": "A2",
+   "paragraph_id": "x1-p32-01",
+   "answer": "yes",
+   "reason": "Common practice analysis with hydro shares."
+  },
+  {
+   "uid": "c070",
+   "question_id": "A3",
+   "paragraph_id": "p52-06",
+   "answer": "yes",
+   "reason": "Voluntary, not mandated by any law."
+  },
+  {
+   "uid": "c071",
+   "question_id": "A1",
+   "paragraph_id": "x1-p27-02",
+   "answer": "yes",
+   "reason": "IRR 9.80% vs benchmark WACC 11.45%."
+  },
+  {
+   "uid": "c072",
+   "question_id": "A2",
+   "paragraph_id": "p33-02",
+   "answer": "no",
+   "reason": "Deforestation statistics, not common practice."
+  },
+  {
+   "uid": "c073",
+   "question_id": "Q1",
+   "paragraph_id": "x1-p49-04",
+   "answer": "yes",
+   "reason": "Baseline emission factor 803.1 tCO2/GWh, BEy = EFy x EGy, result."
+  },
+  {
+   "uid": "c074",
+   "question_id": "S2",
+   "paragraph_id": "p2-24",
+   "answer": "no",
+   "reason": "Table of contents entry."
+  },
+  {
+   "uid": "c075",
+   "question_id": "Q1",
+   "paragraph_id": "p33-03",
+   "answer": "yes",
+   "reason": "Baseline emission factor 0.9653 tCO2/MWh."
+  },
+  {
+   "uid": "c076",
+   "question_id": "Q4",
+   "paragraph_id": "p57-05",
+   "answer": "yes",
+   "reason": "Meters, calibration once in 5 years, monthly cross-check."
+  },
+  {
+   "uid": "c077",
+   "question_id": "S3",
+   "paragraph_id": "p2-25",
+   "answer": "no",
+   "reason": "Table of contents entry."
+  },
+  {
+   "uid": "c078",
+   "question_id": "A3",
+   "paragraph_id": "p60-02",
+   "answer": "yes",
+   "reason": "Completely voluntary; no regulatory obligation."
+  },
+  {
+   "uid": "c079",
+   "question_id": "Q1",
+   "paragraph_id": "p62-02",
+   "answer": "yes",
+   "reason": "Baseline carbon stock 5.2 tC/ha over 8,593 ha."
+  },
+  {
+   "uid": "c080",
+   "question_id": "S4",
+   "paragraph_id": "p28-11",
+   "answer": "no",
+   "reason": "Requirement text ('shall'), not the project's statement (R1)."
+  },
+  {
+   "uid": "c081",
+   "question_id": "P2",
+   "paragraph_id": "p30-01",
+   "answer": "no",
+   "reason": "Map caption."
+  },
+  {
+   "uid": "c082",
+   "question_id": "A3",
+   "paragraph_id": "p36-10",
+   "answer": "yes",
+   "reason": "No law mandates anaerobic digestion or treatment."
+  },
+  {
+   "uid": "c083",
+   "question_id": "Q3",
+   "paragraph_id": "p62-02",
+   "answer": "yes",
+   "reason": "Conservative carbon stock value; pools conservatively zero."
+  },
+  {
+   "uid": "c084",
+   "question_id": "A2",
+   "paragraph_id": "p3-02",
+   "answer": "no",
+   "reason": "Project summary; nothing on common practice."
+  },
+  {
+   "uid": "c085",
+   "question_id": "Q1",
+   "paragraph_id": "p123-12",
+   "answer": "no",
+   "reason": "Leakage belt estimate (leakage), not the baseline emissions calculation."
+  },
+  {
+   "uid": "c086",
+   "question_id": "D2",
+   "paragraph_id": "p80-03",
+   "answer": "no",
+   "reason": "National registry and carbon exchange regulation, but no explicit statement on other credits or ETS participation."
+  },
+  {
+   "uid": "c087",
+   "question_id": "A3",
+   "paragraph_id": "p36-04",
+   "answer": "yes",
+   "reason": "Wind power is not a legal requirement."
+  },
+  {
+   "uid": "c088",
+   "question_id": "S2",
+   "paragraph_id": "p343-06",
+   "answer": "no",
+   "reason": "Engagement channels for biodiversity, not a grievance mechanism."
+  },
+  {
+   "uid": "c089",
+   "question_id": "Q4",
+   "paragraph_id": "p19-02",
+   "answer": "no",
+   "reason": "Leakage statement, not a monitoring plan."
+  },
+  {
+   "uid": "c090",
+   "question_id": "S4",
+   "paragraph_id": "p32-19",
+   "answer": "yes",
+   "reason": "Rights of indigenous peoples and local communities, FPIC."
+  },
+  {
+   "uid": "c091",
+   "question_id": "Q2",
+   "paragraph_id": "p132-04",
+   "answer": "yes",
+   "reason": "Leakage terms calculated by named equations (method, R7)."
+  },
+  {
+   "uid": "c092",
+   "question_id": "S4",
+   "paragraph_id": "p300-02",
+   "answer": "yes",
+   "reason": "Community land management rights and benefit sharing."
+  },
+  {
+   "uid": "c093",
+   "question_id": "Q3",
+   "paragraph_id": "p16-02",
+   "answer": "no",
+   "reason": "Methane calculation; no uncertainty or conservativeness."
+  },
+  {
+   "uid": "c094",
+   "question_id": "D3",
+   "paragraph_id": "p46-02",
+   "answer": "no",
+   "reason": "Common practice sub-step."
+  },
+  {
+   "uid": "c095",
+   "question_id": "D2",
+   "paragraph_id": "p97-15",
+   "answer": "no",
+   "reason": "Heading only."
+  },
+  {
+   "uid": "c096",
+   "question_id": "S4",
+   "paragraph_id": "p300-03",
+   "answer": "yes",
+   "reason": "FPIC processes and community rights."
+  },
+  {
+   "uid": "c097",
+   "question_id": "Q3",
+   "paragraph_id": "p30-05",
+   "answer": "no",
+   "reason": "Baseline alternatives."
+  },
+  {
+   "uid": "c098",
+   "question_id": "D3",
+   "paragraph_id": "p80-03",
+   "answer": "yes",
+   "reason": "National registry (SRN) and NDC accounting."
+  },
+  {
+   "uid": "c099",
+   "question_id": "Q1",
+   "paragraph_id": "p139-10",
+   "answer": "yes",
+   "reason": "Baseline carbon stock change equation."
+  },
+  {
+   "uid": "c100",
+   "question_id": "Q3",
+   "paragraph_id": "p14-03",
+   "answer": "yes",
+   "reason": "Discusses effects of deviations on conservativeness."
+  },
+  {
+   "uid": "c101",
+   "question_id": "A2",
+   "paragraph_id": "p121-06",
+   "answer": "no",
+   "reason": "Plantation expansion in the baseline, not common practice of the activity."
+  },
+  {
+   "uid": "c102",
+   "question_id": "P1",
+   "paragraph_id": "p26-01",
+   "answer": "no",
+   "reason": "Zone definitions."
+  },
+  {
+   "uid": "c103",
+   "question_id": "Q1",
+   "paragraph_id": "p50-31",
+   "answer": "yes",
+   "reason": "Baseline biomass consumption 5.49 t/year."
+  },
+  {
+   "uid": "c104",
+   "question_id": "Q3",
+   "paragraph_id": "p161-12",
+   "answer": "yes",
+   "reason": "Uncertainty 0.262% vs 15% threshold."
+  },
+  {
+   "uid": "c105",
+   "question_id": "Q1",
+   "paragraph_id": "p68-03",
+   "answer": "no",
+   "reason": "Survey quality procedures, not a baseline calculation."
+  },
+  {
+   "uid": "c106",
+   "question_id": "S1",
+   "paragraph_id": "p71-02",
+   "answer": "yes",
+   "reason": "Meeting with a named community on 27 November 2007."
+  },
+  {
+   "uid": "c107",
+   "question_id": "Q3",
+   "paragraph_id": "p29-14",
+   "answer": "no",
+   "reason": "Requirements of a tool, not the project's uncertainty or conservativeness."
+  }
+ ]
+}

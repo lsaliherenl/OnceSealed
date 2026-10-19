@@ -19,6 +19,7 @@ import { staggerStyle } from "@/lib/utils";
 export const metadata: Metadata = { title: "Project quality" };
 
 const STATUSES = Object.keys(ICVCM_LABEL) as IcvcmStatus[];
+const SCORES = PROJECTS.flatMap((p) => (p.report ? [p.report.overall] : []));
 
 export default function ProjectsPage() {
   const shown = STATUSES.filter((s) => PROJECTS.some((p) => p.report?.methodology_status.status === s));
@@ -116,7 +117,8 @@ export default function ProjectsPage() {
           </ul>
         </Card>
         <p className="text-[13px] text-muted-foreground">
-          Overall scores cluster between 52 and 65; the per-principle findings carry more information than the total.
+          Overall scores range from {Math.min(...SCORES)} to {Math.max(...SCORES)}; the per-principle findings carry more
+          information than the total.
           A document can evidence a principle well while ICVCM still rejects its methodology, which is why the two are
           shown apart.
         </p>

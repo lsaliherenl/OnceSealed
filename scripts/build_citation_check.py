@@ -1,6 +1,7 @@
 """Build the citation check: is the paragraph the model cited really evidence for the question?
 
     python scripts/build_citation_check.py
+    python scripts/build_citation_check.py --spot 20   # random subset for a human check of AI labels
 
 On 30,000-character excerpts (scripts/experiment_long_excerpt.py) the checklist answered "yes" on questions that
 were "no" in the gold set's 2,500-character excerpts, each citing a paragraph from the extra text. Whether those
@@ -45,8 +46,22 @@ GUIDE_RULES = [
 ]
 
 
+def spot_check(n: int) -> None:
+    """A random subset of the built units for a human to check AI labels on (same unit ids, tool_spot.html)."""
+    data = json.loads((OUT / "units.json").read_text(encoding="utf-8"))
+    rng = random.Random(SEED + n)
+    data["units"] = sorted(rng.sample(data["units"], n), key=lambda u: u["uid"])
+    data["version"] += f"-spot{n}"
+    template = (Path(__file__).parent / "citation_check_template.html").read_text(encoding="utf-8")
+    html = template.replace("__DATA__", json.dumps(data, ensure_ascii=False).replace("</", "<\\/"))
+    (OUT / "tool_spot.html").write_text(html, encoding="utf-8")
+    print(f"{n} units -> {(OUT / 'tool_spot.html').relative_to(PROJECT_ROOT)}")
+
+
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
+    if "--spot" in sys.argv:
+        return spot_check(int(sys.argv[sys.argv.index("--spot") + 1]))
     gold = json.loads((EVAL / "gold.json").read_text(encoding="utf-8"))
     exp = json.loads((EVAL / "experiments" / "long_excerpt_30k.json").read_text(encoding="utf-8"))
     items = {i["item_id"]: i for i in json.loads((EVAL / "items.json").read_text(encoding="utf-8"))["items"]}

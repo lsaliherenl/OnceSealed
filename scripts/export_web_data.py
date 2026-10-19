@@ -37,9 +37,29 @@ def _principle(p: dict[str, Any]) -> dict[str, Any]:
         "principle": p["principle"], "status": p["status"], "score": p.get("score"),
         "rationale": p.get("rationale", ""), "dropped_findings": p.get("dropped_findings", 0),
         "review_flags": p.get("review_flags", []),
-        "quotes": [{"text": q["text"], "page": q["page"], "verification": q.get("verification")}
-                   for q in p.get("quotes", [])],
+        "checks": [{k: c[k] for k in ("id", "question", "answer", "evidence", "second_opinion_p_yes", "needs_review",
+                                      "dropped")} for c in p.get("checks", [])],
+        "excerpt_chars": (p.get("excerpt") or {}).get("chars"),
     }
+
+
+def _evaluation() -> dict[str, Any] | None:
+    """Accuracy of the report pipeline on the labelled gold set (scripts/eval_metrics.py)."""
+    path = PROJECT_ROOT / "data" / "eval" / "metrics.json"
+    if not path.exists():
+        return None
+    m = json.loads(path.read_text(encoding="utf-8"))
+    model = m["models"].get("report")
+    if model is None:
+        return None
+    cc_path = PROJECT_ROOT / "data" / "eval" / "citation_check" / "summary.json"
+    cc = next(iter(json.loads(cc_path.read_text(encoding="utf-8")).values()), None) if cc_path.exists() else None
+    return {"questions": m["gold"]["questions"], "kappa": m["gold"]["kappa"], "annotators": m["gold"]["annotators"],
+            "accuracy": model["accuracy"], "accuracy_ci95": model["accuracy_ci95"], "label": model["label"],
+            "per_question": model["per_question"], "source": "docs/ai_evaluation.md",
+            "long_excerpt": cc and {"questions": cc["questions"], "confirmed": cc["confirmed"],
+                                    "confirmed_ci95": cc["confirmed_ci95"], "judged_by": cc["kind"],
+                                    "human_check": cc.get("human_check"), "source": "docs/citation_check.md"}}
 
 
 def main() -> None:
@@ -99,6 +119,7 @@ def main() -> None:
                     "explorer": EXPLORER},
         "methodology_statuses": table["statuses"],
         "methodology_table_version": table["table_version"],
+        "evaluation": _evaluation(),
         "projects": projects,
         "buyers": _read("data/demo_buyers.json")["buyers"],
         "anonymity": {"undisclosed_share_to_2018": 0.4, "undisclosed_share_2023_2026": 17.2,

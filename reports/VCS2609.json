@@ -1,5 +1,5 @@
 {
-  "schema": "report-v1",
+  "schema": "report-v2",
   "project": {
     "project_id": "VCS2609",
     "project_name": "Kuamut Rainforest Conservation Project",
@@ -25,315 +25,805 @@
     "table_version": "2026-10-15"
   },
   "method": {
-    "report_schema": "report-v1",
-    "prompt_version": "v1",
-    "question_set_version": "qs-v1",
+    "report_schema": "report-v2",
+    "question_set_version": "qs-v2-checklist",
+    "prompt_version": "checklist-v1",
+    "evidence_rule": "yes-cites-excerpt-paragraph-v2",
+    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
     "llm_model": "deepseek/deepseek-v4.1-flash",
-    "decision_model": "typesafe/jev-1.13",
-    "decision_input": "verified_quotes",
+    "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+  "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
   "principles": [
     {
       "principle": "additionality",
-      "rationale": "The document applies VT0001, identifies a most-likely baseline scenario, and reports barrier and common practice analyses. It states the protected-forest scenario faces financial barriers and that the project activity is not common practice and is additional. No detailed IRR benchmark appears in the excerpts, but the additionality evidence is substantive.",
+      "status": "partial_evidence",
+      "score": 25,
+      "rationale": "Evidence found for 1 of 4 checks (A2); not found in the excerpt: A1, A3, A4.",
+      "checks": [
+        {
+          "id": "A1",
+          "question": "Does the text report a quantified financial analysis: at least one numeric financial indicator (such as IRR or NPV) together with a benchmark or threshold value it is compared against?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.04,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A2",
+          "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p112-03",
+              "page": 112,
+              "text": "Danum and Maliau) took place almost 20 years before the start of the Project. Other formerly Class II \nForest Reserves (e.g. Ulu Segama and Malua) have primarily been protected because of external financial \nincentives; Therefore the outcome of the common practice analysis is that the project activity, without the \nprospect of the sale of GHG credits, is not common practice."
+            }
+          ],
+          "second_opinion_p_yes": 0.95,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A3",
+          "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.26,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A4",
+          "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.34,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
       "quotes": [
         {
-          "text": "Scenario v is a scenario where the project activity of converting the area to a protected forest would be performed without being registered as the VCS AFOLU project. This scenario faces financial barriers.",
-          "page": 81,
-          "paragraph_id": "p81-09",
-          "verification": "exact"
-        },
-        {
-          "text": "There are no barriers preventing this scenario from occurring and therefore scenario iv. (combination of Natural Forest Management and the Mosaic Planting Approach) is considered as the most likely baseline scenario for this project.",
-          "page": 82,
-          "paragraph_id": "p82-03",
-          "verification": "exact"
-        },
-        {
-          "text": "Other formerly Class II Forest Reserves (e.g. Ulu Segama and Malua) have primarily been protected because of external financial incentives; Therefore the outcome of the common practice analysis is that the project activity, without the prospect of the sale of GHG credits, is not common practice.",
+          "text": "Danum and Maliau) took place almost 20 years before the start of the Project. Other formerly Class II \nForest Reserves (e.g. Ulu Segama and Malua) have primarily been protected because of external financial \nincentives; Therefore the outcome of the common practice analysis is that the project activity, without the \nprospect of the sale of GHG credits, is not common practice.",
           "page": 112,
           "paragraph_id": "p112-03",
-          "verification": "exact"
-        },
-        {
-          "text": "Following the steps above, it is concluded that the proposed VCS AFOLU project activity is not the baseline scenario and, hence, it is additional",
-          "page": 112,
-          "paragraph_id": "p112-05",
-          "verification": "exact"
+          "verification": "cited_paragraph"
         }
       ],
       "dropped_findings": 0,
-      "llm": {
-        "status": "evidence_found",
-        "score": 85,
-        "model": "deepseek/deepseek-v4.1-flash"
-      },
-      "decision": {
-        "evidence_level": "documentary",
-        "evidence_probabilities": {
-          "quantified_verifiable": 0.0,
-          "documentary": 0.63,
-          "assertion_only": 0.37,
-          "not_addressed": 0.0
-        },
-        "evidence_confidence": 0.51,
-        "independent_sources": 0.32,
-        "strength": 1.56,
-        "strength_probabilities": {
-          "0": 0.01,
-          "1": 0.47,
-          "2": 0.48,
-          "3": 0.04
-        },
-        "strength_confidence": 0.47,
-        "model": "typesafe/jev-1.13-20260917"
-      },
-      "status": "partial_evidence",
-      "score": 52,
-      "review_flags": []
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p3-08",
+          "p3-09",
+          "p3-10",
+          "p9-06",
+          "p9-07",
+          "p9-08",
+          "p9-09",
+          "p14-04",
+          "p14-05",
+          "p19-06",
+          "p19-07",
+          "p19-08",
+          "p29-09",
+          "p29-10",
+          "p32-03",
+          "p32-04",
+          "p32-05",
+          "p35-06",
+          "p35-07",
+          "p35-08",
+          "p36-09",
+          "p36-10",
+          "p36-11",
+          "p42-06",
+          "p42-07",
+          "p45-07",
+          "p45-08",
+          "p45-09",
+          "p45-10",
+          "p45-11",
+          "p45-12",
+          "p45-13",
+          "p45-14",
+          "p50-21",
+          "p50-22",
+          "p50-23",
+          "p55-10",
+          "p55-12",
+          "p58-23",
+          "p70-05",
+          "p70-06",
+          "p71-10",
+          "p71-11",
+          "p71-12",
+          "p72-03",
+          "p72-04",
+          "p72-05",
+          "p76-04",
+          "p76-05",
+          "p76-06",
+          "p79-05",
+          "p79-06",
+          "p81-03",
+          "p81-06",
+          "p81-07",
+          "p81-08",
+          "p81-09",
+          "p82-03",
+          "p82-05",
+          "p82-06",
+          "p83-04",
+          "p83-05",
+          "p107-08",
+          "p107-09",
+          "p112-03",
+          "p112-05",
+          "p138-12",
+          "p138-13",
+          "p138-14",
+          "p139-13",
+          "p139-14",
+          "p139-15",
+          "p139-16",
+          "p139-17",
+          "p144-22",
+          "p145-12",
+          "p145-13",
+          "p145-14",
+          "p208-09",
+          "p208-10"
+        ],
+        "chars": 29977
+      }
     },
     {
       "principle": "permanence",
-      "rationale": "The document applies the VCS AFOLU Non-Permanence Risk Tool, reports an ex-ante non-permanence risk rating of 10, and states credits will be withheld in the VCS AFOLU pooled buffer account. It identifies natural and human-induced reversal risks and describes monitoring for illegal logging and fire. The full risk assessment is referenced as annexed rather than reproduced, but the excerpts show specific risk identification and management measures.",
+      "status": "partial_evidence",
+      "score": 67,
+      "rationale": "Evidence found for 2 of 3 checks (P1, P3); not found in the excerpt: P2.",
+      "checks": [
+        {
+          "id": "P1",
+          "question": "Does the text assess the risk that stored carbon is released (reversal or non-permanence risk), for example with a risk tool, a rating or a score?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p161-22",
+              "page": 161,
+              "text": "An ex-ante estimation of the risks has been performed using the VCS AFOLU Non-Permanence Risk \nTool. The assessment is annexed to this PD and shows that the non-permanence risk rating for this \nproject is 10 which is the minimum risks rating to be applied according to the tool."
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "P2",
+          "question": "Does the text give a specific buffer contribution (a percentage or a number of credits set aside)?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.32,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "P3",
+          "question": "Does the text describe concrete measures to monitor or prevent reversals (e.g. fire, illegal logging, land conversion)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p29-08",
+              "page": 29,
+              "text": "In order to protect the project area forests from fire, illegal logging, and illegal hunting, guard posts will be \nestablished at major access points, and supplemented by routine patrolling combined with on-going \nbiodiversity and carbon monitoring (see sections below). Specifically, this will include:"
+            }
+          ],
+          "second_opinion_p_yes": 0.97,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
       "quotes": [
         {
-          "text": "An ex-ante estimation of the risks has been performed using the VCS AFOLU Non-Permanence Risk Tool. The assessment is annexed to this PD and shows that the non-permanence risk rating for this project is 10 which is the minimum risks rating to be applied according to the tool.",
+          "text": "An ex-ante estimation of the risks has been performed using the VCS AFOLU Non-Permanence Risk \nTool. The assessment is annexed to this PD and shows that the non-permanence risk rating for this \nproject is 10 which is the minimum risks rating to be applied according to the tool.",
           "page": 161,
           "paragraph_id": "p161-22",
-          "verification": "exact"
+          "verification": "cited_paragraph"
         },
         {
-          "text": "Applying this to the numbers in Table 32 gives the following ex-ante estimates of the number of credits to be withheld in VCS AFOLU pooled buffer account",
-          "page": 161,
-          "paragraph_id": "p161-23",
-          "verification": "exact"
-        },
-        {
-          "text": "Natural risks to the climate change benefits of the project are considered low, both in the short and long-term. Such risks, including natural fires, pests & disease, extreme weather, geological events and other natural risks are considered in detail in the non-permanence risk assessment.",
-          "page": 38,
-          "paragraph_id": "p38-18",
-          "verification": "alnum"
-        },
-        {
-          "text": "In addition, for illegal logging, a field team from Rakyat Berjaya Sdn. Bhd will monitor the project area on a regular basis.",
-          "page": 174,
-          "paragraph_id": "p174-04",
-          "verification": "exact"
+          "text": "In order to protect the project area forests from fire, illegal logging, and illegal hunting, guard posts will be \nestablished at major access points, and supplemented by routine patrolling combined with on-going \nbiodiversity and carbon monitoring (see sections below). Specifically, this will include:",
+          "page": 29,
+          "paragraph_id": "p29-08",
+          "verification": "cited_paragraph"
         }
       ],
       "dropped_findings": 0,
-      "llm": {
-        "status": "evidence_found",
-        "score": 85,
-        "model": "deepseek/deepseek-v4.1-flash"
-      },
-      "decision": {
-        "evidence_level": "quantified_verifiable",
-        "evidence_probabilities": {
-          "quantified_verifiable": 0.59,
-          "documentary": 0.39,
-          "assertion_only": 0.02,
-          "not_addressed": 0.0
-        },
-        "evidence_confidence": 0.45,
-        "independent_sources": 0.34,
-        "strength": 1.96,
-        "strength_probabilities": {
-          "0": 0.0,
-          "1": 0.19,
-          "2": 0.65,
-          "3": 0.16
-        },
-        "strength_confidence": 0.65,
-        "model": "typesafe/jev-1.13-20260917"
-      },
-      "status": "partial_evidence",
-      "score": 65,
-      "review_flags": []
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p3-07",
+          "p3-08",
+          "p3-09",
+          "p9-04",
+          "p9-05",
+          "p9-06",
+          "p9-07",
+          "p29-08",
+          "p29-09",
+          "p30-10",
+          "p38-17",
+          "p38-18",
+          "p38-19",
+          "p38-20",
+          "p39-06",
+          "p39-07",
+          "p39-08",
+          "p39-09",
+          "p39-10",
+          "p39-11",
+          "p39-12",
+          "p39-13",
+          "p39-14",
+          "p41-03",
+          "p41-05",
+          "p41-06",
+          "p41-07",
+          "p57-14",
+          "p57-15",
+          "p57-16",
+          "p59-03",
+          "p59-04",
+          "p60-09",
+          "p60-10",
+          "p60-11",
+          "p61-08",
+          "p61-09",
+          "p68-04",
+          "p68-05",
+          "p68-06",
+          "p70-05",
+          "p70-06",
+          "p72-07",
+          "p72-08",
+          "p72-09",
+          "p73-06",
+          "p82-05",
+          "p82-06",
+          "p90-04",
+          "p90-05",
+          "p90-06",
+          "p90-07",
+          "p90-08",
+          "p90-11",
+          "p90-12",
+          "p91-03",
+          "p91-04",
+          "p144-07",
+          "p144-08",
+          "p144-10",
+          "p144-11",
+          "p144-14",
+          "p144-15",
+          "p144-22",
+          "p145-11",
+          "p145-12",
+          "p145-13",
+          "p145-14",
+          "p145-17",
+          "p145-18",
+          "p146-07",
+          "p147-13",
+          "p147-14",
+          "p147-15",
+          "p148-03",
+          "p148-04",
+          "p161-14",
+          "p161-15",
+          "p161-20",
+          "p161-21",
+          "p161-22",
+          "p161-23",
+          "p162-13",
+          "p173-16",
+          "p173-17",
+          "p174-04",
+          "p174-05",
+          "p174-06",
+          "p180-03",
+          "p180-04",
+          "p183-06",
+          "p183-07",
+          "p184-05",
+          "p184-06",
+          "p184-08",
+          "p184-09",
+          "p184-10",
+          "p184-11",
+          "p184-12",
+          "p184-13",
+          "p184-14",
+          "p189-14",
+          "p189-15",
+          "p189-16",
+          "p193-03",
+          "p193-04"
+        ],
+        "chars": 29992
+      }
     },
     {
       "principle": "robust_quantification",
-      "rationale": "The excerpts show an explicit conservative baseline assumption (VEX,INF set to zero), a market-leakage estimate using baseline harvest emissions multiplied by a leakage factor, an uncertainty estimate of 0.262% below the 15% threshold requiring no deduction, and QA/QC review with SOPs. These are specific elements relevant to robust and conservative quantification, though not every calculation step is shown.",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (Q1, Q2, Q3, Q4).",
+      "checks": [
+        {
+          "id": "Q1",
+          "question": "Does the text show how baseline emissions are calculated, with an equation, parameter values or a numeric result?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p139-10",
+              "page": 139,
+              "text": "∆𝑪𝑵𝑬𝑻|𝑩𝑺𝑳,𝒕∗= ∑\n[ ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(𝟏)\n𝑷\n𝒑=𝟏\n+ ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(𝟐−𝟏𝟎) + ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(𝟏𝟏−𝟐𝟎) + ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(+𝟏)]"
+            }
+          ],
+          "second_opinion_p_yes": 0.91,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q2",
+          "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p155-03",
+              "page": 155,
+              "text": "Applying this value to equation 20- and using activity leakage of zero, this leads to the following \nresults for the leakage calculation as shown in Table 31."
+            }
+          ],
+          "second_opinion_p_yes": 0.96,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q3",
+          "question": "Does the text address uncertainty or the use of conservative assumptions in the emission reduction estimate?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p161-12",
+              "page": 161,
+              "text": "The resulting uncertainty if 0.262% is smaller than the 15% threshold indicated in the methodology, \ntherefore no deduction for uncertainty is required."
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q4",
+          "question": "Does the text describe a monitoring plan that names the parameters to be measured and how often or by what method?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p175-09",
+              "page": 175,
+              "text": "The monitoring of the annual carbon stock change in aboveground biomass of trees in the project \nscenario will involve remeasuring of field plots in combination with remote sensing."
+            }
+          ],
+          "second_opinion_p_yes": 0.96,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
       "quotes": [
         {
-          "text": "This parameter was therefore considered to be zero in the calculations. This is a conservative assumption since it underestimates the timber extracted, and therefore the carbon removed, in the baseline.",
-          "page": 115,
-          "paragraph_id": "p115-11",
-          "verification": "exact"
+          "text": "∆𝑪𝑵𝑬𝑻|𝑩𝑺𝑳,𝒕∗= ∑\n[ ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(𝟏)\n𝑷\n𝒑=𝟏\n+ ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(𝟐−𝟏𝟎) + ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(𝟏𝟏−𝟐𝟎) + ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(+𝟏)]",
+          "page": 139,
+          "paragraph_id": "p139-10",
+          "verification": "cited_paragraph"
         },
         {
-          "text": "When it comes to leakage due to market effects, this was estimated as the net emissions from planned timber harvest activities in the baseline scenario multiplied by an appropriate leakage factor:",
-          "page": 150,
-          "paragraph_id": "p150-06",
-          "verification": "exact"
+          "text": "Applying this value to equation 20- and using activity leakage of zero, this leads to the following \nresults for the leakage calculation as shown in Table 31.",
+          "page": 155,
+          "paragraph_id": "p155-03",
+          "verification": "cited_paragraph"
         },
         {
-          "text": "The resulting uncertainty if 0.262% is smaller than the 15% threshold indicated in the methodology, therefore no deduction for uncertainty is required.",
+          "text": "The resulting uncertainty if 0.262% is smaller than the 15% threshold indicated in the methodology, \ntherefore no deduction for uncertainty is required.",
           "page": 161,
           "paragraph_id": "p161-12",
-          "verification": "exact"
+          "verification": "cited_paragraph"
         },
         {
-          "text": "All data collected, recorded, stored and reported are subject to review and approval by team leaders and/or project managers with reference to written SOPs covering each level of data management (see Figure 38).",
+          "text": "The monitoring of the annual carbon stock change in aboveground biomass of trees in the project \nscenario will involve remeasuring of field plots in combination with remote sensing.",
           "page": 175,
-          "paragraph_id": "p175-04",
-          "verification": "exact"
+          "paragraph_id": "p175-09",
+          "verification": "cited_paragraph"
         }
       ],
       "dropped_findings": 0,
-      "llm": {
-        "status": "evidence_found",
-        "score": 85,
-        "model": "deepseek/deepseek-v4.1-flash"
-      },
-      "decision": {
-        "evidence_level": "quantified_verifiable",
-        "evidence_probabilities": {
-          "quantified_verifiable": 0.6,
-          "documentary": 0.37,
-          "assertion_only": 0.03,
-          "not_addressed": 0.0
-        },
-        "evidence_confidence": 0.47,
-        "independent_sources": 0.28,
-        "strength": 2.34,
-        "strength_probabilities": {
-          "0": 0.0,
-          "1": 0.08,
-          "2": 0.5,
-          "3": 0.42
-        },
-        "strength_confidence": 0.5,
-        "model": "typesafe/jev-1.13-20260917"
-      },
-      "status": "partial_evidence",
-      "score": 78,
-      "review_flags": []
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p7-22",
+          "p25-03",
+          "p25-04",
+          "p29-09",
+          "p29-10",
+          "p40-09",
+          "p42-03",
+          "p42-04",
+          "p42-05",
+          "p62-11",
+          "p62-12",
+          "p62-13",
+          "p74-05",
+          "p74-06",
+          "p95-03",
+          "p95-04",
+          "p96-09",
+          "p96-10",
+          "p115-11",
+          "p115-12",
+          "p124-03",
+          "p124-04",
+          "p137-05",
+          "p137-06",
+          "p137-07",
+          "p137-08",
+          "p139-09",
+          "p139-10",
+          "p142-03",
+          "p142-04",
+          "p143-09",
+          "p143-10",
+          "p149-19",
+          "p149-20",
+          "p150-05",
+          "p150-06",
+          "p150-07",
+          "p151-04",
+          "p151-05",
+          "p151-06",
+          "p154-10",
+          "p154-11",
+          "p155-03",
+          "p155-04",
+          "p158-11",
+          "p158-12",
+          "p158-13",
+          "p159-04",
+          "p159-05",
+          "p159-06",
+          "p161-11",
+          "p161-12",
+          "p174-03",
+          "p174-04",
+          "p174-05",
+          "p175-04",
+          "p175-05",
+          "p175-06",
+          "p175-07",
+          "p175-09",
+          "p175-10",
+          "p176-03",
+          "p176-04",
+          "p176-05",
+          "p176-06",
+          "p176-07",
+          "p195-03",
+          "p195-04",
+          "p195-05",
+          "p201-09",
+          "p201-10",
+          "p201-11",
+          "p203-03",
+          "p203-04",
+          "p203-05",
+          "p203-06",
+          "p203-07",
+          "p221-04",
+          "p221-05",
+          "p221-06",
+          "p221-07",
+          "p221-08",
+          "p221-09",
+          "p221-10",
+          "p221-11",
+          "p222-03",
+          "p222-04"
+        ],
+        "chars": 29991
+      }
     },
     {
       "principle": "no_double_counting",
-      "rationale": "The document states the project is not registered under emissions trading or other credit programs, will not claim the same reductions elsewhere, is not subject to binding limits, and has not been rejected by other GHG programs. It does not mention corresponding adjustments. These are specific declarations addressing double counting.",
+      "status": "partial_evidence",
+      "score": 67,
+      "rationale": "Evidence found for 2 of 3 checks (D1, D2); not found in the excerpt: D3.",
+      "checks": [
+        {
+          "id": "D1",
+          "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p68-08",
+              "page": 68,
+              "text": "The Kuamut Rainforest Conservation Project has not been registered under any emissions trading \nprograms or any program involving environmental or social credits. The project will not claim credit for the \nsame GHG emission reduction under another program."
+            },
+            {
+              "paragraph_id": "p68-14",
+              "page": 68,
+              "text": "The Kuamut Rainforest Conservation Project has not been registered under any emissions trading \nprograms. The project will not claim credit for the same GHG emission reduction under another program."
+            },
+            {
+              "paragraph_id": "p68-16",
+              "page": 68,
+              "text": "The Kuamut Rainforest Conservation Project has not applied for or been rejected by any other GHG \nprograms."
+            }
+          ],
+          "second_opinion_p_yes": 0.86,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D2",
+          "question": "Does the text address other environmental credits or certificates (e.g. renewable energy certificates, I-RECs) or participation in an emissions trading scheme?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p68-08",
+              "page": 68,
+              "text": "The Kuamut Rainforest Conservation Project has not been registered under any emissions trading \nprograms or any program involving environmental or social credits. The project will not claim credit for the \nsame GHG emission reduction under another program."
+            },
+            {
+              "paragraph_id": "p68-10",
+              "page": 68,
+              "text": "Not applicable, the project is not part of any Emissions Trading Programs and is not subject to Other \nBinding Limits"
+            },
+            {
+              "paragraph_id": "p68-12",
+              "page": 68,
+              "text": "The project will not claim other Forms of Environmental Credit under another program."
+            }
+          ],
+          "second_opinion_p_yes": 0.95,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D3",
+          "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.07,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
       "quotes": [
         {
           "text": "The Kuamut Rainforest Conservation Project has not been registered under any emissions trading \nprograms or any program involving environmental or social credits. The project will not claim credit for the \nsame GHG emission reduction under another program.",
           "page": 68,
           "paragraph_id": "p68-08",
-          "verification": "exact"
+          "verification": "cited_paragraph"
         },
         {
-          "text": "Not applicable, the project is not part of any Emissions Trading Programs and is not subject to Other Binding Limits",
+          "text": "The Kuamut Rainforest Conservation Project has not been registered under any emissions trading \nprograms. The project will not claim credit for the same GHG emission reduction under another program.",
+          "page": 68,
+          "paragraph_id": "p68-14",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The Kuamut Rainforest Conservation Project has not applied for or been rejected by any other GHG \nprograms.",
+          "page": 68,
+          "paragraph_id": "p68-16",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Not applicable, the project is not part of any Emissions Trading Programs and is not subject to Other \nBinding Limits",
           "page": 68,
           "paragraph_id": "p68-10",
-          "verification": "exact"
+          "verification": "cited_paragraph"
         },
         {
           "text": "The project will not claim other Forms of Environmental Credit under another program.",
           "page": 68,
           "paragraph_id": "p68-12",
-          "verification": "exact"
-        },
-        {
-          "text": "The Kuamut Rainforest Conservation Project has not applied for or been rejected by any other GHG programs.",
-          "page": 68,
-          "paragraph_id": "p68-16",
-          "verification": "exact"
+          "verification": "cited_paragraph"
         }
       ],
       "dropped_findings": 0,
-      "llm": {
-        "status": "evidence_found",
-        "score": 85,
-        "model": "deepseek/deepseek-v4.1-flash"
-      },
-      "decision": {
-        "evidence_level": "assertion_only",
-        "evidence_probabilities": {
-          "quantified_verifiable": 0.0,
-          "documentary": 0.13,
-          "assertion_only": 0.87,
-          "not_addressed": 0.0
-        },
-        "evidence_confidence": 0.83,
-        "independent_sources": 0.11,
-        "strength": 1.08,
-        "strength_probabilities": {
-          "0": 0.0,
-          "1": 0.94,
-          "2": 0.04,
-          "3": 0.02
-        },
-        "strength_confidence": 0.92,
-        "model": "typesafe/jev-1.13-20260917"
-      },
-      "status": "assertion_only",
-      "score": 36,
-      "review_flags": []
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p68-06",
+          "p68-07",
+          "p68-08",
+          "p68-09",
+          "p68-10",
+          "p68-11",
+          "p68-12",
+          "p68-13",
+          "p68-14",
+          "p68-15",
+          "p68-16",
+          "p68-18"
+        ],
+        "chars": 1766
+      }
     },
     {
       "principle": "safeguards",
-      "rationale": "Document shows stakeholder identification and rights assessment, extensive community engagement (11 workshops, 488 participants), FPIC-based continuous dialogue, and biodiversity risk discussion. Grievance redress is still being formalised, so mitigation is partly prospective. Evidence is substantive but some mechanisms not finalised.",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (S1, S2, S3, S4).",
+      "checks": [
+        {
+          "id": "S1",
+          "question": "Does the text describe a stakeholder consultation with specifics such as dates, places, participants or comments received?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p47-09",
+              "page": 47,
+              "text": "Since the inception of community engagements in late 2017, the project has held a total of 11 community \nworkshops and dialogue sessions, attended by a combined total of 488 community participants. \nCommunity engagements are conducted to achieve a variety of objectives, including: transparency and \ncommunication of project details and activities, gathering information on community socio-cultural \nconditions and history, generation of spatial data via participatory mapping, discussion of threats and \nconstraints faced by communities, and planning of future project activities in accordance with the principles \nof FPIC. Engagement sessions of this type are generally organised together with community leaders, who \nthen publicise the engagements in their respective communities and encourage participation."
+            }
+          ],
+          "second_opinion_p_yes": 0.42,
+          "needs_review": true,
+          "dropped": null
+        },
+        {
+          "id": "S2",
+          "question": "Does the text describe a grievance or complaint mechanism through which affected people can raise concerns?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p56-06",
+              "page": 56,
+              "text": "The grievance is reported by the affected community member(s) to a designated representative (to be \nappointed by the communities themselves) for verification."
+            }
+          ],
+          "second_opinion_p_yes": 0.92,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S3",
+          "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p39-13",
+              "page": 39,
+              "text": "Human-induced risks to the \nproject’s biodiversity benefits, \nboth in the short and long-term, \nare essentially the same to those \nrelated to climate change benefits \n(above) as they relate to the \nprotection and regeneration of the \nnatural ecosystem. In addition, \nthere are further human-induced \nrisks related to hunting pressure, \ntypically focused on a narrow \nrange of species."
+            }
+          ],
+          "second_opinion_p_yes": 0.72,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S4",
+          "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p65-06",
+              "page": 65,
+              "text": "All forms of community-project interactions are informed and governed by FPIC principles. Open and \ntransparent discussions are held during all engagement activities, during which communities are \nencouraged to voice any concerns they may have over the project without fear of censure. Any and all \nactivities proposed by the project are discussed with communities far in advance of any potential \nimplementation, and communities are given opportunities to discuss among themselves and raise \nobjections as they feel appropriate. Consent is considered to be fluid and multi-faceted, and is repeatedly \nsought at multiple stages (e.g. before commencing social entry, before conducting community workshops, \nbefore commencing data gathering activities such as household surveys). Moreover, the concept of FPIC \nas adopted by the project is explained in project documentation such as brochures, in order to ensure that \nthe communities themselves are aware of their rights to receive clear and transparent information on the \nproject, and to withhold consent if they feel it appropriate to do so."
+            }
+          ],
+          "second_opinion_p_yes": 0.99,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
       "quotes": [
         {
-          "text": "The project has sought to identify all stakeholders with a relationship to the project and to undertake an assessment of their rights, interests and relevance to the project itself.",
-          "page": 25,
-          "paragraph_id": "p25-08",
-          "verification": "exact"
-        },
-        {
-          "text": "Since the inception of community engagements in late 2017, the project has held a total of 11 community workshops and dialogue sessions, attended by a combined total of 488 community participants.",
+          "text": "Since the inception of community engagements in late 2017, the project has held a total of 11 community \nworkshops and dialogue sessions, attended by a combined total of 488 community participants. \nCommunity engagements are conducted to achieve a variety of objectives, including: transparency and \ncommunication of project details and activities, gathering information on community socio-cultural \nconditions and history, generation of spatial data via participatory mapping, discussion of threats and \nconstraints faced by communities, and planning of future project activities in accordance with the principles \nof FPIC. Engagement sessions of this type are generally organised together with community leaders, who \nthen publicise the engagements in their respective communities and encourage participation.",
           "page": 47,
           "paragraph_id": "p47-09",
-          "verification": "exact"
+          "verification": "cited_paragraph"
         },
         {
-          "text": "The project is currently in the process of formalising redress mechanisms for any potential grievances arising from project zone communities or other stakeholders.",
+          "text": "The grievance is reported by the affected community member(s) to a designated representative (to be \nappointed by the communities themselves) for verification.",
           "page": 56,
-          "paragraph_id": "p56-05",
-          "verification": "exact"
+          "paragraph_id": "p56-06",
+          "verification": "cited_paragraph"
         },
         {
-          "text": "Human-induced risks to the project’s biodiversity benefits, both in the short and long-term, are essentially the same to those related to climate change benefits (above) as they relate to the protection and regeneration of the natural ecosystem.",
+          "text": "Human-induced risks to the \nproject’s biodiversity benefits, \nboth in the short and long-term, \nare essentially the same to those \nrelated to climate change benefits \n(above) as they relate to the \nprotection and regeneration of the \nnatural ecosystem. In addition, \nthere are further human-induced \nrisks related to hunting pressure, \ntypically focused on a narrow \nrange of species.",
           "page": 39,
           "paragraph_id": "p39-13",
-          "verification": "exact"
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "All forms of community-project interactions are informed and governed by FPIC principles. Open and \ntransparent discussions are held during all engagement activities, during which communities are \nencouraged to voice any concerns they may have over the project without fear of censure. Any and all \nactivities proposed by the project are discussed with communities far in advance of any potential \nimplementation, and communities are given opportunities to discuss among themselves and raise \nobjections as they feel appropriate. Consent is considered to be fluid and multi-faceted, and is repeatedly \nsought at multiple stages (e.g. before commencing social entry, before conducting community workshops, \nbefore commencing data gathering activities such as household surveys). Moreover, the concept of FPIC \nas adopted by the project is explained in project documentation such as brochures, in order to ensure that \nthe communities themselves are aware of their rights to receive clear and transparent information on the \nproject, and to withhold consent if they feel it appropriate to do so.",
+          "page": 65,
+          "paragraph_id": "p65-06",
+          "verification": "cited_paragraph"
         }
       ],
       "dropped_findings": 0,
-      "llm": {
-        "status": "evidence_found",
-        "score": 78,
-        "model": "deepseek/deepseek-v4.1-flash"
-      },
-      "decision": {
-        "evidence_level": "quantified_verifiable",
-        "evidence_probabilities": {
-          "quantified_verifiable": 0.81,
-          "documentary": 0.18,
-          "assertion_only": 0.01,
-          "not_addressed": 0.0
-        },
-        "evidence_confidence": 0.75,
-        "independent_sources": 0.12,
-        "strength": 2.07,
-        "strength_probabilities": {
-          "0": 0.0,
-          "1": 0.17,
-          "2": 0.59,
-          "3": 0.24
-        },
-        "strength_confidence": 0.59,
-        "model": "typesafe/jev-1.13-20260917"
-      },
-      "status": "partial_evidence",
-      "score": 69,
-      "review_flags": []
+      "review_flags": [
+        "models_disagree:S1"
+      ],
+      "excerpt": {
+        "paragraphs": [
+          "p25-08",
+          "p26-03",
+          "p26-04",
+          "p26-05",
+          "p30-08",
+          "p39-11",
+          "p39-12",
+          "p39-13",
+          "p41-03",
+          "p47-04",
+          "p47-05",
+          "p47-06",
+          "p47-08",
+          "p47-09",
+          "p47-10",
+          "p51-12",
+          "p52-03",
+          "p52-04",
+          "p52-05",
+          "p55-03",
+          "p55-04",
+          "p55-06",
+          "p55-07",
+          "p55-08",
+          "p55-09",
+          "p55-10",
+          "p55-11",
+          "p56-04",
+          "p56-05",
+          "p56-06",
+          "p62-12",
+          "p62-13",
+          "p62-14",
+          "p64-05",
+          "p64-06",
+          "p64-07",
+          "p64-08",
+          "p64-09",
+          "p65-03",
+          "p65-04",
+          "p65-05",
+          "p65-06",
+          "p66-07",
+          "p66-08",
+          "p195-03",
+          "p196-04",
+          "p201-09",
+          "p202-04",
+          "p202-05",
+          "p202-06",
+          "p206-04",
+          "p206-05",
+          "p207-03",
+          "p207-04",
+          "p208-09",
+          "p208-10"
+        ],
+        "chars": 29997
+      }
     }
   ],
   "overall": {
-    "score": 61,
+    "score": 70,
     "included": [
       "additionality",
       "permanence",
@@ -350,6 +840,6 @@
       "safeguards": 0.15
     }
   },
-  "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-15T17:23:28+00:00"
+  "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-19T16:52:02+00:00"
 }

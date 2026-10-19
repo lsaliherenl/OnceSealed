@@ -33,7 +33,10 @@ from core.hashing import hash_json
 log = logging.getLogger(__name__)
 
 REPORT_SCHEMA_VERSION = "report-v2"
-EXCERPT_CHARS = 2_500  # the excerpt size the gold set was labelled on (scripts/build_label_set.py)
+# The gold set was labelled on 2,500-character excerpts (scripts/build_label_set.py), but at that size the checks
+# missed evidence in at least 46 of the 119 "not found" answers (data/eval/citation_check). On 30,000 characters the
+# same checks still find 56 of the 58 known positives, and 46 of their 61 new findings were confirmed.
+EXCERPT_CHARS = 30_000
 EXCERPT_RULE = f"select_paragraphs(budget_chars={EXCERPT_CHARS}, overview_chars=0)"
 
 DISCLAIMER = (
@@ -120,15 +123,17 @@ def overall_score(principles: list[dict[str, Any]]) -> dict[str, Any]:
 
 def _cached_checklist(doc: Document, principle: str, paragraphs: list[Paragraph], llm: LLMChecklist,
                       cache_dir: Path | None) -> tuple[ChecklistResult, bool]:
-    """LLM checklist answers, cached per (document, principle, prompt, evidence rule, model).
+    """LLM checklist answers, cached per (excerpt, principle, prompt, evidence rule, model).
 
-    The LLM's answers vary a little between runs; caching keeps a re-run on the same document stable.
+    The LLM's answers vary a little between runs; caching keeps a re-run on the same excerpt stable. The key
+    hashes the excerpt itself, so a change of excerpt size or of the documents read asks the model again.
     Results with a missing answer are not cached.
     """
     path = None
     if cache_dir is not None:
         model = llm.name.replace("/", "_")
-        path = cache_dir / f"{doc.sha256[:16]}-{principle}-{CHECKLIST_PROMPT_VERSION}-{EVIDENCE_RULE}-{model}.json"
+        ex = hash_json({"document": doc.sha256, "paragraphs": [[p.id, p.text] for p in paragraphs]})[2:18]
+        path = cache_dir / f"{ex}-{principle}-{CHECKLIST_PROMPT_VERSION}-{EVIDENCE_RULE}-{model}.json"
         if path.exists():
             d = json.loads(path.read_text(encoding="utf-8"))
             answers = {k: Answer(**v) for k, v in d.pop("answers").items()}

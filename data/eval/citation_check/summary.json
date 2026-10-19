@@ -1,0 +1,13 @@
+{
+ "Claude Opus 5.5": {
+  "kind": "ai",
+  "questions": 61,
+  "confirmed": 46,
+  "confirmed_ci95": [
+   0.6332,
+   0.8449
+  ],
+  "decoys": 30,
+  "decoys_yes": 2
+ }
+}

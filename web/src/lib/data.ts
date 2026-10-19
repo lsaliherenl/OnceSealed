@@ -24,10 +24,10 @@ export type PrincipleStatus =
   | "assessment_failed";
 
 export const PRINCIPLE_LABEL: Record<PrincipleStatus, string> = {
-  strong_evidence: "Strong evidence",
-  partial_evidence: "Partial evidence",
+  strong_evidence: "All checks found",
+  partial_evidence: "Some checks found",
   assertion_only: "Assertion only",
-  no_evidence: "No evidence",
+  no_evidence: "No checks found",
   not_applicable: "Not applicable",
   assessment_failed: "Assessment failed",
 };
@@ -59,7 +59,39 @@ export const PRINCIPLE_NAME: Record<string, string> = {
   safeguards: "Sustainable development benefits and safeguards",
 };
 
-export type Quote = { text: string; page: number; verification: string | null };
+/** Short names for the checklist questions (core/ai/checklist.py); the full question is shown on hover. */
+export const CHECK_NAME: Record<string, string> = {
+  A1: "Financial analysis with a benchmark",
+  A2: "Common practice",
+  A3: "Not required by law",
+  A4: "Carbon revenue considered early",
+  P1: "Reversal risk assessed",
+  P2: "Buffer contribution given",
+  P3: "Measures against reversal",
+  Q1: "Baseline calculation shown",
+  Q2: "Leakage addressed",
+  Q3: "Uncertainty or conservativeness",
+  Q4: "Monitoring plan with parameters",
+  D1: "Other GHG programs",
+  D2: "Other credits or certificates",
+  D3: "Host-country accounting",
+  S1: "Stakeholder consultation details",
+  S2: "Grievance mechanism",
+  S3: "Environmental impact assessment",
+  S4: "Community rights",
+};
+
+export type Evidence = { paragraph_id: string; page: number; text: string };
+
+export type CheckAnswer = {
+  id: string;
+  question: string;
+  answer: "yes" | "no" | null;
+  evidence: Evidence[];
+  second_opinion_p_yes: number | null;
+  needs_review: boolean;
+  dropped: string | null;
+};
 
 export type Principle = {
   principle: string;
@@ -68,7 +100,8 @@ export type Principle = {
   rationale: string;
   dropped_findings: number;
   review_flags: string[];
-  quotes: Quote[];
+  checks: CheckAnswer[];
+  excerpt_chars: number | null;
 };
 
 export type Report = {
@@ -77,9 +110,11 @@ export type Report = {
   document: { file_name: string; sha256: string; pages: number };
   method: {
     llm_model: string;
-    decision_model: string;
+    second_opinion_model: string | null;
     prompt_version: string;
     question_set_version: string;
+    evidence_rule: string;
+    excerpt_rule: string;
     methodology_table_version: string;
     pdf_extractor: string;
   };
@@ -172,6 +207,27 @@ export const PROJECTS = site.projects as unknown as Project[];
 export const BUYERS = site.buyers as Buyer[];
 export const ANONYMITY = site.anonymity;
 export const METHODOLOGY_TABLE_VERSION = site.methodology_table_version;
+
+/** Accuracy of the report pipeline on the labelled gold set (scripts/eval_metrics.py), or null before labels. */
+export const EVALUATION = site.evaluation as unknown as {
+  questions: number;
+  kappa: number;
+  annotators: Record<string, string>;
+  accuracy: number;
+  accuracy_ci95: [number, number];
+  label: string;
+  per_question: Record<string, { n: number; correct: number }>;
+  source: string;
+  /** The citation check of the longer excerpts the reports read (scripts/citation_check_metrics.py). */
+  long_excerpt: {
+    questions: number;
+    confirmed: number;
+    confirmed_ci95: [number, number];
+    judged_by: "human" | "ai";
+    human_check: { annotator: string; units: number; agree: number } | null;
+    source: string;
+  } | null;
+} | null;
 export const REPO_URL = "https://github.com/lsaliherenl/OnceSealed";
 
 export function getProject(id: string) {

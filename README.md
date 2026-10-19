@@ -11,8 +11,8 @@ OnceSealed is a prototype verification and privacy layer that could sit on top o
   earlier retirement.
 - **Sealed:** the buyer's identity is never written on-chain. Only a salted commitment is public; an authorized
   auditor opens an encrypted vault and records on-chain whether it matches.
-- **Evidence-backed quality:** project documents are checked against ICVCM Core Carbon Principles. Every AI finding
-  quotes the document verbatim, and code finds each quote in the PDF before it counts.
+- **Evidence-backed quality:** project documents are checked against ICVCM Core Carbon Principles with 18 yes/no
+  questions. Every "yes" cites the paragraph it came from, and the checks were measured against labelled answers.
 
 > **What is real and what is simulated.** Project data, issuance quantities and retirement histories are real
 > (CarbonPlan OffsetsDB, Verra documents). Serial numbers are simulated (labelled `SIM-...`), buyers are fictional
@@ -75,52 +75,54 @@ public, not against the registry, which already knows its account holders.
 | Layer | What it does | AI? |
 |---|---|---|
 | **Methodology status** | Looks up the ICVCM decision on the project's methodology in a sourced, versioned table ([`methodology_status.json`](core/ai/methodology_status.json)). | No |
-| **Evidence extraction** | An LLM (`deepseek/deepseek-v4.1-flash` via OpenRouter) reads paragraphs selected by keyword scoring (up to 30,000 characters per principle) and returns verbatim quotes. Code finds every quote in the PDF text; quotes it cannot find are dropped. | Yes |
-| **Evidence judgement** | A decision model (TypeSafe **Jev 1.13**, a third-party model via OpenRouter) rates the verified evidence on closed questions with probabilities. It sits behind a swappable interface so other models can be compared on the same questions. | Yes |
+| **Evidence checklist** | For each principle, code selects up to 30,000 characters of the project's documents by keyword scoring. An LLM (`deepseek/deepseek-v4.1-flash` via OpenRouter) answers 3-4 yes/no questions per principle (18 in all, [`checklist.py`](core/ai/checklist.py)), and every "yes" must cite a paragraph of that excerpt or it is not counted. A second model (TypeSafe **Jev 1.13**, third-party) answers the same questions; where the two disagree the check is marked for human review. This is the setup measured against the labelled questions ([What we measured](#what-we-measured)). | Yes |
+| **Principle status** | The share of a principle's checks that found evidence: none, some or all. Deterministic. | No |
 | **Data checks** | Reads the document's tables of yearly net emission reductions and compares them with the credits actually issued (OffsetsDB); checks that retirements never exceed issuance, that the methodology matches the registry listing, and whether a similarly named project issued credits for the same years elsewhere; and states which documents were read and which were not ([`docs/data_checks.md`](docs/data_checks.md)). | No |
 
 Five of ICVCM's ten principles can be evidenced in a project document and are scored: additionality, permanence,
 robust quantification, no double counting, social and environmental safeguards. The report is published as JSON in
-[`reports/`](reports/); its `keccak256` over canonical JSON and a `method_hash` (models, prompt and question set
-versions) are anchored on-chain, so anyone can re-hash the published file and compare.
+[`reports/`](reports/); its `keccak256` over canonical JSON and a `method_hash` (models, prompt, questions, excerpt
+rule and table versions) are anchored on-chain, so anyone can re-hash the published file and compare.
 
-> **Signal, not verdict.** A score says how well the submitted document evidences a principle. It is not an ICVCM
-> assessment, a rating of the project, or a statement about its climate impact.
+> **Signal, not verdict.** A check says whether a specific kind of evidence is present in the excerpt that was read,
+> not whether it is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its
+> climate impact.
 
 Reports for all 11 evaluation projects (overall signal, then the five principle scores: additionality, permanence,
-quantification, double counting, safeguards; `-` = not applicable):
+quantification, double counting, safeguards; each is the share of that principle's checks with evidence; `-` = not
+applicable):
 
 | Project | Methodology, ICVCM status | Overall | A | P | Q | D | S |
 |---|---|---|---|---|---|---|---|
-| [VCS673](reports/VCS673.json) Kibale forest rehabilitation, Uganda | AR-ACM0001 v5: no CCP approval (successor VM0047 approved) | 65 | 44 | 84 | 84 | 33 | 74 |
-| [VCS985](reports/VCS985.json) Cordillera Azul REDD+, Peru | VM0007 v1.3: not CCP-approved (successor VM0048 approved) | 64 | 57 | 65 | 82 | 36 | 71 |
-| [VCS1851](reports/VCS1851.json) grid-connected solar, India | ACM0002 v19: not approved (additionality) | 62 | 59 | - | 75 | 61 | 49 |
-| [VCS2609](reports/VCS2609.json) Kuamut forest protection, Malaysia | VM0010 v1.4: under ICVCM assessment | 61 | 52 | 65 | 78 | 36 | 69 |
-| [VCS4150](reports/VCS4150.json) DelAgua cookstoves, Rwanda | VM0050 v1.0: approved with conditions | 60 | 36 | - | 92 | 46 | 63 |
-| [VCS1477](reports/VCS1477.json) Katingan peatland REDD+, Indonesia | VM0007 v1.5: not CCP-approved (successor VM0048 approved) | 60 | 57 | 80 | 78 | 34 | 37 |
-| [VCS2846](reports/VCS2846.json) manure biodigesters, China | ACM0010 v8: no ICVCM decision found | 58 | 64 | - | 60 | 37 | 67 |
-| [VCS138](reports/VCS138.json) landfill gas, USA | ACM0001 v16: approved with conditions | 56 | 43 | - | 66 | 62 | 54 |
-| [VCS2505](reports/VCS2505.json) cookstoves, South Africa | VMR0006: not CCP-approved (successor VM0050 approved) | 55 | 40 | - | 87 | 40 | 42 |
-| [VCS1742](reports/VCS1742.json) hydropower, India | ACM0002 v12.1: not approved (additionality) | 54 | 89 | - | 54 | 0 | 52 |
-| [VCS1728](reports/VCS1728.json) onshore wind, India | ACM0002 v17: not approved (additionality) | 52 | 54 | - | 61 | 36 | 50 |
+| [VCS2846](reports/VCS2846.json) manure biodigesters, China | ACM0010 v8: no ICVCM decision found | 81 | 75 | - | 100 | 67 | 75 |
+| [VCS1477](reports/VCS1477.json) Katingan peatland REDD+, Indonesia | VM0007 v1.5: not CCP-approved (successor VM0048 approved) | 79 | 50 | 100 | 100 | 67 | 75 |
+| [VCS673](reports/VCS673.json) Kibale forest rehabilitation, Uganda | AR-ACM0001 v5: no CCP approval (successor VM0047 approved) | 73 | 50 | 100 | 75 | 67 | 75 |
+| [VCS2609](reports/VCS2609.json) Kuamut forest protection, Malaysia | VM0010 v1.4: under ICVCM assessment | 70 | 25 | 67 | 100 | 67 | 100 |
+| [VCS138](reports/VCS138.json) landfill gas, USA | ACM0001 v16: approved with conditions | 69 | 50 | - | 100 | 67 | 50 |
+| [VCS985](reports/VCS985.json) Cordillera Azul REDD+, Peru | VM0007 v1.3: not CCP-approved (successor VM0048 approved) | 66 | 50 | 67 | 75 | 67 | 75 |
+| [VCS2505](reports/VCS2505.json) cookstoves, South Africa | VMR0006: not CCP-approved (successor VM0050 approved) | 66 | 25 | - | 100 | 67 | 75 |
+| [VCS1742](reports/VCS1742.json) hydropower, India | ACM0002 v12.1: not approved (additionality) | 64 | 75 | - | 100 | 0 | 50 |
+| [VCS4150](reports/VCS4150.json) DelAgua cookstoves, Rwanda | VM0050 v1.0: approved with conditions | 58 | 25 | - | 75 | 67 | 75 |
+| [VCS1851](reports/VCS1851.json) grid-connected solar, India | ACM0002 v19: not approved (additionality) | 58 | 25 | - | 75 | 67 | 75 |
+| [VCS1728](reports/VCS1728.json) onshore wind, India | ACM0002 v17: not approved (additionality) | 55 | 75 | - | 50 | 33 | 50 |
 
 How to read this, honestly:
 
-- **Read the principle scores, not the overall.** The overall signal of 11 very different projects falls between 52
-  and 65, while principle scores range from 0 to 92. Averaging hides most of the information.
-- **Document evidence is not methodology soundness.** The hydropower project scores 89 on additionality because its
-  document contains a detailed investment analysis, yet ICVCM rejected the methodology's additionality test. That is
-  why layer 1 is shown separately.
-- **A well-written document can still be contested.** Cordillera Azul (VCS985) is among the highest signals here,
-  while BeZero downgraded its rating in 2024 over its baseline deforestation rate. The tool checks whether evidence is
-  *present* in the document; it cannot tell whether a baseline is inflated. External ratings are the right
-  complement. The data checks give a first quantitative lead on this case: credits issued for 2009-2018 are **1.72×**
-  the project description's own yearly figures (table on page 133). That alone does not prove over-crediting (the
-  monitoring and verification reports, not read yet, explain issued volumes), but no reading of the text surfaces it.
+- **Read the checks, not the overall.** Each principle score is a count of yes/no checks, and each "found" links to
+  the paragraph it came from. "Not found" means not found in the roughly 30,000 characters read for that principle,
+  not that the document lacks it.
+- **Document evidence is not methodology soundness.** The hydropower project (VCS1742) evidences 3 of 4 additionality
+  checks, citing an IRR of 9.80% against a benchmark of 11.45%, yet ICVCM rejected the methodology's additionality
+  test. That is why layer 1 is shown separately.
+- **A well-written document can still be contested.** Cordillera Azul (VCS985) evidences most checks, while BeZero
+  downgraded its rating in 2024 over its baseline deforestation rate. The checklist tests whether evidence is
+  *present*; it cannot tell whether a baseline is inflated. The data checks give a first quantitative lead: credits
+  issued for 2009-2018 are **1.72×** the project description's own yearly figures (table on page 133). External
+  ratings are the right complement.
+- **13 checks across the 11 reports are marked for review** because the second model disagrees.
 
-All 11 reports share one `method_hash`; anchoring them on Sepolia added a second on-chain version for the four
-reports first published on 2026-10-13 (re-run with the updated methodology table; scores moved by 1-2 points,
-the decision model's known run-to-run variation).
+Earlier report versions stay readable on-chain: version 1 (2026-10-13/15) used an LLM quote extractor and Jev's
+evidence-strength rating, which was never measured; the current version replaces it with the measured checklist.
 
 ## What we measured
 
@@ -133,9 +135,9 @@ the decision model's known run-to-run variation).
 | Public data has inconsistencies a contract would flag | In OffsetsDB, 11 project-vintages record more retirements than issuance (235,932 t). Replayed through the contract, 76 of 1,100 retirements are rejected. These are most likely data errors (vintage attribution, reissuance), **not proven double counting** | [`over_retirement.json`](data/derived/over_retirement.json), `scripts/over_retirement_replay.py` |
 | How much does on-chain metadata reveal? | Project + quantity single out one retirement for **88.7%** of retired tonnes. With standard lots and the operator publishing lots once per period, 36.8% (daily) to 14.5% (quarterly) of tonnes still have no other purchase to hide among | [threat model T12](docs/threat_model.md), `scripts/linkability_stats.py` |
 | Document figures vs registry records | Yearly net-reduction tables read for 9 of 11 projects (the parser finds none it can use in the other 2); 8 overlap issued vintages. Credits issued exceed the document's own figures by more than 20% over the covered years for 1 project (VCS985, 1.72×); 4 more have single vintages above it. 1 project retires more than was issued (VCS673, vintage 2017, +13,052 t); 1 shares its name and an issued vintage with another listing (VCS4150 / VCS2749, both DelAgua, Rwanda). Each flag is a lead, not a finding. Monitoring, validation or verification reports are now read for 4 projects (VCS985, VCS673, VCS4150, VCS1851); the issuance comparison still uses the project description's ex-ante table, so the monitored figures are not yet compared | [`docs/data_checks.md`](docs/data_checks.md), [`checks/`](checks/), `scripts/run_checks.py` |
-| AI quotes are real | 179 of 179 quotes in the 11 published reports were found in the PDFs; 0 dropped | [`reports/`](reports/) |
+| AI evidence is cited | Every "found" check in the 11 published reports cites a paragraph of the excerpt it read; a "yes" without one is not counted (0 of 177 dropped on the labelled set). Version 1 of the reports quoted text instead: 179 of 179 quotes were found in the PDFs | [`reports/`](reports/), [`checklist_models.py`](core/ai/checklist_models.py) |
 | AI consistency, speed, cost (no labels needed) | On 177 yes/no questions over 48 excerpts from 11 projects, same answer in 3 runs: Jev 99.4%, LLM 96.0%, Turnike-JEV-4B 100% (both FP8 and BF16). Median time per excerpt: 0.8 s, 4.9 s, and 0.65 s for Turnike FP8 on a laptop RTX 4060 under WSL2 or 0.32 s for Turnike BF16 on a Colab L4 (both without its optional fast kernels; the API models include network time). Cost per 1,000 excerpts: $0.04, $0.79, $0 (local). FP8 and BF16 Turnike give the same yes/no answer on 176 of 177 questions (mean probability difference 0.014) | [`docs/ai_evaluation.md`](docs/ai_evaluation.md), `scripts/run_turnike.py` |
-| **AI accuracy** | Gold set: 177 yes/no questions labelled independently by a team member and by Claude (an AI annotator, not one of the evaluated models), both blind to the evaluated models' answers; Cohen's kappa 0.90 (human-AI agreement); the 12 disagreements were settled by the team member against the text. Accuracy (95% interval): **LLM 0.94 (0.90-0.97)**, **Jev 0.88 (0.83-0.92)**, **Turnike-JEV-4B 0.86 (0.80-0.90)**. The LLM is better than Jev (exact McNemar p = 0.013) and Turnike (p = 0.001); Jev and Turnike cannot be told apart here (p = 0.52). Jev's probabilities are the best calibrated (Brier 0.084 vs 0.220 for always guessing the base rate). Weakest: reporting a financial benchmark (A1) and community rights (S4); the set has almost no positives for additionality (4 of 44). The next report version asks these checks through one shared module: on the same set it scores 0.94 (0.89-0.96), with every "yes" citing a paragraph of the excerpt. **Excerpt size matters more than the model:** on 30,000-character excerpts the same checks still find 56 of the 58 known positives, but say "yes" on 61 of the 119 questions answered "no" on the 2,500-character excerpts, so up to half of "not found" may be evidence the short excerpt missed (being verified) | [`docs/ai_evaluation.md`](docs/ai_evaluation.md), [`data/eval/adjudication.json`](data/eval/adjudication.json) |
+| **AI accuracy** | Gold set: 177 yes/no questions labelled independently by a team member and by Claude (an AI annotator, not one of the evaluated models), both blind to the evaluated models' answers; Cohen's kappa 0.90 (human-AI agreement); the 12 disagreements were settled by the team member against the text. Accuracy (95% interval): **LLM 0.94 (0.90-0.97)**, **Jev 0.88 (0.83-0.92)**, **Turnike-JEV-4B 0.86 (0.80-0.90)**. The LLM is better than Jev (exact McNemar p = 0.013) and Turnike (p = 0.001); Jev and Turnike cannot be told apart here (p = 0.52). Jev's probabilities are the best calibrated (Brier 0.084 vs 0.220 for always guessing the base rate). Weakest: reporting a financial benchmark (A1) and community rights (S4); the set has almost no positives for additionality (4 of 44). The published reports ask these checks through the same module: 0.94 (0.89-0.96) on this set, with every "yes" citing a paragraph. **Excerpt size matters more than the model:** the reports therefore read 30,000 characters per principle instead of 2,500. There the checks still find 56 of the 58 known positives and add 61 findings the short excerpts missed; 46 of those were confirmed (75%, 63-84%) in a blind paragraph check against length-matched decoys (2 of 30 decoys judged evidence). That check was labelled by Claude, so it is AI-judged; see [`docs/citation_check.md`](docs/citation_check.md) | [`docs/ai_evaluation.md`](docs/ai_evaluation.md), [`data/eval/adjudication.json`](data/eval/adjudication.json) |
 | Security | Slither: no findings beyond two documented false positives and one informational note; admin handover is two-step with a two-day delay; 13 threats analysed | [threat model](docs/threat_model.md) |
 
 Consistency is not accuracy: a model can repeat the same wrong answer. The accuracy figures measure whether a model
@@ -158,7 +160,9 @@ small (about 10 questions per question type), so per-question results are indica
   most monitored evidence sits. Reports and data checks say so per project; `scripts/add_document.py` registers
   further documents.
 - **AI signals depend on the excerpt.** Paragraphs are chosen by keywords from documents of hundreds of pages, so
-  evidence outside the selection is missed. The overall score barely separates projects (52-65 across 11). The
+  evidence outside the roughly 30,000 characters read per principle is missed. Accuracy was labelled on shorter
+  excerpts; on the longer ones only the new findings were checked, and that check was AI-judged. The labelled
+  questions were also used to choose the models, so a fresh held-out set is needed for an unbiased figure. The
   methodology table covers only the methodologies of the 11 evaluation projects.
 - **Gas figures differ by network.** Scale experiments ran on a local Anvil chain; Sepolia's current schedule makes
   storage writes several times more expensive. The deployment uses 15.66M gas, close to the per-transaction limit of
