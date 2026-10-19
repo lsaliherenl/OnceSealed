@@ -1,5 +1,5 @@
 {
- "schema": "checks-v1",
+ "schema": "checks-v2",
  "project_id": "VCS1728",
  "inputs": {
   "documents": [
@@ -36,6 +36,13 @@
    "title": "Issued credits vs the document's own yearly figures",
    "status": "not_available",
    "summary": "No table of yearly net emission reductions could be read from the documents.",
+   "details": {}
+  },
+  {
+   "id": "issuance_vs_monitored",
+   "title": "Issued credits vs the monitoring reports' figures",
+   "status": "not_available",
+   "summary": "No monitoring report was read.",
    "details": {}
   },
   {

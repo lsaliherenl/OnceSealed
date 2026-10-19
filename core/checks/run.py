@@ -8,6 +8,7 @@ Each check returns one of
 """
 
 from dataclasses import asdict
+from datetime import date, timedelta
 from typing import Any
 
 from core.ai.pdf_extract import Table, extract_tables
@@ -16,7 +17,7 @@ from core.checks import registry_data
 from core.checks.estimates import EstimateTable, find_estimate_tables
 from core.data import offsetsdb
 
-SCHEMA = "checks-v1"
+SCHEMA = "checks-v2"
 OVER_ESTIMATE = 1.2  # issued more than 20% above the document's own figures
 UNDER_ESTIMATE = 0.5  # issued less than half: under-delivery, or a table of cumulative stocks
 
@@ -124,6 +125,81 @@ def issuance_vs_estimate(project: ProjectSources, tables: dict[str, list[Table]]
                   ratio=cmp_["ratio"], candidates=candidates)
 
 
+MONITORED_TOLERANCE = 1.02  # issued may round a little above the monitored figure
+
+
+def _period(text: str | None) -> tuple[date, date] | None:
+    if not text or "/" not in text:
+        return None
+    a, b = text.split("/")
+    return date.fromisoformat(a), date.fromisoformat(b)
+
+
+def _covered(year: int, periods: list[tuple[date, date]]) -> bool:
+    """True when every day of the calendar year lies inside the union of the monitoring periods."""
+    day, end = date(year, 1, 1), date(year, 12, 31)
+    for a, b in sorted(periods):
+        if a <= day <= b:
+            day = b + timedelta(days=1)
+        if day > end:
+            return True
+    return False
+
+
+def issuance_vs_monitored(project: ProjectSources, tables: dict[str, list[Table]]) -> dict[str, Any]:
+    """Issued credits per vintage against the monitoring reports' own yearly net reductions.
+
+    Only years inside a report's monitoring period are read from it (a report also repeats earlier periods and
+    projects later ones); a report without a recorded period is skipped. Issuance at or below the monitored figure
+    is expected (AFOLU projects deposit a buffer share). A vintage above it is flagged only when the monitoring
+    reports read cover the whole calendar year; otherwise later periods may hold the rest.
+    """
+    title = "Issued credits vs the monitoring reports' figures"
+    reports = [f for f in project.by_role("monitoring_report") if f.local_path in tables]
+    if not reports:
+        return _check("issuance_vs_monitored", title, "not_available", "No monitoring report was read.")
+    flows = registry_data.vintage_flows(project.project_id)
+    if not flows:
+        return _check("issuance_vs_monitored", title, "not_available", "No issuance records in OffsetsDB.")
+    periods, monitored, sources, skipped = [], {}, {}, []
+    for f in sorted(reports, key=lambda f: f.period or ""):
+        p = _period(f.period)
+        if p is None:
+            skipped.append(f"{f.file_name} (no monitoring period recorded)")
+            continue
+        periods.append(p)
+        for e in find_estimate_tables(tables[f.local_path]):
+            values = {y: v for y, v in e.by_year.items() if p[0].year <= y <= p[1].year and v > 0}
+            for y, v in values.items():  # the latest report covering a year wins
+                monitored[y] = v
+                sources[y] = {"file": f.local_path, "page": e.page, "table_id": e.table_id}
+    issued = {v: x["issued"] for v, x in flows.items() if x["issued"] > 0}
+    rows = [{"vintage": y, "monitored": monitored[y], "issued": issued[y], "ratio": round(issued[y] / monitored[y], 3),
+             "whole_year_monitored": _covered(y, periods), **sources[y]} for y in sorted(monitored) if y in issued]
+    if not rows:
+        return _check("issuance_vs_monitored", title, "not_available",
+                      "No yearly net-reduction table in the monitoring reports read overlaps an issued vintage"
+                      + (f"; skipped {'; '.join(skipped)}" if skipped else "") + ".", skipped=skipped)
+    over = [r for r in rows if r["ratio"] > MONITORED_TOLERANCE]
+    flagged = [r for r in over if r["whole_year_monitored"]]
+    span = f"{rows[0]['vintage']}-{rows[-1]['vintage']}" if len(rows) > 1 else str(rows[0]["vintage"])
+    ratios = ", ".join(f"{r['vintage']}: {r['ratio']:.2f}" for r in rows)
+    if flagged:
+        return _check("issuance_vs_monitored", title, "flag",
+                      "Issuance exceeds the monitored net reductions for vintages the monitoring reports fully cover ("
+                      + ", ".join(f"{r['vintage']}: issued {r['issued']:,.0f} t vs monitored {r['monitored']:,.0f} t"
+                                  for r in flagged) + ").", vintages=rows, skipped=skipped)
+    ok = [r for r in rows if r["ratio"] <= MONITORED_TOLERANCE]
+    summary = (f"Issued credits per vintage over monitored net reductions ({span}): {ratios}. "
+               f"{len(ok)} of {len(rows)} vintages are at or below the monitored figure (a ratio below 1 is expected "
+               "where a buffer share is withheld).")
+    if over:
+        summary += (" Above it: " + ", ".join(str(r["vintage"]) for r in over)
+                    + ", a vintage the monitoring reports read cover only in part, so a later period may hold the rest.")
+        return _check("issuance_vs_monitored", title, "info", summary, vintages=rows, skipped=skipped)
+    return _check("issuance_vs_monitored", title, "pass", summary, vintages=rows, skipped=skipped)
+
+
 def retired_vs_issued(project: ProjectSources) -> dict[str, Any]:
     title = "Retirements never exceed issuance"
     flows = registry_data.vintage_flows(project.project_id)
@@ -188,6 +264,7 @@ def run_checks(project: ProjectSources, tables: dict[str, list[Table]] | None = 
         "project_id": project.project_id,
         "inputs": {"documents": [{"role": f.role, "file": f.local_path, "sha256": f.sha256} for f in files],
                    "offsetsdb_snapshot": offsetsdb.snapshot_date()},
-        "checks": [document_coverage(project), issuance_vs_estimate(project, tables), retired_vs_issued(project),
+        "checks": [document_coverage(project), issuance_vs_estimate(project, tables),
+                   issuance_vs_monitored(project, tables), retired_vs_issued(project),
                    methodology_matches_registry(project), similar_listings(project)],
     }

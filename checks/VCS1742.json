@@ -1,5 +1,5 @@
 {
- "schema": "checks-v1",
+ "schema": "checks-v2",
  "project_id": "VCS1742",
  "inputs": {
   "documents": [
@@ -127,6 +127,13 @@
      }
     ]
    }
+  },
+  {
+   "id": "issuance_vs_monitored",
+   "title": "Issued credits vs the monitoring reports' figures",
+   "status": "not_available",
+   "summary": "No monitoring report was read.",
+   "details": {}
   },
   {
    "id": "retired_vs_issued",

@@ -156,3 +156,43 @@ def test_coverage_names_the_documents_not_read(tmp_path):
 
 def test_table_renders_row_by_row():
     assert t([["Year", "", "Net"], ["2017", "", "562,006"]]).render() == "Year | Net\n2017 | 562,006"
+
+
+def _with_reports(project, *periods):
+    """The project with monitoring reports covering the given periods (files need not exist)."""
+    from dataclasses import replace
+    from core.ai.sources import SourceFile
+    mrs = [SourceFile(project.project_id, "monitoring_report", "MR", f"mr{i}.pdf", f"mr{i}.pdf", None, period=p)
+           for i, p in enumerate(periods)]
+    return replace(project, files=[project.files[0], *mrs])
+
+
+def test_issuance_at_or_below_monitored_passes(monkeypatch, project):
+    _flows(monkeypatch, {2013: 1_000_000, 2014: 900_000})
+    p = _with_reports(project, "2012-08-08/2014-08-07", "2014-08-08/2015-08-07")
+    # the second report repeats 2013 with another figure: years outside a report's own period are ignored
+    out = run.issuance_vs_monitored(p, {"mr0.pdf": [_yearly({2013: 1_000_000, 2014: 1_000_000})],
+                                        "mr1.pdf": [_yearly({2013: 5, 2015: 2_000_000})]})
+    assert out["status"] == "pass"
+    assert [(r["vintage"], r["ratio"]) for r in out["details"]["vintages"]] == [(2013, 1.0), (2014, 0.9)]
+
+
+def test_issuance_above_monitored_in_a_fully_covered_year_is_flagged(monkeypatch, project):
+    _flows(monkeypatch, {2013: 1_300_000, 2014: 500_000})
+    p = _with_reports(project, "2012-08-08/2014-08-07")
+    out = run.issuance_vs_monitored(p, {"mr0.pdf": [_yearly({2013: 1_000_000, 2014: 600_000})]})
+    assert out["status"] == "flag" and "2013" in out["summary"]
+
+
+def test_issuance_above_monitored_in_a_partly_covered_year_is_info(monkeypatch, project):
+    _flows(monkeypatch, {2017: 900_000, 2018: 1_300_000})
+    p = _with_reports(project, "2016-08-08/2018-08-07")
+    out = run.issuance_vs_monitored(p, {"mr0.pdf": [_yearly({2017: 1_000_000, 2018: 1_000_000})]})
+    assert out["status"] == "info" and "only in part" in out["summary"]
+
+
+def test_monitoring_report_without_period_is_skipped(monkeypatch, project):
+    _flows(monkeypatch, {2013: 1_000_000})
+    p = _with_reports(project, None)
+    out = run.issuance_vs_monitored(p, {"mr0.pdf": [_yearly({2013: 1_000_000, 2014: 1_000_000})]})
+    assert out["status"] == "not_available" and "no monitoring period" in out["summary"]

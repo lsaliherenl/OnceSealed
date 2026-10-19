@@ -1,5 +1,5 @@
 {
- "schema": "checks-v1",
+ "schema": "checks-v2",
  "project_id": "VCS985",
  "inputs": {
   "documents": [
@@ -294,6 +294,77 @@
       }
      }
     ]
+   }
+  },
+  {
+   "id": "issuance_vs_monitored",
+   "title": "Issued credits vs the monitoring reports' figures",
+   "status": "info",
+   "summary": "Issued credits per vintage over monitored net reductions (2013-2018): 2013: 1.00, 2014: 1.00, 2015: 0.90, 2016: 0.90, 2017: 0.90, 2018: 1.27. 5 of 6 vintages are at or below the monitored figure (a ratio below 1 is expected where a buffer share is withheld). Above it: 2018, a vintage the monitoring reports read cover only in part, so a later period may hold the rest.",
+   "details": {
+    "vintages": [
+     {
+      "vintage": 2013,
+      "monitored": 1771438.0,
+      "issued": 1771437.0,
+      "ratio": 1.0,
+      "whole_year_monitored": true,
+      "file": "samples/pdfs/VCS985_MR2.pdf",
+      "page": 62,
+      "table_id": "p62-t2"
+     },
+     {
+      "vintage": 2014,
+      "monitored": 2374091.0,
+      "issued": 2374091.0,
+      "ratio": 1.0,
+      "whole_year_monitored": true,
+      "file": "samples/pdfs/VCS985_MR2.pdf",
+      "page": 62,
+      "table_id": "p62-t2"
+     },
+     {
+      "vintage": 2015,
+      "monitored": 3374248.0,
+      "issued": 3036823.0,
+      "ratio": 0.9,
+      "whole_year_monitored": true,
+      "file": "samples/pdfs/VCS985_MR4.pdf",
+      "page": 85,
+      "table_id": "p85-t1"
+     },
+     {
+      "vintage": 2016,
+      "monitored": 4074606.0,
+      "issued": 3667145.0,
+      "ratio": 0.9,
+      "whole_year_monitored": true,
+      "file": "samples/pdfs/VCS985_MR5.pdf",
+      "page": 87,
+      "table_id": "p87-t1"
+     },
+     {
+      "vintage": 2017,
+      "monitored": 4489836.0,
+      "issued": 4040852.0,
+      "ratio": 0.9,
+      "whole_year_monitored": true,
+      "file": "samples/pdfs/VCS985_MR5.pdf",
+      "page": 87,
+      "table_id": "p87-t1"
+     },
+     {
+      "vintage": 2018,
+      "monitored": 5086613.0,
+      "issued": 6472949.0,
+      "ratio": 1.273,
+      "whole_year_monitored": false,
+      "file": "samples/pdfs/VCS985_MR5.pdf",
+      "page": 87,
+      "table_id": "p87-t1"
+     }
+    ],
+    "skipped": []
    }
   },
   {

@@ -1,5 +1,5 @@
 {
- "schema": "checks-v1",
+ "schema": "checks-v2",
  "project_id": "VCS4150",
  "inputs": {
   "documents": [
@@ -210,6 +210,17 @@
        "per_vintage": []
       }
      }
+    ]
+   }
+  },
+  {
+   "id": "issuance_vs_monitored",
+   "title": "Issued credits vs the monitoring reports' figures",
+   "status": "not_available",
+   "summary": "No yearly net-reduction table in the monitoring reports read overlaps an issued vintage; skipped JPDMR_4150_v6_clean.pdf (no monitoring period recorded).",
+   "details": {
+    "skipped": [
+     "JPDMR_4150_v6_clean.pdf (no monitoring period recorded)"
     ]
    }
   },

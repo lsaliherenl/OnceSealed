@@ -1,5 +1,5 @@
 {
- "schema": "checks-v1",
+ "schema": "checks-v2",
  "project_id": "VCS673",
  "inputs": {
   "documents": [
@@ -196,6 +196,17 @@
       "document_total": 221716.0,
       "comparison": null
      }
+    ]
+   }
+  },
+  {
+   "id": "issuance_vs_monitored",
+   "title": "Issued credits vs the monitoring reports' figures",
+   "status": "not_available",
+   "summary": "No yearly net-reduction table in the monitoring reports read overlaps an issued vintage; skipped VCS_Monitoring_Report_Kibale_2017-2020_v1.1 (002).pdf (no monitoring period recorded).",
+   "details": {
+    "skipped": [
+     "VCS_Monitoring_Report_Kibale_2017-2020_v1.1 (002).pdf (no monitoring period recorded)"
     ]
    }
   },
