@@ -10,4 +10,12 @@ On 30,000-character excerpts the checklist answered "yes" on questions the gold 
 - Cited paragraphs judged to be evidence: 54/77 (70%, 95% interval 59-79%)
 - Decoys judged to be evidence: 2/30 (7%, 95% interval 2-21%)
 
+## Salih Eren Cavusoglu (human, 20 units labelled)
+
+- Questions whose new "yes" is confirmed by a cited paragraph: **10/13 (77%, 95% interval 50-92%)**
+- Cited paragraphs judged to be evidence: 10/13 (77%, 95% interval 50-92%)
+- Decoys judged to be evidence: 1/6 (17%, 95% interval 3-56%)
+
+Human check of the AI labels (Salih Eren Cavusoglu vs Claude Opus 5.5): agreement on 18/19 (95%, 95% interval 75-99%) of the units both labelled.
+
 Caveats: "evidence" means the paragraph contains what the question asks for, not that it is true. Questions still answered "no" on the long excerpt were not re-checked, so recall on the long excerpt is known only for the gold set's positives.

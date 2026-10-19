@@ -8,6 +8,22 @@
    0.8449
   ],
   "decoys": 30,
-  "decoys_yes": 2
+  "decoys_yes": 2,
+  "human_check": {
+   "annotator": "Salih Eren Cavusoglu",
+   "units": 19,
+   "agree": 18
+  }
+ },
+ "Salih Eren Cavusoglu": {
+  "kind": "human",
+  "questions": 13,
+  "confirmed": 10,
+  "confirmed_ci95": [
+   0.4974,
+   0.9182
+  ],
+  "decoys": 6,
+  "decoys_yes": 1
  }
 }

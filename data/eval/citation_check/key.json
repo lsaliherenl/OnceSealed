@@ -1,0 +1,541 @@
+{
+ "seed": 20261019,
+ "targets": 61,
+ "units": {
+  "c001": {
+   "source": "model_citation",
+   "item_id": "VCS673-no_double_counting",
+   "question_id": "D1"
+  },
+  "c002": {
+   "source": "model_citation",
+   "item_id": "VCS2609-safeguards",
+   "question_id": "S2"
+  },
+  "c003": {
+   "source": "model_citation",
+   "item_id": "VCS985-safeguards",
+   "question_id": "S3"
+  },
+  "c004": {
+   "source": "decoy",
+   "item_id": "VCS1477-no_double_counting",
+   "question_id": "D1"
+  },
+  "c005": {
+   "source": "model_citation",
+   "item_id": "VCS1742-robust_quantification",
+   "question_id": "Q4"
+  },
+  "c006": {
+   "source": "model_citation",
+   "item_id": "VCS138-additionality",
+   "question_id": "A2"
+  },
+  "c007": {
+   "source": "model_citation",
+   "item_id": "VCS673-permanence",
+   "question_id": "P2"
+  },
+  "c008": {
+   "source": "decoy",
+   "item_id": "VCS1477-additionality",
+   "question_id": "A1"
+  },
+  "c009": {
+   "source": "decoy",
+   "item_id": "VCS2609-permanence",
+   "question_id": "P1"
+  },
+  "c010": {
+   "source": "decoy",
+   "item_id": "VCS1851-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c011": {
+   "source": "model_citation",
+   "item_id": "VCS1728-additionality",
+   "question_id": "A2"
+  },
+  "c012": {
+   "source": "model_citation",
+   "item_id": "VCS2505-safeguards",
+   "question_id": "S1"
+  },
+  "c013": {
+   "source": "model_citation",
+   "item_id": "VCS2609-safeguards",
+   "question_id": "S2"
+  },
+  "c014": {
+   "source": "model_citation",
+   "item_id": "VCS1728-additionality",
+   "question_id": "A1"
+  },
+  "c015": {
+   "source": "model_citation",
+   "item_id": "VCS2505-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c016": {
+   "source": "model_citation",
+   "item_id": "VCS1477-permanence",
+   "question_id": "P1"
+  },
+  "c017": {
+   "source": "model_citation",
+   "item_id": "VCS1742-robust_quantification",
+   "question_id": "Q2"
+  },
+  "c018": {
+   "source": "model_citation",
+   "item_id": "VCS1477-additionality",
+   "question_id": "A2"
+  },
+  "c019": {
+   "source": "model_citation",
+   "item_id": "VCS2609-robust_quantification",
+   "question_id": "Q2"
+  },
+  "c020": {
+   "source": "model_citation",
+   "item_id": "VCS1728-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c021": {
+   "source": "model_citation",
+   "item_id": "VCS1742-additionality",
+   "question_id": "A4"
+  },
+  "c022": {
+   "source": "decoy",
+   "item_id": "VCS1728-robust_quantification",
+   "question_id": "Q2"
+  },
+  "c023": {
+   "source": "decoy",
+   "item_id": "VCS4150-safeguards",
+   "question_id": "S2"
+  },
+  "c024": {
+   "source": "model_citation",
+   "item_id": "VCS2505-no_double_counting",
+   "question_id": "D2"
+  },
+  "c025": {
+   "source": "model_citation",
+   "item_id": "VCS1851-additionality",
+   "question_id": "A1"
+  },
+  "c026": {
+   "source": "model_citation",
+   "item_id": "VCS673-no_double_counting",
+   "question_id": "D2"
+  },
+  "c027": {
+   "source": "model_citation",
+   "item_id": "VCS985-robust_quantification",
+   "question_id": "Q3"
+  },
+  "c028": {
+   "source": "model_citation",
+   "item_id": "VCS2846-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c029": {
+   "source": "model_citation",
+   "item_id": "VCS673-additionality",
+   "question_id": "A2"
+  },
+  "c030": {
+   "source": "decoy",
+   "item_id": "VCS673-permanence",
+   "question_id": "P3"
+  },
+  "c031": {
+   "source": "model_citation",
+   "item_id": "VCS2846-additionality",
+   "question_id": "A1"
+  },
+  "c032": {
+   "source": "model_citation",
+   "item_id": "VCS985-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c033": {
+   "source": "decoy",
+   "item_id": "VCS1742-no_double_counting",
+   "question_id": "D2"
+  },
+  "c034": {
+   "source": "model_citation",
+   "item_id": "VCS1742-robust_quantification",
+   "question_id": "Q3"
+  },
+  "c035": {
+   "source": "model_citation",
+   "item_id": "VCS1477-no_double_counting",
+   "question_id": "D3"
+  },
+  "c036": {
+   "source": "model_citation",
+   "item_id": "VCS2846-additionality",
+   "question_id": "A2"
+  },
+  "c037": {
+   "source": "model_citation",
+   "item_id": "VCS1742-robust_quantification",
+   "question_id": "Q2"
+  },
+  "c038": {
+   "source": "decoy",
+   "item_id": "VCS138-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c039": {
+   "source": "model_citation",
+   "item_id": "VCS2609-safeguards",
+   "question_id": "S3"
+  },
+  "c040": {
+   "source": "decoy",
+   "item_id": "VCS2505-additionality",
+   "question_id": "A1"
+  },
+  "c041": {
+   "source": "model_citation",
+   "item_id": "VCS1728-additionality",
+   "question_id": "A2"
+  },
+  "c042": {
+   "source": "model_citation",
+   "item_id": "VCS138-safeguards",
+   "question_id": "S2"
+  },
+  "c043": {
+   "source": "decoy",
+   "item_id": "VCS1728-robust_quantification",
+   "question_id": "Q4"
+  },
+  "c044": {
+   "source": "decoy",
+   "item_id": "VCS2609-no_double_counting",
+   "question_id": "D3"
+  },
+  "c045": {
+   "source": "decoy",
+   "item_id": "VCS2609-no_double_counting",
+   "question_id": "D2"
+  },
+  "c046": {
+   "source": "model_citation",
+   "item_id": "VCS1742-robust_quantification",
+   "question_id": "Q4"
+  },
+  "c047": {
+   "source": "model_citation",
+   "item_id": "VCS1742-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c048": {
+   "source": "decoy",
+   "item_id": "VCS673-additionality",
+   "question_id": "A1"
+  },
+  "c049": {
+   "source": "model_citation",
+   "item_id": "VCS2505-safeguards",
+   "question_id": "S3"
+  },
+  "c050": {
+   "source": "model_citation",
+   "item_id": "VCS2505-robust_quantification",
+   "question_id": "Q2"
+  },
+  "c051": {
+   "source": "decoy",
+   "item_id": "VCS2609-safeguards",
+   "question_id": "S1"
+  },
+  "c052": {
+   "source": "model_citation",
+   "item_id": "VCS2609-safeguards",
+   "question_id": "S3"
+  },
+  "c053": {
+   "source": "model_citation",
+   "item_id": "VCS4150-safeguards",
+   "question_id": "S4"
+  },
+  "c054": {
+   "source": "decoy",
+   "item_id": "VCS4150-no_double_counting",
+   "question_id": "D3"
+  },
+  "c055": {
+   "source": "decoy",
+   "item_id": "VCS2846-no_double_counting",
+   "question_id": "D2"
+  },
+  "c056": {
+   "source": "model_citation",
+   "item_id": "VCS4150-safeguards",
+   "question_id": "S3"
+  },
+  "c057": {
+   "source": "model_citation",
+   "item_id": "VCS985-safeguards",
+   "question_id": "S4"
+  },
+  "c058": {
+   "source": "model_citation",
+   "item_id": "VCS985-safeguards",
+   "question_id": "S2"
+  },
+  "c059": {
+   "source": "model_citation",
+   "item_id": "VCS673-permanence",
+   "question_id": "P1"
+  },
+  "c060": {
+   "source": "decoy",
+   "item_id": "VCS138-safeguards",
+   "question_id": "S1"
+  },
+  "c061": {
+   "source": "model_citation",
+   "item_id": "VCS1851-no_double_counting",
+   "question_id": "D1"
+  },
+  "c062": {
+   "source": "model_citation",
+   "item_id": "VCS2505-robust_quantification",
+   "question_id": "Q2"
+  },
+  "c063": {
+   "source": "model_citation",
+   "item_id": "VCS138-additionality",
+   "question_id": "A3"
+  },
+  "c064": {
+   "source": "model_citation",
+   "item_id": "VCS673-robust_quantification",
+   "question_id": "Q2"
+  },
+  "c065": {
+   "source": "model_citation",
+   "item_id": "VCS1477-safeguards",
+   "question_id": "S3"
+  },
+  "c066": {
+   "source": "model_citation",
+   "item_id": "VCS1477-permanence",
+   "question_id": "P2"
+  },
+  "c067": {
+   "source": "decoy",
+   "item_id": "VCS1477-robust_quantification",
+   "question_id": "Q3"
+  },
+  "c068": {
+   "source": "model_citation",
+   "item_id": "VCS2609-additionality",
+   "question_id": "A2"
+  },
+  "c069": {
+   "source": "model_citation",
+   "item_id": "VCS1742-additionality",
+   "question_id": "A2"
+  },
+  "c070": {
+   "source": "model_citation",
+   "item_id": "VCS4150-additionality",
+   "question_id": "A3"
+  },
+  "c071": {
+   "source": "model_citation",
+   "item_id": "VCS1742-additionality",
+   "question_id": "A1"
+  },
+  "c072": {
+   "source": "decoy",
+   "item_id": "VCS2505-additionality",
+   "question_id": "A2"
+  },
+  "c073": {
+   "source": "model_citation",
+   "item_id": "VCS1742-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c074": {
+   "source": "model_citation",
+   "item_id": "VCS2846-safeguards",
+   "question_id": "S2"
+  },
+  "c075": {
+   "source": "model_citation",
+   "item_id": "VCS1728-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c076": {
+   "source": "model_citation",
+   "item_id": "VCS1851-robust_quantification",
+   "question_id": "Q4"
+  },
+  "c077": {
+   "source": "model_citation",
+   "item_id": "VCS2846-safeguards",
+   "question_id": "S3"
+  },
+  "c078": {
+   "source": "model_citation",
+   "item_id": "VCS985-additionality",
+   "question_id": "A3"
+  },
+  "c079": {
+   "source": "model_citation",
+   "item_id": "VCS673-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c080": {
+   "source": "model_citation",
+   "item_id": "VCS2505-safeguards",
+   "question_id": "S4"
+  },
+  "c081": {
+   "source": "decoy",
+   "item_id": "VCS985-permanence",
+   "question_id": "P2"
+  },
+  "c082": {
+   "source": "model_citation",
+   "item_id": "VCS2846-additionality",
+   "question_id": "A3"
+  },
+  "c083": {
+   "source": "model_citation",
+   "item_id": "VCS673-robust_quantification",
+   "question_id": "Q3"
+  },
+  "c084": {
+   "source": "decoy",
+   "item_id": "VCS4150-additionality",
+   "question_id": "A2"
+  },
+  "c085": {
+   "source": "model_citation",
+   "item_id": "VCS985-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c086": {
+   "source": "model_citation",
+   "item_id": "VCS1477-no_double_counting",
+   "question_id": "D2"
+  },
+  "c087": {
+   "source": "model_citation",
+   "item_id": "VCS1728-additionality",
+   "question_id": "A3"
+  },
+  "c088": {
+   "source": "decoy",
+   "item_id": "VCS1477-safeguards",
+   "question_id": "S2"
+  },
+  "c089": {
+   "source": "decoy",
+   "item_id": "VCS138-robust_quantification",
+   "question_id": "Q4"
+  },
+  "c090": {
+   "source": "model_citation",
+   "item_id": "VCS4150-safeguards",
+   "question_id": "S4"
+  },
+  "c091": {
+   "source": "model_citation",
+   "item_id": "VCS2846-robust_quantification",
+   "question_id": "Q2"
+  },
+  "c092": {
+   "source": "model_citation",
+   "item_id": "VCS1477-safeguards",
+   "question_id": "S4"
+  },
+  "c093": {
+   "source": "model_citation",
+   "item_id": "VCS138-robust_quantification",
+   "question_id": "Q3"
+  },
+  "c094": {
+   "source": "decoy",
+   "item_id": "VCS2846-no_double_counting",
+   "question_id": "D3"
+  },
+  "c095": {
+   "source": "model_citation",
+   "item_id": "VCS1477-no_double_counting",
+   "question_id": "D2"
+  },
+  "c096": {
+   "source": "model_citation",
+   "item_id": "VCS1477-safeguards",
+   "question_id": "S4"
+  },
+  "c097": {
+   "source": "decoy",
+   "item_id": "VCS1851-robust_quantification",
+   "question_id": "Q3"
+  },
+  "c098": {
+   "source": "model_citation",
+   "item_id": "VCS1477-no_double_counting",
+   "question_id": "D3"
+  },
+  "c099": {
+   "source": "model_citation",
+   "item_id": "VCS2609-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c100": {
+   "source": "model_citation",
+   "item_id": "VCS138-robust_quantification",
+   "question_id": "Q3"
+  },
+  "c101": {
+   "source": "model_citation",
+   "item_id": "VCS1477-additionality",
+   "question_id": "A2"
+  },
+  "c102": {
+   "source": "decoy",
+   "item_id": "VCS985-permanence",
+   "question_id": "P1"
+  },
+  "c103": {
+   "source": "model_citation",
+   "item_id": "VCS2505-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c104": {
+   "source": "model_citation",
+   "item_id": "VCS2609-robust_quantification",
+   "question_id": "Q3"
+  },
+  "c105": {
+   "source": "decoy",
+   "item_id": "VCS4150-robust_quantification",
+   "question_id": "Q1"
+  },
+  "c106": {
+   "source": "decoy",
+   "item_id": "VCS673-safeguards",
+   "question_id": "S1"
+  },
+  "c107": {
+   "source": "decoy",
+   "item_id": "VCS2846-robust_quantification",
+   "question_id": "Q3"
+  }
+ }
+}

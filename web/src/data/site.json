@@ -112,7 +112,11 @@
     0.8449
    ],
    "judged_by": "ai",
-   "human_check": null,
+   "human_check": {
+    "annotator": "Salih Eren Cavusoglu",
+    "units": 19,
+    "agree": 18
+   },
    "source": "docs/citation_check.md"
   }
  },

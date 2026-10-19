@@ -1,0 +1,130 @@
+{
+ "annotator": "Salih Eren Cavusoglu",
+ "kind": "human",
+ "version": "citation-check-v1-spot20",
+ "exported_at": "2026-10-19T17:29:17.674Z",
+ "answered": 20,
+ "total": 20,
+ "labels": [
+  {
+   "uid": "c003",
+   "question_id": "S3",
+   "paragraph_id": "p191-02",
+   "answer": "no"
+  },
+  {
+   "uid": "c004",
+   "question_id": "D1",
+   "paragraph_id": "p96-23",
+   "answer": "no"
+  },
+  {
+   "uid": "c014",
+   "question_id": "A1",
+   "paragraph_id": "p69-15",
+   "answer": "yes"
+  },
+  {
+   "uid": "c020",
+   "question_id": "Q1",
+   "paragraph_id": "p46-11",
+   "answer": "yes"
+  },
+  {
+   "uid": "c022",
+   "question_id": "Q2",
+   "paragraph_id": "p35-11",
+   "answer": "no"
+  },
+  {
+   "uid": "c024",
+   "question_id": "D2",
+   "paragraph_id": "p21-05",
+   "answer": "yes"
+  },
+  {
+   "uid": "c035",
+   "question_id": "D3",
+   "paragraph_id": "p80-04",
+   "answer": "yes"
+  },
+  {
+   "uid": "c039",
+   "question_id": "S3",
+   "paragraph_id": "p39-13",
+   "answer": "yes"
+  },
+  {
+   "uid": "c041",
+   "question_id": "A2",
+   "paragraph_id": "p42-05",
+   "answer": "yes"
+  },
+  {
+   "uid": "c045",
+   "question_id": "D2",
+   "paragraph_id": "p68-16",
+   "answer": "no"
+  },
+  {
+   "uid": "c049",
+   "question_id": "S3",
+   "paragraph_id": "p31-10",
+   "answer": "yes"
+  },
+  {
+   "uid": "c055",
+   "question_id": "D2",
+   "paragraph_id": "p45-02",
+   "answer": "no"
+  },
+  {
+   "uid": "c062",
+   "question_id": "Q2",
+   "paragraph_id": "p46-08",
+   "answer": "yes"
+  },
+  {
+   "uid": "c072",
+   "question_id": "A2",
+   "paragraph_id": "p33-02",
+   "answer": "yes"
+  },
+  {
+   "uid": "c074",
+   "question_id": "S2",
+   "paragraph_id": "p2-24",
+   "answer": "no"
+  },
+  {
+   "uid": "c077",
+   "question_id": "S3",
+   "paragraph_id": "p2-25",
+   "answer": "no"
+  },
+  {
+   "uid": "c079",
+   "question_id": "Q1",
+   "paragraph_id": "p62-02",
+   "answer": "yes"
+  },
+  {
+   "uid": "c082",
+   "question_id": "A3",
+   "paragraph_id": "p36-10",
+   "answer": "yes"
+  },
+  {
+   "uid": "c091",
+   "question_id": "Q2",
+   "paragraph_id": "p132-04",
+   "answer": "unclear"
+  },
+  {
+   "uid": "c102",
+   "question_id": "P1",
+   "paragraph_id": "p26-01",
+   "answer": "no"
+  }
+ ]
+}
