@@ -98,6 +98,7 @@ anonim sayılmıyor.
 | Gizlilik ölçümü | Tonların %88,7'si (proje + miktar) ile tekil. **Standart lotlar artık sözleşmede zorunlu** (1.000 t). Zamanlama hâlâ bağlıyor: lot + operatörün dönemsel toplu yayını ile tamamen açıkta kalan tonlar günlükte %36,8, çeyrekte %14,5. Eski "61 eş lot" rakamı zamanlamayı yok sayıyordu, **kullanma** | 15 Ekim |
 | Güvenlik | Slither lot sürümünde yeniden çalıştırıldı: 1 yanlış alarm + 1 bilgilendirme, ikisi de gerekçeli; 2 adımlı yönetici devri, rol iptali; 13 tehdit senaryosu belgelendi | 15 Ekim |
 | AI tutarlılığı | Jev 3 çalıştırmada %99,4 aynı cevap (LLM %96); Jev 6 kat hızlı, 20 kat ucuz | 15 Ekim |
+| **AI doğruluğu (19 Ekim)** | 177 soru, altın etiket: ekip üyesi + Claude (AI etiketçi, değerlendirilen modellerden değil), ikisi de model cevaplarını görmeden; κ 0,90 (insan-AI uyumu); 12 ayrışmayı ekip üyesi karara bağladı (7'sinde kendi, 5'inde Claude'un okuması). Doğruluk (%95 aralık): **LLM 0,94 (0,90-0,97)**, Jev 0,88 (0,83-0,92), Turnike 0,86 (0,80-0,90). LLM > Jev (McNemar p 0,013), LLM > Turnike (p 0,001), Jev ≈ Turnike (p 0,52). Jev en iyi kalibre (Brier 0,084). Zayıf: A1 finansal eşik, S4 topluluk hakları, Turnike D1. Ek katkıda 44 sorunun sadece 4'ü pozitif → bu ilkede sonuç zayıf | 19 Ekim |
 | Sepolia sözleşme adresi / Etherscan | **`0xBb88057576b92Ef27753A6b2a4Df83bE444F1308`** (lot sürümü, kaynak doğrulandı): https://sepolia.etherscan.io/address/0xBb88057576b92Ef27753A6b2a4Df83bE444F1308#code . 4 rapor, 4 parti, 2 lotluk bir alım + 2 denetçi onayı; işlemler `deployments/11155111-seed.json`. İlk sürüm `0x7D17…e675` `previous` altında kayıtlı | 15 Ekim |
 
 ## 6. Jüri soruları ve cevapları
@@ -149,7 +150,8 @@ Belgeden alıntı çıkarmak için `deepseek-v4.1-flash`, kanıtı puanlamak iç
 OpenRouter üzerinden ve ikisi de bizim değil. Karar modeli değiştirilebilir bir arayüzün arkasında; ekibimizin kendi
 modeli Turnike-JEV-4B'yi aynı 177 soruyla yerelde çalıştırıp karşılaştırdık: 3 çalıştırmada %100 aynı cevap,
 maliyet 0, laptop'ta (FP8) parça başına 0,65 sn, Colab L4'te (BF16) 0,32 sn. FP8 ile BF16 177 sorunun 176'sında aynı
-cevabı veriyor. Doğruluk insan etiketleri gelince ölçülecek; henüz rapor hattına entegre edilmedi.
+cevabı veriyor. Doğruluk (19 Ekim, 177 soru): LLM 0,94, Jev 0,88, Turnike 0,86; LLM ikisinden de anlamlı
+biçimde iyi, Jev ile Turnike ayırt edilemiyor. Turnike henüz rapor hattına entegre edilmedi.
 
 **"Ölçeklenir mi?"**
 Prototipte örtüşme kontrolü bir partideki iptalleri tek tek tarıyor; demo ölçeğinde sorun değil ve sadece yetkili
@@ -215,13 +217,15 @@ Arayüz eşlemesi (16 Ekim): kalite raporu `/projects/VCS985` (rapor hash'i "Mat
 - "Projeyi ICVCM'e göre derecelendiriyoruz" / "bu proje kötü".
 - "Gerçek iptal yapıyoruz" / "sıfır bilgi kanıtı".
 - Kaynaksız rakamı (%55) ana rakam gibi sunmak.
-- AI puanlarının "doğru" olduğunu iddia etmek (etiketli küme olmadan doğruluk ölçmedik).
+- AI puanlarının "doğru" olduğunu iddia etmek. Ölçtüğümüz: modelin alıntıda var olan kanıtı bulma doğruluğu (LLM %94).
+  Kanıtın doğru olduğunu ya da projenin iyi olduğunu ölçmedik.
+- Etiketleri "iki insan" yaptı demek: bir ekip üyesi + Claude (AI etiketçi), son kararı ekip üyesi verdi.
 
 ## 10. Yapılacaklar (sunum için)
 
 - [x] Anonimlik oranı ve grafik (`docs/figures/anonymity_trend.png`)
 - [x] Sepolia adresi ve Etherscan bağlantıları (Bölüm 5)
-- [x] README son hâline yakın (15 Ekim; etiket sonuçları ve arayüz gelince güncellenecek)
+- [x] README son hâline yakın (19 Ekim: etiket sonuçları eklendi)
 - [x] Arayüz gerçek veriye bağlandı (iş paketi 6)
 - [ ] Arayüz ekran görüntüleri
 - [ ] Mimari diyagram

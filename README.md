@@ -135,11 +135,12 @@ the decision model's known run-to-run variation).
 | Document figures vs registry records | Yearly net-reduction tables read for 9 of 11 projects (the parser finds none it can use in the other 2); 8 overlap issued vintages. Credits issued exceed the document's own figures by more than 20% over the covered years for 1 project (VCS985, 1.72×); 4 more have single vintages above it. 1 project retires more than was issued (VCS673, vintage 2017, +13,052 t); 1 shares its name and an issued vintage with another listing (VCS4150 / VCS2749, both DelAgua, Rwanda). Each flag is a lead, not a finding. Every project so far has only its project description read | [`docs/data_checks.md`](docs/data_checks.md), [`checks/`](checks/), `scripts/run_checks.py` |
 | AI quotes are real | 179 of 179 quotes in the 11 published reports were found in the PDFs; 0 dropped | [`reports/`](reports/) |
 | AI consistency, speed, cost (no labels needed) | On 177 yes/no questions over 48 excerpts from 11 projects, same answer in 3 runs: Jev 99.4%, LLM 96.0%, Turnike-JEV-4B 100% (both FP8 and BF16). Median time per excerpt: 0.8 s, 4.9 s, and 0.65 s for Turnike FP8 on a laptop RTX 4060 under WSL2 or 0.32 s for Turnike BF16 on a Colab L4 (both without its optional fast kernels; the API models include network time). Cost per 1,000 excerpts: $0.04, $0.79, $0 (local). FP8 and BF16 Turnike give the same yes/no answer on 176 of 177 questions (mean probability difference 0.014) | [`docs/ai_evaluation.md`](docs/ai_evaluation.md), `scripts/run_turnike.py` |
-| **AI accuracy** | **Not measured yet.** Two team members label the same 177 questions independently; precision, recall, F1, Cohen's kappa and Brier score are computed by `scripts/eval_metrics.py` when the labels are in | [evaluation plan](docs/evaluation_plan.md) (Turkish) |
+| **AI accuracy** | Gold set: 177 yes/no questions labelled independently by a team member and by Claude (an AI annotator, not one of the evaluated models), both blind to the evaluated models' answers; Cohen's kappa 0.90 (human-AI agreement); the 12 disagreements were settled by the team member against the text. Accuracy (95% interval): **LLM 0.94 (0.90-0.97)**, **Jev 0.88 (0.83-0.92)**, **Turnike-JEV-4B 0.86 (0.80-0.90)**. The LLM is better than Jev (exact McNemar p = 0.013) and Turnike (p = 0.001); Jev and Turnike cannot be told apart here (p = 0.52). Jev's probabilities are the best calibrated (Brier 0.084 vs 0.220 for always guessing the base rate). Weakest: reporting a financial benchmark (A1) and community rights (S4); the set has almost no positives for additionality (4 of 44) | [`docs/ai_evaluation.md`](docs/ai_evaluation.md), [`data/eval/adjudication.json`](data/eval/adjudication.json) |
 | Security | Slither: no findings beyond two documented false positives and one informational note; admin handover is two-step with a two-day delay; 13 threats analysed | [threat model](docs/threat_model.md) |
 
-Consistency is not accuracy: a model can repeat the same wrong answer. Until the labels are in, we make no claim
-about how often the AI is right.
+Consistency is not accuracy: a model can repeat the same wrong answer. The accuracy figures measure whether a model
+finds evidence that is *present in an excerpt*; they say nothing about whether the evidence is true, and the set is
+small (about 10 questions per question type), so per-question results are indicative only.
 
 ## Trust assumptions and limitations
 
@@ -254,7 +255,7 @@ can open it can act as the operator and the auditor. Run it locally for the demo
 - [x] Scale, privacy and data-quality measurements on real OffsetsDB histories
 - [x] FastAPI layer
 - [x] Web app: project reports, operator and auditor screens, public verification that reads the chain in the browser
-- [ ] Human-labelled evaluation of the AI layer; compare decision models on it
+- [x] Labelled evaluation of the AI layer; decision models compared on it
 - [x] Reports for all 11 evaluation projects
 - [ ] Demo video
 

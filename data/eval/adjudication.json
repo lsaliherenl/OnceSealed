@@ -1,0 +1,128 @@
+{
+ "question_set_version": "qs-v2-checklist",
+ "adjudicated_on": "2026-10-19",
+ "annotators": {
+  "human": "Salih Eren Çavuşoğlu",
+  "ai": "Claude Opus 5.5"
+ },
+ "process": "Both annotators labelled independently and blind to the evaluated models. Every disagreement was reviewed against the excerpt; the human annotator made the final decision in each case. 'source' says whose reading was kept. No evaluated model's answer was seen during adjudication.",
+ "rules": {
+  "R1": "Text that quotes a standard's requirement (e.g. the requirement column of a compliance table) is not evidence; the project's own statement is needed.",
+  "R2": "If the excerpt asks the question or starts the analysis but the needed part is cut off, answer no: label only what the excerpt shows.",
+  "R3": "Do not infer from domain knowledge or from the document type; the text must state it.",
+  "R4": "Named participating organisations count as participants (S1).",
+  "R5": "Dates of plans or reports about a consultation are not details of the consultation itself (S1).",
+  "R6": "Future-tense descriptions of specific activities count as measures; only general intentions do not (P3 and similar).",
+  "R7": "A described method for quantifying a quantity (e.g. leakage) counts as addressing it."
+ },
+ "decisions": [
+  {
+   "key": "VCS138-robust_quantification|Q4",
+   "human": "yes",
+   "ai": "no",
+   "final": "yes",
+   "source": "human",
+   "reason": "'Frequency of monitoring/recording: Annual' gives a measurement frequency, which the guide accepts.",
+   "rule": null
+  },
+  {
+   "key": "VCS1742-additionality|A1",
+   "human": "no",
+   "ai": "unclear",
+   "final": "no",
+   "source": "human",
+   "reason": "IRR values are shown but the benchmark value they are compared against is not in the excerpt.",
+   "rule": "R2"
+  },
+  {
+   "key": "VCS1742-no_double_counting|D1",
+   "human": "no",
+   "ai": "unclear",
+   "final": "no",
+   "source": "human",
+   "reason": "The excerpt is a CDM PDD but no sentence states the registration status.",
+   "rule": "R3"
+  },
+  {
+   "key": "VCS1742-robust_quantification|Q1",
+   "human": "no",
+   "ai": "yes",
+   "final": "no",
+   "source": "human",
+   "reason": "Only variable definitions; no equation, parameter value or result is shown.",
+   "rule": null
+  },
+  {
+   "key": "VCS2505-safeguards|S1",
+   "human": "no",
+   "ai": "yes",
+   "final": "no",
+   "source": "human",
+   "reason": "The dates are of the consultation plan's approval and of a report, not of a consultation itself.",
+   "rule": "R5"
+  },
+  {
+   "key": "VCS2505-safeguards|S4",
+   "human": "yes",
+   "ai": "no",
+   "final": "no",
+   "source": "ai",
+   "reason": "p26-02 is the standard's requirement list (customary access), not the project's own statement.",
+   "rule": "R1"
+  },
+  {
+   "key": "VCS2609-permanence|P2",
+   "human": "no",
+   "ai": "unclear",
+   "final": "no",
+   "source": "human",
+   "reason": "'Risk rating 10' is given; that it means a 10% buffer withholding is domain knowledge the text does not state.",
+   "rule": "R3"
+  },
+  {
+   "key": "VCS2609-safeguards|S1",
+   "human": "no",
+   "ai": "yes",
+   "final": "yes",
+   "source": "ai",
+   "reason": "Participants are named (Sabah Forestry Department, District Office of Tongod, PACOS Trust); workshops and Malay brochures described.",
+   "rule": "R4"
+  },
+  {
+   "key": "VCS4150-additionality|A3",
+   "human": "no",
+   "ai": "unclear",
+   "final": "no",
+   "source": "human",
+   "reason": "The question 'mandated by any law?' appears but its answer is cut off.",
+   "rule": "R2"
+  },
+  {
+   "key": "VCS4150-robust_quantification|Q1",
+   "human": "no",
+   "ai": "yes",
+   "final": "yes",
+   "source": "ai",
+   "reason": "A baseline parameter value is given: fNRB 0.8872 x (1-0.26) = 0.6565.",
+   "rule": null
+  },
+  {
+   "key": "VCS985-permanence|P3",
+   "human": "no",
+   "ai": "yes",
+   "final": "yes",
+   "source": "ai",
+   "reason": "Concrete measures against illegal activity: community monitoring and reporting, training, land-tenure work. Future tense is normal in a PD.",
+   "rule": "R6"
+  },
+  {
+   "key": "VCS985-robust_quantification|Q2",
+   "human": "no",
+   "ai": "yes",
+   "final": "yes",
+   "source": "ai",
+   "reason": "Leakage is addressed by a quantification method (satellite monitoring of the leakage belt); the guide's 'no' is only for leakage not mentioned.",
+   "rule": "R7"
+  }
+ ]
+}

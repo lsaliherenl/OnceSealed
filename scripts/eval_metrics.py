@@ -3,8 +3,9 @@
     python scripts/eval_metrics.py
 
 Inputs (data/eval/):
-    labels/*.json        one export per annotator from labeling_tool.html
+    labels/*.json        one export per annotator from labeling_tool.html ("kind": "human" or "ai")
     gold.json            optional: adjudicated labels {"item|question": "yes"|"no"} after discussion
+    adjudication.json    optional: how each disagreement was settled (rules, whose reading was kept)
     answers_jev.json     Jev 1.13 answers (probability of yes), 3 runs
     answers_llm.json     LLM answers (yes/no), 3 runs
     answers_<other>.json any other model with p_yes answers (e.g. Turnike; see export_reranker_inputs.py)
@@ -15,6 +16,7 @@ left out of the scores. Without any labels, only label-free metrics are reported
 """
 
 import json
+import math
 import statistics as st
 import sys
 from collections import defaultdict
@@ -47,6 +49,31 @@ def prf(pred: list[bool], gold: list[bool]) -> dict[str, float | int]:
     f1 = None if tp + fp + fn == 0 else (2 * precision * recall / (precision + recall) if precision + recall else 0.0)
     return {"n": len(gold), "tp": tp, "fp": fp, "fn": fn, "tn": tn, "precision": precision, "recall": recall,
             "f1": f1, "accuracy": (tp + tn) / len(gold) if gold else 0.0}
+
+
+def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
+    """95% Wilson score interval for a proportion k/n."""
+    if n == 0:
+        return (0.0, 1.0)
+    p = k / n
+    centre = (p + z * z / (2 * n)) / (1 + z * z / n)
+    half = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / (1 + z * z / n)
+    return (max(0.0, centre - half), min(1.0, centre + half))
+
+
+def ci(k: int, n: int) -> str:
+    if n == 0:
+        return "n/a"
+    lo, hi = wilson(k, n)
+    return f"{k / n:.2f} ({lo:.2f}-{hi:.2f})"
+
+
+def mcnemar_p(b: int, c: int) -> float:
+    """Exact two-sided McNemar test; b and c count the questions only one of the two models got right."""
+    n = b + c
+    if n == 0:
+        return 1.0
+    return min(1.0, 2 * sum(math.comb(n, i) for i in range(min(b, c) + 1)) / 2 ** n)
 
 
 def load_answers(name: str) -> dict | None:
@@ -107,33 +134,48 @@ def main() -> None:
     if "jev" in models and "llm" in models:
         md += ["", f"Agreement between Jev and the LLM (run 1): **{md_agree}**."]
 
-    # --- human labels -------------------------------------------------------------------------
+    # --- labels -------------------------------------------------------------------------------
     label_files = sorted((EVAL / "labels").glob("*.json")) if (EVAL / "labels").exists() else []
-    annotators = {}
+    annotators, kinds = {}, {}
     for f in label_files:
         d = json.loads(f.read_text(encoding="utf-8"))
         annotators[d["annotator"]] = {f"{x['item_id']}|{x['question_id']}": x["answer"] for x in d["labels"]}
-    md += ["", "## Human labels", ""]
+        kinds[d["annotator"]] = d.get("kind", "human")
+    md += ["", "## Labels", ""]
     if len(annotators) < 2:
         md += [f"Waiting for labels: {len(annotators)} of 2 annotator files in `data/eval/labels/`."]
         (PROJECT_ROOT / "docs" / "ai_evaluation.md").write_text("\n".join(md) + "\n", encoding="utf-8")
         print("\n".join(md))
         return
 
-    names = sorted(annotators)[:2]
+    names = sorted(annotators, key=lambda n: (kinds[n] != "human", n))[:2]
     a1, a2 = annotators[names[0]], annotators[names[1]]
     both = [k for k in keys if a1.get(k) in ("yes", "no") and a2.get(k) in ("yes", "no")]
     kappa = cohen_kappa([a1[k] for k in both], [a2[k] for k in both])
     raw_agree = sum(a1[k] == a2[k] for k in both) / len(both) if both else 0
     unclear = sum(1 for k in keys if "unclear" in (a1.get(k), a2.get(k)))
-    md += [f"Annotators: {', '.join(names)}. Both answered yes/no on {len(both)} of {len(keys)} questions; "
-           f"raw agreement {pct(raw_agree)}, **Cohen's kappa {kappa:.2f}**; {unclear} questions marked unclear "
-           "by at least one annotator.", ""]
+    who = " and ".join(f"{n} ({kinds[n]})" for n in names)
+    md += [f"Annotators: {who}, labelling independently and blind to every evaluated model's answers. Both "
+           f"answered yes/no on {len(both)} of {len(keys)} questions; raw agreement {pct(raw_agree)}, "
+           f"**Cohen's kappa {kappa:.2f}**; {unclear} questions marked unclear by at least one annotator."]
+    if "ai" in (kinds[n] for n in names):
+        md += ["", "One annotator is an AI model (Claude), so this kappa is human-AI agreement, not agreement "
+               "between two people. Claude is not one of the evaluated models."]
+    md.append("")
 
     gold_file = EVAL / "gold.json"
+    adj_file = EVAL / "adjudication.json"
     if gold_file.exists():
         gold = json.loads(gold_file.read_text(encoding="utf-8"))
         md.append("Gold labels: adjudicated (`data/eval/gold.json`).")
+        if adj_file.exists():
+            adj = json.loads(adj_file.read_text(encoding="utf-8"))
+            kept = defaultdict(int)
+            for d in adj["decisions"]:
+                kept[d["source"]] += 1
+            md.append(f"Each of the {len(adj['decisions'])} disagreements was settled by the human annotator against "
+                      f"the excerpt (human reading kept {kept['human']}, AI reading kept {kept['ai']}); the decisions "
+                      f"and the {len(adj['rules'])} guide rules they produced are in `data/eval/adjudication.json`.")
     else:
         gold = {k: a1[k] for k in both if a1[k] == a2[k]}
         dis = [{"key": k, names[0]: a1.get(k), names[1]: a2.get(k)} for k in keys if k not in gold]
@@ -144,11 +186,15 @@ def main() -> None:
     g = [gold[k] == "yes" for k in gkeys]
     md += ["", f"Gold set: {len(gkeys)} questions, {sum(g)} yes ({pct(sum(g) / len(g))}).", "",
            "### Overall (positive class = evidence present)", "",
-           "| Model | Precision | Recall | F1 | Accuracy | Macro-F1 over questions |", "|---|---|---|---|---|---|"]
-    per_q = {}
+           "Run 1 of each model, 95% Wilson interval in brackets; the accuracy range covers all runs.", "",
+           "| Model | Precision | Recall | F1 | Accuracy | Accuracy, all runs | Macro-F1 over questions |",
+           "|---|---|---|---|---|---|---|"]
+    per_q, correct = {}, {}
     for name, a in models.items():
         pred = [model_yes(name, a["runs"][0], k) for k in gkeys]
+        correct[name] = [p == gi for p, gi in zip(pred, g)]
         m = prf(pred, g)
+        run_acc = [sum(model_yes(name, r, k) == gi for k, gi in zip(gkeys, g)) / len(g) for r in a["runs"]]
         qf1 = []
         for q in QUESTIONS:
             idx = [i for i, k in enumerate(gkeys) if k.endswith("|" + q.id)]
@@ -157,8 +203,28 @@ def main() -> None:
                 if qm["f1"] is not None:
                     qf1.append(qm["f1"])
                 per_q.setdefault(q.id, {})[name] = qm
-        md.append(f"| {name} | {m['precision']:.2f} | {m['recall']:.2f} | {m['f1']:.2f} | {m['accuracy']:.2f} | "
+        md.append(f"| {LABELS.get(name, a.get('label', name))} | {ci(m['tp'], m['tp'] + m['fp'])} | "
+                  f"{ci(m['tp'], m['tp'] + m['fn'])} | {m['f1']:.2f} | {ci(m['tp'] + m['tn'], m['n'])} | "
+                  f"{min(run_acc):.2f}-{max(run_acc):.2f} ({len(run_acc)} runs) | "
                   f"{st.mean(qf1):.2f} ({len(qf1)} questions with evidence) |")
+    if len(correct) > 1:
+        md += ["", "### Pairwise comparison", "",
+               "Exact McNemar test on the questions where only one of the two models is right (run 1). "
+               "p < 0.05 is read as a real difference on this set; above that the two are not distinguishable here.",
+               "", "| Models | Only first right | Only second right | p |", "|---|---|---|---|"]
+        ns = list(correct)
+        for i, x in enumerate(ns):
+            for y in ns[i + 1:]:
+                b = sum(cx and not cy for cx, cy in zip(correct[x], correct[y]))
+                c = sum(cy and not cx for cx, cy in zip(correct[x], correct[y]))
+                md.append(f"| {x} vs {y} | {b} | {c} | {mcnemar_p(b, c):.3f} |")
+    md += ["", "### Per principle (accuracy, run 1)", "",
+           "| Principle | n | yes in gold | " + " | ".join(models) + " |", "|---|---|---|" + "---|" * len(models)]
+    for pr in dict.fromkeys(Q_PRINCIPLE.values()):
+        idx = [i for i, k in enumerate(gkeys) if Q_PRINCIPLE[k.split("|")[1]] == pr]
+        if idx:
+            md.append(f"| {pr} | {len(idx)} | {sum(g[i] for i in idx)} | " +
+                      " | ".join(ci(sum(correct[n][i] for i in idx), len(idx)) for n in models) + " |")
     base = st.mean((sum(g) / len(g) - gi) ** 2 for gi in g)
     for name, a in models.items():
         if all("p_yes" in a["runs"][0][k] for k in gkeys):
@@ -173,8 +239,10 @@ def main() -> None:
             md.append(f"| {q.id} | {q.principle} | {n} | " +
                       " | ".join("n/a" if per_q[q.id][m]["f1"] is None else f"{per_q[q.id][m]['f1']:.2f}"
                                  for m in models) + " |")
-    md += ["", "Caveats: labels come from the team using a written guide, not from domain experts; questions "
-           "measure whether evidence is *present* in the excerpt, not whether it is true."]
+    md += ["", "Caveats: labels come from one team member and an AI annotator using a written guide, not from "
+           "domain experts; questions measure whether evidence is *present* in the excerpt, not whether it is true. "
+           "With about 10 questions per question id, and few positives for some, per-question F1 is indicative "
+           "only. This set compares models; a change tuned on it needs a fresh held-out set to be measured."]
     (PROJECT_ROOT / "docs" / "ai_evaluation.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     print("\n".join(md))
 

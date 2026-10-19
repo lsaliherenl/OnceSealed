@@ -1,0 +1,1426 @@
+{
+ "annotator": "Salih Eren Çavuşoğlu",
+ "kind": "human",
+ "question_set_version": "qs-v2-checklist",
+ "exported_at": "2026-10-19T13:27:31.287Z",
+ "answered": 177,
+ "total": 177,
+ "labels": [
+  {
+   "item_id": "VCS1477-additionality",
+   "project_id": "VCS1477",
+   "principle": "additionality",
+   "question_id": "A1",
+   "answer": "no",
+   "evidence": "p43-02,p43-03"
+  },
+  {
+   "item_id": "VCS1477-additionality",
+   "project_id": "VCS1477",
+   "principle": "additionality",
+   "question_id": "A2",
+   "answer": "no",
+   "evidence": "p43-02"
+  },
+  {
+   "item_id": "VCS1477-additionality",
+   "project_id": "VCS1477",
+   "principle": "additionality",
+   "question_id": "A3",
+   "answer": "yes",
+   "evidence": "p43-02"
+  },
+  {
+   "item_id": "VCS1477-additionality",
+   "project_id": "VCS1477",
+   "principle": "additionality",
+   "question_id": "A4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1477-permanence",
+   "project_id": "VCS1477",
+   "principle": "permanence",
+   "question_id": "P1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1477-permanence",
+   "project_id": "VCS1477",
+   "principle": "permanence",
+   "question_id": "P2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1477-permanence",
+   "project_id": "VCS1477",
+   "principle": "permanence",
+   "question_id": "P3",
+   "answer": "yes",
+   "evidence": "p252-04, p318-05, p318-06"
+  },
+  {
+   "item_id": "VCS1477-robust_quantification",
+   "project_id": "VCS1477",
+   "principle": "robust_quantification",
+   "question_id": "Q1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1477-robust_quantification",
+   "project_id": "VCS1477",
+   "principle": "robust_quantification",
+   "question_id": "Q2",
+   "answer": "yes",
+   "evidence": "p237-03"
+  },
+  {
+   "item_id": "VCS1477-robust_quantification",
+   "project_id": "VCS1477",
+   "principle": "robust_quantification",
+   "question_id": "Q3",
+   "answer": "yes",
+   "evidence": "p238-22"
+  },
+  {
+   "item_id": "VCS1477-robust_quantification",
+   "project_id": "VCS1477",
+   "principle": "robust_quantification",
+   "question_id": "Q4",
+   "answer": "yes",
+   "evidence": "p210-19"
+  },
+  {
+   "item_id": "VCS1477-no_double_counting",
+   "project_id": "VCS1477",
+   "principle": "no_double_counting",
+   "question_id": "D1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1477-no_double_counting",
+   "project_id": "VCS1477",
+   "principle": "no_double_counting",
+   "question_id": "D2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1477-no_double_counting",
+   "project_id": "VCS1477",
+   "principle": "no_double_counting",
+   "question_id": "D3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1477-safeguards",
+   "project_id": "VCS1477",
+   "principle": "safeguards",
+   "question_id": "S1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1477-safeguards",
+   "project_id": "VCS1477",
+   "principle": "safeguards",
+   "question_id": "S2",
+   "answer": "yes",
+   "evidence": "p66-04"
+  },
+  {
+   "item_id": "VCS1477-safeguards",
+   "project_id": "VCS1477",
+   "principle": "safeguards",
+   "question_id": "S3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1477-safeguards",
+   "project_id": "VCS1477",
+   "principle": "safeguards",
+   "question_id": "S4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1851-additionality",
+   "project_id": "VCS1851",
+   "principle": "additionality",
+   "question_id": "A1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1851-additionality",
+   "project_id": "VCS1851",
+   "principle": "additionality",
+   "question_id": "A2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1851-additionality",
+   "project_id": "VCS1851",
+   "principle": "additionality",
+   "question_id": "A3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1851-additionality",
+   "project_id": "VCS1851",
+   "principle": "additionality",
+   "question_id": "A4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1851-robust_quantification",
+   "project_id": "VCS1851",
+   "principle": "robust_quantification",
+   "question_id": "Q1",
+   "answer": "yes",
+   "evidence": "p28-02, p28-03"
+  },
+  {
+   "item_id": "VCS1851-robust_quantification",
+   "project_id": "VCS1851",
+   "principle": "robust_quantification",
+   "question_id": "Q2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1851-robust_quantification",
+   "project_id": "VCS1851",
+   "principle": "robust_quantification",
+   "question_id": "Q3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1851-robust_quantification",
+   "project_id": "VCS1851",
+   "principle": "robust_quantification",
+   "question_id": "Q4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1851-no_double_counting",
+   "project_id": "VCS1851",
+   "principle": "no_double_counting",
+   "question_id": "D1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1851-no_double_counting",
+   "project_id": "VCS1851",
+   "principle": "no_double_counting",
+   "question_id": "D2",
+   "answer": "yes",
+   "evidence": "p21-06, p21-09"
+  },
+  {
+   "item_id": "VCS1851-no_double_counting",
+   "project_id": "VCS1851",
+   "principle": "no_double_counting",
+   "question_id": "D3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1851-safeguards",
+   "project_id": "VCS1851",
+   "principle": "safeguards",
+   "question_id": "S1",
+   "answer": "yes",
+   "evidence": "p65-14, p67-22, p67-23, p67-25"
+  },
+  {
+   "item_id": "VCS1851-safeguards",
+   "project_id": "VCS1851",
+   "principle": "safeguards",
+   "question_id": "S2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1851-safeguards",
+   "project_id": "VCS1851",
+   "principle": "safeguards",
+   "question_id": "S3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1851-safeguards",
+   "project_id": "VCS1851",
+   "principle": "safeguards",
+   "question_id": "S4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS138-additionality",
+   "project_id": "VCS138",
+   "principle": "additionality",
+   "question_id": "A1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS138-additionality",
+   "project_id": "VCS138",
+   "principle": "additionality",
+   "question_id": "A2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS138-additionality",
+   "project_id": "VCS138",
+   "principle": "additionality",
+   "question_id": "A3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS138-additionality",
+   "project_id": "VCS138",
+   "principle": "additionality",
+   "question_id": "A4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS138-robust_quantification",
+   "project_id": "VCS138",
+   "principle": "robust_quantification",
+   "question_id": "Q1",
+   "answer": "yes",
+   "evidence": "p15-03"
+  },
+  {
+   "item_id": "VCS138-robust_quantification",
+   "project_id": "VCS138",
+   "principle": "robust_quantification",
+   "question_id": "Q2",
+   "answer": "yes",
+   "evidence": "p10-08, p19-02"
+  },
+  {
+   "item_id": "VCS138-robust_quantification",
+   "project_id": "VCS138",
+   "principle": "robust_quantification",
+   "question_id": "Q3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS138-robust_quantification",
+   "project_id": "VCS138",
+   "principle": "robust_quantification",
+   "question_id": "Q4",
+   "answer": "yes",
+   "evidence": "p29-05"
+  },
+  {
+   "item_id": "VCS138-no_double_counting",
+   "project_id": "VCS138",
+   "principle": "no_double_counting",
+   "question_id": "D1",
+   "answer": "yes",
+   "evidence": "p10-03,p10-05"
+  },
+  {
+   "item_id": "VCS138-no_double_counting",
+   "project_id": "VCS138",
+   "principle": "no_double_counting",
+   "question_id": "D2",
+   "answer": "yes",
+   "evidence": "p9-03, p9-04"
+  },
+  {
+   "item_id": "VCS138-no_double_counting",
+   "project_id": "VCS138",
+   "principle": "no_double_counting",
+   "question_id": "D3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS138-safeguards",
+   "project_id": "VCS138",
+   "principle": "safeguards",
+   "question_id": "S1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS138-safeguards",
+   "project_id": "VCS138",
+   "principle": "safeguards",
+   "question_id": "S2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS138-safeguards",
+   "project_id": "VCS138",
+   "principle": "safeguards",
+   "question_id": "S3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS138-safeguards",
+   "project_id": "VCS138",
+   "principle": "safeguards",
+   "question_id": "S4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2505-additionality",
+   "project_id": "VCS2505",
+   "principle": "additionality",
+   "question_id": "A1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2505-additionality",
+   "project_id": "VCS2505",
+   "principle": "additionality",
+   "question_id": "A2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2505-additionality",
+   "project_id": "VCS2505",
+   "principle": "additionality",
+   "question_id": "A3",
+   "answer": "yes",
+   "evidence": "p8-19,p8-21"
+  },
+  {
+   "item_id": "VCS2505-additionality",
+   "project_id": "VCS2505",
+   "principle": "additionality",
+   "question_id": "A4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2505-robust_quantification",
+   "project_id": "VCS2505",
+   "principle": "robust_quantification",
+   "question_id": "Q1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2505-robust_quantification",
+   "project_id": "VCS2505",
+   "principle": "robust_quantification",
+   "question_id": "Q2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2505-robust_quantification",
+   "project_id": "VCS2505",
+   "principle": "robust_quantification",
+   "question_id": "Q3",
+   "answer": "yes",
+   "evidence": "p55-08, p58-09 (destekleyici olarak p62-09)"
+  },
+  {
+   "item_id": "VCS2505-robust_quantification",
+   "project_id": "VCS2505",
+   "principle": "robust_quantification",
+   "question_id": "Q4",
+   "answer": "yes",
+   "evidence": "p55-08, p58-09, p64-05"
+  },
+  {
+   "item_id": "VCS2505-no_double_counting",
+   "project_id": "VCS2505",
+   "principle": "no_double_counting",
+   "question_id": "D1",
+   "answer": "yes",
+   "evidence": "p20-10"
+  },
+  {
+   "item_id": "VCS2505-no_double_counting",
+   "project_id": "VCS2505",
+   "principle": "no_double_counting",
+   "question_id": "D2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2505-no_double_counting",
+   "project_id": "VCS2505",
+   "principle": "no_double_counting",
+   "question_id": "D3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2505-safeguards",
+   "project_id": "VCS2505",
+   "principle": "safeguards",
+   "question_id": "S1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2505-safeguards",
+   "project_id": "VCS2505",
+   "principle": "safeguards",
+   "question_id": "S2",
+   "answer": "yes",
+   "evidence": "p30-05"
+  },
+  {
+   "item_id": "VCS2505-safeguards",
+   "project_id": "VCS2505",
+   "principle": "safeguards",
+   "question_id": "S3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2505-safeguards",
+   "project_id": "VCS2505",
+   "principle": "safeguards",
+   "question_id": "S4",
+   "answer": "yes",
+   "evidence": "p26-02"
+  },
+  {
+   "item_id": "VCS1742-additionality",
+   "project_id": "VCS1742",
+   "principle": "additionality",
+   "question_id": "A1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1742-additionality",
+   "project_id": "VCS1742",
+   "principle": "additionality",
+   "question_id": "A2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1742-additionality",
+   "project_id": "VCS1742",
+   "principle": "additionality",
+   "question_id": "A3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1742-additionality",
+   "project_id": "VCS1742",
+   "principle": "additionality",
+   "question_id": "A4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1742-robust_quantification",
+   "project_id": "VCS1742",
+   "principle": "robust_quantification",
+   "question_id": "Q1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1742-robust_quantification",
+   "project_id": "VCS1742",
+   "principle": "robust_quantification",
+   "question_id": "Q2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1742-robust_quantification",
+   "project_id": "VCS1742",
+   "principle": "robust_quantification",
+   "question_id": "Q3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1742-robust_quantification",
+   "project_id": "VCS1742",
+   "principle": "robust_quantification",
+   "question_id": "Q4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1742-no_double_counting",
+   "project_id": "VCS1742",
+   "principle": "no_double_counting",
+   "question_id": "D1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1742-no_double_counting",
+   "project_id": "VCS1742",
+   "principle": "no_double_counting",
+   "question_id": "D2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1742-no_double_counting",
+   "project_id": "VCS1742",
+   "principle": "no_double_counting",
+   "question_id": "D3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1742-safeguards",
+   "project_id": "VCS1742",
+   "principle": "safeguards",
+   "question_id": "S1",
+   "answer": "yes",
+   "evidence": "x1-p66-02 (destekleyici olarak x1-p61-02)"
+  },
+  {
+   "item_id": "VCS1742-safeguards",
+   "project_id": "VCS1742",
+   "principle": "safeguards",
+   "question_id": "S2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1742-safeguards",
+   "project_id": "VCS1742",
+   "principle": "safeguards",
+   "question_id": "S3",
+   "answer": "yes",
+   "evidence": "x1-p60-13"
+  },
+  {
+   "item_id": "VCS1742-safeguards",
+   "project_id": "VCS1742",
+   "principle": "safeguards",
+   "question_id": "S4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1728-additionality",
+   "project_id": "VCS1728",
+   "principle": "additionality",
+   "question_id": "A1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1728-additionality",
+   "project_id": "VCS1728",
+   "principle": "additionality",
+   "question_id": "A2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1728-additionality",
+   "project_id": "VCS1728",
+   "principle": "additionality",
+   "question_id": "A3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1728-additionality",
+   "project_id": "VCS1728",
+   "principle": "additionality",
+   "question_id": "A4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1728-robust_quantification",
+   "project_id": "VCS1728",
+   "principle": "robust_quantification",
+   "question_id": "Q1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1728-robust_quantification",
+   "project_id": "VCS1728",
+   "principle": "robust_quantification",
+   "question_id": "Q2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1728-robust_quantification",
+   "project_id": "VCS1728",
+   "principle": "robust_quantification",
+   "question_id": "Q3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1728-robust_quantification",
+   "project_id": "VCS1728",
+   "principle": "robust_quantification",
+   "question_id": "Q4",
+   "answer": "yes",
+   "evidence": "p72-03"
+  },
+  {
+   "item_id": "VCS1728-no_double_counting",
+   "project_id": "VCS1728",
+   "principle": "no_double_counting",
+   "question_id": "D1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1728-no_double_counting",
+   "project_id": "VCS1728",
+   "principle": "no_double_counting",
+   "question_id": "D2",
+   "answer": "yes",
+   "evidence": "p25-10"
+  },
+  {
+   "item_id": "VCS1728-no_double_counting",
+   "project_id": "VCS1728",
+   "principle": "no_double_counting",
+   "question_id": "D3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1728-safeguards",
+   "project_id": "VCS1728",
+   "principle": "safeguards",
+   "question_id": "S1",
+   "answer": "yes",
+   "evidence": "p52-12, p54-02"
+  },
+  {
+   "item_id": "VCS1728-safeguards",
+   "project_id": "VCS1728",
+   "principle": "safeguards",
+   "question_id": "S2",
+   "answer": "yes",
+   "evidence": "p53-04 (destekleyici olarak p54-02)"
+  },
+  {
+   "item_id": "VCS1728-safeguards",
+   "project_id": "VCS1728",
+   "principle": "safeguards",
+   "question_id": "S3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS1728-safeguards",
+   "project_id": "VCS1728",
+   "principle": "safeguards",
+   "question_id": "S4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2609-additionality",
+   "project_id": "VCS2609",
+   "principle": "additionality",
+   "question_id": "A1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2609-additionality",
+   "project_id": "VCS2609",
+   "principle": "additionality",
+   "question_id": "A2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2609-additionality",
+   "project_id": "VCS2609",
+   "principle": "additionality",
+   "question_id": "A3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2609-additionality",
+   "project_id": "VCS2609",
+   "principle": "additionality",
+   "question_id": "A4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2609-permanence",
+   "project_id": "VCS2609",
+   "principle": "permanence",
+   "question_id": "P1",
+   "answer": "yes",
+   "evidence": "p161-22 (destekleyici olarak p38-18)"
+  },
+  {
+   "item_id": "VCS2609-permanence",
+   "project_id": "VCS2609",
+   "principle": "permanence",
+   "question_id": "P2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2609-permanence",
+   "project_id": "VCS2609",
+   "principle": "permanence",
+   "question_id": "P3",
+   "answer": "yes",
+   "evidence": "p38-17"
+  },
+  {
+   "item_id": "VCS2609-robust_quantification",
+   "project_id": "VCS2609",
+   "principle": "robust_quantification",
+   "question_id": "Q1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2609-robust_quantification",
+   "project_id": "VCS2609",
+   "principle": "robust_quantification",
+   "question_id": "Q2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2609-robust_quantification",
+   "project_id": "VCS2609",
+   "principle": "robust_quantification",
+   "question_id": "Q3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2609-robust_quantification",
+   "project_id": "VCS2609",
+   "principle": "robust_quantification",
+   "question_id": "Q4",
+   "answer": "yes",
+   "evidence": "p201-10, p201-11"
+  },
+  {
+   "item_id": "VCS2609-no_double_counting",
+   "project_id": "VCS2609",
+   "principle": "no_double_counting",
+   "question_id": "D1",
+   "answer": "yes",
+   "evidence": "p68-08, p68-14, p68-16"
+  },
+  {
+   "item_id": "VCS2609-no_double_counting",
+   "project_id": "VCS2609",
+   "principle": "no_double_counting",
+   "question_id": "D2",
+   "answer": "yes",
+   "evidence": "p68-08, p68-10, p68-12, p68-18"
+  },
+  {
+   "item_id": "VCS2609-no_double_counting",
+   "project_id": "VCS2609",
+   "principle": "no_double_counting",
+   "question_id": "D3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2609-safeguards",
+   "project_id": "VCS2609",
+   "principle": "safeguards",
+   "question_id": "S1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2609-safeguards",
+   "project_id": "VCS2609",
+   "principle": "safeguards",
+   "question_id": "S2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2609-safeguards",
+   "project_id": "VCS2609",
+   "principle": "safeguards",
+   "question_id": "S3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2609-safeguards",
+   "project_id": "VCS2609",
+   "principle": "safeguards",
+   "question_id": "S4",
+   "answer": "yes",
+   "evidence": "p55-07"
+  },
+  {
+   "item_id": "VCS673-additionality",
+   "project_id": "VCS673",
+   "principle": "additionality",
+   "question_id": "A1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS673-additionality",
+   "project_id": "VCS673",
+   "principle": "additionality",
+   "question_id": "A2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS673-additionality",
+   "project_id": "VCS673",
+   "principle": "additionality",
+   "question_id": "A3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS673-additionality",
+   "project_id": "VCS673",
+   "principle": "additionality",
+   "question_id": "A4",
+   "answer": "yes",
+   "evidence": "p37-02"
+  },
+  {
+   "item_id": "VCS673-permanence",
+   "project_id": "VCS673",
+   "principle": "permanence",
+   "question_id": "P1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS673-permanence",
+   "project_id": "VCS673",
+   "principle": "permanence",
+   "question_id": "P2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS673-permanence",
+   "project_id": "VCS673",
+   "principle": "permanence",
+   "question_id": "P3",
+   "answer": "yes",
+   "evidence": "p18-02"
+  },
+  {
+   "item_id": "VCS673-robust_quantification",
+   "project_id": "VCS673",
+   "principle": "robust_quantification",
+   "question_id": "Q1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS673-robust_quantification",
+   "project_id": "VCS673",
+   "principle": "robust_quantification",
+   "question_id": "Q2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS673-robust_quantification",
+   "project_id": "VCS673",
+   "principle": "robust_quantification",
+   "question_id": "Q3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS673-robust_quantification",
+   "project_id": "VCS673",
+   "principle": "robust_quantification",
+   "question_id": "Q4",
+   "answer": "yes",
+   "evidence": "p50-02"
+  },
+  {
+   "item_id": "VCS673-no_double_counting",
+   "project_id": "VCS673",
+   "principle": "no_double_counting",
+   "question_id": "D1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS673-no_double_counting",
+   "project_id": "VCS673",
+   "principle": "no_double_counting",
+   "question_id": "D2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS673-no_double_counting",
+   "project_id": "VCS673",
+   "principle": "no_double_counting",
+   "question_id": "D3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS673-safeguards",
+   "project_id": "VCS673",
+   "principle": "safeguards",
+   "question_id": "S1",
+   "answer": "yes",
+   "evidence": "p72-02"
+  },
+  {
+   "item_id": "VCS673-safeguards",
+   "project_id": "VCS673",
+   "principle": "safeguards",
+   "question_id": "S2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS673-safeguards",
+   "project_id": "VCS673",
+   "principle": "safeguards",
+   "question_id": "S3",
+   "answer": "yes",
+   "evidence": "p69-15, p69-16"
+  },
+  {
+   "item_id": "VCS673-safeguards",
+   "project_id": "VCS673",
+   "principle": "safeguards",
+   "question_id": "S4",
+   "answer": "yes",
+   "evidence": "p72-02 (destekleyici olarak p69-16)"
+  },
+  {
+   "item_id": "VCS2846-additionality",
+   "project_id": "VCS2846",
+   "principle": "additionality",
+   "question_id": "A1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2846-additionality",
+   "project_id": "VCS2846",
+   "principle": "additionality",
+   "question_id": "A2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2846-additionality",
+   "project_id": "VCS2846",
+   "principle": "additionality",
+   "question_id": "A3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2846-additionality",
+   "project_id": "VCS2846",
+   "principle": "additionality",
+   "question_id": "A4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2846-robust_quantification",
+   "project_id": "VCS2846",
+   "principle": "robust_quantification",
+   "question_id": "Q1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2846-robust_quantification",
+   "project_id": "VCS2846",
+   "principle": "robust_quantification",
+   "question_id": "Q2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2846-robust_quantification",
+   "project_id": "VCS2846",
+   "principle": "robust_quantification",
+   "question_id": "Q3",
+   "answer": "yes",
+   "evidence": "p103-11"
+  },
+  {
+   "item_id": "VCS2846-robust_quantification",
+   "project_id": "VCS2846",
+   "principle": "robust_quantification",
+   "question_id": "Q4",
+   "answer": "yes",
+   "evidence": "p103-10, p103-11"
+  },
+  {
+   "item_id": "VCS2846-no_double_counting",
+   "project_id": "VCS2846",
+   "principle": "no_double_counting",
+   "question_id": "D1",
+   "answer": "yes",
+   "evidence": "p18-09"
+  },
+  {
+   "item_id": "VCS2846-no_double_counting",
+   "project_id": "VCS2846",
+   "principle": "no_double_counting",
+   "question_id": "D2",
+   "answer": "yes",
+   "evidence": "p18-09"
+  },
+  {
+   "item_id": "VCS2846-no_double_counting",
+   "project_id": "VCS2846",
+   "principle": "no_double_counting",
+   "question_id": "D3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2846-safeguards",
+   "project_id": "VCS2846",
+   "principle": "safeguards",
+   "question_id": "S1",
+   "answer": "yes",
+   "evidence": "p21-08"
+  },
+  {
+   "item_id": "VCS2846-safeguards",
+   "project_id": "VCS2846",
+   "principle": "safeguards",
+   "question_id": "S2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2846-safeguards",
+   "project_id": "VCS2846",
+   "principle": "safeguards",
+   "question_id": "S3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS2846-safeguards",
+   "project_id": "VCS2846",
+   "principle": "safeguards",
+   "question_id": "S4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS985-additionality",
+   "project_id": "VCS985",
+   "principle": "additionality",
+   "question_id": "A1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS985-additionality",
+   "project_id": "VCS985",
+   "principle": "additionality",
+   "question_id": "A2",
+   "answer": "yes",
+   "evidence": "p79-02"
+  },
+  {
+   "item_id": "VCS985-additionality",
+   "project_id": "VCS985",
+   "principle": "additionality",
+   "question_id": "A3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS985-additionality",
+   "project_id": "VCS985",
+   "principle": "additionality",
+   "question_id": "A4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS985-permanence",
+   "project_id": "VCS985",
+   "principle": "permanence",
+   "question_id": "P1",
+   "answer": "yes",
+   "evidence": "p63-01"
+  },
+  {
+   "item_id": "VCS985-permanence",
+   "project_id": "VCS985",
+   "principle": "permanence",
+   "question_id": "P2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS985-permanence",
+   "project_id": "VCS985",
+   "principle": "permanence",
+   "question_id": "P3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS985-robust_quantification",
+   "project_id": "VCS985",
+   "principle": "robust_quantification",
+   "question_id": "Q1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS985-robust_quantification",
+   "project_id": "VCS985",
+   "principle": "robust_quantification",
+   "question_id": "Q2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS985-robust_quantification",
+   "project_id": "VCS985",
+   "principle": "robust_quantification",
+   "question_id": "Q3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS985-robust_quantification",
+   "project_id": "VCS985",
+   "principle": "robust_quantification",
+   "question_id": "Q4",
+   "answer": "yes",
+   "evidence": "p154-02, p163-01"
+  },
+  {
+   "item_id": "VCS985-no_double_counting",
+   "project_id": "VCS985",
+   "principle": "no_double_counting",
+   "question_id": "D1",
+   "answer": "yes",
+   "evidence": "p61-03, p71-12 (destekleyici olarak p61-05)"
+  },
+  {
+   "item_id": "VCS985-no_double_counting",
+   "project_id": "VCS985",
+   "principle": "no_double_counting",
+   "question_id": "D2",
+   "answer": "yes",
+   "evidence": "p61-02, p61-04"
+  },
+  {
+   "item_id": "VCS985-no_double_counting",
+   "project_id": "VCS985",
+   "principle": "no_double_counting",
+   "question_id": "D3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS985-safeguards",
+   "project_id": "VCS985",
+   "principle": "safeguards",
+   "question_id": "S1",
+   "answer": "yes",
+   "evidence": "p35-01, p35-02"
+  },
+  {
+   "item_id": "VCS985-safeguards",
+   "project_id": "VCS985",
+   "principle": "safeguards",
+   "question_id": "S2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS985-safeguards",
+   "project_id": "VCS985",
+   "principle": "safeguards",
+   "question_id": "S3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS985-safeguards",
+   "project_id": "VCS985",
+   "principle": "safeguards",
+   "question_id": "S4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS4150-additionality",
+   "project_id": "VCS4150",
+   "principle": "additionality",
+   "question_id": "A1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS4150-additionality",
+   "project_id": "VCS4150",
+   "principle": "additionality",
+   "question_id": "A2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS4150-additionality",
+   "project_id": "VCS4150",
+   "principle": "additionality",
+   "question_id": "A3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS4150-additionality",
+   "project_id": "VCS4150",
+   "principle": "additionality",
+   "question_id": "A4",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS4150-robust_quantification",
+   "project_id": "VCS4150",
+   "principle": "robust_quantification",
+   "question_id": "Q1",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS4150-robust_quantification",
+   "project_id": "VCS4150",
+   "principle": "robust_quantification",
+   "question_id": "Q2",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS4150-robust_quantification",
+   "project_id": "VCS4150",
+   "principle": "robust_quantification",
+   "question_id": "Q3",
+   "answer": "yes",
+   "evidence": "p62-04"
+  },
+  {
+   "item_id": "VCS4150-robust_quantification",
+   "project_id": "VCS4150",
+   "principle": "robust_quantification",
+   "question_id": "Q4",
+   "answer": "yes",
+   "evidence": "p62-05, p64-09, p68-02"
+  },
+  {
+   "item_id": "VCS4150-no_double_counting",
+   "project_id": "VCS4150",
+   "principle": "no_double_counting",
+   "question_id": "D1",
+   "answer": "yes",
+   "evidence": "p22-03 (destekleyici olarak p22-04)"
+  },
+  {
+   "item_id": "VCS4150-no_double_counting",
+   "project_id": "VCS4150",
+   "principle": "no_double_counting",
+   "question_id": "D2",
+   "answer": "yes",
+   "evidence": "p22-05, p23-02, p23-03"
+  },
+  {
+   "item_id": "VCS4150-no_double_counting",
+   "project_id": "VCS4150",
+   "principle": "no_double_counting",
+   "question_id": "D3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS4150-safeguards",
+   "project_id": "VCS4150",
+   "principle": "safeguards",
+   "question_id": "S1",
+   "answer": "yes",
+   "evidence": "p28-05"
+  },
+  {
+   "item_id": "VCS4150-safeguards",
+   "project_id": "VCS4150",
+   "principle": "safeguards",
+   "question_id": "S2",
+   "answer": "yes",
+   "evidence": "p28-05, p29-06"
+  },
+  {
+   "item_id": "VCS4150-safeguards",
+   "project_id": "VCS4150",
+   "principle": "safeguards",
+   "question_id": "S3",
+   "answer": "no",
+   "evidence": ""
+  },
+  {
+   "item_id": "VCS4150-safeguards",
+   "project_id": "VCS4150",
+   "principle": "safeguards",
+   "question_id": "S4",
+   "answer": "no",
+   "evidence": ""
+  }
+ ]
+}
