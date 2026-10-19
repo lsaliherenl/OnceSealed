@@ -1,97 +1,106 @@
-"""Build the three-layer quality report for one project document.
+"""Build the quality report for one project document.
 
-Layer 1  methodology status   deterministic table lookup (core.ai.methodology)
-Layer 2  evidence extraction  LLM quotes, each verified against the PDF text (core.ai.assess)
-Layer 3  evidence judgement   decision model probabilities (core.ai.decision)
+Layer 1  methodology status  deterministic table lookup (core.ai.methodology)
+Layer 2  evidence checklist  per principle, a code-selected excerpt and the checklist questions of
+                             core.ai.checklist; the LLM answers yes/no and cites the paragraph holding the
+                             evidence, a second model (Jev) answers the same questions, and a check where the two
+                             disagree is flagged for human review. This is the setup measured against the labelled
+                             gold set (docs/ai_evaluation.md), through the same code (core.ai.checklist_models).
+Layer 3  principle status    deterministic: how many of the principle's checks found evidence
 
 The report is published as JSON; its keccak256 over canonical JSON goes on-chain
-together with ``method_hash``, which pins the models and question set used.
+together with ``method_hash``, which pins the models, questions, prompt and excerpt rule used.
 """
 
 import json
 import logging
+from dataclasses import asdict
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 import pymupdf
 
-from core.ai.assess import PROMPT_VERSION, PrincipleResult, assess_principle
-from core.ai.client import ChatClient
-from core.ai.decision import QUESTION_SET_VERSION, Decision, DecisionError, DecisionModel
+from core.ai.checklist import BY_PRINCIPLE, QUESTION_SET_VERSION
+from core.ai.checklist_models import (CHECKLIST_PROMPT_VERSION, EVIDENCE_RULE, Answer, ChecklistResult,
+                                      JevChecklist, LLMChecklist)
 from core.ai.methodology import load_table, methodology_status
-from core.ai.pdf_extract import Document
+from core.ai.pdf_extract import Document, Paragraph
 from core.ai.principles import BY_KEY, PRINCIPLES
-from core.ai.quotes import QuoteVerifier
+from core.ai.select import select_paragraphs
 from core.hashing import hash_json
 
 log = logging.getLogger(__name__)
 
-REPORT_SCHEMA_VERSION = "report-v1"
-DECISION_INPUT = "verified_quotes"  # what the decision model sees; see CLAUDE.md open question
+REPORT_SCHEMA_VERSION = "report-v2"
+EXCERPT_CHARS = 2_500  # the excerpt size the gold set was labelled on (scripts/build_label_set.py)
+EXCERPT_RULE = f"select_paragraphs(budget_chars={EXCERPT_CHARS}, overview_chars=0)"
 
 DISCLAIMER = (
-    "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. "
-    "They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact."
+    "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the "
+    "submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the "
+    "project, or a statement about its real-world impact."
 )
 
 
-def _r(x: float) -> float:
-    return round(float(x), 4)
+def excerpt(doc: Document, principle: str) -> list[Paragraph]:
+    return select_paragraphs(doc, BY_KEY[principle], budget_chars=EXCERPT_CHARS, overview_chars=0)
 
 
-def _decision_dict(d: Decision) -> dict[str, Any]:
+def principle_status(answers: list[str | None]) -> tuple[str, int | None]:
+    """Status and 0-100 score from the checks' answers: the share of checks with evidence."""
+    if not answers or any(a not in ("yes", "no") for a in answers):
+        return "assessment_failed", None
+    k = sum(a == "yes" for a in answers)
+    status = "no_evidence" if k == 0 else "strong_evidence" if k == len(answers) else "partial_evidence"
+    return status, round(100 * k / len(answers))
+
+
+def judge_principle(principle: str, paragraphs: list[Paragraph], llm: ChecklistResult,
+                    second: dict[str, float] | None) -> dict[str, Any]:
+    """Combine the LLM's checklist answers and the second model's probabilities into one report entry."""
+    by_id = {p.id: p for p in paragraphs}
+    checks, flags, quotes = [], [], {}
+    for q in BY_PRINCIPLE[principle]:
+        a: Answer = llm.answers[q.id]
+        p_yes = None if second is None else round(second[q.id], 4)
+        disagree = p_yes is not None and a.answer in ("yes", "no") and (p_yes >= 0.5) != (a.answer == "yes")
+        if disagree:
+            flags.append(f"models_disagree:{q.id}")
+        evidence = [{"paragraph_id": i, "page": by_id[i].page, "text": by_id[i].text}
+                    for i in a.evidence if i in by_id] if a.answer == "yes" else []
+        for e in evidence:
+            quotes.setdefault(e["paragraph_id"], e)
+        checks.append({"id": q.id, "question": q.text, "answer": a.answer, "evidence": evidence,
+                       "second_opinion_p_yes": p_yes, "needs_review": disagree, "dropped": a.dropped})
+    status, score = principle_status([c["answer"] for c in checks])
+    found = [c["id"] for c in checks if c["answer"] == "yes"]
+    missing = [c["id"] for c in checks if c["answer"] == "no"]
+    rationale = (f"Evidence found for {len(found)} of {len(checks)} checks"
+                 + (f" ({', '.join(found)})" if found else "")
+                 + (f"; not found in the excerpt: {', '.join(missing)}" if missing else "") + ".")
     return {
-        "evidence_level": d.evidence_level,
-        "evidence_probabilities": {k: _r(v) for k, v in d.evidence_probabilities.items()},
-        "evidence_confidence": _r(d.evidence_confidence),
-        "independent_sources": _r(d.independent),
-        "strength": _r(d.strength),
-        "strength_probabilities": {k: _r(v) for k, v in d.strength_probabilities.items()},
-        "strength_confidence": _r(d.strength_confidence),
-        "model": d.model,
+        "principle": principle, "status": status, "score": score, "rationale": rationale,
+        "checks": checks,
+        "quotes": [{"text": e["text"], "page": e["page"], "paragraph_id": e["paragraph_id"],
+                    "verification": "cited_paragraph"} for e in quotes.values()],
+        "dropped_findings": sum(1 for c in checks if c["dropped"]),
+        "review_flags": flags,
+        "excerpt": {"paragraphs": [p.id for p in paragraphs], "chars": sum(len(p.text) for p in paragraphs)},
     }
-
-
-def judge_principle(llm: PrincipleResult, decision_model: DecisionModel) -> dict[str, Any]:
-    """Combine the LLM's verified evidence with the decision model's judgement."""
-    entry: dict[str, Any] = {
-        "principle": llm.principle,
-        "rationale": llm.rationale,
-        "quotes": [{"text": q.text, "page": q.page, "paragraph_id": q.paragraph_id, "verification": q.method}
-                   for q in llm.quotes],
-        "dropped_findings": llm.dropped_findings,
-        "llm": {"status": llm.model_status, "score": llm.model_score, "model": llm.served_model},
-        "decision": None,
-    }
-    if llm.status == "assessment_failed":
-        return {**entry, "status": "assessment_failed", "score": None}
-    if llm.status == "not_applicable":
-        return {**entry, "status": "not_applicable", "score": None}
-    if not llm.quotes:
-        return {**entry, "status": "no_evidence", "score": 0}
-    try:
-        decision = decision_model.decide(BY_KEY[llm.principle], [q.text for q in llm.quotes])
-    except DecisionError as e:
-        log.warning("decision failed for %s: %s", llm.principle, e)
-        return {**entry, "status": "assessment_failed", "score": None}
-    review = ["decision_questions_disagree"] if decision.questions_disagree else []
-    return {**entry, "status": decision.status, "score": decision.score, "review_flags": review,
-            "decision": _decision_dict(decision)}
 
 
 def not_applicable_by_rule(key: str) -> dict[str, Any]:
     """Permanence only matters where stored carbon can be reversed (e.g. forests, soils).
 
     For emission-avoidance activities (grid renewables, landfill gas, cookstoves) we
-    decide this from the project category instead of asking the LLM, whose answer
-    varied between 'not applicable' and 'no evidence' across runs.
+    decide this from the project category instead of asking a model.
     """
     return {
         "principle": key, "status": "not_applicable", "score": None,
         "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; "
                      "permanence is not applicable (rule based on project category, not AI).",
-        "quotes": [], "dropped_findings": 0, "llm": None, "decision": None, "rule": "no_reversal_risk",
+        "checks": [], "quotes": [], "dropped_findings": 0, "review_flags": [], "rule": "no_reversal_risk",
     }
 
 
@@ -109,57 +118,68 @@ def overall_score(principles: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
-def _cached_assess(doc: Document, key: str, llm_client: ChatClient, verifier: QuoteVerifier,
-                   cache_dir: Path | None) -> tuple[PrincipleResult, bool]:
-    """LLM evidence extraction, cached per (document, principle, prompt version, model).
+def _cached_checklist(doc: Document, principle: str, paragraphs: list[Paragraph], llm: LLMChecklist,
+                      cache_dir: Path | None) -> tuple[ChecklistResult, bool]:
+    """LLM checklist answers, cached per (document, principle, prompt, evidence rule, model).
 
-    LLM output varies between runs even with a fixed model; caching keeps the
-    evidence stable so a re-run judges the same quotes. Failed runs are not cached.
+    The LLM's answers vary a little between runs; caching keeps a re-run on the same document stable.
+    Results with a missing answer are not cached.
     """
     path = None
     if cache_dir is not None:
-        model = llm_client.settings.model.replace("/", "_")
-        path = cache_dir / f"{doc.sha256[:16]}-{key}-{PROMPT_VERSION}-{model}.json"
+        model = llm.name.replace("/", "_")
+        path = cache_dir / f"{doc.sha256[:16]}-{principle}-{CHECKLIST_PROMPT_VERSION}-{EVIDENCE_RULE}-{model}.json"
         if path.exists():
-            return PrincipleResult.from_dict(json.loads(path.read_text(encoding="utf-8"))), True
-    llm = assess_principle(doc, BY_KEY[key], llm_client, verifier)
-    if path is not None and llm.status != "assessment_failed":
+            d = json.loads(path.read_text(encoding="utf-8"))
+            answers = {k: Answer(**v) for k, v in d.pop("answers").items()}
+            return ChecklistResult(answers=answers, **d), True
+    result = llm.answer(principle, paragraphs)
+    if path is not None and all(a.answer in ("yes", "no") for a in result.answers.values()):
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps(llm.to_dict(), indent=2, ensure_ascii=False), encoding="utf-8")
-    return llm, False
+        path.write_text(json.dumps(asdict(result), indent=2, ensure_ascii=False), encoding="utf-8")
+    return result, False
 
 
 def build_report(
     doc: Document,
     project: dict[str, Any],
-    llm_client: ChatClient,
-    decision_model: DecisionModel,
+    llm: LLMChecklist,
+    second: JevChecklist | None,
     principle_keys: list[str] | None = None,
     cache_dir: Path | None = None,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
-    """Return (report, run_log). The run log keeps costs and raw attempts out of the hashed report."""
-    verifier = QuoteVerifier(doc)
-    principles, run_log = [], {"llm": [], "decision_models": set()}
+    """Return (report, run_log). The run log keeps costs and served models out of the hashed report."""
+    principles, run_log = [], {"llm": [], "second_opinion": []}
     for key in principle_keys or [p.key for p in PRINCIPLES]:
         if key == "permanence" and project.get("reversal_risk") is False:
             principles.append(not_applicable_by_rule(key))
             continue
-        llm, cached = _cached_assess(doc, key, llm_client, verifier, cache_dir)
-        run_log["llm"].append({"principle": key, "cached": cached, "served_model": llm.served_model,
-                               "usage": None if cached else llm.usage, "error": llm.error,
-                               "dropped": [vars(d) for d in llm.dropped]})
-        entry = judge_principle(llm, decision_model)
-        if entry["decision"]:
-            run_log["decision_models"].add(entry["decision"]["model"])
+        paragraphs = excerpt(doc, key)
+        result, cached = _cached_checklist(doc, key, paragraphs, llm, cache_dir)
+        run_log["llm"].append({"principle": key, "cached": cached, "served_model": result.served_model,
+                               "cost": None if cached else result.cost, "calls": result.calls})
+        probs = None
+        if second is not None:
+            try:
+                probs, data = second.probabilities(key, paragraphs)
+                run_log["second_opinion"].append({"principle": key, "model": data.get("model"),
+                                                  "cost": (data.get("usage") or {}).get("cost")})
+            except Exception as e:  # the second opinion is optional; its absence is flagged in the report
+                log.warning("second opinion failed for %s: %s", key, e)
+                run_log["second_opinion"].append({"principle": key, "error": str(e)})
+        entry = judge_principle(key, paragraphs, result, probs)
+        if second is not None and probs is None:
+            entry["review_flags"].append("second_opinion_failed")
         principles.append(entry)
 
     method = {
         "report_schema": REPORT_SCHEMA_VERSION,
-        "prompt_version": PROMPT_VERSION,
         "question_set_version": QUESTION_SET_VERSION,
-        "llm_model": llm_client.settings.model,
-        "decision_model": decision_model.name,
-        "decision_input": DECISION_INPUT,
+        "prompt_version": CHECKLIST_PROMPT_VERSION,
+        "evidence_rule": EVIDENCE_RULE,
+        "excerpt_rule": EXCERPT_RULE,
+        "llm_model": llm.name,
+        "second_opinion_model": second.name if second else None,
         "methodology_table_version": load_table()["table_version"],
         "pdf_extractor": f"pymupdf {pymupdf.__version__}",
     }
@@ -178,7 +198,6 @@ def build_report(
         "disclaimer": DISCLAIMER,
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
     }
-    run_log["decision_models"] = sorted(run_log["decision_models"])
     return report, run_log
 
 

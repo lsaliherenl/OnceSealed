@@ -22,6 +22,10 @@ EXCERPT_CHARS = 2_500
 
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
+    # The labelled set is frozen: excerpts change when documents are added to the manifest, and the gold labels
+    # (data/eval/gold.json) only hold for the excerpts they were given on. A new set goes in a new file.
+    if (PROJECT_ROOT / "data" / "eval" / "gold.json").exists() and "--force" not in sys.argv:
+        sys.exit("data/eval/items.json is labelled (gold.json exists); it is frozen. Pass --force to rebuild anyway.")
     manifest = json.loads((PROJECT_ROOT / "samples" / "manifest.json").read_text(encoding="utf-8"))["documents"]
     items = []
     for proj in manifest:

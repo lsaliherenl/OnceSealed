@@ -190,10 +190,20 @@ def main() -> None:
            "| Model | Precision | Recall | F1 | Accuracy | Accuracy, all runs | Macro-F1 over questions |",
            "|---|---|---|---|---|---|---|"]
     per_q, correct = {}, {}
+    summary = {"gold": {"questions": len(gkeys), "yes": sum(g), "annotators": {n: kinds[n] for n in names},
+                        "kappa": round(kappa, 3)}, "models": {}}
     for name, a in models.items():
         pred = [model_yes(name, a["runs"][0], k) for k in gkeys]
         correct[name] = [p == gi for p, gi in zip(pred, g)]
         m = prf(pred, g)
+        lo, hi = wilson(m["tp"] + m["tn"], m["n"])
+        summary["models"][name] = {
+            "label": LABELS.get(name, a.get("label", name)), "accuracy": round(m["accuracy"], 4),
+            "accuracy_ci95": [round(lo, 4), round(hi, 4)], "precision": round(m["precision"], 4),
+            "recall": round(m["recall"], 4), "f1": round(m["f1"], 4),
+            "per_question": {q.id: {"n": len(idx), "correct": sum(correct[name][i] for i in idx)}
+                             for q in QUESTIONS
+                             if (idx := [i for i, k in enumerate(gkeys) if k.endswith("|" + q.id)])}}
         run_acc = [sum(model_yes(name, r, k) == gi for k, gi in zip(gkeys, g)) / len(g) for r in a["runs"]]
         qf1 = []
         for q in QUESTIONS:
@@ -244,6 +254,7 @@ def main() -> None:
            "With about 10 questions per question id, and few positives for some, per-question F1 is indicative "
            "only. This set compares models; a change tuned on it needs a fresh held-out set to be measured."]
     (PROJECT_ROOT / "docs" / "ai_evaluation.md").write_text("\n".join(md) + "\n", encoding="utf-8")
+    (EVAL / "metrics.json").write_text(json.dumps(summary, indent=1) + "\n", encoding="utf-8")
     print("\n".join(md))
 
 

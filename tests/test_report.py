@@ -1,7 +1,6 @@
-from core.ai.assess import PrincipleResult, VerifiedQuote
 from core.ai.decision import Decision, DecisionError, parse_decision
 from core.ai.methodology import methodology_status
-from core.ai.report import judge_principle, overall_score
+from core.ai.report import overall_score
 from core.hashing import canonical_json, hash_json
 
 JEV_RESPONSE = {
@@ -17,27 +16,6 @@ JEV_RESPONSE = {
     },
     "usage": {"input_tokens": 10, "output_tokens": 5},
 }
-
-
-def llm_result(status="evidence_found", quotes=1, principle="additionality") -> PrincipleResult:
-    return PrincipleResult(
-        principle=principle, status=status, score=80, rationale="r",
-        quotes=[VerifiedQuote("q" * 50, "p1-01", 1, "exact")] * quotes,
-        dropped_findings=0, dropped=[], model_status=status, model_score=80,
-        excerpt_paragraphs=3, excerpt_chars=300, served_model="llm", usage=None,
-    )
-
-
-class FakeDecision:
-    name = "fake"
-
-    def __init__(self, fail=False):
-        self.fail = fail
-
-    def decide(self, principle, evidence):
-        if self.fail:
-            raise DecisionError("boom")
-        return parse_decision(JEV_RESPONSE)
 
 
 def test_parse_decision_maps_strength_to_0_100():
@@ -62,32 +40,6 @@ def test_methodology_table_is_sourced():
     for entry in table["methodologies"]:
         assert entry["status"] in table["statuses"], entry["code"]
         assert entry["sources"] and all(s.startswith("https://") for s in entry["sources"]), entry["code"]
-
-
-def test_judge_uses_decision_model_score_not_llm_score():
-    entry = judge_principle(llm_result(), FakeDecision())
-    assert entry["status"] == "partial_evidence" and entry["score"] == 50
-    assert entry["llm"]["score"] == 80
-    assert entry["review_flags"] == []
-
-
-def test_disagreeing_questions_raise_review_flag():
-    data = {**JEV_RESPONSE, "answers": {**JEV_RESPONSE["answers"],
-            "evidence_level": {**JEV_RESPONSE["answers"]["evidence_level"], "choice": "quantified_verifiable"},
-            "strength": {**JEV_RESPONSE["answers"]["strength"], "score": 0.8, "probabilities": {"1": 0.7, "2": 0.3}}}}
-    d = parse_decision(data)
-    assert d.status == "assertion_only" and d.questions_disagree
-
-
-def test_judge_special_statuses_skip_decision_model():
-    assert judge_principle(llm_result("not_applicable"), FakeDecision(fail=True))["score"] is None
-    assert judge_principle(llm_result("assessment_failed", 0), FakeDecision(fail=True))["status"] == "assessment_failed"
-    assert judge_principle(llm_result("no_evidence", 0), FakeDecision(fail=True))["score"] == 0
-
-
-def test_decision_failure_is_not_scored_as_zero():
-    entry = judge_principle(llm_result(), FakeDecision(fail=True))
-    assert entry["status"] == "assessment_failed" and entry["score"] is None
 
 
 def test_overall_renormalizes_weights_and_skips_none():

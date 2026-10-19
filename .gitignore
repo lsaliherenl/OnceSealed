@@ -49,3 +49,6 @@ design/
 # Pilot results from before adjudication (superseded by data/eval/labels/, gold.json and docs/ai_evaluation.md)
 data/eval/silver/
 docs/ai_evaluation_pilot.md
+
+# Downloaded registry documents waiting to be registered with scripts/add_document.py
+samples/incoming/

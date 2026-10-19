@@ -1,0 +1,438 @@
+{
+ "gold": {
+  "questions": 177,
+  "yes": 58,
+  "annotators": {
+   "Salih Eren \u00c7avu\u015fo\u011flu": "human",
+   "Claude Opus 5.5": "ai"
+  },
+  "kappa": 0.895
+ },
+ "models": {
+  "jev": {
+   "label": "Jev 1.13",
+   "accuracy": 0.8814,
+   "accuracy_ci95": [
+    0.8254,
+    0.9211
+   ],
+   "precision": 0.8033,
+   "recall": 0.8448,
+   "f1": 0.8235,
+   "per_question": {
+    "A1": {
+     "n": 11,
+     "correct": 9
+    },
+    "A2": {
+     "n": 11,
+     "correct": 5
+    },
+    "A3": {
+     "n": 11,
+     "correct": 11
+    },
+    "A4": {
+     "n": 11,
+     "correct": 10
+    },
+    "P1": {
+     "n": 4,
+     "correct": 3
+    },
+    "P2": {
+     "n": 4,
+     "correct": 4
+    },
+    "P3": {
+     "n": 4,
+     "correct": 4
+    },
+    "Q1": {
+     "n": 11,
+     "correct": 11
+    },
+    "Q2": {
+     "n": 11,
+     "correct": 9
+    },
+    "Q3": {
+     "n": 11,
+     "correct": 11
+    },
+    "Q4": {
+     "n": 11,
+     "correct": 9
+    },
+    "D1": {
+     "n": 11,
+     "correct": 11
+    },
+    "D2": {
+     "n": 11,
+     "correct": 9
+    },
+    "D3": {
+     "n": 11,
+     "correct": 11
+    },
+    "S1": {
+     "n": 11,
+     "correct": 8
+    },
+    "S2": {
+     "n": 11,
+     "correct": 10
+    },
+    "S3": {
+     "n": 11,
+     "correct": 11
+    },
+    "S4": {
+     "n": 11,
+     "correct": 10
+    }
+   }
+  },
+  "llm": {
+   "label": "LLM (deepseek-v4.1-flash)",
+   "accuracy": 0.9435,
+   "accuracy_ci95": [
+    0.8991,
+    0.969
+   ],
+   "precision": 0.9138,
+   "recall": 0.9138,
+   "f1": 0.9138,
+   "per_question": {
+    "A1": {
+     "n": 11,
+     "correct": 11
+    },
+    "A2": {
+     "n": 11,
+     "correct": 10
+    },
+    "A3": {
+     "n": 11,
+     "correct": 11
+    },
+    "A4": {
+     "n": 11,
+     "correct": 11
+    },
+    "P1": {
+     "n": 4,
+     "correct": 3
+    },
+    "P2": {
+     "n": 4,
+     "correct": 4
+    },
+    "P3": {
+     "n": 4,
+     "correct": 4
+    },
+    "Q1": {
+     "n": 11,
+     "correct": 11
+    },
+    "Q2": {
+     "n": 11,
+     "correct": 10
+    },
+    "Q3": {
+     "n": 11,
+     "correct": 11
+    },
+    "Q4": {
+     "n": 11,
+     "correct": 8
+    },
+    "D1": {
+     "n": 11,
+     "correct": 10
+    },
+    "D2": {
+     "n": 11,
+     "correct": 10
+    },
+    "D3": {
+     "n": 11,
+     "correct": 11
+    },
+    "S1": {
+     "n": 11,
+     "correct": 11
+    },
+    "S2": {
+     "n": 11,
+     "correct": 11
+    },
+    "S3": {
+     "n": 11,
+     "correct": 11
+    },
+    "S4": {
+     "n": 11,
+     "correct": 9
+    }
+   }
+  },
+  "report": {
+   "label": "Report pipeline (LLM + evidence rule)",
+   "accuracy": 0.9379,
+   "accuracy_ci95": [
+    0.8922,
+    0.9649
+   ],
+   "precision": 0.9123,
+   "recall": 0.8966,
+   "f1": 0.9043,
+   "per_question": {
+    "A1": {
+     "n": 11,
+     "correct": 10
+    },
+    "A2": {
+     "n": 11,
+     "correct": 10
+    },
+    "A3": {
+     "n": 11,
+     "correct": 11
+    },
+    "A4": {
+     "n": 11,
+     "correct": 11
+    },
+    "P1": {
+     "n": 4,
+     "correct": 3
+    },
+    "P2": {
+     "n": 4,
+     "correct": 4
+    },
+    "P3": {
+     "n": 4,
+     "correct": 4
+    },
+    "Q1": {
+     "n": 11,
+     "correct": 11
+    },
+    "Q2": {
+     "n": 11,
+     "correct": 11
+    },
+    "Q3": {
+     "n": 11,
+     "correct": 11
+    },
+    "Q4": {
+     "n": 11,
+     "correct": 8
+    },
+    "D1": {
+     "n": 11,
+     "correct": 10
+    },
+    "D2": {
+     "n": 11,
+     "correct": 10
+    },
+    "D3": {
+     "n": 11,
+     "correct": 11
+    },
+    "S1": {
+     "n": 11,
+     "correct": 11
+    },
+    "S2": {
+     "n": 11,
+     "correct": 11
+    },
+    "S3": {
+     "n": 11,
+     "correct": 10
+    },
+    "S4": {
+     "n": 11,
+     "correct": 9
+    }
+   }
+  },
+  "turnike_bf16": {
+   "label": "Turnike-JEV-4B (BF16)",
+   "accuracy": 0.8588,
+   "accuracy_ci95": [
+    0.7998,
+    0.9025
+   ],
+   "precision": 0.7705,
+   "recall": 0.8103,
+   "f1": 0.7899,
+   "per_question": {
+    "A1": {
+     "n": 11,
+     "correct": 8
+    },
+    "A2": {
+     "n": 11,
+     "correct": 7
+    },
+    "A3": {
+     "n": 11,
+     "correct": 11
+    },
+    "A4": {
+     "n": 11,
+     "correct": 10
+    },
+    "P1": {
+     "n": 4,
+     "correct": 3
+    },
+    "P2": {
+     "n": 4,
+     "correct": 4
+    },
+    "P3": {
+     "n": 4,
+     "correct": 4
+    },
+    "Q1": {
+     "n": 11,
+     "correct": 11
+    },
+    "Q2": {
+     "n": 11,
+     "correct": 11
+    },
+    "Q3": {
+     "n": 11,
+     "correct": 11
+    },
+    "Q4": {
+     "n": 11,
+     "correct": 8
+    },
+    "D1": {
+     "n": 11,
+     "correct": 4
+    },
+    "D2": {
+     "n": 11,
+     "correct": 10
+    },
+    "D3": {
+     "n": 11,
+     "correct": 10
+    },
+    "S1": {
+     "n": 11,
+     "correct": 9
+    },
+    "S2": {
+     "n": 11,
+     "correct": 10
+    },
+    "S3": {
+     "n": 11,
+     "correct": 11
+    },
+    "S4": {
+     "n": 11,
+     "correct": 10
+    }
+   }
+  },
+  "turnike_fp8": {
+   "label": "Turnike-JEV-4B (FP8)",
+   "accuracy": 0.8644,
+   "accuracy_ci95": [
+    0.8062,
+    0.9072
+   ],
+   "precision": 0.7833,
+   "recall": 0.8103,
+   "f1": 0.7966,
+   "per_question": {
+    "A1": {
+     "n": 11,
+     "correct": 8
+    },
+    "A2": {
+     "n": 11,
+     "correct": 7
+    },
+    "A3": {
+     "n": 11,
+     "correct": 11
+    },
+    "A4": {
+     "n": 11,
+     "correct": 10
+    },
+    "P1": {
+     "n": 4,
+     "correct": 3
+    },
+    "P2": {
+     "n": 4,
+     "correct": 4
+    },
+    "P3": {
+     "n": 4,
+     "correct": 4
+    },
+    "Q1": {
+     "n": 11,
+     "correct": 11
+    },
+    "Q2": {
+     "n": 11,
+     "correct": 11
+    },
+    "Q3": {
+     "n": 11,
+     "correct": 11
+    },
+    "Q4": {
+     "n": 11,
+     "correct": 8
+    },
+    "D1": {
+     "n": 11,
+     "correct": 5
+    },
+    "D2": {
+     "n": 11,
+     "correct": 10
+    },
+    "D3": {
+     "n": 11,
+     "correct": 10
+    },
+    "S1": {
+     "n": 11,
+     "correct": 9
+    },
+    "S2": {
+     "n": 11,
+     "correct": 10
+    },
+    "S3": {
+     "n": 11,
+     "correct": 11
+    },
+    "S4": {
+     "n": 11,
+     "correct": 10
+    }
+   }
+  }
+ }
+}

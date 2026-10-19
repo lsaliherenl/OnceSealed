@@ -1,0 +1,1396 @@
+{
+ "VCS1477-additionality|A1": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29984
+ },
+ "VCS1477-additionality|A2": {
+  "answer": "yes",
+  "evidence": [
+   "p42-07",
+   "p121-06",
+   "p161-02",
+   "p161-03"
+  ],
+  "contains_short": true,
+  "chars": 29984
+ },
+ "VCS1477-additionality|A3": {
+  "answer": "yes",
+  "evidence": [
+   "p43-02"
+  ],
+  "contains_short": true,
+  "chars": 29984
+ },
+ "VCS1477-additionality|A4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29984
+ },
+ "VCS1477-permanence|P1": {
+  "answer": "yes",
+  "evidence": [
+   "p241-16"
+  ],
+  "contains_short": true,
+  "chars": 29993
+ },
+ "VCS1477-permanence|P2": {
+  "answer": "yes",
+  "evidence": [
+   "p241-16"
+  ],
+  "contains_short": true,
+  "chars": 29993
+ },
+ "VCS1477-permanence|P3": {
+  "answer": "yes",
+  "evidence": [
+   "p252-04",
+   "p252-06",
+   "p253-03",
+   "p316-05",
+   "p318-06"
+  ],
+  "contains_short": true,
+  "chars": 29993
+ },
+ "VCS1477-robust_quantification|Q1": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29983
+ },
+ "VCS1477-robust_quantification|Q2": {
+  "answer": "yes",
+  "evidence": [
+   "p235-19"
+  ],
+  "contains_short": true,
+  "chars": 29983
+ },
+ "VCS1477-robust_quantification|Q3": {
+  "answer": "yes",
+  "evidence": [
+   "p238-22"
+  ],
+  "contains_short": true,
+  "chars": 29983
+ },
+ "VCS1477-robust_quantification|Q4": {
+  "answer": "yes",
+  "evidence": [
+   "p219-07"
+  ],
+  "contains_short": true,
+  "chars": 29983
+ },
+ "VCS1477-no_double_counting|D1": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 7346
+ },
+ "VCS1477-no_double_counting|D2": {
+  "answer": "yes",
+  "evidence": [
+   "p80-03",
+   "p97-15",
+   "p97-16",
+   "p97-17",
+   "p98-02",
+   "p98-03"
+  ],
+  "contains_short": true,
+  "chars": 7346
+ },
+ "VCS1477-no_double_counting|D3": {
+  "answer": "yes",
+  "evidence": [
+   "p80-03",
+   "p80-04"
+  ],
+  "contains_short": true,
+  "chars": 7346
+ },
+ "VCS1477-safeguards|S1": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": false,
+  "chars": 29996
+ },
+ "VCS1477-safeguards|S2": {
+  "answer": "yes",
+  "evidence": [
+   "p66-05",
+   "p67-02"
+  ],
+  "contains_short": false,
+  "chars": 29996
+ },
+ "VCS1477-safeguards|S3": {
+  "answer": "yes",
+  "evidence": [
+   "p291-02"
+  ],
+  "contains_short": false,
+  "chars": 29996
+ },
+ "VCS1477-safeguards|S4": {
+  "answer": "yes",
+  "evidence": [
+   "p300-02",
+   "p300-03"
+  ],
+  "contains_short": false,
+  "chars": 29996
+ },
+ "VCS1851-additionality|A1": {
+  "answer": "yes",
+  "evidence": [
+   "p118-21"
+  ],
+  "contains_short": true,
+  "chars": 29982
+ },
+ "VCS1851-additionality|A2": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29982
+ },
+ "VCS1851-additionality|A3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29982
+ },
+ "VCS1851-additionality|A4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29982
+ },
+ "VCS1851-robust_quantification|Q1": {
+  "answer": "yes",
+  "evidence": [
+   "p56-05"
+  ],
+  "contains_short": true,
+  "chars": 29996
+ },
+ "VCS1851-robust_quantification|Q2": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29996
+ },
+ "VCS1851-robust_quantification|Q3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29996
+ },
+ "VCS1851-robust_quantification|Q4": {
+  "answer": "yes",
+  "evidence": [
+   "p57-05"
+  ],
+  "contains_short": true,
+  "chars": 29996
+ },
+ "VCS1851-no_double_counting|D1": {
+  "answer": "yes",
+  "evidence": [
+   "p22-03"
+  ],
+  "contains_short": true,
+  "chars": 20353
+ },
+ "VCS1851-no_double_counting|D2": {
+  "answer": "yes",
+  "evidence": [
+   "p21-09"
+  ],
+  "contains_short": true,
+  "chars": 20353
+ },
+ "VCS1851-no_double_counting|D3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 20353
+ },
+ "VCS1851-safeguards|S1": {
+  "answer": "yes",
+  "evidence": [
+   "p65-14",
+   "p65-15",
+   "p67-22",
+   "p67-23",
+   "p67-25"
+  ],
+  "contains_short": true,
+  "chars": 11429
+ },
+ "VCS1851-safeguards|S2": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 11429
+ },
+ "VCS1851-safeguards|S3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 11429
+ },
+ "VCS1851-safeguards|S4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 11429
+ },
+ "VCS138-additionality|A1": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 28950
+ },
+ "VCS138-additionality|A2": {
+  "answer": "yes",
+  "evidence": [
+   "p5-03"
+  ],
+  "contains_short": true,
+  "chars": 28950
+ },
+ "VCS138-additionality|A3": {
+  "answer": "yes",
+  "evidence": [
+   "p13-03"
+  ],
+  "contains_short": true,
+  "chars": 28950
+ },
+ "VCS138-additionality|A4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 28950
+ },
+ "VCS138-robust_quantification|Q1": {
+  "answer": "yes",
+  "evidence": [
+   "p15-03",
+   "p15-04",
+   "p16-02"
+  ],
+  "contains_short": false,
+  "chars": 29992
+ },
+ "VCS138-robust_quantification|Q2": {
+  "answer": "yes",
+  "evidence": [
+   "p19-02"
+  ],
+  "contains_short": false,
+  "chars": 29992
+ },
+ "VCS138-robust_quantification|Q3": {
+  "answer": "yes",
+  "evidence": [
+   "p14-03",
+   "p16-02"
+  ],
+  "contains_short": false,
+  "chars": 29992
+ },
+ "VCS138-robust_quantification|Q4": {
+  "answer": "yes",
+  "evidence": [
+   "p30-02"
+  ],
+  "contains_short": false,
+  "chars": 29992
+ },
+ "VCS138-no_double_counting|D1": {
+  "answer": "yes",
+  "evidence": [
+   "p10-03"
+  ],
+  "contains_short": true,
+  "chars": 20630
+ },
+ "VCS138-no_double_counting|D2": {
+  "answer": "yes",
+  "evidence": [
+   "p9-02",
+   "p9-03",
+   "p9-04"
+  ],
+  "contains_short": true,
+  "chars": 20630
+ },
+ "VCS138-no_double_counting|D3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 20630
+ },
+ "VCS138-safeguards|S1": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 9590
+ },
+ "VCS138-safeguards|S2": {
+  "answer": "yes",
+  "evidence": [
+   "p32-05"
+  ],
+  "contains_short": true,
+  "chars": 9590
+ },
+ "VCS138-safeguards|S3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 9590
+ },
+ "VCS138-safeguards|S4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 9590
+ },
+ "VCS2505-additionality|A1": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 14686
+ },
+ "VCS2505-additionality|A2": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 14686
+ },
+ "VCS2505-additionality|A3": {
+  "answer": "yes",
+  "evidence": [
+   "p8-19"
+  ],
+  "contains_short": true,
+  "chars": 14686
+ },
+ "VCS2505-additionality|A4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 14686
+ },
+ "VCS2505-robust_quantification|Q1": {
+  "answer": "yes",
+  "evidence": [
+   "p50-31",
+   "p50-20",
+   "p50-22"
+  ],
+  "contains_short": true,
+  "chars": 29863
+ },
+ "VCS2505-robust_quantification|Q2": {
+  "answer": "yes",
+  "evidence": [
+   "p46-08",
+   "p48-16",
+   "p21-10",
+   "p50-30"
+  ],
+  "contains_short": true,
+  "chars": 29863
+ },
+ "VCS2505-robust_quantification|Q3": {
+  "answer": "yes",
+  "evidence": [
+   "p15-04",
+   "p48-06",
+   "p55-08",
+   "p64-02"
+  ],
+  "contains_short": true,
+  "chars": 29863
+ },
+ "VCS2505-robust_quantification|Q4": {
+  "answer": "yes",
+  "evidence": [
+   "p55-08",
+   "p56-09",
+   "p57-06",
+   "p60-15",
+   "p63-05"
+  ],
+  "contains_short": true,
+  "chars": 29863
+ },
+ "VCS2505-no_double_counting|D1": {
+  "answer": "yes",
+  "evidence": [
+   "p20-10"
+  ],
+  "contains_short": true,
+  "chars": 8694
+ },
+ "VCS2505-no_double_counting|D2": {
+  "answer": "yes",
+  "evidence": [
+   "p21-05"
+  ],
+  "contains_short": true,
+  "chars": 8694
+ },
+ "VCS2505-no_double_counting|D3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 8694
+ },
+ "VCS2505-safeguards|S1": {
+  "answer": "yes",
+  "evidence": [
+   "p23-06"
+  ],
+  "contains_short": true,
+  "chars": 28372
+ },
+ "VCS2505-safeguards|S2": {
+  "answer": "yes",
+  "evidence": [
+   "p30-06"
+  ],
+  "contains_short": true,
+  "chars": 28372
+ },
+ "VCS2505-safeguards|S3": {
+  "answer": "yes",
+  "evidence": [
+   "p31-10"
+  ],
+  "contains_short": true,
+  "chars": 28372
+ },
+ "VCS2505-safeguards|S4": {
+  "answer": "yes",
+  "evidence": [
+   "p28-11"
+  ],
+  "contains_short": true,
+  "chars": 28372
+ },
+ "VCS1742-additionality|A1": {
+  "answer": "yes",
+  "evidence": [
+   "x1-p27-02"
+  ],
+  "contains_short": true,
+  "chars": 29983
+ },
+ "VCS1742-additionality|A2": {
+  "answer": "yes",
+  "evidence": [
+   "x1-p32-01"
+  ],
+  "contains_short": true,
+  "chars": 29983
+ },
+ "VCS1742-additionality|A3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29983
+ },
+ "VCS1742-additionality|A4": {
+  "answer": "yes",
+  "evidence": [
+   "x1-p13-07"
+  ],
+  "contains_short": true,
+  "chars": 29983
+ },
+ "VCS1742-robust_quantification|Q1": {
+  "answer": "yes",
+  "evidence": [
+   "x1-p40-02",
+   "x1-p49-04",
+   "x1-p49-05"
+  ],
+  "contains_short": true,
+  "chars": 29959
+ },
+ "VCS1742-robust_quantification|Q2": {
+  "answer": "yes",
+  "evidence": [
+   "p9-13",
+   "x1-p46-10",
+   "x1-p49-05"
+  ],
+  "contains_short": true,
+  "chars": 29959
+ },
+ "VCS1742-robust_quantification|Q3": {
+  "answer": "yes",
+  "evidence": [
+   "x1-p45-04"
+  ],
+  "contains_short": true,
+  "chars": 29959
+ },
+ "VCS1742-robust_quantification|Q4": {
+  "answer": "yes",
+  "evidence": [
+   "x1-p60-11",
+   "x1-p60-12"
+  ],
+  "contains_short": true,
+  "chars": 29959
+ },
+ "VCS1742-no_double_counting|D1": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29961
+ },
+ "VCS1742-no_double_counting|D2": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29961
+ },
+ "VCS1742-no_double_counting|D3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29961
+ },
+ "VCS1742-safeguards|S1": {
+  "answer": "yes",
+  "evidence": [
+   "x1-p66-02"
+  ],
+  "contains_short": true,
+  "chars": 29976
+ },
+ "VCS1742-safeguards|S2": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29976
+ },
+ "VCS1742-safeguards|S3": {
+  "answer": "yes",
+  "evidence": [
+   "x1-p56-01"
+  ],
+  "contains_short": true,
+  "chars": 29976
+ },
+ "VCS1742-safeguards|S4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29976
+ },
+ "VCS1728-additionality|A1": {
+  "answer": "yes",
+  "evidence": [
+   "p69-15"
+  ],
+  "contains_short": true,
+  "chars": 29993
+ },
+ "VCS1728-additionality|A2": {
+  "answer": "yes",
+  "evidence": [
+   "p40-05",
+   "p42-05",
+   "p42-06",
+   "p53-05"
+  ],
+  "contains_short": true,
+  "chars": 29993
+ },
+ "VCS1728-additionality|A3": {
+  "answer": "yes",
+  "evidence": [
+   "p36-04"
+  ],
+  "contains_short": true,
+  "chars": 29993
+ },
+ "VCS1728-additionality|A4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29993
+ },
+ "VCS1728-robust_quantification|Q1": {
+  "answer": "yes",
+  "evidence": [
+   "p46-11",
+   "p33-03",
+   "p55-04"
+  ],
+  "contains_short": true,
+  "chars": 29991
+ },
+ "VCS1728-robust_quantification|Q2": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29991
+ },
+ "VCS1728-robust_quantification|Q3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29991
+ },
+ "VCS1728-robust_quantification|Q4": {
+  "answer": "yes",
+  "evidence": [
+   "p50-06",
+   "p50-12",
+   "p55-02"
+  ],
+  "contains_short": true,
+  "chars": 29991
+ },
+ "VCS1728-no_double_counting|D1": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 20153
+ },
+ "VCS1728-no_double_counting|D2": {
+  "answer": "yes",
+  "evidence": [
+   "p25-10",
+   "p25-12"
+  ],
+  "contains_short": true,
+  "chars": 20153
+ },
+ "VCS1728-no_double_counting|D3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 20153
+ },
+ "VCS1728-safeguards|S1": {
+  "answer": "yes",
+  "evidence": [
+   "p52-12"
+  ],
+  "contains_short": true,
+  "chars": 13492
+ },
+ "VCS1728-safeguards|S2": {
+  "answer": "yes",
+  "evidence": [
+   "p53-04"
+  ],
+  "contains_short": true,
+  "chars": 13492
+ },
+ "VCS1728-safeguards|S3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 13492
+ },
+ "VCS1728-safeguards|S4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 13492
+ },
+ "VCS2609-additionality|A1": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29977
+ },
+ "VCS2609-additionality|A2": {
+  "answer": "yes",
+  "evidence": [
+   "p112-03"
+  ],
+  "contains_short": true,
+  "chars": 29977
+ },
+ "VCS2609-additionality|A3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29977
+ },
+ "VCS2609-additionality|A4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29977
+ },
+ "VCS2609-permanence|P1": {
+  "answer": "yes",
+  "evidence": [
+   "p161-22"
+  ],
+  "contains_short": true,
+  "chars": 29992
+ },
+ "VCS2609-permanence|P2": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29992
+ },
+ "VCS2609-permanence|P3": {
+  "answer": "yes",
+  "evidence": [
+   "p29-08",
+   "p29-09",
+   "p145-11",
+   "p174-04",
+   "p174-05"
+  ],
+  "contains_short": true,
+  "chars": 29992
+ },
+ "VCS2609-robust_quantification|Q1": {
+  "answer": "yes",
+  "evidence": [
+   "p139-10"
+  ],
+  "contains_short": true,
+  "chars": 29991
+ },
+ "VCS2609-robust_quantification|Q2": {
+  "answer": "yes",
+  "evidence": [
+   "p155-03"
+  ],
+  "contains_short": true,
+  "chars": 29991
+ },
+ "VCS2609-robust_quantification|Q3": {
+  "answer": "yes",
+  "evidence": [
+   "p161-12"
+  ],
+  "contains_short": true,
+  "chars": 29991
+ },
+ "VCS2609-robust_quantification|Q4": {
+  "answer": "yes",
+  "evidence": [
+   "p175-09"
+  ],
+  "contains_short": true,
+  "chars": 29991
+ },
+ "VCS2609-no_double_counting|D1": {
+  "answer": "yes",
+  "evidence": [
+   "p68-08",
+   "p68-14"
+  ],
+  "contains_short": true,
+  "chars": 1766
+ },
+ "VCS2609-no_double_counting|D2": {
+  "answer": "yes",
+  "evidence": [
+   "p68-08",
+   "p68-10",
+   "p68-12",
+   "p68-14",
+   "p68-18"
+  ],
+  "contains_short": true,
+  "chars": 1766
+ },
+ "VCS2609-no_double_counting|D3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 1766
+ },
+ "VCS2609-safeguards|S1": {
+  "answer": "yes",
+  "evidence": [
+   "p47-09",
+   "p55-09",
+   "p51-12"
+  ],
+  "contains_short": true,
+  "chars": 29997
+ },
+ "VCS2609-safeguards|S2": {
+  "answer": "yes",
+  "evidence": [
+   "p56-04",
+   "p56-05",
+   "p56-06"
+  ],
+  "contains_short": true,
+  "chars": 29997
+ },
+ "VCS2609-safeguards|S3": {
+  "answer": "yes",
+  "evidence": [
+   "p39-13",
+   "p41-03"
+  ],
+  "contains_short": true,
+  "chars": 29997
+ },
+ "VCS2609-safeguards|S4": {
+  "answer": "yes",
+  "evidence": [
+   "p65-04",
+   "p65-05",
+   "p65-06",
+   "p64-06",
+   "p39-12",
+   "p55-03"
+  ],
+  "contains_short": true,
+  "chars": 29997
+ },
+ "VCS673-additionality|A1": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29975
+ },
+ "VCS673-additionality|A2": {
+  "answer": "yes",
+  "evidence": [
+   "p42-06"
+  ],
+  "contains_short": true,
+  "chars": 29975
+ },
+ "VCS673-additionality|A3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29975
+ },
+ "VCS673-additionality|A4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29975
+ },
+ "VCS673-permanence|P1": {
+  "answer": "yes",
+  "evidence": [
+   "p25-02"
+  ],
+  "contains_short": true,
+  "chars": 29891
+ },
+ "VCS673-permanence|P2": {
+  "answer": "yes",
+  "evidence": [
+   "p25-02"
+  ],
+  "contains_short": true,
+  "chars": 29891
+ },
+ "VCS673-permanence|P3": {
+  "answer": "yes",
+  "evidence": [
+   "p18-02",
+   "p18-03"
+  ],
+  "contains_short": true,
+  "chars": 29891
+ },
+ "VCS673-robust_quantification|Q1": {
+  "answer": "yes",
+  "evidence": [
+   "p62-02"
+  ],
+  "contains_short": true,
+  "chars": 29981
+ },
+ "VCS673-robust_quantification|Q2": {
+  "answer": "yes",
+  "evidence": [
+   "p67-14"
+  ],
+  "contains_short": true,
+  "chars": 29981
+ },
+ "VCS673-robust_quantification|Q3": {
+  "answer": "yes",
+  "evidence": [
+   "p62-02"
+  ],
+  "contains_short": true,
+  "chars": 29981
+ },
+ "VCS673-robust_quantification|Q4": {
+  "answer": "yes",
+  "evidence": [
+   "p44-03"
+  ],
+  "contains_short": true,
+  "chars": 29981
+ },
+ "VCS673-no_double_counting|D1": {
+  "answer": "yes",
+  "evidence": [
+   "p26-02"
+  ],
+  "contains_short": true,
+  "chars": 29992
+ },
+ "VCS673-no_double_counting|D2": {
+  "answer": "yes",
+  "evidence": [
+   "p26-02"
+  ],
+  "contains_short": true,
+  "chars": 29992
+ },
+ "VCS673-no_double_counting|D3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29992
+ },
+ "VCS673-safeguards|S1": {
+  "answer": "yes",
+  "evidence": [
+   "p70-02"
+  ],
+  "contains_short": true,
+  "chars": 29969
+ },
+ "VCS673-safeguards|S2": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29969
+ },
+ "VCS673-safeguards|S3": {
+  "answer": "yes",
+  "evidence": [
+   "p69-16"
+  ],
+  "contains_short": true,
+  "chars": 29969
+ },
+ "VCS673-safeguards|S4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29969
+ },
+ "VCS2846-additionality|A1": {
+  "answer": "yes",
+  "evidence": [
+   "p41-10"
+  ],
+  "contains_short": true,
+  "chars": 29961
+ },
+ "VCS2846-additionality|A2": {
+  "answer": "yes",
+  "evidence": [
+   "p44-02"
+  ],
+  "contains_short": true,
+  "chars": 29961
+ },
+ "VCS2846-additionality|A3": {
+  "answer": "yes",
+  "evidence": [
+   "p36-10"
+  ],
+  "contains_short": true,
+  "chars": 29961
+ },
+ "VCS2846-additionality|A4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29961
+ },
+ "VCS2846-robust_quantification|Q1": {
+  "answer": "yes",
+  "evidence": [
+   "p122-02"
+  ],
+  "contains_short": true,
+  "chars": 29983
+ },
+ "VCS2846-robust_quantification|Q2": {
+  "answer": "yes",
+  "evidence": [
+   "p132-04"
+  ],
+  "contains_short": true,
+  "chars": 29983
+ },
+ "VCS2846-robust_quantification|Q3": {
+  "answer": "yes",
+  "evidence": [
+   "p84-11"
+  ],
+  "contains_short": true,
+  "chars": 29983
+ },
+ "VCS2846-robust_quantification|Q4": {
+  "answer": "yes",
+  "evidence": [
+   "p103-11"
+  ],
+  "contains_short": true,
+  "chars": 29983
+ },
+ "VCS2846-no_double_counting|D1": {
+  "answer": "yes",
+  "evidence": [
+   "p18-04"
+  ],
+  "contains_short": true,
+  "chars": 18327
+ },
+ "VCS2846-no_double_counting|D2": {
+  "answer": "yes",
+  "evidence": [
+   "p18-09",
+   "p18-11",
+   "p99-02"
+  ],
+  "contains_short": true,
+  "chars": 18327
+ },
+ "VCS2846-no_double_counting|D3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 18327
+ },
+ "VCS2846-safeguards|S1": {
+  "answer": "yes",
+  "evidence": [
+   "p2-26"
+  ],
+  "contains_short": true,
+  "chars": 17958
+ },
+ "VCS2846-safeguards|S2": {
+  "answer": "yes",
+  "evidence": [
+   "p2-24"
+  ],
+  "contains_short": true,
+  "chars": 17958
+ },
+ "VCS2846-safeguards|S3": {
+  "answer": "yes",
+  "evidence": [
+   "p2-25"
+  ],
+  "contains_short": true,
+  "chars": 17958
+ },
+ "VCS2846-safeguards|S4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 17958
+ },
+ "VCS985-additionality|A1": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29993
+ },
+ "VCS985-additionality|A2": {
+  "answer": "yes",
+  "evidence": [
+   "p79-02"
+  ],
+  "contains_short": true,
+  "chars": 29993
+ },
+ "VCS985-additionality|A3": {
+  "answer": "yes",
+  "evidence": [
+   "p60-02"
+  ],
+  "contains_short": true,
+  "chars": 29993
+ },
+ "VCS985-additionality|A4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29993
+ },
+ "VCS985-permanence|P1": {
+  "answer": "yes",
+  "evidence": [
+   "p62-03"
+  ],
+  "contains_short": true,
+  "chars": 29960
+ },
+ "VCS985-permanence|P2": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29960
+ },
+ "VCS985-permanence|P3": {
+  "answer": "yes",
+  "evidence": [
+   "p62-03",
+   "p63-01"
+  ],
+  "contains_short": true,
+  "chars": 29960
+ },
+ "VCS985-robust_quantification|Q1": {
+  "answer": "yes",
+  "evidence": [
+   "p123-12",
+   "p123-13",
+   "p130-04",
+   "p6-04",
+   "p3-01"
+  ],
+  "contains_short": true,
+  "chars": 29991
+ },
+ "VCS985-robust_quantification|Q2": {
+  "answer": "yes",
+  "evidence": [
+   "p123-11",
+   "p123-12",
+   "p123-13",
+   "p130-04",
+   "p163-01",
+   "p163-02",
+   "p3-01",
+   "p6-04",
+   "p6-05"
+  ],
+  "contains_short": true,
+  "chars": 29991
+ },
+ "VCS985-robust_quantification|Q3": {
+  "answer": "yes",
+  "evidence": [
+   "p152-04"
+  ],
+  "contains_short": true,
+  "chars": 29991
+ },
+ "VCS985-robust_quantification|Q4": {
+  "answer": "yes",
+  "evidence": [
+   "p152-04",
+   "p163-01",
+   "p163-02",
+   "p3-01",
+   "p154-02"
+  ],
+  "contains_short": true,
+  "chars": 29991
+ },
+ "VCS985-no_double_counting|D1": {
+  "answer": "yes",
+  "evidence": [
+   "p61-03"
+  ],
+  "contains_short": true,
+  "chars": 15185
+ },
+ "VCS985-no_double_counting|D2": {
+  "answer": "yes",
+  "evidence": [
+   "p61-04"
+  ],
+  "contains_short": true,
+  "chars": 15185
+ },
+ "VCS985-no_double_counting|D3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 15185
+ },
+ "VCS985-safeguards|S1": {
+  "answer": "yes",
+  "evidence": [
+   "p190-03"
+  ],
+  "contains_short": false,
+  "chars": 29990
+ },
+ "VCS985-safeguards|S2": {
+  "answer": "yes",
+  "evidence": [
+   "p35-02"
+  ],
+  "contains_short": false,
+  "chars": 29990
+ },
+ "VCS985-safeguards|S3": {
+  "answer": "yes",
+  "evidence": [
+   "p191-02"
+  ],
+  "contains_short": false,
+  "chars": 29990
+ },
+ "VCS985-safeguards|S4": {
+  "answer": "yes",
+  "evidence": [
+   "p171-01"
+  ],
+  "contains_short": false,
+  "chars": 29990
+ },
+ "VCS4150-additionality|A1": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29998
+ },
+ "VCS4150-additionality|A2": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29998
+ },
+ "VCS4150-additionality|A3": {
+  "answer": "yes",
+  "evidence": [
+   "p52-06"
+  ],
+  "contains_short": true,
+  "chars": 29998
+ },
+ "VCS4150-additionality|A4": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29998
+ },
+ "VCS4150-robust_quantification|Q1": {
+  "answer": "yes",
+  "evidence": [
+   "p55-02"
+  ],
+  "contains_short": true,
+  "chars": 29975
+ },
+ "VCS4150-robust_quantification|Q2": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29975
+ },
+ "VCS4150-robust_quantification|Q3": {
+  "answer": "yes",
+  "evidence": [
+   "p62-04"
+  ],
+  "contains_short": true,
+  "chars": 29975
+ },
+ "VCS4150-robust_quantification|Q4": {
+  "answer": "yes",
+  "evidence": [
+   "p65-03",
+   "p65-04"
+  ],
+  "contains_short": true,
+  "chars": 29975
+ },
+ "VCS4150-no_double_counting|D1": {
+  "answer": "yes",
+  "evidence": [
+   "p22-04"
+  ],
+  "contains_short": true,
+  "chars": 29979
+ },
+ "VCS4150-no_double_counting|D2": {
+  "answer": "yes",
+  "evidence": [
+   "p22-05",
+   "p23-02"
+  ],
+  "contains_short": true,
+  "chars": 29979
+ },
+ "VCS4150-no_double_counting|D3": {
+  "answer": "no",
+  "evidence": [],
+  "contains_short": true,
+  "chars": 29979
+ },
+ "VCS4150-safeguards|S1": {
+  "answer": "yes",
+  "evidence": [
+   "p27-07",
+   "p28-05",
+   "p30-03"
+  ],
+  "contains_short": true,
+  "chars": 29992
+ },
+ "VCS4150-safeguards|S2": {
+  "answer": "yes",
+  "evidence": [
+   "p29-05",
+   "p29-06",
+   "p30-03"
+  ],
+  "contains_short": true,
+  "chars": 29992
+ },
+ "VCS4150-safeguards|S3": {
+  "answer": "yes",
+  "evidence": [
+   "p34-05"
+  ],
+  "contains_short": true,
+  "chars": 29992
+ },
+ "VCS4150-safeguards|S4": {
+  "answer": "yes",
+  "evidence": [
+   "p29-03",
+   "p32-19",
+   "p33-06",
+   "p33-08",
+   "p33-09"
+  ],
+  "contains_short": true,
+  "chars": 29992
+ }
+}

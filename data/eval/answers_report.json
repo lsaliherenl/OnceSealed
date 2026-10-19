@@ -1,0 +1,4795 @@
+{
+ "question_set_version": "qs-v2-checklist",
+ "model": "report",
+ "label": "Report pipeline (LLM + evidence rule)",
+ "llm_model": "deepseek/deepseek-v4.1-flash",
+ "prompt_version": "checklist-v1",
+ "evidence_rule": "yes-cites-excerpt-paragraph-v2",
+ "runs": [
+  {
+   "VCS1477-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5303,
+    "cost": 0.00070848
+   },
+   "VCS1477-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5303,
+    "cost": 0.00070848
+   },
+   "VCS1477-additionality|A3": {
+    "answer": "yes",
+    "evidence": "p43-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5303,
+    "cost": 0.00070848
+   },
+   "VCS1477-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5303,
+    "cost": 0.00070848
+   },
+   "VCS1477-permanence|P1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9664,
+    "cost": 0.000938552
+   },
+   "VCS1477-permanence|P2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9664,
+    "cost": 0.000938552
+   },
+   "VCS1477-permanence|P3": {
+    "answer": "yes",
+    "evidence": "p318-06",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9664,
+    "cost": 0.000938552
+   },
+   "VCS1477-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8743,
+    "cost": 0.000191596
+   },
+   "VCS1477-robust_quantification|Q2": {
+    "answer": "yes",
+    "evidence": "p237-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8743,
+    "cost": 0.000191596
+   },
+   "VCS1477-robust_quantification|Q3": {
+    "answer": "yes",
+    "evidence": "p238-22",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8743,
+    "cost": 0.000191596
+   },
+   "VCS1477-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p210-19",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8743,
+    "cost": 0.000191596
+   },
+   "VCS1477-no_double_counting|D1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 22904,
+    "cost": 0.002224593
+   },
+   "VCS1477-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p98-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 22904,
+    "cost": 0.002224593
+   },
+   "VCS1477-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 22904,
+    "cost": 0.002224593
+   },
+   "VCS1477-safeguards|S1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5492,
+    "cost": 0.000862218
+   },
+   "VCS1477-safeguards|S2": {
+    "answer": "yes",
+    "evidence": "p66-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5492,
+    "cost": 0.000862218
+   },
+   "VCS1477-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5492,
+    "cost": 0.000862218
+   },
+   "VCS1477-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5492,
+    "cost": 0.000862218
+   },
+   "VCS1851-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3333,
+    "cost": 0.000271487
+   },
+   "VCS1851-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3333,
+    "cost": 0.000271487
+   },
+   "VCS1851-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3333,
+    "cost": 0.000271487
+   },
+   "VCS1851-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3333,
+    "cost": 0.000271487
+   },
+   "VCS1851-robust_quantification|Q1": {
+    "answer": "yes",
+    "evidence": "p28-02, p28-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3923,
+    "cost": 0.000185896
+   },
+   "VCS1851-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3923,
+    "cost": 0.000185896
+   },
+   "VCS1851-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3923,
+    "cost": 0.000185896
+   },
+   "VCS1851-robust_quantification|Q4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3923,
+    "cost": 0.000185896
+   },
+   "VCS1851-no_double_counting|D1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6799,
+    "cost": 0.000623334
+   },
+   "VCS1851-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p21-06, p21-07, p21-09",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6799,
+    "cost": 0.000623334
+   },
+   "VCS1851-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6799,
+    "cost": 0.000623334
+   },
+   "VCS1851-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p67-22, p67-23",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 28198,
+    "cost": 0.000220648
+   },
+   "VCS1851-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 28198,
+    "cost": 0.000220648
+   },
+   "VCS1851-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 28198,
+    "cost": 0.000220648
+   },
+   "VCS1851-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 28198,
+    "cost": 0.000220648
+   },
+   "VCS138-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4754,
+    "cost": 0.0001715
+   },
+   "VCS138-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4754,
+    "cost": 0.0001715
+   },
+   "VCS138-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4754,
+    "cost": 0.0001715
+   },
+   "VCS138-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4754,
+    "cost": 0.0001715
+   },
+   "VCS138-robust_quantification|Q1": {
+    "answer": "yes",
+    "evidence": "p15-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3881,
+    "cost": 0.000133692
+   },
+   "VCS138-robust_quantification|Q2": {
+    "answer": "yes",
+    "evidence": "p10-08",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3881,
+    "cost": 0.000133692
+   },
+   "VCS138-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3881,
+    "cost": 0.000133692
+   },
+   "VCS138-robust_quantification|Q4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3881,
+    "cost": 0.000133692
+   },
+   "VCS138-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p10-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4338,
+    "cost": 0.00161304
+   },
+   "VCS138-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p9-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4338,
+    "cost": 0.00161304
+   },
+   "VCS138-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4338,
+    "cost": 0.00161304
+   },
+   "VCS138-safeguards|S1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3346,
+    "cost": 0.000157122
+   },
+   "VCS138-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3346,
+    "cost": 0.000157122
+   },
+   "VCS138-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3346,
+    "cost": 0.000157122
+   },
+   "VCS138-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3346,
+    "cost": 0.000157122
+   },
+   "VCS2505-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11965,
+    "cost": 0.000250561
+   },
+   "VCS2505-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11965,
+    "cost": 0.000250561
+   },
+   "VCS2505-additionality|A3": {
+    "answer": "yes",
+    "evidence": "p8-19",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11965,
+    "cost": 0.000250561
+   },
+   "VCS2505-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11965,
+    "cost": 0.000250561
+   },
+   "VCS2505-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 19457,
+    "cost": 0.00032708048
+   },
+   "VCS2505-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 19457,
+    "cost": 0.00032708048
+   },
+   "VCS2505-robust_quantification|Q3": {
+    "answer": "yes",
+    "evidence": "p55-08, p58-09",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 19457,
+    "cost": 0.00032708048
+   },
+   "VCS2505-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p55-08, p64-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 19457,
+    "cost": 0.00032708048
+   },
+   "VCS2505-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p20-10",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5031,
+    "cost": 0.0015525
+   },
+   "VCS2505-no_double_counting|D2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5031,
+    "cost": 0.0015525
+   },
+   "VCS2505-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5031,
+    "cost": 0.0015525
+   },
+   "VCS2505-safeguards|S1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6349,
+    "cost": 0.000287696
+   },
+   "VCS2505-safeguards|S2": {
+    "answer": "yes",
+    "evidence": "p30-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6349,
+    "cost": 0.000287696
+   },
+   "VCS2505-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6349,
+    "cost": 0.000287696
+   },
+   "VCS2505-safeguards|S4": {
+    "answer": "yes",
+    "evidence": "p26-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6349,
+    "cost": 0.000287696
+   },
+   "VCS1742-additionality|A1": {
+    "answer": "yes",
+    "evidence": "x1-p27-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11209,
+    "cost": 0.001511835
+   },
+   "VCS1742-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11209,
+    "cost": 0.001511835
+   },
+   "VCS1742-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11209,
+    "cost": 0.001511835
+   },
+   "VCS1742-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11209,
+    "cost": 0.001511835
+   },
+   "VCS1742-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6827,
+    "cost": 0.0019542
+   },
+   "VCS1742-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6827,
+    "cost": 0.0019542
+   },
+   "VCS1742-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6827,
+    "cost": 0.0019542
+   },
+   "VCS1742-robust_quantification|Q4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6827,
+    "cost": 0.0019542
+   },
+   "VCS1742-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "x1-p13-07",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9278,
+    "cost": 0.0002385
+   },
+   "VCS1742-no_double_counting|D2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9278,
+    "cost": 0.0002385
+   },
+   "VCS1742-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9278,
+    "cost": 0.0002385
+   },
+   "VCS1742-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "x1-p66-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9678,
+    "cost": 0.000219696
+   },
+   "VCS1742-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9678,
+    "cost": 0.000219696
+   },
+   "VCS1742-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9678,
+    "cost": 0.000219696
+   },
+   "VCS1742-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9678,
+    "cost": 0.000219696
+   },
+   "VCS1728-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9694,
+    "cost": 0.00094992
+   },
+   "VCS1728-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9694,
+    "cost": 0.00094992
+   },
+   "VCS1728-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9694,
+    "cost": 0.00094992
+   },
+   "VCS1728-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9694,
+    "cost": 0.00094992
+   },
+   "VCS1728-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4109,
+    "cost": 0.00073242
+   },
+   "VCS1728-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4109,
+    "cost": 0.00073242
+   },
+   "VCS1728-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4109,
+    "cost": 0.00073242
+   },
+   "VCS1728-robust_quantification|Q4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4109,
+    "cost": 0.00073242
+   },
+   "VCS1728-no_double_counting|D1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14425,
+    "cost": 0.001581233
+   },
+   "VCS1728-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p25-10",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14425,
+    "cost": 0.001581233
+   },
+   "VCS1728-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14425,
+    "cost": 0.001581233
+   },
+   "VCS1728-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p52-12",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3781,
+    "cost": 0.000550035
+   },
+   "VCS1728-safeguards|S2": {
+    "answer": "yes",
+    "evidence": "p53-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3781,
+    "cost": 0.000550035
+   },
+   "VCS1728-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3781,
+    "cost": 0.000550035
+   },
+   "VCS1728-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3781,
+    "cost": 0.000550035
+   },
+   "VCS2609-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7251,
+    "cost": 0.001014795
+   },
+   "VCS2609-additionality|A2": {
+    "answer": "yes",
+    "evidence": "p82-06",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7251,
+    "cost": 0.001014795
+   },
+   "VCS2609-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7251,
+    "cost": 0.001014795
+   },
+   "VCS2609-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7251,
+    "cost": 0.001014795
+   },
+   "VCS2609-permanence|P1": {
+    "answer": "yes",
+    "evidence": "p161-22",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8029,
+    "cost": 0.00075657
+   },
+   "VCS2609-permanence|P2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8029,
+    "cost": 0.00075657
+   },
+   "VCS2609-permanence|P3": {
+    "answer": "yes",
+    "evidence": "p38-17",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8029,
+    "cost": 0.00075657
+   },
+   "VCS2609-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6732,
+    "cost": 0.000280096
+   },
+   "VCS2609-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6732,
+    "cost": 0.000280096
+   },
+   "VCS2609-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6732,
+    "cost": 0.000280096
+   },
+   "VCS2609-robust_quantification|Q4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6732,
+    "cost": 0.000280096
+   },
+   "VCS2609-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p68-14, p68-16",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 21403,
+    "cost": 0.0006947304
+   },
+   "VCS2609-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p68-08, p68-10, p68-12",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 21403,
+    "cost": 0.0006947304
+   },
+   "VCS2609-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 21403,
+    "cost": 0.0006947304
+   },
+   "VCS2609-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p26-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 33653,
+    "cost": 0.00262465
+   },
+   "VCS2609-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 33653,
+    "cost": 0.00262465
+   },
+   "VCS2609-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 33653,
+    "cost": 0.00262465
+   },
+   "VCS2609-safeguards|S4": {
+    "answer": "yes",
+    "evidence": "p55-07",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 33653,
+    "cost": 0.00262465
+   },
+   "VCS673-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14065,
+    "cost": 0.000297896
+   },
+   "VCS673-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14065,
+    "cost": 0.000297896
+   },
+   "VCS673-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14065,
+    "cost": 0.000297896
+   },
+   "VCS673-additionality|A4": {
+    "answer": "yes",
+    "evidence": "p37-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14065,
+    "cost": 0.000297896
+   },
+   "VCS673-permanence|P1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6090,
+    "cost": 0.00088284
+   },
+   "VCS673-permanence|P2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6090,
+    "cost": 0.00088284
+   },
+   "VCS673-permanence|P3": {
+    "answer": "yes",
+    "evidence": "p18-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6090,
+    "cost": 0.00088284
+   },
+   "VCS673-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2279,
+    "cost": 0.0008079
+   },
+   "VCS673-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2279,
+    "cost": 0.0008079
+   },
+   "VCS673-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2279,
+    "cost": 0.0008079
+   },
+   "VCS673-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p50-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2279,
+    "cost": 0.0008079
+   },
+   "VCS673-no_double_counting|D1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 19232,
+    "cost": 0.000339883395
+   },
+   "VCS673-no_double_counting|D2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 19232,
+    "cost": 0.000339883395
+   },
+   "VCS673-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 19232,
+    "cost": 0.000339883395
+   },
+   "VCS673-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p72-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 42637,
+    "cost": 0.004316975
+   },
+   "VCS673-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 42637,
+    "cost": 0.004316975
+   },
+   "VCS673-safeguards|S3": {
+    "answer": "yes",
+    "evidence": "p69-16",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 42637,
+    "cost": 0.004316975
+   },
+   "VCS673-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 42637,
+    "cost": 0.004316975
+   },
+   "VCS2846-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4697,
+    "cost": 0.000427181
+   },
+   "VCS2846-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4697,
+    "cost": 0.000427181
+   },
+   "VCS2846-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4697,
+    "cost": 0.000427181
+   },
+   "VCS2846-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4697,
+    "cost": 0.000427181
+   },
+   "VCS2846-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 16869,
+    "cost": 0.0011450499999999999
+   },
+   "VCS2846-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 16869,
+    "cost": 0.0011450499999999999
+   },
+   "VCS2846-robust_quantification|Q3": {
+    "answer": "yes",
+    "evidence": "p103-11",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 16869,
+    "cost": 0.0011450499999999999
+   },
+   "VCS2846-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p103-11",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 16869,
+    "cost": 0.0011450499999999999
+   },
+   "VCS2846-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p18-09",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11385,
+    "cost": 0.0037836
+   },
+   "VCS2846-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p18-09",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11385,
+    "cost": 0.0037836
+   },
+   "VCS2846-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11385,
+    "cost": 0.0037836
+   },
+   "VCS2846-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p21-08",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11347,
+    "cost": 0.000904134
+   },
+   "VCS2846-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11347,
+    "cost": 0.000904134
+   },
+   "VCS2846-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11347,
+    "cost": 0.000904134
+   },
+   "VCS2846-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11347,
+    "cost": 0.000904134
+   },
+   "VCS985-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2272,
+    "cost": 0.000121992
+   },
+   "VCS985-additionality|A2": {
+    "answer": "yes",
+    "evidence": "p79-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2272,
+    "cost": 0.000121992
+   },
+   "VCS985-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2272,
+    "cost": 0.000121992
+   },
+   "VCS985-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2272,
+    "cost": 0.000121992
+   },
+   "VCS985-permanence|P1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2883,
+    "cost": 0.00071256
+   },
+   "VCS985-permanence|P2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2883,
+    "cost": 0.00071256
+   },
+   "VCS985-permanence|P3": {
+    "answer": "yes",
+    "evidence": "p63-01",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2883,
+    "cost": 0.00071256
+   },
+   "VCS985-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6193,
+    "cost": 0.000234812
+   },
+   "VCS985-robust_quantification|Q2": {
+    "answer": "yes",
+    "evidence": "p163-01",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6193,
+    "cost": 0.000234812
+   },
+   "VCS985-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6193,
+    "cost": 0.000234812
+   },
+   "VCS985-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p163-01",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6193,
+    "cost": 0.000234812
+   },
+   "VCS985-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p61-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 40527,
+    "cost": 0.004204859
+   },
+   "VCS985-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p61-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 40527,
+    "cost": 0.004204859
+   },
+   "VCS985-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 40527,
+    "cost": 0.004204859
+   },
+   "VCS985-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p35-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3725,
+    "cost": 0.00157794
+   },
+   "VCS985-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3725,
+    "cost": 0.00157794
+   },
+   "VCS985-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3725,
+    "cost": 0.00157794
+   },
+   "VCS985-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3725,
+    "cost": 0.00157794
+   },
+   "VCS4150-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5056,
+    "cost": 0.000794358
+   },
+   "VCS4150-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5056,
+    "cost": 0.000794358
+   },
+   "VCS4150-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5056,
+    "cost": 0.000794358
+   },
+   "VCS4150-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5056,
+    "cost": 0.000794358
+   },
+   "VCS4150-robust_quantification|Q1": {
+    "answer": "yes",
+    "evidence": "p62-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7759,
+    "cost": 0.000162992
+   },
+   "VCS4150-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7759,
+    "cost": 0.000162992
+   },
+   "VCS4150-robust_quantification|Q3": {
+    "answer": "yes",
+    "evidence": "p62-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7759,
+    "cost": 0.000162992
+   },
+   "VCS4150-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p62-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7759,
+    "cost": 0.000162992
+   },
+   "VCS4150-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p22-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5371,
+    "cost": 0.000306218
+   },
+   "VCS4150-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p22-05, p23-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5371,
+    "cost": 0.000306218
+   },
+   "VCS4150-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5371,
+    "cost": 0.000306218
+   },
+   "VCS4150-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p28-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4891,
+    "cost": 0.000165296
+   },
+   "VCS4150-safeguards|S2": {
+    "answer": "yes",
+    "evidence": "p29-06",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4891,
+    "cost": 0.000165296
+   },
+   "VCS4150-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4891,
+    "cost": 0.000165296
+   },
+   "VCS4150-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4891,
+    "cost": 0.000165296
+   }
+  },
+  {
+   "VCS1477-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9823,
+    "cost": 0.00144888
+   },
+   "VCS1477-additionality|A2": {
+    "answer": "yes",
+    "evidence": "p43-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9823,
+    "cost": 0.00144888
+   },
+   "VCS1477-additionality|A3": {
+    "answer": "yes",
+    "evidence": "p43-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9823,
+    "cost": 0.00144888
+   },
+   "VCS1477-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9823,
+    "cost": 0.00144888
+   },
+   "VCS1477-permanence|P1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 36502,
+    "cost": 0.003511812
+   },
+   "VCS1477-permanence|P2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 36502,
+    "cost": 0.003511812
+   },
+   "VCS1477-permanence|P3": {
+    "answer": "yes",
+    "evidence": "p318-06",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 36502,
+    "cost": 0.003511812
+   },
+   "VCS1477-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7027,
+    "cost": 0.000207296
+   },
+   "VCS1477-robust_quantification|Q2": {
+    "answer": "yes",
+    "evidence": "p237-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7027,
+    "cost": 0.000207296
+   },
+   "VCS1477-robust_quantification|Q3": {
+    "answer": "yes",
+    "evidence": "p238-22",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7027,
+    "cost": 0.000207296
+   },
+   "VCS1477-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p210-19",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7027,
+    "cost": 0.000207296
+   },
+   "VCS1477-no_double_counting|D1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 21571,
+    "cost": 0.001974338
+   },
+   "VCS1477-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p98-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 21571,
+    "cost": 0.001974338
+   },
+   "VCS1477-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 21571,
+    "cost": 0.001974338
+   },
+   "VCS1477-safeguards|S1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10427,
+    "cost": 0.001325538
+   },
+   "VCS1477-safeguards|S2": {
+    "answer": "yes",
+    "evidence": "p66-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10427,
+    "cost": 0.001325538
+   },
+   "VCS1477-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10427,
+    "cost": 0.001325538
+   },
+   "VCS1477-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10427,
+    "cost": 0.001325538
+   },
+   "VCS1851-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4251,
+    "cost": 0.000347992
+   },
+   "VCS1851-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4251,
+    "cost": 0.000347992
+   },
+   "VCS1851-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4251,
+    "cost": 0.000347992
+   },
+   "VCS1851-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4251,
+    "cost": 0.000347992
+   },
+   "VCS1851-robust_quantification|Q1": {
+    "answer": "yes",
+    "evidence": "p28-02, p28-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6140,
+    "cost": 0.000188996
+   },
+   "VCS1851-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6140,
+    "cost": 0.000188996
+   },
+   "VCS1851-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6140,
+    "cost": 0.000188996
+   },
+   "VCS1851-robust_quantification|Q4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6140,
+    "cost": 0.000188996
+   },
+   "VCS1851-no_double_counting|D1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 18583,
+    "cost": 0.0016399840000000001
+   },
+   "VCS1851-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p21-09",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 18583,
+    "cost": 0.0016399840000000001
+   },
+   "VCS1851-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 18583,
+    "cost": 0.0016399840000000001
+   },
+   "VCS1851-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p65-14, p65-15, p67-22, p67-23, p67-25",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6203,
+    "cost": 0.000263504
+   },
+   "VCS1851-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6203,
+    "cost": 0.000263504
+   },
+   "VCS1851-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6203,
+    "cost": 0.000263504
+   },
+   "VCS1851-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6203,
+    "cost": 0.000263504
+   },
+   "VCS138-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4894,
+    "cost": 0.00012762
+   },
+   "VCS138-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4894,
+    "cost": 0.00012762
+   },
+   "VCS138-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4894,
+    "cost": 0.00012762
+   },
+   "VCS138-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4894,
+    "cost": 0.00012762
+   },
+   "VCS138-robust_quantification|Q1": {
+    "answer": "yes",
+    "evidence": "p15-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3094,
+    "cost": 0.000147392
+   },
+   "VCS138-robust_quantification|Q2": {
+    "answer": "yes",
+    "evidence": "p10-08, p19-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3094,
+    "cost": 0.000147392
+   },
+   "VCS138-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3094,
+    "cost": 0.000147392
+   },
+   "VCS138-robust_quantification|Q4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3094,
+    "cost": 0.000147392
+   },
+   "VCS138-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p10-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 26657,
+    "cost": 0.000963
+   },
+   "VCS138-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p9-03, p9-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 26657,
+    "cost": 0.000963
+   },
+   "VCS138-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 26657,
+    "cost": 0.000963
+   },
+   "VCS138-safeguards|S1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2953,
+    "cost": 0.000376302
+   },
+   "VCS138-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2953,
+    "cost": 0.000376302
+   },
+   "VCS138-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2953,
+    "cost": 0.000376302
+   },
+   "VCS138-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2953,
+    "cost": 0.000376302
+   },
+   "VCS2505-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7169,
+    "cost": 0.000198361
+   },
+   "VCS2505-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7169,
+    "cost": 0.000198361
+   },
+   "VCS2505-additionality|A3": {
+    "answer": "yes",
+    "evidence": "p8-19",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7169,
+    "cost": 0.000198361
+   },
+   "VCS2505-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7169,
+    "cost": 0.000198361
+   },
+   "VCS2505-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 38454,
+    "cost": 0.00056858048
+   },
+   "VCS2505-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 38454,
+    "cost": 0.00056858048
+   },
+   "VCS2505-robust_quantification|Q3": {
+    "answer": "yes",
+    "evidence": "p55-08",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 38454,
+    "cost": 0.00056858048
+   },
+   "VCS2505-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p64-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 38454,
+    "cost": 0.00056858048
+   },
+   "VCS2505-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p20-10",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 12178,
+    "cost": 0.002553876
+   },
+   "VCS2505-no_double_counting|D2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 12178,
+    "cost": 0.002553876
+   },
+   "VCS2505-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 12178,
+    "cost": 0.002553876
+   },
+   "VCS2505-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p23-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11645,
+    "cost": 0.000400696
+   },
+   "VCS2505-safeguards|S2": {
+    "answer": "yes",
+    "evidence": "p30-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11645,
+    "cost": 0.000400696
+   },
+   "VCS2505-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11645,
+    "cost": 0.000400696
+   },
+   "VCS2505-safeguards|S4": {
+    "answer": "yes",
+    "evidence": "p26-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 11645,
+    "cost": 0.000400696
+   },
+   "VCS1742-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23531,
+    "cost": 0.000477
+   },
+   "VCS1742-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23531,
+    "cost": 0.000477
+   },
+   "VCS1742-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23531,
+    "cost": 0.000477
+   },
+   "VCS1742-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23531,
+    "cost": 0.000477
+   },
+   "VCS1742-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6183,
+    "cost": 0.001051176
+   },
+   "VCS1742-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6183,
+    "cost": 0.001051176
+   },
+   "VCS1742-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6183,
+    "cost": 0.001051176
+   },
+   "VCS1742-robust_quantification|Q4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6183,
+    "cost": 0.001051176
+   },
+   "VCS1742-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "x1-p13-07",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9087,
+    "cost": 0.000213498
+   },
+   "VCS1742-no_double_counting|D2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9087,
+    "cost": 0.000213498
+   },
+   "VCS1742-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9087,
+    "cost": 0.000213498
+   },
+   "VCS1742-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "x1-p66-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14397,
+    "cost": 0.000245696
+   },
+   "VCS1742-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14397,
+    "cost": 0.000245696
+   },
+   "VCS1742-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14397,
+    "cost": 0.000245696
+   },
+   "VCS1742-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14397,
+    "cost": 0.000245696
+   },
+   "VCS1728-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3179,
+    "cost": 0.00038487
+   },
+   "VCS1728-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3179,
+    "cost": 0.00038487
+   },
+   "VCS1728-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3179,
+    "cost": 0.00038487
+   },
+   "VCS1728-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3179,
+    "cost": 0.00038487
+   },
+   "VCS1728-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5712,
+    "cost": 0.00108663
+   },
+   "VCS1728-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5712,
+    "cost": 0.00108663
+   },
+   "VCS1728-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5712,
+    "cost": 0.00108663
+   },
+   "VCS1728-robust_quantification|Q4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5712,
+    "cost": 0.00108663
+   },
+   "VCS1728-no_double_counting|D1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7391,
+    "cost": 0.000758396
+   },
+   "VCS1728-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p25-10",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7391,
+    "cost": 0.000758396
+   },
+   "VCS1728-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7391,
+    "cost": 0.000758396
+   },
+   "VCS1728-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p52-12",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10763,
+    "cost": 0.000720075
+   },
+   "VCS1728-safeguards|S2": {
+    "answer": "yes",
+    "evidence": "p53-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10763,
+    "cost": 0.000720075
+   },
+   "VCS1728-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10763,
+    "cost": 0.000720075
+   },
+   "VCS1728-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10763,
+    "cost": 0.000720075
+   },
+   "VCS2609-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5562,
+    "cost": 0.000760395
+   },
+   "VCS2609-additionality|A2": {
+    "answer": "yes",
+    "evidence": "p82-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5562,
+    "cost": 0.000760395
+   },
+   "VCS2609-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5562,
+    "cost": 0.000760395
+   },
+   "VCS2609-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5562,
+    "cost": 0.000760395
+   },
+   "VCS2609-permanence|P1": {
+    "answer": "yes",
+    "evidence": "p161-22",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 12117,
+    "cost": 0.001109775
+   },
+   "VCS2609-permanence|P2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 12117,
+    "cost": 0.001109775
+   },
+   "VCS2609-permanence|P3": {
+    "answer": "yes",
+    "evidence": "p38-17",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 12117,
+    "cost": 0.001109775
+   },
+   "VCS2609-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10522,
+    "cost": 0.000339396
+   },
+   "VCS2609-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10522,
+    "cost": 0.000339396
+   },
+   "VCS2609-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10522,
+    "cost": 0.000339396
+   },
+   "VCS2609-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p201-11",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10522,
+    "cost": 0.000339396
+   },
+   "VCS2609-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p68-14",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 22533,
+    "cost": 0.0008278704
+   },
+   "VCS2609-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p68-12",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 22533,
+    "cost": 0.0008278704
+   },
+   "VCS2609-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 22533,
+    "cost": 0.0008278704
+   },
+   "VCS2609-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p26-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 45118,
+    "cost": 0.00339555
+   },
+   "VCS2609-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 45118,
+    "cost": 0.00339555
+   },
+   "VCS2609-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 45118,
+    "cost": 0.00339555
+   },
+   "VCS2609-safeguards|S4": {
+    "answer": "yes",
+    "evidence": "p55-07",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 45118,
+    "cost": 0.00339555
+   },
+   "VCS673-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8691,
+    "cost": 0.000260896
+   },
+   "VCS673-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8691,
+    "cost": 0.000260896
+   },
+   "VCS673-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8691,
+    "cost": 0.000260896
+   },
+   "VCS673-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8691,
+    "cost": 0.000260896
+   },
+   "VCS673-permanence|P1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2969,
+    "cost": 0.00050226
+   },
+   "VCS673-permanence|P2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2969,
+    "cost": 0.00050226
+   },
+   "VCS673-permanence|P3": {
+    "answer": "yes",
+    "evidence": "p18-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2969,
+    "cost": 0.00050226
+   },
+   "VCS673-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5832,
+    "cost": 0.0009183
+   },
+   "VCS673-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5832,
+    "cost": 0.0009183
+   },
+   "VCS673-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5832,
+    "cost": 0.0009183
+   },
+   "VCS673-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p50-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5832,
+    "cost": 0.0009183
+   },
+   "VCS673-no_double_counting|D1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23392,
+    "cost": 0.000303283395
+   },
+   "VCS673-no_double_counting|D2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23392,
+    "cost": 0.000303283395
+   },
+   "VCS673-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23392,
+    "cost": 0.000303283395
+   },
+   "VCS673-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p72-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 32849,
+    "cost": 0.003034265
+   },
+   "VCS673-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 32849,
+    "cost": 0.003034265
+   },
+   "VCS673-safeguards|S3": {
+    "answer": "yes",
+    "evidence": "p69-16",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 32849,
+    "cost": 0.003034265
+   },
+   "VCS673-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 32849,
+    "cost": 0.003034265
+   },
+   "VCS2846-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3890,
+    "cost": 0.000367121
+   },
+   "VCS2846-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3890,
+    "cost": 0.000367121
+   },
+   "VCS2846-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3890,
+    "cost": 0.000367121
+   },
+   "VCS2846-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3890,
+    "cost": 0.000367121
+   },
+   "VCS2846-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 34828,
+    "cost": 0.0031718
+   },
+   "VCS2846-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 34828,
+    "cost": 0.0031718
+   },
+   "VCS2846-robust_quantification|Q3": {
+    "answer": "yes",
+    "evidence": "p103-11",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 34828,
+    "cost": 0.0031718
+   },
+   "VCS2846-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p103-11",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 34828,
+    "cost": 0.0031718
+   },
+   "VCS2846-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p18-09",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3949,
+    "cost": 0.001206
+   },
+   "VCS2846-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p18-09",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3949,
+    "cost": 0.001206
+   },
+   "VCS2846-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3949,
+    "cost": 0.001206
+   },
+   "VCS2846-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p21-08",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9557,
+    "cost": 0.000716804
+   },
+   "VCS2846-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9557,
+    "cost": 0.000716804
+   },
+   "VCS2846-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9557,
+    "cost": 0.000716804
+   },
+   "VCS2846-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9557,
+    "cost": 0.000716804
+   },
+   "VCS985-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3669,
+    "cost": 0.000129392
+   },
+   "VCS985-additionality|A2": {
+    "answer": "yes",
+    "evidence": "p79-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3669,
+    "cost": 0.000129392
+   },
+   "VCS985-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3669,
+    "cost": 0.000129392
+   },
+   "VCS985-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3669,
+    "cost": 0.000129392
+   },
+   "VCS985-permanence|P1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4797,
+    "cost": 0.0014448
+   },
+   "VCS985-permanence|P2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4797,
+    "cost": 0.0014448
+   },
+   "VCS985-permanence|P3": {
+    "answer": "yes",
+    "evidence": "p63-01",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4797,
+    "cost": 0.0014448
+   },
+   "VCS985-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 26778,
+    "cost": 0.000237492
+   },
+   "VCS985-robust_quantification|Q2": {
+    "answer": "yes",
+    "evidence": "p163-01",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 26778,
+    "cost": 0.000237492
+   },
+   "VCS985-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 26778,
+    "cost": 0.000237492
+   },
+   "VCS985-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p163-01",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 26778,
+    "cost": 0.000237492
+   },
+   "VCS985-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p61-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 31493,
+    "cost": 0.0031723990000000002
+   },
+   "VCS985-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p61-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 31493,
+    "cost": 0.0031723990000000002
+   },
+   "VCS985-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 31493,
+    "cost": 0.0031723990000000002
+   },
+   "VCS985-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p35-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9089,
+    "cost": 0.00156234
+   },
+   "VCS985-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9089,
+    "cost": 0.00156234
+   },
+   "VCS985-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9089,
+    "cost": 0.00156234
+   },
+   "VCS985-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9089,
+    "cost": 0.00156234
+   },
+   "VCS4150-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5678,
+    "cost": 0.000808398
+   },
+   "VCS4150-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5678,
+    "cost": 0.000808398
+   },
+   "VCS4150-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5678,
+    "cost": 0.000808398
+   },
+   "VCS4150-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5678,
+    "cost": 0.000808398
+   },
+   "VCS4150-robust_quantification|Q1": {
+    "answer": "yes",
+    "evidence": "p62-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23698,
+    "cost": 0.0005801840000000001
+   },
+   "VCS4150-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23698,
+    "cost": 0.0005801840000000001
+   },
+   "VCS4150-robust_quantification|Q3": {
+    "answer": "yes",
+    "evidence": "p62-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23698,
+    "cost": 0.0005801840000000001
+   },
+   "VCS4150-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p62-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23698,
+    "cost": 0.0005801840000000001
+   },
+   "VCS4150-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p22-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5475,
+    "cost": 0.000268418
+   },
+   "VCS4150-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p22-05, p23-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5475,
+    "cost": 0.000268418
+   },
+   "VCS4150-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5475,
+    "cost": 0.000268418
+   },
+   "VCS4150-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p28-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4078,
+    "cost": 0.000181696
+   },
+   "VCS4150-safeguards|S2": {
+    "answer": "yes",
+    "evidence": "p29-06",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4078,
+    "cost": 0.000181696
+   },
+   "VCS4150-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4078,
+    "cost": 0.000181696
+   },
+   "VCS4150-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4078,
+    "cost": 0.000181696
+   }
+  },
+  {
+   "VCS1477-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7237,
+    "cost": 0.00094128
+   },
+   "VCS1477-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7237,
+    "cost": 0.00094128
+   },
+   "VCS1477-additionality|A3": {
+    "answer": "yes",
+    "evidence": "p43-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7237,
+    "cost": 0.00094128
+   },
+   "VCS1477-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7237,
+    "cost": 0.00094128
+   },
+   "VCS1477-permanence|P1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 17752,
+    "cost": 0.0016413719999999999
+   },
+   "VCS1477-permanence|P2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 17752,
+    "cost": 0.0016413719999999999
+   },
+   "VCS1477-permanence|P3": {
+    "answer": "yes",
+    "evidence": "p318-06",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 17752,
+    "cost": 0.0016413719999999999
+   },
+   "VCS1477-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5608,
+    "cost": 0.000217696
+   },
+   "VCS1477-robust_quantification|Q2": {
+    "answer": "yes",
+    "evidence": "p237-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5608,
+    "cost": 0.000217696
+   },
+   "VCS1477-robust_quantification|Q3": {
+    "answer": "yes",
+    "evidence": "p238-22",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5608,
+    "cost": 0.000217696
+   },
+   "VCS1477-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p210-19",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5608,
+    "cost": 0.000217696
+   },
+   "VCS1477-no_double_counting|D1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 21705,
+    "cost": 0.0021230579999999997
+   },
+   "VCS1477-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p98-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 21705,
+    "cost": 0.0021230579999999997
+   },
+   "VCS1477-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 21705,
+    "cost": 0.0021230579999999997
+   },
+   "VCS1477-safeguards|S1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6699,
+    "cost": 0.001118058
+   },
+   "VCS1477-safeguards|S2": {
+    "answer": "yes",
+    "evidence": "p66-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6699,
+    "cost": 0.001118058
+   },
+   "VCS1477-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6699,
+    "cost": 0.001118058
+   },
+   "VCS1477-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6699,
+    "cost": 0.001118058
+   },
+   "VCS1851-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3150,
+    "cost": 0.000289362
+   },
+   "VCS1851-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3150,
+    "cost": 0.000289362
+   },
+   "VCS1851-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3150,
+    "cost": 0.000289362
+   },
+   "VCS1851-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3150,
+    "cost": 0.000289362
+   },
+   "VCS1851-robust_quantification|Q1": {
+    "answer": "yes",
+    "evidence": "p28-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 13395,
+    "cost": 0.000503892
+   },
+   "VCS1851-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 13395,
+    "cost": 0.000503892
+   },
+   "VCS1851-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 13395,
+    "cost": 0.000503892
+   },
+   "VCS1851-robust_quantification|Q4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 13395,
+    "cost": 0.000503892
+   },
+   "VCS1851-no_double_counting|D1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5113,
+    "cost": 0.000418129
+   },
+   "VCS1851-no_double_counting|D2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5113,
+    "cost": 0.000418129
+   },
+   "VCS1851-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5113,
+    "cost": 0.000418129
+   },
+   "VCS1851-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p67-22",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5112,
+    "cost": 0.000208304
+   },
+   "VCS1851-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5112,
+    "cost": 0.000208304
+   },
+   "VCS1851-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5112,
+    "cost": 0.000208304
+   },
+   "VCS1851-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5112,
+    "cost": 0.000208304
+   },
+   "VCS138-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4138,
+    "cost": 0.0001269
+   },
+   "VCS138-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4138,
+    "cost": 0.0001269
+   },
+   "VCS138-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4138,
+    "cost": 0.0001269
+   },
+   "VCS138-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4138,
+    "cost": 0.0001269
+   },
+   "VCS138-robust_quantification|Q1": {
+    "answer": "yes",
+    "evidence": "p15-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4257,
+    "cost": 0.000160392
+   },
+   "VCS138-robust_quantification|Q2": {
+    "answer": "yes",
+    "evidence": "p10-08, p19-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4257,
+    "cost": 0.000160392
+   },
+   "VCS138-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4257,
+    "cost": 0.000160392
+   },
+   "VCS138-robust_quantification|Q4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4257,
+    "cost": 0.000160392
+   },
+   "VCS138-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p10-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4155,
+    "cost": 0.00083364
+   },
+   "VCS138-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p9-03, p9-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4155,
+    "cost": 0.00083364
+   },
+   "VCS138-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4155,
+    "cost": 0.00083364
+   },
+   "VCS138-safeguards|S1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4186,
+    "cost": 0.000697662
+   },
+   "VCS138-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4186,
+    "cost": 0.000697662
+   },
+   "VCS138-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4186,
+    "cost": 0.000697662
+   },
+   "VCS138-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4186,
+    "cost": 0.000697662
+   },
+   "VCS2505-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4785,
+    "cost": 0.000204681
+   },
+   "VCS2505-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4785,
+    "cost": 0.000204681
+   },
+   "VCS2505-additionality|A3": {
+    "answer": "yes",
+    "evidence": "p8-19",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4785,
+    "cost": 0.000204681
+   },
+   "VCS2505-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4785,
+    "cost": 0.000204681
+   },
+   "VCS2505-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 20769,
+    "cost": 0.000334338885
+   },
+   "VCS2505-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 20769,
+    "cost": 0.000334338885
+   },
+   "VCS2505-robust_quantification|Q3": {
+    "answer": "yes",
+    "evidence": "p55-08, p58-09",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 20769,
+    "cost": 0.000334338885
+   },
+   "VCS2505-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p55-08, p64-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 20769,
+    "cost": 0.000334338885
+   },
+   "VCS2505-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p20-10",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4963,
+    "cost": 0.0013485
+   },
+   "VCS2505-no_double_counting|D2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4963,
+    "cost": 0.0013485
+   },
+   "VCS2505-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4963,
+    "cost": 0.0013485
+   },
+   "VCS2505-safeguards|S1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7155,
+    "cost": 0.000287696
+   },
+   "VCS2505-safeguards|S2": {
+    "answer": "yes",
+    "evidence": "p30-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7155,
+    "cost": 0.000287696
+   },
+   "VCS2505-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7155,
+    "cost": 0.000287696
+   },
+   "VCS2505-safeguards|S4": {
+    "answer": "yes",
+    "evidence": "p26-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7155,
+    "cost": 0.000287696
+   },
+   "VCS1742-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 36036,
+    "cost": 0.000759384
+   },
+   "VCS1742-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 36036,
+    "cost": 0.000759384
+   },
+   "VCS1742-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 36036,
+    "cost": 0.000759384
+   },
+   "VCS1742-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 36036,
+    "cost": 0.000759384
+   },
+   "VCS1742-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3969,
+    "cost": 0.0010182
+   },
+   "VCS1742-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3969,
+    "cost": 0.0010182
+   },
+   "VCS1742-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3969,
+    "cost": 0.0010182
+   },
+   "VCS1742-robust_quantification|Q4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3969,
+    "cost": 0.0010182
+   },
+   "VCS1742-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "x1-p13-07",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6232,
+    "cost": 0.000176238
+   },
+   "VCS1742-no_double_counting|D2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6232,
+    "cost": 0.000176238
+   },
+   "VCS1742-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6232,
+    "cost": 0.000176238
+   },
+   "VCS1742-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "x1-p66-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6904,
+    "cost": 0.000251196
+   },
+   "VCS1742-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6904,
+    "cost": 0.000251196
+   },
+   "VCS1742-safeguards|S3": {
+    "answer": "yes",
+    "evidence": "x1-p60-13",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6904,
+    "cost": 0.000251196
+   },
+   "VCS1742-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6904,
+    "cost": 0.000251196
+   },
+   "VCS1728-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 1948,
+    "cost": 0.00029361
+   },
+   "VCS1728-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 1948,
+    "cost": 0.00029361
+   },
+   "VCS1728-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 1948,
+    "cost": 0.00029361
+   },
+   "VCS1728-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 1948,
+    "cost": 0.00029361
+   },
+   "VCS1728-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7064,
+    "cost": 0.00080028
+   },
+   "VCS1728-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7064,
+    "cost": 0.00080028
+   },
+   "VCS1728-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7064,
+    "cost": 0.00080028
+   },
+   "VCS1728-robust_quantification|Q4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 7064,
+    "cost": 0.00080028
+   },
+   "VCS1728-no_double_counting|D1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 16342,
+    "cost": 0.001508273
+   },
+   "VCS1728-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p25-10",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 16342,
+    "cost": 0.001508273
+   },
+   "VCS1728-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 16342,
+    "cost": 0.001508273
+   },
+   "VCS1728-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p52-12",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5235,
+    "cost": 0.000777015
+   },
+   "VCS1728-safeguards|S2": {
+    "answer": "yes",
+    "evidence": "p53-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5235,
+    "cost": 0.000777015
+   },
+   "VCS1728-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5235,
+    "cost": 0.000777015
+   },
+   "VCS1728-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5235,
+    "cost": 0.000777015
+   },
+   "VCS2609-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6192,
+    "cost": 0.000880395
+   },
+   "VCS2609-additionality|A2": {
+    "answer": "yes",
+    "evidence": "p82-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6192,
+    "cost": 0.000880395
+   },
+   "VCS2609-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6192,
+    "cost": 0.000880395
+   },
+   "VCS2609-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6192,
+    "cost": 0.000880395
+   },
+   "VCS2609-permanence|P1": {
+    "answer": "yes",
+    "evidence": "p161-22",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9311,
+    "cost": 0.000752275
+   },
+   "VCS2609-permanence|P2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9311,
+    "cost": 0.000752275
+   },
+   "VCS2609-permanence|P3": {
+    "answer": "yes",
+    "evidence": "p38-17",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 9311,
+    "cost": 0.000752275
+   },
+   "VCS2609-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14076,
+    "cost": 0.000525396
+   },
+   "VCS2609-robust_quantification|Q2": {
+    "answer": "yes",
+    "evidence": "p155-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14076,
+    "cost": 0.000525396
+   },
+   "VCS2609-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14076,
+    "cost": 0.000525396
+   },
+   "VCS2609-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p201-11",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 14076,
+    "cost": 0.000525396
+   },
+   "VCS2609-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p68-08, p68-14, p68-16",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 24165,
+    "cost": 0.0009131304
+   },
+   "VCS2609-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p68-08, p68-10, p68-12, p68-18",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 24165,
+    "cost": 0.0009131304
+   },
+   "VCS2609-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 24165,
+    "cost": 0.0009131304
+   },
+   "VCS2609-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p26-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 19500,
+    "cost": 0.00179385
+   },
+   "VCS2609-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 19500,
+    "cost": 0.00179385
+   },
+   "VCS2609-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 19500,
+    "cost": 0.00179385
+   },
+   "VCS2609-safeguards|S4": {
+    "answer": "yes",
+    "evidence": "p55-07",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 19500,
+    "cost": 0.00179385
+   },
+   "VCS673-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 12315,
+    "cost": 0.000255396
+   },
+   "VCS673-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 12315,
+    "cost": 0.000255396
+   },
+   "VCS673-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 12315,
+    "cost": 0.000255396
+   },
+   "VCS673-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 12315,
+    "cost": 0.000255396
+   },
+   "VCS673-permanence|P1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2224,
+    "cost": 0.00033924
+   },
+   "VCS673-permanence|P2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2224,
+    "cost": 0.00033924
+   },
+   "VCS673-permanence|P3": {
+    "answer": "yes",
+    "evidence": "p18-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 2224,
+    "cost": 0.00033924
+   },
+   "VCS673-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3185,
+    "cost": 0.0010311
+   },
+   "VCS673-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3185,
+    "cost": 0.0010311
+   },
+   "VCS673-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3185,
+    "cost": 0.0010311
+   },
+   "VCS673-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p50-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 3185,
+    "cost": 0.0010311
+   },
+   "VCS673-no_double_counting|D1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 29504,
+    "cost": 0.000487783395
+   },
+   "VCS673-no_double_counting|D2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 29504,
+    "cost": 0.000487783395
+   },
+   "VCS673-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 29504,
+    "cost": 0.000487783395
+   },
+   "VCS673-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p72-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23104,
+    "cost": 0.002440815
+   },
+   "VCS673-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23104,
+    "cost": 0.002440815
+   },
+   "VCS673-safeguards|S3": {
+    "answer": "yes",
+    "evidence": "p69-16",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23104,
+    "cost": 0.002440815
+   },
+   "VCS673-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 23104,
+    "cost": 0.002440815
+   },
+   "VCS2846-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5312,
+    "cost": 0.000555166
+   },
+   "VCS2846-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5312,
+    "cost": 0.000555166
+   },
+   "VCS2846-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5312,
+    "cost": 0.000555166
+   },
+   "VCS2846-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5312,
+    "cost": 0.000555166
+   },
+   "VCS2846-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 18247,
+    "cost": 0.00118295
+   },
+   "VCS2846-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 18247,
+    "cost": 0.00118295
+   },
+   "VCS2846-robust_quantification|Q3": {
+    "answer": "yes",
+    "evidence": "p103-11",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 18247,
+    "cost": 0.00118295
+   },
+   "VCS2846-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p103-10, p103-11",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 18247,
+    "cost": 0.00118295
+   },
+   "VCS2846-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p18-09",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10778,
+    "cost": 0.00207
+   },
+   "VCS2846-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p18-09",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10778,
+    "cost": 0.00207
+   },
+   "VCS2846-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 10778,
+    "cost": 0.00207
+   },
+   "VCS2846-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p21-08",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6855,
+    "cost": 0.000686774
+   },
+   "VCS2846-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6855,
+    "cost": 0.000686774
+   },
+   "VCS2846-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6855,
+    "cost": 0.000686774
+   },
+   "VCS2846-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6855,
+    "cost": 0.000686774
+   },
+   "VCS985-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 1668,
+    "cost": 0.000116992
+   },
+   "VCS985-additionality|A2": {
+    "answer": "yes",
+    "evidence": "p79-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 1668,
+    "cost": 0.000116992
+   },
+   "VCS985-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 1668,
+    "cost": 0.000116992
+   },
+   "VCS985-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 1668,
+    "cost": 0.000116992
+   },
+   "VCS985-permanence|P1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 1869,
+    "cost": 0.00066096
+   },
+   "VCS985-permanence|P2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 1869,
+    "cost": 0.00066096
+   },
+   "VCS985-permanence|P3": {
+    "answer": "yes",
+    "evidence": "p63-01",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 1869,
+    "cost": 0.00066096
+   },
+   "VCS985-robust_quantification|Q1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 13854,
+    "cost": 0.000324492
+   },
+   "VCS985-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 13854,
+    "cost": 0.000324492
+   },
+   "VCS985-robust_quantification|Q3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 13854,
+    "cost": 0.000324492
+   },
+   "VCS985-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p154-02, p163-01",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 13854,
+    "cost": 0.000324492
+   },
+   "VCS985-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p61-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 30802,
+    "cost": 0.003325409
+   },
+   "VCS985-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p61-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 30802,
+    "cost": 0.003325409
+   },
+   "VCS985-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 30802,
+    "cost": 0.003325409
+   },
+   "VCS985-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p35-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5631,
+    "cost": 0.00129594
+   },
+   "VCS985-safeguards|S2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5631,
+    "cost": 0.00129594
+   },
+   "VCS985-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5631,
+    "cost": 0.00129594
+   },
+   "VCS985-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5631,
+    "cost": 0.00129594
+   },
+   "VCS4150-additionality|A1": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4221,
+    "cost": 0.000604038
+   },
+   "VCS4150-additionality|A2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4221,
+    "cost": 0.000604038
+   },
+   "VCS4150-additionality|A3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4221,
+    "cost": 0.000604038
+   },
+   "VCS4150-additionality|A4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 4221,
+    "cost": 0.000604038
+   },
+   "VCS4150-robust_quantification|Q1": {
+    "answer": "yes",
+    "evidence": "p62-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8110,
+    "cost": 0.000152792
+   },
+   "VCS4150-robust_quantification|Q2": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8110,
+    "cost": 0.000152792
+   },
+   "VCS4150-robust_quantification|Q3": {
+    "answer": "yes",
+    "evidence": "p62-04",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8110,
+    "cost": 0.000152792
+   },
+   "VCS4150-robust_quantification|Q4": {
+    "answer": "yes",
+    "evidence": "p62-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 8110,
+    "cost": 0.000152792
+   },
+   "VCS4150-no_double_counting|D1": {
+    "answer": "yes",
+    "evidence": "p22-03",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5773,
+    "cost": 0.000317618
+   },
+   "VCS4150-no_double_counting|D2": {
+    "answer": "yes",
+    "evidence": "p22-05, p23-02",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5773,
+    "cost": 0.000317618
+   },
+   "VCS4150-no_double_counting|D3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 5773,
+    "cost": 0.000317618
+   },
+   "VCS4150-safeguards|S1": {
+    "answer": "yes",
+    "evidence": "p28-05",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6913,
+    "cost": 0.000141796
+   },
+   "VCS4150-safeguards|S2": {
+    "answer": "yes",
+    "evidence": "p29-06",
+    "model_said": "yes",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6913,
+    "cost": 0.000141796
+   },
+   "VCS4150-safeguards|S3": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6913,
+    "cost": 0.000141796
+   },
+   "VCS4150-safeguards|S4": {
+    "answer": "no",
+    "evidence": null,
+    "model_said": "no",
+    "dropped": null,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "latency_ms": 6913,
+    "cost": 0.000141796
+   }
+  }
+ ]
+}
