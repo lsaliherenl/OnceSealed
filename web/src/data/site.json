@@ -118,6 +118,45 @@
     "agree": 18
    },
    "source": "docs/citation_check.md"
+  },
+  "robustness": {
+   "screen": "injection-screen-v1",
+   "source": "docs/ai_robustness.md",
+   "evidence_removed": {
+    "questions": 58,
+    "right_before": 52,
+    "changed_by_test": 45,
+    "as_expected": 51
+   },
+   "irrelevant": {
+    "questions": 177,
+    "right_before": 120,
+    "changed_by_test": 0,
+    "as_expected": 177
+   },
+   "inject_yes": {
+    "explicit": {
+     "questions": 119,
+     "right_before": 114,
+     "changed_by_test": 0,
+     "as_expected": 115,
+     "screen_catches_it": true
+    },
+    "soft": {
+     "questions": 119,
+     "right_before": 114,
+     "changed_by_test": 0,
+     "as_expected": 114,
+     "screen_catches_it": false
+    }
+   },
+   "inject_no": {
+    "questions": 58,
+    "right_before": 52,
+    "changed_by_test": 37,
+    "as_expected": 15,
+    "screen_catches_it": true
+   }
   }
  },
  "projects": [
@@ -160,6 +199,13 @@
      "sha256": "29955d5d170062c4913c6e3d7c570d0e56b7c933c5a861312604a09770b6e3e3",
      "pages": 137
     },
+    "documents": [
+     {
+      "prefix": "",
+      "file_name": "VCS-Joint-Project-Description-Monitoring-Report-Muanyuan FSW-version03-clean.pdf",
+      "role": "project_description"
+     }
+    ],
     "method": {
      "report_schema": "report-v2",
      "question_set_version": "qs-v2-checklist",
@@ -250,7 +296,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29961
+      "excerpt_chars": 29961,
+      "screened_out": []
      },
      {
       "principle": "permanence",
@@ -260,7 +307,8 @@
       "dropped_findings": 0,
       "review_flags": [],
       "checks": [],
-      "excerpt_chars": null
+      "excerpt_chars": null,
+      "screened_out": []
      },
      {
       "principle": "robust_quantification",
@@ -461,7 +509,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29983
+      "excerpt_chars": 29983,
+      "screened_out": []
      },
      {
       "principle": "no_double_counting",
@@ -511,7 +560,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 18327
+      "excerpt_chars": 18327,
+      "screened_out": []
      },
      {
       "principle": "safeguards",
@@ -576,7 +626,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 17958
+      "excerpt_chars": 17958,
+      "screened_out": []
      }
     ]
    },
@@ -740,6 +791,13 @@
      "sha256": "f2c4ea5cb1f617445cd4583a0835f21f3c853139bb9aff3df9f53e45c021b03f",
      "pages": 396
     },
+    "documents": [
+     {
+      "prefix": "",
+      "file_name": "CCB VCS PD 1477_30.11.2025_v4.pdf",
+      "role": "project_description"
+     }
+    ],
     "method": {
      "report_schema": "report-v2",
      "question_set_version": "qs-v2-checklist",
@@ -824,7 +882,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29984
+      "excerpt_chars": 29984,
+      "screened_out": []
      },
      {
       "principle": "permanence",
@@ -880,7 +939,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29993
+      "excerpt_chars": 29993,
+      "screened_out": []
      },
      {
       "principle": "robust_quantification",
@@ -1001,7 +1061,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29983
+      "excerpt_chars": 29983,
+      "screened_out": []
      },
      {
       "principle": "no_double_counting",
@@ -1051,7 +1112,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 7346
+      "excerpt_chars": 7346,
+      "screened_out": []
      },
      {
       "principle": "safeguards",
@@ -1116,7 +1178,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29996
+      "excerpt_chars": 29996,
+      "screened_out": []
      }
     ]
    },
@@ -1227,6 +1290,28 @@
       }
      ]
     },
+    "documents": [
+     {
+      "prefix": "",
+      "file_name": "PROJ_DESC_673_05SEP2011.pdf",
+      "role": "project_description"
+     },
+     {
+      "prefix": "x1-",
+      "file_name": "MONIT_REP_673_02MAR2014_28FEB2017.pdf",
+      "role": "monitoring_report"
+     },
+     {
+      "prefix": "x2-",
+      "file_name": "VCS_Monitoring_Report_Kibale_2017-2020_v1.1 (002).pdf",
+      "role": "monitoring_report"
+     },
+     {
+      "prefix": "x3-",
+      "file_name": "20201118_CCBVCS_VER Report_KNP UWA-FACE.pdf",
+      "role": "verification_report"
+     }
+    ],
     "method": {
      "report_schema": "report-v2",
      "question_set_version": "qs-v2-checklist",
@@ -1315,7 +1400,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29987
+      "excerpt_chars": 29987,
+      "screened_out": []
      },
      {
       "principle": "permanence",
@@ -1371,7 +1457,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29990
+      "excerpt_chars": 29990,
+      "screened_out": []
      },
      {
       "principle": "robust_quantification",
@@ -1436,7 +1523,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29995
+      "excerpt_chars": 29995,
+      "screened_out": []
      },
      {
       "principle": "no_double_counting",
@@ -1486,7 +1574,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29987
+      "excerpt_chars": 29987,
+      "screened_out": []
      },
      {
       "principle": "safeguards",
@@ -1553,7 +1642,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29992
+      "excerpt_chars": 29992,
+      "screened_out": []
      }
     ]
    },
@@ -1663,6 +1753,13 @@
      "sha256": "0967d5670ec19d4b0190194d57022f6520836359874691613a48d36034543a2e",
      "pages": 225
     },
+    "documents": [
+     {
+      "prefix": "",
+      "file_name": "PROJ_DESC_2609_07032023.pdf",
+      "role": "project_description"
+     }
+    ],
     "method": {
      "report_schema": "report-v2",
      "question_set_version": "qs-v2-checklist",
@@ -1742,7 +1839,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29977
+      "excerpt_chars": 29977,
+      "screened_out": []
      },
      {
       "principle": "permanence",
@@ -1792,7 +1890,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29992
+      "excerpt_chars": 29992,
+      "screened_out": []
      },
      {
       "principle": "robust_quantification",
@@ -1863,7 +1962,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29991
+      "excerpt_chars": 29991,
+      "screened_out": []
      },
      {
       "principle": "no_double_counting",
@@ -1933,7 +2033,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 1766
+      "excerpt_chars": 1766,
+      "screened_out": []
      },
      {
       "principle": "safeguards",
@@ -2006,7 +2107,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29997
+      "excerpt_chars": 29997,
+      "screened_out": []
      }
     ]
    },
@@ -2410,6 +2512,13 @@
      "sha256": "8c22eb7d83ff957fa785940a206c03b5adc4b0f7506ea2d98d5fd455ab44e104",
      "pages": 37
     },
+    "documents": [
+     {
+      "prefix": "",
+      "file_name": "PROJ_DESC_138_12MAY2016.pdf",
+      "role": "project_description"
+     }
+    ],
     "method": {
      "report_schema": "report-v2",
      "question_set_version": "qs-v2-checklist",
@@ -2496,7 +2605,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 28950
+      "excerpt_chars": 28950,
+      "screened_out": []
      },
      {
       "principle": "permanence",
@@ -2506,7 +2616,8 @@
       "dropped_findings": 0,
       "review_flags": [],
       "checks": [],
-      "excerpt_chars": null
+      "excerpt_chars": null,
+      "screened_out": []
      },
      {
       "principle": "robust_quantification",
@@ -2577,7 +2688,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29992
+      "excerpt_chars": 29992,
+      "screened_out": []
      },
      {
       "principle": "no_double_counting",
@@ -2637,7 +2749,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 20630
+      "excerpt_chars": 20630,
+      "screened_out": []
      },
      {
       "principle": "safeguards",
@@ -2698,7 +2811,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 9590
+      "excerpt_chars": 9590,
+      "screened_out": []
      }
     ]
    },
@@ -2922,6 +3036,13 @@
      "sha256": "1d09240addf6b933de31de7492b798775ddf16183425b8d0eff00e6f0e5d810a",
      "pages": 64
     },
+    "documents": [
+     {
+      "prefix": "",
+      "file_name": "Fuel Efficient Cooking in South Africa Grouped PDD_v9_Clean.pdf",
+      "role": "project_description"
+     }
+    ],
     "method": {
      "report_schema": "report-v2",
      "question_set_version": "qs-v2-checklist",
@@ -3002,7 +3123,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 14686
+      "excerpt_chars": 14686,
+      "screened_out": []
      },
      {
       "principle": "permanence",
@@ -3012,7 +3134,8 @@
       "dropped_findings": 0,
       "review_flags": [],
       "checks": [],
-      "excerpt_chars": null
+      "excerpt_chars": null,
+      "screened_out": []
      },
      {
       "principle": "robust_quantification",
@@ -3208,7 +3331,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29863
+      "excerpt_chars": 29863,
+      "screened_out": []
      },
      {
       "principle": "no_double_counting",
@@ -3263,7 +3387,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 8694
+      "excerpt_chars": 8694,
+      "screened_out": []
      },
      {
       "principle": "safeguards",
@@ -3330,7 +3455,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 28372
+      "excerpt_chars": 28372,
+      "screened_out": []
      }
     ]
    },
@@ -3453,6 +3579,43 @@
       }
      ]
     },
+    "documents": [
+     {
+      "prefix": "",
+      "file_name": "PROJ_DESC_985_20DEC2012.pdf",
+      "role": "project_description"
+     },
+     {
+      "prefix": "x1-",
+      "file_name": "MONIT_REP_985_08AUG2008_07AUG2012.pdf",
+      "role": "monitoring_report"
+     },
+     {
+      "prefix": "x2-",
+      "file_name": "MONIT_REP_985_08AUG2012_07AUG2014.pdf",
+      "role": "monitoring_report"
+     },
+     {
+      "prefix": "x3-",
+      "file_name": "MONIT_REP_985_08AUG2014_07AUG2015.pdf",
+      "role": "monitoring_report"
+     },
+     {
+      "prefix": "x4-",
+      "file_name": "MONIT_REP_985_8AUG2015_7AUG2016.pdf",
+      "role": "monitoring_report"
+     },
+     {
+      "prefix": "x5-",
+      "file_name": "MONIT_REP_985_08AUG2016_07AUG2018.pdf",
+      "role": "monitoring_report"
+     },
+     {
+      "prefix": "x6-",
+      "file_name": "VALID_REP_985_01FEB2013.pdf",
+      "role": "validation_report"
+     }
+    ],
     "method": {
      "report_schema": "report-v2",
      "question_set_version": "qs-v2-checklist",
@@ -3537,7 +3700,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29984
+      "excerpt_chars": 29984,
+      "screened_out": []
      },
      {
       "principle": "permanence",
@@ -3632,7 +3796,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29985
+      "excerpt_chars": 29985,
+      "screened_out": []
      },
      {
       "principle": "robust_quantification",
@@ -3724,7 +3889,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29996
+      "excerpt_chars": 29996,
+      "screened_out": []
      },
      {
       "principle": "no_double_counting",
@@ -3779,7 +3945,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 25517
+      "excerpt_chars": 25517,
+      "screened_out": []
      },
      {
       "principle": "safeguards",
@@ -3846,7 +4013,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29992
+      "excerpt_chars": 29992,
+      "screened_out": []
      }
     ]
    },
@@ -3977,6 +4145,18 @@
       }
      ]
     },
+    "documents": [
+     {
+      "prefix": "",
+      "file_name": "PL1742_VCS PD_HBPCL_V02_17042018_Clean.pdf",
+      "role": "project_description"
+     },
+     {
+      "prefix": "x1-",
+      "file_name": "4993 PDD.pdf",
+      "role": "supporting"
+     }
+    ],
     "method": {
      "report_schema": "report-v2",
      "question_set_version": "qs-v2-checklist",
@@ -4067,7 +4247,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29983
+      "excerpt_chars": 29983,
+      "screened_out": []
      },
      {
       "principle": "permanence",
@@ -4077,7 +4258,8 @@
       "dropped_findings": 0,
       "review_flags": [],
       "checks": [],
-      "excerpt_chars": null
+      "excerpt_chars": null,
+      "screened_out": []
      },
      {
       "principle": "robust_quantification",
@@ -4148,7 +4330,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29959
+      "excerpt_chars": 29959,
+      "screened_out": []
      },
      {
       "principle": "no_double_counting",
@@ -4188,7 +4371,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29961
+      "excerpt_chars": 29961,
+      "screened_out": []
      },
      {
       "principle": "safeguards",
@@ -4262,7 +4446,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29976
+      "excerpt_chars": 29976,
+      "screened_out": []
      }
     ]
    },
@@ -4537,6 +4722,18 @@
       }
      ]
     },
+    "documents": [
+     {
+      "prefix": "",
+      "file_name": "VCS Joint PDMR_Renew Power_V02_29.01.19.pdf",
+      "role": "project_description"
+     },
+     {
+      "prefix": "x1-",
+      "file_name": "FVR-TQC 0519_ReNew Power-Val-Ver_08.02.2019.pdf",
+      "role": "validation_report"
+     }
+    ],
     "method": {
      "report_schema": "report-v2",
      "question_set_version": "qs-v2-checklist",
@@ -4619,7 +4816,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29985
+      "excerpt_chars": 29985,
+      "screened_out": []
      },
      {
       "principle": "permanence",
@@ -4629,7 +4827,8 @@
       "dropped_findings": 0,
       "review_flags": [],
       "checks": [],
-      "excerpt_chars": null
+      "excerpt_chars": null,
+      "screened_out": []
      },
      {
       "principle": "robust_quantification",
@@ -4694,7 +4893,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29988
+      "excerpt_chars": 29988,
+      "screened_out": []
      },
      {
       "principle": "no_double_counting",
@@ -4764,7 +4964,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29968
+      "excerpt_chars": 29968,
+      "screened_out": []
      },
      {
       "principle": "safeguards",
@@ -4834,7 +5035,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29195
+      "excerpt_chars": 29195,
+      "screened_out": []
      }
     ]
    },
@@ -4946,6 +5148,28 @@
       }
      ]
     },
+    "documents": [
+     {
+      "prefix": "",
+      "file_name": "VCS 4150 ReQ PD v6.0 11082025_clean.pdf",
+      "role": "project_description"
+     },
+     {
+      "prefix": "x1-",
+      "file_name": "JPDMR_4150_v6_clean.pdf",
+      "role": "monitoring_report"
+     },
+     {
+      "prefix": "x2-",
+      "file_name": "VCS.VAL.23.33_DelAgua_FVR_15122023_Clean.pdf",
+      "role": "validation_report"
+     },
+     {
+      "prefix": "x3-",
+      "file_name": "VCS MR 4150 01Mar2023-29Feb2024 _04102024_clean.pdf",
+      "role": "monitoring_report"
+     }
+    ],
     "method": {
      "report_schema": "report-v2",
      "question_set_version": "qs-v2-checklist",
@@ -5025,7 +5249,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29983
+      "excerpt_chars": 29983,
+      "screened_out": []
      },
      {
       "principle": "permanence",
@@ -5035,7 +5260,8 @@
       "dropped_findings": 0,
       "review_flags": [],
       "checks": [],
-      "excerpt_chars": null
+      "excerpt_chars": null,
+      "screened_out": []
      },
      {
       "principle": "robust_quantification",
@@ -5125,7 +5351,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29979
+      "excerpt_chars": 29979,
+      "screened_out": []
      },
      {
       "principle": "no_double_counting",
@@ -5190,7 +5417,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29994
+      "excerpt_chars": 29994,
+      "screened_out": []
      },
      {
       "principle": "safeguards",
@@ -5257,7 +5485,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29998
+      "excerpt_chars": 29998,
+      "screened_out": []
      }
     ]
    },
@@ -5367,6 +5596,13 @@
      "sha256": "5c879cd740a01ed857dbd050d40df237c7eb5168fffe173e0e34889190368f7c",
      "pages": 75
     },
+    "documents": [
+     {
+      "prefix": "",
+      "file_name": "VCS Joint PD  MR_Mytrah_V03_20122017_Clean.pdf",
+      "role": "project_description"
+     }
+    ],
     "method": {
      "report_schema": "report-v2",
      "question_set_version": "qs-v2-checklist",
@@ -5469,7 +5705,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29993
+      "excerpt_chars": 29993,
+      "screened_out": []
      },
      {
       "principle": "permanence",
@@ -5479,7 +5716,8 @@
       "dropped_findings": 0,
       "review_flags": [],
       "checks": [],
-      "excerpt_chars": null
+      "excerpt_chars": null,
+      "screened_out": []
      },
      {
       "principle": "robust_quantification",
@@ -5540,7 +5778,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 29991
+      "excerpt_chars": 29991,
+      "screened_out": []
      },
      {
       "principle": "no_double_counting",
@@ -5584,7 +5823,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 20153
+      "excerpt_chars": 20153,
+      "screened_out": []
      },
      {
       "principle": "safeguards",
@@ -5643,7 +5883,8 @@
         "dropped": null
        }
       ],
-      "excerpt_chars": 13492
+      "excerpt_chars": 13492,
+      "screened_out": []
      }
     ]
    },

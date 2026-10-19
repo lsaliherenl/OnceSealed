@@ -2,18 +2,13 @@
  * Browser-side reads of the RetirementRegistry on Sepolia, and the same hashing the Python code uses
  * (core/privacy/identity.py, commitment.py, receipt.py), so a receipt can be checked without our server.
  */
-import {
-  createPublicClient,
-  encodeAbiParameters,
-  fallback,
-  http,
-  keccak256,
-  toBytes,
-  type Hex,
-} from "viem";
+import { createPublicClient, fallback, http, type Hex } from "viem";
 import { sepolia } from "viem/chains";
 import { AUDIT_FROM_CHAIN, NETWORK, type AuditStatus } from "@/lib/data";
+import { receiptCommitment, textId } from "@/lib/hashing";
 import { registryAbi } from "@/lib/registryAbi";
+
+export { buyerId, commitment, isValidLei, reportHash, textId } from "@/lib/hashing";
 
 const RPC_URLS = [
   process.env.NEXT_PUBLIC_SEPOLIA_RPC_URL,
@@ -27,28 +22,6 @@ export const client = createPublicClient({
 });
 
 const contract = { address: NETWORK.contract, abi: registryAbi } as const;
-
-/** Same as Web3.keccak(text=...) in core/privacy/identity.py. */
-export const textId = (s: string): Hex => keccak256(toBytes(s));
-export const buyerId = (lei: string): Hex => textId(`LEI:${lei.trim().toUpperCase()}`);
-
-/** keccak256(abi.encode(buyerId, salt, batchId, start, end)), as `commitmentOf` in the contract. */
-export function commitment(buyer: Hex, salt: Hex, batchId: Hex, start: number, end: number): Hex {
-  return keccak256(
-    encodeAbiParameters(
-      [{ type: "bytes32" }, { type: "bytes32" }, { type: "bytes32" }, { type: "uint64" }, { type: "uint64" }],
-      [buyer, salt, batchId, BigInt(start), BigInt(end)],
-    ),
-  );
-}
-
-/** ISO 17442: 20 alphanumerics, ISO 7064 mod 97-10 check digits. */
-export function isValidLei(lei: string) {
-  const s = lei.trim().toUpperCase();
-  if (!/^[A-Z0-9]{18}[0-9]{2}$/.test(s)) return false;
-  const digits = [...s].map((c) => (/[0-9]/.test(c) ? c : String(c.charCodeAt(0) - 55))).join("");
-  return BigInt(digits) % BigInt(97) === BigInt(1);
-}
 
 export type OnchainRetirement = {
   id: number;
@@ -159,15 +132,21 @@ export const RECEIPT_CHECKS: Record<string, string> = {
 async function checkLot(r: Receipt): Promise<LotCheck> {
   const out: LotCheck = { retirementId: Number(r.retirement_id), start: r.start, end: r.end, batchId: r.batch_id, checks: {}, audit: null };
   try {
+    // JSON.parse rounds integers above 2^53; demo serials are far below, but say so rather than check a rounded range
+    if (!Number.isSafeInteger(r.start) || !Number.isSafeInteger(r.end)) throw new Error("Serial numbers above 2^53 are not supported here.");
     out.checks.same_chain_and_contract =
       Number(r.chain_id) === NETWORK.chain_id && r.contract.toLowerCase() === NETWORK.contract.toLowerCase();
     const rec = await getRetirement(Number(r.retirement_id));
     out.audit = rec.audit;
     out.checks.range_matches_chain =
       r.batch_id.toLowerCase() === rec.batchId.toLowerCase() && r.start === rec.start && r.end === rec.end;
-    const leiOk = isValidLei(r.lei) && buyerId(r.lei) === r.buyer_id.toLowerCase();
-    out.checks.receipt_matches_commitment =
-      leiOk && commitment(r.buyer_id, r.salt, r.batch_id, r.start, r.end) === rec.buyerCommitment.toLowerCase();
+    let opens = false;
+    try {
+      opens = receiptCommitment(r) === rec.buyerCommitment.toLowerCase();
+    } catch {
+      // the receipt's LEI and buyer id do not match; the check fails
+    }
+    out.checks.receipt_matches_commitment = opens;
     out.checks.contract_verify_claim = await verifyClaim(Number(r.retirement_id), r.buyer_id, r.salt);
   } catch (e) {
     out.error = e instanceof Error ? e.message.split("\n")[0] : String(e);

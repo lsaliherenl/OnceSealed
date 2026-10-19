@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, Eyebrow, Tag } from "@/components/ui/card";
 import {
+  EVALUATION,
   ICVCM_LABEL,
   METHODOLOGY_TABLE_VERSION,
   PRINCIPLE_LABEL,
@@ -31,14 +32,19 @@ export default function ProjectsPage() {
           What the project documents say, and where they say it
         </h1>
         <p className="text-[17px] text-pretty text-muted-foreground">
-          AI-assisted reading of each project’s public Verra document against five ICVCM Core Carbon Principles. The
-          methodology status is a separate, deterministic lookup.
+          AI-assisted checks of each project’s public Verra documents against five ICVCM Core Carbon Principles: 18
+          yes/no questions, each “found” citing the paragraph it came from. The methodology status and the data checks
+          are separate, deterministic lookups.
         </p>
       </div>
 
       <SignalBanner>
         Findings summarize evidence located in the documents. They are not a rating, a certification or an ICVCM
-        assessment, and they can be wrong. Their accuracy has not yet been measured against human labels.
+        assessment, and they can be wrong
+        {EVALUATION
+          ? `. Tested on ${EVALUATION.questions} labelled questions (short excerpts), the checks were right ${Math.round(100 * EVALUATION.accuracy)}% of the time`
+          : ""}
+        .
       </SignalBanner>
 
       <Card className="flex flex-wrap items-center gap-x-10 gap-y-4 px-6 py-5">

@@ -102,12 +102,18 @@ export type Principle = {
   review_flags: string[];
   checks: CheckAnswer[];
   excerpt_chars: number | null;
+  /** Paragraphs removed before any model read the excerpt because they read as instructions to an AI. */
+  screened_out: { paragraph_id: string; page: number; matched: string }[];
 };
+
+/** A file the report read; paragraph ids from it start with `prefix` ("" for the project description). */
+export type SourceDocument = { prefix: string; file_name: string; role: string };
 
 export type Report = {
   hash: string;
   generated_at: string;
   document: { file_name: string; sha256: string; pages: number };
+  documents: SourceDocument[];
   method: {
     llm_model: string;
     second_opinion_model: string | null;
@@ -115,6 +121,7 @@ export type Report = {
     question_set_version: string;
     evidence_rule: string;
     excerpt_rule: string;
+    injection_screen: string;
     methodology_table_version: string;
     pdf_extractor: string;
   };
@@ -160,6 +167,15 @@ export const CHECK_TONE = {
   info: "neutral",
   not_available: "ghost",
 } as const satisfies Record<CheckStatus, string>;
+
+/** Singular names of the document roles, for a single cited file. */
+export const DOCUMENT_ROLE_ONE: Record<string, string> = {
+  project_description: "Project description",
+  validation_report: "Validation report",
+  monitoring_report: "Monitoring report",
+  verification_report: "Verification report",
+  supporting: "Supporting document",
+};
 
 export const DOCUMENT_ROLE: Record<string, string> = {
   project_description: "Project description",
@@ -227,7 +243,29 @@ export const EVALUATION = site.evaluation as unknown as {
     human_check: { annotator: string; units: number; agree: number } | null;
     source: string;
   } | null;
+  /** Label-free robustness tests (scripts/robustness_tests.py). */
+  robustness: {
+    screen: string;
+    source: string;
+    evidence_removed: RobustnessResult;
+    irrelevant: RobustnessResult;
+    inject_yes: Record<string, RobustnessResult>;
+    inject_no: RobustnessResult;
+  } | null;
 } | null;
+
+type RobustnessResult = {
+  questions: number;
+  right_before: number;
+  changed_by_test: number;
+  as_expected: number;
+  screen_catches_it?: boolean;
+};
+
+/** The file a cited paragraph comes from: extra files give their paragraph ids an "x<k>-" prefix. */
+export function sourceOf(report: Report, paragraphId: string) {
+  return report.documents.find((d) => d.prefix && paragraphId.startsWith(d.prefix)) ?? report.documents[0];
+}
 export const REPO_URL = "https://github.com/lsaliherenl/OnceSealed";
 
 export function getProject(id: string) {

@@ -32,8 +32,8 @@ const PILLARS = [
   {
     n: "03",
     title: "Evidence-backed",
-    lead: "Every AI finding quotes the source PDF.",
-    body: "Each finding carries a passage from the project’s public Verra document and its page number. A quote that can’t be matched in the document by code is dropped.",
+    lead: "Every AI finding cites the source PDF.",
+    body: "Each “found” check points to a paragraph of the project’s public Verra documents, shown with its page. A “found” without a cited paragraph is not counted, and a second model’s disagreement is marked for review.",
     icon: FileText,
     tile: "bg-primary-soft text-primary",
     links: [{ href: "/projects", label: "See project quality" }],
@@ -63,7 +63,7 @@ export default function OverviewPage() {
             </h1>
             <p className="max-w-[560px] text-lg leading-relaxed text-pretty text-muted-foreground">
               OnceSealed records each retirement on-chain as a serial range and a commitment hash. The buyer’s identity
-              stays encrypted for an accredited auditor, and every project-quality finding quotes the source document.
+              stays encrypted for an accredited auditor, and every project-quality finding cites the paragraph of the source document it came from.
             </p>
             <div className="flex flex-wrap gap-3">
               <TransitionLink href="/verify" className={buttonVariants({ variant: "primary" })}>

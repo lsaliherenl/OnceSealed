@@ -141,6 +141,7 @@ evidence-strength rating, which was never measured; the current version replaces
 | AI consistency, speed, cost (no labels needed) | On 177 yes/no questions over 48 excerpts from 11 projects, same answer in 3 runs: Jev 99.4%, LLM 96.0%, Turnike-JEV-4B 100% (both FP8 and BF16). Median time per excerpt: 0.8 s, 4.9 s, and 0.65 s for Turnike FP8 on a laptop RTX 4060 under WSL2 or 0.32 s for Turnike BF16 on a Colab L4 (both without its optional fast kernels; the API models include network time). Cost per 1,000 excerpts: $0.04, $0.79, $0 (local). FP8 and BF16 Turnike give the same yes/no answer on 176 of 177 questions (mean probability difference 0.014) | [`docs/ai_evaluation.md`](docs/ai_evaluation.md), `scripts/run_turnike.py` |
 | **AI accuracy** | Gold set: 177 yes/no questions labelled independently by a team member and by Claude (an AI annotator, not one of the evaluated models), both blind to the evaluated models' answers; Cohen's kappa 0.90 (human-AI agreement); the 12 disagreements were settled by the team member against the text. Accuracy (95% interval): **LLM 0.94 (0.90-0.97)**, **Jev 0.88 (0.83-0.92)**, **Turnike-JEV-4B 0.86 (0.80-0.90)**. The LLM is better than Jev (exact McNemar p = 0.013) and Turnike (p = 0.001); Jev and Turnike cannot be told apart here (p = 0.52). Jev's probabilities are the best calibrated (Brier 0.084 vs 0.220 for always guessing the base rate). Weakest: reporting a financial benchmark (A1) and community rights (S4); the set has almost no positives for additionality (4 of 44). The published reports ask these checks through the same module: 0.94 (0.89-0.96) on this set, with every "yes" citing a paragraph. **Excerpt size matters more than the model:** the reports therefore read 30,000 characters per principle instead of 2,500. There the checks still find 56 of the 58 known positives and add 61 findings the short excerpts missed; 46 of those were confirmed (75%, 63-84%) in a blind paragraph check against length-matched decoys (2 of 30 decoys judged evidence). That check was labelled by Claude; a team member re-labelled a random 20 blind and agreed on 18 of 19 (one marked unclear); see [`docs/citation_check.md`](docs/citation_check.md) | [`docs/ai_evaluation.md`](docs/ai_evaluation.md), [`data/eval/adjudication.json`](data/eval/adjudication.json) |
 | AI robustness (no labels needed) | Deleting the paragraphs an annotator cited turns 45 of 52 found answers to "no" (87%); unrelated text gets "no" on 177 of 177. A paragraph telling the model to answer "yes" flipped 0 of 114 right answers, in an explicit and in a softer wording; one telling it to answer "no" flipped 37 of 52 (71%). Instruction-like paragraphs are therefore screened out of every excerpt before a model sees them: the screen catches both explicit injections (0 flips) and flags 0 of 43,396 real paragraphs, but it is a pattern match and missed the softer wording | [`docs/ai_robustness.md`](docs/ai_robustness.md), [`injection.py`](core/ai/injection.py) |
+| Browser and Python hash the same way | The verification and report pages hash in the browser; [`parity.test.ts`](web/tests/parity.test.ts) checks that code against the vectors Python writes ([`vectors.json`](tests/vectors.json), also checked by Foundry): ids, commitments up to the uint64 maximum, LEI validation, the offline receipt check and canonical JSON. It also re-hashes all 11 published reports and gets the hashes anchored on Sepolia. The test found and fixed one difference: the browser accepted a receipt with a lower-case LEI that Python rejects | `cd web && npm test` |
 | Security | Slither: no findings beyond two documented false positives and one informational note; admin handover is two-step with a two-day delay; 13 threats analysed | [threat model](docs/threat_model.md) |
 
 Consistency is not accuracy: a model can repeat the same wrong answer. The accuracy figures measure whether a model
@@ -204,7 +205,7 @@ python -m venv .venv
 .venv/Scripts/activate          # Windows; use `source .venv/bin/activate` on macOS/Linux
 python -m pip install -r requirements.txt
 python -m pip install -e . --no-deps
-python -m pytest -q             # 69 tests
+python -m pytest -q             # 106 tests
 python scripts/demo_e2e.py      # full story on a local chain: lots retired, overlap and partial lot rejected,
                                 # auditor attests, receipt verified, forged receipts fail
 (cd contracts && forge test)    # 46 contract tests
@@ -223,11 +224,13 @@ python scripts/deploy.py --network sepolia                 # deploy, then script
 ### Web app
 
 Requirements: Node.js 20.9+ (tested on 24). The project and verification pages need nothing else: the reports are
-built into the pages from `reports/` (`python scripts/export_web_data.py` refreshes `web/src/data/site.json`), and the
-verification page reads the Sepolia contract from the browser through a public RPC and checks receipts there.
+built into the pages from `reports/` (`python scripts/export_web_data.py` refreshes `web/src/data/site.json` and copies
+the published reports to `web/public/reports/`). Each project page downloads its published report, hashes it in the
+browser and compares the hash with the version anchored on Sepolia; the verification page reads the contract the same
+way, through a public RPC, and checks receipts there.
 
 ```bash
-cd web && npm ci && npm run build && npm start       # http://localhost:3000
+cd web && npm ci && npm test && npm run build && npm start       # http://localhost:3000
 ```
 
 The retire and audit screens call the API, which holds the demo operator and auditor keys

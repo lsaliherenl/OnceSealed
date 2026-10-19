@@ -1,15 +1,16 @@
 """Export the public data the web UI renders into web/src/data/site.json.
 
 The project pages are static: they show the published reports in reports/, the methodology table,
-the simulated issuance batches and the Sepolia deployment, all read here at build time. Each report
-carries the hash the contract should hold (`hash_json` of the published file), so the browser can
-compare it with `latestReport` on-chain without trusting this file. Run after a report, data check, batch or
+the simulated issuance batches and the Sepolia deployment, all read here at build time. The published report
+files are copied unchanged to web/public/reports/, so the browser can hash the file itself (src/lib/hashing.ts)
+and compare it with `latestReport` on-chain without trusting this file. Run after a report, data check, batch or
 deployment changes:
 
     python scripts/export_web_data.py
 """
 
 import json
+import shutil
 from typing import Any
 
 from core.config import PROJECT_ROOT
@@ -17,6 +18,7 @@ from core.data.batches import load_batches
 from core.hashing import hash_json
 
 OUT = PROJECT_ROOT / "web" / "src" / "data" / "site.json"
+PUBLIC_REPORTS = PROJECT_ROOT / "web" / "public" / "reports"
 SEPOLIA = 11155111
 EXPLORER = "https://sepolia.etherscan.io"
 
@@ -40,7 +42,32 @@ def _principle(p: dict[str, Any]) -> dict[str, Any]:
         "checks": [{k: c[k] for k in ("id", "question", "answer", "evidence", "second_opinion_p_yes", "needs_review",
                                       "dropped")} for c in p.get("checks", [])],
         "excerpt_chars": (p.get("excerpt") or {}).get("chars"),
+        "screened_out": p.get("screened_out", []),
     }
+
+
+def _documents(doc: dict[str, Any], manifest: dict[str, Any]) -> list[dict[str, Any]]:
+    """The files a report read, in extraction order: paragraph ids of extra file k start with "x<k>-".
+    Roles come from the manifest (samples/manifest.json)."""
+    roles = {f["file_name"]: f.get("role", "supporting") for f in manifest.get("extra_files", [])}
+    main = {"prefix": "", "file_name": doc["file_name"], "role": "project_description"}
+    return [main] + [{"prefix": f"x{k}-", "file_name": f["file_name"], "role": roles.get(f["file_name"], "supporting")}
+                     for k, f in enumerate(doc.get("extra_files", []), start=1)]
+
+
+def _robustness() -> dict[str, Any] | None:
+    """Label-free robustness tests of the checklist (scripts/robustness_tests.py)."""
+    path = PROJECT_ROOT / "data" / "eval" / "robustness.json"
+    if not path.exists():
+        return None
+    r = json.loads(path.read_text(encoding="utf-8"))
+    by = {(e["test"], e["variant"]): e for e in r["summary"]}
+    pick = lambda e: {k: e[k] for k in ("questions", "right_before", "changed_by_test", "as_expected")
+                      if k in e} | ({"screen_catches_it": e["screen_catches_it"]} if "screen_catches_it" in e else {})
+    return {"screen": r["screen"], "source": "docs/ai_robustness.md",
+            "evidence_removed": pick(by[("evidence_removed", "-")]), "irrelevant": pick(by[("irrelevant", "-")]),
+            "inject_yes": {v: pick(by[("inject_yes", v)]) for t, v in by if t == "inject_yes"},
+            "inject_no": pick(by[("inject_no", "explicit")])}
 
 
 def _evaluation() -> dict[str, Any] | None:
@@ -59,7 +86,8 @@ def _evaluation() -> dict[str, Any] | None:
             "per_question": model["per_question"], "source": "docs/ai_evaluation.md",
             "long_excerpt": cc and {"questions": cc["questions"], "confirmed": cc["confirmed"],
                                     "confirmed_ci95": cc["confirmed_ci95"], "judged_by": cc["kind"],
-                                    "human_check": cc.get("human_check"), "source": "docs/citation_check.md"}}
+                                    "human_check": cc.get("human_check"), "source": "docs/citation_check.md"},
+            "robustness": _robustness()}
 
 
 def main() -> None:
@@ -76,6 +104,8 @@ def main() -> None:
                 {"version": tx["version"], "tx": tx["tx"], "block": tx["block"], "report_hash": tx["report_hash"]})
 
     projects = []
+    shutil.rmtree(PUBLIC_REPORTS, ignore_errors=True)
+    PUBLIC_REPORTS.mkdir(parents=True)
     for doc in _read("samples/manifest.json")["documents"]:
         pid = doc["project_id"]
         report_path = PROJECT_ROOT / "reports" / f"{pid}.json"
@@ -103,9 +133,11 @@ def main() -> None:
                 "results": [{k: c[k] for k in ("id", "title", "status", "summary")} for c in checks["checks"]],
             }
         if report:
+            shutil.copyfile(report_path, PUBLIC_REPORTS / report_path.name)  # byte for byte: the browser hashes it
             project["report"] = {
                 "hash": hash_json(report), "generated_at": report["generated_at"],
-                "document": report["document"], "method": report["method"], "method_hash": report["method_hash"],
+                "document": report["document"], "documents": _documents(report["document"], doc),
+                "method": report["method"], "method_hash": report["method_hash"],
                 "methodology_status": report["methodology_status"], "overall": report["overall"]["score"],
                 "disclaimer": report["disclaimer"], "principles": [_principle(p) for p in report["principles"]],
             }

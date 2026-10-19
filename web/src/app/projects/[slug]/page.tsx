@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, KeyValue } from "@/components/ui/card";
 import {
   CHECK_NAME,
+  DOCUMENT_ROLE_ONE,
   EVALUATION,
   PRINCIPLE_LABEL,
   PRINCIPLE_NAME,
@@ -18,7 +19,9 @@ import {
   PRINCIPLE_TONE,
   PROJECTS,
   REPO_URL,
+  type Report,
   getProject,
+  sourceOf,
 } from "@/lib/data";
 import { staggerStyle } from "@/lib/utils";
 
@@ -36,7 +39,22 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 function flagText(flag: string) {
   if (flag.startsWith("models_disagree:")) return `${flag.split(":")[1]}: the second model disagrees; needs a human look.`;
   if (flag === "second_opinion_failed") return "The second model could not be reached; no cross-check for this principle.";
+  if (flag === "instruction_like_text")
+    return "Paragraphs that read as instructions to an AI were removed before any model read the excerpt; a person should read them.";
   return flag;
+}
+
+/** "Project description + 5 monitoring reports + validation report" */
+function documentsRead(report: Report) {
+  const counts = new Map<string, number>();
+  for (const d of report.documents) counts.set(d.role, (counts.get(d.role) ?? 0) + 1);
+  return [...counts]
+    .map(([role, n]) => {
+      const one = DOCUMENT_ROLE_ONE[role] ?? role;
+      return n === 1 ? one : `${n} ${one.toLowerCase()}s`;
+    })
+    .map((t, i) => (i === 0 ? t : t.charAt(0).toLowerCase() + t.slice(1)))
+    .join(" + ");
 }
 
 function pct(x: number) {
@@ -85,8 +103,8 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
           <Badge>{project.id}</Badge>
         </div>
         <p className="text-muted-foreground">
-          {project.country} · {project.category} · Source: {project.doc_type ?? "project document"},{" "}
-          {report.document.pages} pages ·{" "}
+          {project.country} · {project.category} · Read by the checks: {documentsRead(report)},{" "}
+          {report.document.pages.toLocaleString("en-US")} pages ·{" "}
           <a href={project.registry_url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">
             Verra registry page <ExternalLink aria-hidden className="size-3.5" />
           </a>
@@ -94,7 +112,7 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
       </div>
 
       <SignalBanner>
-        These findings summarize what the project document says and where. They are not a rating, a certification or
+        These findings summarize what the project documents say and where. They are not a rating, a certification or
         an ICVCM assessment, and they can be wrong.
       </SignalBanner>
 
@@ -136,7 +154,7 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
             <dt>Report hash</dt>
             <dd className="flex flex-col items-start gap-1.5">
               <HashChip value={report.hash} label="report hash" />
-              <AnchorCheck projectId={project.id} reportHash={report.hash} />
+              <AnchorCheck projectId={project.id} pageHash={report.hash} />
             </dd>
             <dt>Method hash</dt>
             <dd className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
@@ -166,17 +184,26 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
               )}
               <span className="block text-[13px] text-muted-foreground">Third-party models, not developed by this team.</span>
             </dd>
-            <dt>Document</dt>
+            <dt>Safeguards</dt>
+            <dd className="text-[13px] text-muted-foreground">
+              A “found” must cite a paragraph of the excerpt ({report.method.evidence_rule}); paragraphs that read as
+              instructions to an AI are removed first ({report.method.injection_screen}).
+            </dd>
+            <dt>Documents</dt>
             <dd className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
               <HashChip value={report.document.sha256} label="document SHA-256" />
-              <span className="truncate text-[13px] text-muted-foreground" title={report.document.file_name}>
-                SHA-256 of the PDF (not redistributed)
+              <span className="text-[13px] text-muted-foreground">
+                SHA-256 over the {report.documents.length === 1 ? "PDF" : `${report.documents.length} PDFs`} read (not
+                redistributed; each file’s hash is in the report)
               </span>
             </dd>
             <dt>Published file</dt>
-            <dd>
-              <a href={`${REPO_URL}/blob/main/reports/${project.id}.json`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[14px]">
-                reports/{project.id}.json <ExternalLink aria-hidden className="size-3.5" />
+            <dd className="flex flex-wrap items-center gap-x-4 gap-y-1">
+              <a href={`/reports/${project.id}.json`} download className="text-[14px]">
+                Download reports/{project.id}.json
+              </a>
+              <a href={`${REPO_URL}/blob/main/reports/${project.id}.json`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[13px]">
+                in the repository <ExternalLink aria-hidden className="size-3.5" />
               </a>
             </dd>
           </KeyValue>
@@ -226,6 +253,24 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
                 .
               </p>
             )}
+            {EVALUATION?.robustness && (
+              <p className="text-[13px] text-muted-foreground">
+                Robustness: deleting the paragraphs that held the evidence turned{" "}
+                {pct(EVALUATION.robustness.evidence_removed.changed_by_test / EVALUATION.robustness.evidence_removed.right_before)}{" "}
+                of “found” answers to “not found”, and unrelated text got “not found” on{" "}
+                {EVALUATION.robustness.irrelevant.as_expected} of {EVALUATION.robustness.irrelevant.questions} questions. A
+                paragraph planted in the document telling the model to answer “yes” changed{" "}
+                {Object.values(EVALUATION.robustness.inject_yes).reduce((n, r) => n + r.changed_by_test, 0)} answers; one
+                telling it to answer “no” changed{" "}
+                {pct(EVALUATION.robustness.inject_no.changed_by_test / EVALUATION.robustness.inject_no.right_before)}, which
+                is why such paragraphs are screened out before a model reads the excerpt (the screen is a pattern match and
+                can miss new wordings).{" "}
+                <a href={`${REPO_URL}/blob/main/${EVALUATION.robustness.source}`} target="_blank" rel="noopener noreferrer">
+                  Robustness tests
+                </a>
+                .
+              </p>
+            )}
           </div>
           <Badge tone="warn">Signal, not verdict</Badge>
         </div>
@@ -262,6 +307,21 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
                     {flagText(f)}
                   </p>
                 ))}
+                {p.screened_out.length > 0 && (
+                  <ul className="flex flex-col gap-1 text-[12px] text-muted-foreground">
+                    {p.screened_out.map((x) => (
+                      <li key={x.paragraph_id}>
+                        Removed: page {x.page} · {x.paragraph_id} (“{x.matched}”)
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {p.excerpt_chars != null && (
+                  <p className="text-[12px] text-muted-foreground">
+                    Excerpt read: {p.excerpt_chars.toLocaleString("en-US")} characters chosen by keyword, not the whole
+                    document
+                  </p>
+                )}
               </div>
               <div className="flex min-w-0 flex-[999_1_480px] flex-col gap-3">
                 <p className="text-pretty">{p.rationale}</p>
@@ -282,8 +342,18 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
                               <span className="font-mono text-[12px] text-muted-foreground">{c.id}</span> {CHECK_NAME[c.id] ?? c.question}
                             </span>
                             {c.needs_review && (
-                              <Badge tone="warn" className="gap-1">
+                              <Badge
+                                tone="warn"
+                                className="gap-1"
+                                title={c.second_opinion_p_yes == null ? undefined : `Second model: ${pct(c.second_opinion_p_yes)} likely found`}
+                              >
                                 <TriangleAlert aria-hidden className="size-3" /> Needs review
+                                {c.second_opinion_p_yes != null && (
+                                  <span className="font-normal">
+                                    · second model {c.second_opinion_p_yes >= 0.5 ? "says found" : "says not found"} (
+                                    {pct(c.second_opinion_p_yes)})
+                                  </span>
+                                )}
                               </Badge>
                             )}
                             {measured && (
@@ -295,14 +365,23 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
                               </span>
                             )}
                           </div>
-                          {c.evidence.map((e) => (
-                            <blockquote key={e.paragraph_id} className="m-0 flex flex-col gap-1.5 border-l-2 border-ok/60 pl-3">
-                              <p className="line-clamp-4 text-[14px] leading-relaxed">“{e.text}”</p>
-                              <footer className="text-[12px] text-muted-foreground">
-                                Page {e.page} · paragraph {e.paragraph_id}
-                              </footer>
-                            </blockquote>
-                          ))}
+                          {c.evidence.map((e) => {
+                            const src = sourceOf(report, e.paragraph_id);
+                            return (
+                              <blockquote key={e.paragraph_id} className="m-0 flex flex-col gap-1.5 border-l-2 border-ok/60 pl-3">
+                                <p className="line-clamp-4 text-[14px] leading-relaxed">“{e.text}”</p>
+                                <footer className="text-[12px] text-muted-foreground">
+                                  <span title={src.file_name}>{DOCUMENT_ROLE_ONE[src.role] ?? src.role}</span>, page {e.page} ·
+                                  paragraph {e.paragraph_id} · text as extracted from the PDF
+                                </footer>
+                              </blockquote>
+                            );
+                          })}
+                          {c.dropped && (
+                            <p className="text-[12px] text-muted-foreground">
+                              The model answered “found” but cited no paragraph of the excerpt, so it counts as not found.
+                            </p>
+                          )}
                         </li>
                       );
                     })}

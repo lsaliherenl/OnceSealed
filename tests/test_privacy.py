@@ -63,6 +63,35 @@ def test_vector_commitments(v):
     assert to_hex(got) == v["commitment"]
 
 
+# --- shared with the browser (web/tests/parity.test.ts) -----------------------------------------
+
+@pytest.mark.parametrize("v", VECTORS["lei_checks"], ids=lambda v: repr(v["lei"]))
+def test_vector_lei_checks(v):
+    assert is_valid_lei(v["lei"]) is v["valid"]
+
+
+@pytest.mark.parametrize("v", VECTORS["buyer_ids"], ids=lambda v: repr(v["input"]))
+def test_vector_buyer_id_normalises_input(v):
+    assert to_hex(buyer_id(v["input"])) == v["buyer_id"]
+
+
+@pytest.mark.parametrize("v", VECTORS["receipts"], ids=lambda v: v["name"])
+def test_vector_receipts(v):
+    from core.privacy.receipt import receipt_commitment
+    if v["error"]:
+        with pytest.raises(ValueError):
+            receipt_commitment(v["receipt"])
+    else:
+        assert receipt_commitment(v["receipt"]) == v["commitment"]
+
+
+@pytest.mark.parametrize("v", VECTORS["canonical_json"], ids=lambda v: v["hash"][:10])
+def test_vector_canonical_json(v):
+    from core.hashing import canonical_json, hash_json
+    obj = json.loads(v["text"])
+    assert canonical_json(obj).decode("utf-8") == v["canonical"] and hash_json(obj) == v["hash"]
+
+
 # --- commitment ---------------------------------------------------------------------------------
 
 def test_commitment_binds_every_field():
