@@ -143,12 +143,18 @@
      "tx": "0x7f15da49d6deb0cf028a14d4002da9028293860d13cbd9b098cbb611de0cb09e",
      "block": 11949542,
      "report_hash": "0x2f1e931d8fd2e6b48983c1c32817d09e042eeb6658727c3b66b6dd4c0803db97"
+    },
+    {
+     "version": 3,
+     "tx": "0x95e3e206118cea1e4c21543637e5fd2318c3fb1a2e8c0d29797b2f6768d966d7",
+     "block": 11949773,
+     "report_hash": "0x852dd24980d0da8a9da5d7c059268e7b71bfdb39994b8e17a890f6d25a752c88"
     }
    ],
    "batches": [],
    "report": {
-    "hash": "0x2f1e931d8fd2e6b48983c1c32817d09e042eeb6658727c3b66b6dd4c0803db97",
-    "generated_at": "2026-10-19T16:54:53+00:00",
+    "hash": "0x852dd24980d0da8a9da5d7c059268e7b71bfdb39994b8e17a890f6d25a752c88",
+    "generated_at": "2026-10-19T17:47:21+00:00",
     "document": {
      "file_name": "VCS-Joint-Project-Description-Monitoring-Report-Muanyuan FSW-version03-clean.pdf",
      "sha256": "29955d5d170062c4913c6e3d7c570d0e56b7c933c5a861312604a09770b6e3e3",
@@ -160,12 +166,13 @@
      "prompt_version": "checklist-v1",
      "evidence_rule": "yes-cites-excerpt-paragraph-v2",
      "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+     "injection_screen": "injection-screen-v1",
      "llm_model": "deepseek/deepseek-v4.1-flash",
      "second_opinion_model": "typesafe/jev-1.13",
      "methodology_table_version": "2026-10-15",
      "pdf_extractor": "pymupdf 1.28.2"
     },
-    "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+    "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
     "methodology_status": {
      "code": "ACM0010",
      "version": "8",
@@ -238,7 +245,7 @@
         "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.35,
+        "second_opinion_p_yes": 0.38,
         "needs_review": false,
         "dropped": null
        }
@@ -329,7 +336,7 @@
           "text": "Table 6-9 the calculation result of 𝐿𝐸𝐵𝐿,𝑁2𝑂,𝑦, 𝐿𝐸𝑃𝐽,𝑁2𝑂,𝑦, 𝐿𝐸𝐵𝐿,𝐶𝐻4,𝑦 𝑎𝑛𝑑 𝐿𝐸𝑃𝐽,𝐶𝐻4,𝑦"
          }
         ],
-        "second_opinion_p_yes": 0.94,
+        "second_opinion_p_yes": 0.95,
         "needs_review": false,
         "dropped": null
        },
@@ -475,7 +482,7 @@
           "text": "The project has neither been registered nor seeking registration under any other GHG programs. \nThe project is seeking registration only in VCS program."
          }
         ],
-        "second_opinion_p_yes": 0.81,
+        "second_opinion_p_yes": 0.79,
         "needs_review": false,
         "dropped": null
        },
@@ -499,7 +506,7 @@
         "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.13,
+        "second_opinion_p_yes": 0.12,
         "needs_review": false,
         "dropped": null
        }
@@ -525,7 +532,7 @@
           "text": "Local stakeholder consultation was conducted by project owner before the construction of the \nproject and during the monitoring period through the means of questionnaire. \nLocal stakeholder consultation before the construction of the project \nIn order to solicit the opinions and attitudes of various stakeholders on the construction of this \nproject, the project owner issued a stakeholder survey opinion form at each project site from 04-\nNovember-2019 to 09-November-2019 investigate the opinions of local residents on the \nconstruction of this project. Since the farm has been in operation for a long time, local \nstakeholders or farmers have a better understanding of the situation of the farm. Therefore, for \nthe stakeholder investigation of the project which can bring economic and environment benefits \nto the local people, the Local stakeholders or farmers is more willing to participate in the survey. \nThe questionnaire mainly contains the following content: \n1. Do you know the purpose of this project? \n2. What do you think is the impact of the implementation of this project on the local environment? \n3. What impact do you think the implementation of this project will have on your life? \n4. Do you think the implementation of this project is in harmony with the local ecosystem? \n5. What impact do you think the implementation of this project will have on the social economy? \n6. What effect do you think the implementation of this project will have on local sustainable \ndevelopment? \n7. What effect do you think the implementation of this project will have on local employment? \n8. Do you think other regions should also vigorously promote this type of technology? \n9. Do you support the construction and implementation of this project? \n10. Do you have any suggestions and comments on this project? \nA total of 180 questionnaires were issued for this project, 20 copies for each project site, and \n180 copies were collected. The basic information about the survey respondents is listed in Table \n2-1.  \nTable 2-1 Structure of stakeholder survey"
          }
         ],
-        "second_opinion_p_yes": 0.98,
+        "second_opinion_p_yes": 0.97,
         "needs_review": false,
         "dropped": null
        },
@@ -564,7 +571,7 @@
         "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.27,
+        "second_opinion_p_yes": 0.25,
         "needs_review": false,
         "dropped": null
        }
@@ -655,6 +662,12 @@
      "tx": "0x47842022fc5fd37d050b7ba1577b5704c64e42e536803ed25e7b5f48e6988fe7",
      "block": 11949529,
      "report_hash": "0x9678358c60c8c5ebc196ec2030adc7e91b900a8f05cee12d62bbad80d57e67ef"
+    },
+    {
+     "version": 4,
+     "tx": "0xd019b65590030d14566275cabf477618a7e73f9364757965c800f25171fa2ef3",
+     "block": 11949750,
+     "report_hash": "0xc867f34d4acb2ae7b36a3a2ebd4f835c76cec542d38176824ebb0278731fa0c8"
     }
    ],
    "batches": [
@@ -720,8 +733,8 @@
     }
    ],
    "report": {
-    "hash": "0x9678358c60c8c5ebc196ec2030adc7e91b900a8f05cee12d62bbad80d57e67ef",
-    "generated_at": "2026-10-19T16:47:06+00:00",
+    "hash": "0xc867f34d4acb2ae7b36a3a2ebd4f835c76cec542d38176824ebb0278731fa0c8",
+    "generated_at": "2026-10-19T17:46:56+00:00",
     "document": {
      "file_name": "CCB VCS PD 1477_30.11.2025_v4.pdf",
      "sha256": "f2c4ea5cb1f617445cd4583a0835f21f3c853139bb9aff3df9f53e45c021b03f",
@@ -733,12 +746,13 @@
      "prompt_version": "checklist-v1",
      "evidence_rule": "yes-cites-excerpt-paragraph-v2",
      "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+     "injection_screen": "injection-screen-v1",
      "llm_model": "deepseek/deepseek-v4.1-flash",
      "second_opinion_model": "typesafe/jev-1.13",
      "methodology_table_version": "2026-10-15",
      "pdf_extractor": "pymupdf 1.28.2"
     },
-    "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+    "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
     "methodology_status": {
      "code": "VM0007",
      "version": "1.5",
@@ -805,7 +819,7 @@
         "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.37,
+        "second_opinion_p_yes": 0.38,
         "needs_review": false,
         "dropped": null
        }
@@ -982,7 +996,7 @@
           "text": "This section explains how the ex-ante estimations of expected project emissions are calculated. \nThe emissions will be recalculated for each monitoring period, reflecting any changes in the \nproject area during that period (deforestation, forest degradation, fires, change in drainage \nstatus or natural disturbances). For these re-calculations, the project will use the same strata \nand emission factors as those used below for the ex-ante calculations. These strata as well as \nany changes in the project area will be monitored for each monitoring period using a combination \nof field and remote sensing data, as explained in the monitoring plan, and results will be reported \nin each monitoring report."
          }
         ],
-        "second_opinion_p_yes": 0.96,
+        "second_opinion_p_yes": 0.97,
         "needs_review": false,
         "dropped": null
        }
@@ -1002,7 +1016,7 @@
         "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.34,
+        "second_opinion_p_yes": 0.38,
         "needs_review": false,
         "dropped": null
        },
@@ -1082,7 +1096,7 @@
           "text": "In our commitment to sustainable community engagement and the application of the \nprecautionary principle, we have established measures to mitigate potential negative impacts on \ncommunity well-being, particularly for vulnerable groups such as women, girls, children, and other \nmarginalised populations, as well as for the maintenance and enhancement of high conservation \nvalue (HCV) attributes related to community well-being.  \n \nCurrent and Future Measures for Community Well-being and Environmental Protection  \n \nParticipatory Planning and Consultation \nWe have implemented a participatory planning process, central to which are ongoing \nconsultations with community members. This approach facilitates the early identification and \ndiscussion of potential negative impacts, such as air and noise pollution, water discharges, waste \ngeneration, and the release of hazardous materials. By directly involving community members, \nespecially representatives of vulnerable groups, we ensure that our project design addresses \ntheir unique needs and concerns (UNDP, 2018; IFC Performance Standard 1). This collaborative \napproach promotes shared ownership of both the project and the outcomes, fostering trust and \ntransparency (WHO, 2020). \n \nProactive Risk Assessment and Precautionary Planning \nIn alignment with the precautionary principle (Rio Declaration, 1992), we conduct risk \nassessments that consider both scientifically substantiated risks and potential risks for which \nconclusive evidence may be lacking. This forward-looking strategy prioritises preventive action, \nensuring that we address potential threats to community well-being before they materialise \n(IPBES, 2019). This includes designing strategies to minimise emissions, control waste, and limit \nnoise, as well as implementing spill prevention protocols to protect water quality and prevent \ncontamination (IFC Performance Standard 4). \n \nMonitoring and Responsive Adaptation \nBased on our ongoing monitoring and insights gathered through team interactions with the \ncommunity, no significant adverse effects have been recorded to date. However, we remain \nvigilant. Monitoring systems are in place to identify early signs of potential impacts on community \nwell-being or HCV attributes, allowing us to adapt our strategies as needed (HCV Resource \nNetwork). By prioritising community feedback, we ensure that adjustments are responsive to \nemerging issues or unforeseen challenges (IFC Performance Standard 1). \n \nSafety and Inclusivity Measures for Vulnerable Groups \nSpecific measures to safeguard women, girls, children, and other marginalised groups are \nembedded in our project design (UNDP, 2018). For example, we implement safe worksite \nprotocols (ILO, 1992), maintain accessible communication channels for reporting concerns, and \npromote training programmes on environmental safety and personal security (WHO, 2020). These \nproactive actions provide a secure environment and support community empowerment by \nequipping individuals with knowledge and resources to contribute to and benefit from the project \nsustainably. \n \nAlignment with the Precautionary Principle \nThese measures exemplify our commitment to the precautionary principle, where we prioritise the \nprevention of harm even in the absence of complete scientific certainty (Rio Declaration, 1992). \nOur approach reflects the belief that safeguarding community well-being and protecting \nenvironmental attributes are foundational to achieving sustainable, long-term outcomes (IPBES, \n2019). This forward-thinking stance ensures that the health, safety, and rights of all community \nmembers remain central to our operational philosophy."
          }
         ],
-        "second_opinion_p_yes": 0.51,
+        "second_opinion_p_yes": 0.54,
         "needs_review": false,
         "dropped": null
        },
@@ -1182,12 +1196,18 @@
      "tx": "0x3d4787fa48475e39b037de79f632d2e7d5c14c0eb2db2651b5c3633b1805a6cb",
      "block": 11949546,
      "report_hash": "0xadce03156c8db986537e8d2459a4fd521536682bfe7c191096fcad6751029411"
+    },
+    {
+     "version": 3,
+     "tx": "0x9db31fa4b239a8fa80ea5fc3f8848147c2d551aaefe9dad7e0afd18635f1d401",
+     "block": 11949777,
+     "report_hash": "0xeb1baaf7a055757d9462b4c767e01d899f5a3fed435dc4b3e64860a104dd914e"
     }
    ],
    "batches": [],
    "report": {
-    "hash": "0xadce03156c8db986537e8d2459a4fd521536682bfe7c191096fcad6751029411",
-    "generated_at": "2026-10-19T16:53:52+00:00",
+    "hash": "0xeb1baaf7a055757d9462b4c767e01d899f5a3fed435dc4b3e64860a104dd914e",
+    "generated_at": "2026-10-19T17:47:18+00:00",
     "document": {
      "file_name": "PROJ_DESC_673_05SEP2011.pdf",
      "sha256": "5c61f797fcac776e1d9acf8eed414827ac6be1aea3d7c8447b39ffe97e7ba3fc",
@@ -1213,12 +1233,13 @@
      "prompt_version": "checklist-v1",
      "evidence_rule": "yes-cites-excerpt-paragraph-v2",
      "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+     "injection_screen": "injection-screen-v1",
      "llm_model": "deepseek/deepseek-v4.1-flash",
      "second_opinion_model": "typesafe/jev-1.13",
      "methodology_table_version": "2026-10-15",
      "pdf_extractor": "pymupdf 1.28.2"
     },
-    "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+    "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
     "methodology_status": {
      "code": "AR-ACM0001",
      "version": "5.0.0",
@@ -1274,7 +1295,7 @@
         "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.22,
+        "second_opinion_p_yes": 0.23,
         "needs_review": false,
         "dropped": null
        },
@@ -1289,7 +1310,7 @@
           "text": "absence of the project activity (assessment and demonstration of \nadditionality): \n \nThe “Combined tool to identify the baseline scenario and demonstrate \nadditionality in ARR CDM project activities” is used to both identify  the baseline \nscenario and to demonstrate additionally: \n \nSTEP 0: Preliminary screening based on the starting date of the ARR project \nactivity \n \nThe proposed ARR VCS project was started in 1995 and since then, it has applied \nan externally reviewed methodology and engaged independent carbon \nmonitoring experts to assess and quantify the project’s baseline scenario and net \nemissions reductions or removals resulting in carbon crediting under the SGS \nstandard. In 2003 Face contracted the certification Société Générale de \nSurveillance (SGS) to validate and verify Kibale, based on SGS’ GHG Validation and \nVerification program. In the absence of an international standard defined or \naccepted by the UNFCCC Secretariat, SGS had prepared a set of criteria based on \nDecision 17/C.P7 of the Marrakech accords. These criteria act as a standard and the \nKibale project was validated against it twice: in 2003 and 2008 respectively. \nReports of these assessments were published in 2004 and 2009. Since then, \nproject activity has been geared towards future crediting under VCS.  The \nincentive of planned sale of GHG emission allowances is evidenced in the steps \nfurther below of the additionality test. Without the GHG allowance sales, the \nproject would not be economically attractive, and would face significant barriers.  \n \nSTEP 1: Identification of alternative land use scenarios to the proposed ARR VCS \nproject activity \n \nSub-step 1a: Identification of credible alternative land use scenarios to the project \nactivity \nSince the lands to be planted are restricted to forestry purposes by government, \nother land uses are practically impossible, therefore the identified alternative land \nuses include three that were historically possible and one that relates to \nafforestation as recommended by the tool."
          }
         ],
-        "second_opinion_p_yes": 0.45,
+        "second_opinion_p_yes": 0.44,
         "needs_review": true,
         "dropped": null
        }
@@ -1345,7 +1366,7 @@
           "text": "Spot slashing: In the second year after planting, spot slashing was carried out at \nintervals of three months in the second and third year. In the fourth and fifth year, \nspot slashing was carried   at four month intervals to harden off planted crop and \nreduce maintenance costs.  \n \nSpot hoeing: this was only carried out in the new crop during the second rains \nafter planting. This was done in order to allow easy penetration of water and \nreduce weed competition. \n \nFire Protection:  Fires are a major factor preventing forest regeneration. Elephant \ngrass and spear grass provide excellent combustible material especially during the \ndry seasons. Planted areas are completely surrounded by a 15 m external fire line \nor by non-combustible riverine vegetation. In the centre of each 15 m firebreak 4 \nm are scrapped clean of all vegetation. Furthermore, each compartment is divided \ninto manageable blocks, which are separated by 10 m wide internal fire lines. \nThree meters of all internal fire lines is also scrapped clean. All fire lines are \naccessible by cars during the dry season. Training and retraining workers in fire \nfighting techniques is done. Another vital component of fire protection is fire \nawareness campaigns among the local populations neighbouring the park, \nincluding schools.   \n \nGIS technology:"
          }
         ],
-        "second_opinion_p_yes": 0.97,
+        "second_opinion_p_yes": 0.96,
         "needs_review": false,
         "dropped": null
        }
@@ -1371,7 +1392,7 @@
           "text": "For this ARR project activity, Face in 1999 commissioned Meijer to carry out a \nbaseline study whose results show that changes in the carbon stocks for both \nabove and below ground biomass are expected not to exceed actual net GHG \nremovals by sinks and are therefore assumed to be zero in the absence of the \nproject activity. Hence the formula above is only applied to multiply the 5.2 tonnes \nof carbon per hectare (adjusted from Meijer, 1999), which is the conservative \nvalue of the carbon stock in the stratum ‘banana plantation’, with the combined \narea Ai of stratum ‘Planted Area’ and ‘Regenerating Area’. The total area to be \nplanted during the crediting period is presented in Table 7.2 and has a size of \n6,000 hectares. In addition, the Regenerating Area is 2,593 hectares. The \ncombined area is therefore 8,593 hectares. As the baseline is in a steady state, \nthere is no increases in GHG removals. See Annex III for details on the estimation, \nand the spreadsheet ´ Kibale Baseline Recalculation_082711 ´, which details the \ncalculation of the mean tree carbon stock in the baseline, based on inventory data \nby Meijer in 1999. In addition, the carbon stock changes in dead wood, litter and \nsoil organic matter are conservatively assumed to be zero based on the \nmethodology applied."
          }
         ],
-        "second_opinion_p_yes": 0.87,
+        "second_opinion_p_yes": 0.85,
         "needs_review": false,
         "dropped": null
        },
@@ -1380,7 +1401,7 @@
         "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.37,
+        "second_opinion_p_yes": 0.36,
         "needs_review": false,
         "dropped": null
        },
@@ -1395,7 +1416,7 @@
           "text": "For this ARR project activity, Face in 1999 commissioned Meijer to carry out a \nbaseline study whose results show that changes in the carbon stocks for both \nabove and below ground biomass are expected not to exceed actual net GHG \nremovals by sinks and are therefore assumed to be zero in the absence of the \nproject activity. Hence the formula above is only applied to multiply the 5.2 tonnes \nof carbon per hectare (adjusted from Meijer, 1999), which is the conservative \nvalue of the carbon stock in the stratum ‘banana plantation’, with the combined \narea Ai of stratum ‘Planted Area’ and ‘Regenerating Area’. The total area to be \nplanted during the crediting period is presented in Table 7.2 and has a size of \n6,000 hectares. In addition, the Regenerating Area is 2,593 hectares. The \ncombined area is therefore 8,593 hectares. As the baseline is in a steady state, \nthere is no increases in GHG removals. See Annex III for details on the estimation, \nand the spreadsheet ´ Kibale Baseline Recalculation_082711 ´, which details the \ncalculation of the mean tree carbon stock in the baseline, based on inventory data \nby Meijer in 1999. In addition, the carbon stock changes in dead wood, litter and \nsoil organic matter are conservatively assumed to be zero based on the \nmethodology applied."
          }
         ],
-        "second_opinion_p_yes": 0.93,
+        "second_opinion_p_yes": 0.92,
         "needs_review": false,
         "dropped": null
        },
@@ -1436,7 +1457,7 @@
           "text": "The project has not sought or received any other form of GHG-related environmental credit other than under \nthe VCS Program. Also, it has not been registered, and is not seeking registration, with any GHG program \nother than the VCS."
          }
         ],
-        "second_opinion_p_yes": 0.8,
+        "second_opinion_p_yes": 0.82,
         "needs_review": false,
         "dropped": null
        },
@@ -1527,7 +1548,7 @@
           "text": "During the remote audit process AENOR could confirm that the project protects the rights of Indigenous \nPeoples, communities and other stakeholders in accordance to the Climate, Community & Biodiversity \nStandards and the validated project design."
          }
         ],
-        "second_opinion_p_yes": 0.85,
+        "second_opinion_p_yes": 0.84,
         "needs_review": false,
         "dropped": null
        }
@@ -1625,12 +1646,18 @@
      "tx": "0x0ce63959e13774ec05b8cd93503d6db911793e2c7b746c0d26ce6d0e0412eecc",
      "block": 11949540,
      "report_hash": "0xa84878b7b23dd4b0bb41041c0dcd8d6811d160614114f924a969cb0d7cc1cddf"
+    },
+    {
+     "version": 3,
+     "tx": "0x9f4c7632cb688cfb4897731c7506374d26c3a64b823b6001487f301d0baec8ed",
+     "block": 11949771,
+     "report_hash": "0x95909156ef69830b8ae09b3b2767f589290a251f1e074bd42eebe12df4cbb613"
     }
    ],
    "batches": [],
    "report": {
-    "hash": "0xa84878b7b23dd4b0bb41041c0dcd8d6811d160614114f924a969cb0d7cc1cddf",
-    "generated_at": "2026-10-19T16:52:02+00:00",
+    "hash": "0x95909156ef69830b8ae09b3b2767f589290a251f1e074bd42eebe12df4cbb613",
+    "generated_at": "2026-10-19T17:47:14+00:00",
     "document": {
      "file_name": "PROJ_DESC_2609_07032023.pdf",
      "sha256": "0967d5670ec19d4b0190194d57022f6520836359874691613a48d36034543a2e",
@@ -1642,12 +1669,13 @@
      "prompt_version": "checklist-v1",
      "evidence_rule": "yes-cites-excerpt-paragraph-v2",
      "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+     "injection_screen": "injection-screen-v1",
      "llm_model": "deepseek/deepseek-v4.1-flash",
      "second_opinion_model": "typesafe/jev-1.13",
      "methodology_table_version": "2026-10-15",
      "pdf_extractor": "pymupdf 1.28.2"
     },
-    "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+    "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
     "methodology_status": {
      "code": "VM0010",
      "version": "1.4",
@@ -1700,7 +1728,7 @@
         "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.26,
+        "second_opinion_p_yes": 0.25,
         "needs_review": false,
         "dropped": null
        },
@@ -1709,7 +1737,7 @@
         "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.34,
+        "second_opinion_p_yes": 0.33,
         "needs_review": false,
         "dropped": null
        }
@@ -1744,7 +1772,7 @@
         "question": "Does the text give a specific buffer contribution (a percentage or a number of credits set aside)?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.32,
+        "second_opinion_p_yes": 0.36,
         "needs_review": false,
         "dropped": null
        },
@@ -1785,7 +1813,7 @@
           "text": "∆𝑪𝑵𝑬𝑻|𝑩𝑺𝑳,𝒕∗= ∑\n[ ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(𝟏)\n𝑷\n𝒑=𝟏\n+ ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(𝟐−𝟏𝟎) + ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(𝟏𝟏−𝟐𝟎) + ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(+𝟏)]"
          }
         ],
-        "second_opinion_p_yes": 0.91,
+        "second_opinion_p_yes": 0.92,
         "needs_review": false,
         "dropped": null
        },
@@ -1866,7 +1894,7 @@
           "text": "The Kuamut Rainforest Conservation Project has not applied for or been rejected by any other GHG \nprograms."
          }
         ],
-        "second_opinion_p_yes": 0.86,
+        "second_opinion_p_yes": 0.87,
         "needs_review": false,
         "dropped": null
        },
@@ -1928,7 +1956,7 @@
           "text": "Since the inception of community engagements in late 2017, the project has held a total of 11 community \nworkshops and dialogue sessions, attended by a combined total of 488 community participants. \nCommunity engagements are conducted to achieve a variety of objectives, including: transparency and \ncommunication of project details and activities, gathering information on community socio-cultural \nconditions and history, generation of spatial data via participatory mapping, discussion of threats and \nconstraints faced by communities, and planning of future project activities in accordance with the principles \nof FPIC. Engagement sessions of this type are generally organised together with community leaders, who \nthen publicise the engagements in their respective communities and encourage participation."
          }
         ],
-        "second_opinion_p_yes": 0.42,
+        "second_opinion_p_yes": 0.4,
         "needs_review": true,
         "dropped": null
        },
@@ -2064,6 +2092,12 @@
      "tx": "0x5e84055af055f17f7b1b04cd695bb74d021ef16ca83ab0b049fc40419325dd4d",
      "block": 11949527,
      "report_hash": "0xaadaa370655bb8b4c4b8f33ce1730c62d769daf305cc151493bce37af0b80c08"
+    },
+    {
+     "version": 4,
+     "tx": "0x786cdc685eb027b071e774c3ff30570aa4bbd7b9ae070b0f0ae9fbc4ef3c5ddc",
+     "block": 11949748,
+     "report_hash": "0x3611c4a863664f7741eaf80f9dea9d10531f208919bd3c749bd53adc3807ebb9"
     }
    ],
    "batches": [
@@ -2369,8 +2403,8 @@
     }
    ],
    "report": {
-    "hash": "0xaadaa370655bb8b4c4b8f33ce1730c62d769daf305cc151493bce37af0b80c08",
-    "generated_at": "2026-10-19T16:48:13+00:00",
+    "hash": "0x3611c4a863664f7741eaf80f9dea9d10531f208919bd3c749bd53adc3807ebb9",
+    "generated_at": "2026-10-19T17:47:02+00:00",
     "document": {
      "file_name": "PROJ_DESC_138_12MAY2016.pdf",
      "sha256": "8c22eb7d83ff957fa785940a206c03b5adc4b0f7506ea2d98d5fd455ab44e104",
@@ -2382,12 +2416,13 @@
      "prompt_version": "checklist-v1",
      "evidence_rule": "yes-cites-excerpt-paragraph-v2",
      "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+     "injection_screen": "injection-screen-v1",
      "llm_model": "deepseek/deepseek-v4.1-flash",
      "second_opinion_model": "typesafe/jev-1.13",
      "methodology_table_version": "2026-10-15",
      "pdf_extractor": "pymupdf 1.28.2"
     },
-    "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+    "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
     "methodology_status": {
      "code": "ACM0001",
      "version": "16",
@@ -2432,7 +2467,7 @@
           "text": "1. Piping, valves and controls for (a) conveying LFG from the District Facilities to the Project’s LFG \nprocessing equipment and (b) conveying any excess or otherwise unused LFG to the District \nFacilities for destruction in the District’s existing LFG flare \n2. A LFG processing system and related ancillaries and controls for conditioning the delivered LFG \nby removing moisture, and other contaminants prior to use of the LFG in the Project’s electric \npower generating equipment.  The moisture and contaminants are conveyed directly to the \nDistrict’s discharge piping to the New Bedford waste water treatment facility. \n3. Electric power generating equipment, including four Caterpillar model 3516 engine-generator sets \nand related ancillaries and controls for combusting the processed LFG fuel to produce \nmechanical energy for generating electric power \n4. Switchgear, transformers, relays and related controls and equipment for delivering the electric \npower to the local distribution utility,  Eversource Energy (formerly known as NSTAR) \n5. Buildings, enclosures, foundations, access-ways, fencing and related utilities and civil structures \nnecessarily associated with the above \n \nThe Project has the capacity to combust up to 40.2 MMBtu per hour or 1,326 scfm of LFG at 50 percent \nmethane.  Combustion of the LFG fuel in the engines creates mechanical shaft power that turns \nappropriately-matched electrical generators to generate up to 3.3 MW (net) of electricity.  The capacity of \nthe Project is based on the use of four Caterpillar model 3516 engine-generator sets rated nominally at \n825 kW (gross) per set.  Caterpillar internal combustion engine technology and its competitive analogs \nare widely available and have a long record of successful use in LFG applications over many decades \nand under a wide range of operating conditions.  Electricity generated at the Project is delivered to the \nregional power grid via an interconnection with the local electricity distribution company, Eversource \nEnergy (formerly known as NSTAR).  Waste heat from the generation of electricity is sold to an anaerobic \ndigestion facility off-site. \n \nWhile the specific age of each piece of Project equipment varies, all electricity generation plant equipment \nwas new and installed prior to the generation system becoming operational in November 2005.  No \nequipment associated with the Project is scheduled to be replaced within the second crediting period \nbased on its anticipated lifetime.  Routine maintenance will be conducted in accordance with the \nmanufacturer’s recommendations.   \n \nEquipment and piping associated with the LFG collection system range in age from the District Initial \nSystem installed in 2000 to the expanded system installed between 2002-2015.  Wells in older portions of \nthe Landfill may be closed due to decreasing methane levels.  If well replacement is needed, similar \nmaterials will be used and the efficiency or capacity of the well or piping will not be changed.  As of 2015, \n11 of the original District Initial System wells had been closed.  The original flare installed in 2000 is still in \noperation and is expected to require only routine maintenance over the second crediting period.   \n \nAppendix 1 provides a site plan and general arrangement of the Project.  The pictures below show some \nof its components."
          }
         ],
-        "second_opinion_p_yes": 0.45,
+        "second_opinion_p_yes": 0.39,
         "needs_review": true,
         "dropped": null
        },
@@ -2492,7 +2527,7 @@
           "text": "4.1 \nBaseline Emissions \n \nThe following equation is used to determine baseline emissions per ACM0001: \n \nBEy = BECH4,y + BEEC,y + BEHG, y + BENG,y (Eq. 1) \n \nWhere: \nBEy = Baseline emission in year y (tCO2e/yr) \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e/yr) \nBEEC,y = Baseline emissions associated with electricity generation in year y (tCO2e/yr) \nBEHG,y = Baseline emissions associated with heat generation in year y (tCO2e/yr) \nBENG,y = Baseline emissions associated with natural gas use in year y (tCO2e/yr) \n \nBaseline emissions associated with electricity generation and heat generation are excluded as the Project \nis not seeking carbon credits for the displacement of grid electricity or the beneficial reuse of the Project’s \nwaste heat.  The Project is only seeking credits for emissions reductions resulting from the destruction of \nmethane collected from the Landfill.  The Project does not include natural gas replacement so the final \nparameter is also not relevant.  The equation simplifies to: \n \nBEy = BECH4,y  (Project modified Eq.1) \n \nWhere: \nBEy = Baseline emission in year y (tCO2e) \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e) \n \nBaseline emissions of methane from the SWDS in year y are found as follows: \n \nBECH4,y = ((1-OXtop_layer) x FCH4,PJ,y – FCH,BL,y) x GWPCH4  (Eq. 2) \n \nWhere: \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e/yr) \nOXtop_layer = Fraction of methane in the LFG that would be oxidized in the top layer of the SWDS in the \nbaseline (dimensionless) \nFCH4,PJ,y = Amount of methane in the LFG which is flared and/or used in the project activity in year y \n(tCH4/yr) \nFCH,BL,y= Amount of methane in the LFG that would be flared in the baseline in year y (tCH4/yr)"
          }
         ],
-        "second_opinion_p_yes": 0.91,
+        "second_opinion_p_yes": 0.9,
         "needs_review": false,
         "dropped": null
        },
@@ -2610,14 +2645,16 @@
       "score": 50,
       "rationale": "Evidence found for 2 of 4 checks (S2, S3); not found in the excerpt: S1, S4.",
       "dropped_findings": 0,
-      "review_flags": [],
+      "review_flags": [
+       "models_disagree:S3"
+      ],
       "checks": [
        {
         "id": "S1",
         "question": "Does the text describe a stakeholder consultation with specifics such as dates, places, participants or comments received?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.06,
+        "second_opinion_p_yes": 0.05,
         "needs_review": false,
         "dropped": null
        },
@@ -2647,8 +2684,8 @@
           "text": "6 \nENVIRONMENTAL IMPACT \n \nIn accordance with the requirements of the Massachusetts Environmental Policy Act (“MEPA”), prior to \nconstruction of the  Project and as a pre-requisite to Project permitting, CNBE submitted an \nEnvironmental Notification Form (“ENF”) to the Massachusetts Secretary of Environmental Affairs to \nenable the Secretary, acting through the MEPA Office (the state agency responsible for assessing the \npotential environmental impact of proposed projects pursuant to MEPA) to determine whether and to what \nextent any detailed environmental impact assessment of the Project should be required.  Based on its \nreview of the ENF, in February 2004 the MEPA Office determined and the Secretary certified that no \nEnvironmental Impact Report for the Project would be required."
          }
         ],
-        "second_opinion_p_yes": 0.5,
-        "needs_review": false,
+        "second_opinion_p_yes": 0.48,
+        "needs_review": true,
         "dropped": null
        },
        {
@@ -2747,6 +2784,12 @@
      "tx": "0xfef1df78801d1fb6b58dedf4c8fa66ef8e17d8d98a03828b03180145628d19cf",
      "block": 11949538,
      "report_hash": "0x09008caade800de8ec7fd05ea429cff97a6670b609079ef072142d382b683b31"
+    },
+    {
+     "version": 4,
+     "tx": "0xba554eb496dd8567cb705116699d9c9a8fedcd40b660748997d13cc33f284388",
+     "block": 11949769,
+     "report_hash": "0xdae54151db560b1666b804ad346d8336771971bb0c20125a5c3e405732122fdb"
     }
    ],
    "batches": [
@@ -2872,8 +2915,8 @@
     }
    ],
    "report": {
-    "hash": "0x09008caade800de8ec7fd05ea429cff97a6670b609079ef072142d382b683b31",
-    "generated_at": "2026-10-19T16:49:08+00:00",
+    "hash": "0xdae54151db560b1666b804ad346d8336771971bb0c20125a5c3e405732122fdb",
+    "generated_at": "2026-10-19T17:47:05+00:00",
     "document": {
      "file_name": "Fuel Efficient Cooking in South Africa Grouped PDD_v9_Clean.pdf",
      "sha256": "1d09240addf6b933de31de7492b798775ddf16183425b8d0eff00e6f0e5d810a",
@@ -2885,12 +2928,13 @@
      "prompt_version": "checklist-v1",
      "evidence_rule": "yes-cites-excerpt-paragraph-v2",
      "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+     "injection_screen": "injection-screen-v1",
      "llm_model": "deepseek/deepseek-v4.1-flash",
      "second_opinion_model": "typesafe/jev-1.13",
      "methodology_table_version": "2026-10-15",
      "pdf_extractor": "pymupdf 1.28.2"
     },
-    "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+    "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
     "methodology_status": {
      "code": "VMR0006",
      "version": null,
@@ -2929,7 +2973,7 @@
         "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.61,
+        "second_opinion_p_yes": 0.6,
         "needs_review": true,
         "dropped": null
        },
@@ -2944,7 +2988,7 @@
           "text": "1. There \nis \nno \ngovernment \nmandated programme or policy \nin South Africa ensuring the \ndistribution \nof \nnew \nproject \nactivity \ninstances \nor \nfuel \nefficient cookstoves."
          }
         ],
-        "second_opinion_p_yes": 0.66,
+        "second_opinion_p_yes": 0.62,
         "needs_review": false,
         "dropped": null
        },
@@ -2953,7 +2997,7 @@
         "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.1,
+        "second_opinion_p_yes": 0.11,
         "needs_review": false,
         "dropped": null
        }
@@ -3009,7 +3053,7 @@
           "text": "Bold \ntonnes/year \n5.49 \nQuantity of biomass \nconsumed in baseline"
          }
         ],
-        "second_opinion_p_yes": 0.8,
+        "second_opinion_p_yes": 0.79,
         "needs_review": false,
         "dropped": null
        },
@@ -3185,7 +3229,7 @@
           "text": "This is a new project and has not been registered or seeking registration under any other \nGHG programs."
          }
         ],
-        "second_opinion_p_yes": 0.75,
+        "second_opinion_p_yes": 0.77,
         "needs_review": false,
         "dropped": null
        },
@@ -3205,7 +3249,7 @@
           "text": "The project has not sought, nor received another form of GHG-related environmental \ncredit."
          }
         ],
-        "second_opinion_p_yes": 0.88,
+        "second_opinion_p_yes": 0.86,
         "needs_review": false,
         "dropped": null
        },
@@ -3214,7 +3258,7 @@
         "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.08,
+        "second_opinion_p_yes": 0.07,
         "needs_review": false,
         "dropped": null
        }
@@ -3266,7 +3310,7 @@
         "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.76,
+        "second_opinion_p_yes": 0.77,
         "needs_review": true,
         "dropped": null
        },
@@ -3281,7 +3325,7 @@
           "text": "1) The project proponent \nshall \nrecognize, \nrespect and support \nlocal \nstakeholders’ \nproperty \nrights \nand \nwhere feasible, take \nmeasures \nto \nhelp \nsecure \nrights. \nThe \nproject \nshall \nnot \nencroach on private, \nstakeholder \nor \ngovernment property \nor relocate people off \ntheir \nlands \nwithout \nconsent. The project \nmay affect property \nrights if free, prior and \ninformed consent is \nobtained from those \nconcerned \nand \na"
          }
         ],
-        "second_opinion_p_yes": 0.86,
+        "second_opinion_p_yes": 0.85,
         "needs_review": false,
         "dropped": null
        }
@@ -3366,12 +3410,18 @@
      "tx": "0x9386d54ec7db93c6b26b4733e098ff056454e635585e39191f64b37701ae4e1e",
      "block": 11949548,
      "report_hash": "0x8640fd7c46c7c9c90992f046c31a62a48d426bce9fae43df73804fc39ac23652"
+    },
+    {
+     "version": 3,
+     "tx": "0x45fd11b8b851c85be85b403e4c55b0b6af1799b163e5df712477afa5c261d4b0",
+     "block": 11949779,
+     "report_hash": "0xea8ae121bebe3ed850516caa17c650fadcbdcff9721138b3a267c37261e70fa1"
     }
    ],
    "batches": [],
    "report": {
-    "hash": "0x8640fd7c46c7c9c90992f046c31a62a48d426bce9fae43df73804fc39ac23652",
-    "generated_at": "2026-10-19T16:56:41+00:00",
+    "hash": "0xea8ae121bebe3ed850516caa17c650fadcbdcff9721138b3a267c37261e70fa1",
+    "generated_at": "2026-10-19T17:47:27+00:00",
     "document": {
      "file_name": "PROJ_DESC_985_20DEC2012.pdf",
      "sha256": "7523e87dc6f3ae5537f0c7288bedab1004602e22c36cf7501a69d39ae8849106",
@@ -3409,12 +3459,13 @@
      "prompt_version": "checklist-v1",
      "evidence_rule": "yes-cites-excerpt-paragraph-v2",
      "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+     "injection_screen": "injection-screen-v1",
      "llm_model": "deepseek/deepseek-v4.1-flash",
      "second_opinion_model": "typesafe/jev-1.13",
      "methodology_table_version": "2026-10-15",
      "pdf_extractor": "pymupdf 1.28.2"
     },
-    "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+    "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
     "methodology_status": {
      "code": "VM0007",
      "version": "1.3",
@@ -3481,7 +3532,7 @@
         "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.37,
+        "second_opinion_p_yes": 0.36,
         "needs_review": false,
         "dropped": null
        }
@@ -3694,7 +3745,7 @@
           "text": "1.12.3 Participation under Other GHG Programs (CCB: CL1.5) \nThis project is only seeking registration under the VCS and CCB programs.  CCB does not issue carbon \ncredits and the project is not seeking to register credits with any other program."
          }
         ],
-        "second_opinion_p_yes": 0.8,
+        "second_opinion_p_yes": 0.79,
         "needs_review": false,
         "dropped": null
        },
@@ -3714,7 +3765,7 @@
           "text": "1.12.2 Emissions Trading Programs and Other Binding Limits (CCB: CL1.5) \nThe avoided emissions from this project will not be used for compliance purposes in a regional or national \ncompliance program or to demonstrate conformance with a binding limit on GHG emissions.  Neither Peru \nnor regional or local governments have established a national target, a compliance program or a cap and \ntrade system."
          }
         ],
-        "second_opinion_p_yes": 0.95,
+        "second_opinion_p_yes": 0.94,
         "needs_review": false,
         "dropped": null
        },
@@ -3736,7 +3787,9 @@
       "score": 75,
       "rationale": "Evidence found for 3 of 4 checks (S1, S2, S3); not found in the excerpt: S4.",
       "dropped_findings": 0,
-      "review_flags": [],
+      "review_flags": [
+       "models_disagree:S1"
+      ],
       "checks": [
        {
         "id": "S1",
@@ -3749,8 +3802,8 @@
           "text": "The MUF process has evolved over time. For the 2003 MUF, communities elected their local facilitator. \nDepending on the size of the community, more than one facilitator was elected. For example, for the 2003 \nMUF, 53 facilitators, 5% women, were hired for the two month period while for the 2008 MUF, 345 \ncommunity representatives were hired, 19% women. CIMA and The Field Museum personnel trained the \nfacilitators and community representatives on data collection and provided information regarding PNCAZ \nand CIMA. In 2003, facilitators collected data on social organizations and use of natural resources over a \ntwo month period, using community assemblies and household interviews to conduct structured and \nsemi-structured interviews. Eight focus groups were used in each community along with individual \ninterviews: four focus groups included residents of both genders and all age groups, two focus groups \nincluded only women, one group was of community leaders, and one included only specialists or experts \n(e.g., the best hunters). Individual interviews were conducted with health workers, teachers, and directors \nof the local school if one is present, and other significant individuals like shamans, healers, and \ncommunity leaders or founders. In 2008, a change was made to the process to improve data collection \nand workshops were held with community representatives from each geographic area. Three to four \nrepresentatives from each community participated in the process to update the data from the previous \nMUF."
          }
         ],
-        "second_opinion_p_yes": 0.51,
-        "needs_review": false,
+        "second_opinion_p_yes": 0.49,
+        "needs_review": true,
         "dropped": null
        },
        {
@@ -3788,7 +3841,7 @@
         "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.39,
+        "second_opinion_p_yes": 0.4,
         "needs_review": false,
         "dropped": null
        }
@@ -3901,12 +3954,18 @@
      "tx": "0x03168c35b99e8a00069a51f71a494f284bc589e84d7e90c8dade26a347030241",
      "block": 11949533,
      "report_hash": "0x422c3f025c48a647d6575c2e64ab1cd750876d8de895c4964323af37ea3aba01"
+    },
+    {
+     "version": 3,
+     "tx": "0x648f1d8bc1439243693a7d613317dd65a56c67c93daa5ca50b98b459ad4f178f",
+     "block": 11949765,
+     "report_hash": "0x2654610cbf3de9d854ebe2de1f906a59a2e509d3dee27b982ae2e85eb9400e47"
     }
    ],
    "batches": [],
    "report": {
-    "hash": "0x422c3f025c48a647d6575c2e64ab1cd750876d8de895c4964323af37ea3aba01",
-    "generated_at": "2026-10-19T16:49:47+00:00",
+    "hash": "0x2654610cbf3de9d854ebe2de1f906a59a2e509d3dee27b982ae2e85eb9400e47",
+    "generated_at": "2026-10-19T17:47:07+00:00",
     "document": {
      "file_name": "PL1742_VCS PD_HBPCL_V02_17042018_Clean.pdf",
      "sha256": "8b6a6c39c13b6e0b57404ccd3c8f7ca0d51f4139da1a18495534b53b0b77822f",
@@ -3924,12 +3983,13 @@
      "prompt_version": "checklist-v1",
      "evidence_rule": "yes-cites-excerpt-paragraph-v2",
      "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+     "injection_screen": "injection-screen-v1",
      "llm_model": "deepseek/deepseek-v4.1-flash",
      "second_opinion_model": "typesafe/jev-1.13",
      "methodology_table_version": "2026-10-15",
      "pdf_extractor": "pymupdf 1.28.2"
     },
-    "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+    "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
     "methodology_status": {
      "code": "ACM0002",
      "version": "12.1.0",
@@ -3978,7 +4038,7 @@
           "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 32 \n \n \nOutcome of Step 2: \nIt can be justifiably concluded that the CDM revenues which the project activity would generate through \nsale of the emission reductions is very crucial to sustain the operations of the project activity. The returns \nfrom the project after considering CDM revenues give a project IRR of 11.54%. Thus, with CDM \nbenefits the project becomes financially attractive in as much as the project IRR crosses the benchmark.  \n \nHence the project is additional. \n \n \nStep 3: Barrier Analysis:  \n \nSub-step 3a: Identify barriers that would prevent the implementation of the type of the proposed project \nactivity \n \nThe project proponent has not opted for Barrier Analysis to demonstrate additionality for the project \nactivity.  \n \nStep 4: Common practice analysis \n \nSub-step 4a: Analyze other activities similar to the proposed project activity: \n \nThe re-assessment studies of hydro-electric potential of the country, completed by CEA in 198729, have \nassessed the economically exploitable hydro power potential as 84,04430 MW at 60% load factor. As on \n31.03.2007, the hydro-electric schemes in operation account for only 20.32% and those under execution \nfor 5.18% of the total potential at 60% Load Factor. Thus, the bulk of the potential (74.50%) remains yet \nto be developed. \n \nThe All-India aggregate installed capacity of electric power generating stations under various utilities as \non 31.3.2007 was 132329.21 MW comprising 34653.77 MW of hydro, 86014.84 MW of thermal, 3900 \nMW of nuclear and 7760.60 MW of Renewable Energy Sources (RES). The percentage share of hydro, \nthermal, nuclear and RES of the total installed capacity stood at 26.1931%, 65%, 2.95% and 5.86% \nrespectively. \n \nIndia has for many years faced severe power shortages. Currently, at the time of peak demand, power \nshortages are estimated to be about 12%, while annual energy shortages are nearly 7% of demand32. \nThese shortages are likely to continue and increase in the foreseeable future, even with the planned \nadditions in generation capacity. Analysis shows that the gap in supply (after considering the impact of \nprice elasticity on demand) can be only marginally reduced by loss reduction and efficiency gains. The"
          }
         ],
-        "second_opinion_p_yes": 0.95,
+        "second_opinion_p_yes": 0.94,
         "needs_review": false,
         "dropped": null
        },
@@ -3987,7 +4047,7 @@
         "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.28,
+        "second_opinion_p_yes": 0.25,
         "needs_review": false,
         "dropped": null
        },
@@ -4083,7 +4143,7 @@
           "text": "- \nPost monitoring of environmental indicators like river water quality, sediment transport analysis, \nland use, soil erosion, ecological changes, aquatic life is conducted periodically as per guidelines \nissued by the project monitoring committee.  Frequency of such monitoring with respect to \nparameters will be decided by the Project Monitoring Committee."
          }
         ],
-        "second_opinion_p_yes": 0.79,
+        "second_opinion_p_yes": 0.78,
         "needs_review": false,
         "dropped": null
        }
@@ -4105,7 +4165,7 @@
         "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.3,
+        "second_opinion_p_yes": 0.29,
         "needs_review": false,
         "dropped": null
        },
@@ -4114,7 +4174,7 @@
         "question": "Does the text address other environmental credits or certificates (e.g. renewable energy certificates, I-RECs) or participation in an emissions trading scheme?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.6,
+        "second_opinion_p_yes": 0.63,
         "needs_review": true,
         "dropped": null
        },
@@ -4123,7 +4183,7 @@
         "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.07,
+        "second_opinion_p_yes": 0.06,
         "needs_review": false,
         "dropped": null
        }
@@ -4159,7 +4219,7 @@
           "text": "Comment from Local Villagers \nResponse of Project Proponent \nThe rock structure in the region is not solid enough \nto bear the impact of blasting as the mountains \nshake during blasting conducted underground, \nresulting in cracks in houses."
          }
         ],
-        "second_opinion_p_yes": 0.93,
+        "second_opinion_p_yes": 0.94,
         "needs_review": false,
         "dropped": null
        },
@@ -4197,7 +4257,7 @@
         "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.39,
+        "second_opinion_p_yes": 0.37,
         "needs_review": false,
         "dropped": null
        }
@@ -4293,6 +4353,12 @@
      "tx": "0x0635d31f8294d7c5f5149f7eef666b7a0c054ce3aef4eddcce63bae8946c193e",
      "block": 11949535,
      "report_hash": "0x30de69dc2e533606ce184fb37c8fa282d3c213c15d8a5b3d73a6aae9a50ba1bd"
+    },
+    {
+     "version": 4,
+     "tx": "0x816e44a215f87dd01d40b9d466bc05fe73f4d42d74fd85f7b36228cc0aa41182",
+     "block": 11949767,
+     "report_hash": "0xaaee0451a4664223a393d92b72a2738e2d80ffb9152673a673447c9a70f9d63e"
     }
    ],
    "batches": [
@@ -4458,8 +4524,8 @@
     }
    ],
    "report": {
-    "hash": "0x30de69dc2e533606ce184fb37c8fa282d3c213c15d8a5b3d73a6aae9a50ba1bd",
-    "generated_at": "2026-10-19T16:47:59+00:00",
+    "hash": "0xaaee0451a4664223a393d92b72a2738e2d80ffb9152673a673447c9a70f9d63e",
+    "generated_at": "2026-10-19T17:46:59+00:00",
     "document": {
      "file_name": "VCS Joint PDMR_Renew Power_V02_29.01.19.pdf",
      "sha256": "9f40ffc9d0971e4e48235cdf72607b7fd9131b13852f17d266e5f0a9fc6216e2",
@@ -4477,12 +4543,13 @@
      "prompt_version": "checklist-v1",
      "evidence_rule": "yes-cites-excerpt-paragraph-v2",
      "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+     "injection_screen": "injection-screen-v1",
      "llm_model": "deepseek/deepseek-v4.1-flash",
      "second_opinion_model": "typesafe/jev-1.13",
      "methodology_table_version": "2026-10-15",
      "pdf_extractor": "pymupdf 1.28.2"
     },
-    "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+    "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
     "methodology_status": {
      "code": "ACM0002",
      "version": "19",
@@ -4504,6 +4571,7 @@
       "rationale": "Evidence found for 1 of 4 checks (A1); not found in the excerpt: A2, A3, A4.",
       "dropped_findings": 0,
       "review_flags": [
+       "models_disagree:A2",
        "models_disagree:A3",
        "models_disagree:A4"
       ],
@@ -4528,8 +4596,8 @@
         "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.46,
-        "needs_review": false,
+        "second_opinion_p_yes": 0.5,
+        "needs_review": true,
         "dropped": null
        },
        {
@@ -4537,7 +4605,7 @@
         "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.52,
+        "second_opinion_p_yes": 0.53,
         "needs_review": true,
         "dropped": null
        },
@@ -4546,7 +4614,7 @@
         "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.51,
+        "second_opinion_p_yes": 0.53,
         "needs_review": true,
         "dropped": null
        }
@@ -4591,7 +4659,7 @@
         "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.48,
+        "second_opinion_p_yes": 0.46,
         "needs_review": false,
         "dropped": null
        },
@@ -4606,7 +4674,7 @@
           "text": "The above estimated emission reduction is confirmed by assessment team via emission reduction \ncalculation spreadsheet. The calculation is conservative and this acceptable to the assessment team."
          }
         ],
-        "second_opinion_p_yes": 0.87,
+        "second_opinion_p_yes": 0.86,
         "needs_review": false,
         "dropped": null
        },
@@ -4621,7 +4689,7 @@
           "text": "The meters is approved, tested & sealed by the State Utility. The \nmeters are in the custody of State Utility. The frequency of \ncalibration is once in 5 years. 68 The monthly electricity \nsupplied/exported by the project activity in the JMR report is \ncross checked with the monthly invoices of sale. In the absence \nor delay in the meter calibration appropriate Guidelines will be \napplied appropriately to confirm the conservativeness of \nmetering.  \n \nThe metering arrangement, accuracy class of meters, calibration \nfrequency is under control of state electricity board and PP do not \nhave any control on it. PP is getting value of net electricity \nsupplied to grid and the same is considered the monitoring \nparameter.  \n \nThe billing is raised based on substation meters. \nPurpose of data \nCalculation of baseline emissions"
          }
         ],
-        "second_opinion_p_yes": 0.95,
+        "second_opinion_p_yes": 0.96,
         "needs_review": false,
         "dropped": null
        }
@@ -4652,7 +4720,7 @@
           "text": "The project has neither been registered nor seeking registration under any other GHG programs. The \nproject is seeking registration only in VCS program. Audit team checked the REC Mechanism database of \nIndia and found that the project activity is not accredited / registered under REC mechanism. Further,"
          }
         ],
-        "second_opinion_p_yes": 0.85,
+        "second_opinion_p_yes": 0.86,
         "needs_review": false,
         "dropped": null
        },
@@ -4691,7 +4759,7 @@
         "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.18,
+        "second_opinion_p_yes": 0.25,
         "needs_review": false,
         "dropped": null
        }
@@ -4752,7 +4820,7 @@
           "text": "The project activity is expected to have positive impacts and no significant adverse environmental \nimpacts are foreseen. Since, the project activity is an electricity generation from renewable source (i.e. \nsolar energy) therefore no negative impact are envisaged. There is no mandatory legal requirement for \ncarrying out an environmental impact assessment in the host country. The Ministry of Environment, \nForests & Climate change (MoEFCC), Government of India (GoI) notification 15 dated 14/09/2006 \nregarding the requirement of Environment Impact Assessment (EIA) studies states that any project \ndeveloper in India needs to file an application to the Ministry of Environment and Forests (including a \npublic hearing and an EIA) in case the proposed industry or project is listed in a predefined list. The list \nincludes thirty nine project activities that require EIA studies. The solar power projects are not included in \nthis list and thus an EIA study is not required."
          }
         ],
-        "second_opinion_p_yes": 0.9,
+        "second_opinion_p_yes": 0.91,
         "needs_review": false,
         "dropped": null
        },
@@ -4761,7 +4829,7 @@
         "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.22,
+        "second_opinion_p_yes": 0.2,
         "needs_review": false,
         "dropped": null
        }
@@ -4847,12 +4915,18 @@
      "tx": "0x1ea465f4d87d9662ef623c95138d1be8234c2cc4f75b2ed7a0297a947da817bb",
      "block": 11949544,
      "report_hash": "0x8063d99e309d223dd4c40b2925fc67a958e512407b6dfdc8a2e35935c337a01f"
+    },
+    {
+     "version": 3,
+     "tx": "0x001721e7fea0c57560d895b513082d552a83daed70426a5a551b64ec74acc7a0",
+     "block": 11949775,
+     "report_hash": "0x890803205f6df02d7e38731a8c156de140e01ba99289cc7439c5f0e15541496a"
     }
    ],
    "batches": [],
    "report": {
-    "hash": "0x8063d99e309d223dd4c40b2925fc67a958e512407b6dfdc8a2e35935c337a01f",
-    "generated_at": "2026-10-19T16:57:29+00:00",
+    "hash": "0x890803205f6df02d7e38731a8c156de140e01ba99289cc7439c5f0e15541496a",
+    "generated_at": "2026-10-19T17:47:31+00:00",
     "document": {
      "file_name": "VCS 4150 ReQ PD v6.0 11082025_clean.pdf",
      "sha256": "a3c00f5d70a687a7f103c79cc4850a2fb6f928c5c79ab725c1fbe3592ff22e0e",
@@ -4878,12 +4952,13 @@
      "prompt_version": "checklist-v1",
      "evidence_rule": "yes-cites-excerpt-paragraph-v2",
      "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+     "injection_screen": "injection-screen-v1",
      "llm_model": "deepseek/deepseek-v4.1-flash",
      "second_opinion_model": "typesafe/jev-1.13",
      "methodology_table_version": "2026-10-15",
      "pdf_extractor": "pymupdf 1.28.2"
     },
-    "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+    "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
     "methodology_status": {
      "code": "VM0050",
      "version": "1.0",
@@ -4921,7 +4996,7 @@
         "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.44,
+        "second_opinion_p_yes": 0.46,
         "needs_review": false,
         "dropped": null
        },
@@ -4945,7 +5020,7 @@
         "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.16,
+        "second_opinion_p_yes": 0.18,
         "needs_review": false,
         "dropped": null
        }
@@ -4981,7 +5056,7 @@
           "text": "Purpose of data \nCalculation of baseline and project emissions \nCalculation method \nThe value of 0.8872, registered in the Project Design Document \n(PD) under TOOL30 Version 4 for Rwanda, is adjusted to \naccount for uncertainty in accordance with VM0050. A 26% \nuncertainty discount is applied, resulting in the following \nadjusted value: \n0.8872 × (1−0.26) =0.6565 \nComments \nThis data has been fixed for entire crediting period. The applied \nfNRB value has been calculated by using the latest available data \nsources. As per the fNRB calculation done by PP, the value is \n91% however as a measure of conservativeness, PP used the \nfNRB value from another registered projects which was lesser \nthan 91%. Hence, the value has changed to 88.72% and finally \nto 0.6565 with uncertainty discount consideration."
          }
         ],
-        "second_opinion_p_yes": 0.75,
+        "second_opinion_p_yes": 0.76,
         "needs_review": false,
         "dropped": null
        },
@@ -4990,7 +5065,7 @@
         "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.34,
+        "second_opinion_p_yes": 0.36,
         "needs_review": false,
         "dropped": null
        },
@@ -5045,7 +5120,7 @@
           "text": "Data / Parameter \nη𝑜𝑙𝑑 \nData unit \nFraction \nDescription \nEfficiency of baseline stove \nSource of data \nCalculated using the Default value as specified in VMR0006 \nmethodology and the data obtained through the distribution \nsurveys \nDescription of \nmeasurement methods \nand procedures \napplied"
          }
         ],
-        "second_opinion_p_yes": 0.95,
+        "second_opinion_p_yes": 0.96,
         "needs_review": false,
         "dropped": null
        }
@@ -5101,7 +5176,7 @@
           "text": "☐  Yes  \n \n☒  No \nIf yes, provide all required evidence of no double claiming as outlined by the VCS Standard. \n \n1.17.3 Supply Chain (Scope 3) Emissions \nDo the project activities specified in Section 0 affect the emissions footprint of any product(s) \n(goods or services) that are part of a supply chain?"
          }
         ],
-        "second_opinion_p_yes": 0.81,
+        "second_opinion_p_yes": 0.8,
         "needs_review": false,
         "dropped": null
        },
@@ -5110,7 +5185,7 @@
         "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.14,
+        "second_opinion_p_yes": 0.13,
         "needs_review": false,
         "dropped": null
        }
@@ -5162,7 +5237,7 @@
         "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.67,
+        "second_opinion_p_yes": 0.69,
         "needs_review": true,
         "dropped": null
        },
@@ -5275,12 +5350,18 @@
      "tx": "0xe18451119e158c37696d6e166fd8c40fabff62980c446cd5737764d053a4ee87",
      "block": 11949531,
      "report_hash": "0x4866f527719dbc7dd5d4c96be98881c050daebd5cedb876fe86570bcc585c34a"
+    },
+    {
+     "version": 3,
+     "tx": "0x1673e466d889d11c756e2b43f8cf36fe8ec5b9300f72c8ec562f32301eba6c0b",
+     "block": 11949757,
+     "report_hash": "0x2b3148db064076b96830804f9661fb7904902e164fc4d69e9d238e59c62dbca7"
     }
    ],
    "batches": [],
    "report": {
-    "hash": "0x4866f527719dbc7dd5d4c96be98881c050daebd5cedb876fe86570bcc585c34a",
-    "generated_at": "2026-10-19T16:50:58+00:00",
+    "hash": "0x2b3148db064076b96830804f9661fb7904902e164fc4d69e9d238e59c62dbca7",
+    "generated_at": "2026-10-19T17:47:10+00:00",
     "document": {
      "file_name": "VCS Joint PD  MR_Mytrah_V03_20122017_Clean.pdf",
      "sha256": "5c879cd740a01ed857dbd050d40df237c7eb5168fffe173e0e34889190368f7c",
@@ -5292,12 +5373,13 @@
      "prompt_version": "checklist-v1",
      "evidence_rule": "yes-cites-excerpt-paragraph-v2",
      "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+     "injection_screen": "injection-screen-v1",
      "llm_model": "deepseek/deepseek-v4.1-flash",
      "second_opinion_model": "typesafe/jev-1.13",
      "methodology_table_version": "2026-10-15",
      "pdf_extractor": "pymupdf 1.28.2"
     },
-    "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+    "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
     "methodology_status": {
      "code": "ACM0002",
      "version": "17.0",
@@ -5429,7 +5511,7 @@
         "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.36,
+        "second_opinion_p_yes": 0.37,
         "needs_review": false,
         "dropped": null
        },
@@ -5438,7 +5520,7 @@
         "question": "Does the text address uncertainty or the use of conservative assumptions in the emission reduction estimate?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.61,
+        "second_opinion_p_yes": 0.62,
         "needs_review": true,
         "dropped": null
        },
@@ -5453,7 +5535,7 @@
           "text": "The Net electricity exported to the grid will be cross checked \nagainst the invoice raised by the PP towards the DISCOM"
          }
         ],
-        "second_opinion_p_yes": 0.79,
+        "second_opinion_p_yes": 0.82,
         "needs_review": false,
         "dropped": null
        }
@@ -5473,7 +5555,7 @@
         "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.46,
+        "second_opinion_p_yes": 0.47,
         "needs_review": false,
         "dropped": null
        },
@@ -5488,7 +5570,7 @@
           "text": "The Project has no intend to generate any other form of GHG-related environmental credit for \nGHG emission reductions or removals claimed under the VCS Program."
          }
         ],
-        "second_opinion_p_yes": 0.93,
+        "second_opinion_p_yes": 0.92,
         "needs_review": false,
         "dropped": null
        },
@@ -5547,7 +5629,7 @@
         "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
         "answer": "no",
         "evidence": [],
-        "second_opinion_p_yes": 0.25,
+        "second_opinion_p_yes": 0.26,
         "needs_review": false,
         "dropped": null
        },

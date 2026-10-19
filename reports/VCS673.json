@@ -45,12 +45,13 @@
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
     "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "injection_screen": "injection-screen-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
   "principles": [
     {
       "principle": "additionality",
@@ -87,7 +88,7 @@
           "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.22,
+          "second_opinion_p_yes": 0.23,
           "needs_review": false,
           "dropped": null
         },
@@ -102,7 +103,7 @@
               "text": "absence of the project activity (assessment and demonstration of \nadditionality): \n \nThe “Combined tool to identify the baseline scenario and demonstrate \nadditionality in ARR CDM project activities” is used to both identify  the baseline \nscenario and to demonstrate additionally: \n \nSTEP 0: Preliminary screening based on the starting date of the ARR project \nactivity \n \nThe proposed ARR VCS project was started in 1995 and since then, it has applied \nan externally reviewed methodology and engaged independent carbon \nmonitoring experts to assess and quantify the project’s baseline scenario and net \nemissions reductions or removals resulting in carbon crediting under the SGS \nstandard. In 2003 Face contracted the certification Société Générale de \nSurveillance (SGS) to validate and verify Kibale, based on SGS’ GHG Validation and \nVerification program. In the absence of an international standard defined or \naccepted by the UNFCCC Secretariat, SGS had prepared a set of criteria based on \nDecision 17/C.P7 of the Marrakech accords. These criteria act as a standard and the \nKibale project was validated against it twice: in 2003 and 2008 respectively. \nReports of these assessments were published in 2004 and 2009. Since then, \nproject activity has been geared towards future crediting under VCS.  The \nincentive of planned sale of GHG emission allowances is evidenced in the steps \nfurther below of the additionality test. Without the GHG allowance sales, the \nproject would not be economically attractive, and would face significant barriers.  \n \nSTEP 1: Identification of alternative land use scenarios to the proposed ARR VCS \nproject activity \n \nSub-step 1a: Identification of credible alternative land use scenarios to the project \nactivity \nSince the lands to be planted are restricted to forestry purposes by government, \nother land uses are practically impossible, therefore the identified alternative land \nuses include three that were historically possible and one that relates to \nafforestation as recommended by the tool."
             }
           ],
-          "second_opinion_p_yes": 0.45,
+          "second_opinion_p_yes": 0.44,
           "needs_review": true,
           "dropped": null
         }
@@ -215,7 +216,7 @@
               "text": "Spot slashing: In the second year after planting, spot slashing was carried out at \nintervals of three months in the second and third year. In the fourth and fifth year, \nspot slashing was carried   at four month intervals to harden off planted crop and \nreduce maintenance costs.  \n \nSpot hoeing: this was only carried out in the new crop during the second rains \nafter planting. This was done in order to allow easy penetration of water and \nreduce weed competition. \n \nFire Protection:  Fires are a major factor preventing forest regeneration. Elephant \ngrass and spear grass provide excellent combustible material especially during the \ndry seasons. Planted areas are completely surrounded by a 15 m external fire line \nor by non-combustible riverine vegetation. In the centre of each 15 m firebreak 4 \nm are scrapped clean of all vegetation. Furthermore, each compartment is divided \ninto manageable blocks, which are separated by 10 m wide internal fire lines. \nThree meters of all internal fire lines is also scrapped clean. All fire lines are \naccessible by cars during the dry season. Training and retraining workers in fire \nfighting techniques is done. Another vital component of fire protection is fire \nawareness campaigns among the local populations neighbouring the park, \nincluding schools.   \n \nGIS technology:"
             }
           ],
-          "second_opinion_p_yes": 0.97,
+          "second_opinion_p_yes": 0.96,
           "needs_review": false,
           "dropped": null
         }
@@ -325,7 +326,7 @@
               "text": "For this ARR project activity, Face in 1999 commissioned Meijer to carry out a \nbaseline study whose results show that changes in the carbon stocks for both \nabove and below ground biomass are expected not to exceed actual net GHG \nremovals by sinks and are therefore assumed to be zero in the absence of the \nproject activity. Hence the formula above is only applied to multiply the 5.2 tonnes \nof carbon per hectare (adjusted from Meijer, 1999), which is the conservative \nvalue of the carbon stock in the stratum ‘banana plantation’, with the combined \narea Ai of stratum ‘Planted Area’ and ‘Regenerating Area’. The total area to be \nplanted during the crediting period is presented in Table 7.2 and has a size of \n6,000 hectares. In addition, the Regenerating Area is 2,593 hectares. The \ncombined area is therefore 8,593 hectares. As the baseline is in a steady state, \nthere is no increases in GHG removals. See Annex III for details on the estimation, \nand the spreadsheet ´ Kibale Baseline Recalculation_082711 ´, which details the \ncalculation of the mean tree carbon stock in the baseline, based on inventory data \nby Meijer in 1999. In addition, the carbon stock changes in dead wood, litter and \nsoil organic matter are conservatively assumed to be zero based on the \nmethodology applied."
             }
           ],
-          "second_opinion_p_yes": 0.87,
+          "second_opinion_p_yes": 0.85,
           "needs_review": false,
           "dropped": null
         },
@@ -334,7 +335,7 @@
           "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.37,
+          "second_opinion_p_yes": 0.36,
           "needs_review": false,
           "dropped": null
         },
@@ -349,7 +350,7 @@
               "text": "For this ARR project activity, Face in 1999 commissioned Meijer to carry out a \nbaseline study whose results show that changes in the carbon stocks for both \nabove and below ground biomass are expected not to exceed actual net GHG \nremovals by sinks and are therefore assumed to be zero in the absence of the \nproject activity. Hence the formula above is only applied to multiply the 5.2 tonnes \nof carbon per hectare (adjusted from Meijer, 1999), which is the conservative \nvalue of the carbon stock in the stratum ‘banana plantation’, with the combined \narea Ai of stratum ‘Planted Area’ and ‘Regenerating Area’. The total area to be \nplanted during the crediting period is presented in Table 7.2 and has a size of \n6,000 hectares. In addition, the Regenerating Area is 2,593 hectares. The \ncombined area is therefore 8,593 hectares. As the baseline is in a steady state, \nthere is no increases in GHG removals. See Annex III for details on the estimation, \nand the spreadsheet ´ Kibale Baseline Recalculation_082711 ´, which details the \ncalculation of the mean tree carbon stock in the baseline, based on inventory data \nby Meijer in 1999. In addition, the carbon stock changes in dead wood, litter and \nsoil organic matter are conservatively assumed to be zero based on the \nmethodology applied."
             }
           ],
-          "second_opinion_p_yes": 0.93,
+          "second_opinion_p_yes": 0.92,
           "needs_review": false,
           "dropped": null
         },
@@ -451,7 +452,7 @@
               "text": "The project has not sought or received any other form of GHG-related environmental credit other than under \nthe VCS Program. Also, it has not been registered, and is not seeking registration, with any GHG program \nother than the VCS."
             }
           ],
-          "second_opinion_p_yes": 0.8,
+          "second_opinion_p_yes": 0.82,
           "needs_review": false,
           "dropped": null
         },
@@ -607,7 +608,7 @@
               "text": "During the remote audit process AENOR could confirm that the project protects the rights of Indigenous \nPeoples, communities and other stakeholders in accordance to the Climate, Community & Biodiversity \nStandards and the validated project design."
             }
           ],
-          "second_opinion_p_yes": 0.85,
+          "second_opinion_p_yes": 0.84,
           "needs_review": false,
           "dropped": null
         }
@@ -705,5 +706,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T16:53:52+00:00"
+  "generated_at": "2026-10-19T17:47:18+00:00"
 }

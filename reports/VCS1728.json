@@ -29,12 +29,13 @@
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
     "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "injection_screen": "injection-screen-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
   "principles": [
     {
       "principle": "additionality",
@@ -240,7 +241,7 @@
           "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.36,
+          "second_opinion_p_yes": 0.37,
           "needs_review": false,
           "dropped": null
         },
@@ -249,7 +250,7 @@
           "question": "Does the text address uncertainty or the use of conservative assumptions in the emission reduction estimate?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.61,
+          "second_opinion_p_yes": 0.62,
           "needs_review": true,
           "dropped": null
         },
@@ -264,7 +265,7 @@
               "text": "The Net electricity exported to the grid will be cross checked \nagainst the invoice raised by the PP towards the DISCOM"
             }
           ],
-          "second_opinion_p_yes": 0.79,
+          "second_opinion_p_yes": 0.82,
           "needs_review": false,
           "dropped": null
         }
@@ -379,7 +380,7 @@
           "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.46,
+          "second_opinion_p_yes": 0.47,
           "needs_review": false,
           "dropped": null
         },
@@ -394,7 +395,7 @@
               "text": "The Project has no intend to generate any other form of GHG-related environmental credit for \nGHG emission reductions or removals claimed under the VCS Program."
             }
           ],
-          "second_opinion_p_yes": 0.93,
+          "second_opinion_p_yes": 0.92,
           "needs_review": false,
           "dropped": null
         },
@@ -503,7 +504,7 @@
           "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.25,
+          "second_opinion_p_yes": 0.26,
           "needs_review": false,
           "dropped": null
         },
@@ -572,5 +573,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T16:50:58+00:00"
+  "generated_at": "2026-10-19T17:47:10+00:00"
 }

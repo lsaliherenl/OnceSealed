@@ -29,12 +29,13 @@
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
     "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "injection_screen": "injection-screen-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
   "principles": [
     {
       "principle": "additionality",
@@ -56,7 +57,7 @@
           "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.61,
+          "second_opinion_p_yes": 0.6,
           "needs_review": true,
           "dropped": null
         },
@@ -71,7 +72,7 @@
               "text": "1. There \nis \nno \ngovernment \nmandated programme or policy \nin South Africa ensuring the \ndistribution \nof \nnew \nproject \nactivity \ninstances \nor \nfuel \nefficient cookstoves."
             }
           ],
-          "second_opinion_p_yes": 0.66,
+          "second_opinion_p_yes": 0.62,
           "needs_review": false,
           "dropped": null
         },
@@ -80,7 +81,7 @@
           "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.1,
+          "second_opinion_p_yes": 0.11,
           "needs_review": false,
           "dropped": null
         }
@@ -223,7 +224,7 @@
               "text": "Bold \ntonnes/year \n5.49 \nQuantity of biomass \nconsumed in baseline"
             }
           ],
-          "second_opinion_p_yes": 0.8,
+          "second_opinion_p_yes": 0.79,
           "needs_review": false,
           "dropped": null
         },
@@ -724,7 +725,7 @@
               "text": "This is a new project and has not been registered or seeking registration under any other \nGHG programs."
             }
           ],
-          "second_opinion_p_yes": 0.75,
+          "second_opinion_p_yes": 0.77,
           "needs_review": false,
           "dropped": null
         },
@@ -744,7 +745,7 @@
               "text": "The project has not sought, nor received another form of GHG-related environmental \ncredit."
             }
           ],
-          "second_opinion_p_yes": 0.88,
+          "second_opinion_p_yes": 0.86,
           "needs_review": false,
           "dropped": null
         },
@@ -753,7 +754,7 @@
           "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.08,
+          "second_opinion_p_yes": 0.07,
           "needs_review": false,
           "dropped": null
         }
@@ -873,7 +874,7 @@
           "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.76,
+          "second_opinion_p_yes": 0.77,
           "needs_review": true,
           "dropped": null
         },
@@ -888,7 +889,7 @@
               "text": "1) The project proponent \nshall \nrecognize, \nrespect and support \nlocal \nstakeholders’ \nproperty \nrights \nand \nwhere feasible, take \nmeasures \nto \nhelp \nsecure \nrights. \nThe \nproject \nshall \nnot \nencroach on private, \nstakeholder \nor \ngovernment property \nor relocate people off \ntheir \nlands \nwithout \nconsent. The project \nmay affect property \nrights if free, prior and \ninformed consent is \nobtained from those \nconcerned \nand \na"
             }
           ],
-          "second_opinion_p_yes": 0.86,
+          "second_opinion_p_yes": 0.85,
           "needs_review": false,
           "dropped": null
         }
@@ -1043,5 +1044,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T16:49:08+00:00"
+  "generated_at": "2026-10-19T17:47:05+00:00"
 }

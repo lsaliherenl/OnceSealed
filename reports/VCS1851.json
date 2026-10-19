@@ -35,12 +35,13 @@
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
     "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "injection_screen": "injection-screen-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
   "principles": [
     {
       "principle": "additionality",
@@ -68,8 +69,8 @@
           "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.46,
-          "needs_review": false,
+          "second_opinion_p_yes": 0.5,
+          "needs_review": true,
           "dropped": null
         },
         {
@@ -77,7 +78,7 @@
           "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.52,
+          "second_opinion_p_yes": 0.53,
           "needs_review": true,
           "dropped": null
         },
@@ -86,7 +87,7 @@
           "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.51,
+          "second_opinion_p_yes": 0.53,
           "needs_review": true,
           "dropped": null
         }
@@ -101,6 +102,7 @@
       ],
       "dropped_findings": 0,
       "review_flags": [
+        "models_disagree:A2",
         "models_disagree:A3",
         "models_disagree:A4"
       ],
@@ -197,7 +199,7 @@
           "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.48,
+          "second_opinion_p_yes": 0.46,
           "needs_review": false,
           "dropped": null
         },
@@ -212,7 +214,7 @@
               "text": "The above estimated emission reduction is confirmed by assessment team via emission reduction \ncalculation spreadsheet. The calculation is conservative and this acceptable to the assessment team."
             }
           ],
-          "second_opinion_p_yes": 0.87,
+          "second_opinion_p_yes": 0.86,
           "needs_review": false,
           "dropped": null
         },
@@ -227,7 +229,7 @@
               "text": "The meters is approved, tested & sealed by the State Utility. The \nmeters are in the custody of State Utility. The frequency of \ncalibration is once in 5 years. 68 The monthly electricity \nsupplied/exported by the project activity in the JMR report is \ncross checked with the monthly invoices of sale. In the absence \nor delay in the meter calibration appropriate Guidelines will be \napplied appropriately to confirm the conservativeness of \nmetering.  \n \nThe metering arrangement, accuracy class of meters, calibration \nfrequency is under control of state electricity board and PP do not \nhave any control on it. PP is getting value of net electricity \nsupplied to grid and the same is considered the monitoring \nparameter.  \n \nThe billing is raised based on substation meters. \nPurpose of data \nCalculation of baseline emissions"
             }
           ],
-          "second_opinion_p_yes": 0.95,
+          "second_opinion_p_yes": 0.96,
           "needs_review": false,
           "dropped": null
         }
@@ -335,7 +337,7 @@
               "text": "The project has neither been registered nor seeking registration under any other GHG programs. The \nproject is seeking registration only in VCS program. Audit team checked the REC Mechanism database of \nIndia and found that the project activity is not accredited / registered under REC mechanism. Further,"
             }
           ],
-          "second_opinion_p_yes": 0.85,
+          "second_opinion_p_yes": 0.86,
           "needs_review": false,
           "dropped": null
         },
@@ -374,7 +376,7 @@
           "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.18,
+          "second_opinion_p_yes": 0.25,
           "needs_review": false,
           "dropped": null
         }
@@ -521,7 +523,7 @@
               "text": "The project activity is expected to have positive impacts and no significant adverse environmental \nimpacts are foreseen. Since, the project activity is an electricity generation from renewable source (i.e. \nsolar energy) therefore no negative impact are envisaged. There is no mandatory legal requirement for \ncarrying out an environmental impact assessment in the host country. The Ministry of Environment, \nForests & Climate change (MoEFCC), Government of India (GoI) notification 15 dated 14/09/2006 \nregarding the requirement of Environment Impact Assessment (EIA) studies states that any project \ndeveloper in India needs to file an application to the Ministry of Environment and Forests (including a \npublic hearing and an EIA) in case the proposed industry or project is listed in a predefined list. The list \nincludes thirty nine project activities that require EIA studies. The solar power projects are not included in \nthis list and thus an EIA study is not required."
             }
           ],
-          "second_opinion_p_yes": 0.9,
+          "second_opinion_p_yes": 0.91,
           "needs_review": false,
           "dropped": null
         },
@@ -530,7 +532,7 @@
           "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.22,
+          "second_opinion_p_yes": 0.2,
           "needs_review": false,
           "dropped": null
         }
@@ -632,5 +634,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T16:47:59+00:00"
+  "generated_at": "2026-10-19T17:46:59+00:00"
 }

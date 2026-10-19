@@ -8,6 +8,8 @@ Layer 2  evidence checklist  per principle, a code-selected excerpt and the chec
                              gold set (docs/ai_evaluation.md), through the same code (core.ai.checklist_models).
 Layer 3  principle status    deterministic: how many of the principle's checks found evidence
 
+Paragraphs that read as instructions to an AI model are screened out of every excerpt first (core.ai.injection).
+
 The report is published as JSON; its keccak256 over canonical JSON goes on-chain
 together with ``method_hash``, which pins the models, questions, prompt and excerpt rule used.
 """
@@ -25,6 +27,7 @@ from core.ai.checklist import BY_PRINCIPLE, QUESTION_SET_VERSION
 from core.ai.checklist_models import (CHECKLIST_PROMPT_VERSION, EVIDENCE_RULE, Answer, ChecklistResult,
                                       JevChecklist, LLMChecklist)
 from core.ai.methodology import load_table, methodology_status
+from core.ai.injection import SCREEN_VERSION, screen
 from core.ai.pdf_extract import Document, Paragraph
 from core.ai.principles import BY_KEY, PRINCIPLES
 from core.ai.select import select_paragraphs
@@ -159,7 +162,8 @@ def build_report(
         if key == "permanence" and project.get("reversal_risk") is False:
             principles.append(not_applicable_by_rule(key))
             continue
-        paragraphs = excerpt(doc, key)
+        # instruction-like paragraphs (prompt injection) never reach a model; they are listed for a person
+        paragraphs, screened_out = screen(excerpt(doc, key))
         result, cached = _cached_checklist(doc, key, paragraphs, llm, cache_dir)
         run_log["llm"].append({"principle": key, "cached": cached, "served_model": result.served_model,
                                "cost": None if cached else result.cost, "calls": result.calls})
@@ -173,6 +177,9 @@ def build_report(
                 log.warning("second opinion failed for %s: %s", key, e)
                 run_log["second_opinion"].append({"principle": key, "error": str(e)})
         entry = judge_principle(key, paragraphs, result, probs)
+        if screened_out:
+            entry["screened_out"] = screened_out
+            entry["review_flags"].append("instruction_like_text")
         if second is not None and probs is None:
             entry["review_flags"].append("second_opinion_failed")
         principles.append(entry)
@@ -183,6 +190,7 @@ def build_report(
         "prompt_version": CHECKLIST_PROMPT_VERSION,
         "evidence_rule": EVIDENCE_RULE,
         "excerpt_rule": EXCERPT_RULE,
+        "injection_screen": SCREEN_VERSION,
         "llm_model": llm.name,
         "second_opinion_model": second.name if second else None,
         "methodology_table_version": load_table()["table_version"],

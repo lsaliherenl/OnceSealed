@@ -29,12 +29,13 @@
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
     "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "injection_screen": "injection-screen-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
   "principles": [
     {
       "principle": "additionality",
@@ -92,7 +93,7 @@
           "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.35,
+          "second_opinion_p_yes": 0.38,
           "needs_review": false,
           "dropped": null
         }
@@ -275,7 +276,7 @@
               "text": "Table 6-9 the calculation result of 𝐿𝐸𝐵𝐿,𝑁2𝑂,𝑦, 𝐿𝐸𝑃𝐽,𝑁2𝑂,𝑦, 𝐿𝐸𝐵𝐿,𝐶𝐻4,𝑦 𝑎𝑛𝑑 𝐿𝐸𝑃𝐽,𝐶𝐻4,𝑦"
             }
           ],
-          "second_opinion_p_yes": 0.94,
+          "second_opinion_p_yes": 0.95,
           "needs_review": false,
           "dropped": null
         },
@@ -679,7 +680,7 @@
               "text": "The project has neither been registered nor seeking registration under any other GHG programs. \nThe project is seeking registration only in VCS program."
             }
           ],
-          "second_opinion_p_yes": 0.81,
+          "second_opinion_p_yes": 0.79,
           "needs_review": false,
           "dropped": null
         },
@@ -703,7 +704,7 @@
           "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.13,
+          "second_opinion_p_yes": 0.12,
           "needs_review": false,
           "dropped": null
         }
@@ -790,7 +791,7 @@
               "text": "Local stakeholder consultation was conducted by project owner before the construction of the \nproject and during the monitoring period through the means of questionnaire. \nLocal stakeholder consultation before the construction of the project \nIn order to solicit the opinions and attitudes of various stakeholders on the construction of this \nproject, the project owner issued a stakeholder survey opinion form at each project site from 04-\nNovember-2019 to 09-November-2019 investigate the opinions of local residents on the \nconstruction of this project. Since the farm has been in operation for a long time, local \nstakeholders or farmers have a better understanding of the situation of the farm. Therefore, for \nthe stakeholder investigation of the project which can bring economic and environment benefits \nto the local people, the Local stakeholders or farmers is more willing to participate in the survey. \nThe questionnaire mainly contains the following content: \n1. Do you know the purpose of this project? \n2. What do you think is the impact of the implementation of this project on the local environment? \n3. What impact do you think the implementation of this project will have on your life? \n4. Do you think the implementation of this project is in harmony with the local ecosystem? \n5. What impact do you think the implementation of this project will have on the social economy? \n6. What effect do you think the implementation of this project will have on local sustainable \ndevelopment? \n7. What effect do you think the implementation of this project will have on local employment? \n8. Do you think other regions should also vigorously promote this type of technology? \n9. Do you support the construction and implementation of this project? \n10. Do you have any suggestions and comments on this project? \nA total of 180 questionnaires were issued for this project, 20 copies for each project site, and \n180 copies were collected. The basic information about the survey respondents is listed in Table \n2-1.  \nTable 2-1 Structure of stakeholder survey"
             }
           ],
-          "second_opinion_p_yes": 0.98,
+          "second_opinion_p_yes": 0.97,
           "needs_review": false,
           "dropped": null
         },
@@ -829,7 +830,7 @@
           "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.27,
+          "second_opinion_p_yes": 0.25,
           "needs_review": false,
           "dropped": null
         }
@@ -923,5 +924,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T16:54:53+00:00"
+  "generated_at": "2026-10-19T17:47:21+00:00"
 }

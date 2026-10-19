@@ -44,12 +44,13 @@
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
     "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "injection_screen": "injection-screen-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
   "principles": [
     {
       "principle": "additionality",
@@ -71,7 +72,7 @@
           "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.44,
+          "second_opinion_p_yes": 0.46,
           "needs_review": false,
           "dropped": null
         },
@@ -95,7 +96,7 @@
           "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.16,
+          "second_opinion_p_yes": 0.18,
           "needs_review": false,
           "dropped": null
         }
@@ -191,7 +192,7 @@
               "text": "Purpose of data \nCalculation of baseline and project emissions \nCalculation method \nThe value of 0.8872, registered in the Project Design Document \n(PD) under TOOL30 Version 4 for Rwanda, is adjusted to \naccount for uncertainty in accordance with VM0050. A 26% \nuncertainty discount is applied, resulting in the following \nadjusted value: \n0.8872 × (1−0.26) =0.6565 \nComments \nThis data has been fixed for entire crediting period. The applied \nfNRB value has been calculated by using the latest available data \nsources. As per the fNRB calculation done by PP, the value is \n91% however as a measure of conservativeness, PP used the \nfNRB value from another registered projects which was lesser \nthan 91%. Hence, the value has changed to 88.72% and finally \nto 0.6565 with uncertainty discount consideration."
             }
           ],
-          "second_opinion_p_yes": 0.75,
+          "second_opinion_p_yes": 0.76,
           "needs_review": false,
           "dropped": null
         },
@@ -200,7 +201,7 @@
           "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.34,
+          "second_opinion_p_yes": 0.36,
           "needs_review": false,
           "dropped": null
         },
@@ -255,7 +256,7 @@
               "text": "Data / Parameter \nη𝑜𝑙𝑑 \nData unit \nFraction \nDescription \nEfficiency of baseline stove \nSource of data \nCalculated using the Default value as specified in VMR0006 \nmethodology and the data obtained through the distribution \nsurveys \nDescription of \nmeasurement methods \nand procedures \napplied"
             }
           ],
-          "second_opinion_p_yes": 0.95,
+          "second_opinion_p_yes": 0.96,
           "needs_review": false,
           "dropped": null
         }
@@ -396,7 +397,7 @@
               "text": "☐  Yes  \n \n☒  No \nIf yes, provide all required evidence of no double claiming as outlined by the VCS Standard. \n \n1.17.3 Supply Chain (Scope 3) Emissions \nDo the project activities specified in Section 0 affect the emissions footprint of any product(s) \n(goods or services) that are part of a supply chain?"
             }
           ],
-          "second_opinion_p_yes": 0.81,
+          "second_opinion_p_yes": 0.8,
           "needs_review": false,
           "dropped": null
         },
@@ -405,7 +406,7 @@
           "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.14,
+          "second_opinion_p_yes": 0.13,
           "needs_review": false,
           "dropped": null
         }
@@ -534,7 +535,7 @@
           "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.67,
+          "second_opinion_p_yes": 0.69,
           "needs_review": true,
           "dropped": null
         },
@@ -664,5 +665,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T16:57:29+00:00"
+  "generated_at": "2026-10-19T17:47:31+00:00"
 }

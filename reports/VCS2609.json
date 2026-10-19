@@ -30,12 +30,13 @@
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
     "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "injection_screen": "injection-screen-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
   "principles": [
     {
       "principle": "additionality",
@@ -72,7 +73,7 @@
           "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.26,
+          "second_opinion_p_yes": 0.25,
           "needs_review": false,
           "dropped": null
         },
@@ -81,7 +82,7 @@
           "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.34,
+          "second_opinion_p_yes": 0.33,
           "needs_review": false,
           "dropped": null
         }
@@ -208,7 +209,7 @@
           "question": "Does the text give a specific buffer contribution (a percentage or a number of credits set aside)?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.32,
+          "second_opinion_p_yes": 0.36,
           "needs_review": false,
           "dropped": null
         },
@@ -373,7 +374,7 @@
               "text": "∆𝑪𝑵𝑬𝑻|𝑩𝑺𝑳,𝒕∗= ∑\n[ ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(𝟏)\n𝑷\n𝒑=𝟏\n+ ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(𝟐−𝟏𝟎) + ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(𝟏𝟏−𝟐𝟎) + ∆𝑪𝑵𝒆𝒕,𝒑|𝑩𝑺𝑳(+𝟏)]"
             }
           ],
-          "second_opinion_p_yes": 0.91,
+          "second_opinion_p_yes": 0.92,
           "needs_review": false,
           "dropped": null
         },
@@ -571,7 +572,7 @@
               "text": "The Kuamut Rainforest Conservation Project has not applied for or been rejected by any other GHG \nprograms."
             }
           ],
-          "second_opinion_p_yes": 0.86,
+          "second_opinion_p_yes": 0.87,
           "needs_review": false,
           "dropped": null
         },
@@ -679,7 +680,7 @@
               "text": "Since the inception of community engagements in late 2017, the project has held a total of 11 community \nworkshops and dialogue sessions, attended by a combined total of 488 community participants. \nCommunity engagements are conducted to achieve a variety of objectives, including: transparency and \ncommunication of project details and activities, gathering information on community socio-cultural \nconditions and history, generation of spatial data via participatory mapping, discussion of threats and \nconstraints faced by communities, and planning of future project activities in accordance with the principles \nof FPIC. Engagement sessions of this type are generally organised together with community leaders, who \nthen publicise the engagements in their respective communities and encourage participation."
             }
           ],
-          "second_opinion_p_yes": 0.42,
+          "second_opinion_p_yes": 0.4,
           "needs_review": true,
           "dropped": null
         },
@@ -841,5 +842,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T16:52:02+00:00"
+  "generated_at": "2026-10-19T17:47:14+00:00"
 }

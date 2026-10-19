@@ -29,12 +29,13 @@
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
     "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "injection_screen": "injection-screen-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
   "principles": [
     {
       "principle": "additionality",
@@ -62,7 +63,7 @@
               "text": "1. Piping, valves and controls for (a) conveying LFG from the District Facilities to the Project’s LFG \nprocessing equipment and (b) conveying any excess or otherwise unused LFG to the District \nFacilities for destruction in the District’s existing LFG flare \n2. A LFG processing system and related ancillaries and controls for conditioning the delivered LFG \nby removing moisture, and other contaminants prior to use of the LFG in the Project’s electric \npower generating equipment.  The moisture and contaminants are conveyed directly to the \nDistrict’s discharge piping to the New Bedford waste water treatment facility. \n3. Electric power generating equipment, including four Caterpillar model 3516 engine-generator sets \nand related ancillaries and controls for combusting the processed LFG fuel to produce \nmechanical energy for generating electric power \n4. Switchgear, transformers, relays and related controls and equipment for delivering the electric \npower to the local distribution utility,  Eversource Energy (formerly known as NSTAR) \n5. Buildings, enclosures, foundations, access-ways, fencing and related utilities and civil structures \nnecessarily associated with the above \n \nThe Project has the capacity to combust up to 40.2 MMBtu per hour or 1,326 scfm of LFG at 50 percent \nmethane.  Combustion of the LFG fuel in the engines creates mechanical shaft power that turns \nappropriately-matched electrical generators to generate up to 3.3 MW (net) of electricity.  The capacity of \nthe Project is based on the use of four Caterpillar model 3516 engine-generator sets rated nominally at \n825 kW (gross) per set.  Caterpillar internal combustion engine technology and its competitive analogs \nare widely available and have a long record of successful use in LFG applications over many decades \nand under a wide range of operating conditions.  Electricity generated at the Project is delivered to the \nregional power grid via an interconnection with the local electricity distribution company, Eversource \nEnergy (formerly known as NSTAR).  Waste heat from the generation of electricity is sold to an anaerobic \ndigestion facility off-site. \n \nWhile the specific age of each piece of Project equipment varies, all electricity generation plant equipment \nwas new and installed prior to the generation system becoming operational in November 2005.  No \nequipment associated with the Project is scheduled to be replaced within the second crediting period \nbased on its anticipated lifetime.  Routine maintenance will be conducted in accordance with the \nmanufacturer’s recommendations.   \n \nEquipment and piping associated with the LFG collection system range in age from the District Initial \nSystem installed in 2000 to the expanded system installed between 2002-2015.  Wells in older portions of \nthe Landfill may be closed due to decreasing methane levels.  If well replacement is needed, similar \nmaterials will be used and the efficiency or capacity of the well or piping will not be changed.  As of 2015, \n11 of the original District Initial System wells had been closed.  The original flare installed in 2000 is still in \noperation and is expected to require only routine maintenance over the second crediting period.   \n \nAppendix 1 provides a site plan and general arrangement of the Project.  The pictures below show some \nof its components."
             }
           ],
-          "second_opinion_p_yes": 0.45,
+          "second_opinion_p_yes": 0.39,
           "needs_review": true,
           "dropped": null
         },
@@ -167,7 +168,7 @@
               "text": "4.1 \nBaseline Emissions \n \nThe following equation is used to determine baseline emissions per ACM0001: \n \nBEy = BECH4,y + BEEC,y + BEHG, y + BENG,y (Eq. 1) \n \nWhere: \nBEy = Baseline emission in year y (tCO2e/yr) \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e/yr) \nBEEC,y = Baseline emissions associated with electricity generation in year y (tCO2e/yr) \nBEHG,y = Baseline emissions associated with heat generation in year y (tCO2e/yr) \nBENG,y = Baseline emissions associated with natural gas use in year y (tCO2e/yr) \n \nBaseline emissions associated with electricity generation and heat generation are excluded as the Project \nis not seeking carbon credits for the displacement of grid electricity or the beneficial reuse of the Project’s \nwaste heat.  The Project is only seeking credits for emissions reductions resulting from the destruction of \nmethane collected from the Landfill.  The Project does not include natural gas replacement so the final \nparameter is also not relevant.  The equation simplifies to: \n \nBEy = BECH4,y  (Project modified Eq.1) \n \nWhere: \nBEy = Baseline emission in year y (tCO2e) \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e) \n \nBaseline emissions of methane from the SWDS in year y are found as follows: \n \nBECH4,y = ((1-OXtop_layer) x FCH4,PJ,y – FCH,BL,y) x GWPCH4  (Eq. 2) \n \nWhere: \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e/yr) \nOXtop_layer = Fraction of methane in the LFG that would be oxidized in the top layer of the SWDS in the \nbaseline (dimensionless) \nFCH4,PJ,y = Amount of methane in the LFG which is flared and/or used in the project activity in year y \n(tCH4/yr) \nFCH,BL,y= Amount of methane in the LFG that would be flared in the baseline in year y (tCH4/yr)"
             }
           ],
-          "second_opinion_p_yes": 0.91,
+          "second_opinion_p_yes": 0.9,
           "needs_review": false,
           "dropped": null
         },
@@ -391,7 +392,7 @@
           "question": "Does the text describe a stakeholder consultation with specifics such as dates, places, participants or comments received?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.06,
+          "second_opinion_p_yes": 0.05,
           "needs_review": false,
           "dropped": null
         },
@@ -421,8 +422,8 @@
               "text": "6 \nENVIRONMENTAL IMPACT \n \nIn accordance with the requirements of the Massachusetts Environmental Policy Act (“MEPA”), prior to \nconstruction of the  Project and as a pre-requisite to Project permitting, CNBE submitted an \nEnvironmental Notification Form (“ENF”) to the Massachusetts Secretary of Environmental Affairs to \nenable the Secretary, acting through the MEPA Office (the state agency responsible for assessing the \npotential environmental impact of proposed projects pursuant to MEPA) to determine whether and to what \nextent any detailed environmental impact assessment of the Project should be required.  Based on its \nreview of the ENF, in February 2004 the MEPA Office determined and the Secretary certified that no \nEnvironmental Impact Report for the Project would be required."
             }
           ],
-          "second_opinion_p_yes": 0.5,
-          "needs_review": false,
+          "second_opinion_p_yes": 0.48,
+          "needs_review": true,
           "dropped": null
         },
         {
@@ -450,7 +451,9 @@
         }
       ],
       "dropped_findings": 0,
-      "review_flags": [],
+      "review_flags": [
+        "models_disagree:S3"
+      ],
       "excerpt": {
         "paragraphs": [
           "p2-02",
@@ -482,5 +485,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T16:48:13+00:00"
+  "generated_at": "2026-10-19T17:47:02+00:00"
 }

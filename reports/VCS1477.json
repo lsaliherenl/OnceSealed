@@ -29,12 +29,13 @@
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
     "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "injection_screen": "injection-screen-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
   "principles": [
     {
       "principle": "additionality",
@@ -86,7 +87,7 @@
           "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.37,
+          "second_opinion_p_yes": 0.38,
           "needs_review": false,
           "dropped": null
         }
@@ -401,7 +402,7 @@
               "text": "This section explains how the ex-ante estimations of expected project emissions are calculated. \nThe emissions will be recalculated for each monitoring period, reflecting any changes in the \nproject area during that period (deforestation, forest degradation, fires, change in drainage \nstatus or natural disturbances). For these re-calculations, the project will use the same strata \nand emission factors as those used below for the ex-ante calculations. These strata as well as \nany changes in the project area will be monitored for each monitoring period using a combination \nof field and remote sensing data, as explained in the monitoring plan, and results will be reported \nin each monitoring report."
             }
           ],
-          "second_opinion_p_yes": 0.96,
+          "second_opinion_p_yes": 0.97,
           "needs_review": false,
           "dropped": null
         }
@@ -551,7 +552,7 @@
           "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.34,
+          "second_opinion_p_yes": 0.38,
           "needs_review": false,
           "dropped": null
         },
@@ -679,7 +680,7 @@
               "text": "In our commitment to sustainable community engagement and the application of the \nprecautionary principle, we have established measures to mitigate potential negative impacts on \ncommunity well-being, particularly for vulnerable groups such as women, girls, children, and other \nmarginalised populations, as well as for the maintenance and enhancement of high conservation \nvalue (HCV) attributes related to community well-being.  \n \nCurrent and Future Measures for Community Well-being and Environmental Protection  \n \nParticipatory Planning and Consultation \nWe have implemented a participatory planning process, central to which are ongoing \nconsultations with community members. This approach facilitates the early identification and \ndiscussion of potential negative impacts, such as air and noise pollution, water discharges, waste \ngeneration, and the release of hazardous materials. By directly involving community members, \nespecially representatives of vulnerable groups, we ensure that our project design addresses \ntheir unique needs and concerns (UNDP, 2018; IFC Performance Standard 1). This collaborative \napproach promotes shared ownership of both the project and the outcomes, fostering trust and \ntransparency (WHO, 2020). \n \nProactive Risk Assessment and Precautionary Planning \nIn alignment with the precautionary principle (Rio Declaration, 1992), we conduct risk \nassessments that consider both scientifically substantiated risks and potential risks for which \nconclusive evidence may be lacking. This forward-looking strategy prioritises preventive action, \nensuring that we address potential threats to community well-being before they materialise \n(IPBES, 2019). This includes designing strategies to minimise emissions, control waste, and limit \nnoise, as well as implementing spill prevention protocols to protect water quality and prevent \ncontamination (IFC Performance Standard 4). \n \nMonitoring and Responsive Adaptation \nBased on our ongoing monitoring and insights gathered through team interactions with the \ncommunity, no significant adverse effects have been recorded to date. However, we remain \nvigilant. Monitoring systems are in place to identify early signs of potential impacts on community \nwell-being or HCV attributes, allowing us to adapt our strategies as needed (HCV Resource \nNetwork). By prioritising community feedback, we ensure that adjustments are responsive to \nemerging issues or unforeseen challenges (IFC Performance Standard 1). \n \nSafety and Inclusivity Measures for Vulnerable Groups \nSpecific measures to safeguard women, girls, children, and other marginalised groups are \nembedded in our project design (UNDP, 2018). For example, we implement safe worksite \nprotocols (ILO, 1992), maintain accessible communication channels for reporting concerns, and \npromote training programmes on environmental safety and personal security (WHO, 2020). These \nproactive actions provide a secure environment and support community empowerment by \nequipping individuals with knowledge and resources to contribute to and benefit from the project \nsustainably. \n \nAlignment with the Precautionary Principle \nThese measures exemplify our commitment to the precautionary principle, where we prioritise the \nprevention of harm even in the absence of complete scientific certainty (Rio Declaration, 1992). \nOur approach reflects the belief that safeguarding community well-being and protecting \nenvironmental attributes are foundational to achieving sustainable, long-term outcomes (IPBES, \n2019). This forward-thinking stance ensures that the health, safety, and rights of all community \nmembers remain central to our operational philosophy."
             }
           ],
-          "second_opinion_p_yes": 0.51,
+          "second_opinion_p_yes": 0.54,
           "needs_review": false,
           "dropped": null
         },
@@ -771,5 +772,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T16:47:06+00:00"
+  "generated_at": "2026-10-19T17:46:56+00:00"
 }

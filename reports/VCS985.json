@@ -55,12 +55,13 @@
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
     "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "injection_screen": "injection-screen-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
   "principles": [
     {
       "principle": "additionality",
@@ -112,7 +113,7 @@
           "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.37,
+          "second_opinion_p_yes": 0.36,
           "needs_review": false,
           "dropped": null
         }
@@ -548,7 +549,7 @@
               "text": "1.12.3 Participation under Other GHG Programs (CCB: CL1.5) \nThis project is only seeking registration under the VCS and CCB programs.  CCB does not issue carbon \ncredits and the project is not seeking to register credits with any other program."
             }
           ],
-          "second_opinion_p_yes": 0.8,
+          "second_opinion_p_yes": 0.79,
           "needs_review": false,
           "dropped": null
         },
@@ -568,7 +569,7 @@
               "text": "1.12.2 Emissions Trading Programs and Other Binding Limits (CCB: CL1.5) \nThe avoided emissions from this project will not be used for compliance purposes in a regional or national \ncompliance program or to demonstrate conformance with a binding limit on GHG emissions.  Neither Peru \nnor regional or local governments have established a national target, a compliance program or a cap and \ntrade system."
             }
           ],
-          "second_opinion_p_yes": 0.95,
+          "second_opinion_p_yes": 0.94,
           "needs_review": false,
           "dropped": null
         },
@@ -679,8 +680,8 @@
               "text": "The MUF process has evolved over time. For the 2003 MUF, communities elected their local facilitator. \nDepending on the size of the community, more than one facilitator was elected. For example, for the 2003 \nMUF, 53 facilitators, 5% women, were hired for the two month period while for the 2008 MUF, 345 \ncommunity representatives were hired, 19% women. CIMA and The Field Museum personnel trained the \nfacilitators and community representatives on data collection and provided information regarding PNCAZ \nand CIMA. In 2003, facilitators collected data on social organizations and use of natural resources over a \ntwo month period, using community assemblies and household interviews to conduct structured and \nsemi-structured interviews. Eight focus groups were used in each community along with individual \ninterviews: four focus groups included residents of both genders and all age groups, two focus groups \nincluded only women, one group was of community leaders, and one included only specialists or experts \n(e.g., the best hunters). Individual interviews were conducted with health workers, teachers, and directors \nof the local school if one is present, and other significant individuals like shamans, healers, and \ncommunity leaders or founders. In 2008, a change was made to the process to improve data collection \nand workshops were held with community representatives from each geographic area. Three to four \nrepresentatives from each community participated in the process to update the data from the previous \nMUF."
             }
           ],
-          "second_opinion_p_yes": 0.51,
-          "needs_review": false,
+          "second_opinion_p_yes": 0.49,
+          "needs_review": true,
           "dropped": null
         },
         {
@@ -718,7 +719,7 @@
           "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.39,
+          "second_opinion_p_yes": 0.4,
           "needs_review": false,
           "dropped": null
         }
@@ -744,7 +745,9 @@
         }
       ],
       "dropped_findings": 0,
-      "review_flags": [],
+      "review_flags": [
+        "models_disagree:S1"
+      ],
       "excerpt": {
         "paragraphs": [
           "p3-01",
@@ -790,5 +793,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T16:56:41+00:00"
+  "generated_at": "2026-10-19T17:47:27+00:00"
 }
