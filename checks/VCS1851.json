@@ -10,6 +10,14 @@
     "pages": 128,
     "pages_without_text": [],
     "tables": 223
+   },
+   {
+    "role": "validation_report",
+    "file": "samples/pdfs/VCS1851_VAL1.pdf",
+    "sha256": "a78195cf89fbfaeacce435718f00b54aa294df89fedcec02086704263da398e6",
+    "pages": 87,
+    "pages_without_text": [],
+    "tables": 164
    }
   ],
   "offsetsdb_snapshot": "2026-06-01"
@@ -18,17 +26,16 @@
   {
    "id": "document_coverage",
    "title": "Documents read",
-   "status": "flag",
-   "summary": "Read: Project description (PD) ×1, Monitoring report ×1. Not read: Validation report (VVB), Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "status": "pass",
+   "summary": "Read: Project description (PD) ×1, Validation report (VVB) ×1, Monitoring report ×1, Verification report (VVB) ×1.",
    "details": {
     "held": {
      "project_description": 1,
-     "monitoring_report": 1
+     "validation_report": 1,
+     "monitoring_report": 1,
+     "verification_report": 1
     },
-    "missing": [
-     "validation_report",
-     "verification_report"
-    ]
+    "missing": []
    }
   },
   {

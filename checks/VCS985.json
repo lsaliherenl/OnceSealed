@@ -10,6 +10,54 @@
     "pages": 198,
     "pages_without_text": [],
     "tables": 136
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS985_MR1.pdf",
+    "sha256": "341fe342b5d5077f32dcc9f572095a5cb7e2e92aeae2d4555051ceb53b5373bd",
+    "pages": 81,
+    "pages_without_text": [],
+    "tables": 98
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS985_MR2.pdf",
+    "sha256": "9d73fbd7116c491803054f995987e397536aa09eba71ce811bbc48737ba24440",
+    "pages": 69,
+    "pages_without_text": [],
+    "tables": 101
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS985_MR3.pdf",
+    "sha256": "8681af7a38ecd1fa2c9307c60cc62c9e9aa7319c90642397468e87667005da3f",
+    "pages": 73,
+    "pages_without_text": [],
+    "tables": 97
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS985_MR4.pdf",
+    "sha256": "1bfd510e3d4c19d44872f8a801aa314a05472403758c07d47f054bdf4db85a42",
+    "pages": 158,
+    "pages_without_text": [],
+    "tables": 135
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS985_MR5.pdf",
+    "sha256": "3ac946d6676b4de6268107bb46065a65d6ef7b2937d26c51e229e0959e626536",
+    "pages": 184,
+    "pages_without_text": [],
+    "tables": 150
+   },
+   {
+    "role": "validation_report",
+    "file": "samples/pdfs/VCS985_VAL1.pdf",
+    "sha256": "e9205e6147e77ef53acd3a7376a512af85c1e1987d51358588c75733b30c98ab",
+    "pages": 47,
+    "pages_without_text": [],
+    "tables": 44
    }
   ],
   "offsetsdb_snapshot": "2026-06-01"
@@ -19,14 +67,14 @@
    "id": "document_coverage",
    "title": "Documents read",
    "status": "flag",
-   "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "summary": "Read: Project description (PD) ×1, Validation report (VVB) ×1, Monitoring report ×5. Not read: Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
    "details": {
     "held": {
-     "project_description": 1
+     "project_description": 1,
+     "validation_report": 1,
+     "monitoring_report": 5
     },
     "missing": [
-     "validation_report",
-     "monitoring_report",
      "verification_report"
     ]
    }
@@ -35,7 +83,7 @@
    "id": "issuance_vs_estimate",
    "title": "Issued credits vs the document's own yearly figures",
    "status": "flag",
-   "summary": "Issuance exceeds the document's own figures by more than 20% over 2009-2018: issued 27,135,368 t, document 15,752,684 t (1.72x, table on page 133). Ex-ante figures in a project description can legitimately differ from monitored results; the monitoring and verification reports explain the issued volume.",
+   "summary": "Issuance exceeds the document's own figures by more than 20% over 2009-2018: issued 27,135,368 t, document 15,752,684 t (1.72x, table on page 133, one of 4 tables). Ex-ante figures in a project description can legitimately differ from monitored results; the monitoring and verification reports explain the issued volume.",
    "details": {
     "ratio": 1.723,
     "candidates": [
@@ -110,6 +158,137 @@
          "document": 2915610.0,
          "issued": 6472949.0,
          "ratio": 2.22
+        }
+       ]
+      }
+     },
+     {
+      "file": "samples/pdfs/VCS985_MR2.pdf",
+      "table_id": "p62-t2",
+      "page": 62,
+      "column": "Estimated net GHG emission reductions or removals (tCO e) 2",
+      "rows_read": [
+       "2013 | 1,771,438",
+       "2014 | 2,374,091",
+       "Total 2013- 2014 | 4,145,529"
+      ],
+      "partial_years": [],
+      "multi_year_rows": [],
+      "document_total": 4145529.0,
+      "comparison": {
+       "span": [
+        2013,
+        2014
+       ],
+       "document_sum": 4145529.0,
+       "issued_sum": 4145528.0,
+       "ratio": 1.0,
+       "per_vintage": [
+        {
+         "vintage": 2013,
+         "document": 1771438.0,
+         "issued": 1771437.0,
+         "ratio": 1.0
+        },
+        {
+         "vintage": 2014,
+         "document": 2374091.0,
+         "issued": 2374091.0,
+         "ratio": 1.0
+        }
+       ]
+      }
+     },
+     {
+      "file": "samples/pdfs/VCS985_MR4.pdf",
+      "table_id": "p85-t1",
+      "page": 85,
+      "column": "Net GHG emission reductions or removals (tCO e) 2",
+      "rows_read": [
+       "2015 | 3,374,248",
+       "2016 | 4,074,606",
+       "Total | 18,468,409"
+      ],
+      "partial_years": [],
+      "multi_year_rows": [
+       "2009-2012 | 6,413,412",
+       "2013-2014 | 4,606,143"
+      ],
+      "document_total": 18468409.0,
+      "comparison": {
+       "span": [
+        2015,
+        2016
+       ],
+       "document_sum": 7448854.0,
+       "issued_sum": 6703968.0,
+       "ratio": 0.9,
+       "per_vintage": [
+        {
+         "vintage": 2015,
+         "document": 3374248.0,
+         "issued": 3036823.0,
+         "ratio": 0.9
+        },
+        {
+         "vintage": 2016,
+         "document": 4074606.0,
+         "issued": 3667145.0,
+         "ratio": 0.9
+        }
+       ]
+      }
+     },
+     {
+      "file": "samples/pdfs/VCS985_MR5.pdf",
+      "table_id": "p87-t1",
+      "page": 87,
+      "column": "Net GHG emission reductions or removals (tCO e) 2",
+      "rows_read": [
+       "2015 | 3,374,248",
+       "2016 | 4,074,606",
+       "2017 | 4,489,836",
+       "2018 | 5,086,613",
+       "Total | 28,044,858"
+      ],
+      "partial_years": [],
+      "multi_year_rows": [
+       "2009-2012 | 6,413,412",
+       "2013-2014 | 4,606,143"
+      ],
+      "document_total": 28044858.0,
+      "comparison": {
+       "span": [
+        2015,
+        2018
+       ],
+       "document_sum": 17025303.0,
+       "issued_sum": 17217769.0,
+       "ratio": 1.011,
+       "per_vintage": [
+        {
+         "vintage": 2015,
+         "document": 3374248.0,
+         "issued": 3036823.0,
+         "ratio": 0.9
+        },
+        {
+         "vintage": 2016,
+         "document": 4074606.0,
+         "issued": 3667145.0,
+         "ratio": 0.9
+        },
+        {
+         "vintage": 2017,
+         "document": 4489836.0,
+         "issued": 4040852.0,
+         "ratio": 0.9
+        },
+        {
+         "vintage": 2018,
+         "document": 5086613.0,
+         "issued": 6472949.0,
+         "ratio": 1.273
         }
        ]
       }

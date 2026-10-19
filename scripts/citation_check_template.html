@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OnceSealed paragraph check</title>
+<style>
+  :root { --bg:#f7f7f5; --card:#ffffff; --ink:#1a1a19; --ink2:#55534e; --muted:#8a8780; --line:#e2e0d8;
+          --accent:#2a78d6; --yes:#1b7f4b; --no:#b3372f; --unc:#9a6b00; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#141413; --card:#1e1e1c; --ink:#f2f1ec; --ink2:#c3c2b7;
+          --muted:#8f8d86; --line:#33322f; --accent:#5a9be8; --yes:#3fb27a; --no:#e0645b; --unc:#d9a63a; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { position:sticky; top:0; z-index:2; background:var(--card); border-bottom:1px solid var(--line);
+           padding:10px 16px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+  header b { font-size:16px; }
+  .bar { flex:1; min-width:160px; height:8px; background:var(--line); border-radius:4px; overflow:hidden; }
+  .bar > div { height:100%; background:var(--accent); width:0; }
+  button { font:inherit; padding:6px 12px; border-radius:6px; border:1px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer; }
+  button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  main { max-width:860px; margin:0 auto; padding:16px; display:flex; flex-direction:column; gap:16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; }
+  .meta { color:var(--ink2); font-size:13px; margin-bottom:8px; }
+  .para { margin:0; white-space:pre-line; overflow-wrap:anywhere; }
+  .pid { font:12px ui-monospace, Consolas, monospace; color:var(--accent); }
+  .qid { font-weight:700; margin-right:6px; }
+  .tr { color:var(--ink2); font-size:14px; margin:4px 0; }
+  .hint { font-size:13px; color:var(--muted); margin:4px 0; }
+  .hint b { color:var(--ink2); }
+  .opts { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+  .opts label { border:1px solid var(--line); border-radius:6px; padding:6px 14px; cursor:pointer; }
+  .opts input { margin-right:6px; }
+  .opts input[value=yes]:checked + span { color:var(--yes); font-weight:700; }
+  .opts input[value=no]:checked + span { color:var(--no); font-weight:700; }
+  .opts input[value=unclear]:checked + span { color:var(--unc); font-weight:700; }
+  .nav { display:flex; justify-content:space-between; gap:8px; }
+  .intro { max-width:760px; margin:40px auto; padding:0 16px; }
+  .intro li { margin-bottom:6px; }
+  .keys { font-size:13px; color:var(--muted); }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const DATA = JSON.parse(document.getElementById('data').textContent);
+const UNITS = DATA.units;
+let annotator = null, labels = {}, idx = 0;
+
+// PDF text keeps the PDF's line breaks; join wrapped lines for reading (whitespace only, words unchanged).
+const NEW_ITEM = /^([•▪●·–]|-\s|\(?[a-z0-9ivx]{1,4}[.)]\s)/i;
+const ENDS_SENTENCE = /[.:;!?)]$/;
+function reflow(text) {
+  return text.replace(/\r/g, '').split(/\n\s*\n/).map(block => {
+    let out = '', prev = '', prevStartsLine = true;
+    for (const line of block.split('\n').map(l => l.trim()).filter(Boolean)) {
+      const heading = prevStartsLine && prev.length < 70 && /^[A-Z0-9]/.test(prev) && !ENDS_SENTENCE.test(prev) && /^[A-Z]/.test(line);
+      let startsLine = false;
+      if (!out) { out = line; startsLine = true; }
+      else if (NEW_ITEM.test(line) || heading) { out += '\n' + line; startsLine = true; }
+      else if (/[a-z]-$/.test(out) && /^[a-z]/.test(line)) out += line;
+      else out += ' ' + line;
+      prevStartsLine = startsLine || ENDS_SENTENCE.test(prev);
+      prev = line;
+    }
+    return out;
+  }).filter(Boolean).join('\n\n');
+}
+
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const storeKey = () => 'oncesealed-citations-' + annotator;
+function save() { try { localStorage.setItem(storeKey(), JSON.stringify(labels)); } catch (e) {} }
+function load() { try { return JSON.parse(localStorage.getItem(storeKey()) || '{}'); } catch (e) { return {}; } }
+const answered = () => UNITS.filter(u => labels[u.uid]).length;
+
+function intro() {
+  document.getElementById('app').innerHTML = `
+  <div class="intro card">
+    <h2>Paragraf kontrolü (${UNITS.length} madde)</h2>
+    <p>Her maddede bir soru ve belgeden tek bir paragraf var. Soru: <b>bu paragraf, tek başına, sorunun aradığı kanıtı içeriyor mu?</b></p>
+    <ul>${DATA.rules.map(r => `<li>${esc(r)}</li>`).join('')}</ul>
+    <p>Paragrafların bir kısmını model seçti, bir kısmı başka yerlerden; hangisinin hangisi olduğu gösterilmiyor. Model cevaplarına veya <code>key.json</code> dosyasına bakma.</p>
+    <p class="keys">Kısayollar: E = evet, H = hayır, B = belirsiz, ← → = önceki/sonraki. Cevaplar bu tarayıcıda saklanır; bitince “Dışa aktar”.</p>
+    <p><input id="name" placeholder="Adın" style="font:inherit;padding:6px 10px;border:1px solid var(--line);border-radius:6px">
+    <button class="primary" id="start">Başla</button></p>
+  </div>`;
+  document.getElementById('start').onclick = () => {
+    const n = document.getElementById('name').value.trim();
+    if (!n) return;
+    annotator = n; labels = load();
+    idx = Math.max(0, UNITS.findIndex(u => !labels[u.uid]));
+    render();
+  };
+}
+
+function render() {
+  const u = UNITS[idx], q = DATA.questions[u.question_id], cur = labels[u.uid] || '';
+  document.getElementById('app').innerHTML = `
+  <header><b>Paragraf kontrolü</b><span>${esc(annotator)}</span>
+    <div class="bar"><div style="width:${100 * answered() / UNITS.length}%"></div></div>
+    <span>${answered()} / ${UNITS.length}</span><button id="export">Dışa aktar</button></header>
+  <main>
+    <div class="card">
+      <div class="meta">${idx + 1}. madde · ${esc(u.project_id)} ${esc(u.project_name)} · sayfa ${u.page} · <span class="pid">${esc(u.paragraph_id)}</span></div>
+      <p class="para">${esc(reflow(u.text))}</p>
+    </div>
+    <div class="card">
+      <div><span class="qid">${u.question_id}</span>${esc(q.text)}</div>
+      <div class="tr">${esc(q.tr)}</div>
+      <div class="hint"><b>Evet:</b> ${esc(q.yes_if)}</div>
+      <div class="hint"><b>Hayır:</b> ${esc(q.no_if)}</div>
+      <div class="opts">
+        ${[['yes','Evet'],['no','Hayır'],['unclear','Belirsiz']].map(([v, t]) =>
+          `<label><input type="radio" name="a" value="${v}" ${cur === v ? 'checked' : ''}><span>${t}</span></label>`).join('')}
+      </div>
+    </div>
+    <div class="nav"><button id="prev" ${idx === 0 ? 'disabled' : ''}>← Önceki</button>
+      <button id="next" class="primary">${idx === UNITS.length - 1 ? 'Son' : 'Sonraki →'}</button></div>
+  </main>`;
+  document.querySelectorAll('input[name=a]').forEach(r => r.onchange = () => set(r.value));
+  document.getElementById('prev').onclick = () => go(-1);
+  document.getElementById('next').onclick = () => go(1);
+  document.getElementById('export').onclick = exportLabels;
+  window.scrollTo(0, 0);
+}
+
+function set(v) { labels[UNITS[idx].uid] = v; save(); render(); }
+function go(d) { idx = Math.min(UNITS.length - 1, Math.max(0, idx + d)); render(); }
+
+function exportLabels() {
+  const out = { annotator, kind: 'human', version: DATA.version, exported_at: new Date().toISOString(),
+                answered: answered(), total: UNITS.length,
+                labels: UNITS.filter(u => labels[u.uid]).map(u => ({ uid: u.uid, question_id: u.question_id,
+                        paragraph_id: u.paragraph_id, answer: labels[u.uid] })) };
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(out, null, 1)], { type: 'application/json' }));
+  a.download = 'citations_' + annotator.replace(/\W+/g, '_') + '.json';
+  a.click();
+}
+
+document.addEventListener('keydown', e => {
+  if (!annotator || e.target.tagName === 'INPUT' && e.target.type === 'text') return;
+  const k = e.key.toLowerCase();
+  if (k === 'e') set('yes'); else if (k === 'h') set('no'); else if (k === 'b') set('unclear');
+  else if (e.key === 'ArrowRight') go(1); else if (e.key === 'ArrowLeft') go(-1);
+});
+intro();
+</script>
+</body>
+</html>

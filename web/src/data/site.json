@@ -215,19 +215,32 @@
       "role": "project_description",
       "pages": 77,
       "tables": 44
+     },
+     {
+      "role": "monitoring_report",
+      "pages": 51,
+      "tables": 61
+     },
+     {
+      "role": "monitoring_report",
+      "pages": 59,
+      "tables": 63
+     },
+     {
+      "role": "verification_report",
+      "pages": 61,
+      "tables": 40
      }
     ],
     "missing_documents": [
-     "validation_report",
-     "monitoring_report",
-     "verification_report"
+     "validation_report"
     ],
     "results": [
      {
       "id": "document_coverage",
       "title": "Documents read",
       "status": "flag",
-      "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+      "summary": "Read: Project description (PD) ×1, Monitoring report ×2, Verification report (VVB) ×1. Not read: Validation report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
      },
      {
       "id": "issuance_vs_estimate",
@@ -462,11 +475,39 @@
       "role": "project_description",
       "pages": 198,
       "tables": 136
+     },
+     {
+      "role": "monitoring_report",
+      "pages": 81,
+      "tables": 98
+     },
+     {
+      "role": "monitoring_report",
+      "pages": 69,
+      "tables": 101
+     },
+     {
+      "role": "monitoring_report",
+      "pages": 73,
+      "tables": 97
+     },
+     {
+      "role": "monitoring_report",
+      "pages": 158,
+      "tables": 135
+     },
+     {
+      "role": "monitoring_report",
+      "pages": 184,
+      "tables": 150
+     },
+     {
+      "role": "validation_report",
+      "pages": 47,
+      "tables": 44
      }
     ],
     "missing_documents": [
-     "validation_report",
-     "monitoring_report",
      "verification_report"
     ],
     "results": [
@@ -474,13 +515,13 @@
       "id": "document_coverage",
       "title": "Documents read",
       "status": "flag",
-      "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+      "summary": "Read: Project description (PD) ×1, Validation report (VVB) ×1, Monitoring report ×5. Not read: Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
      },
      {
       "id": "issuance_vs_estimate",
       "title": "Issued credits vs the document's own yearly figures",
       "status": "flag",
-      "summary": "Issuance exceeds the document's own figures by more than 20% over 2009-2018: issued 27,135,368 t, document 15,752,684 t (1.72x, table on page 133). Ex-ante figures in a project description can legitimately differ from monitored results; the monitoring and verification reports explain the issued volume."
+      "summary": "Issuance exceeds the document's own figures by more than 20% over 2009-2018: issued 27,135,368 t, document 15,752,684 t (1.72x, table on page 133, one of 4 tables). Ex-ante figures in a project description can legitimately differ from monitored results; the monitoring and verification reports explain the issued volume."
      },
      {
       "id": "retired_vs_issued",
@@ -855,18 +896,20 @@
       "role": "project_description",
       "pages": 128,
       "tables": 223
+     },
+     {
+      "role": "validation_report",
+      "pages": 87,
+      "tables": 164
      }
     ],
-    "missing_documents": [
-     "validation_report",
-     "verification_report"
-    ],
+    "missing_documents": [],
     "results": [
      {
       "id": "document_coverage",
       "title": "Documents read",
-      "status": "flag",
-      "summary": "Read: Project description (PD) ×1, Monitoring report ×1. Not read: Validation report (VVB), Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+      "status": "pass",
+      "summary": "Read: Project description (PD) ×1, Validation report (VVB) ×1, Monitoring report ×1, Verification report (VVB) ×1."
      },
      {
       "id": "issuance_vs_estimate",
@@ -1653,11 +1696,24 @@
       "role": "project_description",
       "pages": 78,
       "tables": 98
+     },
+     {
+      "role": "monitoring_report",
+      "pages": 91,
+      "tables": 95
+     },
+     {
+      "role": "validation_report",
+      "pages": 100,
+      "tables": 101
+     },
+     {
+      "role": "monitoring_report",
+      "pages": 52,
+      "tables": 78
      }
     ],
     "missing_documents": [
-     "validation_report",
-     "monitoring_report",
      "verification_report"
     ],
     "results": [
@@ -1665,13 +1721,13 @@
       "id": "document_coverage",
       "title": "Documents read",
       "status": "flag",
-      "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
+      "summary": "Read: Project description (PD) ×1, Validation report (VVB) ×1, Monitoring report ×2. Not read: Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read."
      },
      {
       "id": "issuance_vs_estimate",
       "title": "Issued credits vs the document's own yearly figures",
       "status": "info",
-      "summary": "Over the whole span issuance is within 20% of the document (2022-2025: issued 8,551,795 t, document 7,257,613 t (1.18x, table on page 17)), though single vintages exceed it (2023, 2024)."
+      "summary": "Over the whole span issuance is within 20% of the document (2022-2025: issued 8,551,795 t, document 8,531,621 t (1.00x, table on page 22, one of 2 tables)), though single vintages exceed it (2023, 2024)."
      },
      {
       "id": "retired_vs_issued",
