@@ -54,3 +54,7 @@ docs/ai_evaluation_pilot.md
 # Downloaded registry documents waiting to be registered with scripts/add_document.py
 samples/incoming/
 
+
+# Internal team notes (Turkish), kept locally
+CLAUDE.md
+docs/presentation_notes.md
