@@ -13,7 +13,71 @@
       "sha256": "f2c4ea5cb1f617445cd4583a0835f21f3c853139bb9aff3df9f53e45c021b03f",
       "methodology": "VM0007",
       "methodology_version": "1.5",
-      "reversal_risk": true
+      "reversal_risk": true,
+      "extra_files": [
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "CCB_VCS_MonitoringReport_Final_30_March_2018.pdf",
+          "local_path": "samples/pdfs/VCS1477_MR1.pdf",
+          "sha256": "292a3bab5175c0b21815816fe7e30afa03188d4c585b3d21b0a051bd5241a4d4",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1477",
+          "period": "2017-01-01/2017-12-31"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "Katingan Project_Fourth Monitoring Report_REVISED_14_June_19_clean.pdf",
+          "local_path": "samples/pdfs/VCS1477_MR2.pdf",
+          "sha256": "aeac09df13f08276742222dfbb66e25d07f9bf0a36a0f43788f0d2be8171f70a",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1477",
+          "period": "2018-01-01/2018-12-31"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "VCS CCB Katingan Project Monitoring Report 2019 Final.pdf",
+          "local_path": "samples/pdfs/VCS1477_MR3.pdf",
+          "sha256": "398b7f92f48872be07b5ea85b5140178f9818703103be480ea90e732b3d4cb8f",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1477",
+          "period": "2019-01-01/2019-12-31"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "MON_REP_1477_01JAN2020_31DEC2020.pdf",
+          "local_path": "samples/pdfs/VCS1477_MR4.pdf",
+          "sha256": "a111fd9ac540085172c11b5f199b221c8e51a8c5e756503c624d863d98168106",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1477",
+          "period": "2020-01-01/2020-12-31"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "CCB VCS MR7 1477_01Jan2021-31-Dec2023_v4.pdf",
+          "local_path": "samples/pdfs/VCS1477_MR5.pdf",
+          "sha256": "9437a1bd69cb2977b82f204d1d91f66dec304442a58cee162caf7c0ba74ea49a",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1477",
+          "period": "2021-01-01/2023-12-31"
+        },
+        {
+          "role": "verification_report",
+          "doc_type": "Verification report (VVB)",
+          "file_name": "VERIF_REP_1477_01JAN2020_31DEC2020.pdf",
+          "local_path": "samples/pdfs/VCS1477_VER1.pdf",
+          "sha256": "d95cef6919eb610dcfe7a605700b8e16911d1d4ed993bee6bff99bcf916ebf36",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1477",
+          "period": "2020-01-01/2020-12-31"
+        },
+        {
+          "role": "validation_report",
+          "doc_type": "Validation report (VVB)",
+          "file_name": "VCS_PTRMU_Katingan_Validation Report051116_111821.pdf",
+          "local_path": "samples/pdfs/VCS1477_VAL1.pdf",
+          "sha256": "c65dad264cacb56be2d777fc71692afa4ba2122eac6a3d2a328fb1bb9f1b22fc",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1477"
+        }
+      ]
     },
     {
       "project_id": "VCS1851",
@@ -43,7 +107,8 @@
             "verification_report"
           ]
         }
-      ]
+      ],
+      "period": "2017-02-13/2018-10-25"
     },
     {
       "project_id": "VCS138",
@@ -57,7 +122,71 @@
       "sha256": "8c22eb7d83ff957fa785940a206c03b5adc4b0f7506ea2d98d5fd455ab44e104",
       "methodology": "ACM0001",
       "methodology_version": "16",
-      "reversal_risk": false
+      "reversal_risk": false,
+      "extra_files": [
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "MONIT_REP_138_01JAN2018_31DEC2018.pdf",
+          "local_path": "samples/pdfs/VCS138_MR1.pdf",
+          "sha256": "08ce2376d041a0c3060f715117087b4e4e11dd025dba825e9e0579a04c30529e",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/138",
+          "period": "2018-01-01/2018-12-31"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "CNBE VCS-Monitoring-Report-v4.1( 01Jan2022 - 30June 2022) (18July2022).pdf",
+          "local_path": "samples/pdfs/VCS138_MR2.pdf",
+          "sha256": "e3c5c88d8c48e02082cc7f8d293e8de2e1a901e68f3f02e0d0986edd92687813",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/138",
+          "period": "2022-01-01/2022-06-30"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "CNBE VCS-Monitoring-Report-v4.2 Period Jan 1- Sept 30 2023 (11March2024) V2 Nmb.pdf",
+          "local_path": "samples/pdfs/VCS138_MR3.pdf",
+          "sha256": "0ff3b9a43c16d8202e6753fa9ae750d66fa837eaca9ee801b05e62f5869d80af",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/138",
+          "period": "2023-01-01/2023-09-30"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "VCS MR Project ID 138 Version 4  01OCT2023-31DEC2023.docx (24Feb2025).pdf",
+          "local_path": "samples/pdfs/VCS138_MR4.pdf",
+          "sha256": "6f47c7cb0d8202d003d0c400ec97efcf19cb7f804d4832e06f5e20690cedb750",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/138",
+          "period": "2023-10-01/2023-12-31"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "VCS MR Project ID 138 Version 4 01JAN2024-31DEC2024.docx (16Jan2026).pdf",
+          "local_path": "samples/pdfs/VCS138_MR5.pdf",
+          "sha256": "460dad982d5823b8ac8744dd0afdfd12d6456ee5b6332e8490f459745c37b51a",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/138",
+          "period": "2024-01-01/2024-12-31"
+        },
+        {
+          "role": "verification_report",
+          "doc_type": "Verification report (VVB)",
+          "file_name": "VCS VerR 138 01Jan2024-31DEC2024.pdf",
+          "local_path": "samples/pdfs/VCS138_VER1.pdf",
+          "sha256": "d8c2a808dac9c4636a73b3574023cc9a384a62972411b396b9efc0959fd3e251",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/138",
+          "period": "2024-01-01/2024-12-31"
+        },
+        {
+          "role": "validation_report",
+          "doc_type": "Validation report (VVB)",
+          "file_name": "VALID_REP_138_16MAY2016.pdf",
+          "local_path": "samples/pdfs/VCS138_VAL1.pdf",
+          "sha256": "a2e44c524fd5b7626dfa1eb1afa3f5eb2089efcc9a09c97fca04eb95292dbe9d",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/138"
+        }
+      ]
     },
     {
       "project_id": "VCS2505",
@@ -71,7 +200,53 @@
       "sha256": "1d09240addf6b933de31de7492b798775ddf16183425b8d0eff00e6f0e5d810a",
       "methodology": "VMR0006",
       "methodology_version": null,
-      "reversal_risk": false
+      "reversal_risk": false,
+      "extra_files": [
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "VCS MR 2505 01082023-31012024_V1.8_Clean.pdf",
+          "local_path": "samples/pdfs/VCS2505_MR1.pdf",
+          "sha256": "9411c563c352965a2aff3f6cfe4df0bd0d0a174de37396b7b15b946563e7b620",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/2505",
+          "period": "2023-08-01/2024-01-31"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "VCS MR 2505 01022024-31072024_V1.12_clean.pdf",
+          "local_path": "samples/pdfs/VCS2505_MR2.pdf",
+          "sha256": "bd78fdd956957a28e28536b1218dc08c61c0559f7455adb6f2351c6d1a869f8f",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/2505",
+          "period": "2024-02-01/2024-07-31"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "VCS_MR6_2505_01082024-24012025_Round2_v1.9_Clean.pdf",
+          "local_path": "samples/pdfs/VCS2505_MR3.pdf",
+          "sha256": "a8460c6e506cb0c0cb361a4548c9e7359453b4c232cf5d8b9d8393abb333359a",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/2505",
+          "period": "2024-08-01/2025-01-24"
+        },
+        {
+          "role": "verification_report",
+          "doc_type": "Verification report (VVB)",
+          "file_name": "VCS VerR 2505 01022024-31072024-Clean.pdf",
+          "local_path": "samples/pdfs/VCS2505_VER1.pdf",
+          "sha256": "b5d8b4e8a6dfff60e63f0432e668861df5ea36a32f0c485fa09c1714d1467e6e",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/2505",
+          "period": "2024-02-01/2024-07-31"
+        },
+        {
+          "role": "validation_report",
+          "doc_type": "Validation report (VVB)",
+          "file_name": "2022_03_07 FVR_VERRA-R3-Clean.pdf",
+          "local_path": "samples/pdfs/VCS2505_VAL1.pdf",
+          "sha256": "888e0a7b314c8b3377122f6486344e0d7b96b8c28e2f19fd3b18009938b63943",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/2505"
+        }
+      ]
     },
     {
       "project_id": "VCS1742",
@@ -94,6 +269,41 @@
           "local_path": "samples/pdfs/VCS1742_CDM_PDD.pdf",
           "sha256": "5b628305c25ac13b2bb4020de96d072e3148701bb0e7635fbfe0b964ed7f0401",
           "role": "supporting"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "VCS MR 1742 JSW v03  20092021.pdf",
+          "local_path": "samples/pdfs/VCS1742_MR1.pdf",
+          "sha256": "3152518897bbe3e6fd4a0092012c968fb239ed92740e139cbea81f628f1c0cdd",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1742",
+          "period": "2020-05-01/2021-07-31"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "VCS MR 1742 01082022-31122022.pdf",
+          "local_path": "samples/pdfs/VCS1742_MR2.pdf",
+          "sha256": "ccc87f06ca7f46605f967f78636e1051cb71785e4cdc85bd8f5cc7aa2c0df547",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1742",
+          "period": "2022-08-01/2022-12-31"
+        },
+        {
+          "role": "verification_report",
+          "doc_type": "Verification report (VVB)",
+          "file_name": "VCS VeR 1742 01082022-31122022.pdf",
+          "local_path": "samples/pdfs/VCS1742_VER1.pdf",
+          "sha256": "40bfa16c294fc320cb67e4c376ad475d7d8e80204438dd10649ea202049797d5",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1742",
+          "period": "2022-08-01/2022-12-31"
+        },
+        {
+          "role": "validation_report",
+          "doc_type": "Validation report (VVB)",
+          "file_name": "4993 FValR.pdf",
+          "local_path": "samples/pdfs/VCS1742_VAL1.pdf",
+          "sha256": "f981d1542ca17af650bed2167c89c645ca2f34a7cf807807b8fcd00e20bd4e00",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1742"
         }
       ]
     },
@@ -110,7 +320,52 @@
       "methodology": "ACM0002",
       "methodology_version": "17.0",
       "reversal_risk": false,
-      "evaluation_set": "D1"
+      "evaluation_set": "D1",
+      "covers": [
+        "monitoring_report"
+      ],
+      "period": "2015-12-30/2017-11-24",
+      "extra_files": [
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "VCS-MR-1728_VKU.VER.129.23_VCS_1728-V-4 Clean.pdf",
+          "local_path": "samples/pdfs/VCS1728_MR1.pdf",
+          "sha256": "50769e4ec9524e2456407559a008d772f8486a7dabbbda98bae4c14daabe9708",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1728",
+          "period": "2022-04-01/2023-06-30"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "VCS MR 1728 01072023 -31032024.pdf",
+          "local_path": "samples/pdfs/VCS1728_MR2.pdf",
+          "sha256": "f39afd2507765e0dd987aceb2e58a3a320a62d47f5bcc96693b52b02e26bd2f5",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1728",
+          "period": "2023-07-01/2024-03-31"
+        },
+        {
+          "role": "verification_report",
+          "doc_type": "Verification report (VVB)",
+          "file_name": "VCS VerR 1728 01072023 -31032024.pdf",
+          "local_path": "samples/pdfs/VCS1728_VER1.pdf",
+          "sha256": "f039e8538c17d3c982b0e1aed819fb6ca30fff77e876f4cc14c45f42fba9dfb1",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1728",
+          "period": "2023-07-01/2024-03-31"
+        },
+        {
+          "role": "validation_report",
+          "doc_type": "Validation report (VVB)",
+          "file_name": "FVR _5117 (1).pdf",
+          "local_path": "samples/pdfs/VCS1728_VAL1.pdf",
+          "sha256": "ef7a63d6e2ddbadb5872ec4b206705a496f462af58577021c65bf245315a313a",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/1728",
+          "period": "2015-12-30/2017-11-24",
+          "covers": [
+            "verification_report"
+          ]
+        }
+      ]
     },
     {
       "project_id": "VCS2609",
@@ -125,7 +380,44 @@
       "methodology": "VM0010",
       "methodology_version": "1.4",
       "reversal_risk": true,
-      "evaluation_set": "D1"
+      "evaluation_set": "D1",
+      "extra_files": [
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "CCB_VCS_MON_REP_2609_25MAR2024.pdf",
+          "local_path": "samples/pdfs/VCS2609_MR1.pdf",
+          "sha256": "e37f5d94c4891328a12d3f31aa30fcd1b649b512cd085de49191e3dc6b1f5647",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/2609",
+          "period": "2015-12-11/2021-12-31"
+        },
+        {
+          "role": "monitoring_report",
+          "doc_type": "Monitoring report",
+          "file_name": "CCB VCS_2ndMR_Proj2609_01JAN2022_31DEC2023_v4_clean.pdf",
+          "local_path": "samples/pdfs/VCS2609_MR2.pdf",
+          "sha256": "7d21faa69ac01f043c36bf09398d0109755e09bed49727c82b666d6d6f2381cd",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/2609",
+          "period": "2022-01-01/2023-12-31"
+        },
+        {
+          "role": "verification_report",
+          "doc_type": "Verification report (VVB)",
+          "file_name": "CCB VCS VerR ID2609_01012022-31122023_13082025.pdf",
+          "local_path": "samples/pdfs/VCS2609_VER1.pdf",
+          "sha256": "df96f0fb75b832f4f3da4f3e7289a066ec0a6eb886df7cfdc95cabb70fe22ce7",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/2609",
+          "period": "2022-01-01/2023-12-31"
+        },
+        {
+          "role": "validation_report",
+          "doc_type": "Validation report (VVB)",
+          "file_name": "VALID_REP2609_11032023.pdf",
+          "local_path": "samples/pdfs/VCS2609_VAL1.pdf",
+          "sha256": "8133bde24904119e2134340c595bdfdbd26343909e0cb4390242d7c7987d231e",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/2609"
+        }
+      ]
     },
     {
       "project_id": "VCS673",
@@ -182,7 +474,25 @@
       "methodology": "ACM0010",
       "methodology_version": "8",
       "reversal_risk": false,
-      "evaluation_set": "D1"
+      "evaluation_set": "D1",
+      "covers": [
+        "monitoring_report"
+      ],
+      "period": "2020-08-05/2022-06-30",
+      "extra_files": [
+        {
+          "role": "validation_report",
+          "doc_type": "Validation report (VVB)",
+          "file_name": "VCS-Joint-VAL-VER_FVR_Muyuan FSW AWMS-clean.pdf",
+          "local_path": "samples/pdfs/VCS2846_VAL1.pdf",
+          "sha256": "f7177b4c45bb0c5da9e543f27d44135f91bad00e7324eaee5b5e8bba3ed873a2",
+          "url": "https://registry.verra.org/app/projectDetail/VCS/2846",
+          "period": "2020-08-05/2022-06-30",
+          "covers": [
+            "verification_report"
+          ]
+        }
+      ]
     },
     {
       "project_id": "VCS985",

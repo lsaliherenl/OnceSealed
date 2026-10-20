@@ -1,0 +1,828 @@
+{
+  "schema": "report-v2",
+  "project": {
+    "project_id": "VCS138",
+    "project_name": "Greater New Bedford LFG Utilization Project",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/138",
+    "methodology": "ACM0001",
+    "methodology_version": "16"
+  },
+  "document": {
+    "file_name": "PROJ_DESC_138_12MAY2016.pdf",
+    "sha256": "bab9be841b7f46df331480cf68e7fa3235716614c809533a889d2ec6d9ea54ba",
+    "pages": 920,
+    "extra_files": [
+      {
+        "file_name": "MONIT_REP_138_01JAN2018_31DEC2018.pdf",
+        "sha256": "08ce2376d041a0c3060f715117087b4e4e11dd025dba825e9e0579a04c30529e"
+      },
+      {
+        "file_name": "CNBE VCS-Monitoring-Report-v4.1( 01Jan2022 - 30June 2022) (18July2022).pdf",
+        "sha256": "e3c5c88d8c48e02082cc7f8d293e8de2e1a901e68f3f02e0d0986edd92687813"
+      },
+      {
+        "file_name": "CNBE VCS-Monitoring-Report-v4.2 Period Jan 1- Sept 30 2023 (11March2024) V2 Nmb.pdf",
+        "sha256": "0ff3b9a43c16d8202e6753fa9ae750d66fa837eaca9ee801b05e62f5869d80af"
+      },
+      {
+        "file_name": "VCS MR Project ID 138 Version 4  01OCT2023-31DEC2023.docx (24Feb2025).pdf",
+        "sha256": "6f47c7cb0d8202d003d0c400ec97efcf19cb7f804d4832e06f5e20690cedb750"
+      },
+      {
+        "file_name": "VCS MR Project ID 138 Version 4 01JAN2024-31DEC2024.docx (16Jan2026).pdf",
+        "sha256": "460dad982d5823b8ac8744dd0afdfd12d6456ee5b6332e8490f459745c37b51a"
+      },
+      {
+        "file_name": "VCS VerR 138 01Jan2024-31DEC2024.pdf",
+        "sha256": "d8c2a808dac9c4636a73b3574023cc9a384a62972411b396b9efc0959fd3e251"
+      },
+      {
+        "file_name": "VALID_REP_138_16MAY2016.pdf",
+        "sha256": "a2e44c524fd5b7626dfa1eb1afa3f5eb2089efcc9a09c97fca04eb95292dbe9d"
+      }
+    ]
+  },
+  "methodology_status": {
+    "code": "ACM0001",
+    "version": "16",
+    "status": "approved_with_conditions",
+    "summary": "ICVCM approved ACM0001 versions 15-19 for landfill gas projects, subject to additional criteria (including limits on electricity generation). Earlier versions are not eligible. Verra's successor VMR0016 was approved in August 2026.",
+    "sources": [
+      "https://verra.org/verras-rice-cultivation-and-landfill-gas-methodologies-receive-icvcm-approval/",
+      "https://verra.org/methodologies/acm0001-flaring-or-use-of-landfill-gas/"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v2",
+    "question_set_version": "qs-v2-checklist",
+    "prompt_version": "checklist-v1",
+    "evidence_rule": "yes-cites-excerpt-paragraph-v2",
+    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0) on the project description + select_paragraphs(budget_chars=15000, overview_chars=0) on the other documents",
+    "injection_screen": "injection-screen-v1",
+    "review_rule": "person-decides-flagged-checks-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "second_opinion_model": "typesafe/jev-1.13",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x05f2d815a67e7bfa5eba473409b663801b86b6fe07d2b1da7ae10c8d96d862e5",
+  "principles": [
+    {
+      "principle": "additionality",
+      "status": "partial_evidence",
+      "score": 25,
+      "rationale": "Evidence found for 1 of 4 checks (A3); not found in the excerpt: A1, A2, A4.",
+      "checks": [
+        {
+          "id": "A1",
+          "question": "Does the text report a quantified financial analysis: at least one numeric financial indicator (such as IRR or NPV) together with a benchmark or threshold value it is compared against?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.02,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A2",
+          "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.57,
+          "needs_review": true,
+          "dropped": null
+        },
+        {
+          "id": "A3",
+          "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p13-03",
+              "page": 13,
+              "text": "3.5 \nAdditionality \nIn accordance with VCS Standard Section 3.8.5.1, a full additionality review is not required for the \nrenewal of the crediting period.  Only regulatory surplus need be demonstrated again and this is \npresented in Section 1.11.  The Project is not required to collect and destroy LFG by any local, regional or \nnational regulation."
+            }
+          ],
+          "second_opinion_p_yes": 0.96,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A4",
+          "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.07,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "3.5 \nAdditionality \nIn accordance with VCS Standard Section 3.8.5.1, a full additionality review is not required for the \nrenewal of the crediting period.  Only regulatory surplus need be demonstrated again and this is \npresented in Section 1.11.  The Project is not required to collect and destroy LFG by any local, regional or \nnational regulation.",
+          "page": 13,
+          "paragraph_id": "p13-03",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [
+        "models_disagree:A2"
+      ],
+      "excerpt": {
+        "paragraphs": [
+          "p2-02",
+          "p5-02",
+          "p5-03",
+          "p7-02",
+          "p7-04",
+          "p7-05",
+          "p10-05",
+          "p10-06",
+          "p10-07",
+          "p11-04",
+          "p11-05",
+          "p12-20",
+          "p12-21",
+          "p13-02",
+          "p13-03",
+          "p13-04",
+          "p14-02",
+          "p14-03",
+          "p16-02",
+          "p17-02",
+          "p17-03",
+          "p21-04",
+          "p21-05",
+          "p26-16",
+          "x2-p155-01",
+          "x2-p155-02",
+          "x2-p155-03",
+          "x5-p24-05",
+          "x5-p24-06",
+          "x5-p24-07",
+          "x5-p25-02",
+          "x6-p7-13",
+          "x6-p7-14",
+          "x6-p10-05",
+          "x6-p10-06",
+          "x6-p10-07",
+          "x6-p10-08",
+          "x6-p11-02",
+          "x6-p11-03",
+          "x6-p11-04",
+          "x6-p11-05",
+          "x6-p23-15",
+          "x6-p23-16",
+          "x6-p23-17",
+          "x6-p32-12",
+          "x6-p32-13",
+          "x6-p32-14",
+          "x7-p2-05",
+          "x7-p5-07",
+          "x7-p23-06",
+          "x7-p23-07",
+          "x7-p23-08",
+          "x7-p26-02",
+          "x7-p26-03",
+          "x7-p26-04",
+          "x7-p26-11",
+          "x7-p26-12",
+          "x7-p68-10",
+          "x7-p68-11",
+          "x7-p70-04",
+          "x7-p70-05",
+          "x7-p70-06",
+          "x7-p70-07",
+          "x7-p70-10",
+          "x7-p70-13",
+          "x7-p71-04",
+          "x7-p71-05"
+        ],
+        "chars": 43913
+      }
+    },
+    {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "checks": [],
+      "quotes": [],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "rule": "no_reversal_risk"
+    },
+    {
+      "principle": "robust_quantification",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (Q1, Q2, Q3, Q4).",
+      "checks": [
+        {
+          "id": "Q1",
+          "question": "Does the text show how baseline emissions are calculated, with an equation, parameter values or a numeric result?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p15-03",
+              "page": 15,
+              "text": "4.1 \nBaseline Emissions \n \nThe following equation is used to determine baseline emissions per ACM0001: \n \nBEy = BECH4,y + BEEC,y + BEHG, y + BENG,y (Eq. 1) \n \nWhere: \nBEy = Baseline emission in year y (tCO2e/yr) \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e/yr) \nBEEC,y = Baseline emissions associated with electricity generation in year y (tCO2e/yr) \nBEHG,y = Baseline emissions associated with heat generation in year y (tCO2e/yr) \nBENG,y = Baseline emissions associated with natural gas use in year y (tCO2e/yr) \n \nBaseline emissions associated with electricity generation and heat generation are excluded as the Project \nis not seeking carbon credits for the displacement of grid electricity or the beneficial reuse of the Project’s \nwaste heat.  The Project is only seeking credits for emissions reductions resulting from the destruction of \nmethane collected from the Landfill.  The Project does not include natural gas replacement so the final \nparameter is also not relevant.  The equation simplifies to: \n \nBEy = BECH4,y  (Project modified Eq.1) \n \nWhere: \nBEy = Baseline emission in year y (tCO2e) \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e) \n \nBaseline emissions of methane from the SWDS in year y are found as follows: \n \nBECH4,y = ((1-OXtop_layer) x FCH4,PJ,y – FCH,BL,y) x GWPCH4  (Eq. 2) \n \nWhere: \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e/yr) \nOXtop_layer = Fraction of methane in the LFG that would be oxidized in the top layer of the SWDS in the \nbaseline (dimensionless) \nFCH4,PJ,y = Amount of methane in the LFG which is flared and/or used in the project activity in year y \n(tCH4/yr) \nFCH,BL,y= Amount of methane in the LFG that would be flared in the baseline in year y (tCH4/yr)"
+            },
+            {
+              "paragraph_id": "p15-04",
+              "page": 15,
+              "text": "GWPCH4 = Global warming potential of CH4 (tCO2e / tCH4) \n \nFor this Project, FCH4,PJ,y is the sum of the quantities of methane flared and used in power generation \nduring the year.  This term is calculated as follows according to Equation 3 from the methodology, \nmodified to remove the heat generation and natural gas distribution terms, which are not applicable to this \nProject.   \n \nFCH4,PJ,y = FCH4,flared,y + FCH4,EL,y  (modified Eq. 3) \n \nWhere: \nFCH4,PJ,y = Amount of methane in the LFG which is flared and/or used in the project activity in year y \n(tCH4/yr) \nFCH4,flared,y = Amount of methane in the LFG which is destroyed by flaring in year y (tCH4/yr) \nFCH4,EL,y  = Amount of methane in the LFG which is used for electricity generation in year y (tCH4/yr) \n \nAs described in the deviation section, the Project’s SCADA system is programmed to calculate the \nmethane gas flow in units of million British thermal units (MMBtu) using the real time standardized gas"
+            },
+            {
+              "paragraph_id": "p16-02",
+              "page": 16,
+              "text": "flow (at 68°F and one atmosphere of pressure), methane concentration, the gross heat content (higher \nheating value) of methane, and the actual temperature and pressure. CNBE determines the volume of \nmethane destroyed by converting the MMBtu values to total methane gas flow in standard cubic feet.  \nThe total methane flow in standard cubic feet is then translated into metric tons of methane using the \nUniversal Gas constant, the molecular weight of methane and a standard unit conversion factor.  This \nresult provides FCH4,EL,y . \n \nThe flare is available to destroy landfill gas if the energy system is not operating.  However, it has not \nbeen used in several years.  The flaring equations are included for completeness in case it is needed.  \nThe following equation determines the amount of methane, which is destroyed in flaring. \n \nFCH4,flared,y =FCH4,sent_flare,y -  PEflare,y /GWPCH4 \n \nWhere: \nFCH4,flared,y = Amount of methane in the LFG which is destroyed by flaring in year y (tCH4/yr) \nFCH4,sent_flare,y = Amount of methane in the LFG which is sent to the flare in year y (tCH4/yr) \nPEflare,y = Project emissions from flaring of the residual gas stream in year y (tCO2e/yr) determined \nfollowing the procedure described in the tool “Project emissions from flaring” \nGWPCH4 = Global warming potential of CH4 (tCO2e / tCH4) \n \nFCH4,sent_flare,y is determined in the same manner as FCH4,EL,y described above.   \n \nBaseline Emissions Reductions (FCH,BL,y) \n \nPer ACM0001, this Project falls under the requirements of Case 3 for the baseline system: No \nrequirement to destroy the methane and an existing LFG capture and destruction system. \n \nBecause “the amount of methane captured with the existing system can be monitored separately from the \namount captured under the Project, and the efficiency of the existing system is not impacted on by the \nProject system during the crediting period”, the amount of methane that would be flared in the baseline is \nequivalent to that collected and destroyed from the District Initial System.   \n \nFCH4,BL,y = FCH4,BL,sys,y   (Eq. 11) \n   \nFCH4,BL,sys,y  = FCH4,destroyed,y  (modified Eq.12) \n \nWhere: \nFCH4,BL,sys,y  = Amount of methane in LFG that would be flared in the baseline for year y for the case of an \nexisting LFG capture system ( t CH4/yr) \nFCH4,destroyed,y  = Amount of methane in the LFG which is destroyed in year y (t CH4/yr) \n \nThe subscript in the second half of Equation 12 has been modified to reflect the fact that the LFG is not \nflared in the Project.  Because electricity generation has a higher destruction efficiency than a flare, this is \na conservative modification that reflects actual Project operations. \n \nAs described in the deviation section, there is no flow meter installed on the collection pipe from the \nDistrict Initial System.  Given the collection system design and meter requirements, installing a meter at \nthis location would not produce reliable, meaningful results. Instead, well-head flow measurements are \ncollected manually two times each month.  These results are used to calculate the relative contribution of \nthe District Initial System to the overall flow of LFG destroyed by the engines.  This portion of the total \nflow represents FCH4,BL,y and will be calculated on a monthly basis and subtracted to account for the \namount of methane destroyed in the baseline scenario. \n \nEx Ante Estimate of Emission Reductions"
+            },
+            {
+              "paragraph_id": "x3-p31-06",
+              "page": 31,
+              "text": "• \nUNFCCC CDM \"Large scale Consolidated Methodology – Flaring or use of landfill \ngas\", ACM0001, Version 16.0 dated 16 October 2015. \n \nThe calculation methodology was applied to the calculation of emissions from methane contained \nwithin LFG which is generated from the decomposition of solid waste from within the landfill and \ncombusted during electricity generation or in a flare. \n \nFor this Project Activity the baseline emissions consist of those associated with the volume of LFG \nthat is destroyed in the flare and the engines to generate electricity. Further, the emissions \nassociated with the fraction of LFG related to the District Initial System, need to be subtracted as \nthis system was installed voluntarily as part of the baseline of the Project Activity. This subtraction \nof emissions is understood to occur in the baseline of the Project Activity. \n \nThe Baseline Emissions also include quantification of the fraction of methane in the LFG that \nwould be oxidized in the top layer of the landfill in the baseline. This is a dimensionless value (0.1) \nthat was available at validation and is therefore defined in the VCS PD. The Baseline Emissions \ncalculations are presented in Exhibits 1 and 2 and the equation is shown below: \nBaseline emissions of methane from the Project Activity in year y are found as follows:  \n \nBECH4,y = ((1-OXtop_layer) x FCH4,PJ,y – FCH4,PJ,y) x GWPCH4 (Eq. 2)  \n \nWhere:"
+            },
+            {
+              "paragraph_id": "x4-p39-07",
+              "page": 39,
+              "text": "UNFCCC CDM \"Large scale Consolidated Methodology – Flaring or use of landfill gas\", \nACM0001, Version 16.0 dated 16 October 2015. \n \nThe calculation methodology was applied to the calculation of emissions from methane contained \nwithin LFG which is generated from the decomposition of solid waste from within the landfill and \ncombusted during electricity generation or in a flare. \n \nFor this Project Activity the baseline emissions consist of those associated with the volume of LFG \nthat is destroyed in the flare and the engines to generate electricity. Further, the emissions \nassociated with the fraction of LFG related to the District Initial System, need to be subtracted as \nthis system was installed voluntarily as part of the baseline of the Project Activity. This subtraction \nof emissions is understood to occur in the baseline of the Project Activity.  Note that carbon stock \nchanges are not applicable as the emission reductions are permanent. \n \nThe Baseline Emissions also include quantification of the fraction of methane in the LFG that \nwould be oxidized in the top layer of the landfill in the baseline. This is a dimensionless value (0.1) \nthat was available at validation and is therefore defined in the VCS PD. The Baseline Emissions \ncalculations are presented in Exhibits 1 and 2 and the equation is shown below: \nBaseline emissions of methane from the Project Activity in year y are found as follows:  \n \nBECH4,y = ((1-OXtop_layer) x FCH4,PJ,y – FCH4,PJ,y) x GWPCH4 (Eq. 2)  \n \nBECH4,y = ((1-0.1) x 1,317.56 – 27.98) x 28 =  32,419"
+            },
+            {
+              "paragraph_id": "x4-p40-03",
+              "page": 40,
+              "text": "BECH4,y = Baseline emissions of methane from the SWDS in monitoring period y \n(tCO2e/monitoring period)  \nOXtop_layer = Fraction of methane in the LFG that would be oxidized in the top layer of the \nSWDS in the baseline (dimensionless)  \nFCH4,PJ,y = Amount of methane in the LFG which is flared and/or used in the project \nactivity in monitoring period y (tCH4/monitoring period)  \nFCH,BL,y= Amount of methane in the LFG that would be flared in the baseline in monitoring \nperiod y (tCH4/monitoring period)  \nGWPCH4 = Global warming potential of CH4 (tCO2e / tCH4) \n \nFor this Project, FCH4,PJ,y is the sum of the quantities of methane flared and used in power \ngeneration during the year. This term is calculated as follows according to Equation 3 from the \nmethodology, modified to remove the heat generation and natural gas distribution terms, which are \nnot applicable to this Project.  \n \nFCH4,PJ,y = FCH4,flared,y + FCH4,EL,y (modified Eq. 3)  \n \nFCH4,PJ,y = 0* + 1,317.56 = 1,317.56 tCH4/monitoring period \n \n* Note that the back-up flare did not operate for any significant period during the current verification \nperiod; therefore, emission reductions are not claimed from flaring. \n \nWhere:"
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q2",
+          "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p19-02",
+              "page": 19,
+              "text": "Per ACM0001, no leakage effects need to be accounted."
+            }
+          ],
+          "second_opinion_p_yes": 0.95,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q3",
+          "question": "Does the text address uncertainty or the use of conservative assumptions in the emission reduction estimate?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p14-03",
+              "page": 14,
+              "text": "1. A separate LFG meter is not present on each of the four combustion engines.  A single meter is \nused immediately before the piping splits to each engine.  This meter is continuously recording \ndata.  Operating data is tracked for each engine so it is possible to calculate the flow destroyed \nby each engine and to ensure that LFG is destroyed.  Flow controls are in place to ensure no \nLFG is sent to an engine that is not operating. This does not affect the conservativeness of the \nemissions reductions claimed. \n2. Ex-ante emissions reductions calculations use historic Project specific data as the basis for \nprojecting future emissions rather than the required CDM estimation tools.  Using real data allows \nthe estimations to be more accurate and reflect actual Project operating conditions.  his does not \naffect the conservativeness of the emissions reductions claimed but increases the accuracy of the \nex-ante projections ensuring the project is forecasting obtainable, appropriate emissions \nreductions.   \n3. There is no flow meter installed on the collection pipe from the District Initial System to separately \nmonitor the contribution of the original baseline system.  Given the collection system design and \nmeter requirements, installing a meter at this location would not produce reliable, meaningful \nresults. Instead, well-head flow measurements are collected manually two times each month.  \nThese results are used to calculate the relative contribution of the District Initial System to the \noverall flow of LFG destroyed by the engines.  This portion of the total flow represents FCH4,BL,y \nand will be calculated on a monthly basis and subtracted from the total flow to account for the \namount of methane destroyed in the baseline scenario.  This approach represents an accurate \nmeasurement of the flow because (a) the portion of the landfill that includes the District Initial \nSystem (Phase 1) is capped so no landfill gas can be passively emitted to the atmosphere, and \n(b) the remaining active wells from the District Initial System are located in such a way as to \nenable capture of all LFG generated within the sphere of influence of the District Initial System.  \nThis deviation decreases the conservativeness of the emissions reductions claimed but \nsignificantly increases the accuracy of the calculations as is allowable under VCS Standard v3.5, \nSection 3.5.1.   \n4. The Project uses the eGrid electricity emissions factor rather than the default emissions factor \nprovided in the CDM tool as explained in the project emissions section.  This deviation decreases \nthe conservativeness of the emissions reductions claimed but significantly increases the accuracy \nof the calculations as is allowable under VCS Standard v3.5, Section 3.5.1. \n \nThese deviations only apply to the monitoring and measurement portions of the Project."
+            },
+            {
+              "paragraph_id": "p16-02",
+              "page": 16,
+              "text": "flow (at 68°F and one atmosphere of pressure), methane concentration, the gross heat content (higher \nheating value) of methane, and the actual temperature and pressure. CNBE determines the volume of \nmethane destroyed by converting the MMBtu values to total methane gas flow in standard cubic feet.  \nThe total methane flow in standard cubic feet is then translated into metric tons of methane using the \nUniversal Gas constant, the molecular weight of methane and a standard unit conversion factor.  This \nresult provides FCH4,EL,y . \n \nThe flare is available to destroy landfill gas if the energy system is not operating.  However, it has not \nbeen used in several years.  The flaring equations are included for completeness in case it is needed.  \nThe following equation determines the amount of methane, which is destroyed in flaring. \n \nFCH4,flared,y =FCH4,sent_flare,y -  PEflare,y /GWPCH4 \n \nWhere: \nFCH4,flared,y = Amount of methane in the LFG which is destroyed by flaring in year y (tCH4/yr) \nFCH4,sent_flare,y = Amount of methane in the LFG which is sent to the flare in year y (tCH4/yr) \nPEflare,y = Project emissions from flaring of the residual gas stream in year y (tCO2e/yr) determined \nfollowing the procedure described in the tool “Project emissions from flaring” \nGWPCH4 = Global warming potential of CH4 (tCO2e / tCH4) \n \nFCH4,sent_flare,y is determined in the same manner as FCH4,EL,y described above.   \n \nBaseline Emissions Reductions (FCH,BL,y) \n \nPer ACM0001, this Project falls under the requirements of Case 3 for the baseline system: No \nrequirement to destroy the methane and an existing LFG capture and destruction system. \n \nBecause “the amount of methane captured with the existing system can be monitored separately from the \namount captured under the Project, and the efficiency of the existing system is not impacted on by the \nProject system during the crediting period”, the amount of methane that would be flared in the baseline is \nequivalent to that collected and destroyed from the District Initial System.   \n \nFCH4,BL,y = FCH4,BL,sys,y   (Eq. 11) \n   \nFCH4,BL,sys,y  = FCH4,destroyed,y  (modified Eq.12) \n \nWhere: \nFCH4,BL,sys,y  = Amount of methane in LFG that would be flared in the baseline for year y for the case of an \nexisting LFG capture system ( t CH4/yr) \nFCH4,destroyed,y  = Amount of methane in the LFG which is destroyed in year y (t CH4/yr) \n \nThe subscript in the second half of Equation 12 has been modified to reflect the fact that the LFG is not \nflared in the Project.  Because electricity generation has a higher destruction efficiency than a flare, this is \na conservative modification that reflects actual Project operations. \n \nAs described in the deviation section, there is no flow meter installed on the collection pipe from the \nDistrict Initial System.  Given the collection system design and meter requirements, installing a meter at \nthis location would not produce reliable, meaningful results. Instead, well-head flow measurements are \ncollected manually two times each month.  These results are used to calculate the relative contribution of \nthe District Initial System to the overall flow of LFG destroyed by the engines.  This portion of the total \nflow represents FCH4,BL,y and will be calculated on a monthly basis and subtracted to account for the \namount of methane destroyed in the baseline scenario. \n \nEx Ante Estimate of Emission Reductions"
+            },
+            {
+              "paragraph_id": "p18-02",
+              "page": 18,
+              "text": "Equations (2) and (3) of the electricity tool are omitted as calculation of the baseline and leakage \nelectricity consumption are not required by ACM0001.  Equations (4), (5), (6), (7) and (8) of the CDM tool \nare omitted as these are not relevant to the Project. \n \n \nThe flare uses landfill gas as an ignition source when necessary, \n \nFossil fuels used by Project activities include fuel used by landfill vehicles and diesel used in the \nemergency generator. Landfill vehicle use has not grown as a result of Project activities as was confirmed \nduring the first validation and can also be conservatively excluded. \n \nThe emergency generator is a diesel powered 150kW generator.  It is periodically tested and is used only \nwhen the Plant is not operating and no grid electricity is available.  Project emissions from the use of the \ngenerator will be calculated using the formulas required in the “Tool to calculate project or leakage CO2 \nemissions from fossil fuel combustion v2” as required by the methodology.   \n \nPEFC,j,y = Σ FCi,j,y X COEFi,y                             (Eq 1 in the Tool) \n \nWhere:  \nPEFC,j,y  = Are the CO2 emissions from fossil fuel combustion in process j during the year y (tCO2/yr); \nFCi,j,y  =  Is the quantity of fuel type i combusted in process j during the year y (mass or volume unit/yr); \nCOEFi,y  = Is the CO2 emission coefficient of fuel type i in year y (tCO2/mass or volume unit) \ni = Are the fuel types combusted in process j during the year y \n \nBecause the fuel type in this project is diesel and it is only used in one process, Equation 1 becomes: \n \nPEFC,y = (FCdiesel,y X COEFdiesel,y) \n \nThe CO2 emission coefficient COEFdiesel,y is then calculated based on the net calorific value and CO2 \nemission factor of the diesel (Option B), as follows:"
+            },
+            {
+              "paragraph_id": "x7-p25-13",
+              "page": 25,
+              "text": "The Project has addressed both sources of project emissions in \nthe revised PDD.  \nA deviation request has been made to exclude the emergency \ngenerator as a project emission source. Calculations \nsupporting this request have been included in the Ex Ante \nCalculation Spreadsheet. \nThe use of grid supplied electricity has been added to all \nrelevant portions of the PDD. 2014 usage has been included as \nan estimate for future project emissions in the Ex Ante \nCalculation Spreadsheet.  \nAs part of the VCS audit, the exclusion of the emissions from \nthe emergency generator was removed as a deviation request \nand included in the emission calculations. Supporting \ndocumentation and applicable parameters were added in to the \nVCS PDD as necessary. GHD reviewed the calculations and \nsupporting documentation and determined the data and \ncalculations performed were consistent with the Project and are \nconservative."
+            }
+          ],
+          "second_opinion_p_yes": 0.91,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q4",
+          "question": "Does the text describe a monitoring plan that names the parameters to be measured and how often or by what method?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p14-03",
+              "page": 14,
+              "text": "1. A separate LFG meter is not present on each of the four combustion engines.  A single meter is \nused immediately before the piping splits to each engine.  This meter is continuously recording \ndata.  Operating data is tracked for each engine so it is possible to calculate the flow destroyed \nby each engine and to ensure that LFG is destroyed.  Flow controls are in place to ensure no \nLFG is sent to an engine that is not operating. This does not affect the conservativeness of the \nemissions reductions claimed. \n2. Ex-ante emissions reductions calculations use historic Project specific data as the basis for \nprojecting future emissions rather than the required CDM estimation tools.  Using real data allows \nthe estimations to be more accurate and reflect actual Project operating conditions.  his does not \naffect the conservativeness of the emissions reductions claimed but increases the accuracy of the \nex-ante projections ensuring the project is forecasting obtainable, appropriate emissions \nreductions.   \n3. There is no flow meter installed on the collection pipe from the District Initial System to separately \nmonitor the contribution of the original baseline system.  Given the collection system design and \nmeter requirements, installing a meter at this location would not produce reliable, meaningful \nresults. Instead, well-head flow measurements are collected manually two times each month.  \nThese results are used to calculate the relative contribution of the District Initial System to the \noverall flow of LFG destroyed by the engines.  This portion of the total flow represents FCH4,BL,y \nand will be calculated on a monthly basis and subtracted from the total flow to account for the \namount of methane destroyed in the baseline scenario.  This approach represents an accurate \nmeasurement of the flow because (a) the portion of the landfill that includes the District Initial \nSystem (Phase 1) is capped so no landfill gas can be passively emitted to the atmosphere, and \n(b) the remaining active wells from the District Initial System are located in such a way as to \nenable capture of all LFG generated within the sphere of influence of the District Initial System.  \nThis deviation decreases the conservativeness of the emissions reductions claimed but \nsignificantly increases the accuracy of the calculations as is allowable under VCS Standard v3.5, \nSection 3.5.1.   \n4. The Project uses the eGrid electricity emissions factor rather than the default emissions factor \nprovided in the CDM tool as explained in the project emissions section.  This deviation decreases \nthe conservativeness of the emissions reductions claimed but significantly increases the accuracy \nof the calculations as is allowable under VCS Standard v3.5, Section 3.5.1. \n \nThese deviations only apply to the monitoring and measurement portions of the Project."
+            },
+            {
+              "paragraph_id": "p30-02",
+              "page": 30,
+              "text": "totals in units of million British thermal units on a higher heating value basis [MMBtu (HHV)] and thousand \nstandard cubic feet (KSCF) of LFG.  This data point provides information regarding the mixed landfill gas \nand biogas from the CRMC Bioenergy Facility (anaerobic digester system).   \n \nThe same calculation is made using data from the biogas feed pipe.  The difference between the total \nBtus entering the engines and the total Btus received from the biogas facility is the quantity attributed to \nthe LFG collected and is used in the calculations described previously in the PDD.  Because the \ncalculations for this project are based on the use of Btus rather than metric tonnes of methane as \ndiscussed in the deviation section, the value obtained by this approach is not skewed by the mixing of the \ngases prior to the measurement of the gas entering the engines.  \n \nFlow Measurements \n \nThe flow meters are located directly upstream of the destruction devices. One flow meter serves as the \nunit for flow meter measurements to the four engines, one unit for flow measurement of the biogas, and \none unit for flow meter measurements to the flare. Each flow meter is equipped with a totalizer that \nindicates the cumulative actual cubic feet of gas that have passed through that flow meter. \n \nThe Project uses an orifice plate flow meter purchased directly from its manufacturer, Lambda Square Inc \nfor the engine measurements.  The orifice plate flow meter is an Oripac® Model 5300 that determines flow \nbased on pressure differentials measured across a 5-inch diameter bore pressure differential plate \ninstalled in the Project’s 8-inch diameter LFG pipe.   The design data for the instrument specifies an \naccuracy of ± 0.6 percent of full scale and the capability of measuring flows from 0 to 1,600 actual cubic \nfeet per minute.  The performance of the instrument in the field is assured by the manufacturer on the \nbasis of bench scale testing in accordance with applicable design and methodologies prescribed by the \nInternational Standards Organization (ISO) and the American Society of Mechanical Engineers (ASME). \n \nThe Project uses an Omega PDF65 flow meter for measuring flow to the flare and a Dwyer Series DS-\n300 Flow Sensor, which is an averaging pitot tube, for measuring flow of the biogas. \n \nMethane Measurements \n \nThe methane content of the gas (LFG and biogas), on a percent volume basis, is measured at a sampling \nport in the main header pipe near the flow meter with the use of a California Analytical Instrument Non-\ndispersive infrared (NDIR) analyzer. The readings are also logged by the SCADA system once per \nminute.  \n \nThe methane content of the biogas is measured using a Hitech Model: IR600 Infra-Red Gas Analyzer. \n \nWellfield Measurements \n \nAt least twice a month, a trained operator balances the landfill gas collection wellfield. In the course of \nbalancing the system, the operator measures and records the methane content, carbon dioxide content, \noxygen content, landfill gas flow rate, landfill gas temperature, static pressure, and balance gas content. \nThese results are logged in an electronic file to document system performance as well as to determine \nthe percent contribution of LFG from the District Initial System. \n \n \nMeter Calibrations \n \nOn installation, CNBE performed initial calibrations of the instruments, under actual field conditions using \nthe USEPA Protocols described below. As a back-up to the flowmeter measurements, actual quantities of \nLFG destroyed in the Project engine-generators can be accurately calculated based on (a) the known \nengine heat rate (the number of British Thermal Units (Btus) required to produce a kilowatt hour electric \npower, (b) the measured heat content of the LFG fuel, and the metered electric power output of the \nProject."
+            }
+          ],
+          "second_opinion_p_yes": 0.96,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "4.1 \nBaseline Emissions \n \nThe following equation is used to determine baseline emissions per ACM0001: \n \nBEy = BECH4,y + BEEC,y + BEHG, y + BENG,y (Eq. 1) \n \nWhere: \nBEy = Baseline emission in year y (tCO2e/yr) \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e/yr) \nBEEC,y = Baseline emissions associated with electricity generation in year y (tCO2e/yr) \nBEHG,y = Baseline emissions associated with heat generation in year y (tCO2e/yr) \nBENG,y = Baseline emissions associated with natural gas use in year y (tCO2e/yr) \n \nBaseline emissions associated with electricity generation and heat generation are excluded as the Project \nis not seeking carbon credits for the displacement of grid electricity or the beneficial reuse of the Project’s \nwaste heat.  The Project is only seeking credits for emissions reductions resulting from the destruction of \nmethane collected from the Landfill.  The Project does not include natural gas replacement so the final \nparameter is also not relevant.  The equation simplifies to: \n \nBEy = BECH4,y  (Project modified Eq.1) \n \nWhere: \nBEy = Baseline emission in year y (tCO2e) \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e) \n \nBaseline emissions of methane from the SWDS in year y are found as follows: \n \nBECH4,y = ((1-OXtop_layer) x FCH4,PJ,y – FCH,BL,y) x GWPCH4  (Eq. 2) \n \nWhere: \nBECH4,y = Baseline emissions of methane from the SWDS in year y (tCO2e/yr) \nOXtop_layer = Fraction of methane in the LFG that would be oxidized in the top layer of the SWDS in the \nbaseline (dimensionless) \nFCH4,PJ,y = Amount of methane in the LFG which is flared and/or used in the project activity in year y \n(tCH4/yr) \nFCH,BL,y= Amount of methane in the LFG that would be flared in the baseline in year y (tCH4/yr)",
+          "page": 15,
+          "paragraph_id": "p15-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "GWPCH4 = Global warming potential of CH4 (tCO2e / tCH4) \n \nFor this Project, FCH4,PJ,y is the sum of the quantities of methane flared and used in power generation \nduring the year.  This term is calculated as follows according to Equation 3 from the methodology, \nmodified to remove the heat generation and natural gas distribution terms, which are not applicable to this \nProject.   \n \nFCH4,PJ,y = FCH4,flared,y + FCH4,EL,y  (modified Eq. 3) \n \nWhere: \nFCH4,PJ,y = Amount of methane in the LFG which is flared and/or used in the project activity in year y \n(tCH4/yr) \nFCH4,flared,y = Amount of methane in the LFG which is destroyed by flaring in year y (tCH4/yr) \nFCH4,EL,y  = Amount of methane in the LFG which is used for electricity generation in year y (tCH4/yr) \n \nAs described in the deviation section, the Project’s SCADA system is programmed to calculate the \nmethane gas flow in units of million British thermal units (MMBtu) using the real time standardized gas",
+          "page": 15,
+          "paragraph_id": "p15-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "flow (at 68°F and one atmosphere of pressure), methane concentration, the gross heat content (higher \nheating value) of methane, and the actual temperature and pressure. CNBE determines the volume of \nmethane destroyed by converting the MMBtu values to total methane gas flow in standard cubic feet.  \nThe total methane flow in standard cubic feet is then translated into metric tons of methane using the \nUniversal Gas constant, the molecular weight of methane and a standard unit conversion factor.  This \nresult provides FCH4,EL,y . \n \nThe flare is available to destroy landfill gas if the energy system is not operating.  However, it has not \nbeen used in several years.  The flaring equations are included for completeness in case it is needed.  \nThe following equation determines the amount of methane, which is destroyed in flaring. \n \nFCH4,flared,y =FCH4,sent_flare,y -  PEflare,y /GWPCH4 \n \nWhere: \nFCH4,flared,y = Amount of methane in the LFG which is destroyed by flaring in year y (tCH4/yr) \nFCH4,sent_flare,y = Amount of methane in the LFG which is sent to the flare in year y (tCH4/yr) \nPEflare,y = Project emissions from flaring of the residual gas stream in year y (tCO2e/yr) determined \nfollowing the procedure described in the tool “Project emissions from flaring” \nGWPCH4 = Global warming potential of CH4 (tCO2e / tCH4) \n \nFCH4,sent_flare,y is determined in the same manner as FCH4,EL,y described above.   \n \nBaseline Emissions Reductions (FCH,BL,y) \n \nPer ACM0001, this Project falls under the requirements of Case 3 for the baseline system: No \nrequirement to destroy the methane and an existing LFG capture and destruction system. \n \nBecause “the amount of methane captured with the existing system can be monitored separately from the \namount captured under the Project, and the efficiency of the existing system is not impacted on by the \nProject system during the crediting period”, the amount of methane that would be flared in the baseline is \nequivalent to that collected and destroyed from the District Initial System.   \n \nFCH4,BL,y = FCH4,BL,sys,y   (Eq. 11) \n   \nFCH4,BL,sys,y  = FCH4,destroyed,y  (modified Eq.12) \n \nWhere: \nFCH4,BL,sys,y  = Amount of methane in LFG that would be flared in the baseline for year y for the case of an \nexisting LFG capture system ( t CH4/yr) \nFCH4,destroyed,y  = Amount of methane in the LFG which is destroyed in year y (t CH4/yr) \n \nThe subscript in the second half of Equation 12 has been modified to reflect the fact that the LFG is not \nflared in the Project.  Because electricity generation has a higher destruction efficiency than a flare, this is \na conservative modification that reflects actual Project operations. \n \nAs described in the deviation section, there is no flow meter installed on the collection pipe from the \nDistrict Initial System.  Given the collection system design and meter requirements, installing a meter at \nthis location would not produce reliable, meaningful results. Instead, well-head flow measurements are \ncollected manually two times each month.  These results are used to calculate the relative contribution of \nthe District Initial System to the overall flow of LFG destroyed by the engines.  This portion of the total \nflow represents FCH4,BL,y and will be calculated on a monthly basis and subtracted to account for the \namount of methane destroyed in the baseline scenario. \n \nEx Ante Estimate of Emission Reductions",
+          "page": 16,
+          "paragraph_id": "p16-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "• \nUNFCCC CDM \"Large scale Consolidated Methodology – Flaring or use of landfill \ngas\", ACM0001, Version 16.0 dated 16 October 2015. \n \nThe calculation methodology was applied to the calculation of emissions from methane contained \nwithin LFG which is generated from the decomposition of solid waste from within the landfill and \ncombusted during electricity generation or in a flare. \n \nFor this Project Activity the baseline emissions consist of those associated with the volume of LFG \nthat is destroyed in the flare and the engines to generate electricity. Further, the emissions \nassociated with the fraction of LFG related to the District Initial System, need to be subtracted as \nthis system was installed voluntarily as part of the baseline of the Project Activity. This subtraction \nof emissions is understood to occur in the baseline of the Project Activity. \n \nThe Baseline Emissions also include quantification of the fraction of methane in the LFG that \nwould be oxidized in the top layer of the landfill in the baseline. This is a dimensionless value (0.1) \nthat was available at validation and is therefore defined in the VCS PD. The Baseline Emissions \ncalculations are presented in Exhibits 1 and 2 and the equation is shown below: \nBaseline emissions of methane from the Project Activity in year y are found as follows:  \n \nBECH4,y = ((1-OXtop_layer) x FCH4,PJ,y – FCH4,PJ,y) x GWPCH4 (Eq. 2)  \n \nWhere:",
+          "page": 31,
+          "paragraph_id": "x3-p31-06",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "UNFCCC CDM \"Large scale Consolidated Methodology – Flaring or use of landfill gas\", \nACM0001, Version 16.0 dated 16 October 2015. \n \nThe calculation methodology was applied to the calculation of emissions from methane contained \nwithin LFG which is generated from the decomposition of solid waste from within the landfill and \ncombusted during electricity generation or in a flare. \n \nFor this Project Activity the baseline emissions consist of those associated with the volume of LFG \nthat is destroyed in the flare and the engines to generate electricity. Further, the emissions \nassociated with the fraction of LFG related to the District Initial System, need to be subtracted as \nthis system was installed voluntarily as part of the baseline of the Project Activity. This subtraction \nof emissions is understood to occur in the baseline of the Project Activity.  Note that carbon stock \nchanges are not applicable as the emission reductions are permanent. \n \nThe Baseline Emissions also include quantification of the fraction of methane in the LFG that \nwould be oxidized in the top layer of the landfill in the baseline. This is a dimensionless value (0.1) \nthat was available at validation and is therefore defined in the VCS PD. The Baseline Emissions \ncalculations are presented in Exhibits 1 and 2 and the equation is shown below: \nBaseline emissions of methane from the Project Activity in year y are found as follows:  \n \nBECH4,y = ((1-OXtop_layer) x FCH4,PJ,y – FCH4,PJ,y) x GWPCH4 (Eq. 2)  \n \nBECH4,y = ((1-0.1) x 1,317.56 – 27.98) x 28 =  32,419",
+          "page": 39,
+          "paragraph_id": "x4-p39-07",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "BECH4,y = Baseline emissions of methane from the SWDS in monitoring period y \n(tCO2e/monitoring period)  \nOXtop_layer = Fraction of methane in the LFG that would be oxidized in the top layer of the \nSWDS in the baseline (dimensionless)  \nFCH4,PJ,y = Amount of methane in the LFG which is flared and/or used in the project \nactivity in monitoring period y (tCH4/monitoring period)  \nFCH,BL,y= Amount of methane in the LFG that would be flared in the baseline in monitoring \nperiod y (tCH4/monitoring period)  \nGWPCH4 = Global warming potential of CH4 (tCO2e / tCH4) \n \nFor this Project, FCH4,PJ,y is the sum of the quantities of methane flared and used in power \ngeneration during the year. This term is calculated as follows according to Equation 3 from the \nmethodology, modified to remove the heat generation and natural gas distribution terms, which are \nnot applicable to this Project.  \n \nFCH4,PJ,y = FCH4,flared,y + FCH4,EL,y (modified Eq. 3)  \n \nFCH4,PJ,y = 0* + 1,317.56 = 1,317.56 tCH4/monitoring period \n \n* Note that the back-up flare did not operate for any significant period during the current verification \nperiod; therefore, emission reductions are not claimed from flaring. \n \nWhere:",
+          "page": 40,
+          "paragraph_id": "x4-p40-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Per ACM0001, no leakage effects need to be accounted.",
+          "page": 19,
+          "paragraph_id": "p19-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "1. A separate LFG meter is not present on each of the four combustion engines.  A single meter is \nused immediately before the piping splits to each engine.  This meter is continuously recording \ndata.  Operating data is tracked for each engine so it is possible to calculate the flow destroyed \nby each engine and to ensure that LFG is destroyed.  Flow controls are in place to ensure no \nLFG is sent to an engine that is not operating. This does not affect the conservativeness of the \nemissions reductions claimed. \n2. Ex-ante emissions reductions calculations use historic Project specific data as the basis for \nprojecting future emissions rather than the required CDM estimation tools.  Using real data allows \nthe estimations to be more accurate and reflect actual Project operating conditions.  his does not \naffect the conservativeness of the emissions reductions claimed but increases the accuracy of the \nex-ante projections ensuring the project is forecasting obtainable, appropriate emissions \nreductions.   \n3. There is no flow meter installed on the collection pipe from the District Initial System to separately \nmonitor the contribution of the original baseline system.  Given the collection system design and \nmeter requirements, installing a meter at this location would not produce reliable, meaningful \nresults. Instead, well-head flow measurements are collected manually two times each month.  \nThese results are used to calculate the relative contribution of the District Initial System to the \noverall flow of LFG destroyed by the engines.  This portion of the total flow represents FCH4,BL,y \nand will be calculated on a monthly basis and subtracted from the total flow to account for the \namount of methane destroyed in the baseline scenario.  This approach represents an accurate \nmeasurement of the flow because (a) the portion of the landfill that includes the District Initial \nSystem (Phase 1) is capped so no landfill gas can be passively emitted to the atmosphere, and \n(b) the remaining active wells from the District Initial System are located in such a way as to \nenable capture of all LFG generated within the sphere of influence of the District Initial System.  \nThis deviation decreases the conservativeness of the emissions reductions claimed but \nsignificantly increases the accuracy of the calculations as is allowable under VCS Standard v3.5, \nSection 3.5.1.   \n4. The Project uses the eGrid electricity emissions factor rather than the default emissions factor \nprovided in the CDM tool as explained in the project emissions section.  This deviation decreases \nthe conservativeness of the emissions reductions claimed but significantly increases the accuracy \nof the calculations as is allowable under VCS Standard v3.5, Section 3.5.1. \n \nThese deviations only apply to the monitoring and measurement portions of the Project.",
+          "page": 14,
+          "paragraph_id": "p14-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Equations (2) and (3) of the electricity tool are omitted as calculation of the baseline and leakage \nelectricity consumption are not required by ACM0001.  Equations (4), (5), (6), (7) and (8) of the CDM tool \nare omitted as these are not relevant to the Project. \n \n \nThe flare uses landfill gas as an ignition source when necessary, \n \nFossil fuels used by Project activities include fuel used by landfill vehicles and diesel used in the \nemergency generator. Landfill vehicle use has not grown as a result of Project activities as was confirmed \nduring the first validation and can also be conservatively excluded. \n \nThe emergency generator is a diesel powered 150kW generator.  It is periodically tested and is used only \nwhen the Plant is not operating and no grid electricity is available.  Project emissions from the use of the \ngenerator will be calculated using the formulas required in the “Tool to calculate project or leakage CO2 \nemissions from fossil fuel combustion v2” as required by the methodology.   \n \nPEFC,j,y = Σ FCi,j,y X COEFi,y                             (Eq 1 in the Tool) \n \nWhere:  \nPEFC,j,y  = Are the CO2 emissions from fossil fuel combustion in process j during the year y (tCO2/yr); \nFCi,j,y  =  Is the quantity of fuel type i combusted in process j during the year y (mass or volume unit/yr); \nCOEFi,y  = Is the CO2 emission coefficient of fuel type i in year y (tCO2/mass or volume unit) \ni = Are the fuel types combusted in process j during the year y \n \nBecause the fuel type in this project is diesel and it is only used in one process, Equation 1 becomes: \n \nPEFC,y = (FCdiesel,y X COEFdiesel,y) \n \nThe CO2 emission coefficient COEFdiesel,y is then calculated based on the net calorific value and CO2 \nemission factor of the diesel (Option B), as follows:",
+          "page": 18,
+          "paragraph_id": "p18-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The Project has addressed both sources of project emissions in \nthe revised PDD.  \nA deviation request has been made to exclude the emergency \ngenerator as a project emission source. Calculations \nsupporting this request have been included in the Ex Ante \nCalculation Spreadsheet. \nThe use of grid supplied electricity has been added to all \nrelevant portions of the PDD. 2014 usage has been included as \nan estimate for future project emissions in the Ex Ante \nCalculation Spreadsheet.  \nAs part of the VCS audit, the exclusion of the emissions from \nthe emergency generator was removed as a deviation request \nand included in the emission calculations. Supporting \ndocumentation and applicable parameters were added in to the \nVCS PDD as necessary. GHD reviewed the calculations and \nsupporting documentation and determined the data and \ncalculations performed were consistent with the Project and are \nconservative.",
+          "page": 25,
+          "paragraph_id": "x7-p25-13",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "totals in units of million British thermal units on a higher heating value basis [MMBtu (HHV)] and thousand \nstandard cubic feet (KSCF) of LFG.  This data point provides information regarding the mixed landfill gas \nand biogas from the CRMC Bioenergy Facility (anaerobic digester system).   \n \nThe same calculation is made using data from the biogas feed pipe.  The difference between the total \nBtus entering the engines and the total Btus received from the biogas facility is the quantity attributed to \nthe LFG collected and is used in the calculations described previously in the PDD.  Because the \ncalculations for this project are based on the use of Btus rather than metric tonnes of methane as \ndiscussed in the deviation section, the value obtained by this approach is not skewed by the mixing of the \ngases prior to the measurement of the gas entering the engines.  \n \nFlow Measurements \n \nThe flow meters are located directly upstream of the destruction devices. One flow meter serves as the \nunit for flow meter measurements to the four engines, one unit for flow measurement of the biogas, and \none unit for flow meter measurements to the flare. Each flow meter is equipped with a totalizer that \nindicates the cumulative actual cubic feet of gas that have passed through that flow meter. \n \nThe Project uses an orifice plate flow meter purchased directly from its manufacturer, Lambda Square Inc \nfor the engine measurements.  The orifice plate flow meter is an Oripac® Model 5300 that determines flow \nbased on pressure differentials measured across a 5-inch diameter bore pressure differential plate \ninstalled in the Project’s 8-inch diameter LFG pipe.   The design data for the instrument specifies an \naccuracy of ± 0.6 percent of full scale and the capability of measuring flows from 0 to 1,600 actual cubic \nfeet per minute.  The performance of the instrument in the field is assured by the manufacturer on the \nbasis of bench scale testing in accordance with applicable design and methodologies prescribed by the \nInternational Standards Organization (ISO) and the American Society of Mechanical Engineers (ASME). \n \nThe Project uses an Omega PDF65 flow meter for measuring flow to the flare and a Dwyer Series DS-\n300 Flow Sensor, which is an averaging pitot tube, for measuring flow of the biogas. \n \nMethane Measurements \n \nThe methane content of the gas (LFG and biogas), on a percent volume basis, is measured at a sampling \nport in the main header pipe near the flow meter with the use of a California Analytical Instrument Non-\ndispersive infrared (NDIR) analyzer. The readings are also logged by the SCADA system once per \nminute.  \n \nThe methane content of the biogas is measured using a Hitech Model: IR600 Infra-Red Gas Analyzer. \n \nWellfield Measurements \n \nAt least twice a month, a trained operator balances the landfill gas collection wellfield. In the course of \nbalancing the system, the operator measures and records the methane content, carbon dioxide content, \noxygen content, landfill gas flow rate, landfill gas temperature, static pressure, and balance gas content. \nThese results are logged in an electronic file to document system performance as well as to determine \nthe percent contribution of LFG from the District Initial System. \n \n \nMeter Calibrations \n \nOn installation, CNBE performed initial calibrations of the instruments, under actual field conditions using \nthe USEPA Protocols described below. As a back-up to the flowmeter measurements, actual quantities of \nLFG destroyed in the Project engine-generators can be accurately calculated based on (a) the known \nengine heat rate (the number of British Thermal Units (Btus) required to produce a kilowatt hour electric \npower, (b) the measured heat content of the LFG fuel, and the metered electric power output of the \nProject.",
+          "page": 30,
+          "paragraph_id": "p30-02",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-02",
+          "p10-07",
+          "p12-20",
+          "p14-02",
+          "p14-03",
+          "p15-02",
+          "p15-03",
+          "p15-04",
+          "p16-02",
+          "p17-02",
+          "p17-03",
+          "p18-02",
+          "p18-03",
+          "p19-02",
+          "p19-03",
+          "p20-11",
+          "p30-02",
+          "p31-03",
+          "p32-02",
+          "p32-03",
+          "p32-04",
+          "x1-p7-03",
+          "x1-p7-04",
+          "x1-p7-05",
+          "x3-p31-05",
+          "x3-p31-06",
+          "x3-p31-07",
+          "x3-p125-10",
+          "x4-p39-07",
+          "x4-p40-03",
+          "x4-p40-04",
+          "x4-p98-10",
+          "x5-p41-07",
+          "x5-p41-08",
+          "x7-p9-08",
+          "x7-p14-21",
+          "x7-p14-22",
+          "x7-p25-12",
+          "x7-p25-13"
+        ],
+        "chars": 44955
+      }
+    },
+    {
+      "principle": "no_double_counting",
+      "status": "partial_evidence",
+      "score": 67,
+      "rationale": "Evidence found for 2 of 3 checks (D1, D2); not found in the excerpt: D3.",
+      "checks": [
+        {
+          "id": "D1",
+          "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p10-03",
+              "page": 10,
+              "text": "The only other active GHG Program under which the Project is registered is the American Carbon \nRegistry – Project ID of ACR 113.  The Project has neither verified emissions reductions under nor \nrequested issuance of credits under ACR since 2008's emission reductions and does not plan to do so \nduring its second crediting period under VCS."
+            }
+          ],
+          "second_opinion_p_yes": 0.95,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D2",
+          "question": "Does the text address other environmental credits or certificates (e.g. renewable energy certificates, I-RECs) or participation in an emissions trading scheme?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p9-02",
+              "page": 9,
+              "text": "6.4 \nEnvironmental Attributes.  Lessee ( where Lessee is defined as CNBE) and/or its \ndesignees, successors and assigns, shall have the right, beginning on the date that the \nGenerating Facility becomes operational and so long as this Lease Agreement is in effect \nthereafter, to all attributes of an environmental or other nature, known or unknown at the \ntime of this Lease Agreement, including but not limited to allowances, certificates, RECs \nor other green power price premiums or similar constructs generated by or attributable to \nthe Generating Facility by virtue of its classification as a renewable energy project under \nApplicable Laws, emissions credits and all other credits, offsets, tradable renewable \ncertificates (sometimes referred to as “green tags”), and all similar rights issued, \nrecognized, created or otherwise arising from use or disposition of the Landfill Gas \ndelivered to Lessee, including but not limited to the generation and/or sale of electricity at \nthe Generating Facility using Landfill Gas, the delivery and/or sale of capacity (the \nGenerating Facility’s capability to reliably generate a specific amount of electricity at a \ngiven point in time) and electricity to any purchaser thereof, the production of thermal \nenergy or other energy products as a by-product of generating electricity at the \nGenerating Facility, and the destruction of such Landfill Gas (“Environmental \nAttributes”).  Environmental Attributes include but shall not be limited to those that are \ncreated by regulations, statutes, or other governmental action enacted before or after the \nEffective Date.  Environmental Attributes include but shall not be limited to those that can \nbe used to (1) claim responsibility for the reduction of emissions and/or pollutants, (2) \nclaim ownership of emission and/or pollution reduction rights, and (3) claim reduction or \navoidance of emissions or pollutants.  Emissions and pollutants include, but are not \nlimited to, acid rain precursors, carbon dioxide, carbon monoxide, chlorinated \nhydrocarbons, greenhouse gases, mercury, metals, methane, nitrogen oxides, nitrogen-\noxygen compounds, ozone precursors, particulate matter, sulfur dioxide, toxic air \npollutants, other carbon and sulfur compounds, and similar pollutants or contaminants of \nair, water or soil, under any governmental, regulatory or voluntary program, including but \nnot limited to the United Nations Framework Convention on Climate Change and related \nKyoto Protocol or any other program.  Environmental Attributes exclude Section 45 tax \ncredits, Section 29 tax credits and any and all other tax credits or benefits associated with \nthe ownership or operation of the Generating Facility or production of Landfill Gas.  Prior \nto the date that the Generating Facility becomes operational, Lessor shall have the right \nto any Environmental Attributes attributable to the Landfill or the LFGMS.  \n \n2.12.2 Emissions Trading Programs and Other Binding Limits"
+            }
+          ],
+          "second_opinion_p_yes": 0.99,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D3",
+          "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.08,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "The only other active GHG Program under which the Project is registered is the American Carbon \nRegistry – Project ID of ACR 113.  The Project has neither verified emissions reductions under nor \nrequested issuance of credits under ACR since 2008's emission reductions and does not plan to do so \nduring its second crediting period under VCS.",
+          "page": 10,
+          "paragraph_id": "p10-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "6.4 \nEnvironmental Attributes.  Lessee ( where Lessee is defined as CNBE) and/or its \ndesignees, successors and assigns, shall have the right, beginning on the date that the \nGenerating Facility becomes operational and so long as this Lease Agreement is in effect \nthereafter, to all attributes of an environmental or other nature, known or unknown at the \ntime of this Lease Agreement, including but not limited to allowances, certificates, RECs \nor other green power price premiums or similar constructs generated by or attributable to \nthe Generating Facility by virtue of its classification as a renewable energy project under \nApplicable Laws, emissions credits and all other credits, offsets, tradable renewable \ncertificates (sometimes referred to as “green tags”), and all similar rights issued, \nrecognized, created or otherwise arising from use or disposition of the Landfill Gas \ndelivered to Lessee, including but not limited to the generation and/or sale of electricity at \nthe Generating Facility using Landfill Gas, the delivery and/or sale of capacity (the \nGenerating Facility’s capability to reliably generate a specific amount of electricity at a \ngiven point in time) and electricity to any purchaser thereof, the production of thermal \nenergy or other energy products as a by-product of generating electricity at the \nGenerating Facility, and the destruction of such Landfill Gas (“Environmental \nAttributes”).  Environmental Attributes include but shall not be limited to those that are \ncreated by regulations, statutes, or other governmental action enacted before or after the \nEffective Date.  Environmental Attributes include but shall not be limited to those that can \nbe used to (1) claim responsibility for the reduction of emissions and/or pollutants, (2) \nclaim ownership of emission and/or pollution reduction rights, and (3) claim reduction or \navoidance of emissions or pollutants.  Emissions and pollutants include, but are not \nlimited to, acid rain precursors, carbon dioxide, carbon monoxide, chlorinated \nhydrocarbons, greenhouse gases, mercury, metals, methane, nitrogen oxides, nitrogen-\noxygen compounds, ozone precursors, particulate matter, sulfur dioxide, toxic air \npollutants, other carbon and sulfur compounds, and similar pollutants or contaminants of \nair, water or soil, under any governmental, regulatory or voluntary program, including but \nnot limited to the United Nations Framework Convention on Climate Change and related \nKyoto Protocol or any other program.  Environmental Attributes exclude Section 45 tax \ncredits, Section 29 tax credits and any and all other tax credits or benefits associated with \nthe ownership or operation of the Generating Facility or production of Landfill Gas.  Prior \nto the date that the Generating Facility becomes operational, Lessor shall have the right \nto any Environmental Attributes attributable to the Landfill or the LFGMS.  \n \n2.12.2 Emissions Trading Programs and Other Binding Limits",
+          "page": 9,
+          "paragraph_id": "p9-02",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-02",
+          "p9-02",
+          "p9-03",
+          "p9-04",
+          "p10-02",
+          "p10-03",
+          "p10-04",
+          "p10-05",
+          "p12-20",
+          "p12-21",
+          "p14-02",
+          "p14-03",
+          "p17-02",
+          "p17-03",
+          "p18-02",
+          "p18-03",
+          "p21-08",
+          "p21-09",
+          "x1-p6-05",
+          "x1-p6-06",
+          "x1-p6-07",
+          "x1-p6-08",
+          "x1-p7-03",
+          "x1-p7-04",
+          "x1-p7-05",
+          "x2-p2-10",
+          "x2-p2-11",
+          "x2-p2-12",
+          "x2-p5-03",
+          "x2-p5-04",
+          "x2-p5-05",
+          "x2-p151-11",
+          "x2-p151-12",
+          "x2-p151-13",
+          "x2-p154-06",
+          "x2-p154-07",
+          "x2-p154-08",
+          "x3-p2-10",
+          "x3-p2-11",
+          "x3-p2-12",
+          "x3-p6-08",
+          "x3-p6-09",
+          "x3-p6-10",
+          "x3-p32-04",
+          "x3-p32-05",
+          "x3-p32-06",
+          "x3-p156-02",
+          "x3-p157-02",
+          "x4-p2-12",
+          "x4-p2-13",
+          "x4-p2-14",
+          "x4-p9-02",
+          "x4-p9-11",
+          "x4-p9-12",
+          "x4-p9-15",
+          "x4-p9-16",
+          "x5-p2-12",
+          "x5-p2-13",
+          "x5-p2-14",
+          "x5-p9-08",
+          "x5-p9-09",
+          "x5-p10-02",
+          "x5-p10-03",
+          "x6-p12-07",
+          "x6-p12-08",
+          "x6-p12-09",
+          "x6-p12-11",
+          "x6-p12-12",
+          "x6-p12-13",
+          "x7-p20-09",
+          "x7-p20-10",
+          "x7-p20-11",
+          "x7-p20-12"
+        ],
+        "chars": 35612
+      }
+    },
+    {
+      "principle": "safeguards",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (S1, S2, S3, S4).",
+      "checks": [
+        {
+          "id": "S1",
+          "question": "Does the text describe a stakeholder consultation with specifics such as dates, places, participants or comments received?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x6-p14-12",
+              "page": 14,
+              "text": "Ongoing consultation \nProject stakeholders are identified as CNBE and the District. According \nto the Monitoring Report, CNBE communicated with the District on a \ndaily basis during the work week and held monthly meetings with the \nDistrict following CNBE operations meetings. The verification team \nconfirmed ongoing stakeholder communication throughout the \nmonitoring period through interviews with CNBE and a review of \nsupporting evidence, including samples of email correspondence \nbetween CNBE and the District and log of emails between CNBE and \nthe District. Based on the evidence reviewed, the verification team \nconcludes that the project meets the ongoing stakeholder \nconsultation requirements."
+            }
+          ],
+          "second_opinion_p_yes": 0.19,
+          "needs_review": true,
+          "dropped": null
+        },
+        {
+          "id": "S2",
+          "question": "Does the text describe a grievance or complaint mechanism through which affected people can raise concerns?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p32-05",
+              "page": 32,
+              "text": "7 \nSTAKEHOLDER COMMENTS \nThe Project stakeholders are the District and CNBE.  There are no other investment group or public \ngroups involved in the Project.  Therefore, no formal stakeholder consultations are required.  However, \nthe District does have a formal process for receiving comments or complaints available to the public via \nemail or telephone.  No comments regarding this Project have been received.  In addition, the District \nCommittee, which is an oversight committee comprised of representatives of the District’s member \ncommunities and which makes strategic decisions for the District, meets once per month and the \nmeetings are open to the public."
+            },
+            {
+              "paragraph_id": "x4-p15-03",
+              "page": 15,
+              "text": "No grievances were received. \nNo resolution was required because no grievance was \nreceived during monitoring period.  Grievances can be \nsent directly to CRMC by email or phone.  CRMC has \nnot received a grievance by the public during its years \nof operation. CommonWealth Resource Management \nCorporation (CRMC) maintains a website that contains \nthe owners’ emails and telephone numbers, which the \npublic has easy access. The public also can send \ngrievances to the Greater New Bedford Regional \nRefuse Management District (District), which has an \nodor hotline for public reports and a website with \ncontacts email and phone. CRMC is in contact with the \nDistrict each work day and during this monitoring period, \nno grievance from the District was communicated to \nCRMC. If CRMC receives a grievance directly or \nthrough the District, CNBE would work with the District \nto address the grievance by assessing the conditions of \nthe grievance and take actions to cure or mitigate the \ncause of the grievance."
+            },
+            {
+              "paragraph_id": "x5-p15-04",
+              "page": 15,
+              "text": "No grievances were received.\nNo resolution was required because no grievance was\nreceived during monitoring period. Grievances can be\nsent directly to CRMC by email or phone. CRMC has\nnot received a grievance by the public during its years\nof operation. CommonWealth Resource Management\nCorporation (CRMC) maintains a website that contains\nthe owners’ emails and telephone numbers, which the\npublic has easy access. The public also can send\ngrievances to the Greater New Bedford Regional\nRefuse Management District (District), which has an\nodor hotline for public reports and a website with\ncontacts email and phone. CRMC is in contact with the\nDistrict each work day and during this monitoring period,\nno grievance from the District was communicated to\nCRMC. If CRMC receives a grievance directly or\nthrough the District, CNBE would work with the District\nto address the grievance by assessing the conditions of\nthe grievance and take actions to cure or mitigate the\ncause of the grievance."
+            },
+            {
+              "paragraph_id": "x6-p15-15",
+              "page": 15,
+              "text": "The verification team confirmed that CNBE maintains a grievance \nredress procedure to receive and address grievances. Contact \ninformation for CRMC, the parent company of CNBE, and the District, \nincluding phone numbers and email addresses, is publicly available \non their respective websites. In addition, the District operates an odor \nhotline for public reporting. Based on the evidence reviewed, the \nverification team concludes that the Project meets requirements for \nthe grievance redress procedure."
+            }
+          ],
+          "second_opinion_p_yes": 0.97,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S3",
+          "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p32-04",
+              "page": 32,
+              "text": "6 \nENVIRONMENTAL IMPACT \n \nIn accordance with the requirements of the Massachusetts Environmental Policy Act (“MEPA”), prior to \nconstruction of the  Project and as a pre-requisite to Project permitting, CNBE submitted an \nEnvironmental Notification Form (“ENF”) to the Massachusetts Secretary of Environmental Affairs to \nenable the Secretary, acting through the MEPA Office (the state agency responsible for assessing the \npotential environmental impact of proposed projects pursuant to MEPA) to determine whether and to what \nextent any detailed environmental impact assessment of the Project should be required.  Based on its \nreview of the ENF, in February 2004 the MEPA Office determined and the Secretary certified that no \nEnvironmental Impact Report for the Project would be required."
+            }
+          ],
+          "second_opinion_p_yes": 0.82,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S4",
+          "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x6-p15-06",
+              "page": 15,
+              "text": "Consent  \nThe FPIC requirement is not applicable to this Project because it does \nnot impact the land, territories, or resource rights of Indigenous \nPeoples, local communities, or customary rights holders. CNBE has \nobtained all necessary legal authorizations and permissions for \nProject development at the landfill site and for the collection, use, and \ndestruction of landfill gas."
+            },
+            {
+              "paragraph_id": "x6-p15-08",
+              "page": 15,
+              "text": "The Project does not affect Indigenous Peoples, local communities, or \ncustomary rights holders; therefore, no FPIC process or related \ndiscussions were required."
+            },
+            {
+              "paragraph_id": "x6-p19-08",
+              "page": 19,
+              "text": "The Project is located on privately owned land in the United States with \nno indigenous or customary land claims and therefore does not affect \nthe rights of Indigenous Peoples or local communities. The verification \nteam reviewed the Monitoring Report, landfill permits, stakeholder \nagreements, and conducted site visit discussions, confirming \ncompliance with U.S. laws and international human rights standards, \nincluding the UN Declaration on the Rights of Indigenous Peoples. No \nhuman rights risks were identified."
+            },
+            {
+              "paragraph_id": "x6-p19-12",
+              "page": 19,
+              "text": "CNBE identified no \nrisks related to \nindigenous peoples \nand cultural heritage."
+            },
+            {
+              "paragraph_id": "x6-p19-13",
+              "page": 19,
+              "text": "The Project does not affect Indigenous Peoples, local communities, \nor customary rights holders. As such, no mitigation or preventative \nmeasures were required, and this section is not applicable. Based on \nthe evidence reviewed, the verification team confirms that no risks \nrelated to indigenous peoples and cultural heritage have been \nidentified during the monitoring period."
+            }
+          ],
+          "second_opinion_p_yes": 0.94,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "Ongoing consultation \nProject stakeholders are identified as CNBE and the District. According \nto the Monitoring Report, CNBE communicated with the District on a \ndaily basis during the work week and held monthly meetings with the \nDistrict following CNBE operations meetings. The verification team \nconfirmed ongoing stakeholder communication throughout the \nmonitoring period through interviews with CNBE and a review of \nsupporting evidence, including samples of email correspondence \nbetween CNBE and the District and log of emails between CNBE and \nthe District. Based on the evidence reviewed, the verification team \nconcludes that the project meets the ongoing stakeholder \nconsultation requirements.",
+          "page": 14,
+          "paragraph_id": "x6-p14-12",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "7 \nSTAKEHOLDER COMMENTS \nThe Project stakeholders are the District and CNBE.  There are no other investment group or public \ngroups involved in the Project.  Therefore, no formal stakeholder consultations are required.  However, \nthe District does have a formal process for receiving comments or complaints available to the public via \nemail or telephone.  No comments regarding this Project have been received.  In addition, the District \nCommittee, which is an oversight committee comprised of representatives of the District’s member \ncommunities and which makes strategic decisions for the District, meets once per month and the \nmeetings are open to the public.",
+          "page": 32,
+          "paragraph_id": "p32-05",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "No grievances were received. \nNo resolution was required because no grievance was \nreceived during monitoring period.  Grievances can be \nsent directly to CRMC by email or phone.  CRMC has \nnot received a grievance by the public during its years \nof operation. CommonWealth Resource Management \nCorporation (CRMC) maintains a website that contains \nthe owners’ emails and telephone numbers, which the \npublic has easy access. The public also can send \ngrievances to the Greater New Bedford Regional \nRefuse Management District (District), which has an \nodor hotline for public reports and a website with \ncontacts email and phone. CRMC is in contact with the \nDistrict each work day and during this monitoring period, \nno grievance from the District was communicated to \nCRMC. If CRMC receives a grievance directly or \nthrough the District, CNBE would work with the District \nto address the grievance by assessing the conditions of \nthe grievance and take actions to cure or mitigate the \ncause of the grievance.",
+          "page": 15,
+          "paragraph_id": "x4-p15-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "No grievances were received.\nNo resolution was required because no grievance was\nreceived during monitoring period. Grievances can be\nsent directly to CRMC by email or phone. CRMC has\nnot received a grievance by the public during its years\nof operation. CommonWealth Resource Management\nCorporation (CRMC) maintains a website that contains\nthe owners’ emails and telephone numbers, which the\npublic has easy access. The public also can send\ngrievances to the Greater New Bedford Regional\nRefuse Management District (District), which has an\nodor hotline for public reports and a website with\ncontacts email and phone. CRMC is in contact with the\nDistrict each work day and during this monitoring period,\nno grievance from the District was communicated to\nCRMC. If CRMC receives a grievance directly or\nthrough the District, CNBE would work with the District\nto address the grievance by assessing the conditions of\nthe grievance and take actions to cure or mitigate the\ncause of the grievance.",
+          "page": 15,
+          "paragraph_id": "x5-p15-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The verification team confirmed that CNBE maintains a grievance \nredress procedure to receive and address grievances. Contact \ninformation for CRMC, the parent company of CNBE, and the District, \nincluding phone numbers and email addresses, is publicly available \non their respective websites. In addition, the District operates an odor \nhotline for public reporting. Based on the evidence reviewed, the \nverification team concludes that the Project meets requirements for \nthe grievance redress procedure.",
+          "page": 15,
+          "paragraph_id": "x6-p15-15",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "6 \nENVIRONMENTAL IMPACT \n \nIn accordance with the requirements of the Massachusetts Environmental Policy Act (“MEPA”), prior to \nconstruction of the  Project and as a pre-requisite to Project permitting, CNBE submitted an \nEnvironmental Notification Form (“ENF”) to the Massachusetts Secretary of Environmental Affairs to \nenable the Secretary, acting through the MEPA Office (the state agency responsible for assessing the \npotential environmental impact of proposed projects pursuant to MEPA) to determine whether and to what \nextent any detailed environmental impact assessment of the Project should be required.  Based on its \nreview of the ENF, in February 2004 the MEPA Office determined and the Secretary certified that no \nEnvironmental Impact Report for the Project would be required.",
+          "page": 32,
+          "paragraph_id": "p32-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Consent  \nThe FPIC requirement is not applicable to this Project because it does \nnot impact the land, territories, or resource rights of Indigenous \nPeoples, local communities, or customary rights holders. CNBE has \nobtained all necessary legal authorizations and permissions for \nProject development at the landfill site and for the collection, use, and \ndestruction of landfill gas.",
+          "page": 15,
+          "paragraph_id": "x6-p15-06",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The Project does not affect Indigenous Peoples, local communities, or \ncustomary rights holders; therefore, no FPIC process or related \ndiscussions were required.",
+          "page": 15,
+          "paragraph_id": "x6-p15-08",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The Project is located on privately owned land in the United States with \nno indigenous or customary land claims and therefore does not affect \nthe rights of Indigenous Peoples or local communities. The verification \nteam reviewed the Monitoring Report, landfill permits, stakeholder \nagreements, and conducted site visit discussions, confirming \ncompliance with U.S. laws and international human rights standards, \nincluding the UN Declaration on the Rights of Indigenous Peoples. No \nhuman rights risks were identified.",
+          "page": 19,
+          "paragraph_id": "x6-p19-08",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "CNBE identified no \nrisks related to \nindigenous peoples \nand cultural heritage.",
+          "page": 19,
+          "paragraph_id": "x6-p19-12",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The Project does not affect Indigenous Peoples, local communities, \nor customary rights holders. As such, no mitigation or preventative \nmeasures were required, and this section is not applicable. Based on \nthe evidence reviewed, the verification team confirms that no risks \nrelated to indigenous peoples and cultural heritage have been \nidentified during the monitoring period.",
+          "page": 19,
+          "paragraph_id": "x6-p19-13",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [
+        "models_disagree:S1"
+      ],
+      "excerpt": {
+        "paragraphs": [
+          "p2-02",
+          "p32-03",
+          "p32-04",
+          "p32-05",
+          "x2-p2-15",
+          "x2-p2-16",
+          "x2-p2-17",
+          "x2-p6-03",
+          "x2-p6-04",
+          "x3-p2-15",
+          "x3-p2-16",
+          "x3-p2-17",
+          "x3-p7-08",
+          "x3-p7-09",
+          "x3-p10-07",
+          "x3-p144-01",
+          "x4-p2-16",
+          "x4-p2-17",
+          "x4-p2-18",
+          "x4-p2-19",
+          "x4-p10-11",
+          "x4-p10-12",
+          "x4-p15-02",
+          "x4-p15-03",
+          "x5-p15-03",
+          "x5-p15-04",
+          "x6-p14-12",
+          "x6-p15-06",
+          "x6-p15-08",
+          "x6-p15-12",
+          "x6-p15-13",
+          "x6-p15-15",
+          "x6-p16-17",
+          "x6-p18-05",
+          "x6-p18-06",
+          "x6-p18-07",
+          "x6-p19-07",
+          "x6-p19-08",
+          "x6-p19-09",
+          "x6-p19-12",
+          "x6-p19-13",
+          "x7-p44-03"
+        ],
+        "chars": 24565
+      }
+    }
+  ],
+  "overall": {
+    "score": 70,
+    "included": [
+      "additionality",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [
+      "permanence"
+    ],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-20T17:33:21+00:00"
+}

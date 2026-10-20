@@ -1,0 +1,878 @@
+{
+  "schema": "report-v2",
+  "project": {
+    "project_id": "VCS2846",
+    "project_name": "FSW AMMS GHG Mitigation Project in Nanyang City",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/2846",
+    "methodology": "ACM0010",
+    "methodology_version": "8"
+  },
+  "document": {
+    "file_name": "VCS-Joint-Project-Description-Monitoring-Report-Muanyuan FSW-version03-clean.pdf",
+    "sha256": "a27e9ff5cadfaf5b686781b5e20582744a34a9d5e1e70b044221ae9f0e17de35",
+    "pages": 263,
+    "extra_files": [
+      {
+        "file_name": "VCS-Joint-VAL-VER_FVR_Muyuan FSW AWMS-clean.pdf",
+        "sha256": "f7177b4c45bb0c5da9e543f27d44135f91bad00e7324eaee5b5e8bba3ed873a2"
+      }
+    ]
+  },
+  "methodology_status": {
+    "code": "ACM0010",
+    "version": "8",
+    "status": "unknown",
+    "summary": "No ICVCM decision found for ACM0010 (manure management): it is not in the Calyx CCP-label tracker (May 2026) and no ICVCM announcement covers livestock manure methodologies. The methodology remains active in the VCS Program.",
+    "sources": [
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker",
+      "https://verra.org/methodologies/ghg-emission-reductions-from-manure-management-systems/"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v2",
+    "question_set_version": "qs-v2-checklist",
+    "prompt_version": "checklist-v1",
+    "evidence_rule": "yes-cites-excerpt-paragraph-v2",
+    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0) on the project description + select_paragraphs(budget_chars=15000, overview_chars=0) on the other documents",
+    "injection_screen": "injection-screen-v1",
+    "review_rule": "person-decides-flagged-checks-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "second_opinion_model": "typesafe/jev-1.13",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x05f2d815a67e7bfa5eba473409b663801b86b6fe07d2b1da7ae10c8d96d862e5",
+  "principles": [
+    {
+      "principle": "additionality",
+      "status": "partial_evidence",
+      "score": 75,
+      "rationale": "Evidence found for 3 of 4 checks (A1, A2, A3); not found in the excerpt: A4.",
+      "checks": [
+        {
+          "id": "A1",
+          "question": "Does the text report a quantified financial analysis: at least one numeric financial indicator (such as IRR or NPV) together with a benchmark or threshold value it is compared against?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p41-10",
+              "page": 41,
+              "text": "(b) Comparison of the project IRR for the project and the benchmark following table.  \nWithout income from selling VCUs, the IRR of the project is 5.38%, lower than the benchmark IRR \n9.5% and the project is financially unacceptable because of its low profitability. While considering \nsuch income, the IRR of the project is 10.69%, higher than the benchmark, and the project is \nfinancially acceptable."
+            }
+          ],
+          "second_opinion_p_yes": 0.99,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A2",
+          "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p44-02",
+              "page": 44,
+              "text": "3.5 \nAdditionality \nAdditionality for the project activity is demonstrated using Tool 02 Combined tool to identify the \nbaseline scenario and demonstrate additionality (Version 07.0). Step 1-3 were already done in \nsection 3.4 of this JPM. \nAs per Tool 24 Common practice (Version 03.1), Step 4 common practice analysis will be \nconducted as follows: \n \nStep 4: Common practice analysis"
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A3",
+          "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p36-10",
+              "page": 36,
+              "text": "Applicable \nA single aerobic treatment technique is not suitable for \ntreating low concentration organic wastewater in \nwastewater. This kind of wastewater contains a large \namount of highly concentrated organic wastewater, which \nis difficult to be treated by the aerobic method and does \nnot meet the Chinese environmental quality standards \nand pollutant discharge standards for discharge to water \nbodies. \nAt present a combine Anaerobic Digester-Aerobic \nTreatment system is considered to be one of the most \nadvanced \nmanure \nmanagement \nsystems, \nbut \nto \nimplement such technology need high invest and the \nproposed project will not be invested and constructed \nwithout being registered as a VCS project. \n \n \nOutcome of Step 1a: In summary, the alternatives to the baseline scenario are identified by the \ntool 02:” Combined tool to identify the baseline scenario and demonstrate additionality (Version \n07.0)”as: \nScenario 6: “The manure is disposed in an uncovered anaerobic lagoon”  \nScenario 8&17: Anaerobic Digester-Aerobic Treatment i.e., the project activity not being \nregistered as a VCS project activity. \n \nStep 1b: Consistency with mandatory applicable laws and regulations \nThere is no legal law and regulation to mandate the livestock farm owners to implement \nanaerobic digestion, aerobic or other biological treatment techniques to treat the animal manure \nin China. Only the manure is prohibited to discharge directly into environment without any \ntreatment as per Regulations on Prevention and Control of Pollution from Livestock and Poultry \nFarming11 issued by the State Council in Nov. 2013."
+            }
+          ],
+          "second_opinion_p_yes": 0.92,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A4",
+          "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.43,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "(b) Comparison of the project IRR for the project and the benchmark following table.  \nWithout income from selling VCUs, the IRR of the project is 5.38%, lower than the benchmark IRR \n9.5% and the project is financially unacceptable because of its low profitability. While considering \nsuch income, the IRR of the project is 10.69%, higher than the benchmark, and the project is \nfinancially acceptable.",
+          "page": 41,
+          "paragraph_id": "p41-10",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "3.5 \nAdditionality \nAdditionality for the project activity is demonstrated using Tool 02 Combined tool to identify the \nbaseline scenario and demonstrate additionality (Version 07.0). Step 1-3 were already done in \nsection 3.4 of this JPM. \nAs per Tool 24 Common practice (Version 03.1), Step 4 common practice analysis will be \nconducted as follows: \n \nStep 4: Common practice analysis",
+          "page": 44,
+          "paragraph_id": "p44-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Applicable \nA single aerobic treatment technique is not suitable for \ntreating low concentration organic wastewater in \nwastewater. This kind of wastewater contains a large \namount of highly concentrated organic wastewater, which \nis difficult to be treated by the aerobic method and does \nnot meet the Chinese environmental quality standards \nand pollutant discharge standards for discharge to water \nbodies. \nAt present a combine Anaerobic Digester-Aerobic \nTreatment system is considered to be one of the most \nadvanced \nmanure \nmanagement \nsystems, \nbut \nto \nimplement such technology need high invest and the \nproposed project will not be invested and constructed \nwithout being registered as a VCS project. \n \n \nOutcome of Step 1a: In summary, the alternatives to the baseline scenario are identified by the \ntool 02:” Combined tool to identify the baseline scenario and demonstrate additionality (Version \n07.0)”as: \nScenario 6: “The manure is disposed in an uncovered anaerobic lagoon”  \nScenario 8&17: Anaerobic Digester-Aerobic Treatment i.e., the project activity not being \nregistered as a VCS project activity. \n \nStep 1b: Consistency with mandatory applicable laws and regulations \nThere is no legal law and regulation to mandate the livestock farm owners to implement \nanaerobic digestion, aerobic or other biological treatment techniques to treat the animal manure \nin China. Only the manure is prohibited to discharge directly into environment without any \ntreatment as per Regulations on Prevention and Control of Pollution from Livestock and Poultry \nFarming11 issued by the State Council in Nov. 2013.",
+          "page": 36,
+          "paragraph_id": "p36-10",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-19",
+          "p2-20",
+          "p2-21",
+          "p2-30",
+          "p3-01",
+          "p3-02",
+          "p3-03",
+          "p4-04",
+          "p4-05",
+          "p5-09",
+          "p5-10",
+          "p9-12",
+          "p9-13",
+          "p9-15",
+          "p9-17",
+          "p17-03",
+          "p17-04",
+          "p17-05",
+          "p20-13",
+          "p26-06",
+          "p26-07",
+          "p27-02",
+          "p27-03",
+          "p27-04",
+          "p27-05",
+          "p27-06",
+          "p27-07",
+          "p30-07",
+          "p30-08",
+          "p30-09",
+          "p30-10",
+          "p30-11",
+          "p33-02",
+          "p33-03",
+          "p34-04",
+          "p34-05",
+          "p34-06",
+          "p34-07",
+          "p36-10",
+          "p36-11",
+          "p37-02",
+          "p37-03",
+          "p38-02",
+          "p41-02",
+          "p41-10",
+          "p41-11",
+          "p41-12",
+          "p42-02",
+          "p42-03",
+          "p42-09",
+          "p42-10",
+          "p43-02",
+          "p43-03",
+          "p43-04",
+          "p43-05",
+          "p43-06",
+          "p44-02",
+          "p44-03",
+          "p44-04",
+          "p44-05",
+          "p44-06",
+          "p44-07",
+          "p44-08",
+          "p46-04",
+          "p46-05",
+          "p46-06",
+          "p46-07",
+          "x1-p3-07",
+          "x1-p3-08",
+          "x1-p3-09",
+          "x1-p6-04",
+          "x1-p9-17",
+          "x1-p10-02",
+          "x1-p10-03",
+          "x1-p10-17",
+          "x1-p10-18",
+          "x1-p10-19",
+          "x1-p24-02",
+          "x1-p24-03",
+          "x1-p26-11",
+          "x1-p26-12",
+          "x1-p27-03",
+          "x1-p27-04",
+          "x1-p31-04",
+          "x1-p31-05",
+          "x1-p31-06",
+          "x1-p32-08",
+          "x1-p32-09",
+          "x1-p32-10",
+          "x1-p35-08",
+          "x1-p35-09",
+          "x1-p35-11",
+          "x1-p35-12",
+          "x1-p35-13",
+          "x1-p36-02",
+          "x1-p36-03",
+          "x1-p36-04",
+          "x1-p36-05",
+          "x1-p36-06",
+          "x1-p36-08",
+          "x1-p36-09",
+          "x1-p36-10",
+          "x1-p37-02",
+          "x1-p37-03",
+          "x1-p37-04",
+          "x1-p37-05",
+          "x1-p37-06",
+          "x1-p38-03",
+          "x1-p38-04",
+          "x1-p38-05",
+          "x1-p39-18",
+          "x1-p39-19",
+          "x1-p39-20",
+          "x1-p111-33",
+          "x1-p121-03",
+          "x1-p121-04",
+          "x1-p121-05"
+        ],
+        "chars": 44924
+      }
+    },
+    {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "checks": [],
+      "quotes": [],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "rule": "no_reversal_risk"
+    },
+    {
+      "principle": "robust_quantification",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (Q1, Q2, Q3, Q4).",
+      "checks": [
+        {
+          "id": "Q1",
+          "question": "Does the text show how baseline emissions are calculated, with an equation, parameter values or a numeric result?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p134-22",
+              "page": 134,
+              "text": "6.5 \nNet GHG Emission Reductions and Removals \nAs per paragraph 54 in applied methodology ACM0010 (Version08.0): Furthermore, if the actual methane \ncaptured from anaerobic digesters in project activity is lower than (BECH4,y - PEAD,y), then(BECH4,y - PEAD,y) \nis replaced by actual methane captured QCH4,y. \n \nBiogas captured during monitoring period is 60,783,901.90m3, which equals to 661,957 tCO2e that \nemission from methane production 34. Baseline methane emission (BECH4,y) in this monitoring period is \n695,501tCO2e. Project emissions associated with anaerobic digester in this monitoring period is (PEAD,y) \nis 36,280 tCO2e. Actual methane captured from anaerobic digesters is higher than the difference of \nBECH4,y and  PEAD,y. Therefore, the equation (BECH4,y - PEAD,y) can be used to calculate emission reduction. \nSo, the Net GHG Emission Reductions and Removals can be calculated using Equation 45 in Section 4.4. \nThe Net GHG Emission Reductions and Removals in this monitoring period is shown in following table."
+            }
+          ],
+          "second_opinion_p_yes": 0.94,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q2",
+          "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p132-05",
+              "page": 132,
+              "text": "described in Section 4.3 and the specific calculation and the result are shown in Table 6-9. The \ncalculation result of leakage emission is shown in Table 6-10."
+            }
+          ],
+          "second_opinion_p_yes": 0.97,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q3",
+          "question": "Does the text address uncertainty or the use of conservative assumptions in the emission reduction estimate?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p84-11",
+              "page": 84,
+              "text": "Value applied \n100% for ex ante estimation, which sourced from Project evaluation \nreport. As this parameter is not monitored in the actual operation. So, \nin the monitoring period, to be conservative, the value of this \nparameter in the emission reduction calculation is 100%."
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q4",
+          "question": "Does the text describe a monitoring plan that names the parameters to be measured and how often or by what method?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p103-10",
+              "page": 103,
+              "text": "Implementation and Monitoring frequency \nThe sampling process will start as soon as the target population is determined, and the sampling \nshould be done once a month. The Sampling process will be determined by the VCS monitoring \nteam. \n \nThe one monthly monitoring activity of the samples will be completed in the 9 swine farms during \neach monitoring periods. \n \nBecause the sampling activity is once a month, all the samples will be changed in the next month. \nThe monitoring data will be collected and recorded throughout the entire crediting period. All \narchived data and documentation will be kept for at least 2 years after the end of the last \ncrediting period. \n \nProcedures for Administering Data Collection and Minimizing Non-sampling Errors"
+            }
+          ],
+          "second_opinion_p_yes": 0.97,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "6.5 \nNet GHG Emission Reductions and Removals \nAs per paragraph 54 in applied methodology ACM0010 (Version08.0): Furthermore, if the actual methane \ncaptured from anaerobic digesters in project activity is lower than (BECH4,y - PEAD,y), then(BECH4,y - PEAD,y) \nis replaced by actual methane captured QCH4,y. \n \nBiogas captured during monitoring period is 60,783,901.90m3, which equals to 661,957 tCO2e that \nemission from methane production 34. Baseline methane emission (BECH4,y) in this monitoring period is \n695,501tCO2e. Project emissions associated with anaerobic digester in this monitoring period is (PEAD,y) \nis 36,280 tCO2e. Actual methane captured from anaerobic digesters is higher than the difference of \nBECH4,y and  PEAD,y. Therefore, the equation (BECH4,y - PEAD,y) can be used to calculate emission reduction. \nSo, the Net GHG Emission Reductions and Removals can be calculated using Equation 45 in Section 4.4. \nThe Net GHG Emission Reductions and Removals in this monitoring period is shown in following table.",
+          "page": 134,
+          "paragraph_id": "p134-22",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "described in Section 4.3 and the specific calculation and the result are shown in Table 6-9. The \ncalculation result of leakage emission is shown in Table 6-10.",
+          "page": 132,
+          "paragraph_id": "p132-05",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Value applied \n100% for ex ante estimation, which sourced from Project evaluation \nreport. As this parameter is not monitored in the actual operation. So, \nin the monitoring period, to be conservative, the value of this \nparameter in the emission reduction calculation is 100%.",
+          "page": 84,
+          "paragraph_id": "p84-11",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Implementation and Monitoring frequency \nThe sampling process will start as soon as the target population is determined, and the sampling \nshould be done once a month. The Sampling process will be determined by the VCS monitoring \nteam. \n \nThe one monthly monitoring activity of the samples will be completed in the 9 swine farms during \neach monitoring periods. \n \nBecause the sampling activity is once a month, all the samples will be changed in the next month. \nThe monitoring data will be collected and recorded throughout the entire crediting period. All \narchived data and documentation will be kept for at least 2 years after the end of the last \ncrediting period. \n \nProcedures for Administering Data Collection and Minimizing Non-sampling Errors",
+          "page": 103,
+          "paragraph_id": "p103-10",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p3-11",
+          "p3-12",
+          "p3-13",
+          "p4-05",
+          "p5-02",
+          "p20-04",
+          "p20-12",
+          "p20-14",
+          "p20-16",
+          "p20-17",
+          "p26-06",
+          "p26-07",
+          "p29-09",
+          "p29-12",
+          "p29-13",
+          "p29-14",
+          "p53-16",
+          "p53-17",
+          "p53-18",
+          "p56-09",
+          "p56-10",
+          "p56-11",
+          "p56-12",
+          "p57-19",
+          "p57-20",
+          "p57-21",
+          "p63-11",
+          "p63-12",
+          "p63-14",
+          "p63-15",
+          "p69-29",
+          "p69-30",
+          "p81-07",
+          "p81-08",
+          "p82-03",
+          "p82-04",
+          "p82-19",
+          "p84-11",
+          "p85-23",
+          "p87-04",
+          "p87-05",
+          "p91-10",
+          "p94-11",
+          "p94-12",
+          "p94-16",
+          "p94-18",
+          "p95-02",
+          "p95-03",
+          "p96-02",
+          "p96-03",
+          "p98-07",
+          "p98-08",
+          "p99-02",
+          "p100-06",
+          "p101-22",
+          "p101-23",
+          "p102-08",
+          "p103-10",
+          "p103-11",
+          "p104-02",
+          "p106-04",
+          "p114-04",
+          "p119-05",
+          "p119-06",
+          "p119-07",
+          "p119-13",
+          "p121-05",
+          "p121-09",
+          "p121-10",
+          "p122-02",
+          "p122-03",
+          "p123-02",
+          "p127-02",
+          "p127-03",
+          "p127-04",
+          "p131-23",
+          "p131-24",
+          "p131-25",
+          "p132-04",
+          "p132-05",
+          "p132-06",
+          "p134-21",
+          "p134-22",
+          "p134-23",
+          "x1-p10-17",
+          "x1-p10-19",
+          "x1-p20-04",
+          "x1-p79-04",
+          "x1-p79-05",
+          "x1-p79-06",
+          "x1-p84-06",
+          "x1-p85-04",
+          "x1-p86-18",
+          "x1-p90-04",
+          "x1-p98-12",
+          "x1-p98-13",
+          "x1-p98-14",
+          "x1-p99-05",
+          "x1-p99-06",
+          "x1-p99-24",
+          "x1-p99-25",
+          "x1-p99-26",
+          "x1-p118-02",
+          "x1-p118-03",
+          "x1-p122-02",
+          "x1-p122-03",
+          "x1-p122-04",
+          "x1-p126-02",
+          "x1-p126-03"
+        ],
+        "chars": 44968
+      }
+    },
+    {
+      "principle": "no_double_counting",
+      "status": "partial_evidence",
+      "score": 67,
+      "rationale": "Evidence found for 2 of 3 checks (D1, D2); not found in the excerpt: D3.",
+      "checks": [
+        {
+          "id": "D1",
+          "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p18-04",
+              "page": 18,
+              "text": "The project has neither been registered nor seeking registration under any other GHG programs. \nThe project is seeking registration only in VCS program."
+            }
+          ],
+          "second_opinion_p_yes": 0.77,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D2",
+          "question": "Does the text address other environmental credits or certificates (e.g. renewable energy certificates, I-RECs) or participation in an emissions trading scheme?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p18-11",
+              "page": 18,
+              "text": "The project hasn’t sought or received another form of environmental credits."
+            }
+          ],
+          "second_opinion_p_yes": 0.97,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D3",
+          "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.16,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "The project has neither been registered nor seeking registration under any other GHG programs. \nThe project is seeking registration only in VCS program.",
+          "page": 18,
+          "paragraph_id": "p18-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The project hasn’t sought or received another form of environmental credits.",
+          "page": 18,
+          "paragraph_id": "p18-11",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-16",
+          "p2-17",
+          "p2-18",
+          "p5-11",
+          "p5-12",
+          "p5-13",
+          "p5-15",
+          "p18-02",
+          "p18-03",
+          "p18-04",
+          "p18-05",
+          "p18-06",
+          "p18-08",
+          "p18-09",
+          "p18-10",
+          "p18-11",
+          "p18-12",
+          "p26-06",
+          "p26-07",
+          "p28-07",
+          "p28-08",
+          "p28-09",
+          "p33-02",
+          "p33-03",
+          "p44-03",
+          "p44-04",
+          "p44-05",
+          "p44-06",
+          "p44-07",
+          "p44-08",
+          "p45-02",
+          "p46-02",
+          "p46-03",
+          "p46-04",
+          "p51-24",
+          "p56-20",
+          "p56-21",
+          "p79-21",
+          "p79-22",
+          "p99-02",
+          "p100-04",
+          "p101-02",
+          "p101-03",
+          "x1-p3-05",
+          "x1-p3-06",
+          "x1-p3-07",
+          "x1-p3-10",
+          "x1-p3-11",
+          "x1-p4-02",
+          "x1-p4-03",
+          "x1-p4-04",
+          "x1-p5-16",
+          "x1-p5-17",
+          "x1-p5-18",
+          "x1-p15-04",
+          "x1-p15-05",
+          "x1-p15-06",
+          "x1-p18-09",
+          "x1-p18-10",
+          "x1-p18-11",
+          "x1-p18-12",
+          "x1-p18-14",
+          "x1-p18-16",
+          "x1-p19-02",
+          "x1-p19-03",
+          "x1-p19-04",
+          "x1-p19-05",
+          "x1-p20-08",
+          "x1-p20-09",
+          "x1-p20-10",
+          "x1-p28-10",
+          "x1-p28-11",
+          "x1-p28-12",
+          "x1-p32-08",
+          "x1-p32-09",
+          "x1-p38-09",
+          "x1-p38-10",
+          "x1-p38-11",
+          "x1-p38-15",
+          "x1-p38-16",
+          "x1-p39-10",
+          "x1-p39-11",
+          "x1-p39-12",
+          "x1-p40-02",
+          "x1-p40-03",
+          "x1-p40-04",
+          "x1-p78-12",
+          "x1-p78-13",
+          "x1-p79-03",
+          "x1-p79-04",
+          "x1-p79-05",
+          "x1-p111-26",
+          "x1-p115-07",
+          "x1-p115-08",
+          "x1-p116-02",
+          "x1-p116-03"
+        ],
+        "chars": 33315
+      }
+    },
+    {
+      "principle": "safeguards",
+      "status": "partial_evidence",
+      "score": 75,
+      "rationale": "Evidence found for 3 of 4 checks (S1, S2, S3); not found in the excerpt: S4.",
+      "checks": [
+        {
+          "id": "S1",
+          "question": "Does the text describe a stakeholder consultation with specifics such as dates, places, participants or comments received?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p21-08",
+              "page": 21,
+              "text": "Local stakeholder consultation was conducted by project owner before the construction of the \nproject and during the monitoring period through the means of questionnaire. \nLocal stakeholder consultation before the construction of the project \nIn order to solicit the opinions and attitudes of various stakeholders on the construction of this \nproject, the project owner issued a stakeholder survey opinion form at each project site from 04-\nNovember-2019 to 09-November-2019 investigate the opinions of local residents on the \nconstruction of this project. Since the farm has been in operation for a long time, local \nstakeholders or farmers have a better understanding of the situation of the farm. Therefore, for \nthe stakeholder investigation of the project which can bring economic and environment benefits \nto the local people, the Local stakeholders or farmers is more willing to participate in the survey. \nThe questionnaire mainly contains the following content: \n1. Do you know the purpose of this project? \n2. What do you think is the impact of the implementation of this project on the local environment? \n3. What impact do you think the implementation of this project will have on your life? \n4. Do you think the implementation of this project is in harmony with the local ecosystem? \n5. What impact do you think the implementation of this project will have on the social economy? \n6. What effect do you think the implementation of this project will have on local sustainable \ndevelopment? \n7. What effect do you think the implementation of this project will have on local employment? \n8. Do you think other regions should also vigorously promote this type of technology? \n9. Do you support the construction and implementation of this project? \n10. Do you have any suggestions and comments on this project? \nA total of 180 questionnaires were issued for this project, 20 copies for each project site, and \n180 copies were collected. The basic information about the survey respondents is listed in Table \n2-1.  \nTable 2-1 Structure of stakeholder survey"
+            },
+            {
+              "paragraph_id": "p22-12",
+              "page": 22,
+              "text": "Civil servant  \n22 \nThe survey results are as follows: \n1. 95% of the respondents understand this project, 5% don’t know much about this project. \n2. 100% of the respondents believe that the implementation of this project has reduced \nenvironmental pollution and is an environmental protection project. \n3. 100% of the respondents believe that the implementation of the project will bring economic \nbenefits to their lives, because they get free organic fertilizer. \n4. 96% of the respondents believe that the implementation of the project is in harmony with the \nlocal ecosystem; 4% of the respondents are not sure whether it is in harmony. \n5. 100% of the respondents believe that the implementation of the project has a good impact on \nthe social economy. \n6. 100% of the respondents believe that the construction of this project can promote energy \nconservation and emission reduction, improve environmental quality and investment \nenvironment, and promote the sustainable development of the local economy. \n7. 96% of the respondents believe that the implementation of this project can promote \nemployment growth; 4% of the respondents believe that it has no impact on local employment. \n8. 100% of respondents believe that AWMS technology can be vigorously promoted. \n9. 100% of respondents support this project. \n \nIn general, local stakeholders are supportive of the project construction. The project owner \ncarefully listened to and accepted the suggestions and opinions of stakeholders and stated that \nit would implement environmental protection facilities (AWMS) in strict accordance with the \nrequirements in the environmental impact report form and the approval opinions of the local \nenvironmental protection bureau. There is no suggestion about the project design. \n \nLocal stakeholder consultation during the monitoring period \n \nDuring this monitoring period, mean of a questionnaire survey was adopted for stakeholder \nconsultation. From 06-September-2021 to 10-September-2021, the project proponent put up \npublic announcements at the villages near the project site; also, the project proponent contacted \nthe local authorities (mainly the Ecology and Environment Bureau, Agriculture and Rural Affairs \nBureau) by phone. The general information about the introduction of project, the date and the \npurpose of the questionnaire survey as well as the project proponent’s phone number and email"
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S2",
+          "question": "Does the text describe a grievance or complaint mechanism through which affected people can raise concerns?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p24-13",
+              "page": 24,
+              "text": "In all, all the villagers and local government that filling out questionnaires are all supportive of \nthe project and to date there has been no need to modify the due to the comments received. \n \nIn addition, in order to set up the mechanism for on-going communication with local stakeholders, \na grievance book was put at the entrance of each swine farm. All stakeholders are allowed to \nrecord their grievances or comments in the book at any time. No any grievances or comments \nwere received during this monitoring period."
+            },
+            {
+              "paragraph_id": "x1-p22-06",
+              "page": 22,
+              "text": "Furthermore, via site inspection, CTI confirmed that a grievance book was put at the entrance of each \nswine farm so that to collect the grievances or comments from local stakeholders anytime, and via \nchecking all the books, CTI verified that there was no any grievances or comments received during this \nmonitoring period."
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S3",
+          "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p21-04",
+              "page": 21,
+              "text": "The Environmental Impact Assessment (EIA) Report for the Project has been approved by local"
+            },
+            {
+              "paragraph_id": "p24-15",
+              "page": 24,
+              "text": "The Environmental Impact Assessment (EIA) Report for the project has been approved by local \ngovernmental authorities. The environmental impacts and mitigation measures during the \nconstruction period and the operation period are summarized as follows. \nConstruction period \nAir pollution \nFor dust-generating points such as excavation, filling, and temporary storage yards, measures \nshould be taken to reduce dust by watering; the transportation of powdered materials such as \ncement, dust, and sand should be closed or covered, and the speed of vehicles should be limited \nto reduce the generation of dust.  \nWastewater \nThe wastewater during the construction period of the project is mainly generated from the \ndomestic sewage of construction workers, groundwater during foundation excavation and rinsing \nwater after pouring concrete. Oil separation and sedimentation tanks should be set up in the \nconstruction site so that the production wastewater can be reused for construction after oil \nseparation and sedimentation. The groundwater and rinsing water will be intercepted and treated \ncentrally. The domestic sewage can be collected in a septic tank and treated centrally, and then \nused as fertiliser for the surrounding farmland after precipitation and clarification. Therefore, the \nwastewater generated during the construction of the project has little impact on the surrounding \nenvironment. \nNoise \nNoise during the construction period is mainly generated by the construction machineries and \nvehicles. Use advanced low-noise equipment as much as possible, and construction is prohibited"
+            },
+            {
+              "paragraph_id": "x1-p20-13",
+              "page": 20,
+              "text": "In China, an Environmental Impacts Assessment is required according to Chinese legislation. The EIA was \ndesigned by Nanyang Environmental Protection Research Institute Co., Ltd./6/ and approved by Nanyang \nMunicipal Department of Ecology and Environment on 28-May-2019/7/. The analysis of the \nenvironmental impacts of the project activity is sufficiently described according to EIA report/6/. The \nassessment is as below,"
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S4",
+          "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.23,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "Local stakeholder consultation was conducted by project owner before the construction of the \nproject and during the monitoring period through the means of questionnaire. \nLocal stakeholder consultation before the construction of the project \nIn order to solicit the opinions and attitudes of various stakeholders on the construction of this \nproject, the project owner issued a stakeholder survey opinion form at each project site from 04-\nNovember-2019 to 09-November-2019 investigate the opinions of local residents on the \nconstruction of this project. Since the farm has been in operation for a long time, local \nstakeholders or farmers have a better understanding of the situation of the farm. Therefore, for \nthe stakeholder investigation of the project which can bring economic and environment benefits \nto the local people, the Local stakeholders or farmers is more willing to participate in the survey. \nThe questionnaire mainly contains the following content: \n1. Do you know the purpose of this project? \n2. What do you think is the impact of the implementation of this project on the local environment? \n3. What impact do you think the implementation of this project will have on your life? \n4. Do you think the implementation of this project is in harmony with the local ecosystem? \n5. What impact do you think the implementation of this project will have on the social economy? \n6. What effect do you think the implementation of this project will have on local sustainable \ndevelopment? \n7. What effect do you think the implementation of this project will have on local employment? \n8. Do you think other regions should also vigorously promote this type of technology? \n9. Do you support the construction and implementation of this project? \n10. Do you have any suggestions and comments on this project? \nA total of 180 questionnaires were issued for this project, 20 copies for each project site, and \n180 copies were collected. The basic information about the survey respondents is listed in Table \n2-1.  \nTable 2-1 Structure of stakeholder survey",
+          "page": 21,
+          "paragraph_id": "p21-08",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Civil servant  \n22 \nThe survey results are as follows: \n1. 95% of the respondents understand this project, 5% don’t know much about this project. \n2. 100% of the respondents believe that the implementation of this project has reduced \nenvironmental pollution and is an environmental protection project. \n3. 100% of the respondents believe that the implementation of the project will bring economic \nbenefits to their lives, because they get free organic fertilizer. \n4. 96% of the respondents believe that the implementation of the project is in harmony with the \nlocal ecosystem; 4% of the respondents are not sure whether it is in harmony. \n5. 100% of the respondents believe that the implementation of the project has a good impact on \nthe social economy. \n6. 100% of the respondents believe that the construction of this project can promote energy \nconservation and emission reduction, improve environmental quality and investment \nenvironment, and promote the sustainable development of the local economy. \n7. 96% of the respondents believe that the implementation of this project can promote \nemployment growth; 4% of the respondents believe that it has no impact on local employment. \n8. 100% of respondents believe that AWMS technology can be vigorously promoted. \n9. 100% of respondents support this project. \n \nIn general, local stakeholders are supportive of the project construction. The project owner \ncarefully listened to and accepted the suggestions and opinions of stakeholders and stated that \nit would implement environmental protection facilities (AWMS) in strict accordance with the \nrequirements in the environmental impact report form and the approval opinions of the local \nenvironmental protection bureau. There is no suggestion about the project design. \n \nLocal stakeholder consultation during the monitoring period \n \nDuring this monitoring period, mean of a questionnaire survey was adopted for stakeholder \nconsultation. From 06-September-2021 to 10-September-2021, the project proponent put up \npublic announcements at the villages near the project site; also, the project proponent contacted \nthe local authorities (mainly the Ecology and Environment Bureau, Agriculture and Rural Affairs \nBureau) by phone. The general information about the introduction of project, the date and the \npurpose of the questionnaire survey as well as the project proponent’s phone number and email",
+          "page": 22,
+          "paragraph_id": "p22-12",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "In all, all the villagers and local government that filling out questionnaires are all supportive of \nthe project and to date there has been no need to modify the due to the comments received. \n \nIn addition, in order to set up the mechanism for on-going communication with local stakeholders, \na grievance book was put at the entrance of each swine farm. All stakeholders are allowed to \nrecord their grievances or comments in the book at any time. No any grievances or comments \nwere received during this monitoring period.",
+          "page": 24,
+          "paragraph_id": "p24-13",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Furthermore, via site inspection, CTI confirmed that a grievance book was put at the entrance of each \nswine farm so that to collect the grievances or comments from local stakeholders anytime, and via \nchecking all the books, CTI verified that there was no any grievances or comments received during this \nmonitoring period.",
+          "page": 22,
+          "paragraph_id": "x1-p22-06",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The Environmental Impact Assessment (EIA) Report for the Project has been approved by local",
+          "page": 21,
+          "paragraph_id": "p21-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The Environmental Impact Assessment (EIA) Report for the project has been approved by local \ngovernmental authorities. The environmental impacts and mitigation measures during the \nconstruction period and the operation period are summarized as follows. \nConstruction period \nAir pollution \nFor dust-generating points such as excavation, filling, and temporary storage yards, measures \nshould be taken to reduce dust by watering; the transportation of powdered materials such as \ncement, dust, and sand should be closed or covered, and the speed of vehicles should be limited \nto reduce the generation of dust.  \nWastewater \nThe wastewater during the construction period of the project is mainly generated from the \ndomestic sewage of construction workers, groundwater during foundation excavation and rinsing \nwater after pouring concrete. Oil separation and sedimentation tanks should be set up in the \nconstruction site so that the production wastewater can be reused for construction after oil \nseparation and sedimentation. The groundwater and rinsing water will be intercepted and treated \ncentrally. The domestic sewage can be collected in a septic tank and treated centrally, and then \nused as fertiliser for the surrounding farmland after precipitation and clarification. Therefore, the \nwastewater generated during the construction of the project has little impact on the surrounding \nenvironment. \nNoise \nNoise during the construction period is mainly generated by the construction machineries and \nvehicles. Use advanced low-noise equipment as much as possible, and construction is prohibited",
+          "page": 24,
+          "paragraph_id": "p24-15",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "In China, an Environmental Impacts Assessment is required according to Chinese legislation. The EIA was \ndesigned by Nanyang Environmental Protection Research Institute Co., Ltd./6/ and approved by Nanyang \nMunicipal Department of Ecology and Environment on 28-May-2019/7/. The analysis of the \nenvironmental impacts of the project activity is sufficiently described according to EIA report/6/. The \nassessment is as below,",
+          "page": 20,
+          "paragraph_id": "x1-p20-13",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-20",
+          "p2-21",
+          "p2-22",
+          "p2-23",
+          "p2-24",
+          "p2-25",
+          "p2-26",
+          "p2-27",
+          "p7-04",
+          "p17-05",
+          "p17-06",
+          "p17-07",
+          "p17-08",
+          "p21-04",
+          "p21-05",
+          "p21-06",
+          "p21-08",
+          "p22-12",
+          "p23-02",
+          "p24-12",
+          "p24-13",
+          "p24-15",
+          "p33-06",
+          "p33-07",
+          "p33-08",
+          "p34-04",
+          "p34-05",
+          "p34-06",
+          "p34-07",
+          "p34-08",
+          "p34-09",
+          "p35-11",
+          "p35-12",
+          "p43-03",
+          "p43-04",
+          "p43-05",
+          "p45-02",
+          "p87-25",
+          "p89-09",
+          "p90-05",
+          "x1-p3-07",
+          "x1-p3-09",
+          "x1-p5-17",
+          "x1-p10-26",
+          "x1-p11-31",
+          "x1-p11-32",
+          "x1-p12-16",
+          "x1-p12-17",
+          "x1-p12-18",
+          "x1-p20-13",
+          "x1-p20-14",
+          "x1-p21-07",
+          "x1-p21-08",
+          "x1-p21-09",
+          "x1-p21-10",
+          "x1-p21-11",
+          "x1-p21-12",
+          "x1-p22-02",
+          "x1-p22-03",
+          "x1-p22-04",
+          "x1-p22-05",
+          "x1-p22-06",
+          "x1-p22-07",
+          "x1-p22-09",
+          "x1-p22-10",
+          "x1-p22-11",
+          "x1-p23-02",
+          "x1-p23-03",
+          "x1-p38-15",
+          "x1-p38-16",
+          "x1-p103-03",
+          "x1-p110-19",
+          "x1-p110-20",
+          "x1-p110-22",
+          "x1-p110-24",
+          "x1-p110-25",
+          "x1-p110-29",
+          "x1-p110-30",
+          "x1-p116-03",
+          "x1-p116-04",
+          "x1-p117-02",
+          "x1-p117-03",
+          "x1-p117-04",
+          "x1-p125-02",
+          "x1-p125-03"
+        ],
+        "chars": 32923
+      }
+    }
+  ],
+  "overall": {
+    "score": 81,
+    "included": [
+      "additionality",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [
+      "permanence"
+    ],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-20T17:41:11+00:00"
+}

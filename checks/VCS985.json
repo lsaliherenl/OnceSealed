@@ -83,7 +83,7 @@
    "id": "issuance_vs_estimate",
    "title": "Issued credits vs the document's own yearly figures",
    "status": "flag",
-   "summary": "Issuance exceeds the document's own figures by more than 20% over 2009-2018: issued 27,135,368 t, document 15,752,684 t (1.72x, table on page 133, one of 4 tables). Ex-ante figures in a project description can legitimately differ from monitored results; the monitoring and verification reports explain the issued volume.",
+   "summary": "Issuance exceeds the document's own figures by more than 20% over 2009-2018: issued 27,135,368 t, document 15,752,684 t (1.72x, table on page 133). Ex-ante figures in a project description can legitimately differ from monitored results; the monitoring and verification reports explain the issued volume.",
    "details": {
     "ratio": 1.723,
     "candidates": [
@@ -161,137 +161,6 @@
         }
        ]
       }
-     },
-     {
-      "file": "samples/pdfs/VCS985_MR2.pdf",
-      "table_id": "p62-t2",
-      "page": 62,
-      "column": "Estimated net GHG emission reductions or removals (tCO e) 2",
-      "rows_read": [
-       "2013 | 1,771,438",
-       "2014 | 2,374,091",
-       "Total 2013- 2014 | 4,145,529"
-      ],
-      "partial_years": [],
-      "multi_year_rows": [],
-      "document_total": 4145529.0,
-      "comparison": {
-       "span": [
-        2013,
-        2014
-       ],
-       "document_sum": 4145529.0,
-       "issued_sum": 4145528.0,
-       "ratio": 1.0,
-       "per_vintage": [
-        {
-         "vintage": 2013,
-         "document": 1771438.0,
-         "issued": 1771437.0,
-         "ratio": 1.0
-        },
-        {
-         "vintage": 2014,
-         "document": 2374091.0,
-         "issued": 2374091.0,
-         "ratio": 1.0
-        }
-       ]
-      }
-     },
-     {
-      "file": "samples/pdfs/VCS985_MR4.pdf",
-      "table_id": "p85-t1",
-      "page": 85,
-      "column": "Net GHG emission reductions or removals (tCO e) 2",
-      "rows_read": [
-       "2015 | 3,374,248",
-       "2016 | 4,074,606",
-       "Total | 18,468,409"
-      ],
-      "partial_years": [],
-      "multi_year_rows": [
-       "2009-2012 | 6,413,412",
-       "2013-2014 | 4,606,143"
-      ],
-      "document_total": 18468409.0,
-      "comparison": {
-       "span": [
-        2015,
-        2016
-       ],
-       "document_sum": 7448854.0,
-       "issued_sum": 6703968.0,
-       "ratio": 0.9,
-       "per_vintage": [
-        {
-         "vintage": 2015,
-         "document": 3374248.0,
-         "issued": 3036823.0,
-         "ratio": 0.9
-        },
-        {
-         "vintage": 2016,
-         "document": 4074606.0,
-         "issued": 3667145.0,
-         "ratio": 0.9
-        }
-       ]
-      }
-     },
-     {
-      "file": "samples/pdfs/VCS985_MR5.pdf",
-      "table_id": "p87-t1",
-      "page": 87,
-      "column": "Net GHG emission reductions or removals (tCO e) 2",
-      "rows_read": [
-       "2015 | 3,374,248",
-       "2016 | 4,074,606",
-       "2017 | 4,489,836",
-       "2018 | 5,086,613",
-       "Total | 28,044,858"
-      ],
-      "partial_years": [],
-      "multi_year_rows": [
-       "2009-2012 | 6,413,412",
-       "2013-2014 | 4,606,143"
-      ],
-      "document_total": 28044858.0,
-      "comparison": {
-       "span": [
-        2015,
-        2018
-       ],
-       "document_sum": 17025303.0,
-       "issued_sum": 17217769.0,
-       "ratio": 1.011,
-       "per_vintage": [
-        {
-         "vintage": 2015,
-         "document": 3374248.0,
-         "issued": 3036823.0,
-         "ratio": 0.9
-        },
-        {
-         "vintage": 2016,
-         "document": 4074606.0,
-         "issued": 3667145.0,
-         "ratio": 0.9
-        },
-        {
-         "vintage": 2017,
-         "document": 4489836.0,
-         "issued": 4040852.0,
-         "ratio": 0.9
-        },
-        {
-         "vintage": 2018,
-         "document": 5086613.0,
-         "issued": 6472949.0,
-         "ratio": 1.273
-        }
-       ]
-      }
      }
     ]
    }
@@ -311,7 +180,8 @@
       "whole_year_monitored": true,
       "file": "samples/pdfs/VCS985_MR2.pdf",
       "page": 62,
-      "table_id": "p62-t2"
+      "table_id": "p62-t2",
+      "partial_row": false
      },
      {
       "vintage": 2014,
@@ -321,7 +191,8 @@
       "whole_year_monitored": true,
       "file": "samples/pdfs/VCS985_MR2.pdf",
       "page": 62,
-      "table_id": "p62-t2"
+      "table_id": "p62-t2",
+      "partial_row": false
      },
      {
       "vintage": 2015,
@@ -331,7 +202,8 @@
       "whole_year_monitored": true,
       "file": "samples/pdfs/VCS985_MR4.pdf",
       "page": 85,
-      "table_id": "p85-t1"
+      "table_id": "p85-t1",
+      "partial_row": false
      },
      {
       "vintage": 2016,
@@ -341,7 +213,8 @@
       "whole_year_monitored": true,
       "file": "samples/pdfs/VCS985_MR5.pdf",
       "page": 87,
-      "table_id": "p87-t1"
+      "table_id": "p87-t1",
+      "partial_row": false
      },
      {
       "vintage": 2017,
@@ -351,7 +224,8 @@
       "whole_year_monitored": true,
       "file": "samples/pdfs/VCS985_MR5.pdf",
       "page": 87,
-      "table_id": "p87-t1"
+      "table_id": "p87-t1",
+      "partial_row": false
      },
      {
       "vintage": 2018,
@@ -361,7 +235,8 @@
       "whole_year_monitored": false,
       "file": "samples/pdfs/VCS985_MR5.pdf",
       "page": 87,
-      "table_id": "p87-t1"
+      "table_id": "p87-t1",
+      "partial_row": false
      }
     ],
     "skipped": []

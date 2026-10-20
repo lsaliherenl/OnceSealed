@@ -20,8 +20,7 @@ OnceSealed is a prototype verification and privacy layer that could sit on top o
 > on the Sepolia test network.
 
 **Live on Sepolia:** [`0xBb88057576b92Ef27753A6b2a4Df83bE444F1308`](https://sepolia.etherscan.io/address/0xBb88057576b92Ef27753A6b2a4Df83bE444F1308#code)
-(source verified on Etherscan). It holds 11 anchored quality reports (15 versions), four issuance batches and one audited purchase
-of 2,000 t retired as two lots; every transaction is listed in [`deployments/11155111-seed.json`](deployments/11155111-seed.json).
+(source verified on Etherscan). It holds 11 anchored quality reports (48 versions, all readable), four issuance batches and audited purchases; every transaction is listed in [`deployments/11155111-seed.json`](deployments/11155111-seed.json).
 
 ---
 
@@ -75,7 +74,7 @@ public, not against the registry, which already knows its account holders.
 | Layer | What it does | AI? |
 |---|---|---|
 | **Methodology status** | Looks up the ICVCM decision on the project's methodology in a sourced, versioned table ([`methodology_status.json`](core/ai/methodology_status.json)). | No |
-| **Evidence checklist** | For each principle, code selects up to 30,000 characters of the project's documents by keyword scoring and removes paragraphs that read as instructions to an AI model (prompt injection). An LLM (`deepseek/deepseek-v4.1-flash` via OpenRouter) answers 3-4 yes/no questions per principle (18 in all, [`checklist.py`](core/ai/checklist.py)), and every "yes" must cite a paragraph of that excerpt or it is not counted. A second model (TypeSafe **Jev 1.13**, third-party) answers the same questions; where the two disagree the check is marked for human review. This is the setup measured against the labelled questions ([What we measured](#what-we-measured)). | Yes |
+| **Evidence checklist** | For each principle, code selects by keyword scoring up to 30,000 characters of the project description and up to 15,000 more from the monitoring, validation and verification reports (each with its own budget, so adding documents never pushes the project description's evidence out) and removes paragraphs that read as instructions to an AI model (prompt injection). An LLM (`deepseek/deepseek-v4.1-flash` via OpenRouter) answers 3-4 yes/no questions per principle (18 in all, [`checklist.py`](core/ai/checklist.py)), and every "yes" must cite a paragraph of that excerpt or it is not counted. A second model (TypeSafe **Jev 1.13**, third-party) answers the same questions; where the two disagree the check is marked for review, and a team member's decision ([`/review`](web/src/app/review/page.tsx), stored in [`reviews/`](reviews/)) replaces the models' answer in the score while both answers stay in the report. This is the setup measured against the labelled questions ([What we measured](#what-we-measured)). | Yes |
 | **Principle status** | The share of a principle's checks that found evidence: none, some or all. Deterministic. | No |
 | **Data checks** | Reads the document's tables of yearly net emission reductions and compares them with the credits actually issued (OffsetsDB); checks that retirements never exceed issuance, that the methodology matches the registry listing, and whether a similarly named project issued credits for the same years elsewhere; and states which documents were read and which were not ([`docs/data_checks.md`](docs/data_checks.md)). | No |
 
@@ -95,24 +94,24 @@ applicable):
 | Project | Methodology, ICVCM status | Overall | A | P | Q | D | S |
 |---|---|---|---|---|---|---|---|
 | [VCS2846](reports/VCS2846.json) manure biodigesters, China | ACM0010 v8: no ICVCM decision found | 81 | 75 | - | 100 | 67 | 75 |
-| [VCS1477](reports/VCS1477.json) Katingan peatland REDD+, Indonesia | VM0007 v1.5: not CCP-approved (successor VM0048 approved) | 79 | 50 | 100 | 100 | 67 | 75 |
-| [VCS673](reports/VCS673.json) Kibale forest rehabilitation, Uganda | AR-ACM0001 v5: no CCP approval (successor VM0047 approved) | 73 | 50 | 100 | 75 | 67 | 75 |
-| [VCS2609](reports/VCS2609.json) Kuamut forest protection, Malaysia | VM0010 v1.4: under ICVCM assessment | 70 | 25 | 67 | 100 | 67 | 100 |
-| [VCS138](reports/VCS138.json) landfill gas, USA | ACM0001 v16: approved with conditions | 69 | 50 | - | 100 | 67 | 50 |
-| [VCS985](reports/VCS985.json) Cordillera Azul REDD+, Peru | VM0007 v1.3: not CCP-approved (successor VM0048 approved) | 66 | 50 | 67 | 75 | 67 | 75 |
-| [VCS2505](reports/VCS2505.json) cookstoves, South Africa | VMR0006: not CCP-approved (successor VM0050 approved) | 66 | 25 | - | 100 | 67 | 75 |
-| [VCS1742](reports/VCS1742.json) hydropower, India | ACM0002 v12.1: not approved (additionality) | 64 | 75 | - | 100 | 0 | 50 |
-| [VCS4150](reports/VCS4150.json) DelAgua cookstoves, Rwanda | VM0050 v1.0: approved with conditions | 58 | 25 | - | 75 | 67 | 75 |
+| [VCS2609](reports/VCS2609.json) Kuamut forest protection, Malaysia | VM0010 v1.4: under ICVCM assessment | 81 | 25 | 100 | 100 | 100 | 100 |
+| [VCS1728](reports/VCS1728.json) onshore wind, India | ACM0002 v17: not approved (additionality) | 81 | 75 | - | 100 | 67 | 75 |
+| [VCS1477](reports/VCS1477.json) Katingan peatland REDD+, Indonesia | VM0007 v1.5: not CCP-approved (successor VM0048 approved) | 81 | 50 | 100 | 75 | 100 | 100 |
+| [VCS1742](reports/VCS1742.json) hydropower, India | ACM0002 v12.1: not approved (additionality) | 78 | 50 | - | 100 | 67 | 100 |
+| [VCS985](reports/VCS985.json) Cordillera Azul REDD+, Peru | VM0007 v1.3: not CCP-approved (successor VM0048 approved) | 76 | 50 | 67 | 100 | 67 | 100 |
+| [VCS673](reports/VCS673.json) Kibale forest rehabilitation, Uganda | AR-ACM0001 v5: no CCP approval (successor VM0047 approved) | 73 | 25 | 100 | 100 | 67 | 75 |
+| [VCS2505](reports/VCS2505.json) cookstoves, South Africa | VMR0006: not CCP-approved (successor VM0050 approved) | 70 | 25 | - | 100 | 67 | 100 |
+| [VCS138](reports/VCS138.json) landfill gas, USA | ACM0001 v16: approved with conditions | 70 | 25 | - | 100 | 67 | 100 |
+| [VCS4150](reports/VCS4150.json) DelAgua cookstoves, Rwanda | VM0050 v1.0: approved with conditions | 63 | 25 | - | 75 | 67 | 100 |
 | [VCS1851](reports/VCS1851.json) grid-connected solar, India | ACM0002 v19: not approved (additionality) | 58 | 25 | - | 75 | 67 | 75 |
-| [VCS1728](reports/VCS1728.json) onshore wind, India | ACM0002 v17: not approved (additionality) | 55 | 75 | - | 50 | 33 | 50 |
 
 How to read this, honestly:
 
 - **Read the checks, not the overall.** Each principle score is a count of yes/no checks, and each "found" links to
-  the paragraph it came from. "Not found" means not found in the roughly 30,000 characters read for that principle,
-  not that the document lacks it.
-- **Document evidence is not methodology soundness.** The hydropower project (VCS1742) evidences 3 of 4 additionality
-  checks, citing an IRR of 9.80% against a benchmark of 11.45%, yet ICVCM rejected the methodology's additionality
+  the paragraph it came from. "Not found" means not found in the excerpt read for that principle (up to 45,000
+  characters), not that the document lacks it.
+- **Document evidence is not methodology soundness.** The hydropower project (VCS1742) evidences additionality with a
+  financial analysis, citing an IRR of 9.80% against a benchmark of 11.45%, yet ICVCM rejected the methodology's additionality
   test. That is why layer 1 is shown separately.
 - **A well-written document can still be contested.** Cordillera Azul (VCS985) evidences most checks, while BeZero
   downgraded its rating in 2024 over its baseline deforestation rate. The checklist tests whether evidence is
@@ -121,7 +120,11 @@ How to read this, honestly:
   monitoring reports account for the issued volume (issued = monitored net reductions, less a 10% buffer from 2015),
   so the gap sits between the ex-ante projection and what monitoring reported, which is where a contested baseline
   would show. External ratings are the right complement.
-- **16 checks across the 11 reports are marked for review** because the second model disagrees.
+- **12 checks across the 11 reports are marked for review** because the second model disagrees; a team member
+  decides them on the review screen.
+- **Reading more documents changed the signal.** With monitoring, validation and verification reports registered
+  for all 11 projects, 19 checks found evidence they had not found in the project description alone and 4
+  turned the other way (2 of those are among the review flags); for example VCS1728 rose from 55 to 81.
 
 Earlier report versions stay readable on-chain: version 1 (2026-10-13/15) used an LLM quote extractor and Jev's
 evidence-strength rating, which was never measured; the current version replaces it with the measured checklist.
@@ -130,13 +133,13 @@ evidence-strength rating, which was never measured; the current version replaces
 
 | Claim | Result | Source |
 |---|---|---|
-| No serial is retired twice | 46 Foundry tests, including fuzz tests over thousands of random ranges, lots and (malicious) hints; 69 Python tests including end-to-end runs on a local chain | `contracts/test/`, `tests/` |
+| No serial is retired twice | 46 Foundry tests, including fuzz tests over thousands of random ranges, lots and (malicious) hints; 114 Python tests including end-to-end runs on a local chain | `contracts/test/`, `tests/` |
 | Retirement cost does not grow with history | Replaying all **38,382 real retirements** of VCS766 vintage 2009: a first version that scanned past retirements added ~4,800 gas per retirement and passed 36M gas at retirement **7,467**; the sorted list stays at **~211k gas** for all 38,382 (a lot retirement costs ~204k) | [summary](data/derived/scale/summary.json), [chart](docs/figures/scale_gas.png), `scripts/scale_replay.py` |
 | Lookups stay cheap | The contract's list-walking views cost ~4,400 gas per retirement (22M per call at 5,000, past the usual 50M `eth_call` cap at ~11,000), so clients use an index built from `CreditRetired` events: 1.5 s to build for 5,000 retirements, ~1 ms per lookup. Lot batches are answered by the contract in constant time | `scripts/index_benchmark.py` |
 | Real network cost (Sepolia, current gas schedule) | Deploy 15.66M gas; retire one lot 1.02M (first in a batch) / 0.83M; anchor a report 463k; register a batch 243k; attest 33k. Storage writes cost far more than on the local chain; at Sepolia's ~0.001 gwei gas price, two deployments and all demo transactions cost 0.00078 test ETH in total | [`deployments/11155111-seed.json`](deployments/11155111-seed.json) |
 | Public data has inconsistencies a contract would flag | In OffsetsDB, 11 project-vintages record more retirements than issuance (235,932 t). Replayed through the contract, 76 of 1,100 retirements are rejected. These are most likely data errors (vintage attribution, reissuance), **not proven double counting** | [`over_retirement.json`](data/derived/over_retirement.json), `scripts/over_retirement_replay.py` |
 | How much does on-chain metadata reveal? | Project + quantity single out one retirement for **88.7%** of retired tonnes. With standard lots and the operator publishing lots once per period, 36.8% (daily) to 14.5% (quarterly) of tonnes still have no other purchase to hide among | [threat model T12](docs/threat_model.md), `scripts/linkability_stats.py` |
-| Document figures vs registry records | Yearly net-reduction tables read for 9 of 11 projects (the parser finds none it can use in the other 2); 8 overlap issued vintages. Credits issued exceed the document's own figures by more than 20% over the covered years for 1 project (VCS985, 1.72×); 4 more have single vintages above it. 1 project retires more than was issued (VCS673, vintage 2017, +13,052 t); 1 shares its name and an issued vintage with another listing (VCS4150 / VCS2749, both DelAgua, Rwanda). Each flag is a lead, not a finding. Monitoring, validation or verification reports are now read for 4 projects (VCS985, VCS673, VCS4150, VCS1851). For VCS985 the monitoring reports' own yearly net reductions explain issuance: issued/monitored is 1.00 for 2013-2014 and 0.90 for 2015-2017 (a 10% buffer withheld); the 2018 vintage (1.27) is only partly covered by the reports read. So the 1.72× gap is between the project description's projection and the monitored results, not between monitoring and issuance | [`docs/data_checks.md`](docs/data_checks.md), [`checks/`](checks/), `scripts/run_checks.py` |
+| Document figures vs registry records | Yearly net-reduction tables read for 9 of 11 projects (the parser finds none it can use in the other 2); 8 overlap issued vintages. Credits issued exceed the document's own figures by more than 20% over the covered years for 1 project (VCS985, 1.72×); 4 more have single vintages above it. 1 project retires more than was issued (VCS673, vintage 2017, +13,052 t); 1 shares its name and an issued vintage with another listing (VCS4150 / VCS2749, both DelAgua, Rwanda). Each flag is a lead, not a finding. Monitoring, validation or verification reports are read for all 11 projects (32 more registered on 2026-10-20). The monitoring reports' own yearly net reductions can be compared with issuance for 4 projects, with no flag: for VCS985 issued/monitored is 1.00 for 2013-2014 and 0.90 for 2015-2017 (a 10% buffer withheld), for VCS1728 1.00 for 2023; the other vintages above 1 are only partly covered by the reports read. So VCS985's 1.72× gap is between the project description's projection and the monitored results, not between monitoring and issuance. The parser reads only the projects' net-reduction column: component tables (e.g. one land-use activity) and joint project description/monitoring reports are left out rather than guessed, which removed three false flags on the way | [`docs/data_checks.md`](docs/data_checks.md), [`checks/`](checks/), `scripts/run_checks.py` |
 | AI evidence is cited | Every "found" check in the 11 published reports cites a paragraph of the excerpt it read; a "yes" without one is not counted (0 of 177 dropped on the labelled set). Version 1 of the reports quoted text instead: 179 of 179 quotes were found in the PDFs | [`reports/`](reports/), [`checklist_models.py`](core/ai/checklist_models.py) |
 | AI consistency, speed, cost (no labels needed) | On 177 yes/no questions over 48 excerpts from 11 projects, same answer in 3 runs: Jev 99.4%, LLM 96.0%, Turnike-JEV-4B 100% (both FP8 and BF16). Median time per excerpt: 0.8 s, 4.9 s, and 0.65 s for Turnike FP8 on a laptop RTX 4060 under WSL2 or 0.32 s for Turnike BF16 on a Colab L4 (both without its optional fast kernels; the API models include network time). Cost per 1,000 excerpts: $0.04, $0.79, $0 (local). FP8 and BF16 Turnike give the same yes/no answer on 176 of 177 questions (mean probability difference 0.014) | [`docs/ai_evaluation.md`](docs/ai_evaluation.md), `scripts/run_turnike.py` |
 | **AI accuracy** | Gold set: 177 yes/no questions labelled independently by a team member and by Claude (an AI annotator, not one of the evaluated models), both blind to the evaluated models' answers; Cohen's kappa 0.90 (human-AI agreement); the 12 disagreements were settled by the team member against the text. Accuracy (95% interval): **LLM 0.94 (0.90-0.97)**, **Jev 0.88 (0.83-0.92)**, **Turnike-JEV-4B 0.86 (0.80-0.90)**. The LLM is better than Jev (exact McNemar p = 0.013) and Turnike (p = 0.001); Jev and Turnike cannot be told apart here (p = 0.52). Jev's probabilities are the best calibrated (Brier 0.084 vs 0.220 for always guessing the base rate). Weakest: reporting a financial benchmark (A1) and community rights (S4); the set has almost no positives for additionality (4 of 44). The published reports ask these checks through the same module: 0.94 (0.89-0.96) on this set, with every "yes" citing a paragraph. **Excerpt size matters more than the model:** the reports therefore read 30,000 characters per principle instead of 2,500. There the checks still find 56 of the 58 known positives and add 61 findings the short excerpts missed; 46 of those were confirmed (75%, 63-84%) in a blind paragraph check against length-matched decoys (2 of 30 decoys judged evidence). That check was labelled by Claude; a team member re-labelled a random 20 blind and agreed on 18 of 19 (one marked unclear); see [`docs/citation_check.md`](docs/citation_check.md) | [`docs/ai_evaluation.md`](docs/ai_evaluation.md), [`data/eval/adjudication.json`](data/eval/adjudication.json) |
@@ -159,12 +162,13 @@ small (about 10 questions per question type), so per-question results are indica
 - **Privacy needs a crowd.** Lots hide amounts, but if a project has a single buyer in a period, the project and time
   still point to that buyer. Batched publication is an operating rule the contract cannot enforce. Amounts that are
   not whole lots cannot be retired privately in a lot batch.
-- **Most projects have only their project description read.** Monitoring, validation or verification reports are
-  registered for 4 of the 11 projects (VCS985, VCS673, VCS4150, VCS1851); the other 7 still lack the documents where
-  most monitored evidence sits. Reports and data checks say so per project; `scripts/add_document.py` registers
-  further documents.
+- **Not every document is read.** The project description and the monitoring, validation and verification reports
+  are registered for 8 of the 11 projects; VCS673 lacks a validation report and VCS985 and VCS4150 a verification
+  report, and only the latest monitoring reports were registered for projects with long histories. Reports and data
+  checks say what was read; the assess screen and `scripts/add_document.py` register further documents.
 - **AI signals depend on the excerpt.** Paragraphs are chosen by keywords from documents of hundreds of pages, so
-  evidence outside the roughly 30,000 characters read per principle is missed. Accuracy was labelled on shorter
+  evidence outside the excerpt read per principle (30,000 characters of the project description, up to 15,000 of the
+  other documents) is missed. Accuracy was labelled on shorter
   excerpts; on the longer ones only the new findings were checked, by Claude with a 20-unit human spot check. The labelled
   questions were also used to choose the models, so a fresh held-out set is needed for an unbiased figure. The
   methodology table covers only the methodologies of the 11 evaluation projects.
@@ -205,7 +209,7 @@ python -m venv .venv
 .venv/Scripts/activate          # Windows; use `source .venv/bin/activate` on macOS/Linux
 python -m pip install -r requirements.txt
 python -m pip install -e . --no-deps
-python -m pytest -q             # 106 tests
+python -m pytest -q             # 114 tests
 python scripts/demo_e2e.py      # full story on a local chain: lots retired, overlap and partial lot rejected,
                                 # auditor attests, receipt verified, forged receipts fail
 (cd contracts && forge test)    # 46 contract tests

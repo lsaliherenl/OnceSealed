@@ -95,7 +95,7 @@ def _yearly(values):
 
 def test_issuance_far_above_every_reading_is_flagged(monkeypatch, project):
     _flows(monkeypatch, {2012: 5_000_000, 2013: 2_000_000})
-    out = run.issuance_vs_estimate(project, {"pd.pdf": [_yearly({2011: 1_000_000, 2012: 1_000_000, 2013: 1_000_000})]})
+    out = run.issuance_vs_estimate(project, {project.files[0].local_path: [_yearly({2011: 1_000_000, 2012: 1_000_000, 2013: 1_000_000})]})
     assert out["status"] == "flag"
     # the document's 2011 counts too: the registry may book several years under one vintage
     assert out["details"]["ratio"] == pytest.approx(7_000_000 / 3_000_000, abs=1e-3)
@@ -103,21 +103,21 @@ def test_issuance_far_above_every_reading_is_flagged(monkeypatch, project):
 
 def test_single_vintage_spikes_within_the_span_are_info(monkeypatch, project):
     _flows(monkeypatch, {2017: 80_000, 2018: 130_000, 2019: 70_000})
-    out = run.issuance_vs_estimate(project, {"pd.pdf": [_yearly({2017: 90_000, 2018: 90_000, 2019: 90_000})]})
+    out = run.issuance_vs_estimate(project, {project.files[0].local_path: [_yearly({2017: 90_000, 2018: 90_000, 2019: 90_000})]})
     assert out["status"] == "info" and "2018" in out["summary"]
 
 
 def test_far_below_is_info_not_pass(monkeypatch, project):
     _flows(monkeypatch, {2012: 100_000, 2013: 100_000})
-    out = run.issuance_vs_estimate(project, {"pd.pdf": [_yearly({2012: 900_000, 2013: 1_000_000})]})
+    out = run.issuance_vs_estimate(project, {project.files[0].local_path: [_yearly({2012: 900_000, 2013: 1_000_000})]})
     assert out["status"] == "info" and "cumulative" in out["summary"]
 
 
 def test_missing_inputs_are_never_a_pass(monkeypatch, project):
     _flows(monkeypatch, {2012: 100_000})
-    assert run.issuance_vs_estimate(project, {"pd.pdf": []})["status"] == "not_available"
+    assert run.issuance_vs_estimate(project, {project.files[0].local_path: []})["status"] == "not_available"
     _flows(monkeypatch, {})
-    assert run.issuance_vs_estimate(project, {"pd.pdf": [_yearly({2012: 1, 2013: 1})]})["status"] == "not_available"
+    assert run.issuance_vs_estimate(project, {project.files[0].local_path: [_yearly({2012: 1, 2013: 1})]})["status"] == "not_available"
 
 
 def test_retired_above_issued_is_flagged(monkeypatch, project):
@@ -196,3 +196,23 @@ def test_monitoring_report_without_period_is_skipped(monkeypatch, project):
     p = _with_reports(project, None)
     out = run.issuance_vs_monitored(p, {"mr0.pdf": [_yearly({2013: 1_000_000, 2014: 1_000_000})]})
     assert out["status"] == "not_available" and "no monitoring period" in out["summary"]
+
+
+def test_monitoring_report_tables_are_not_read_as_the_documents_ex_ante_figures(monkeypatch, project):
+    _flows(monkeypatch, {2012: 5_000_000, 2013: 2_000_000})
+    mr = next(f for f in project.files if f.role == "monitoring_report").local_path
+    out = run.issuance_vs_estimate(project, {mr: [_yearly({2011: 1_000_000, 2012: 1_000_000, 2013: 1_000_000})]})
+    assert out["status"] == "not_available"
+
+
+def test_a_component_table_is_not_the_net_figure():
+    arr = t([["", "NET GHG removal from ARR (tCO2e)", "", "", ""], ["Year", "Agent A", "Agent B", "Agent C", "Total"],
+             ["2016", "1,323.53", "1,653.95", "1,779.78", "4,757.26"], ["2017", "1,323.53", "1,663.70", "3,226.08", "6,213.31"]])
+    assert read_estimate_table(arr) is None
+
+
+def test_a_lone_number_under_another_column_is_not_read_as_net():
+    table = t([["Year", "", "Baseline emissions (tCO2e)", "Project emissions (tCO2e)", "Leakage (tCO2e)",
+                "Net GHG emission reductions (tCO2e)"],
+               ["2021", "", "", "41,287", "", ""], ["2022", "", "", "20,506", "", ""]])
+    assert read_estimate_table(table) is None

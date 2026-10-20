@@ -59,9 +59,9 @@
    "id": "issuance_vs_estimate",
    "title": "Issued credits vs the document's own yearly figures",
    "status": "info",
-   "summary": "Over the whole span issuance is within 20% of the document (2022-2025: issued 8,551,795 t, document 8,531,621 t (1.00x, table on page 22, one of 2 tables)), though single vintages exceed it (2023, 2024).",
+   "summary": "Over the whole span issuance is within 20% of the document (2022-2025: issued 8,551,795 t, document 7,257,613 t (1.18x, table on page 17)), though single vintages exceed it (2023, 2024).",
    "details": {
-    "ratio": 1.002,
+    "ratio": 1.178,
     "candidates": [
      {
       "file": "samples/pdfs/VCS4150_PD.pdf",
@@ -119,95 +119,6 @@
          "ratio": 0.462
         }
        ]
-      }
-     },
-     {
-      "file": "samples/pdfs/VCS4150_MR1.pdf",
-      "table_id": "p22-t2",
-      "page": 22,
-      "column": "Estimated GHG emission reductions or removals (tCO e) 2",
-      "rows_read": [
-       "11 Oct 2021- 31 Dec 2021 | 379,873",
-       "01 Jan 2022-31 Dec-2022 | 2,243,669",
-       "01 Jan 2023-31 Dec-2023 | 2,160,906",
-       "01 Jan 2024-31 Dec-2024 | 2,082,325",
-       "01 Jan 2025-31 Dec-2025 | 2,044,721",
-       "01 Jan 2026-31 Dec-2026 | 2,033,761",
-       "01 Jan 2027-31 Dec-2027 | 2,001,708",
-       "01 Jan 2028-10 Oct-2028 | 1,607,694",
-       "Total estimated ERs | 14,554,657"
-      ],
-      "partial_years": [
-       2021,
-       2028
-      ],
-      "multi_year_rows": [],
-      "document_total": 14554657.0,
-      "comparison": {
-       "span": [
-        2022,
-        2025
-       ],
-       "document_sum": 8531621.0,
-       "issued_sum": 8551795.0,
-       "ratio": 1.002,
-       "per_vintage": [
-        {
-         "vintage": 2022,
-         "document": 2243669.0,
-         "issued": 1274805.0,
-         "ratio": 0.568
-        },
-        {
-         "vintage": 2023,
-         "document": 2160906.0,
-         "issued": 3255069.0,
-         "ratio": 1.506
-        },
-        {
-         "vintage": 2024,
-         "document": 2082325.0,
-         "issued": 2812257.0,
-         "ratio": 1.351
-        },
-        {
-         "vintage": 2025,
-         "document": 2044721.0,
-         "issued": 1209664.0,
-         "ratio": 0.592
-        }
-       ]
-      }
-     },
-     {
-      "file": "samples/pdfs/VCS4150_MR2.pdf",
-      "table_id": "p44-t2",
-      "page": 44,
-      "column": "Removal VCUs (tCO e) 2",
-      "rows_read": [
-       "11-October- 2021 - 31— December- 2021 | 0",
-       "01-January- 2022 – 31- December- 2022 | 0",
-       "01-January- 2023 - 28- February- 2023 | 0",
-       "01-March- 2023 – 31- December- 2023 | 0",
-       "01-January- 2024 – 29- February- 2024 | 0",
-       "Total | 0"
-      ],
-      "partial_years": [
-       2021,
-       2023,
-       2024
-      ],
-      "multi_year_rows": [],
-      "document_total": 0.0,
-      "comparison": {
-       "span": [
-        2022,
-        2022
-       ],
-       "document_sum": 0.0,
-       "issued_sum": 1274805.0,
-       "ratio": null,
-       "per_vintage": []
       }
      }
     ]

@@ -90,12 +90,8 @@
    "id": "issuance_vs_monitored",
    "title": "Issued credits vs the monitoring reports' figures",
    "status": "not_available",
-   "summary": "No yearly net-reduction table in the monitoring reports read overlaps an issued vintage; skipped VCS Joint PDMR_Renew Power_V02_29.01.19.pdf (no monitoring period recorded).",
-   "details": {
-    "skipped": [
-     "VCS Joint PDMR_Renew Power_V02_29.01.19.pdf (no monitoring period recorded)"
-    ]
-   }
+   "summary": "No monitoring report was read.",
+   "details": {}
   },
   {
    "id": "retired_vs_issued",

@@ -10,6 +10,46 @@
     "pages": 64,
     "pages_without_text": [],
     "tables": 56
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS2505_MR1.pdf",
+    "sha256": "9411c563c352965a2aff3f6cfe4df0bd0d0a174de37396b7b15b946563e7b620",
+    "pages": 57,
+    "pages_without_text": [],
+    "tables": 64
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS2505_MR2.pdf",
+    "sha256": "bd78fdd956957a28e28536b1218dc08c61c0559f7455adb6f2351c6d1a869f8f",
+    "pages": 54,
+    "pages_without_text": [],
+    "tables": 57
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS2505_MR3.pdf",
+    "sha256": "a8460c6e506cb0c0cb361a4548c9e7359453b4c232cf5d8b9d8393abb333359a",
+    "pages": 70,
+    "pages_without_text": [],
+    "tables": 73
+   },
+   {
+    "role": "verification_report",
+    "file": "samples/pdfs/VCS2505_VER1.pdf",
+    "sha256": "b5d8b4e8a6dfff60e63f0432e668861df5ea36a32f0c485fa09c1714d1467e6e",
+    "pages": 113,
+    "pages_without_text": [],
+    "tables": 154
+   },
+   {
+    "role": "validation_report",
+    "file": "samples/pdfs/VCS2505_VAL1.pdf",
+    "sha256": "888e0a7b314c8b3377122f6486344e0d7b96b8c28e2f19fd3b18009938b63943",
+    "pages": 92,
+    "pages_without_text": [],
+    "tables": 118
    }
   ],
   "offsetsdb_snapshot": "2026-06-01"
@@ -18,17 +58,16 @@
   {
    "id": "document_coverage",
    "title": "Documents read",
-   "status": "flag",
-   "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "status": "pass",
+   "summary": "Read: Project description (PD) ×1, Validation report (VVB) ×1, Monitoring report ×3, Verification report (VVB) ×1.",
    "details": {
     "held": {
-     "project_description": 1
+     "project_description": 1,
+     "validation_report": 1,
+     "monitoring_report": 3,
+     "verification_report": 1
     },
-    "missing": [
-     "validation_report",
-     "monitoring_report",
-     "verification_report"
-    ]
+    "missing": []
    }
   },
   {
@@ -41,9 +80,35 @@
   {
    "id": "issuance_vs_monitored",
    "title": "Issued credits vs the monitoring reports' figures",
-   "status": "not_available",
-   "summary": "No monitoring report was read.",
-   "details": {}
+   "status": "info",
+   "summary": "Issued credits per vintage over monitored net reductions (2023-2024): 2023: 2.05, 2024: 13.25. 0 of 2 vintages are at or below the monitored figure (a ratio below 1 is expected where a buffer share is withheld). Above it: 2023, 2024, a vintage the monitoring reports read cover only in part, so a later period may hold the rest.",
+   "details": {
+    "vintages": [
+     {
+      "vintage": 2023,
+      "monitored": 1255174.0,
+      "issued": 2575966.0,
+      "ratio": 2.052,
+      "whole_year_monitored": false,
+      "file": "samples/pdfs/VCS2505_MR1.pdf",
+      "page": 53,
+      "table_id": "p53-t2",
+      "partial_row": true
+     },
+     {
+      "vintage": 2024,
+      "monitored": 269467.0,
+      "issued": 3569698.0,
+      "ratio": 13.247,
+      "whole_year_monitored": false,
+      "file": "samples/pdfs/VCS2505_MR1.pdf",
+      "page": 53,
+      "table_id": "p53-t2",
+      "partial_row": true
+     }
+    ],
+    "skipped": []
+   }
   },
   {
    "id": "retired_vs_issued",

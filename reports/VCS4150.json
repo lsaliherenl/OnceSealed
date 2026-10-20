@@ -43,14 +43,15 @@
     "question_set_version": "qs-v2-checklist",
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
-    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0) on the project description + select_paragraphs(budget_chars=15000, overview_chars=0) on the other documents",
     "injection_screen": "injection-screen-v1",
+    "review_rule": "person-decides-flagged-checks-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
+  "method_hash": "0x05f2d815a67e7bfa5eba473409b663801b86b6fe07d2b1da7ae10c8d96d862e5",
   "principles": [
     {
       "principle": "additionality",
@@ -72,7 +73,7 @@
           "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.46,
+          "second_opinion_p_yes": 0.49,
           "needs_review": false,
           "dropped": null
         },
@@ -82,9 +83,9 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "p52-06",
-              "page": 52,
-              "text": "☐  Yes  \n \n \n \n☐  No \nIf no, describe which mandated laws, statutes, or other regulatory frameworks require project \nactivities and provide evidence of systematic non-enforcement to demonstrate regulatory \nsurplus.   \n3.5.2 Additionality Methods \nAs per the section 7 of applied methodology: \n \nStep 1: Regulatory surplus \nThe project is an entirely voluntary activity undertaken by the PP and is not mandated by any \nlaw, statute, or regulatory framework of host country."
+              "paragraph_id": "p3-02",
+              "page": 3,
+              "text": "1 PROJECT DETAILS \n1.1 \nSummary Description of the Project \n \nSummary description of the technologies/measures to be implemented by the project: \n \n‘DelAgua clean cooking grouped project in Rwanda’ is a voluntary Grouped Project (GP) \naimed at distributing fuel efficient improved cookstoves (ICS) to households in Rwanda. The \nProject Participant (PP) of the GP for all the communication, management, and ownership \nrights of the Greenhouse Gas (GHG) Emission Reduction Units (ERU) is DelAgua Health \nRwanda (Voluntary) Limited (DelAgua) and the ICS under this GP will be distributed by \nDelAgua. The distribution of ICS is not mandated by Rwandan law and the Grouped Project \nis a voluntary initiative being run by the PP DelAgua. The program is not being implemented \nas a result of any government legislation or intervention. Throughout this Project Description, \nthis grouped project may be interchangeably referred as “program\". The PP plan to distribute \n400,000 improved cookstove under the grouped project during first renewable crediting \nperiod. It is intended that under this GP two types of single pot portable stoves will be \ndistributed, which are SSM S32 X stove and Burn Kuniokoa G21. Each household will receive \n1 ICS. \n \nThe location of the project: \n \nUnder the GP, DelAgua will distribute the project technologies to individual households and \ncommunities within the host country Rwanda. The PAIs will occur in geographically defined \nregions within Rwanda. The details of the GP and PAI locations are provided in Section 1.13 \nof this document. All households will be in rural areas of the identified regions in section 1.13 \nof this document. \n \nImplementation Dates: \nFull details of implementation dates and numbers for each PAI under the GP are laid out in \nsection 1.12 of this document. \n \n An explanation of how the project is expected to generate GHG emission reductions or \nremovals: \n \nThe GP will follow the VCS Methodology from Sectoral Scope 3 - VM0050 “Energy Efficiency \nAnd Fuel-Switch Measures In Cookstoves”, version 1.0 for ER calculations. The \nimplementation (distribution of ICS units) and parameters set for ER calculations within the \nGP will be monitored on a periodic basis, based on the requirements provided within the \napplied methodology. \n \nThe cookstove project in Rwanda will reduce GHG emissions by replacing inefficient \ntraditional wood-fuel cookstoves with high-efficiency ICS units. By improving combustion \nefficiency and reducing firewood consumption, the project will reduce equivalent GHG \nemissions from incomplete combustion and help prevent deforestation. Additionally, the \nproject will improve indoor air quality, reduce fuel costs, and enhance community well-being, \ncontributing to both climate change mitigation and sustainable development. \n \nA brief description of the scenario existing prior to the implementation of the project:"
             }
           ],
           "second_opinion_p_yes": 0.98,
@@ -96,16 +97,16 @@
           "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.18,
+          "second_opinion_p_yes": 0.17,
           "needs_review": false,
           "dropped": null
         }
       ],
       "quotes": [
         {
-          "text": "☐  Yes  \n \n \n \n☐  No \nIf no, describe which mandated laws, statutes, or other regulatory frameworks require project \nactivities and provide evidence of systematic non-enforcement to demonstrate regulatory \nsurplus.   \n3.5.2 Additionality Methods \nAs per the section 7 of applied methodology: \n \nStep 1: Regulatory surplus \nThe project is an entirely voluntary activity undertaken by the PP and is not mandated by any \nlaw, statute, or regulatory framework of host country.",
-          "page": 52,
-          "paragraph_id": "p52-06",
+          "text": "1 PROJECT DETAILS \n1.1 \nSummary Description of the Project \n \nSummary description of the technologies/measures to be implemented by the project: \n \n‘DelAgua clean cooking grouped project in Rwanda’ is a voluntary Grouped Project (GP) \naimed at distributing fuel efficient improved cookstoves (ICS) to households in Rwanda. The \nProject Participant (PP) of the GP for all the communication, management, and ownership \nrights of the Greenhouse Gas (GHG) Emission Reduction Units (ERU) is DelAgua Health \nRwanda (Voluntary) Limited (DelAgua) and the ICS under this GP will be distributed by \nDelAgua. The distribution of ICS is not mandated by Rwandan law and the Grouped Project \nis a voluntary initiative being run by the PP DelAgua. The program is not being implemented \nas a result of any government legislation or intervention. Throughout this Project Description, \nthis grouped project may be interchangeably referred as “program\". The PP plan to distribute \n400,000 improved cookstove under the grouped project during first renewable crediting \nperiod. It is intended that under this GP two types of single pot portable stoves will be \ndistributed, which are SSM S32 X stove and Burn Kuniokoa G21. Each household will receive \n1 ICS. \n \nThe location of the project: \n \nUnder the GP, DelAgua will distribute the project technologies to individual households and \ncommunities within the host country Rwanda. The PAIs will occur in geographically defined \nregions within Rwanda. The details of the GP and PAI locations are provided in Section 1.13 \nof this document. All households will be in rural areas of the identified regions in section 1.13 \nof this document. \n \nImplementation Dates: \nFull details of implementation dates and numbers for each PAI under the GP are laid out in \nsection 1.12 of this document. \n \n An explanation of how the project is expected to generate GHG emission reductions or \nremovals: \n \nThe GP will follow the VCS Methodology from Sectoral Scope 3 - VM0050 “Energy Efficiency \nAnd Fuel-Switch Measures In Cookstoves”, version 1.0 for ER calculations. The \nimplementation (distribution of ICS units) and parameters set for ER calculations within the \nGP will be monitored on a periodic basis, based on the requirements provided within the \napplied methodology. \n \nThe cookstove project in Rwanda will reduce GHG emissions by replacing inefficient \ntraditional wood-fuel cookstoves with high-efficiency ICS units. By improving combustion \nefficiency and reducing firewood consumption, the project will reduce equivalent GHG \nemissions from incomplete combustion and help prevent deforestation. Additionally, the \nproject will improve indoor air quality, reduce fuel costs, and enhance community well-being, \ncontributing to both climate change mitigation and sustainable development. \n \nA brief description of the scenario existing prior to the implementation of the project:",
+          "page": 3,
+          "paragraph_id": "p3-02",
           "verification": "cited_paragraph"
         }
       ],
@@ -114,22 +115,44 @@
       "excerpt": {
         "paragraphs": [
           "p2-03",
+          "p3-02",
+          "p3-03",
+          "p7-07",
+          "p7-08",
+          "p7-09",
+          "p7-10",
           "p8-12",
           "p8-13",
           "p8-14",
+          "p10-03",
           "p10-04",
           "p10-05",
           "p10-06",
+          "p10-08",
+          "p10-09",
+          "p10-11",
+          "p10-12",
+          "p10-13",
+          "p10-14",
+          "p10-15",
           "p10-16",
           "p10-17",
+          "p11-03",
+          "p11-05",
+          "p12-05",
           "p12-06",
           "p12-07",
+          "p22-02",
           "p22-03",
+          "p43-17",
+          "p43-18",
           "p47-02",
           "p47-03",
           "p48-02",
           "p49-02",
           "p49-03",
+          "p50-02",
+          "p50-03",
           "p52-02",
           "p52-03",
           "p52-04",
@@ -137,10 +160,21 @@
           "p52-06",
           "p53-02",
           "p53-03",
+          "x1-p2-31",
+          "x1-p3-01",
+          "x1-p3-02",
           "x1-p9-06",
           "x1-p9-07",
+          "x1-p9-13",
+          "x1-p9-14",
+          "x1-p9-15",
+          "x1-p9-16",
+          "x1-p10-02",
           "x1-p10-04",
           "x1-p10-05",
+          "x1-p15-07",
+          "x1-p15-09",
+          "x1-p54-07",
           "x2-p25-22",
           "x2-p25-23",
           "x2-p26-01",
@@ -150,8 +184,12 @@
           "x2-p54-06",
           "x2-p54-07",
           "x2-p90-02",
+          "x2-p97-04",
+          "x2-p97-05",
           "x3-p20-11",
           "x3-p20-12",
+          "x3-p21-04",
+          "x3-p21-05",
           "x3-p21-06",
           "x3-p21-07",
           "x3-p21-09",
@@ -161,7 +199,7 @@
           "x3-p24-10",
           "x3-p24-11"
         ],
-        "chars": 29983
+        "chars": 44983
       }
     },
     {
@@ -187,12 +225,12 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "p62-04",
-              "page": 62,
-              "text": "Purpose of data \nCalculation of baseline and project emissions \nCalculation method \nThe value of 0.8872, registered in the Project Design Document \n(PD) under TOOL30 Version 4 for Rwanda, is adjusted to \naccount for uncertainty in accordance with VM0050. A 26% \nuncertainty discount is applied, resulting in the following \nadjusted value: \n0.8872 × (1−0.26) =0.6565 \nComments \nThis data has been fixed for entire crediting period. The applied \nfNRB value has been calculated by using the latest available data \nsources. As per the fNRB calculation done by PP, the value is \n91% however as a measure of conservativeness, PP used the \nfNRB value from another registered projects which was lesser \nthan 91%. Hence, the value has changed to 88.72% and finally \nto 0.6565 with uncertainty discount consideration."
+              "paragraph_id": "p55-02",
+              "page": 55,
+              "text": "𝐸𝐶𝑝,𝑦 (tons/year)  \n= BCp,j,k,y (tons/person/year) × Hhj,k × NCVp,j \n= 0.2739 × 4.31 × 0.0156  \n= 0.018TJ \nThe value of BCp,j,k,y is derived from the project KPT and Hhj,k (same as Hhi) is \nderived from the Baseline KPT in line with the applied methodology. \n𝐵𝐸𝑦 \n= min {ECi,y , ECest,y} × 𝑁𝑗,𝑘,𝑦 × 𝑛𝑗,𝑘,𝑦 × (𝐸𝐹𝑏,𝑖,𝐶𝑂2 × 𝑓𝑁𝑅𝐵,𝑦 + 𝐸𝐹𝑏,𝑖,𝑛𝑜𝑛𝐶𝑂2)            \n= min {0.060, 0.063} × 100,000 × 0.9 × (112 × 0.6565 + 9.46)  \n= 448,135 tCO2e \nWhere, Nj,k,y = 100,000 (Assumed, for calculation purpose only and full year \noperational) \nnj,k,y = 0.9 (assumed for ex-ante estimation only) \nEFCO2 = 112 tCO2e/TJ (Meth Default Value) \nEFnon-CO2 = 9.46 tCO2e/TJ (Meth Default Value) \nfNRB = fNRB (as per registered PD, refer appendix 2, tool 30 v 4.0) × (1-\nAdjustment factor of 26%) = 0.6565 \n \n4.2    Project Emissions \n \nAs per the section 8.2 of applied methodology, Project emissions are calculated as follows:"
             }
           ],
-          "second_opinion_p_yes": 0.76,
+          "second_opinion_p_yes": 0.97,
           "needs_review": false,
           "dropped": null
         },
@@ -201,7 +239,7 @@
           "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.36,
+          "second_opinion_p_yes": 0.39,
           "needs_review": false,
           "dropped": null
         },
@@ -214,6 +252,11 @@
               "paragraph_id": "p62-04",
               "page": 62,
               "text": "Purpose of data \nCalculation of baseline and project emissions \nCalculation method \nThe value of 0.8872, registered in the Project Design Document \n(PD) under TOOL30 Version 4 for Rwanda, is adjusted to \naccount for uncertainty in accordance with VM0050. A 26% \nuncertainty discount is applied, resulting in the following \nadjusted value: \n0.8872 × (1−0.26) =0.6565 \nComments \nThis data has been fixed for entire crediting period. The applied \nfNRB value has been calculated by using the latest available data \nsources. As per the fNRB calculation done by PP, the value is \n91% however as a measure of conservativeness, PP used the \nfNRB value from another registered projects which was lesser \nthan 91%. Hence, the value has changed to 88.72% and finally \nto 0.6565 with uncertainty discount consideration."
+            },
+            {
+              "paragraph_id": "p61-07",
+              "page": 61,
+              "text": "Calculated as per the “TOOL30: Calculation of the fraction of \nnon-renewable biomass” and applying an uncertainty discount \nof 26% in accordance with applied methodology"
             },
             {
               "paragraph_id": "x3-p30-02",
@@ -231,41 +274,58 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "p67-02",
-              "page": 67,
-              "text": "• \nRegistration of the project with VERRA \n• \nInclusion of new PAIs upon satisfaction of the eligibility criteria stipulated in the \nPDD \n• \nAuthorized entity for any official communication with the VERRA and VVB \n• \nManage and archive the database for all appliances \n• \nQA/QC of database during distribution & data collection \n• \nMaintain local repair/replacement facilities \n• \nEducation and public awareness raising during initial distribution as well as \nperiodic education campaigns. \n• \nData collection during distribution & delivery of data to database \n• \nQA/QC of data collection \n• \nConduct ongoing monitoring, as required to ascertain monitored parameters. \n \nThe monitoring plan for this project is closely derived from the methodologies. A database for \nthe project activity will be maintained by the DelAgua. \n \nThe methods for measuring, recording, storing, aggregating, collating and reporting \non monitored data and parameters: \nThe monitoring plan shall consist of checking a representative sample of all ICS units \ndistributed at least once every two years to ensure that they are still operating or are replaced \nby an equivalent in-service unit. A project database will be populated during the distribution of \neach initial cookstove issued, and will be updated based on subsequent replacements, as \nwell as detailed data on the representative sample surveyed for monitoring purposes. The \ndatabase will be accessible to the project proponent, appropriate partners, and the verification \nVVB. The database will include, at minimum, the following:"
+              "paragraph_id": "p60-08",
+              "page": 60,
+              "text": "Data / Parameter \nnj,k,y \nData unit \nFraction \nDescription \nProportion of commissioned project devices of type j from batch \nk that are still being used regularly in year y \nEquations \n(1, (7), (8) \nSource of data \nMonitoring (Project Usage Surveys) \nDescription of \nmeasurement methods \nand procedures to be \napplied"
             },
             {
-              "paragraph_id": "p67-03",
-              "page": 67,
-              "text": "• \nUnique project identification number \n• \nInstallation date \n• \nFamily name \n• \nContact details of user (when available) \n• \nSocioeconomic level (if households or communities are targeted), or type of \nestablishment (if SMEs are targeted) \n• \nBaseline cooking fuel source \n• \nBaseline stove type \n• \nDate of replacement of cook stove \n• \nMonitored parameters \n• \nUsage of Skirt with the project ICS \n \nThe database will be available to select a random, representative sample for monitoring and \nverification purposes. This sample set will be integrated into the database to include additional \nmonitoring parameters as required or as appropriate. Monitoring surveys will include \nexamination of the cookstove installations and verification that they are in an operational \ncondition. Units that have been damaged or aged beyond expected operational condition will \nbe replaced. Therefore, should some appliances not be replaced appropriately, this will be \naccounted for and appropriately deducted from emission reduction claims."
+              "paragraph_id": "p61-05",
+              "page": 61,
+              "text": "Option 1: (SUMs): continuous \nOption 2 (surveys): annually \nValue applied \n0.90 \nMonitoring equipment \nNot Applicable. \nQA/QC procedures to \nbe applied"
             },
             {
-              "paragraph_id": "p68-03",
-              "page": 68,
-              "text": "i. \nSurveys are conducted by staff trained by DelAgua. \nii. \nSupervisors are separately trained by DelAgua to spot-check surveyor results. \niii. \nAll ex-ante and monitored data parameters are collected on smart-phone based \nsurveys and are uniform across all surveyors for any given survey activity. \niv. \nUnknown to the surveyors, the database analysis includes verification of “valid” \nsurveys including by a.) verifying household consent is received and b.) that the \nsurvey duration, as recorded by Internet time, is no shorter or longer than a \nreasonable value. For example, the baseline surveys for Rwanda were validated \nagainst a minimum of 20 minutes and a maximum of 120 minutes. \nv. \nData validation is conducted on the database to ensure that values are numerically \nconsistent, i.e. multiple choice values add up to 100% of respondents. \n \nThe procedures for handling non-conformances with the validated monitoring plan  \nThe project proponent ensure that field personnel have reviewed, understood and have \nagreed to follow the monitoring plan procedures, including provisions for maximizing response \nrates, documenting out-of-population cases, refusals and other sources of non-response. To \nreduce interviewer bias, good questionnaire design and well-tested questionnaires are \ndeveloped. \n \nDelAgua is responsible for training any contractors used during distribution, education and \nmonitoring activities. DelAgua ensures training of all on-site staff with respect to adherence \nto the Monitoring Plan of the project activity. Records of the training will be kept. Internal audit \nof all the records of the distribution, monitoring and education activities are performed on an \nannual basis, and will be carried out once (or twice, based on the requirements and plans) a \nyear. Training records are saved for such training programs, where step-by-step training is \nprovided to the surveyors for a quality data collection process, where they are expected to not \nimpact the materially, degree of conservativeness, and perform the surveys in an unbiased \nmanner. The surveyors are trained on a periodic basis, and refresher trainings are also \nprovided to improve the quality of surveys from time to time. During these audits all the data \nand parameters that need to be monitored as per the monitoring plan will be checked and \nshortcomings if any will be reported and addresses. Since the surveys are electronic in format, \nrecording of responses and the record keeping procedure for these surveys are conveyed to \nthe team through rigorous trainings. \n \nDeviations or errors in data collection are logged and reviewed, with supervisors conducting \nspot checks to ensure compliance. Corrective actions, such as re-training or additional \nsurveys, are taken if non-conformances are found. \n \nBy integrating rigorous training, continuous oversight, and corrective measures, the project \nensures that all monitoring activities align with the validated Monitoring Plan, maintaining data \naccuracy, credibility, and compliance. \n \nCalculation of emission reductions: \nEmission reductions will be calculated using the results of the most recent survey data. The \nupdated parameters adjust all emission reduction results for the year monitored. \n \nSampling Plan: \nPP follows the sampling approach outlined below, which is in line with the most recent version \n(v9.0) of the CDM Standard for Sampling and Surveys for CDM Project Activities and \nProgrammes of Activities:"
+              "paragraph_id": "p65-02",
+              "page": 65,
+              "text": "Description \nAverage quantity of fuel used by project device type j \nfrom batch k during year y \nEquations \n(4), (7) \nSource of data \nMonitoring (Project KPT campaign) \nDescription of \nmeasurement methods \nand procedures to be \napplied"
             },
             {
-              "paragraph_id": "p62-05",
-              "page": 62,
-              "text": "Data / Parameter \nBCb,i,y \nData unit \nTonnes/HH/Year \nDescription \nFuel used per baseline device type i during year y \nEquations \n(2) \nSource of data \nOption 1: A measurement campaign following the Kitchen \nPerformance Test Protocol in control households that do not \nparticipate in the project, established prior to validation as \nstatistically equivalent to the pre-project conditions of project \nhouseholds regarding baseline fuel consumption \nDescription of \nmeasurement methods \nand procedures to be \napplied"
+              "paragraph_id": "p65-03",
+              "page": 65,
+              "text": "Option 1: Kitchen Performance Test (KPT)  \nA measurement campaign following the Kitchen Performance \nTest protocol shall be designed, carried out, and analyzed in \ncompliance with the most recent version of the CDM Standard \nfor Sampling and Surveys for CDM Project Activities and \nProgrammes of Activities. The campaign must achieve \nconfidence and precision of at least 90/10 for the target \nparameter of average daily fuel consumption per adult \nequivalent. The result must be scaled appropriately using the \naverage household size to obtain the value of BCp,j,k,y. \n \nProject activities applying KPTs shall also measure the quantity \nof fuel used by pre-project devices that are still operational and \nprovide it in the calculation sheet and monitoring reports (this is \na reporting-only requirement). \n \nOption 2: Direct measurement  \nApply continuous direct measurement using equipment \ncalibrated \nin \naccordance \nwith \nnational/international \nrequirements. A sample of project devices may be measured in \nsuch a way that confidence and precision of 90/10 is achieved \nfor the target parameter of total annual fuel use. The sampling \nmust comply with the most recent version of the CDM Standard \nfor Sampling and Surveys for CDM Project Activities and \nProgrammes of Activities. \nFrequency of \nmonitoring/recording"
             },
             {
-              "paragraph_id": "x3-p30-03",
-              "page": 30,
-              "text": "Data / Parameter \nη𝑜𝑙𝑑 \nData unit \nFraction \nDescription \nEfficiency of baseline stove \nSource of data \nCalculated using the Default value as specified in VMR0006 \nmethodology and the data obtained through the distribution \nsurveys \nDescription of \nmeasurement methods \nand procedures \napplied"
+              "paragraph_id": "p65-04",
+              "page": 65,
+              "text": "Biennial or annual for Option 1  \nContinuous and aggregated annually for Options 2 \nValue applied \n1.19 \nMonitoring equipment \nN/A \nQA/QC procedures to \nbe applied"
+            },
+            {
+              "paragraph_id": "p66-03",
+              "page": 66,
+              "text": "The VCS Grouped Project in Rwanda follows VCS standard requirements applicable, along \nwith the methodological requirements on monitoring a grouped non-AFOLU large project \nactivity. The Monitoring Plan is elaborated in multiple sub-sections for the sake of clarity. \nPP shall maintain detailed records of the commissioning dates for all project devices, \ncategorized by type (j) and batch (k), in accordance with the applied methodology. Throughout \nthe crediting period, PP systematically monitors and records all relevant parameters as \noutlined in Section 9.2 of the methodology. Additionally, PP ensures full compliance with the \nrequirements specified in the General Guidelines for SSC CDM. \n \nThe following monitoring plan is designed in accordance with the applied methodology \nVM0050 v1.0: \n \nTeam Involved: The DelAgua team involved in the GHG operations management is the local \nstaff based in Rwanda along with the senior management. \nThe key responsibilities are shared by the team as follows:"
             }
           ],
-          "second_opinion_p_yes": 0.96,
+          "second_opinion_p_yes": 0.97,
           "needs_review": false,
           "dropped": null
         }
       ],
       "quotes": [
         {
+          "text": "𝐸𝐶𝑝,𝑦 (tons/year)  \n= BCp,j,k,y (tons/person/year) × Hhj,k × NCVp,j \n= 0.2739 × 4.31 × 0.0156  \n= 0.018TJ \nThe value of BCp,j,k,y is derived from the project KPT and Hhj,k (same as Hhi) is \nderived from the Baseline KPT in line with the applied methodology. \n𝐵𝐸𝑦 \n= min {ECi,y , ECest,y} × 𝑁𝑗,𝑘,𝑦 × 𝑛𝑗,𝑘,𝑦 × (𝐸𝐹𝑏,𝑖,𝐶𝑂2 × 𝑓𝑁𝑅𝐵,𝑦 + 𝐸𝐹𝑏,𝑖,𝑛𝑜𝑛𝐶𝑂2)            \n= min {0.060, 0.063} × 100,000 × 0.9 × (112 × 0.6565 + 9.46)  \n= 448,135 tCO2e \nWhere, Nj,k,y = 100,000 (Assumed, for calculation purpose only and full year \noperational) \nnj,k,y = 0.9 (assumed for ex-ante estimation only) \nEFCO2 = 112 tCO2e/TJ (Meth Default Value) \nEFnon-CO2 = 9.46 tCO2e/TJ (Meth Default Value) \nfNRB = fNRB (as per registered PD, refer appendix 2, tool 30 v 4.0) × (1-\nAdjustment factor of 26%) = 0.6565 \n \n4.2    Project Emissions \n \nAs per the section 8.2 of applied methodology, Project emissions are calculated as follows:",
+          "page": 55,
+          "paragraph_id": "p55-02",
+          "verification": "cited_paragraph"
+        },
+        {
           "text": "Purpose of data \nCalculation of baseline and project emissions \nCalculation method \nThe value of 0.8872, registered in the Project Design Document \n(PD) under TOOL30 Version 4 for Rwanda, is adjusted to \naccount for uncertainty in accordance with VM0050. A 26% \nuncertainty discount is applied, resulting in the following \nadjusted value: \n0.8872 × (1−0.26) =0.6565 \nComments \nThis data has been fixed for entire crediting period. The applied \nfNRB value has been calculated by using the latest available data \nsources. As per the fNRB calculation done by PP, the value is \n91% however as a measure of conservativeness, PP used the \nfNRB value from another registered projects which was lesser \nthan 91%. Hence, the value has changed to 88.72% and finally \nto 0.6565 with uncertainty discount consideration.",
           "page": 62,
           "paragraph_id": "p62-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Calculated as per the “TOOL30: Calculation of the fraction of \nnon-renewable biomass” and applying an uncertainty discount \nof 26% in accordance with applied methodology",
+          "page": 61,
+          "paragraph_id": "p61-07",
           "verification": "cited_paragraph"
         },
         {
@@ -275,33 +335,39 @@
           "verification": "cited_paragraph"
         },
         {
-          "text": "• \nRegistration of the project with VERRA \n• \nInclusion of new PAIs upon satisfaction of the eligibility criteria stipulated in the \nPDD \n• \nAuthorized entity for any official communication with the VERRA and VVB \n• \nManage and archive the database for all appliances \n• \nQA/QC of database during distribution & data collection \n• \nMaintain local repair/replacement facilities \n• \nEducation and public awareness raising during initial distribution as well as \nperiodic education campaigns. \n• \nData collection during distribution & delivery of data to database \n• \nQA/QC of data collection \n• \nConduct ongoing monitoring, as required to ascertain monitored parameters. \n \nThe monitoring plan for this project is closely derived from the methodologies. A database for \nthe project activity will be maintained by the DelAgua. \n \nThe methods for measuring, recording, storing, aggregating, collating and reporting \non monitored data and parameters: \nThe monitoring plan shall consist of checking a representative sample of all ICS units \ndistributed at least once every two years to ensure that they are still operating or are replaced \nby an equivalent in-service unit. A project database will be populated during the distribution of \neach initial cookstove issued, and will be updated based on subsequent replacements, as \nwell as detailed data on the representative sample surveyed for monitoring purposes. The \ndatabase will be accessible to the project proponent, appropriate partners, and the verification \nVVB. The database will include, at minimum, the following:",
-          "page": 67,
-          "paragraph_id": "p67-02",
+          "text": "Data / Parameter \nnj,k,y \nData unit \nFraction \nDescription \nProportion of commissioned project devices of type j from batch \nk that are still being used regularly in year y \nEquations \n(1, (7), (8) \nSource of data \nMonitoring (Project Usage Surveys) \nDescription of \nmeasurement methods \nand procedures to be \napplied",
+          "page": 60,
+          "paragraph_id": "p60-08",
           "verification": "cited_paragraph"
         },
         {
-          "text": "• \nUnique project identification number \n• \nInstallation date \n• \nFamily name \n• \nContact details of user (when available) \n• \nSocioeconomic level (if households or communities are targeted), or type of \nestablishment (if SMEs are targeted) \n• \nBaseline cooking fuel source \n• \nBaseline stove type \n• \nDate of replacement of cook stove \n• \nMonitored parameters \n• \nUsage of Skirt with the project ICS \n \nThe database will be available to select a random, representative sample for monitoring and \nverification purposes. This sample set will be integrated into the database to include additional \nmonitoring parameters as required or as appropriate. Monitoring surveys will include \nexamination of the cookstove installations and verification that they are in an operational \ncondition. Units that have been damaged or aged beyond expected operational condition will \nbe replaced. Therefore, should some appliances not be replaced appropriately, this will be \naccounted for and appropriately deducted from emission reduction claims.",
-          "page": 67,
-          "paragraph_id": "p67-03",
+          "text": "Option 1: (SUMs): continuous \nOption 2 (surveys): annually \nValue applied \n0.90 \nMonitoring equipment \nNot Applicable. \nQA/QC procedures to \nbe applied",
+          "page": 61,
+          "paragraph_id": "p61-05",
           "verification": "cited_paragraph"
         },
         {
-          "text": "i. \nSurveys are conducted by staff trained by DelAgua. \nii. \nSupervisors are separately trained by DelAgua to spot-check surveyor results. \niii. \nAll ex-ante and monitored data parameters are collected on smart-phone based \nsurveys and are uniform across all surveyors for any given survey activity. \niv. \nUnknown to the surveyors, the database analysis includes verification of “valid” \nsurveys including by a.) verifying household consent is received and b.) that the \nsurvey duration, as recorded by Internet time, is no shorter or longer than a \nreasonable value. For example, the baseline surveys for Rwanda were validated \nagainst a minimum of 20 minutes and a maximum of 120 minutes. \nv. \nData validation is conducted on the database to ensure that values are numerically \nconsistent, i.e. multiple choice values add up to 100% of respondents. \n \nThe procedures for handling non-conformances with the validated monitoring plan  \nThe project proponent ensure that field personnel have reviewed, understood and have \nagreed to follow the monitoring plan procedures, including provisions for maximizing response \nrates, documenting out-of-population cases, refusals and other sources of non-response. To \nreduce interviewer bias, good questionnaire design and well-tested questionnaires are \ndeveloped. \n \nDelAgua is responsible for training any contractors used during distribution, education and \nmonitoring activities. DelAgua ensures training of all on-site staff with respect to adherence \nto the Monitoring Plan of the project activity. Records of the training will be kept. Internal audit \nof all the records of the distribution, monitoring and education activities are performed on an \nannual basis, and will be carried out once (or twice, based on the requirements and plans) a \nyear. Training records are saved for such training programs, where step-by-step training is \nprovided to the surveyors for a quality data collection process, where they are expected to not \nimpact the materially, degree of conservativeness, and perform the surveys in an unbiased \nmanner. The surveyors are trained on a periodic basis, and refresher trainings are also \nprovided to improve the quality of surveys from time to time. During these audits all the data \nand parameters that need to be monitored as per the monitoring plan will be checked and \nshortcomings if any will be reported and addresses. Since the surveys are electronic in format, \nrecording of responses and the record keeping procedure for these surveys are conveyed to \nthe team through rigorous trainings. \n \nDeviations or errors in data collection are logged and reviewed, with supervisors conducting \nspot checks to ensure compliance. Corrective actions, such as re-training or additional \nsurveys, are taken if non-conformances are found. \n \nBy integrating rigorous training, continuous oversight, and corrective measures, the project \nensures that all monitoring activities align with the validated Monitoring Plan, maintaining data \naccuracy, credibility, and compliance. \n \nCalculation of emission reductions: \nEmission reductions will be calculated using the results of the most recent survey data. The \nupdated parameters adjust all emission reduction results for the year monitored. \n \nSampling Plan: \nPP follows the sampling approach outlined below, which is in line with the most recent version \n(v9.0) of the CDM Standard for Sampling and Surveys for CDM Project Activities and \nProgrammes of Activities:",
-          "page": 68,
-          "paragraph_id": "p68-03",
+          "text": "Description \nAverage quantity of fuel used by project device type j \nfrom batch k during year y \nEquations \n(4), (7) \nSource of data \nMonitoring (Project KPT campaign) \nDescription of \nmeasurement methods \nand procedures to be \napplied",
+          "page": 65,
+          "paragraph_id": "p65-02",
           "verification": "cited_paragraph"
         },
         {
-          "text": "Data / Parameter \nBCb,i,y \nData unit \nTonnes/HH/Year \nDescription \nFuel used per baseline device type i during year y \nEquations \n(2) \nSource of data \nOption 1: A measurement campaign following the Kitchen \nPerformance Test Protocol in control households that do not \nparticipate in the project, established prior to validation as \nstatistically equivalent to the pre-project conditions of project \nhouseholds regarding baseline fuel consumption \nDescription of \nmeasurement methods \nand procedures to be \napplied",
-          "page": 62,
-          "paragraph_id": "p62-05",
+          "text": "Option 1: Kitchen Performance Test (KPT)  \nA measurement campaign following the Kitchen Performance \nTest protocol shall be designed, carried out, and analyzed in \ncompliance with the most recent version of the CDM Standard \nfor Sampling and Surveys for CDM Project Activities and \nProgrammes of Activities. The campaign must achieve \nconfidence and precision of at least 90/10 for the target \nparameter of average daily fuel consumption per adult \nequivalent. The result must be scaled appropriately using the \naverage household size to obtain the value of BCp,j,k,y. \n \nProject activities applying KPTs shall also measure the quantity \nof fuel used by pre-project devices that are still operational and \nprovide it in the calculation sheet and monitoring reports (this is \na reporting-only requirement). \n \nOption 2: Direct measurement  \nApply continuous direct measurement using equipment \ncalibrated \nin \naccordance \nwith \nnational/international \nrequirements. A sample of project devices may be measured in \nsuch a way that confidence and precision of 90/10 is achieved \nfor the target parameter of total annual fuel use. The sampling \nmust comply with the most recent version of the CDM Standard \nfor Sampling and Surveys for CDM Project Activities and \nProgrammes of Activities. \nFrequency of \nmonitoring/recording",
+          "page": 65,
+          "paragraph_id": "p65-03",
           "verification": "cited_paragraph"
         },
         {
-          "text": "Data / Parameter \nη𝑜𝑙𝑑 \nData unit \nFraction \nDescription \nEfficiency of baseline stove \nSource of data \nCalculated using the Default value as specified in VMR0006 \nmethodology and the data obtained through the distribution \nsurveys \nDescription of \nmeasurement methods \nand procedures \napplied",
-          "page": 30,
-          "paragraph_id": "x3-p30-03",
+          "text": "Biennial or annual for Option 1  \nContinuous and aggregated annually for Options 2 \nValue applied \n1.19 \nMonitoring equipment \nN/A \nQA/QC procedures to \nbe applied",
+          "page": 65,
+          "paragraph_id": "p65-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The VCS Grouped Project in Rwanda follows VCS standard requirements applicable, along \nwith the methodological requirements on monitoring a grouped non-AFOLU large project \nactivity. The Monitoring Plan is elaborated in multiple sub-sections for the sake of clarity. \nPP shall maintain detailed records of the commissioning dates for all project devices, \ncategorized by type (j) and batch (k), in accordance with the applied methodology. Throughout \nthe crediting period, PP systematically monitors and records all relevant parameters as \noutlined in Section 9.2 of the methodology. Additionally, PP ensures full compliance with the \nrequirements specified in the General Guidelines for SSC CDM. \n \nThe following monitoring plan is designed in accordance with the applied methodology \nVM0050 v1.0: \n \nTeam Involved: The DelAgua team involved in the GHG operations management is the local \nstaff based in Rwanda along with the senior management. \nThe key responsibilities are shared by the team as follows:",
+          "page": 66,
+          "paragraph_id": "p66-03",
           "verification": "cited_paragraph"
         }
       ],
@@ -310,17 +376,56 @@
       "excerpt": {
         "paragraphs": [
           "p2-03",
+          "p3-03",
+          "p15-06",
+          "p15-07",
           "p24-06",
           "p24-07",
           "p24-08",
+          "p24-10",
+          "p24-14",
+          "p24-15",
           "p24-16",
+          "p25-12",
+          "p25-13",
+          "p25-14",
+          "p55-02",
+          "p55-03",
+          "p55-04",
+          "p55-05",
+          "p55-10",
+          "p55-11",
+          "p57-11",
+          "p57-12",
+          "p57-13",
+          "p58-02",
+          "p58-05",
+          "p58-06",
+          "p58-07",
+          "p60-06",
+          "p60-07",
+          "p60-08",
+          "p61-03",
+          "p61-04",
+          "p61-05",
+          "p61-06",
+          "p61-07",
           "p62-04",
           "p62-05",
+          "p63-02",
+          "p63-03",
           "p64-07",
           "p64-08",
           "p64-09",
+          "p65-02",
+          "p65-03",
+          "p65-04",
+          "p65-05",
+          "p66-03",
+          "p66-04",
           "p67-02",
           "p67-03",
+          "p67-04",
           "p68-02",
           "p68-03",
           "x1-p29-07",
@@ -343,11 +448,12 @@
           "x2-p99-05",
           "x3-p30-02",
           "x3-p30-03",
+          "x3-p33-15",
           "x3-p36-02",
           "x3-p41-03",
           "x3-p41-04"
         ],
-        "chars": 29979
+        "chars": 44937
       }
     },
     {
@@ -362,6 +468,11 @@
           "answer": "yes",
           "evidence": [
             {
+              "paragraph_id": "p22-03",
+              "page": 22,
+              "text": "☐   Yes \n \n \n ☒   No \n1.16.2 Registration in Other GHG Programs \nHas the project registered under any other GHG programs?"
+            },
+            {
               "paragraph_id": "p22-04",
               "page": 22,
               "text": "☐   Yes \n \n \n ☒   No \n1.16.3 Projects Rejected by Other GHG Programs \nHas the project been rejected by any other GHG programs?"
@@ -372,7 +483,7 @@
               "text": "line with the Joint PD-MR template guidelines v4.2 which states to \"Indicate whether the project has \nbeen registered or is seeking registration under any other GHG programs. Where the project has been \nregistered under any other GHG program, provide the registration number and details.\" \n \nProgram Rule: \nJoint PD-MR template version 4.2  \nProject proponent response \nDate : 18/05/2023 \nThe ICS included under each PAI i.e., PAI-1, PAI-2, PAI-3 and PAI-4 under grouped project activity are \ndistributed by DelAgua, the ICS are uniquely identifiable and are not part of any other GHG programme. \nA declaration regarding the same is also provided by PP. To check on any possibility of double counting, \nwhole database by PP being checked and serial number used in PAIs under grouped project are unique. \nDocumentation provided by project proponent \nDeclaration letter \nVVB assessment  \nDate: 02/06/2023 \nThe grouped project activity included four PAI i.e., PAI-1, PAI-2, PAI-3 and PAI-4 under which ICS are \ndistributed by the PP and these ICS have unique ID in order to avoid double counting. It was confirmed \nduring the on-site visit and from the distribution database that the serial number used in the PAIs \nunder the GP are unique. Moreover, VVB has verified from the declaration provided by the PP which \nstates that the project has not been registered nor seeking registration under any other GHG program.  \n \nHence, CAR 03 is closed."
             }
           ],
-          "second_opinion_p_yes": 0.86,
+          "second_opinion_p_yes": 0.79,
           "needs_review": false,
           "dropped": null
         },
@@ -381,11 +492,6 @@
           "question": "Does the text address other environmental credits or certificates (e.g. renewable energy certificates, I-RECs) or participation in an emissions trading scheme?",
           "answer": "yes",
           "evidence": [
-            {
-              "paragraph_id": "p22-05",
-              "page": 22,
-              "text": "☐   Yes \n \n \n ☒   No \n \n1.17 Double Claiming, Other Forms of Credit, and Scope 3 Emissions \n1.17.1 No Double Claiming with Emissions Trading Programs or Binding Emission Limits \nAre project reductions and removals or project activities also included in an emissions trading \nprogram or binding emission limit? See the VCS Program Definitions for definitions of \nemissions trading program and binding emission limit."
-            },
             {
               "paragraph_id": "p23-02",
               "page": 23,
@@ -397,7 +503,7 @@
               "text": "☐  Yes  \n \n☒  No \nIf yes, provide all required evidence of no double claiming as outlined by the VCS Standard. \n \n1.17.3 Supply Chain (Scope 3) Emissions \nDo the project activities specified in Section 0 affect the emissions footprint of any product(s) \n(goods or services) that are part of a supply chain?"
             }
           ],
-          "second_opinion_p_yes": 0.8,
+          "second_opinion_p_yes": 0.79,
           "needs_review": false,
           "dropped": null
         },
@@ -406,12 +512,18 @@
           "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.13,
+          "second_opinion_p_yes": 0.15,
           "needs_review": false,
           "dropped": null
         }
       ],
       "quotes": [
+        {
+          "text": "☐   Yes \n \n \n ☒   No \n1.16.2 Registration in Other GHG Programs \nHas the project registered under any other GHG programs?",
+          "page": 22,
+          "paragraph_id": "p22-03",
+          "verification": "cited_paragraph"
+        },
         {
           "text": "☐   Yes \n \n \n ☒   No \n1.16.3 Projects Rejected by Other GHG Programs \nHas the project been rejected by any other GHG programs?",
           "page": 22,
@@ -422,12 +534,6 @@
           "text": "line with the Joint PD-MR template guidelines v4.2 which states to \"Indicate whether the project has \nbeen registered or is seeking registration under any other GHG programs. Where the project has been \nregistered under any other GHG program, provide the registration number and details.\" \n \nProgram Rule: \nJoint PD-MR template version 4.2  \nProject proponent response \nDate : 18/05/2023 \nThe ICS included under each PAI i.e., PAI-1, PAI-2, PAI-3 and PAI-4 under grouped project activity are \ndistributed by DelAgua, the ICS are uniquely identifiable and are not part of any other GHG programme. \nA declaration regarding the same is also provided by PP. To check on any possibility of double counting, \nwhole database by PP being checked and serial number used in PAIs under grouped project are unique. \nDocumentation provided by project proponent \nDeclaration letter \nVVB assessment  \nDate: 02/06/2023 \nThe grouped project activity included four PAI i.e., PAI-1, PAI-2, PAI-3 and PAI-4 under which ICS are \ndistributed by the PP and these ICS have unique ID in order to avoid double counting. It was confirmed \nduring the on-site visit and from the distribution database that the serial number used in the PAIs \nunder the GP are unique. Moreover, VVB has verified from the declaration provided by the PP which \nstates that the project has not been registered nor seeking registration under any other GHG program.  \n \nHence, CAR 03 is closed.",
           "page": 95,
           "paragraph_id": "x2-p95-02",
-          "verification": "cited_paragraph"
-        },
-        {
-          "text": "☐   Yes \n \n \n ☒   No \n \n1.17 Double Claiming, Other Forms of Credit, and Scope 3 Emissions \n1.17.1 No Double Claiming with Emissions Trading Programs or Binding Emission Limits \nAre project reductions and removals or project activities also included in an emissions trading \nprogram or binding emission limit? See the VCS Program Definitions for definitions of \nemissions trading program and binding emission limit.",
-          "page": 22,
-          "paragraph_id": "p22-05",
           "verification": "cited_paragraph"
         },
         {
@@ -458,9 +564,31 @@
           "p36-09",
           "p36-10",
           "p36-11",
+          "p36-15",
+          "p36-16",
+          "p39-06",
+          "p39-07",
+          "p39-08",
           "p40-02",
           "p40-03",
           "p40-04",
+          "p42-06",
+          "p42-07",
+          "p42-08",
+          "p50-02",
+          "p50-03",
+          "p58-07",
+          "p58-08",
+          "p58-09",
+          "p59-03",
+          "p59-04",
+          "p59-05",
+          "p60-08",
+          "p60-09",
+          "p61-03",
+          "p61-04",
+          "p61-05",
+          "p62-08",
           "p63-02",
           "p63-03",
           "p65-02",
@@ -472,16 +600,26 @@
           "p76-04",
           "p76-05",
           "p76-06",
+          "p77-03",
           "x1-p46-05",
+          "x1-p46-06",
           "x1-p46-07",
           "x1-p51-04",
           "x1-p51-05",
           "x2-p42-10",
           "x2-p42-11",
           "x2-p42-12",
+          "x2-p49-10",
+          "x2-p49-11",
+          "x2-p49-12",
+          "x2-p53-08",
+          "x2-p53-09",
           "x2-p59-02",
           "x2-p59-03",
           "x2-p70-10",
+          "x2-p70-15",
+          "x2-p70-16",
+          "x2-p71-01",
           "x2-p94-03",
           "x2-p94-04",
           "x2-p95-02",
@@ -489,16 +627,17 @@
           "x2-p99-03",
           "x2-p99-04",
           "x2-p99-05",
+          "x3-p2-08",
           "x3-p6-13"
         ],
-        "chars": 29994
+        "chars": 44967
       }
     },
     {
       "principle": "safeguards",
-      "status": "partial_evidence",
-      "score": 75,
-      "rationale": "Evidence found for 3 of 4 checks (S1, S2, S4); not found in the excerpt: S3.",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (S1, S2, S3, S4).",
       "checks": [
         {
           "id": "S1",
@@ -521,22 +660,28 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "p29-05",
-              "page": 29,
-              "text": "The grievance redress procedure was developed to ensure that \nlocal stakeholders have accessible and culturally appropriate \nchannels to raise concerns. The process includes receiving, \nhearing, responding to, and resolving grievances within a \nreasonable time frame. Various communication methods have been \nestablished \nto \naccommodate \ndifferent \nstakeholder \nneeds, \nespecially considering rural communities with limited phone access \nas stated below. \n Grievance redress \nprocedure"
+              "paragraph_id": "p30-03",
+              "page": 30,
+              "text": "1. Toll-Free Helpline – DelAgua provides a toll-free helpline \nfor stakeholders to connect and seek assistance. \n2. Community Health Worker (CHW) Network – The CHW \nnetwork collects feedback directly from end users and local \nauthorities. This method is widely used as many rural \nRwandans lack phone access. \n3. Written Submissions via Local Government Offices – \nDuring stove distribution, end users are informed that they \ncan submit written feedback to the nearest cell office, where \nit will be relayed to DelAgua through government officials. \nThese mechanisms ensure that grievances are received, \ndocumented, and addressed in a structured and transparent \nmanner. \n \n2.1.5 Public Comments \nComments received \nActions taken \nThere were no comments received \nduring public comment period from 17 \nMarch 2023 to 16 April 2023 on VERRA \nwebsite."
             }
           ],
-          "second_opinion_p_yes": 0.98,
+          "second_opinion_p_yes": 0.99,
           "needs_review": false,
           "dropped": null
         },
         {
           "id": "S3",
           "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
-          "answer": "no",
-          "evidence": [],
-          "second_opinion_p_yes": 0.69,
-          "needs_review": true,
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p34-05",
+              "page": 34,
+              "text": "The ICSs decreases the GHG emission levels \nattributed to improved performance and \ndesign of the project ICSs. It does not involve \nchange in baseline fuel or any other major \ninterventions \nthat \nnegatively \nimpacts \nbiodiversity or ecosystems. Thus, the project \ndoes not affect or alter any largely intact or \nHigh Conservation Value (HCV) ecosystems, \ncritical habitats, landscapes, key biodiversity \nareas or sites identified. \nSoil degradation and \nsoil erosion"
+            }
+          ],
+          "second_opinion_p_yes": 0.86,
+          "needs_review": false,
           "dropped": null
         },
         {
@@ -563,9 +708,15 @@
           "verification": "cited_paragraph"
         },
         {
-          "text": "The grievance redress procedure was developed to ensure that \nlocal stakeholders have accessible and culturally appropriate \nchannels to raise concerns. The process includes receiving, \nhearing, responding to, and resolving grievances within a \nreasonable time frame. Various communication methods have been \nestablished \nto \naccommodate \ndifferent \nstakeholder \nneeds, \nespecially considering rural communities with limited phone access \nas stated below. \n Grievance redress \nprocedure",
-          "page": 29,
-          "paragraph_id": "p29-05",
+          "text": "1. Toll-Free Helpline – DelAgua provides a toll-free helpline \nfor stakeholders to connect and seek assistance. \n2. Community Health Worker (CHW) Network – The CHW \nnetwork collects feedback directly from end users and local \nauthorities. This method is widely used as many rural \nRwandans lack phone access. \n3. Written Submissions via Local Government Offices – \nDuring stove distribution, end users are informed that they \ncan submit written feedback to the nearest cell office, where \nit will be relayed to DelAgua through government officials. \nThese mechanisms ensure that grievances are received, \ndocumented, and addressed in a structured and transparent \nmanner. \n \n2.1.5 Public Comments \nComments received \nActions taken \nThere were no comments received \nduring public comment period from 17 \nMarch 2023 to 16 April 2023 on VERRA \nwebsite.",
+          "page": 30,
+          "paragraph_id": "p30-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The ICSs decreases the GHG emission levels \nattributed to improved performance and \ndesign of the project ICSs. It does not involve \nchange in baseline fuel or any other major \ninterventions \nthat \nnegatively \nimpacts \nbiodiversity or ecosystems. Thus, the project \ndoes not affect or alter any largely intact or \nHigh Conservation Value (HCV) ecosystems, \ncritical habitats, landscapes, key biodiversity \nareas or sites identified. \nSoil degradation and \nsoil erosion",
+          "page": 34,
+          "paragraph_id": "p34-05",
           "verification": "cited_paragraph"
         },
         {
@@ -576,21 +727,38 @@
         }
       ],
       "dropped_findings": 0,
-      "review_flags": [
-        "models_disagree:S3"
-      ],
+      "review_flags": [],
       "excerpt": {
         "paragraphs": [
           "p2-03",
+          "p3-02",
+          "p3-03",
+          "p4-27",
+          "p5-02",
+          "p20-02",
+          "p20-03",
+          "p22-03",
+          "p22-06",
+          "p22-07",
+          "p22-08",
+          "p24-07",
+          "p24-08",
+          "p24-09",
+          "p25-05",
+          "p25-06",
+          "p25-07",
           "p26-03",
           "p26-04",
           "p26-05",
           "p26-06",
           "p26-07",
           "p26-08",
+          "p27-02",
+          "p27-03",
           "p27-05",
           "p27-07",
           "p27-08",
+          "p28-02",
           "p28-04",
           "p28-05",
           "p29-02",
@@ -601,22 +769,37 @@
           "p30-02",
           "p30-03",
           "p30-04",
+          "p30-05",
+          "p31-06",
+          "p31-07",
           "p32-05",
           "p32-10",
           "p32-14",
           "p32-19",
           "p32-20",
           "p33-05",
+          "p33-06",
+          "p33-08",
+          "p33-09",
+          "p33-10",
+          "p34-05",
+          "x1-p2-22",
+          "x1-p38-14",
           "x1-p38-15",
           "x1-p39-06",
           "x1-p39-07",
           "x1-p39-08",
           "x1-p39-09",
+          "x2-p43-06",
+          "x2-p43-07",
+          "x2-p43-08",
           "x2-p43-12",
           "x2-p43-13",
           "x2-p44-02",
           "x2-p44-03",
           "x2-p92-04",
+          "x2-p92-05",
+          "x2-p92-06",
           "x2-p96-05",
           "x2-p96-06",
           "x2-p97-02",
@@ -637,16 +820,15 @@
           "x3-p15-07",
           "x3-p15-08",
           "x3-p15-09",
-          "x3-p16-23",
           "x3-p17-02",
           "x3-p17-03"
         ],
-        "chars": 29998
+        "chars": 44954
       }
     }
   ],
   "overall": {
-    "score": 58,
+    "score": 63,
     "included": [
       "additionality",
       "robust_quantification",
@@ -665,5 +847,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T17:47:31+00:00"
+  "generated_at": "2026-10-20T17:43:11+00:00"
 }

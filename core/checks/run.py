@@ -74,7 +74,10 @@ def _compare(e: EstimateTable, flows: dict[int, dict[str, float]]) -> dict[str, 
 
 def issuance_vs_estimate(project: ProjectSources, tables: dict[str, list[Table]]) -> dict[str, Any]:
     title = "Issued credits vs the document's own yearly figures"
-    found = _distinct([(f, e) for f, ts in tables.items() for e in find_estimate_tables(ts)])
+    # ex-ante figures: the project description (and supporting documents such as a CDM PDD), not the
+    # monitoring or verification reports, whose figures issued_vs_monitored compares
+    ex_ante = {f.local_path for f in project.files if f.role in ("project_description", "supporting")}
+    found = _distinct([(f, e) for f, ts in tables.items() if f in ex_ante for e in find_estimate_tables(ts)])
     flows = registry_data.vintage_flows(project.project_id)
     if not found:
         return _check("issuance_vs_estimate", title, "not_available",
@@ -155,7 +158,9 @@ def issuance_vs_monitored(project: ProjectSources, tables: dict[str, list[Table]
     reports read cover the whole calendar year; otherwise later periods may hold the rest.
     """
     title = "Issued credits vs the monitoring reports' figures"
-    reports = [f for f in project.by_role("monitoring_report") if f.local_path in tables]
+    # a joint project description and monitoring report holds both ex-ante and monitored tables, which the
+    # parser cannot tell apart, so only files registered as monitoring reports are read here
+    reports = [f for f in project.by_role("monitoring_report") if f.role == "monitoring_report" and f.local_path in tables]
     if not reports:
         return _check("issuance_vs_monitored", title, "not_available", "No monitoring report was read.")
     flows = registry_data.vintage_flows(project.project_id)
@@ -172,10 +177,13 @@ def issuance_vs_monitored(project: ProjectSources, tables: dict[str, list[Table]
             values = {y: v for y, v in e.by_year.items() if p[0].year <= y <= p[1].year and v > 0}
             for y, v in values.items():  # the latest report covering a year wins
                 monitored[y] = v
-                sources[y] = {"file": f.local_path, "page": e.page, "table_id": e.table_id}
+                sources[y] = {"file": f.local_path, "page": e.page, "table_id": e.table_id,
+                              "partial_row": y in e.partial_years}
     issued = {v: x["issued"] for v, x in flows.items() if x["issued"] > 0}
     rows = [{"vintage": y, "monitored": monitored[y], "issued": issued[y], "ratio": round(issued[y] / monitored[y], 3),
-             "whole_year_monitored": _covered(y, periods), **sources[y]} for y in sorted(monitored) if y in issued]
+             # a row for part of a year (e.g. "01-January-2024 - 31-January-2024") is never the whole year's figure
+             "whole_year_monitored": _covered(y, periods) and not sources[y]["partial_row"], **sources[y]}
+            for y in sorted(monitored) if y in issued]
     if not rows:
         return _check("issuance_vs_monitored", title, "not_available",
                       "No yearly net-reduction table in the monitoring reports read overlaps an issued vintage"

@@ -10,6 +10,117 @@
     "pages": 37,
     "pages_without_text": [],
     "tables": 34
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS138_MR1.pdf",
+    "sha256": "08ce2376d041a0c3060f715117087b4e4e11dd025dba825e9e0579a04c30529e",
+    "pages": 111,
+    "pages_without_text": [
+     36,
+     107
+    ],
+    "tables": 105
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS138_MR2.pdf",
+    "sha256": "e3c5c88d8c48e02082cc7f8d293e8de2e1a901e68f3f02e0d0986edd92687813",
+    "pages": 166,
+    "pages_without_text": [
+     74,
+     75,
+     91,
+     92,
+     93,
+     94,
+     95,
+     96,
+     97,
+     98,
+     99,
+     100,
+     101,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     108,
+     109,
+     110,
+     111,
+     112,
+     113,
+     114,
+     115,
+     116,
+     117,
+     118,
+     119,
+     120,
+     121,
+     122,
+     123
+    ],
+    "tables": 91
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS138_MR3.pdf",
+    "sha256": "0ff3b9a43c16d8202e6753fa9ae750d66fa837eaca9ee801b05e62f5869d80af",
+    "pages": 161,
+    "pages_without_text": [
+     88
+    ],
+    "tables": 138
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS138_MR4.pdf",
+    "sha256": "6f47c7cb0d8202d003d0c400ec97efcf19cb7f804d4832e06f5e20690cedb750",
+    "pages": 134,
+    "pages_without_text": [
+     73,
+     74
+    ],
+    "tables": 118
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS138_MR5.pdf",
+    "sha256": "460dad982d5823b8ac8744dd0afdfd12d6456ee5b6332e8490f459745c37b51a",
+    "pages": 182,
+    "pages_without_text": [
+     108,
+     162,
+     174,
+     175,
+     176,
+     177,
+     178,
+     179,
+     181,
+     182
+    ],
+    "tables": 159
+   },
+   {
+    "role": "verification_report",
+    "file": "samples/pdfs/VCS138_VER1.pdf",
+    "sha256": "d8c2a808dac9c4636a73b3574023cc9a384a62972411b396b9efc0959fd3e251",
+    "pages": 35,
+    "pages_without_text": [],
+    "tables": 39
+   },
+   {
+    "role": "validation_report",
+    "file": "samples/pdfs/VCS138_VAL1.pdf",
+    "sha256": "a2e44c524fd5b7626dfa1eb1afa3f5eb2089efcc9a09c97fca04eb95292dbe9d",
+    "pages": 94,
+    "pages_without_text": [],
+    "tables": 87
    }
   ],
   "offsetsdb_snapshot": "2026-06-01"
@@ -18,17 +129,16 @@
   {
    "id": "document_coverage",
    "title": "Documents read",
-   "status": "flag",
-   "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "status": "pass",
+   "summary": "Read: Project description (PD) ×1, Validation report (VVB) ×1, Monitoring report ×5, Verification report (VVB) ×1.",
    "details": {
     "held": {
-     "project_description": 1
+     "project_description": 1,
+     "validation_report": 1,
+     "monitoring_report": 5,
+     "verification_report": 1
     },
-    "missing": [
-     "validation_report",
-     "monitoring_report",
-     "verification_report"
-    ]
+    "missing": []
    }
   },
   {
@@ -131,8 +241,10 @@
    "id": "issuance_vs_monitored",
    "title": "Issued credits vs the monitoring reports' figures",
    "status": "not_available",
-   "summary": "No monitoring report was read.",
-   "details": {}
+   "summary": "No yearly net-reduction table in the monitoring reports read overlaps an issued vintage.",
+   "details": {
+    "skipped": []
+   }
   },
   {
    "id": "retired_vs_issued",

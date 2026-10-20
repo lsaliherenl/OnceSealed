@@ -19,6 +19,9 @@ YEAR = re.compile(r"\b(19[89]\d|20\d\d)\b")
 MONTH = re.compile(r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*", re.I)
 FULL_YEAR = re.compile(r"\b0?1\W*(st\W*)?jan[a-z]*\b.*\b31\W*(st\W*)?dec", re.I)
 REDUCTION_WORDS = ("reduction", "removal")
+# Tables of one component of the total (e.g. "Net GHG removal from ARR" split by deforestation agent) are not
+# the project's yearly net figure; reading them would compare issuance with a fraction of it.
+COMPONENT = re.compile(r"\b(?i:from)\s+(ARR|REDD|WRC|IFM|ALM|APD|AUDD)\b|\b[Aa]gents?\s+[A-Z]\b")
 OTHER_COLUMNS = ("baseline", "project emission", "leakage", "buffer", "uncertainty", "deduction")
 
 
@@ -101,7 +104,7 @@ def read_estimate_table(table: Table) -> EstimateTable | None:
     if not any(w in " ".join(t for _, t in labels).lower() for w in REDUCTION_WORDS):
         return None
     target = _net_column([t for _, t in labels])
-    if target is None:
+    if target is None or COMPONENT.search(" ".join(t for _, t in labels)):
         return None
 
     # Group rows into records: a row with numbers starts a record; rows without numbers continue its label
@@ -126,8 +129,10 @@ def read_estimate_table(table: Table) -> EstimateTable | None:
         label = " ".join(label_parts)
         if len(values) == len(labels):
             value = values[target]
-        elif target == len(labels) - 1 and last_col >= net_col - 2:
-            value = values[-1]  # the net column is the last one and the row's last number sits under it
+        elif target == len(labels) - 1 and (last_col == net_col or (len(values) > 1 and last_col >= net_col - 2)):
+            # the net column is the last one and the row's last number sits under it (merged cells can shift
+            # a column or two, but a lone number elsewhere may be another column, e.g. project emissions)
+            value = values[-1]
         else:
             continue
         line = f"{label} | {value:,.0f}"

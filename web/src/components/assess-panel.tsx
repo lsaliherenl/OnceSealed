@@ -194,7 +194,7 @@ export function AssessPanel() {
           </label>
         </div>
         <p className="text-[13px] text-muted-foreground">
-          The same code as the published reports: 18 checks over a 30,000-character excerpt per principle, each “found”
+          The same code as the published reports: 18 checks over an excerpt per principle (30,000 characters of the project description plus up to 15,000 from the other documents), each “found”
           citing a paragraph, a second model for review flags, instruction-like paragraphs screened out. About $0.02 a
           project when nothing is cached. The result is a draft until you publish it.
         </p>

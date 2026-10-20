@@ -6,15 +6,15 @@ A **flag** is a lead for a reviewer, not a finding of wrongdoing; **n/a** means 
 
 | Project | Documents read | Issued credits vs the document's own yearly figures | Issued credits vs the monitoring reports' figures | Retirements never exceed issuance | Methodology matches the registry listing | Similar listings in other registries or programmes |
 |---|---|---|---|---|---|---|
-| VCS1477 | **flag** | n/a | n/a | pass | pass | pass |
+| VCS1477 | pass | n/a | n/a | pass | pass | pass |
 | VCS1851 | pass | info | n/a | pass | pass | info |
-| VCS138 | **flag** | info | n/a | pass | pass | info |
-| VCS2505 | **flag** | n/a | n/a | pass | pass | pass |
-| VCS1742 | **flag** | pass | n/a | pass | pass | pass |
-| VCS1728 | **flag** | n/a | n/a | pass | pass | pass |
-| VCS2609 | **flag** | info | n/a | pass | pass | pass |
+| VCS138 | pass | info | n/a | pass | pass | info |
+| VCS2505 | pass | n/a | info | pass | pass | pass |
+| VCS1742 | pass | pass | info | pass | pass | pass |
+| VCS1728 | pass | n/a | info | pass | pass | pass |
+| VCS2609 | pass | info | n/a | pass | pass | pass |
 | VCS673 | **flag** | info | n/a | **flag** | pass | pass |
-| VCS2846 | **flag** | pass | n/a | pass | pass | pass |
+| VCS2846 | pass | pass | n/a | pass | pass | pass |
 | VCS985 | **flag** | **flag** | info | pass | pass | pass |
 | VCS4150 | **flag** | info | n/a | pass | n/a | **flag** |
 
@@ -24,26 +24,29 @@ A **flag** is a lead for a reviewer, not a finding of wrongdoing; **n/a** means 
 - **VCS1851**, similar listings in other registries or programmes: 1 similarly named project(s), with no vintage issued in both: VCS2035 (verra).
 - **VCS138**, issued credits vs the document's own yearly figures: Over the whole span issuance is within 20% of the document (2017-2024: issued 811,131 t, document 707,496 t (1.15x, table on page 4)), though single vintages exceed it (2022, 2023, 2024).
 - **VCS138**, similar listings in other registries or programmes: 1 similarly named project(s), with no vintage issued in both: ACR113 (american-carbon-registry).
-- **VCS2609**, issued credits vs the document's own yearly figures: Over the whole span issuance is within 20% of the document (2016-2023: issued 5,833,782 t, document 5,509,337 t (1.06x, table on page 162, one of 2 tables)), though single vintages exceed it (2019, 2020, 2021).
+- **VCS2505**, issued credits vs the monitoring reports' figures: Issued credits per vintage over monitored net reductions (2023-2024): 2023: 2.05, 2024: 13.25. 0 of 2 vintages are at or below the monitored figure (a ratio below 1 is expected where a buffer share is withheld). Above it: 2023, 2024, a vintage the monitoring reports read cover only in part, so a later period may hold the rest.
+- **VCS1742**, issued credits vs the monitoring reports' figures: Issued credits per vintage over monitored net reductions (2020-2021): 2020: 1.13, 2021: 1.78. 0 of 2 vintages are at or below the monitored figure (a ratio below 1 is expected where a buffer share is withheld). Above it: 2020, 2021, a vintage the monitoring reports read cover only in part, so a later period may hold the rest.
+- **VCS1728**, issued credits vs the monitoring reports' figures: Issued credits per vintage over monitored net reductions (2022-2023): 2022: 1.22, 2023: 1.00. 1 of 2 vintages are at or below the monitored figure (a ratio below 1 is expected where a buffer share is withheld). Above it: 2022, a vintage the monitoring reports read cover only in part, so a later period may hold the rest.
+- **VCS2609**, issued credits vs the document's own yearly figures: Over the whole span issuance is within 20% of the document (2016-2023: issued 5,833,782 t, document 5,509,337 t (1.06x, table on page 162)), though single vintages exceed it (2019, 2020, 2021).
 - **VCS673**, issued credits vs the document's own yearly figures: Issuance is far below the document's figures (2009-2017: issued 788,228 t, document 9,695,423 t (0.08x, table on page 67)). Either the project delivered much less than projected, or the table holds cumulative stocks rather than yearly figures (common for afforestation projects); check the table.
 - **VCS673**, retirements never exceed issuance: More credits retired than issued for vintage 2017 (+13,052 t). Likely a data inconsistency in the registry records; worth a reconciliation.
-- **VCS985**, issued credits vs the document's own yearly figures: Issuance exceeds the document's own figures by more than 20% over 2009-2018: issued 27,135,368 t, document 15,752,684 t (1.72x, table on page 133, one of 4 tables). Ex-ante figures in a project description can legitimately differ from monitored results; the monitoring and verification reports explain the issued volume.
+- **VCS985**, issued credits vs the document's own yearly figures: Issuance exceeds the document's own figures by more than 20% over 2009-2018: issued 27,135,368 t, document 15,752,684 t (1.72x, table on page 133). Ex-ante figures in a project description can legitimately differ from monitored results; the monitoring and verification reports explain the issued volume.
 - **VCS985**, issued credits vs the monitoring reports' figures: Issued credits per vintage over monitored net reductions (2013-2018): 2013: 1.00, 2014: 1.00, 2015: 0.90, 2016: 0.90, 2017: 0.90, 2018: 1.27. 5 of 6 vintages are at or below the monitored figure (a ratio below 1 is expected where a buffer share is withheld). Above it: 2018, a vintage the monitoring reports read cover only in part, so a later period may hold the rest.
-- **VCS4150**, issued credits vs the document's own yearly figures: Over the whole span issuance is within 20% of the document (2022-2025: issued 8,551,795 t, document 8,531,621 t (1.00x, table on page 22, one of 2 tables)), though single vintages exceed it (2023, 2024).
+- **VCS4150**, issued credits vs the document's own yearly figures: Over the whole span issuance is within 20% of the document (2022-2025: issued 8,551,795 t, document 7,257,613 t (1.18x, table on page 17)), though single vintages exceed it (2023, 2024).
 - **VCS4150**, similar listings in other registries or programmes: VCS2749 (verra) has a similar name ('DelAgua Clean Cooking Grouped Project') and issued credits for the same vintages (2021). A name match is a lead, not proof: check whether these are the same activity.
 
 ## Documents read
 
 | Project | Read | Pages | Tables | Pages without text | Not read |
 |---|---|---|---|---|---|
-| VCS1477 | Project description (PD) | 396 | 213 | 0 | Validation report (VVB), Monitoring report, Verification report (VVB) |
+| VCS1477 | Project description (PD), Monitoring report, Monitoring report, Monitoring report, Monitoring report, Monitoring report, Verification report (VVB), Validation report (VVB) | 1388 | 997 | 0 | - |
 | VCS1851 | Project description (PD), Validation report (VVB) | 215 | 387 | 0 | - |
-| VCS138 | Project description (PD) | 37 | 34 | 0 | Validation report (VVB), Monitoring report, Verification report (VVB) |
-| VCS2505 | Project description (PD) | 64 | 56 | 0 | Validation report (VVB), Monitoring report, Verification report (VVB) |
-| VCS1742 | Project description (PD), Supporting document | 104 | 86 | 0 | Validation report (VVB), Monitoring report, Verification report (VVB) |
-| VCS1728 | Project description (PD) | 75 | 139 | 0 | Validation report (VVB), Monitoring report, Verification report (VVB) |
-| VCS2609 | Project description (PD) | 225 | 151 | 0 | Validation report (VVB), Monitoring report, Verification report (VVB) |
+| VCS138 | Project description (PD), Monitoring report, Monitoring report, Monitoring report, Monitoring report, Monitoring report, Verification report (VVB), Validation report (VVB) | 920 | 771 | 50 | - |
+| VCS2505 | Project description (PD), Monitoring report, Monitoring report, Monitoring report, Verification report (VVB), Validation report (VVB) | 450 | 522 | 0 | - |
+| VCS1742 | Project description (PD), Supporting document, Monitoring report, Monitoring report, Verification report (VVB), Validation report (VVB) | 444 | 488 | 0 | - |
+| VCS1728 | Project description (PD), Monitoring report, Monitoring report, Verification report (VVB), Validation report (VVB) | 418 | 692 | 0 | - |
+| VCS2609 | Project description (PD), Monitoring report, Monitoring report, Verification report (VVB), Validation report (VVB) | 1106 | 880 | 0 | - |
 | VCS673 | Project description (PD), Monitoring report, Monitoring report, Verification report (VVB) | 248 | 208 | 0 | Validation report (VVB) |
-| VCS2846 | Project description (PD) | 137 | 194 | 0 | Validation report (VVB), Monitoring report, Verification report (VVB) |
+| VCS2846 | Project description (PD), Validation report (VVB) | 263 | 376 | 0 | - |
 | VCS985 | Project description (PD), Monitoring report, Monitoring report, Monitoring report, Monitoring report, Monitoring report, Validation report (VVB) | 810 | 761 | 0 | Verification report (VVB) |
 | VCS4150 | Project description (PD), Monitoring report, Validation report (VVB), Monitoring report | 321 | 372 | 0 | Verification report (VVB) |

@@ -34,14 +34,15 @@
     "question_set_version": "qs-v2-checklist",
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
-    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0) on the project description + select_paragraphs(budget_chars=15000, overview_chars=0) on the other documents",
     "injection_screen": "injection-screen-v1",
+    "review_rule": "person-decides-flagged-checks-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
+  "method_hash": "0x05f2d815a67e7bfa5eba473409b663801b86b6fe07d2b1da7ae10c8d96d862e5",
   "principles": [
     {
       "principle": "additionality",
@@ -60,7 +61,7 @@
               "text": "Equity IRR without CDM \nBenchmark (Equity IRR) \n9.51% \n15.32%"
             }
           ],
-          "second_opinion_p_yes": 0.98,
+          "second_opinion_p_yes": 0.99,
           "needs_review": false,
           "dropped": null
         },
@@ -69,7 +70,7 @@
           "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.5,
+          "second_opinion_p_yes": 0.54,
           "needs_review": true,
           "dropped": null
         },
@@ -78,7 +79,7 @@
           "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.53,
+          "second_opinion_p_yes": 0.51,
           "needs_review": true,
           "dropped": null
         },
@@ -87,7 +88,7 @@
           "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.53,
+          "second_opinion_p_yes": 0.55,
           "needs_review": true,
           "dropped": null
         }
@@ -137,6 +138,34 @@
           "p36-09",
           "p36-10",
           "p36-17",
+          "p36-18",
+          "p37-09",
+          "p37-10",
+          "p37-17",
+          "p37-18",
+          "p38-09",
+          "p38-10",
+          "p38-17",
+          "p38-18",
+          "p39-09",
+          "p39-10",
+          "p39-17",
+          "p39-18",
+          "p40-08",
+          "p40-09",
+          "p40-16",
+          "p40-17",
+          "p41-08",
+          "p41-09",
+          "p41-16",
+          "p41-17",
+          "p42-06",
+          "p42-07",
+          "p42-14",
+          "p42-15",
+          "p43-04",
+          "p43-05",
+          "p44-03",
           "p46-04",
           "p46-05",
           "p46-07",
@@ -146,20 +175,32 @@
           "p47-03",
           "p47-04",
           "p118-21",
+          "x1-p5-03",
+          "x1-p18-16",
+          "x1-p25-03",
           "x1-p29-03",
           "x1-p29-04",
           "x1-p29-05",
+          "x1-p30-04",
+          "x1-p30-05",
+          "x1-p30-06",
           "x1-p32-04",
           "x1-p32-05",
           "x1-p32-06",
           "x1-p32-07",
           "x1-p32-08",
+          "x1-p36-20",
+          "x1-p39-02",
+          "x1-p46-15",
+          "x1-p46-17",
+          "x1-p52-19",
+          "x1-p55-17",
           "x1-p56-05",
           "x1-p56-06",
           "x1-p61-21",
           "x1-p82-02"
         ],
-        "chars": 29985
+        "chars": 44981
       }
     },
     {
@@ -190,7 +231,7 @@
               "text": "The verification team assessed whether the data and calculations of GHG \nemission reductions achieved resulting from the Joint VCS PD & MR. The \nverification team has checked whether calculations of baseline GHG emissions, \nproject GHG emissions and leakage GHG emissions have been carried out in \naccordance with the formulae and methods described in the monitoring plan of \nthe Joint VCS PD & MR. \nFindings \nCAR 07 raised on this section and closed successfully. Please refer Appendix 2 \nfor further details \nConclusion \nThe baseline Emissions for a given year is calculated by multiplying the energy \nbaseline (EB) with the regional grid emission factor. The grid in this case would \nbe the ‘INDIAN Grid’ \n \nFormula Used:- \n \nBEy = EGPJ,y x EFgrid,CM,y"
             }
           ],
-          "second_opinion_p_yes": 0.97,
+          "second_opinion_p_yes": 0.98,
           "needs_review": false,
           "dropped": null
         },
@@ -199,7 +240,7 @@
           "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.46,
+          "second_opinion_p_yes": 0.37,
           "needs_review": false,
           "dropped": null
         },
@@ -224,9 +265,9 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "p57-05",
-              "page": 57,
-              "text": "The meters is approved, tested & sealed by the State Utility. The \nmeters are in the custody of State Utility. The frequency of \ncalibration is once in 5 years. 68 The monthly electricity \nsupplied/exported by the project activity in the JMR report is \ncross checked with the monthly invoices of sale. In the absence \nor delay in the meter calibration appropriate Guidelines will be \napplied appropriately to confirm the conservativeness of \nmetering.  \n \nThe metering arrangement, accuracy class of meters, calibration \nfrequency is under control of state electricity board and PP do not \nhave any control on it. PP is getting value of net electricity \nsupplied to grid and the same is considered the monitoring \nparameter.  \n \nThe billing is raised based on substation meters. \nPurpose of data \nCalculation of baseline emissions"
+              "paragraph_id": "x1-p68-05",
+              "page": 68,
+              "text": "In accordance with the methodology requirement, net electricity supplied by the project activity is obtained \nfrom Joint Energy Meter Reading Report issued by State electricity authority which provide input values \n(apportioned EGexport,y and apportioned EGimport,y), used for calculation of EGPJ,y by the project activity and \nforms the basis for emission reduction calculation. Electricity export to the grid and import from the grid is \nmetered by main and check tri-vector energy meters. The main meter reading is taken jointly on a fixed \nday of every month for the preceding month at the delivery point and signed by the representatives of \nstate utility and O&M personnel."
             }
           ],
           "second_opinion_p_yes": 0.96,
@@ -248,9 +289,9 @@
           "verification": "cited_paragraph"
         },
         {
-          "text": "The meters is approved, tested & sealed by the State Utility. The \nmeters are in the custody of State Utility. The frequency of \ncalibration is once in 5 years. 68 The monthly electricity \nsupplied/exported by the project activity in the JMR report is \ncross checked with the monthly invoices of sale. In the absence \nor delay in the meter calibration appropriate Guidelines will be \napplied appropriately to confirm the conservativeness of \nmetering.  \n \nThe metering arrangement, accuracy class of meters, calibration \nfrequency is under control of state electricity board and PP do not \nhave any control on it. PP is getting value of net electricity \nsupplied to grid and the same is considered the monitoring \nparameter.  \n \nThe billing is raised based on substation meters. \nPurpose of data \nCalculation of baseline emissions",
-          "page": 57,
-          "paragraph_id": "p57-05",
+          "text": "In accordance with the methodology requirement, net electricity supplied by the project activity is obtained \nfrom Joint Energy Meter Reading Report issued by State electricity authority which provide input values \n(apportioned EGexport,y and apportioned EGimport,y), used for calculation of EGPJ,y by the project activity and \nforms the basis for emission reduction calculation. Electricity export to the grid and import from the grid is \nmetered by main and check tri-vector energy meters. The main meter reading is taken jointly on a fixed \nday of every month for the preceding month at the delivery point and signed by the representatives of \nstate utility and O&M personnel.",
+          "page": 68,
+          "paragraph_id": "x1-p68-05",
           "verification": "cited_paragraph"
         }
       ],
@@ -259,19 +300,50 @@
       "excerpt": {
         "paragraphs": [
           "p2-03",
+          "p5-12",
+          "p5-13",
           "p5-15",
           "p5-16",
+          "p24-04",
+          "p24-05",
+          "p24-06",
+          "p26-03",
+          "p26-04",
+          "p26-05",
+          "p27-18",
           "p28-02",
           "p28-03",
+          "p30-04",
+          "p30-05",
+          "p30-06",
+          "p49-10",
+          "p49-11",
+          "p50-05",
+          "p50-06",
+          "p50-07",
+          "p50-08",
           "p51-15",
           "p51-16",
           "p51-17",
+          "p51-18",
+          "p52-05",
+          "p52-06",
+          "p52-07",
+          "p52-08",
+          "p52-09",
+          "p52-10",
+          "p52-11",
           "p53-02",
           "p53-03",
+          "p53-04",
           "p53-07",
           "p53-08",
+          "p53-14",
+          "p53-15",
+          "p54-08",
           "p54-11",
           "p54-12",
+          "p55-25",
           "p56-04",
           "p56-05",
           "p57-04",
@@ -289,17 +361,16 @@
           "p61-05",
           "p62-05",
           "p62-06",
+          "x1-p5-03",
+          "x1-p18-16",
           "x1-p21-15",
           "x1-p21-16",
           "x1-p28-07",
           "x1-p28-08",
-          "x1-p28-09",
           "x1-p29-07",
           "x1-p29-08",
           "x1-p29-09",
           "x1-p32-04",
-          "x1-p65-19",
-          "x1-p65-20",
           "x1-p68-05",
           "x1-p68-06",
           "x1-p68-07",
@@ -312,7 +383,7 @@
           "x1-p75-04",
           "x1-p82-02"
         ],
-        "chars": 29988
+        "chars": 44990
       }
     },
     {
@@ -330,14 +401,9 @@
               "paragraph_id": "p22-03",
               "page": 22,
               "text": "The project has neither been registered nor seeking registration under any other GHG programs. \nThe project is seeking registration only in VCS program."
-            },
-            {
-              "paragraph_id": "x1-p25-18",
-              "page": 25,
-              "text": "The project has neither been registered nor seeking registration under any other GHG programs. The \nproject is seeking registration only in VCS program. Audit team checked the REC Mechanism database of \nIndia and found that the project activity is not accredited / registered under REC mechanism. Further,"
             }
           ],
-          "second_opinion_p_yes": 0.86,
+          "second_opinion_p_yes": 0.87,
           "needs_review": false,
           "dropped": null
         },
@@ -360,11 +426,6 @@
               "paragraph_id": "p21-09",
               "page": 21,
               "text": "However it can be crosschecked that PP is not claiming REC benefits, the same can be verified \nwith the REC accreditation body of India31."
-            },
-            {
-              "paragraph_id": "x1-p24-14",
-              "page": 24,
-              "text": "Assessment team confirms that the Net GHG emission reductions or removals generated by the Project \nwill not be used for compliance with an emissions trading program or to meet binding limits on GHG \nemissions in any Emission Trading program or other binding limits. Audit team checked the REC \nMechanism database of India and found that the project activity is not accredited6 / registered7 under \nREC mechanism. Further, Declaration in effect of the same has been submitted by project proponent to \naudit team and found to be correct. Thus it is concluded that the project activity not involved on other \nEmissions trading programs and other binding limits."
             }
           ],
           "second_opinion_p_yes": 0.98,
@@ -376,7 +437,7 @@
           "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.25,
+          "second_opinion_p_yes": 0.21,
           "needs_review": false,
           "dropped": null
         }
@@ -386,12 +447,6 @@
           "text": "The project has neither been registered nor seeking registration under any other GHG programs. \nThe project is seeking registration only in VCS program.",
           "page": 22,
           "paragraph_id": "p22-03",
-          "verification": "cited_paragraph"
-        },
-        {
-          "text": "The project has neither been registered nor seeking registration under any other GHG programs. The \nproject is seeking registration only in VCS program. Audit team checked the REC Mechanism database of \nIndia and found that the project activity is not accredited / registered under REC mechanism. Further,",
-          "page": 25,
-          "paragraph_id": "x1-p25-18",
           "verification": "cited_paragraph"
         },
         {
@@ -411,12 +466,6 @@
           "page": 21,
           "paragraph_id": "p21-09",
           "verification": "cited_paragraph"
-        },
-        {
-          "text": "Assessment team confirms that the Net GHG emission reductions or removals generated by the Project \nwill not be used for compliance with an emissions trading program or to meet binding limits on GHG \nemissions in any Emission Trading program or other binding limits. Audit team checked the REC \nMechanism database of India and found that the project activity is not accredited6 / registered7 under \nREC mechanism. Further, Declaration in effect of the same has been submitted by project proponent to \naudit team and found to be correct. Thus it is concluded that the project activity not involved on other \nEmissions trading programs and other binding limits.",
-          "page": 24,
-          "paragraph_id": "x1-p24-14",
-          "verification": "cited_paragraph"
         }
       ],
       "dropped_findings": 0,
@@ -426,6 +475,10 @@
           "p2-03",
           "p5-15",
           "p5-16",
+          "p6-22",
+          "p6-23",
+          "p21-04",
+          "p21-05",
           "p21-06",
           "p21-07",
           "p21-08",
@@ -433,17 +486,40 @@
           "p21-10",
           "p22-02",
           "p22-03",
+          "p22-04",
+          "p22-05",
+          "p22-06",
+          "p23-13",
+          "p23-14",
           "p23-16",
           "p23-17",
           "p25-03",
           "p25-04",
           "p25-05",
+          "p25-10",
+          "p25-11",
+          "p26-06",
+          "p26-07",
+          "p26-08",
+          "p26-15",
           "p47-08",
           "p47-09",
           "p48-02",
           "p48-03",
+          "p50-04",
+          "p50-05",
+          "p50-06",
+          "p50-18",
+          "p50-19",
+          "p51-26",
+          "p51-27",
+          "p55-26",
+          "p55-27",
           "p56-09",
           "p56-10",
+          "p61-05",
+          "p118-21",
+          "p118-22",
           "x1-p2-10",
           "x1-p3-13",
           "x1-p5-03",
@@ -456,6 +532,7 @@
           "x1-p17-05",
           "x1-p18-10",
           "x1-p18-12",
+          "x1-p18-16",
           "x1-p24-13",
           "x1-p24-14",
           "x1-p24-15",
@@ -468,7 +545,7 @@
           "x1-p84-24",
           "x1-p84-25"
         ],
-        "chars": 29968
+        "chars": 35343
       }
     },
     {
@@ -483,14 +560,9 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "p67-22",
-              "page": 67,
-              "text": "Prathamesh \nSolarfarms Limited \n50 \nDodaguntapally \nMahabubnagar \n12/09/2015 \n19/09/2015"
-            },
-            {
-              "paragraph_id": "x1-p72-26",
+              "paragraph_id": "x1-p72-24",
               "page": 72,
-              "text": "Name of the stakeholder \nMr. Ratan Thakur (Farmer) \nDOE questions: Did the solar power plant have any adverse impact on the nearby areas? \nAnswer: NO. Solar plant have no adverse impact on surrounding area. \nDOE questions:  Did the plant have impact on any crop fields? \nAnswer: The plant is implemented in barren land and there were no any fertile land or crop which is \ndamaged. \n \nName of the stakeholder \nMr. Jignesh Patel (Villager) \nDOE questions: Did the power project generated employment opportunities for locals?"
+              "text": "All the stakeholders have been invited through public notice to attend the stakeholders meeting. The local \nstakeholders’ consultation meeting was attended by local persons including local villagers, local vendors \nand technology suppliers. \n \nThe stakeholders identified by the project participant were local villagers who are the major population of \nthe particular area, local communities and gram panchayat (Village head), panel supplier, project \nproponent representatives, O&M Team and other people involved in the project. Validation team verified \nthe list of participants who attended the stakeholder meeting and feedback questionnaire and confirms \nthe stakeholders identified are relevant. Validation team verified the list of participants who attended the \nstakeholder meeting and feedback questionnaire and confirms the stakeholders identified are relevant. \nThe validation team also verified the minutes of meeting to note that no negative comments were \nreceived and the same was cross checked with the information obtained during follow up interviews with \nthe stakeholder’s. Moreover, assessment team during the validation site visit also noted that a grievance \nregister is also put onsite for the stakeholder to comment on any grievances during the operation lifetime \nof the project activity, The grievances from the stakeholder if found suitable will be addressed \nimmediately by the top management and thus the approach is found appropriate for the project activity."
             }
           ],
           "second_opinion_p_yes": 0.97,
@@ -523,7 +595,7 @@
               "text": "The project activity is expected to have positive impacts and no significant adverse environmental \nimpacts are foreseen. Since, the project activity is an electricity generation from renewable source (i.e. \nsolar energy) therefore no negative impact are envisaged. There is no mandatory legal requirement for \ncarrying out an environmental impact assessment in the host country. The Ministry of Environment, \nForests & Climate change (MoEFCC), Government of India (GoI) notification 15 dated 14/09/2006 \nregarding the requirement of Environment Impact Assessment (EIA) studies states that any project \ndeveloper in India needs to file an application to the Ministry of Environment and Forests (including a \npublic hearing and an EIA) in case the proposed industry or project is listed in a predefined list. The list \nincludes thirty nine project activities that require EIA studies. The solar power projects are not included in \nthis list and thus an EIA study is not required."
             }
           ],
-          "second_opinion_p_yes": 0.91,
+          "second_opinion_p_yes": 0.86,
           "needs_review": false,
           "dropped": null
         },
@@ -532,24 +604,12 @@
           "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.2,
+          "second_opinion_p_yes": 0.19,
           "needs_review": false,
           "dropped": null
         }
       ],
       "quotes": [
-        {
-          "text": "Prathamesh \nSolarfarms Limited \n50 \nDodaguntapally \nMahabubnagar \n12/09/2015 \n19/09/2015",
-          "page": 67,
-          "paragraph_id": "p67-22",
-          "verification": "cited_paragraph"
-        },
-        {
-          "text": "Name of the stakeholder \nMr. Ratan Thakur (Farmer) \nDOE questions: Did the solar power plant have any adverse impact on the nearby areas? \nAnswer: NO. Solar plant have no adverse impact on surrounding area. \nDOE questions:  Did the plant have impact on any crop fields? \nAnswer: The plant is implemented in barren land and there were no any fertile land or crop which is \ndamaged. \n \nName of the stakeholder \nMr. Jignesh Patel (Villager) \nDOE questions: Did the power project generated employment opportunities for locals?",
-          "page": 72,
-          "paragraph_id": "x1-p72-26",
-          "verification": "cited_paragraph"
-        },
         {
           "text": "All the stakeholders have been invited through public notice to attend the stakeholders meeting. The local \nstakeholders’ consultation meeting was attended by local persons including local villagers, local vendors \nand technology suppliers. \n \nThe stakeholders identified by the project participant were local villagers who are the major population of \nthe particular area, local communities and gram panchayat (Village head), panel supplier, project \nproponent representatives, O&M Team and other people involved in the project. Validation team verified \nthe list of participants who attended the stakeholder meeting and feedback questionnaire and confirms \nthe stakeholders identified are relevant. Validation team verified the list of participants who attended the \nstakeholder meeting and feedback questionnaire and confirms the stakeholders identified are relevant. \nThe validation team also verified the minutes of meeting to note that no negative comments were \nreceived and the same was cross checked with the information obtained during follow up interviews with \nthe stakeholder’s. Moreover, assessment team during the validation site visit also noted that a grievance \nregister is also put onsite for the stakeholder to comment on any grievances during the operation lifetime \nof the project activity, The grievances from the stakeholder if found suitable will be addressed \nimmediately by the top management and thus the approach is found appropriate for the project activity.",
           "page": 72,
@@ -593,24 +653,17 @@
           "x1-p68-03",
           "x1-p68-04",
           "x1-p69-08",
-          "x1-p69-09",
-          "x1-p69-10",
           "x1-p69-11",
           "x1-p69-12",
-          "x1-p70-03",
-          "x1-p70-04",
           "x1-p70-10",
           "x1-p70-11",
           "x1-p72-24",
           "x1-p72-25",
           "x1-p72-26",
-          "x1-p73-02",
-          "x1-p73-03",
           "x1-p82-02",
-          "x1-p82-04",
-          "x1-p85-03"
+          "x1-p82-04"
         ],
-        "chars": 29195
+        "chars": 26418
       }
     }
   ],
@@ -634,5 +687,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T17:46:59+00:00"
+  "generated_at": "2026-10-20T17:32:31+00:00"
 }

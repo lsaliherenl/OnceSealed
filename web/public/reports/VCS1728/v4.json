@@ -1,0 +1,915 @@
+{
+  "schema": "report-v2",
+  "project": {
+    "project_id": "VCS1728",
+    "project_name": "Bundled Wind Power Project by Mytrah Group",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/1728",
+    "methodology": "ACM0002",
+    "methodology_version": "17.0"
+  },
+  "document": {
+    "file_name": "VCS Joint PD  MR_Mytrah_V03_20122017_Clean.pdf",
+    "sha256": "d914898fdbcf2c8be93d488884c86ea940ca247b13eaecfcca0ab2e76a908375",
+    "pages": 418,
+    "extra_files": [
+      {
+        "file_name": "VCS-MR-1728_VKU.VER.129.23_VCS_1728-V-4 Clean.pdf",
+        "sha256": "50769e4ec9524e2456407559a008d772f8486a7dabbbda98bae4c14daabe9708"
+      },
+      {
+        "file_name": "VCS MR 1728 01072023 -31032024.pdf",
+        "sha256": "f39afd2507765e0dd987aceb2e58a3a320a62d47f5bcc96693b52b02e26bd2f5"
+      },
+      {
+        "file_name": "VCS VerR 1728 01072023 -31032024.pdf",
+        "sha256": "f039e8538c17d3c982b0e1aed819fb6ca30fff77e876f4cc14c45f42fba9dfb1"
+      },
+      {
+        "file_name": "FVR _5117 (1).pdf",
+        "sha256": "ef7a63d6e2ddbadb5872ec4b206705a496f462af58577021c65bf245315a313a"
+      }
+    ]
+  },
+  "methodology_status": {
+    "code": "ACM0002",
+    "version": "17.0",
+    "status": "not_approved",
+    "summary": "In August 2024 ICVCM rejected current grid-connected renewable energy methodologies because their additionality tests were insufficiently rigorous.",
+    "sources": [
+      "https://icvcm.org/carbon-credits-from-current-renewable-energy-methodologies-will-not-receive-high-integrity-ccp-label/",
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v2",
+    "question_set_version": "qs-v2-checklist",
+    "prompt_version": "checklist-v1",
+    "evidence_rule": "yes-cites-excerpt-paragraph-v2",
+    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0) on the project description + select_paragraphs(budget_chars=15000, overview_chars=0) on the other documents",
+    "injection_screen": "injection-screen-v1",
+    "review_rule": "person-decides-flagged-checks-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "second_opinion_model": "typesafe/jev-1.13",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x05f2d815a67e7bfa5eba473409b663801b86b6fe07d2b1da7ae10c8d96d862e5",
+  "principles": [
+    {
+      "principle": "additionality",
+      "status": "partial_evidence",
+      "score": 75,
+      "rationale": "Evidence found for 3 of 4 checks (A1, A2, A3); not found in the excerpt: A4.",
+      "checks": [
+        {
+          "id": "A1",
+          "question": "Does the text report a quantified financial analysis: at least one numeric financial indicator (such as IRR or NPV) together with a benchmark or threshold value it is compared against?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p69-15",
+              "page": 69,
+              "text": "Equity IRR without CDM \nBenchmark (Equity IRR) \nFinal Results \n8.69% \n15.32%"
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A2",
+          "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p40-05",
+              "page": 40,
+              "text": "Stepwise approach for common practice analysis has been carried out as per Methodological tool \n“Common Practice”, version 03.1 EB84, Annex 7: \n \nStep (1): Calculate applicable capacity or output range as +/-50% of the total design capacity or \noutput of the proposed project activity."
+            },
+            {
+              "paragraph_id": "p42-05",
+              "page": 42,
+              "text": "Thus, the proposed project activity is not a “common practice” within a sector in the \napplicable geographical area."
+            },
+            {
+              "paragraph_id": "p42-06",
+              "page": 42,
+              "text": "The above discussions show that wind power development is not a common practice and the \nproject activity is not financially attractive; hence the project activity is additional."
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A3",
+          "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p36-04",
+              "page": 36,
+              "text": " \nPower generation using wind energy is not a legal requirement or a mandatory option.  \n \nThere are state and sectoral policies, framed primarily to encourage wind power projects. \nThese policies have also been drafted realizing the extent of risks involved in the projects \nand to attract private investments. \n \nThe Indian Electricity Act, 2003 (May 2007 Amendment) does not influence the choice of \nfuel used for power generation. \n \nThere is no legal requirement on the choice of a particular technology for power \ngeneration. \n \nOutcome of Sub-step 1b: Hence, both the alternatives enlisted above are found to comply with \nthe mandatory laws and regulations taking into account the enforcement of the legislations in the \nregion or country and EB decisions on national and/or sectoral policies and regulations. However, \nAlternative 2 has been selected as the appropriate baseline alternative for this project activity. \n \nStep 2: Investment analysis \n \nDetermine whether the proposed project activity is economically or financially less \nattractive than at least one other alternative, identified in step 1, without the revenue from \nthe sale of emission reductions credits. To conduct the investment analysis, use the \nfollowing sub-steps: \n \nSub-step 2a: Determine appropriate analysis method \nThe Project activity envisages to export the power to Indian grid and the revenues from the sale \nwould be generated in accordance with the terms and tariffs established in the Power Purchase \nAgreement (PPA). Thus, simple cost analysis (Option I)  cannot be used as the analysis method \nas the sale of the units of generated electricity shall result in a revenue stream during the \noperations of the Project activity. \n \nIn the absence of the project activity grid electricity would have been the obvious choice for the \nProject which requires no investment. Hence investment comparison analysis (Option II) is also \nnot appropriate for the project activity.  \n \n \nAfter eliminating Option I and Option II, the use of Benchmark analysis (Option III) is the method \nof analysis that has been selected as the most suitable method. This method determines the \nattractiveness of the project activity for the investors, as well as provides a measure of the \nviability of the investment to generate revenues during its operation, as compared with other"
+            }
+          ],
+          "second_opinion_p_yes": 0.95,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A4",
+          "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.75,
+          "needs_review": true,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "Equity IRR without CDM \nBenchmark (Equity IRR) \nFinal Results \n8.69% \n15.32%",
+          "page": 69,
+          "paragraph_id": "p69-15",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Stepwise approach for common practice analysis has been carried out as per Methodological tool \n“Common Practice”, version 03.1 EB84, Annex 7: \n \nStep (1): Calculate applicable capacity or output range as +/-50% of the total design capacity or \noutput of the proposed project activity.",
+          "page": 40,
+          "paragraph_id": "p40-05",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Thus, the proposed project activity is not a “common practice” within a sector in the \napplicable geographical area.",
+          "page": 42,
+          "paragraph_id": "p42-05",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The above discussions show that wind power development is not a common practice and the \nproject activity is not financially attractive; hence the project activity is additional.",
+          "page": 42,
+          "paragraph_id": "p42-06",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": " \nPower generation using wind energy is not a legal requirement or a mandatory option.  \n \nThere are state and sectoral policies, framed primarily to encourage wind power projects. \nThese policies have also been drafted realizing the extent of risks involved in the projects \nand to attract private investments. \n \nThe Indian Electricity Act, 2003 (May 2007 Amendment) does not influence the choice of \nfuel used for power generation. \n \nThere is no legal requirement on the choice of a particular technology for power \ngeneration. \n \nOutcome of Sub-step 1b: Hence, both the alternatives enlisted above are found to comply with \nthe mandatory laws and regulations taking into account the enforcement of the legislations in the \nregion or country and EB decisions on national and/or sectoral policies and regulations. However, \nAlternative 2 has been selected as the appropriate baseline alternative for this project activity. \n \nStep 2: Investment analysis \n \nDetermine whether the proposed project activity is economically or financially less \nattractive than at least one other alternative, identified in step 1, without the revenue from \nthe sale of emission reductions credits. To conduct the investment analysis, use the \nfollowing sub-steps: \n \nSub-step 2a: Determine appropriate analysis method \nThe Project activity envisages to export the power to Indian grid and the revenues from the sale \nwould be generated in accordance with the terms and tariffs established in the Power Purchase \nAgreement (PPA). Thus, simple cost analysis (Option I)  cannot be used as the analysis method \nas the sale of the units of generated electricity shall result in a revenue stream during the \noperations of the Project activity. \n \nIn the absence of the project activity grid electricity would have been the obvious choice for the \nProject which requires no investment. Hence investment comparison analysis (Option II) is also \nnot appropriate for the project activity.  \n \n \nAfter eliminating Option I and Option II, the use of Benchmark analysis (Option III) is the method \nof analysis that has been selected as the most suitable method. This method determines the \nattractiveness of the project activity for the investors, as well as provides a measure of the \nviability of the investment to generate revenues during its operation, as compared with other",
+          "page": 36,
+          "paragraph_id": "p36-04",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [
+        "models_disagree:A4"
+      ],
+      "excerpt": {
+        "paragraphs": [
+          "p2-02",
+          "p3-16",
+          "p3-17",
+          "p25-16",
+          "p25-17",
+          "p27-06",
+          "p30-06",
+          "p30-07",
+          "p30-14",
+          "p30-15",
+          "p30-16",
+          "p31-04",
+          "p31-05",
+          "p31-06",
+          "p31-07",
+          "p32-25",
+          "p33-06",
+          "p33-07",
+          "p33-08",
+          "p33-09",
+          "p33-10",
+          "p34-02",
+          "p34-03",
+          "p35-02",
+          "p35-03",
+          "p35-09",
+          "p35-10",
+          "p35-11",
+          "p36-03",
+          "p36-04",
+          "p37-02",
+          "p37-03",
+          "p37-04",
+          "p38-02",
+          "p38-03",
+          "p38-04",
+          "p38-05",
+          "p38-08",
+          "p38-09",
+          "p38-10",
+          "p38-11",
+          "p38-12",
+          "p39-03",
+          "p39-04",
+          "p39-05",
+          "p40-04",
+          "p40-05",
+          "p42-05",
+          "p42-06",
+          "p53-04",
+          "p53-05",
+          "p57-02",
+          "p57-03",
+          "p69-15",
+          "x1-p32-02",
+          "x1-p32-03",
+          "x1-p32-04",
+          "x1-p32-05",
+          "x1-p32-06",
+          "x2-p38-07",
+          "x2-p38-08",
+          "x2-p38-09",
+          "x2-p39-14",
+          "x2-p39-15",
+          "x2-p39-16",
+          "x2-p56-09",
+          "x2-p56-10",
+          "x2-p56-11",
+          "x3-p18-08",
+          "x3-p18-09",
+          "x3-p19-19",
+          "x3-p19-20",
+          "x3-p51-03",
+          "x3-p51-04",
+          "x3-p63-11",
+          "x3-p63-12",
+          "x3-p63-14",
+          "x4-p4-17",
+          "x4-p4-19",
+          "x4-p52-08",
+          "x4-p52-09",
+          "x4-p52-10",
+          "x4-p54-03",
+          "x4-p54-04",
+          "x4-p54-06",
+          "x4-p54-07",
+          "x4-p56-08",
+          "x4-p56-09",
+          "x4-p56-10",
+          "x4-p57-09",
+          "x4-p92-02",
+          "x4-p92-03",
+          "x4-p92-04",
+          "x4-p92-05",
+          "x4-p116-10",
+          "x4-p116-11",
+          "x4-p116-12"
+        ],
+        "chars": 44985
+      }
+    },
+    {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "checks": [],
+      "quotes": [],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "rule": "no_reversal_risk"
+    },
+    {
+      "principle": "robust_quantification",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (Q1, Q2, Q3, Q4).",
+      "checks": [
+        {
+          "id": "Q1",
+          "question": "Does the text show how baseline emissions are calculated, with an equation, parameter values or a numeric result?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x3-p43-10",
+              "page": 43,
+              "text": "Conclusion \nBaseline Emissions: \nThe baseline emissions for a given monitoring period is calculated in \naccordance with the para 44 of approved methodology ACM0002 version \n17.0 as the project activity claims emission reduction from electricity \ngeneration.  \n \nFormula used: \n  \nBaseline emissions  \n𝐵𝐸𝑦 = 𝐸𝐺𝑃𝐽, 𝑦 × 𝐸𝐹𝑔𝑟𝑖𝑑, y  \n \nWhere:  \n𝐵𝐸y = Baseline emissions in year y (t CO2)  \n \n𝐸𝐺𝑃𝐽, y = Quantity of net electricity generation that is produced and fed into \nthe grid as a result of the implementation of the CDM project activity in \nyear y (MWh) \n \n𝐸𝐹𝑔𝑟𝑖𝑑, CM, y = Combined Margin CO2 emission factor for grid connected \npower generation in the year y (tCO2/MWh) \n \nEx-ante parameters \n \nThe grid emission factor i.e., 0.9653 tCO2/MWh is sourced from the VCS \nregistered Joint PD&MR/4/. The same is used for calculation of emission \nreductions. In addition to this, other ex-ante parameters which are soured \nfrom the VCS registered Joint PD&MR are provide below:"
+            }
+          ],
+          "second_opinion_p_yes": 0.99,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q2",
+          "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x4-p95-02",
+              "page": 95,
+              "text": "and same value is confirmed correct. \n \nProject Emissions: \n \nAs Wind technology is a renewable energy source and as per the ACM 0002 \nversion 17 there are no project related emissions associated with it, therefore, \nPEy = 0. \n \nLeakage Emissions: \n \nAs per ACM 0002 version 17, there is no leakage emission. \n \nEmission Reductions: \n \nThe project activity reduces carbon dioxide emissions through displacement of \ngrid electricity generation with predominantly fossil fuel based power plants8 by \nrenewable electricity. The emission reduction (ERy) due to project activity during \na given year y is calculated as the difference between baseline emissions (BEy), \nproject emissions (PEy) as per the formulae given below:  \n \nERy = BEy – PEy:  As per ACM 0002  \n \nWhere, \nBEy \n= Baseline emissions in the year y in tCO2e \nPEy \n= Project emissions in the year y.  \nLEy \n= Emissions due to leakage in the year y. \n \nAs per ACM 0002 \n \nPEy \n= 0 for the project activity as per the methodology \n \nTherefore, ERy = BEy for the project activity."
+            }
+          ],
+          "second_opinion_p_yes": 0.95,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q3",
+          "question": "Does the text address uncertainty or the use of conservative assumptions in the emission reduction estimate?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x4-p94-03",
+              "page": 94,
+              "text": "Where \nBEy \n= Baseline Emissions in year y; (tCO2) \nEGpj,y= Quantity of net electricity supplied to the grid as a result of the \nimplementation of the CDM project activity in year y (MWh)-  \nEFgrid, y = Grid emission factor (MWh/tCO2) \n \nPROJECT OWNERS has estimated the baseline energy generation considering \nthe capacity of the project activity, yearly generation hour and plant load factor. \nValidation team assessed the technical specification of the promoters of the \nproject activity, Power purchase agreement and found that installed capacity of \nthis project activity is correct. \n \nBaseline emission factor is calculated as combined margin, consisting of a \ncombination of operating margin (OM) and build margin (BM) factors according \nto the procedure prescribed in the “Tool to calculate the emission factor for an \nelectricity system” version 12.0 which is sourced from CEA, Govt. of India and \nforms the part of emission reduction calculation. The baseline emission factor \ncalculation is checked by the validation team and found that the calculation is \ntransparent and conservative. \n \nFor estimating the operating margin emission factor, PROJECT OWNERS \ncalculated ex-ante Simple Operating Margin (OM). As per the “Tool to calculate \nthe emission factor for an electricity system”: for grid power plants, use a 3-year \ngeneration-weighted average, based on the most recent data available at the \ntime of submission of the CDM-PDD to the DOE for validation. Hence, PROJECT \nOWNERS considered the weighted average of latest net electricity generation \nand import of electricity and associated emission from CEA version 12. The \nvalue of operating margin considered as 0.9843tCO2 /MWh and the value of build \nmargin as 0.9083tCO2 /MWh (based on the latest one year data). The weighting \nfor both operating margin is taken as 0.75 and build margin as 0.25 for wind \npower generation projects. Validation team checked the estimation procedure \nand considered data and found transparent and conservative. Emission factor of \nthe project considered is mentioned below: \n \nEF grid, y = 0.9653tCO2e/MWh and it is fixed ex ante for the crediting period. \n \nConsidering this process, combined margin emission factor has been considered"
+            }
+          ],
+          "second_opinion_p_yes": 0.91,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q4",
+          "question": "Does the text describe a monitoring plan that names the parameters to be measured and how often or by what method?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x3-p44-02",
+              "page": 44,
+              "text": "EFgrid, OM, y - Operating Margin CO2 emission factor in year y. The value \nmonitored is 0.9843 tCO2/MWh.  \n \nEFgrid, BM, y - Build Margin CO2 emission factor in year y. The value monitored \nis 0.9083 tCO2/MWh.  \n \nEFgrid, CM, y - Combined Margin CO2 emission factor in year y. The value \nmonitored is 0.9653 tCO2/MWh.  \n \nHere,  \nEGPJ, y = 813,563 MWh  \n𝐸𝐹𝑔𝑟𝑖𝑑, CM, y = 0.9653 tCO2/MWh \n𝐵𝐸𝑦 = 813,563* 0.9653 = 785,323 tCO2e (Round- down value)  \n \nEx-post parameter:   \n \nEGPJ, y- Quantity of net electricity generation supplied by the project \nplant/unit to the grid in year y in MWh. \nThe value monitored is 813,563 MWh.  \n \n \nThe verification team has checked the entire monthly JMR/Form B \nreports/11/ from respective state electricity board for net electricity \ngenerated & supplied to the grid and crosschecked same with the \ninvoices/11/ raised by PP towards State Utilities for the monitoring period. \nEGPJ, y is taken as cumulated amount of net electricity generated by all \nWTGs installed in the project activity.  \n \nAll values are found correct. All the parameters are monitored and \nrecorded as per the monitoring plan in the MR. However; PPs have \napportioned the values for this monitoring period where dates are not \nmatching with JMR cycle in Pottipadu site (39.9 MW & 65.1 MW) & Aspari \nsite. Apportioning found appropriate and conservative. \n \nNet electricity generation data of site Pottipadu, Nipaniya, Nazeerabad, \nBurgula-II & Aspari are taken from JMR sheet, same is cross checked with \ncopy of invoice. However, For Nidhi site & Bhesada Site, Net generation \ndata mentioned in respective JMR sheet found more conservative than \ninvoice copy thus only JMR value are considered for ER calculation for \nrespective sites. \n \nThe details of monitoring equipment installed at each SVP are given in \nappendix 07 below. The calculations/measurement of net electricity \nsupplied to grid is under purview of state electricity board and the \nPP/Project activity Instance owner has no role on it. PP/Project activity \nInstance owner gets value of net electricity supplied to grid and hence this \nparameter is mentioned as a part of monitoring plan. \n \nThe net electricity supplied the grid by the project activity during the \nmonitoring period is 813,563 MWh. \n \nThe generation values have been cross checked with the invoices and were \nfound to be consistent."
+            }
+          ],
+          "second_opinion_p_yes": 0.91,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "Conclusion \nBaseline Emissions: \nThe baseline emissions for a given monitoring period is calculated in \naccordance with the para 44 of approved methodology ACM0002 version \n17.0 as the project activity claims emission reduction from electricity \ngeneration.  \n \nFormula used: \n  \nBaseline emissions  \n𝐵𝐸𝑦 = 𝐸𝐺𝑃𝐽, 𝑦 × 𝐸𝐹𝑔𝑟𝑖𝑑, y  \n \nWhere:  \n𝐵𝐸y = Baseline emissions in year y (t CO2)  \n \n𝐸𝐺𝑃𝐽, y = Quantity of net electricity generation that is produced and fed into \nthe grid as a result of the implementation of the CDM project activity in \nyear y (MWh) \n \n𝐸𝐹𝑔𝑟𝑖𝑑, CM, y = Combined Margin CO2 emission factor for grid connected \npower generation in the year y (tCO2/MWh) \n \nEx-ante parameters \n \nThe grid emission factor i.e., 0.9653 tCO2/MWh is sourced from the VCS \nregistered Joint PD&MR/4/. The same is used for calculation of emission \nreductions. In addition to this, other ex-ante parameters which are soured \nfrom the VCS registered Joint PD&MR are provide below:",
+          "page": 43,
+          "paragraph_id": "x3-p43-10",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "and same value is confirmed correct. \n \nProject Emissions: \n \nAs Wind technology is a renewable energy source and as per the ACM 0002 \nversion 17 there are no project related emissions associated with it, therefore, \nPEy = 0. \n \nLeakage Emissions: \n \nAs per ACM 0002 version 17, there is no leakage emission. \n \nEmission Reductions: \n \nThe project activity reduces carbon dioxide emissions through displacement of \ngrid electricity generation with predominantly fossil fuel based power plants8 by \nrenewable electricity. The emission reduction (ERy) due to project activity during \na given year y is calculated as the difference between baseline emissions (BEy), \nproject emissions (PEy) as per the formulae given below:  \n \nERy = BEy – PEy:  As per ACM 0002  \n \nWhere, \nBEy \n= Baseline emissions in the year y in tCO2e \nPEy \n= Project emissions in the year y.  \nLEy \n= Emissions due to leakage in the year y. \n \nAs per ACM 0002 \n \nPEy \n= 0 for the project activity as per the methodology \n \nTherefore, ERy = BEy for the project activity.",
+          "page": 95,
+          "paragraph_id": "x4-p95-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Where \nBEy \n= Baseline Emissions in year y; (tCO2) \nEGpj,y= Quantity of net electricity supplied to the grid as a result of the \nimplementation of the CDM project activity in year y (MWh)-  \nEFgrid, y = Grid emission factor (MWh/tCO2) \n \nPROJECT OWNERS has estimated the baseline energy generation considering \nthe capacity of the project activity, yearly generation hour and plant load factor. \nValidation team assessed the technical specification of the promoters of the \nproject activity, Power purchase agreement and found that installed capacity of \nthis project activity is correct. \n \nBaseline emission factor is calculated as combined margin, consisting of a \ncombination of operating margin (OM) and build margin (BM) factors according \nto the procedure prescribed in the “Tool to calculate the emission factor for an \nelectricity system” version 12.0 which is sourced from CEA, Govt. of India and \nforms the part of emission reduction calculation. The baseline emission factor \ncalculation is checked by the validation team and found that the calculation is \ntransparent and conservative. \n \nFor estimating the operating margin emission factor, PROJECT OWNERS \ncalculated ex-ante Simple Operating Margin (OM). As per the “Tool to calculate \nthe emission factor for an electricity system”: for grid power plants, use a 3-year \ngeneration-weighted average, based on the most recent data available at the \ntime of submission of the CDM-PDD to the DOE for validation. Hence, PROJECT \nOWNERS considered the weighted average of latest net electricity generation \nand import of electricity and associated emission from CEA version 12. The \nvalue of operating margin considered as 0.9843tCO2 /MWh and the value of build \nmargin as 0.9083tCO2 /MWh (based on the latest one year data). The weighting \nfor both operating margin is taken as 0.75 and build margin as 0.25 for wind \npower generation projects. Validation team checked the estimation procedure \nand considered data and found transparent and conservative. Emission factor of \nthe project considered is mentioned below: \n \nEF grid, y = 0.9653tCO2e/MWh and it is fixed ex ante for the crediting period. \n \nConsidering this process, combined margin emission factor has been considered",
+          "page": 94,
+          "paragraph_id": "x4-p94-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "EFgrid, OM, y - Operating Margin CO2 emission factor in year y. The value \nmonitored is 0.9843 tCO2/MWh.  \n \nEFgrid, BM, y - Build Margin CO2 emission factor in year y. The value monitored \nis 0.9083 tCO2/MWh.  \n \nEFgrid, CM, y - Combined Margin CO2 emission factor in year y. The value \nmonitored is 0.9653 tCO2/MWh.  \n \nHere,  \nEGPJ, y = 813,563 MWh  \n𝐸𝐹𝑔𝑟𝑖𝑑, CM, y = 0.9653 tCO2/MWh \n𝐵𝐸𝑦 = 813,563* 0.9653 = 785,323 tCO2e (Round- down value)  \n \nEx-post parameter:   \n \nEGPJ, y- Quantity of net electricity generation supplied by the project \nplant/unit to the grid in year y in MWh. \nThe value monitored is 813,563 MWh.  \n \n \nThe verification team has checked the entire monthly JMR/Form B \nreports/11/ from respective state electricity board for net electricity \ngenerated & supplied to the grid and crosschecked same with the \ninvoices/11/ raised by PP towards State Utilities for the monitoring period. \nEGPJ, y is taken as cumulated amount of net electricity generated by all \nWTGs installed in the project activity.  \n \nAll values are found correct. All the parameters are monitored and \nrecorded as per the monitoring plan in the MR. However; PPs have \napportioned the values for this monitoring period where dates are not \nmatching with JMR cycle in Pottipadu site (39.9 MW & 65.1 MW) & Aspari \nsite. Apportioning found appropriate and conservative. \n \nNet electricity generation data of site Pottipadu, Nipaniya, Nazeerabad, \nBurgula-II & Aspari are taken from JMR sheet, same is cross checked with \ncopy of invoice. However, For Nidhi site & Bhesada Site, Net generation \ndata mentioned in respective JMR sheet found more conservative than \ninvoice copy thus only JMR value are considered for ER calculation for \nrespective sites. \n \nThe details of monitoring equipment installed at each SVP are given in \nappendix 07 below. The calculations/measurement of net electricity \nsupplied to grid is under purview of state electricity board and the \nPP/Project activity Instance owner has no role on it. PP/Project activity \nInstance owner gets value of net electricity supplied to grid and hence this \nparameter is mentioned as a part of monitoring plan. \n \nThe net electricity supplied the grid by the project activity during the \nmonitoring period is 813,563 MWh. \n \nThe generation values have been cross checked with the invoices and were \nfound to be consistent.",
+          "page": 44,
+          "paragraph_id": "x3-p44-02",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p1-08",
+          "p1-09",
+          "p2-02",
+          "p3-12",
+          "p3-13",
+          "p3-14",
+          "p3-16",
+          "p3-17",
+          "p27-03",
+          "p27-04",
+          "p28-09",
+          "p28-10",
+          "p28-11",
+          "p30-09",
+          "p30-10",
+          "p30-11",
+          "p30-12",
+          "p30-13",
+          "p30-14",
+          "p30-15",
+          "p31-03",
+          "p31-04",
+          "p31-05",
+          "p32-25",
+          "p33-02",
+          "p33-03",
+          "p33-04",
+          "p33-05",
+          "p33-06",
+          "p35-10",
+          "p35-11",
+          "p37-02",
+          "p37-03",
+          "p38-02",
+          "p38-03",
+          "p38-04",
+          "p42-11",
+          "p42-12",
+          "p43-02",
+          "p43-03",
+          "p43-04",
+          "p44-12",
+          "p44-13",
+          "p44-14",
+          "p44-15",
+          "p45-04",
+          "p45-05",
+          "p45-06",
+          "p45-07",
+          "p45-08",
+          "p45-09",
+          "p45-10",
+          "p45-19",
+          "p45-20",
+          "p46-02",
+          "p46-03",
+          "p46-04",
+          "p46-07",
+          "p46-08",
+          "p46-11",
+          "p46-12",
+          "p46-13",
+          "p47-06",
+          "p47-08",
+          "p47-09",
+          "p50-06",
+          "p50-12",
+          "p50-13",
+          "p50-17",
+          "p51-06",
+          "p51-07",
+          "p55-02",
+          "p55-03",
+          "p55-04",
+          "p72-03",
+          "x1-p35-07",
+          "x1-p35-08",
+          "x1-p35-09",
+          "x2-p42-09",
+          "x2-p42-10",
+          "x3-p43-09",
+          "x3-p43-10",
+          "x3-p44-02",
+          "x3-p46-02",
+          "x3-p46-03",
+          "x3-p46-04",
+          "x3-p48-09",
+          "x3-p48-10",
+          "x3-p62-06",
+          "x4-p94-02",
+          "x4-p94-03",
+          "x4-p95-02",
+          "x4-p95-03",
+          "x4-p103-08",
+          "x4-p103-09",
+          "x4-p104-06"
+        ],
+        "chars": 44959
+      }
+    },
+    {
+      "principle": "no_double_counting",
+      "status": "partial_evidence",
+      "score": 67,
+      "rationale": "Evidence found for 2 of 3 checks (D1, D2); not found in the excerpt: D3.",
+      "checks": [
+        {
+          "id": "D1",
+          "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x3-p9-09",
+              "page": 9,
+              "text": "The project is not registered under any other GHG Program other than the VCS and can be found in the \nfollowing link: https://registry.verra.org/app/projectDetail/VCS/1728 ."
+            }
+          ],
+          "second_opinion_p_yes": 0.79,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D2",
+          "question": "Does the text address other environmental credits or certificates (e.g. renewable energy certificates, I-RECs) or participation in an emissions trading scheme?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p25-10",
+              "page": 25,
+              "text": "Net GHG emission reductions or removals generated by the Project will not be used for \ncompliance with an emissions trading program or to meet binding limits on GHG emissions in any \nEmission Trading program or other binding limits."
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D3",
+          "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.15,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "The project is not registered under any other GHG Program other than the VCS and can be found in the \nfollowing link: https://registry.verra.org/app/projectDetail/VCS/1728 .",
+          "page": 9,
+          "paragraph_id": "x3-p9-09",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Net GHG emission reductions or removals generated by the Project will not be used for \ncompliance with an emissions trading program or to meet binding limits on GHG emissions in any \nEmission Trading program or other binding limits.",
+          "page": 25,
+          "paragraph_id": "p25-10",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-02",
+          "p4-24",
+          "p25-08",
+          "p25-09",
+          "p25-10",
+          "p25-11",
+          "p25-12",
+          "p25-13",
+          "p25-15",
+          "p25-16",
+          "p25-17",
+          "p27-09",
+          "p27-10",
+          "p27-11",
+          "p27-12",
+          "p29-10",
+          "p29-11",
+          "p30-15",
+          "p30-16",
+          "p31-02",
+          "p31-03",
+          "p31-04",
+          "p31-09",
+          "p31-10",
+          "p40-07",
+          "p40-08",
+          "p41-02",
+          "p41-03",
+          "p42-16",
+          "p43-19",
+          "p43-20",
+          "p44-24",
+          "p44-25",
+          "p48-29",
+          "p50-17",
+          "p53-04",
+          "p53-05",
+          "p69-15",
+          "x1-p2-10",
+          "x1-p2-11",
+          "x1-p2-12",
+          "x1-p18-11",
+          "x1-p18-12",
+          "x1-p19-02",
+          "x1-p19-03",
+          "x1-p19-04",
+          "x1-p19-06",
+          "x1-p19-07",
+          "x1-p19-14",
+          "x1-p19-15",
+          "x2-p2-12",
+          "x2-p2-13",
+          "x2-p2-14",
+          "x2-p18-05",
+          "x2-p18-06",
+          "x2-p18-13",
+          "x2-p18-14",
+          "x2-p18-15",
+          "x2-p18-17",
+          "x2-p18-18",
+          "x3-p3-09",
+          "x3-p3-10",
+          "x3-p9-08",
+          "x3-p9-09",
+          "x3-p9-10",
+          "x3-p10-05",
+          "x3-p10-07",
+          "x3-p21-12",
+          "x3-p21-13",
+          "x3-p21-14",
+          "x3-p21-15",
+          "x3-p22-02",
+          "x3-p22-03",
+          "x3-p22-04",
+          "x3-p22-05",
+          "x3-p22-06",
+          "x3-p22-07",
+          "x3-p56-14",
+          "x3-p57-36",
+          "x3-p57-37",
+          "x4-p4-16",
+          "x4-p6-11",
+          "x4-p6-12",
+          "x4-p6-13",
+          "x4-p83-06",
+          "x4-p83-07",
+          "x4-p83-08",
+          "x4-p85-05",
+          "x4-p85-06",
+          "x4-p85-07",
+          "x4-p85-08",
+          "x4-p85-09",
+          "x4-p85-10",
+          "x4-p115-12",
+          "x4-p115-13",
+          "x4-p122-02",
+          "x4-p122-03"
+        ],
+        "chars": 35146
+      }
+    },
+    {
+      "principle": "safeguards",
+      "status": "partial_evidence",
+      "score": 75,
+      "rationale": "Evidence found for 3 of 4 checks (S1, S2, S4); not found in the excerpt: S3.",
+      "checks": [
+        {
+          "id": "S1",
+          "question": "Does the text describe a stakeholder consultation with specifics such as dates, places, participants or comments received?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p52-12",
+              "page": 52,
+              "text": "1.  Mytrah Vayu (Indravati) Pvt. Ltd. \n10/11/2015 \n21/11/2015"
+            },
+            {
+              "paragraph_id": "x4-p101-04",
+              "page": 101,
+              "text": "7.  Mytrah Vayu (Tungabhadra) Pvt. Ltd. \n12/09/2016 \n20/09/2016"
+            },
+            {
+              "paragraph_id": "x4-p101-05",
+              "page": 101,
+              "text": "All the stakeholders have been invited through public notice to attend the stakeholders \nmeeting. The local stakeholders’ consultation meeting was attended by local persons \nincluding local villagers, local vendors and technology suppliers. \n \nThe stakeholders identified by the project participant were local villagers who are the major \npopulation of the particular area, local communities and gram panchayat (Village head), \nWTG supplier, project proponent representatives, O&M Team and other people involved in \nthe project. Validation team verified the list of participants who attended the stakeholder \nmeeting and feedback questionnaire and confirms the stakeholders identified are relevant. \nValidation team verified the list of participants who attended the stakeholder meeting and \nfeedback questionnaire and confirms the stakeholders identified are relevant. The validation \nteam also verified the minutes of meeting to note that no negative comments were received \nand the same was cross checked with the information obtained during follow up interviews \nwith the stakeholder’s. \n \nThus Validation team is of the opinion that the stakeholder meeting was adequate and \nappropriate. Assessment team also noted during the validation site visit that PP has already \nput a grievance register onsite in where stakeholders can write there complain if any. The \ncomplain if found genuine will be immediately resolve by PP with the best reasonable level \nof knowledge and satisfaction of the stakeholders. The process is found genuine and thus \nPP ensured that ongoing process of Stakeholders benefits and complain can be taken care \nafter and during operation of the power plant."
+            },
+            {
+              "paragraph_id": "x2-p22-08",
+              "page": 22,
+              "text": "Since the local stakeholder consultation was conducted \nprior to the implementation of the project activity during \nvalidation. The consultation process involved relevant \nstakeholders such as the local village head, villagers, NGOs, \nPP representative and Local Government representatives."
+            },
+            {
+              "paragraph_id": "p53-05",
+              "page": 53,
+              "text": "5.4 \nPublic Comments \nThe project activity was published for public comment and few comments were received during \nthe one month commenting period. The comments are discussed as below \n \n1. \nThere are many individual project participants described, thus I am assuming it’s a \nbundled project, which should have been specified in the PD, but I think it has purposefully \nnot been written.  \nPP Response – The project title itself has mentioned that it is bundled project. However this is \nlarge scale project and it is not required any bundling form. The VCS PD clearly mentioned \nbundle word in section 1.1 of  VCS PD. \n \n2. \nHow it is that the contact details of the project proponent have not been described.  \nPP Response – The listed VCS PD has mentioned the PP name, contact person and address \nand minimum listing requirement is met. Please refer this web link for PP address \nhttp://www.mytrah.com/contact-us.php . The VCS PD mentioned the same address as “8001, 8th \nFloor, Q-City, Nanakramguda, Gachibowli, Hyderabad 500032,Telangana,India” \n \n3. \nThe communications agreement mentions EKI as the consultant why has that not been \nmentioned in the other entities involved?  \nPP Response – The project is listed through client VCS account and also communication \nagreement does not mention any name of EKI.  \n \n4. \nUnder the Additionality sections it is mentioned “Financial spread sheets for the key \nassumptions (web links & sources of input parameters) supporting the financial projections \nwould be submitted and updated to the DOE. \nPP Response – As per VCS guideline, minimum listing requirement is met. Thus we think this \ncomment is not relevant.The additionality related information is mentioned in final PDD. DOE has \nvalidated the same. \n \n5. \nCommon practice analysis, where are the projects what is source, EKI does not this?  \nSince the projects are bundled together each bundle has to be assessed separately as per the \nCDM guidelines. I hope the DOE and VCS will take this into account.  \nEKI Response – The final VCS PD have all information of common practise analysis. This is \nbundled large scale project activity and as per tool of common practise analysis, the project \nactivity capacity need to be considered for the common practise analysis. Please refer CDM \nregistered \nprojects \nlike \nUN0968 \n(https://cdm.unfccc.int/Projects/DB/SGS-\nUKL1374066912.42/view ),  \nUN9735 (https://cdm.unfccc.int/Projects/DB/TUEV-RHEIN1378973294.94/view  ),  \nUN8459 (https://cdm.unfccc.int/Projects/DB/PJR%20CDM1354186685.85/view  ),  \nUN7560 (https://cdm.unfccc.int/Projects/DB/RWTUV1349092273.88/view  ),  \nUN7099(https://cdm.unfccc.int/Projects/DB/RWTUV1346067870.82/view  ), and  \nUN9534 (https://cdm.unfccc.int/Projects/DB/PJR%20CDM1359094049.33/view  ) \n \n6. \nThe LSC meeting details are not provided at all?"
+            }
+          ],
+          "second_opinion_p_yes": 0.96,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S2",
+          "question": "Does the text describe a grievance or complaint mechanism through which affected people can raise concerns?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x2-p25-05",
+              "page": 25,
+              "text": "2.1.4 Grievance Redress Procedure \nThe project owner has operating complaint procedure. The PP has kept the register on plant site \noffice for logging the ongoing communication or any grievance from the stakeholder which is \neasily accessible to the all stakeholders. This procedure of ongoing communication log & \naddressal is used for the project. Below grievances are registered during current monitoring \nperiod of Nipaniya Site."
+            },
+            {
+              "paragraph_id": "x3-p29-07",
+              "page": 29,
+              "text": "Ongoing consultation \nProject Proponent has submitted the feedback register kept at site for \nthe ongoing communication with the local stakeholders. In plant site \noffice seeking complaints/grievances from local community as a part \nof ongoing communication with stakeholders in line with clause \n3.18.3 of VCS Standard, v.4.7."
+            },
+            {
+              "paragraph_id": "x3-p32-04",
+              "page": 32,
+              "text": "During the on-site inspection and interviews with relevant personnel, \nthe assessment team confirmed that a grievance redressal \nmechanism is established in accordance with company policy. A \ngrievance register is maintained at the project site to document and \naddress any complaints from local stakeholders and employees. The \nproject proponent regularly reviews the grievance register and ensures \ntimely resolution of issues, as verified through stakeholder interviews."
+            },
+            {
+              "paragraph_id": "x4-p101-05",
+              "page": 101,
+              "text": "All the stakeholders have been invited through public notice to attend the stakeholders \nmeeting. The local stakeholders’ consultation meeting was attended by local persons \nincluding local villagers, local vendors and technology suppliers. \n \nThe stakeholders identified by the project participant were local villagers who are the major \npopulation of the particular area, local communities and gram panchayat (Village head), \nWTG supplier, project proponent representatives, O&M Team and other people involved in \nthe project. Validation team verified the list of participants who attended the stakeholder \nmeeting and feedback questionnaire and confirms the stakeholders identified are relevant. \nValidation team verified the list of participants who attended the stakeholder meeting and \nfeedback questionnaire and confirms the stakeholders identified are relevant. The validation \nteam also verified the minutes of meeting to note that no negative comments were received \nand the same was cross checked with the information obtained during follow up interviews \nwith the stakeholder’s. \n \nThus Validation team is of the opinion that the stakeholder meeting was adequate and \nappropriate. Assessment team also noted during the validation site visit that PP has already \nput a grievance register onsite in where stakeholders can write there complain if any. The \ncomplain if found genuine will be immediately resolve by PP with the best reasonable level \nof knowledge and satisfaction of the stakeholders. The process is found genuine and thus \nPP ensured that ongoing process of Stakeholders benefits and complain can be taken care \nafter and during operation of the power plant."
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S3",
+          "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.41,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S4",
+          "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x2-p25-04",
+              "page": 25,
+              "text": "Outcome of FPIC \nThe project has not encroached on land, relocated people, \nor caused any physical or economic displacement. All \nnecessary assessments and consultations were conducted \nto ensure compliance with legal requirements, and no \nindividuals or communities have been displaced by the \nproject."
+            },
+            {
+              "paragraph_id": "x2-p29-02",
+              "page": 29,
+              "text": "No risk identified \nThere is no any risk related to recognizing, \nrespecting, and promoting the protection of the \nrights of IPs, LCs, and customary rights holders \nin line with applicable international human \nrights law, and the United Nations Declaration \non the Rights of Indigenous Peoples and ILO \nConvention 169 on Indigenous and Tribal \nPeoples. \nPP has taken FPIC from the Local stakeholders \nbefore implementing the project activity."
+            },
+            {
+              "paragraph_id": "x3-p27-20",
+              "page": 27,
+              "text": "Assessment team confirms that there are no legal rights to territories \nand resources, including collective and conflicting rights held by \nstakeholders, indigenous people (IPs), Local communities (LCs), and \ncustomary rights holders with regards to the project. However, it was \nnoted that the local community (villagers) has customary access rights \nto natural resources such as the grazing land around the unfenced \nwind turbine generators. Same was confirmed during the interview \nwith PP."
+            },
+            {
+              "paragraph_id": "x3-p28-05",
+              "page": 28,
+              "text": "Project proponent confirmed during the on-site inspection conducted \nby the audit team, that the project involves various stakeholder \ngroups, including the project owner, lender, customer, and the \nresidents who live near the project implementing area. Notably, there \nis no indigenous community within this stakeholder group, and this \ncomposition \nhas \nremained \nunchanged \nsince \nthe \nproject's \ncommissioning."
+            }
+          ],
+          "second_opinion_p_yes": 0.95,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "1.  Mytrah Vayu (Indravati) Pvt. Ltd. \n10/11/2015 \n21/11/2015",
+          "page": 52,
+          "paragraph_id": "p52-12",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "7.  Mytrah Vayu (Tungabhadra) Pvt. Ltd. \n12/09/2016 \n20/09/2016",
+          "page": 101,
+          "paragraph_id": "x4-p101-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "All the stakeholders have been invited through public notice to attend the stakeholders \nmeeting. The local stakeholders’ consultation meeting was attended by local persons \nincluding local villagers, local vendors and technology suppliers. \n \nThe stakeholders identified by the project participant were local villagers who are the major \npopulation of the particular area, local communities and gram panchayat (Village head), \nWTG supplier, project proponent representatives, O&M Team and other people involved in \nthe project. Validation team verified the list of participants who attended the stakeholder \nmeeting and feedback questionnaire and confirms the stakeholders identified are relevant. \nValidation team verified the list of participants who attended the stakeholder meeting and \nfeedback questionnaire and confirms the stakeholders identified are relevant. The validation \nteam also verified the minutes of meeting to note that no negative comments were received \nand the same was cross checked with the information obtained during follow up interviews \nwith the stakeholder’s. \n \nThus Validation team is of the opinion that the stakeholder meeting was adequate and \nappropriate. Assessment team also noted during the validation site visit that PP has already \nput a grievance register onsite in where stakeholders can write there complain if any. The \ncomplain if found genuine will be immediately resolve by PP with the best reasonable level \nof knowledge and satisfaction of the stakeholders. The process is found genuine and thus \nPP ensured that ongoing process of Stakeholders benefits and complain can be taken care \nafter and during operation of the power plant.",
+          "page": 101,
+          "paragraph_id": "x4-p101-05",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Since the local stakeholder consultation was conducted \nprior to the implementation of the project activity during \nvalidation. The consultation process involved relevant \nstakeholders such as the local village head, villagers, NGOs, \nPP representative and Local Government representatives.",
+          "page": 22,
+          "paragraph_id": "x2-p22-08",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "5.4 \nPublic Comments \nThe project activity was published for public comment and few comments were received during \nthe one month commenting period. The comments are discussed as below \n \n1. \nThere are many individual project participants described, thus I am assuming it’s a \nbundled project, which should have been specified in the PD, but I think it has purposefully \nnot been written.  \nPP Response – The project title itself has mentioned that it is bundled project. However this is \nlarge scale project and it is not required any bundling form. The VCS PD clearly mentioned \nbundle word in section 1.1 of  VCS PD. \n \n2. \nHow it is that the contact details of the project proponent have not been described.  \nPP Response – The listed VCS PD has mentioned the PP name, contact person and address \nand minimum listing requirement is met. Please refer this web link for PP address \nhttp://www.mytrah.com/contact-us.php . The VCS PD mentioned the same address as “8001, 8th \nFloor, Q-City, Nanakramguda, Gachibowli, Hyderabad 500032,Telangana,India” \n \n3. \nThe communications agreement mentions EKI as the consultant why has that not been \nmentioned in the other entities involved?  \nPP Response – The project is listed through client VCS account and also communication \nagreement does not mention any name of EKI.  \n \n4. \nUnder the Additionality sections it is mentioned “Financial spread sheets for the key \nassumptions (web links & sources of input parameters) supporting the financial projections \nwould be submitted and updated to the DOE. \nPP Response – As per VCS guideline, minimum listing requirement is met. Thus we think this \ncomment is not relevant.The additionality related information is mentioned in final PDD. DOE has \nvalidated the same. \n \n5. \nCommon practice analysis, where are the projects what is source, EKI does not this?  \nSince the projects are bundled together each bundle has to be assessed separately as per the \nCDM guidelines. I hope the DOE and VCS will take this into account.  \nEKI Response – The final VCS PD have all information of common practise analysis. This is \nbundled large scale project activity and as per tool of common practise analysis, the project \nactivity capacity need to be considered for the common practise analysis. Please refer CDM \nregistered \nprojects \nlike \nUN0968 \n(https://cdm.unfccc.int/Projects/DB/SGS-\nUKL1374066912.42/view ),  \nUN9735 (https://cdm.unfccc.int/Projects/DB/TUEV-RHEIN1378973294.94/view  ),  \nUN8459 (https://cdm.unfccc.int/Projects/DB/PJR%20CDM1354186685.85/view  ),  \nUN7560 (https://cdm.unfccc.int/Projects/DB/RWTUV1349092273.88/view  ),  \nUN7099(https://cdm.unfccc.int/Projects/DB/RWTUV1346067870.82/view  ), and  \nUN9534 (https://cdm.unfccc.int/Projects/DB/PJR%20CDM1359094049.33/view  ) \n \n6. \nThe LSC meeting details are not provided at all?",
+          "page": 53,
+          "paragraph_id": "p53-05",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "2.1.4 Grievance Redress Procedure \nThe project owner has operating complaint procedure. The PP has kept the register on plant site \noffice for logging the ongoing communication or any grievance from the stakeholder which is \neasily accessible to the all stakeholders. This procedure of ongoing communication log & \naddressal is used for the project. Below grievances are registered during current monitoring \nperiod of Nipaniya Site.",
+          "page": 25,
+          "paragraph_id": "x2-p25-05",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Ongoing consultation \nProject Proponent has submitted the feedback register kept at site for \nthe ongoing communication with the local stakeholders. In plant site \noffice seeking complaints/grievances from local community as a part \nof ongoing communication with stakeholders in line with clause \n3.18.3 of VCS Standard, v.4.7.",
+          "page": 29,
+          "paragraph_id": "x3-p29-07",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "During the on-site inspection and interviews with relevant personnel, \nthe assessment team confirmed that a grievance redressal \nmechanism is established in accordance with company policy. A \ngrievance register is maintained at the project site to document and \naddress any complaints from local stakeholders and employees. The \nproject proponent regularly reviews the grievance register and ensures \ntimely resolution of issues, as verified through stakeholder interviews.",
+          "page": 32,
+          "paragraph_id": "x3-p32-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Outcome of FPIC \nThe project has not encroached on land, relocated people, \nor caused any physical or economic displacement. All \nnecessary assessments and consultations were conducted \nto ensure compliance with legal requirements, and no \nindividuals or communities have been displaced by the \nproject.",
+          "page": 25,
+          "paragraph_id": "x2-p25-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "No risk identified \nThere is no any risk related to recognizing, \nrespecting, and promoting the protection of the \nrights of IPs, LCs, and customary rights holders \nin line with applicable international human \nrights law, and the United Nations Declaration \non the Rights of Indigenous Peoples and ILO \nConvention 169 on Indigenous and Tribal \nPeoples. \nPP has taken FPIC from the Local stakeholders \nbefore implementing the project activity.",
+          "page": 29,
+          "paragraph_id": "x2-p29-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Assessment team confirms that there are no legal rights to territories \nand resources, including collective and conflicting rights held by \nstakeholders, indigenous people (IPs), Local communities (LCs), and \ncustomary rights holders with regards to the project. However, it was \nnoted that the local community (villagers) has customary access rights \nto natural resources such as the grazing land around the unfenced \nwind turbine generators. Same was confirmed during the interview \nwith PP.",
+          "page": 27,
+          "paragraph_id": "x3-p27-20",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Project proponent confirmed during the on-site inspection conducted \nby the audit team, that the project involves various stakeholder \ngroups, including the project owner, lender, customer, and the \nresidents who live near the project implementing area. Notably, there \nis no indigenous community within this stakeholder group, and this \ncomposition \nhas \nremained \nunchanged \nsince \nthe \nproject's \ncommissioning.",
+          "page": 28,
+          "paragraph_id": "x3-p28-05",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-02",
+          "p40-07",
+          "p40-08",
+          "p52-10",
+          "p52-11",
+          "p52-12",
+          "p53-02",
+          "p53-03",
+          "p53-04",
+          "p53-05",
+          "p54-02",
+          "p54-03",
+          "x2-p22-07",
+          "x2-p22-08",
+          "x2-p22-09",
+          "x2-p25-04",
+          "x2-p25-05",
+          "x2-p25-06",
+          "x2-p28-13",
+          "x2-p28-14",
+          "x2-p28-15",
+          "x2-p29-02",
+          "x2-p29-03",
+          "x3-p15-37",
+          "x3-p27-20",
+          "x3-p27-21",
+          "x3-p28-03",
+          "x3-p28-04",
+          "x3-p28-05",
+          "x3-p29-07",
+          "x3-p29-08",
+          "x3-p30-10",
+          "x3-p30-11",
+          "x3-p30-12",
+          "x3-p30-13",
+          "x3-p30-14",
+          "x3-p31-02",
+          "x3-p31-06",
+          "x3-p32-04",
+          "x3-p32-05",
+          "x3-p34-06",
+          "x3-p34-07",
+          "x3-p34-08",
+          "x3-p37-04",
+          "x3-p37-05",
+          "x3-p37-06",
+          "x3-p37-07",
+          "x3-p37-08",
+          "x3-p37-09",
+          "x3-p37-11",
+          "x3-p58-18",
+          "x3-p62-05",
+          "x3-p62-06",
+          "x4-p101-04",
+          "x4-p101-05",
+          "x4-p101-06",
+          "x4-p103-05",
+          "x4-p103-06"
+        ],
+        "chars": 28467
+      }
+    }
+  ],
+  "overall": {
+    "score": 81,
+    "included": [
+      "additionality",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [
+      "permanence"
+    ],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-20T17:36:46+00:00"
+}

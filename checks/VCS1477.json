@@ -10,6 +10,62 @@
     "pages": 396,
     "pages_without_text": [],
     "tables": 213
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS1477_MR1.pdf",
+    "sha256": "292a3bab5175c0b21815816fe7e30afa03188d4c585b3d21b0a051bd5241a4d4",
+    "pages": 171,
+    "pages_without_text": [],
+    "tables": 122
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS1477_MR2.pdf",
+    "sha256": "aeac09df13f08276742222dfbb66e25d07f9bf0a36a0f43788f0d2be8171f70a",
+    "pages": 108,
+    "pages_without_text": [],
+    "tables": 75
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS1477_MR3.pdf",
+    "sha256": "398b7f92f48872be07b5ea85b5140178f9818703103be480ea90e732b3d4cb8f",
+    "pages": 167,
+    "pages_without_text": [],
+    "tables": 119
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS1477_MR4.pdf",
+    "sha256": "a111fd9ac540085172c11b5f199b221c8e51a8c5e756503c624d863d98168106",
+    "pages": 121,
+    "pages_without_text": [],
+    "tables": 70
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS1477_MR5.pdf",
+    "sha256": "9437a1bd69cb2977b82f204d1d91f66dec304442a58cee162caf7c0ba74ea49a",
+    "pages": 308,
+    "pages_without_text": [],
+    "tables": 229
+   },
+   {
+    "role": "verification_report",
+    "file": "samples/pdfs/VCS1477_VER1.pdf",
+    "sha256": "d95cef6919eb610dcfe7a605700b8e16911d1d4ed993bee6bff99bcf916ebf36",
+    "pages": 50,
+    "pages_without_text": [],
+    "tables": 92
+   },
+   {
+    "role": "validation_report",
+    "file": "samples/pdfs/VCS1477_VAL1.pdf",
+    "sha256": "c65dad264cacb56be2d777fc71692afa4ba2122eac6a3d2a328fb1bb9f1b22fc",
+    "pages": 67,
+    "pages_without_text": [],
+    "tables": 77
    }
   ],
   "offsetsdb_snapshot": "2026-06-01"
@@ -18,17 +74,16 @@
   {
    "id": "document_coverage",
    "title": "Documents read",
-   "status": "flag",
-   "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "status": "pass",
+   "summary": "Read: Project description (PD) ×1, Validation report (VVB) ×1, Monitoring report ×5, Verification report (VVB) ×1.",
    "details": {
     "held": {
-     "project_description": 1
+     "project_description": 1,
+     "validation_report": 1,
+     "monitoring_report": 5,
+     "verification_report": 1
     },
-    "missing": [
-     "validation_report",
-     "monitoring_report",
-     "verification_report"
-    ]
+    "missing": []
    }
   },
   {
@@ -83,8 +138,10 @@
    "id": "issuance_vs_monitored",
    "title": "Issued credits vs the monitoring reports' figures",
    "status": "not_available",
-   "summary": "No monitoring report was read.",
-   "details": {}
+   "summary": "No yearly net-reduction table in the monitoring reports read overlaps an issued vintage.",
+   "details": {
+    "skipped": []
+   }
   },
   {
    "id": "retired_vs_issued",

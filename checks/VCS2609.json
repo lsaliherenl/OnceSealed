@@ -10,6 +10,38 @@
     "pages": 225,
     "pages_without_text": [],
     "tables": 151
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS2609_MR1.pdf",
+    "sha256": "e37f5d94c4891328a12d3f31aa30fcd1b649b512cd085de49191e3dc6b1f5647",
+    "pages": 225,
+    "pages_without_text": [],
+    "tables": 182
+   },
+   {
+    "role": "monitoring_report",
+    "file": "samples/pdfs/VCS2609_MR2.pdf",
+    "sha256": "7d21faa69ac01f043c36bf09398d0109755e09bed49727c82b666d6d6f2381cd",
+    "pages": 306,
+    "pages_without_text": [],
+    "tables": 214
+   },
+   {
+    "role": "verification_report",
+    "file": "samples/pdfs/VCS2609_VER1.pdf",
+    "sha256": "df96f0fb75b832f4f3da4f3e7289a066ec0a6eb886df7cfdc95cabb70fe22ce7",
+    "pages": 226,
+    "pages_without_text": [],
+    "tables": 195
+   },
+   {
+    "role": "validation_report",
+    "file": "samples/pdfs/VCS2609_VAL1.pdf",
+    "sha256": "8133bde24904119e2134340c595bdfdbd26343909e0cb4390242d7c7987d231e",
+    "pages": 124,
+    "pages_without_text": [],
+    "tables": 138
    }
   ],
   "offsetsdb_snapshot": "2026-06-01"
@@ -18,63 +50,26 @@
   {
    "id": "document_coverage",
    "title": "Documents read",
-   "status": "flag",
-   "summary": "Read: Project description (PD) ×1. Not read: Validation report (VVB), Monitoring report, Verification report (VVB). Findings of 'no evidence' may only mean the evidence is in a document that was not read.",
+   "status": "pass",
+   "summary": "Read: Project description (PD) ×1, Validation report (VVB) ×1, Monitoring report ×2, Verification report (VVB) ×1.",
    "details": {
     "held": {
-     "project_description": 1
+     "project_description": 1,
+     "validation_report": 1,
+     "monitoring_report": 2,
+     "verification_report": 1
     },
-    "missing": [
-     "validation_report",
-     "monitoring_report",
-     "verification_report"
-    ]
+    "missing": []
    }
   },
   {
    "id": "issuance_vs_estimate",
    "title": "Issued credits vs the document's own yearly figures",
    "status": "info",
-   "summary": "Over the whole span issuance is within 20% of the document (2016-2023: issued 5,833,782 t, document 5,509,337 t (1.06x, table on page 162, one of 2 tables)), though single vintages exceed it (2019, 2020, 2021).",
+   "summary": "Over the whole span issuance is within 20% of the document (2016-2023: issued 5,833,782 t, document 5,509,337 t (1.06x, table on page 162)), though single vintages exceed it (2019, 2020, 2021).",
    "details": {
     "ratio": 1.059,
     "candidates": [
-     {
-      "file": "samples/pdfs/VCS2609_PD.pdf",
-      "table_id": "p36-t2",
-      "page": 36,
-      "column": "stimated GHG emission ductions or removals CO e) 2",
-      "rows_read": [
-       "2016 | 571,929",
-       "2017 | 616,953"
-      ],
-      "partial_years": [],
-      "multi_year_rows": [],
-      "document_total": null,
-      "comparison": {
-       "span": [
-        2016,
-        2017
-       ],
-       "document_sum": 1188882.15,
-       "issued_sum": 579764.0,
-       "ratio": 0.488,
-       "per_vintage": [
-        {
-         "vintage": 2016,
-         "document": 571929.05,
-         "issued": 196145.0,
-         "ratio": 0.343
-        },
-        {
-         "vintage": 2017,
-         "document": 616953.1,
-         "issued": 383619.0,
-         "ratio": 0.622
-        }
-       ]
-      }
-     },
      {
       "file": "samples/pdfs/VCS2609_PD.pdf",
       "table_id": "p162-t1",
@@ -183,8 +178,10 @@
    "id": "issuance_vs_monitored",
    "title": "Issued credits vs the monitoring reports' figures",
    "status": "not_available",
-   "summary": "No monitoring report was read.",
-   "details": {}
+   "summary": "No yearly net-reduction table in the monitoring reports read overlaps an issued vintage.",
+   "details": {
+    "skipped": []
+   }
   },
   {
    "id": "retired_vs_issued",

@@ -9,8 +9,38 @@
   },
   "document": {
     "file_name": "CCB VCS PD 1477_30.11.2025_v4.pdf",
-    "sha256": "f2c4ea5cb1f617445cd4583a0835f21f3c853139bb9aff3df9f53e45c021b03f",
-    "pages": 396
+    "sha256": "36f05d93b296982c2b49712eb339c7700e6c4b90c50e9dce6bc46eb43394c17a",
+    "pages": 1388,
+    "extra_files": [
+      {
+        "file_name": "CCB_VCS_MonitoringReport_Final_30_March_2018.pdf",
+        "sha256": "292a3bab5175c0b21815816fe7e30afa03188d4c585b3d21b0a051bd5241a4d4"
+      },
+      {
+        "file_name": "Katingan Project_Fourth Monitoring Report_REVISED_14_June_19_clean.pdf",
+        "sha256": "aeac09df13f08276742222dfbb66e25d07f9bf0a36a0f43788f0d2be8171f70a"
+      },
+      {
+        "file_name": "VCS CCB Katingan Project Monitoring Report 2019 Final.pdf",
+        "sha256": "398b7f92f48872be07b5ea85b5140178f9818703103be480ea90e732b3d4cb8f"
+      },
+      {
+        "file_name": "MON_REP_1477_01JAN2020_31DEC2020.pdf",
+        "sha256": "a111fd9ac540085172c11b5f199b221c8e51a8c5e756503c624d863d98168106"
+      },
+      {
+        "file_name": "CCB VCS MR7 1477_01Jan2021-31-Dec2023_v4.pdf",
+        "sha256": "9437a1bd69cb2977b82f204d1d91f66dec304442a58cee162caf7c0ba74ea49a"
+      },
+      {
+        "file_name": "VERIF_REP_1477_01JAN2020_31DEC2020.pdf",
+        "sha256": "d95cef6919eb610dcfe7a605700b8e16911d1d4ed993bee6bff99bcf916ebf36"
+      },
+      {
+        "file_name": "VCS_PTRMU_Katingan_Validation Report051116_111821.pdf",
+        "sha256": "c65dad264cacb56be2d777fc71692afa4ba2122eac6a3d2a328fb1bb9f1b22fc"
+      }
+    ]
   },
   "methodology_status": {
     "code": "VM0007",
@@ -28,14 +58,15 @@
     "question_set_version": "qs-v2-checklist",
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
-    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0) on the project description + select_paragraphs(budget_chars=15000, overview_chars=0) on the other documents",
     "injection_screen": "injection-screen-v1",
+    "review_rule": "person-decides-flagged-checks-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
+  "method_hash": "0x05f2d815a67e7bfa5eba473409b663801b86b6fe07d2b1da7ae10c8d96d862e5",
   "principles": [
     {
       "principle": "additionality",
@@ -48,7 +79,7 @@
           "question": "Does the text report a quantified financial analysis: at least one numeric financial indicator (such as IRR or NPV) together with a benchmark or threshold value it is compared against?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.03,
+          "second_opinion_p_yes": 0.04,
           "needs_review": false,
           "dropped": null
         },
@@ -58,12 +89,12 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "p42-07",
-              "page": 42,
-              "text": "The baseline scenario was determined for the first baseline period as industrial forestry (typically \nplanting monoculture acacia) plantation and remains the most credible scenario for the second \nbaseline period. Please see Section 3.1.4 for the detailed justification.  \n \nConversion of the forest area to oil palm plantations was also considered as a baseline scenario.  \nOil palm remains one of the most common non-forest commodity industrial land uses of lowland \npeatlands in Indonesia, despite the fact that peat soils are not ideal for its cultivation. The area of \noil palm plantations in Indonesia has increased dramatically over the past decades \n(https://ipad.fas.usda.gov/highlights/2023/11/Indonesia/index.pdf), \nincluding \nin \nCentral \nKalimantan, although almost exclusively in areas legally outside of the forest estate (designated \nas APL or Other Land Utilization) or within the forest estate in areas ear-marked for conversion \n(designated HPK or Conversion Forest).  \n \nOil palm cannot legally be established on land designated as production forest. It can only be \nestablished legally by first excising the area from the forest estate as regulated under Government \nDecree PP No. 60/2012. However, this is only possible in forest areas designated as Conversion \nProduction Forest (Hutan Produksi Konversi or HPK)."
+              "paragraph_id": "p161-03",
+              "page": 161,
+              "text": "There is also a lack of information regarding the 2020 regulation from the Directorate of \nSustainable Production Forest Management to analyse the common practices of other acacia \nplantations regarding this policy. However, given that in the baseline scenario there are two \ndistinguished land uses, acacia plantation and community crops (rubber), the baseline scenario \nmeets the requirements of this regulation. There is no longer a requirement (in any of the new \npolicies) to have areas assigned to community crops in the concession, but it was decided to \nmaintain the previously delineated areas (see previous PD) as there is insufficient information at \nthe moment to assess what other plantations have done with these areas, and to comply with \nthe multi-business regulation."
             }
           ],
-          "second_opinion_p_yes": 0.88,
+          "second_opinion_p_yes": 0.92,
           "needs_review": false,
           "dropped": null
         },
@@ -78,7 +109,7 @@
               "text": "outlines how the project's contributions to biodiversity conservation and community development \nare not mandated by law, not practiced under business-as-usual conditions, and not financially \nviable without the project, and how they go beyond what would be achieved through existing legal \nframeworks. \n \nAdditionality of Biodiversity Benefits \nBaseline Scenario \nIn the absence of the Katingan Mentaya Project, the baseline scenario would likely involve \ncontinued forest conversion, peatland degradation, and biodiversity loss. This is due to systemic \nunder-enforcement of environmental regulations, the economic attractiveness of plantation \ndevelopment, and weak land governance. Indonesia’s conservation laws (e.g., Law No. 5/1990 \nand PP No. 57/2016 on peatland protection) exist, but enforcement is limited, particularly in \nremote forest areas. The project area contains globally significant biodiversity, including \nendangered species such as the Bornean Orangutan (Pongo pygmaeus) and Proboscis Monkey \n(Nasalis larvatus), which would face escalating threats under business-as-usual conditions. \n \nBarriers to Natural Protection \nSeveral barriers prevent natural forest protection in the absence of the project:"
             }
           ],
-          "second_opinion_p_yes": 0.84,
+          "second_opinion_p_yes": 0.83,
           "needs_review": false,
           "dropped": null
         },
@@ -87,16 +118,16 @@
           "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.38,
+          "second_opinion_p_yes": 0.31,
           "needs_review": false,
           "dropped": null
         }
       ],
       "quotes": [
         {
-          "text": "The baseline scenario was determined for the first baseline period as industrial forestry (typically \nplanting monoculture acacia) plantation and remains the most credible scenario for the second \nbaseline period. Please see Section 3.1.4 for the detailed justification.  \n \nConversion of the forest area to oil palm plantations was also considered as a baseline scenario.  \nOil palm remains one of the most common non-forest commodity industrial land uses of lowland \npeatlands in Indonesia, despite the fact that peat soils are not ideal for its cultivation. The area of \noil palm plantations in Indonesia has increased dramatically over the past decades \n(https://ipad.fas.usda.gov/highlights/2023/11/Indonesia/index.pdf), \nincluding \nin \nCentral \nKalimantan, although almost exclusively in areas legally outside of the forest estate (designated \nas APL or Other Land Utilization) or within the forest estate in areas ear-marked for conversion \n(designated HPK or Conversion Forest).  \n \nOil palm cannot legally be established on land designated as production forest. It can only be \nestablished legally by first excising the area from the forest estate as regulated under Government \nDecree PP No. 60/2012. However, this is only possible in forest areas designated as Conversion \nProduction Forest (Hutan Produksi Konversi or HPK).",
-          "page": 42,
-          "paragraph_id": "p42-07",
+          "text": "There is also a lack of information regarding the 2020 regulation from the Directorate of \nSustainable Production Forest Management to analyse the common practices of other acacia \nplantations regarding this policy. However, given that in the baseline scenario there are two \ndistinguished land uses, acacia plantation and community crops (rubber), the baseline scenario \nmeets the requirements of this regulation. There is no longer a requirement (in any of the new \npolicies) to have areas assigned to community crops in the concession, but it was decided to \nmaintain the previously delineated areas (see previous PD) as there is insufficient information at \nthe moment to assess what other plantations have done with these areas, and to comply with \nthe multi-business regulation.",
+          "page": 161,
+          "paragraph_id": "p161-03",
           "verification": "cited_paragraph"
         },
         {
@@ -169,9 +200,40 @@
           "p301-05",
           "p354-02",
           "p354-03",
-          "p354-04"
+          "p354-04",
+          "x1-p56-03",
+          "x1-p56-04",
+          "x1-p106-30",
+          "x1-p106-31",
+          "x2-p75-28",
+          "x2-p82-04",
+          "x2-p82-05",
+          "x2-p82-06",
+          "x3-p106-05",
+          "x3-p106-06",
+          "x3-p106-07",
+          "x4-p4-03",
+          "x4-p4-04",
+          "x4-p4-05",
+          "x4-p4-07",
+          "x4-p4-08",
+          "x4-p4-09",
+          "x4-p5-03",
+          "x4-p5-04",
+          "x4-p98-04",
+          "x7-p34-12",
+          "x7-p34-13",
+          "x7-p35-02",
+          "x7-p35-03",
+          "x7-p35-10",
+          "x7-p36-04",
+          "x7-p41-09",
+          "x7-p41-10",
+          "x7-p55-06",
+          "x7-p55-07",
+          "x7-p55-09"
         ],
-        "chars": 29984
+        "chars": 44954
       }
     },
     {
@@ -191,7 +253,7 @@
               "text": "A non-permanence risk assessment was carried out in accordance with the most recent AFOLU \nNon-Permanence Risk Tool v.4.2 and the Risk Assessment Calculator. The resulting risk rating \nand non-permanence risk buffer is 14%. This assessment primarily addresses the risk to climate \nbenefits but is equally applicable to the risks associated with community and biodiversity \nbenefits."
             }
           ],
-          "second_opinion_p_yes": 0.98,
+          "second_opinion_p_yes": 0.99,
           "needs_review": false,
           "dropped": null
         },
@@ -206,7 +268,7 @@
               "text": "A non-permanence risk assessment was carried out in accordance with the most recent AFOLU \nNon-Permanence Risk Tool v.4.2 and the Risk Assessment Calculator. The resulting risk rating \nand non-permanence risk buffer is 14%. This assessment primarily addresses the risk to climate \nbenefits but is equally applicable to the risks associated with community and biodiversity \nbenefits."
             }
           ],
-          "second_opinion_p_yes": 0.88,
+          "second_opinion_p_yes": 0.94,
           "needs_review": false,
           "dropped": null
         },
@@ -285,45 +347,57 @@
           "p318-06",
           "p332-05",
           "p332-06",
-          "p355-03"
+          "p355-03",
+          "x1-p102-04",
+          "x2-p19-09",
+          "x2-p19-10",
+          "x2-p19-11",
+          "x2-p25-08",
+          "x2-p25-09",
+          "x2-p26-02",
+          "x2-p78-03",
+          "x3-p112-24",
+          "x3-p112-25",
+          "x3-p147-04",
+          "x3-p147-05",
+          "x3-p147-06",
+          "x5-p25-14",
+          "x5-p43-02",
+          "x5-p112-03",
+          "x5-p112-04",
+          "x5-p124-31",
+          "x5-p138-05",
+          "x5-p138-06",
+          "x5-p138-07",
+          "x5-p299-67",
+          "x6-p10-03",
+          "x6-p10-04",
+          "x6-p10-05",
+          "x6-p23-10",
+          "x7-p45-09",
+          "x7-p45-10",
+          "x7-p45-11",
+          "x7-p57-07",
+          "x7-p57-08",
+          "x7-p58-05",
+          "x7-p58-06"
         ],
-        "chars": 29993
+        "chars": 44987
       }
     },
     {
       "principle": "robust_quantification",
-      "status": "strong_evidence",
-      "score": 100,
-      "rationale": "Evidence found for 4 of 4 checks (Q1, Q2, Q3, Q4).",
+      "status": "partial_evidence",
+      "score": 75,
+      "rationale": "Evidence found for 3 of 4 checks (Q2, Q3, Q4); not found in the excerpt: Q1.",
       "checks": [
         {
           "id": "Q1",
           "question": "Does the text show how baseline emissions are calculated, with an equation, parameter values or a numeric result?",
-          "answer": "yes",
-          "evidence": [
-            {
-              "paragraph_id": "p239-02",
-              "page": 239,
-              "text": "Net GHG emission reductions from REDD project activities are calculated by subtracting project \nemissions and emissions due to leakage from baseline emissions (see Table 3.47). Equation \n3.25 is used to calculate emissions reductions and Verified Carbon Units (VCUs) based on the \ncomponents of baseline, project, and leakage emissions (VM0007 v1.7)."
-            },
-            {
-              "paragraph_id": "p239-03",
-              "page": 239,
-              "text": "𝑁𝐸𝑅JK-- = 𝐺𝐻𝐺+&,/JK-- −𝐺𝐻𝐺$%&/JK-- −𝐺𝐻𝐺,L/JK--  (3.25)"
-            },
-            {
-              "paragraph_id": "p373-02",
-              "page": 373,
-              "text": "Figure 2. Industrial-plantation concessions on the similar-lands stratum, Indonesia: acacia (green) and oil palm (red). \nIndustrial plantation is the dominant class acquiring similar lands; of these, only the acacia HTI licence is legally available \non the project's Permanent Production Forest classification. Note: concessions intersected with the national forest map \n(2000) on peat; forest loss measured using Global Forest Watch (2011–2020). \n \n2.3 Data and methods \n \nThe analysis followed these steps. (a) The national land-cover series (Indonesia Land Cover Map; primary \nand secondary dryland, mangrove and swamp forest) was used, and the 2000 forest classes were \ncollapsed into a single continuous “forest at 2000” layer. (b) This forest-2000 layer was intersected with \nthe national peatland map to obtain forest on peat. (c) The acacia and oil-palm concessions were \nintersected with this forest-on-peat layer to isolate the forest on peat inside those concessions e.g., the \nunits within which forest loss over 2011–2020 was measured. (d) Because the national land-cover series \ndoes not extend to 2011–2020, forest loss inside those concessions was measured using Global Forest \nWatch (2011–2020) for the forest types of the national forest map. (e) Two suitability filters (slope and \nelevation, set to ±20% of the project’s range) were then applied to bring the retained forest closer to \nKatingan Mentaya Project’s forest-on-peat type, yielding 9,074,003 ha. (f) For robustness, an alternative \nsuitability scenario was constructed from proximity to extraction infrastructure (within 30 km of a river \nand 40 km of a road, the greatest distances to the farthest point of the project); (g) this market-access \nscenario yielded a smaller, more conservative area of 8,932,940 ha (mask 2), which was adopted as the \nbasis for the forest-loss analysis reported below. \n \nThe two suitability proxies bracket the same result: the slope/elevation scenario gives 9,074,003 ha and \nthe market-access scenario 8,932,940 ha, a difference of only 141,063 ha, with class shares essentially \nunchanged. The market-access scenario is the more conservative of the two and is adopted for the \nanalysis. Under it the two industrial-plantation classes hold closely comparable shares of similar lands \n(acacia 13.2%, oil palm 13.6%) and importantly oil palm clears its holdings at a higher annual \ndeforestation rate than acacia (5.46% yr⁻¹ versus 5.10% yr⁻¹), so identifying acacia as the agent of \nplanned deforestation yields the lower baseline clearing rate and is the conservative choice. \n \n2.4 Application to Agents A, B and C \n \nBecause the project area is 97% peat, near-flat and uniformly Permanent Production Forest, it forms a \nsingle dominant stratum, and the most-common-purchaser result applies uniformly across the areas \nassigned to Agents A, B and C. Agent A is documented (PT Kayu Alam Kencana, below); Agents B and C \nare the same class of agent on the same stratum. \n \n2.5 Conclusion"
-            },
-            {
-              "paragraph_id": "p391-05",
-              "page": 391,
-              "text": "Originally designated under Minister of Forestry Decree No. SK.70/Kpts-\nII/95 concerning Spatial Planning for Industrial Plantation Forests (as \namended, most recently by Minister of Forestry Regulation No. \nP.21/Menhut-II/2006), which required HTI concession holders to set aside \nareas for forest conservation and native tree species. That instrument has \nbeen superseded; MoEF Reg. P.8/2021 does not prescribe minimum \nconservation percentages. This stratum is maintained in the baseline on a \nprecautionary and conservative basis, resulting in a larger protected area \nthan the current regulatory minimum requires and thereby reducing rather \nthan inflating baseline emissions. This stratum also serves as a \nconservative proxy for the Criterion 6 germplasm and wildlife protection \nzone obligation under Article 141(1)(f) of MoEF Reg. P.8/2021 (see Section \n3.5). \n \n \n \n3.4 Baseline conversion sequence \n  \nThe operative distinction for the baseline model under Article 389(b) and (d) of MoEF Reg. P.8/2021 is \nbetween the peat dome peak (absolute protection) and protection function peatland outside the peat \ndome peak (convertible under existing permits until expiry). Only the three conservation strata above are \nexcluded from Aplanned,i. The remaining area within the 72% SK.130/2017 protection function \ndesignation that falls outside the peat dome peak boundary is correctly included in the baseline \nconversion sequence for the counterfactual agents, as existing permit holders may lawfully convert this \narea subject to hydrological maintenance obligations. \n \nAplanned,i accordingly covers 106,715.24 ha (71.24% of project area), comprising the REDD Forest \nclassification. All conservation area strata are excluded (PD Section 3.2.2.3). \n \n3.5 Criterion 6: Germplasm conservation and wildlife protection zones \n \nMoEF Regulation P.8/2021 Article 141(1)(f) imposes an additional protected area obligation on all PBPH \nholders: the identification and designation of areas for germplasm conservation (kawasan pelestarian \nplasma nutfah) and wildlife protection (kawasan perlindungan satwa liar) as part of the protected area \n(kawasan lindung) within their concession working area. This identification is conducted through the \nforest inventory process required under Articles 139–140 and must be incorporated into the RKUPH \n(long-term forest management plan) under Article 147. The regulation does not prescribe a minimum \narea or percentage for this category; the spatial extent is determined entirely by what the forest inventory \nidentifies in the field. \n \nFor the baseline agents in the Katingan Mentaya Project counterfactual scenario, this obligation would \nhave required a proportion of their respective concession areas to be designated as protected zones for \ngermplasm and wildlife, in addition to the peat dome peak, river buffer, and central forest conservation \nareas described above. The Central Conservation Forest stratum, retained in the project baseline on a \nprecautionary and conservative basis, serves as a proxy for this category of conservation obligation, \nconsistent with the overall approach of adopting the most conservative available scenario."
-            }
-          ],
-          "second_opinion_p_yes": 0.6,
-          "needs_review": false,
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.59,
+          "needs_review": true,
           "dropped": null
         },
         {
@@ -335,9 +409,19 @@
               "paragraph_id": "p235-19",
               "page": 235,
               "text": "As there was no leakage during the previous baseline period, it is assumed that no leakage will \noccur. Actual leakage will be monitored throughout the project crediting period and will be \nreported at each monitoring event. If leakage occurs, the resulting emissions will be calculated \nfollowing steps in the LK-ASP module."
+            },
+            {
+              "paragraph_id": "p237-03",
+              "page": 237,
+              "text": "• Before constructing any canal block that could impact areas outside the project area, \nsurveys are conducted to determine whether the local population uses the canal (for example, for \ntransportation, agriculture, fishing, or other activities). If no such uses are identified, a full block is \ndesigned and built. However, if any uses are found, the blocks are constructed with spillways to \nensure that these activities are not affected. Spill gates regulate water flow and prevent any \nincrease in water table depth outside the project area, therefore avoiding any increased CH4 \nemissions or decreased vegetation production."
+            },
+            {
+              "paragraph_id": "p237-04",
+              "page": 237,
+              "text": "The integrity of the rewetting activities, along with the absence of ecological leakage, will be \ndemonstrated during each monitoring event. Monitoring of ecological leakage will only take place \non rewetted canals that have hydrological connectivity to water bodies outside the project area. \nIt will be conducted through the installation of staff gauges and monitoring wells to assess \nhydrological impacts (flood and drought). The monitoring points will be established within \ntransects with a radius of 1,200 meters from the canal blocking points. Each transect will be \npositioned perpendicular to the canal, covering both inside and outside of the project area. \nMonitoring outside the project area will be carried out wherever is possible, as there are \ncommunity and land ownership constraints. Monitoring will be conducted regularly, with intervals \nranging from hourly (using automatic data logger) to trimonthly (for manual data collection)."
             }
           ],
-          "second_opinion_p_yes": 0.94,
+          "second_opinion_p_yes": 0.95,
           "needs_review": false,
           "dropped": null
         },
@@ -357,14 +441,14 @@
               "text": "Condition met. X-UNC has \nbeen used throughout to \nestimate \nuncertainties \nassociated with this project. \nSee 3.2.5.1."
             },
             {
-              "paragraph_id": "p103-12",
-              "page": 103,
-              "text": "The module is mandatory when using VCS \nmethodology VM0007. It is applicable for \nestimating the uncertainty of estimates of \nemissions and removals of CO2-e generated \nfrom REDD and WRC project activities. The \nmodule focuses on the following sources of \nuncertainty: \n• Determination of rates of deforestation \nand \ndegradation  \n• Uncertainty associated with estimation of \nstocks in carbon pools and changes in \ncarbon \nstocks \n• Uncertainty associated with estimation of"
+              "paragraph_id": "x6-p22-07",
+              "page": 22,
+              "text": "Uncertainty calculations for all project activities were reviewed at length as prescribed by the \nmethodology and confirmed to result in a correct estimate of uncertainty. No uncertainty deduction \nwas required for this monitoring period."
             },
             {
-              "paragraph_id": "p391-05",
-              "page": 391,
-              "text": "Originally designated under Minister of Forestry Decree No. SK.70/Kpts-\nII/95 concerning Spatial Planning for Industrial Plantation Forests (as \namended, most recently by Minister of Forestry Regulation No. \nP.21/Menhut-II/2006), which required HTI concession holders to set aside \nareas for forest conservation and native tree species. That instrument has \nbeen superseded; MoEF Reg. P.8/2021 does not prescribe minimum \nconservation percentages. This stratum is maintained in the baseline on a \nprecautionary and conservative basis, resulting in a larger protected area \nthan the current regulatory minimum requires and thereby reducing rather \nthan inflating baseline emissions. This stratum also serves as a \nconservative proxy for the Criterion 6 germplasm and wildlife protection \nzone obligation under Article 141(1)(f) of MoEF Reg. P.8/2021 (see Section \n3.5). \n \n \n \n3.4 Baseline conversion sequence \n  \nThe operative distinction for the baseline model under Article 389(b) and (d) of MoEF Reg. P.8/2021 is \nbetween the peat dome peak (absolute protection) and protection function peatland outside the peat \ndome peak (convertible under existing permits until expiry). Only the three conservation strata above are \nexcluded from Aplanned,i. The remaining area within the 72% SK.130/2017 protection function \ndesignation that falls outside the peat dome peak boundary is correctly included in the baseline \nconversion sequence for the counterfactual agents, as existing permit holders may lawfully convert this \narea subject to hydrological maintenance obligations. \n \nAplanned,i accordingly covers 106,715.24 ha (71.24% of project area), comprising the REDD Forest \nclassification. All conservation area strata are excluded (PD Section 3.2.2.3). \n \n3.5 Criterion 6: Germplasm conservation and wildlife protection zones \n \nMoEF Regulation P.8/2021 Article 141(1)(f) imposes an additional protected area obligation on all PBPH \nholders: the identification and designation of areas for germplasm conservation (kawasan pelestarian \nplasma nutfah) and wildlife protection (kawasan perlindungan satwa liar) as part of the protected area \n(kawasan lindung) within their concession working area. This identification is conducted through the \nforest inventory process required under Articles 139–140 and must be incorporated into the RKUPH \n(long-term forest management plan) under Article 147. The regulation does not prescribe a minimum \narea or percentage for this category; the spatial extent is determined entirely by what the forest inventory \nidentifies in the field. \n \nFor the baseline agents in the Katingan Mentaya Project counterfactual scenario, this obligation would \nhave required a proportion of their respective concession areas to be designated as protected zones for \ngermplasm and wildlife, in addition to the peat dome peak, river buffer, and central forest conservation \nareas described above. The Central Conservation Forest stratum, retained in the project baseline on a \nprecautionary and conservative basis, serves as a proxy for this category of conservation obligation, \nconsistent with the overall approach of adopting the most conservative available scenario."
+              "paragraph_id": "p373-02",
+              "page": 373,
+              "text": "Figure 2. Industrial-plantation concessions on the similar-lands stratum, Indonesia: acacia (green) and oil palm (red). \nIndustrial plantation is the dominant class acquiring similar lands; of these, only the acacia HTI licence is legally available \non the project's Permanent Production Forest classification. Note: concessions intersected with the national forest map \n(2000) on peat; forest loss measured using Global Forest Watch (2011–2020). \n \n2.3 Data and methods \n \nThe analysis followed these steps. (a) The national land-cover series (Indonesia Land Cover Map; primary \nand secondary dryland, mangrove and swamp forest) was used, and the 2000 forest classes were \ncollapsed into a single continuous “forest at 2000” layer. (b) This forest-2000 layer was intersected with \nthe national peatland map to obtain forest on peat. (c) The acacia and oil-palm concessions were \nintersected with this forest-on-peat layer to isolate the forest on peat inside those concessions e.g., the \nunits within which forest loss over 2011–2020 was measured. (d) Because the national land-cover series \ndoes not extend to 2011–2020, forest loss inside those concessions was measured using Global Forest \nWatch (2011–2020) for the forest types of the national forest map. (e) Two suitability filters (slope and \nelevation, set to ±20% of the project’s range) were then applied to bring the retained forest closer to \nKatingan Mentaya Project’s forest-on-peat type, yielding 9,074,003 ha. (f) For robustness, an alternative \nsuitability scenario was constructed from proximity to extraction infrastructure (within 30 km of a river \nand 40 km of a road, the greatest distances to the farthest point of the project); (g) this market-access \nscenario yielded a smaller, more conservative area of 8,932,940 ha (mask 2), which was adopted as the \nbasis for the forest-loss analysis reported below. \n \nThe two suitability proxies bracket the same result: the slope/elevation scenario gives 9,074,003 ha and \nthe market-access scenario 8,932,940 ha, a difference of only 141,063 ha, with class shares essentially \nunchanged. The market-access scenario is the more conservative of the two and is adopted for the \nanalysis. Under it the two industrial-plantation classes hold closely comparable shares of similar lands \n(acacia 13.2%, oil palm 13.6%) and importantly oil palm clears its holdings at a higher annual \ndeforestation rate than acacia (5.46% yr⁻¹ versus 5.10% yr⁻¹), so identifying acacia as the agent of \nplanned deforestation yields the lower baseline clearing rate and is the conservative choice. \n \n2.4 Application to Agents A, B and C \n \nBecause the project area is 97% peat, near-flat and uniformly Permanent Production Forest, it forms a \nsingle dominant stratum, and the most-common-purchaser result applies uniformly across the areas \nassigned to Agents A, B and C. Agent A is documented (PT Kayu Alam Kencana, below); Agents B and C \nare the same class of agent on the same stratum. \n \n2.5 Conclusion"
             }
           ],
           "second_opinion_p_yes": 0.98,
@@ -387,55 +471,33 @@
               "text": "The integrity of the rewetting activities, along with the absence of ecological leakage, will be \ndemonstrated during each monitoring event. Monitoring of ecological leakage will only take place \non rewetted canals that have hydrological connectivity to water bodies outside the project area. \nIt will be conducted through the installation of staff gauges and monitoring wells to assess \nhydrological impacts (flood and drought). The monitoring points will be established within \ntransects with a radius of 1,200 meters from the canal blocking points. Each transect will be \npositioned perpendicular to the canal, covering both inside and outside of the project area. \nMonitoring outside the project area will be carried out wherever is possible, as there are \ncommunity and land ownership constraints. Monitoring will be conducted regularly, with intervals \nranging from hourly (using automatic data logger) to trimonthly (for manual data collection)."
             },
             {
-              "paragraph_id": "p253-03",
-              "page": 253,
-              "text": "Hotspot alerts, that are generated via the continuous satellite monitoring of both NASA-FIRMS \n(until 2023) and OroraTech systems are automatically distributed as SMS and email to the project \nfire management team and the heads of the affected zone (Permian Global, 2024). These alerts \nprovide critical information, including GPS coordinates, estimated accuracy or confidence levels, \nand the corresponding time and date. Coordination efforts are facilitated through a combination \nof radio communication, SMS, and email. Following the integration of the OroraTech system, the \nfire monitoring coverage has been significantly expanded, enabling the detection of any fire alerts \nwithin the designated project area or an additional 15,000-meter buffer zone. Within this \nmonitoring area, a 3000m buffer around the project is prioritised for checking and verification by \nthe field team. Other approaches (e.g. drone surveys) are used to verify more distant hotspots \n(Figure 3.37). As part of the reporting and verification process, the fire team also utilises \nadditional national hotspots alert systems (e.g. SIPONGI and BRIN) as well as prepares monthly \nsummaries with information on the fire monitoring activities that have occurred in the project \narea and its surrounding regions (see Project activities and Theory of Change section)."
-            },
-            {
               "paragraph_id": "p340-07",
               "page": 340,
               "text": "The Katingan Mentaya Project employs a comprehensive biodiversity and forest monitoring \nframework to assess and enhance conservation outcomes. Indicators for carbon monitoring, \nincluding field plot data and remotely sensed imagery, track natural forest regeneration, which \nserves as a proxy for forest quality and its suitability to support RTE species. Additionally, line \ntransect surveys, camera trapping, and opportunistic observations are used to document RTE \nspecies. While these methods are not designed to provide precise population density estimates, \nthey are both cost-effective and feasible, offering valuable insights into species presence and \nrelative abundance indices. \n \nKey species monitoring includes ground nest surveys for Bornean Orangutan (Pongo pygmaeus), \nthe project’s key trigger species, to track population trends over time. Plans for future monitoring \nperiods include freshwater fish surveys to document species within aquatic habitats. Regular \npatrols will also document signs of anthropogenic disturbance, such as logging camps, timber piles, \nand used shotgun cartridges. The Community Engagement team plays a critical role in addressing \nand monitoring ongoing hunting activities to mitigate pressures on wildlife populations. \n \nBiodiversity monitoring spans the entire project area, with a particular focus on different habitat \ntypes and key species. A suite of tailored field survey methods is applied to different taxa and are \ndetailed in Table 5.5. Community interviews further enrich the monitoring process by assessing \nlocal harvest practices and threats to biodiversity. To evaluate conservation success, rigorous data"
-            },
-            {
-              "paragraph_id": "p210-19",
-              "page": 210,
-              "text": "This section explains how the ex-ante estimations of expected project emissions are calculated. \nThe emissions will be recalculated for each monitoring period, reflecting any changes in the \nproject area during that period (deforestation, forest degradation, fires, change in drainage \nstatus or natural disturbances). For these re-calculations, the project will use the same strata \nand emission factors as those used below for the ex-ante calculations. These strata as well as \nany changes in the project area will be monitored for each monitoring period using a combination \nof field and remote sensing data, as explained in the monitoring plan, and results will be reported \nin each monitoring report."
             }
           ],
-          "second_opinion_p_yes": 0.97,
+          "second_opinion_p_yes": 0.96,
           "needs_review": false,
           "dropped": null
         }
       ],
       "quotes": [
         {
-          "text": "Net GHG emission reductions from REDD project activities are calculated by subtracting project \nemissions and emissions due to leakage from baseline emissions (see Table 3.47). Equation \n3.25 is used to calculate emissions reductions and Verified Carbon Units (VCUs) based on the \ncomponents of baseline, project, and leakage emissions (VM0007 v1.7).",
-          "page": 239,
-          "paragraph_id": "p239-02",
-          "verification": "cited_paragraph"
-        },
-        {
-          "text": "𝑁𝐸𝑅JK-- = 𝐺𝐻𝐺+&,/JK-- −𝐺𝐻𝐺$%&/JK-- −𝐺𝐻𝐺,L/JK--  (3.25)",
-          "page": 239,
-          "paragraph_id": "p239-03",
-          "verification": "cited_paragraph"
-        },
-        {
-          "text": "Figure 2. Industrial-plantation concessions on the similar-lands stratum, Indonesia: acacia (green) and oil palm (red). \nIndustrial plantation is the dominant class acquiring similar lands; of these, only the acacia HTI licence is legally available \non the project's Permanent Production Forest classification. Note: concessions intersected with the national forest map \n(2000) on peat; forest loss measured using Global Forest Watch (2011–2020). \n \n2.3 Data and methods \n \nThe analysis followed these steps. (a) The national land-cover series (Indonesia Land Cover Map; primary \nand secondary dryland, mangrove and swamp forest) was used, and the 2000 forest classes were \ncollapsed into a single continuous “forest at 2000” layer. (b) This forest-2000 layer was intersected with \nthe national peatland map to obtain forest on peat. (c) The acacia and oil-palm concessions were \nintersected with this forest-on-peat layer to isolate the forest on peat inside those concessions e.g., the \nunits within which forest loss over 2011–2020 was measured. (d) Because the national land-cover series \ndoes not extend to 2011–2020, forest loss inside those concessions was measured using Global Forest \nWatch (2011–2020) for the forest types of the national forest map. (e) Two suitability filters (slope and \nelevation, set to ±20% of the project’s range) were then applied to bring the retained forest closer to \nKatingan Mentaya Project’s forest-on-peat type, yielding 9,074,003 ha. (f) For robustness, an alternative \nsuitability scenario was constructed from proximity to extraction infrastructure (within 30 km of a river \nand 40 km of a road, the greatest distances to the farthest point of the project); (g) this market-access \nscenario yielded a smaller, more conservative area of 8,932,940 ha (mask 2), which was adopted as the \nbasis for the forest-loss analysis reported below. \n \nThe two suitability proxies bracket the same result: the slope/elevation scenario gives 9,074,003 ha and \nthe market-access scenario 8,932,940 ha, a difference of only 141,063 ha, with class shares essentially \nunchanged. The market-access scenario is the more conservative of the two and is adopted for the \nanalysis. Under it the two industrial-plantation classes hold closely comparable shares of similar lands \n(acacia 13.2%, oil palm 13.6%) and importantly oil palm clears its holdings at a higher annual \ndeforestation rate than acacia (5.46% yr⁻¹ versus 5.10% yr⁻¹), so identifying acacia as the agent of \nplanned deforestation yields the lower baseline clearing rate and is the conservative choice. \n \n2.4 Application to Agents A, B and C \n \nBecause the project area is 97% peat, near-flat and uniformly Permanent Production Forest, it forms a \nsingle dominant stratum, and the most-common-purchaser result applies uniformly across the areas \nassigned to Agents A, B and C. Agent A is documented (PT Kayu Alam Kencana, below); Agents B and C \nare the same class of agent on the same stratum. \n \n2.5 Conclusion",
-          "page": 373,
-          "paragraph_id": "p373-02",
-          "verification": "cited_paragraph"
-        },
-        {
-          "text": "Originally designated under Minister of Forestry Decree No. SK.70/Kpts-\nII/95 concerning Spatial Planning for Industrial Plantation Forests (as \namended, most recently by Minister of Forestry Regulation No. \nP.21/Menhut-II/2006), which required HTI concession holders to set aside \nareas for forest conservation and native tree species. That instrument has \nbeen superseded; MoEF Reg. P.8/2021 does not prescribe minimum \nconservation percentages. This stratum is maintained in the baseline on a \nprecautionary and conservative basis, resulting in a larger protected area \nthan the current regulatory minimum requires and thereby reducing rather \nthan inflating baseline emissions. This stratum also serves as a \nconservative proxy for the Criterion 6 germplasm and wildlife protection \nzone obligation under Article 141(1)(f) of MoEF Reg. P.8/2021 (see Section \n3.5). \n \n \n \n3.4 Baseline conversion sequence \n  \nThe operative distinction for the baseline model under Article 389(b) and (d) of MoEF Reg. P.8/2021 is \nbetween the peat dome peak (absolute protection) and protection function peatland outside the peat \ndome peak (convertible under existing permits until expiry). Only the three conservation strata above are \nexcluded from Aplanned,i. The remaining area within the 72% SK.130/2017 protection function \ndesignation that falls outside the peat dome peak boundary is correctly included in the baseline \nconversion sequence for the counterfactual agents, as existing permit holders may lawfully convert this \narea subject to hydrological maintenance obligations. \n \nAplanned,i accordingly covers 106,715.24 ha (71.24% of project area), comprising the REDD Forest \nclassification. All conservation area strata are excluded (PD Section 3.2.2.3). \n \n3.5 Criterion 6: Germplasm conservation and wildlife protection zones \n \nMoEF Regulation P.8/2021 Article 141(1)(f) imposes an additional protected area obligation on all PBPH \nholders: the identification and designation of areas for germplasm conservation (kawasan pelestarian \nplasma nutfah) and wildlife protection (kawasan perlindungan satwa liar) as part of the protected area \n(kawasan lindung) within their concession working area. This identification is conducted through the \nforest inventory process required under Articles 139–140 and must be incorporated into the RKUPH \n(long-term forest management plan) under Article 147. The regulation does not prescribe a minimum \narea or percentage for this category; the spatial extent is determined entirely by what the forest inventory \nidentifies in the field. \n \nFor the baseline agents in the Katingan Mentaya Project counterfactual scenario, this obligation would \nhave required a proportion of their respective concession areas to be designated as protected zones for \ngermplasm and wildlife, in addition to the peat dome peak, river buffer, and central forest conservation \nareas described above. The Central Conservation Forest stratum, retained in the project baseline on a \nprecautionary and conservative basis, serves as a proxy for this category of conservation obligation, \nconsistent with the overall approach of adopting the most conservative available scenario.",
-          "page": 391,
-          "paragraph_id": "p391-05",
-          "verification": "cited_paragraph"
-        },
-        {
           "text": "As there was no leakage during the previous baseline period, it is assumed that no leakage will \noccur. Actual leakage will be monitored throughout the project crediting period and will be \nreported at each monitoring event. If leakage occurs, the resulting emissions will be calculated \nfollowing steps in the LK-ASP module.",
           "page": 235,
           "paragraph_id": "p235-19",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "• Before constructing any canal block that could impact areas outside the project area, \nsurveys are conducted to determine whether the local population uses the canal (for example, for \ntransportation, agriculture, fishing, or other activities). If no such uses are identified, a full block is \ndesigned and built. However, if any uses are found, the blocks are constructed with spillways to \nensure that these activities are not affected. Spill gates regulate water flow and prevent any \nincrease in water table depth outside the project area, therefore avoiding any increased CH4 \nemissions or decreased vegetation production.",
+          "page": 237,
+          "paragraph_id": "p237-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The integrity of the rewetting activities, along with the absence of ecological leakage, will be \ndemonstrated during each monitoring event. Monitoring of ecological leakage will only take place \non rewetted canals that have hydrological connectivity to water bodies outside the project area. \nIt will be conducted through the installation of staff gauges and monitoring wells to assess \nhydrological impacts (flood and drought). The monitoring points will be established within \ntransects with a radius of 1,200 meters from the canal blocking points. Each transect will be \npositioned perpendicular to the canal, covering both inside and outside of the project area. \nMonitoring outside the project area will be carried out wherever is possible, as there are \ncommunity and land ownership constraints. Monitoring will be conducted regularly, with intervals \nranging from hourly (using automatic data logger) to trimonthly (for manual data collection).",
+          "page": 237,
+          "paragraph_id": "p237-04",
           "verification": "cited_paragraph"
         },
         {
@@ -451,9 +513,15 @@
           "verification": "cited_paragraph"
         },
         {
-          "text": "The module is mandatory when using VCS \nmethodology VM0007. It is applicable for \nestimating the uncertainty of estimates of \nemissions and removals of CO2-e generated \nfrom REDD and WRC project activities. The \nmodule focuses on the following sources of \nuncertainty: \n• Determination of rates of deforestation \nand \ndegradation  \n• Uncertainty associated with estimation of \nstocks in carbon pools and changes in \ncarbon \nstocks \n• Uncertainty associated with estimation of",
-          "page": 103,
-          "paragraph_id": "p103-12",
+          "text": "Uncertainty calculations for all project activities were reviewed at length as prescribed by the \nmethodology and confirmed to result in a correct estimate of uncertainty. No uncertainty deduction \nwas required for this monitoring period.",
+          "page": 22,
+          "paragraph_id": "x6-p22-07",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Figure 2. Industrial-plantation concessions on the similar-lands stratum, Indonesia: acacia (green) and oil palm (red). \nIndustrial plantation is the dominant class acquiring similar lands; of these, only the acacia HTI licence is legally available \non the project's Permanent Production Forest classification. Note: concessions intersected with the national forest map \n(2000) on peat; forest loss measured using Global Forest Watch (2011–2020). \n \n2.3 Data and methods \n \nThe analysis followed these steps. (a) The national land-cover series (Indonesia Land Cover Map; primary \nand secondary dryland, mangrove and swamp forest) was used, and the 2000 forest classes were \ncollapsed into a single continuous “forest at 2000” layer. (b) This forest-2000 layer was intersected with \nthe national peatland map to obtain forest on peat. (c) The acacia and oil-palm concessions were \nintersected with this forest-on-peat layer to isolate the forest on peat inside those concessions e.g., the \nunits within which forest loss over 2011–2020 was measured. (d) Because the national land-cover series \ndoes not extend to 2011–2020, forest loss inside those concessions was measured using Global Forest \nWatch (2011–2020) for the forest types of the national forest map. (e) Two suitability filters (slope and \nelevation, set to ±20% of the project’s range) were then applied to bring the retained forest closer to \nKatingan Mentaya Project’s forest-on-peat type, yielding 9,074,003 ha. (f) For robustness, an alternative \nsuitability scenario was constructed from proximity to extraction infrastructure (within 30 km of a river \nand 40 km of a road, the greatest distances to the farthest point of the project); (g) this market-access \nscenario yielded a smaller, more conservative area of 8,932,940 ha (mask 2), which was adopted as the \nbasis for the forest-loss analysis reported below. \n \nThe two suitability proxies bracket the same result: the slope/elevation scenario gives 9,074,003 ha and \nthe market-access scenario 8,932,940 ha, a difference of only 141,063 ha, with class shares essentially \nunchanged. The market-access scenario is the more conservative of the two and is adopted for the \nanalysis. Under it the two industrial-plantation classes hold closely comparable shares of similar lands \n(acacia 13.2%, oil palm 13.6%) and importantly oil palm clears its holdings at a higher annual \ndeforestation rate than acacia (5.46% yr⁻¹ versus 5.10% yr⁻¹), so identifying acacia as the agent of \nplanned deforestation yields the lower baseline clearing rate and is the conservative choice. \n \n2.4 Application to Agents A, B and C \n \nBecause the project area is 97% peat, near-flat and uniformly Permanent Production Forest, it forms a \nsingle dominant stratum, and the most-common-purchaser result applies uniformly across the areas \nassigned to Agents A, B and C. Agent A is documented (PT Kayu Alam Kencana, below); Agents B and C \nare the same class of agent on the same stratum. \n \n2.5 Conclusion",
+          "page": 373,
+          "paragraph_id": "p373-02",
           "verification": "cited_paragraph"
         },
         {
@@ -463,32 +531,16 @@
           "verification": "cited_paragraph"
         },
         {
-          "text": "The integrity of the rewetting activities, along with the absence of ecological leakage, will be \ndemonstrated during each monitoring event. Monitoring of ecological leakage will only take place \non rewetted canals that have hydrological connectivity to water bodies outside the project area. \nIt will be conducted through the installation of staff gauges and monitoring wells to assess \nhydrological impacts (flood and drought). The monitoring points will be established within \ntransects with a radius of 1,200 meters from the canal blocking points. Each transect will be \npositioned perpendicular to the canal, covering both inside and outside of the project area. \nMonitoring outside the project area will be carried out wherever is possible, as there are \ncommunity and land ownership constraints. Monitoring will be conducted regularly, with intervals \nranging from hourly (using automatic data logger) to trimonthly (for manual data collection).",
-          "page": 237,
-          "paragraph_id": "p237-04",
-          "verification": "cited_paragraph"
-        },
-        {
-          "text": "Hotspot alerts, that are generated via the continuous satellite monitoring of both NASA-FIRMS \n(until 2023) and OroraTech systems are automatically distributed as SMS and email to the project \nfire management team and the heads of the affected zone (Permian Global, 2024). These alerts \nprovide critical information, including GPS coordinates, estimated accuracy or confidence levels, \nand the corresponding time and date. Coordination efforts are facilitated through a combination \nof radio communication, SMS, and email. Following the integration of the OroraTech system, the \nfire monitoring coverage has been significantly expanded, enabling the detection of any fire alerts \nwithin the designated project area or an additional 15,000-meter buffer zone. Within this \nmonitoring area, a 3000m buffer around the project is prioritised for checking and verification by \nthe field team. Other approaches (e.g. drone surveys) are used to verify more distant hotspots \n(Figure 3.37). As part of the reporting and verification process, the fire team also utilises \nadditional national hotspots alert systems (e.g. SIPONGI and BRIN) as well as prepares monthly \nsummaries with information on the fire monitoring activities that have occurred in the project \narea and its surrounding regions (see Project activities and Theory of Change section).",
-          "page": 253,
-          "paragraph_id": "p253-03",
-          "verification": "cited_paragraph"
-        },
-        {
           "text": "The Katingan Mentaya Project employs a comprehensive biodiversity and forest monitoring \nframework to assess and enhance conservation outcomes. Indicators for carbon monitoring, \nincluding field plot data and remotely sensed imagery, track natural forest regeneration, which \nserves as a proxy for forest quality and its suitability to support RTE species. Additionally, line \ntransect surveys, camera trapping, and opportunistic observations are used to document RTE \nspecies. While these methods are not designed to provide precise population density estimates, \nthey are both cost-effective and feasible, offering valuable insights into species presence and \nrelative abundance indices. \n \nKey species monitoring includes ground nest surveys for Bornean Orangutan (Pongo pygmaeus), \nthe project’s key trigger species, to track population trends over time. Plans for future monitoring \nperiods include freshwater fish surveys to document species within aquatic habitats. Regular \npatrols will also document signs of anthropogenic disturbance, such as logging camps, timber piles, \nand used shotgun cartridges. The Community Engagement team plays a critical role in addressing \nand monitoring ongoing hunting activities to mitigate pressures on wildlife populations. \n \nBiodiversity monitoring spans the entire project area, with a particular focus on different habitat \ntypes and key species. A suite of tailored field survey methods is applied to different taxa and are \ndetailed in Table 5.5. Community interviews further enrich the monitoring process by assessing \nlocal harvest practices and threats to biodiversity. To evaluate conservation success, rigorous data",
           "page": 340,
           "paragraph_id": "p340-07",
           "verification": "cited_paragraph"
-        },
-        {
-          "text": "This section explains how the ex-ante estimations of expected project emissions are calculated. \nThe emissions will be recalculated for each monitoring period, reflecting any changes in the \nproject area during that period (deforestation, forest degradation, fires, change in drainage \nstatus or natural disturbances). For these re-calculations, the project will use the same strata \nand emission factors as those used below for the ex-ante calculations. These strata as well as \nany changes in the project area will be monitored for each monitoring period using a combination \nof field and remote sensing data, as explained in the monitoring plan, and results will be reported \nin each monitoring report.",
-          "page": 210,
-          "paragraph_id": "p210-19",
-          "verification": "cited_paragraph"
         }
       ],
       "dropped_findings": 0,
-      "review_flags": [],
+      "review_flags": [
+        "models_disagree:Q1"
+      ],
       "excerpt": {
         "paragraphs": [
           "p19-03",
@@ -536,23 +588,81 @@
           "p351-07",
           "p373-02",
           "p391-04",
-          "p391-05"
+          "p391-05",
+          "x1-p48-05",
+          "x1-p48-06",
+          "x1-p48-07",
+          "x1-p132-07",
+          "x1-p132-08",
+          "x1-p132-09",
+          "x2-p34-03",
+          "x2-p34-04",
+          "x2-p34-05",
+          "x2-p102-08",
+          "x2-p102-09",
+          "x3-p21-03",
+          "x3-p52-02",
+          "x3-p52-03",
+          "x3-p52-04",
+          "x4-p47-13",
+          "x4-p47-14",
+          "x4-p47-15",
+          "x4-p117-12",
+          "x6-p22-07",
+          "x7-p26-07",
+          "x7-p26-08"
         ],
-        "chars": 29983
+        "chars": 44969
       }
     },
     {
       "principle": "no_double_counting",
-      "status": "partial_evidence",
-      "score": 67,
-      "rationale": "Evidence found for 2 of 3 checks (D2, D3); not found in the excerpt: D1.",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 3 of 3 checks (D1, D2, D3).",
       "checks": [
         {
           "id": "D1",
           "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
-          "answer": "no",
-          "evidence": [],
-          "second_opinion_p_yes": 0.38,
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x1-p17-08",
+              "page": 17,
+              "text": "Participation under Other GHG Programs: The Katingan Project has not been registered \nunder any emissions trading programs, but may seek to do so in the future. In this case \napplicable requirements in the VCS Standard, AFOLU Requirements, and the Registration \nand Issuance process will be followed. The project will not claim credit for the same GHG \nemission reduction or removal under the VCS Program and another GHG program."
+            },
+            {
+              "paragraph_id": "x2-p12-05",
+              "page": 12,
+              "text": "Participation under Other GHG Programs: The Katingan Project has not been registered under any \nemissions trading programs but may seek to do so in the future. In this case applicable requirements \nin the VCS Standard, AFOLU Requirements, and the Registration and Issuance process will be \nfollowed. The project will not claim credit for the same GHG emission reduction or removal under the \nVCS Program and another GHG program."
+            },
+            {
+              "paragraph_id": "x3-p19-07",
+              "page": 19,
+              "text": "Participation under Other GHG Programs: The Katingan Project has not been registered under \nany emissions trading programs, but may seek to do so in the future. In this case applicable \nrequirements in the VCS Standard, AFOLU Requirements, and the Registration and Issuance \nprocess will be followed. The project will not claim credit for the same GHG emission reduction or \nremoval under the VCS Program and another GHG program."
+            },
+            {
+              "paragraph_id": "x4-p11-04",
+              "page": 11,
+              "text": "Participation under other GHG Programs \nThe Katingan Project has not been registered under any emissions trading programs but may \nseek to do so in the future. In this case applicable requirements in the VCS Standard, AFOLU \nRequirements, and the Registration and Issuance process will be followed. The project will not \nclaim credit for the same GHG emission reduction or removal under the VCS Program and \nanother GHG program."
+            },
+            {
+              "paragraph_id": "x6-p15-08",
+              "page": 15,
+              "text": "The verification team is not aware of project involvement in other forms of environmental credits \nfrom its activities. The project has not been registered, and is not seeking registration, under any \nother GHG programs. The Katingan Project currently only seeks carbon credits under the VCS \nprogram. This was confirmed through a risk-based internet review and interview with Project \nProponents. Therefore, the verification team deems the project eligible to participate under the \nVCS Program."
+            },
+            {
+              "paragraph_id": "x6-p18-10",
+              "page": 18,
+              "text": "There were no methodology deviations or PD deviations during this relating to monitoring period \n(please see Section 3.2). The GHG emission reductions generated by the project are not included \nin an emissions trading program other than the VCS program.  The Project Proponent has not \nreceived or sought any other form of environmental credit as confirmed through a risk-based \nreview by the verification team (see Section 3.1)."
+            },
+            {
+              "paragraph_id": "x7-p21-11",
+              "page": 21,
+              "text": "The audit team performed a web based review of current GHG programs and found no \nevidence of the project being registered under any other program"
+            }
+          ],
+          "second_opinion_p_yes": 0.84,
           "needs_review": false,
           "dropped": null
         },
@@ -562,12 +672,67 @@
           "answer": "yes",
           "evidence": [
             {
+              "paragraph_id": "x1-p17-06",
+              "page": 17,
+              "text": "Emission Trading Programs and Other Binding Limits: During this monitoring period, activities \ncarried out by the project are not covered by any emission trading programs or other binding \nlimits in relation to GHG emissions. Presidential Decree No. 61/2011 regarding the National \nAction Plan for Reducing Green House Gas Emissions requires government agencies to set \nreduction targets for specific sectors and identify plans for achieving these goals. The project \nis not currently subject to these targets nor will its reductions be used to demonstrate \nachievement of the agency goals."
+            },
+            {
+              "paragraph_id": "x1-p17-07",
+              "page": 17,
+              "text": "Other Forms of Environmental Credit: The Katingan Project currently only seeks carbon \ncredits under the VCS program, and has not received other forms of environmental credits \nfrom its activities."
+            },
+            {
+              "paragraph_id": "p97-15",
+              "page": 97,
+              "text": "2.6.2 Double Claiming, Other Forms of Credit, and Scope 3 Emissions (VCS, 3.24)"
+            },
+            {
+              "paragraph_id": "p97-16",
+              "page": 97,
+              "text": "2.6.2.1 \nNo Double Claiming with Emissions Trading Programs or Binding Emission Limits"
+            },
+            {
+              "paragraph_id": "p97-17",
+              "page": 97,
+              "text": "Are project reductions and removals or project activities also included in an emissions trading \nprogram or binding emission limit? See the VCS Program Definitions for definitions of \nemissions trading program and binding emission limit."
+            },
+            {
+              "paragraph_id": "p98-02",
+              "page": 98,
+              "text": "2.6.2.2 \nNo Double Claiming with Other Forms of Environmental Credit"
+            },
+            {
               "paragraph_id": "p98-03",
               "page": 98,
               "text": "Has the project activity sought, received, or is planning to receive credit from another GHG-\nrelated environmental credit system? See the VCS Program Definitions for definition of GHG-\nrelated environmental credit system."
+            },
+            {
+              "paragraph_id": "x5-p17-16",
+              "page": 17,
+              "text": "2.1.11 Double Claiming, Other Forms of Credit, and Scope 3 Emissions (VCS, 3.24)"
+            },
+            {
+              "paragraph_id": "x5-p17-20",
+              "page": 17,
+              "text": "2.1.11.2 No Double Claiming with Other Forms of Environmental Credit"
+            },
+            {
+              "paragraph_id": "x5-p17-21",
+              "page": 17,
+              "text": "Has the project activity sought, received, or is planning to receive credit from another GHG-\nrelated environmental credit system? See the VCS Program Definitions for definition of GHG-\nrelated environmental credit system."
+            },
+            {
+              "paragraph_id": "x6-p18-10",
+              "page": 18,
+              "text": "There were no methodology deviations or PD deviations during this relating to monitoring period \n(please see Section 3.2). The GHG emission reductions generated by the project are not included \nin an emissions trading program other than the VCS program.  The Project Proponent has not \nreceived or sought any other form of environmental credit as confirmed through a risk-based \nreview by the verification team (see Section 3.1)."
+            },
+            {
+              "paragraph_id": "x7-p19-08",
+              "page": 19,
+              "text": "3.1.9.2 Emission trading programs and other binding limits"
             }
           ],
-          "second_opinion_p_yes": 0.88,
+          "second_opinion_p_yes": 0.94,
           "needs_review": false,
           "dropped": null
         },
@@ -580,14 +745,97 @@
               "paragraph_id": "p80-03",
               "page": 80,
               "text": "Financial Services Authority (OJK) Regulation No. 14/2023 on Carbon Trading in the Carbon \nExchange. The project is registered under the SRN PPI with registration number REG-11-PR-X-\n2025-6737. Although the SRUK registry is not yet available at the time of the preparation of the \nPD, the recently launched registry system of Indonesia ensures transparency and prevents \ndouble counting, meaning that even if voluntary credits are sold to foreigners, the emissions \nreductions remain as Indonesian assets toward their NDC. \n \n \n2. Regional and Local Environmental Regulations \n \nPeatland and Forest Fire Management \nPresidential Instruction (INPRES) No. 10/2011 and subsequent renewals regarding Peatland \nManagement \nGovernment Regulation PP No. 71/2014 on Protection and Management of Peatland Ecosystems \nRegional Regulation of Central Kalimantan Province No. 1/2020 on Forest Fire Control \n \nSustainable Land and Water Management \nMinistry of Environment and Forestry Decree No. P.15/MENLHK/SETJEN/KUM.1/2/2017 on \nWater Table Measurement in Peat Ecosystems \nMinistry of Environment and Forestry Regulation No. 60/MENLHK/Setjen/Kum.1/10/2019 on \nPeat Ecosystem Management \n \n3. Compliance Assurance Measures \nThe Katingan Mentaya Project adheres to these regulations through the following mechanisms:"
+            },
+            {
+              "paragraph_id": "x3-p19-08",
+              "page": 19,
+              "text": "Indonesia National Registry System: With the issuance of Ministry of Environment and Forestry \nno P70, P71, P72 and P73 in late December 2017, REDD projects within the jurisdiction of \nIndonesia should now be registered with the newly created National Registry System. It is also \nproposed that this may in turn make projects eligible to receive Result Based Payments for \navoided emissions. However, up to date, this law is not enforced and supporting regulation and \ninstitution are still being developed and yet to be trialed. Therefore, avoided carbon emissions \ngenerated in this monitoring period are unaffected by this regulation."
             }
           ],
-          "second_opinion_p_yes": 0.9,
+          "second_opinion_p_yes": 0.92,
           "needs_review": false,
           "dropped": null
         }
       ],
       "quotes": [
+        {
+          "text": "Participation under Other GHG Programs: The Katingan Project has not been registered \nunder any emissions trading programs, but may seek to do so in the future. In this case \napplicable requirements in the VCS Standard, AFOLU Requirements, and the Registration \nand Issuance process will be followed. The project will not claim credit for the same GHG \nemission reduction or removal under the VCS Program and another GHG program.",
+          "page": 17,
+          "paragraph_id": "x1-p17-08",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Participation under Other GHG Programs: The Katingan Project has not been registered under any \nemissions trading programs but may seek to do so in the future. In this case applicable requirements \nin the VCS Standard, AFOLU Requirements, and the Registration and Issuance process will be \nfollowed. The project will not claim credit for the same GHG emission reduction or removal under the \nVCS Program and another GHG program.",
+          "page": 12,
+          "paragraph_id": "x2-p12-05",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Participation under Other GHG Programs: The Katingan Project has not been registered under \nany emissions trading programs, but may seek to do so in the future. In this case applicable \nrequirements in the VCS Standard, AFOLU Requirements, and the Registration and Issuance \nprocess will be followed. The project will not claim credit for the same GHG emission reduction or \nremoval under the VCS Program and another GHG program.",
+          "page": 19,
+          "paragraph_id": "x3-p19-07",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Participation under other GHG Programs \nThe Katingan Project has not been registered under any emissions trading programs but may \nseek to do so in the future. In this case applicable requirements in the VCS Standard, AFOLU \nRequirements, and the Registration and Issuance process will be followed. The project will not \nclaim credit for the same GHG emission reduction or removal under the VCS Program and \nanother GHG program.",
+          "page": 11,
+          "paragraph_id": "x4-p11-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The verification team is not aware of project involvement in other forms of environmental credits \nfrom its activities. The project has not been registered, and is not seeking registration, under any \nother GHG programs. The Katingan Project currently only seeks carbon credits under the VCS \nprogram. This was confirmed through a risk-based internet review and interview with Project \nProponents. Therefore, the verification team deems the project eligible to participate under the \nVCS Program.",
+          "page": 15,
+          "paragraph_id": "x6-p15-08",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "There were no methodology deviations or PD deviations during this relating to monitoring period \n(please see Section 3.2). The GHG emission reductions generated by the project are not included \nin an emissions trading program other than the VCS program.  The Project Proponent has not \nreceived or sought any other form of environmental credit as confirmed through a risk-based \nreview by the verification team (see Section 3.1).",
+          "page": 18,
+          "paragraph_id": "x6-p18-10",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The audit team performed a web based review of current GHG programs and found no \nevidence of the project being registered under any other program",
+          "page": 21,
+          "paragraph_id": "x7-p21-11",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Emission Trading Programs and Other Binding Limits: During this monitoring period, activities \ncarried out by the project are not covered by any emission trading programs or other binding \nlimits in relation to GHG emissions. Presidential Decree No. 61/2011 regarding the National \nAction Plan for Reducing Green House Gas Emissions requires government agencies to set \nreduction targets for specific sectors and identify plans for achieving these goals. The project \nis not currently subject to these targets nor will its reductions be used to demonstrate \nachievement of the agency goals.",
+          "page": 17,
+          "paragraph_id": "x1-p17-06",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Other Forms of Environmental Credit: The Katingan Project currently only seeks carbon \ncredits under the VCS program, and has not received other forms of environmental credits \nfrom its activities.",
+          "page": 17,
+          "paragraph_id": "x1-p17-07",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "2.6.2 Double Claiming, Other Forms of Credit, and Scope 3 Emissions (VCS, 3.24)",
+          "page": 97,
+          "paragraph_id": "p97-15",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "2.6.2.1 \nNo Double Claiming with Emissions Trading Programs or Binding Emission Limits",
+          "page": 97,
+          "paragraph_id": "p97-16",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Are project reductions and removals or project activities also included in an emissions trading \nprogram or binding emission limit? See the VCS Program Definitions for definitions of \nemissions trading program and binding emission limit.",
+          "page": 97,
+          "paragraph_id": "p97-17",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "2.6.2.2 \nNo Double Claiming with Other Forms of Environmental Credit",
+          "page": 98,
+          "paragraph_id": "p98-02",
+          "verification": "cited_paragraph"
+        },
         {
           "text": "Has the project activity sought, received, or is planning to receive credit from another GHG-\nrelated environmental credit system? See the VCS Program Definitions for definition of GHG-\nrelated environmental credit system.",
           "page": 98,
@@ -595,9 +843,39 @@
           "verification": "cited_paragraph"
         },
         {
+          "text": "2.1.11 Double Claiming, Other Forms of Credit, and Scope 3 Emissions (VCS, 3.24)",
+          "page": 17,
+          "paragraph_id": "x5-p17-16",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "2.1.11.2 No Double Claiming with Other Forms of Environmental Credit",
+          "page": 17,
+          "paragraph_id": "x5-p17-20",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Has the project activity sought, received, or is planning to receive credit from another GHG-\nrelated environmental credit system? See the VCS Program Definitions for definition of GHG-\nrelated environmental credit system.",
+          "page": 17,
+          "paragraph_id": "x5-p17-21",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "3.1.9.2 Emission trading programs and other binding limits",
+          "page": 19,
+          "paragraph_id": "x7-p19-08",
+          "verification": "cited_paragraph"
+        },
+        {
           "text": "Financial Services Authority (OJK) Regulation No. 14/2023 on Carbon Trading in the Carbon \nExchange. The project is registered under the SRN PPI with registration number REG-11-PR-X-\n2025-6737. Although the SRUK registry is not yet available at the time of the preparation of the \nPD, the recently launched registry system of Indonesia ensures transparency and prevents \ndouble counting, meaning that even if voluntary credits are sold to foreigners, the emissions \nreductions remain as Indonesian assets toward their NDC. \n \n \n2. Regional and Local Environmental Regulations \n \nPeatland and Forest Fire Management \nPresidential Instruction (INPRES) No. 10/2011 and subsequent renewals regarding Peatland \nManagement \nGovernment Regulation PP No. 71/2014 on Protection and Management of Peatland Ecosystems \nRegional Regulation of Central Kalimantan Province No. 1/2020 on Forest Fire Control \n \nSustainable Land and Water Management \nMinistry of Environment and Forestry Decree No. P.15/MENLHK/SETJEN/KUM.1/2/2017 on \nWater Table Measurement in Peat Ecosystems \nMinistry of Environment and Forestry Regulation No. 60/MENLHK/Setjen/Kum.1/10/2019 on \nPeat Ecosystem Management \n \n3. Compliance Assurance Measures \nThe Katingan Mentaya Project adheres to these regulations through the following mechanisms:",
           "page": 80,
           "paragraph_id": "p80-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Indonesia National Registry System: With the issuance of Ministry of Environment and Forestry \nno P70, P71, P72 and P73 in late December 2017, REDD projects within the jurisdiction of \nIndonesia should now be registered with the newly created National Registry System. It is also \nproposed that this may in turn make projects eligible to receive Result Based Payments for \navoided emissions. However, up to date, this law is not enforced and supporting regulation and \ninstitution are still being developed and yet to be trialed. Therefore, avoided carbon emissions \ngenerated in this monitoring period are unaffected by this regulation.",
+          "page": 19,
+          "paragraph_id": "x3-p19-08",
           "verification": "cited_paragraph"
         }
       ],
@@ -634,24 +912,75 @@
           "p107-06",
           "p205-06",
           "p205-07",
-          "p205-08"
+          "p205-08",
+          "x1-p17-06",
+          "x1-p17-07",
+          "x1-p17-08",
+          "x1-p134-04",
+          "x1-p134-05",
+          "x1-p134-06",
+          "x1-p134-17",
+          "x2-p12-05",
+          "x2-p103-23",
+          "x2-p103-24",
+          "x3-p19-07",
+          "x3-p19-08",
+          "x3-p131-02",
+          "x3-p131-03",
+          "x3-p131-15",
+          "x3-p131-16",
+          "x4-p2-07",
+          "x4-p2-08",
+          "x4-p2-09",
+          "x4-p11-03",
+          "x4-p11-04",
+          "x4-p116-15",
+          "x4-p116-16",
+          "x4-p116-17",
+          "x5-p16-44",
+          "x5-p16-45",
+          "x5-p17-04",
+          "x5-p17-05",
+          "x5-p17-16",
+          "x5-p17-17",
+          "x5-p17-18",
+          "x5-p17-20",
+          "x5-p17-21",
+          "x6-p4-16",
+          "x6-p15-07",
+          "x6-p15-08",
+          "x6-p18-09",
+          "x6-p18-10",
+          "x6-p18-11",
+          "x7-p19-08",
+          "x7-p21-10",
+          "x7-p21-11",
+          "x7-p28-06",
+          "x7-p28-07",
+          "x7-p28-08"
         ],
-        "chars": 7346
+        "chars": 22311
       }
     },
     {
       "principle": "safeguards",
-      "status": "partial_evidence",
-      "score": 75,
-      "rationale": "Evidence found for 3 of 4 checks (S2, S3, S4); not found in the excerpt: S1.",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (S1, S2, S3, S4).",
       "checks": [
         {
           "id": "S1",
           "question": "Does the text describe a stakeholder consultation with specifics such as dates, places, participants or comments received?",
-          "answer": "no",
-          "evidence": [],
-          "second_opinion_p_yes": 0.09,
-          "needs_review": false,
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x4-p22-05",
+              "page": 22,
+              "text": "All project activities were designed and implemented in participation with project-zone \ncommunities and based on full consultation and FPIC principles. The project has continuously \npromoted collaborative management, as described in Section 3.1.7. An example of this is the \ndevelopment of collaboration management areas within the project area, including one that \ninvolves community members living near the Hantipan Canal and in the North Eastern area. A \npartnership scheme has been agreed between Kampung Melayu village, Telaga village and the \nproject to ensure tenurial rights are fully recognized. Through the partnership, a community-led \nagroforestry initiative has been developed, which has been designed to generate local income \nand has included the planting of various native tree species. The partnership was established \nfollowing a formal process, involving central and local government institutions, community \norganizers, representatives from the villages, and the project staff. Spatial planning, area \ndelineation, and the agroforestry technical concept were made in collaboration with the two \nvillages. For further details about activities related to this community-led agroforestry initiative \nduring this monitoring period, please see Section 5.2.3.3."
+            }
+          ],
+          "second_opinion_p_yes": 0.13,
+          "needs_review": true,
           "dropped": null
         },
         {
@@ -660,12 +989,12 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "p66-05",
-              "page": 66,
-              "text": "By maintaining a comprehensive and organised record, the SIRETA database helps monitor \ngrievance trends, improve response efficiency, and ensure that all concerns are handled fairly \nand consistently. \n  \nTransparent Record-Keeping: Once a grievance is resolved, all details are documented, including \nmeeting minutes, agreements, and photos when applicable. These records are uploaded to the \ndatabase, ensuring a clear, traceable history of how issues were handled. This process maintains \ntransparency, accountability, and trust with stakeholders. \n  \nPublic Access to Information: To maintain transparency and trust, key grievance summaries and \nresolutions are shared through village meetings and, when needed, on the project’s website. \nSensitive information is anonymised to protect privacy, ensuring the community stays informed \nwhile respecting individuals' confidentiality. \n  \nFeedback Loops: Feedback on the grievance process is used to continuously improve the system, \nmaking it more effective and responsive to community needs. The project listens to input and \nmakes necessary adjustments to ensure concerns are handled fairly and efficiently. \n \n \nPublicising the Grievance Redress Procedure \nLocal Presence: By restructuring to establish a zona manager and staff within each project cluster \n(Cempaga, Mendawai, Pulau Hanaut, Seranau, Bangkurung and Kamipang), the project ensures \nthat there is a tangible, on-the-ground presence that the local communities can easily access. \nThese zone officials are specifically tasked with engaging the community and facilitating the \ngrievance process, making it easier for villagers to approach the project with their concerns. \n \nCommunity Engagement: Regular meetings and workshops are held to inform and educate the \ncommunities about the grievance mechanism. These interactions serve as opportunities for the \nproject staff to explain how grievances can be lodged, the process followed to address them, and \nhow the outcomes will be communicated."
+              "paragraph_id": "p67-02",
+              "page": 67,
+              "text": "Information Materials: The project distributes brochures, flyers, and posters throughout the \ncommunity centres and public gathering spots, detailing the steps to file a grievance, contact \ninformation for zona managers, and the types of issues that can be addressed through this \nmechanism. \n \nAccessibility of the Grievance Mechanism \nMultiple Reporting Channels: Grievances can be reported not just in person but also via \ndedicated phone lines, email addresses, and a project-specific app, if available. This multi-\nchannel approach ensures that villagers can submit their grievances in a manner that is most \nconvenient and accessible to them. \n \nAssistance in Grievance Filing: For individuals who may need assistance in articulating their \ngrievances, such as the elderly or those who are illiterate, project staff provide support in \ndocumenting and filing their complaints to ensure everyone could be heard. \n \nDocumentation and Public Availability \nSIRETA Database: All grievances, whether they are validated or not, are recorded in the SIRETA \ndatabase. This centralised system includes detailed entries of each case, such as the nature of \nthe grievance, the stakeholders involved, the responses provided, and the resolution status. \n \nTransparency in Documentation: Once a grievance is resolved, all relevant documentation \nincluding minutes of meetings, agreements, and photographic evidence, is uploaded to the \ndatabase. This not only maintains a record of the issue and its resolution but also ensures that \nthe process is transparent. \n \nPublic Access to Information: Key summaries of grievance cases and their resolutions are \nperiodically shared with the community through public meetings and posted on the project’s \nofficial website. For sensitive issues, privacy is maintained by anonymising the details that could \nidentify the individuals involved. \n \nFeedback Loops: The project incorporates feedback received about the grievance process itself \ninto ongoing improvements, ensuring the mechanism remains effective and responsive to \ncommunity needs."
             }
           ],
-          "second_opinion_p_yes": 0.99,
+          "second_opinion_p_yes": 0.98,
           "needs_review": false,
           "dropped": null
         },
@@ -680,7 +1009,7 @@
               "text": "In our commitment to sustainable community engagement and the application of the \nprecautionary principle, we have established measures to mitigate potential negative impacts on \ncommunity well-being, particularly for vulnerable groups such as women, girls, children, and other \nmarginalised populations, as well as for the maintenance and enhancement of high conservation \nvalue (HCV) attributes related to community well-being.  \n \nCurrent and Future Measures for Community Well-being and Environmental Protection  \n \nParticipatory Planning and Consultation \nWe have implemented a participatory planning process, central to which are ongoing \nconsultations with community members. This approach facilitates the early identification and \ndiscussion of potential negative impacts, such as air and noise pollution, water discharges, waste \ngeneration, and the release of hazardous materials. By directly involving community members, \nespecially representatives of vulnerable groups, we ensure that our project design addresses \ntheir unique needs and concerns (UNDP, 2018; IFC Performance Standard 1). This collaborative \napproach promotes shared ownership of both the project and the outcomes, fostering trust and \ntransparency (WHO, 2020). \n \nProactive Risk Assessment and Precautionary Planning \nIn alignment with the precautionary principle (Rio Declaration, 1992), we conduct risk \nassessments that consider both scientifically substantiated risks and potential risks for which \nconclusive evidence may be lacking. This forward-looking strategy prioritises preventive action, \nensuring that we address potential threats to community well-being before they materialise \n(IPBES, 2019). This includes designing strategies to minimise emissions, control waste, and limit \nnoise, as well as implementing spill prevention protocols to protect water quality and prevent \ncontamination (IFC Performance Standard 4). \n \nMonitoring and Responsive Adaptation \nBased on our ongoing monitoring and insights gathered through team interactions with the \ncommunity, no significant adverse effects have been recorded to date. However, we remain \nvigilant. Monitoring systems are in place to identify early signs of potential impacts on community \nwell-being or HCV attributes, allowing us to adapt our strategies as needed (HCV Resource \nNetwork). By prioritising community feedback, we ensure that adjustments are responsive to \nemerging issues or unforeseen challenges (IFC Performance Standard 1). \n \nSafety and Inclusivity Measures for Vulnerable Groups \nSpecific measures to safeguard women, girls, children, and other marginalised groups are \nembedded in our project design (UNDP, 2018). For example, we implement safe worksite \nprotocols (ILO, 1992), maintain accessible communication channels for reporting concerns, and \npromote training programmes on environmental safety and personal security (WHO, 2020). These \nproactive actions provide a secure environment and support community empowerment by \nequipping individuals with knowledge and resources to contribute to and benefit from the project \nsustainably. \n \nAlignment with the Precautionary Principle \nThese measures exemplify our commitment to the precautionary principle, where we prioritise the \nprevention of harm even in the absence of complete scientific certainty (Rio Declaration, 1992). \nOur approach reflects the belief that safeguarding community well-being and protecting \nenvironmental attributes are foundational to achieving sustainable, long-term outcomes (IPBES, \n2019). This forward-thinking stance ensures that the health, safety, and rights of all community \nmembers remain central to our operational philosophy."
             }
           ],
-          "second_opinion_p_yes": 0.54,
+          "second_opinion_p_yes": 0.67,
           "needs_review": false,
           "dropped": null
         },
@@ -690,21 +1019,27 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "p300-02",
-              "page": 300,
-              "text": "The project recognises and formalises community members' management rights over the land \nwithin the project area, aligning with international REDD+ safeguards and principles of equitable \nbenefit-sharing (UNFCCC, 2011). Their direct involvement and the practices they implement are \nintegral to achieving the Katingan Mentaya Project’s goals. These efforts make community \nmembers rightful claimants to the project’s climate, community, and biodiversity benefits. This \nsetup underscores their crucial role in sustaining the project’s long-term environmental and \nsocio-economic outcomes, affirming their management rights and contributions to the project’s \nsuccess (HCV Resource Network, n.d.)."
+              "paragraph_id": "x1-p36-04",
+              "page": 36,
+              "text": "The Katingan Project adopts FPIC principles in all community consultation processes (see \nFigure 2). This approach has been and will be maintained throughout the life of the project. It \nallows local people to critically consider potential impacts of the project and to negotiate based \non mutual consensus without being forced or manipulated. The FPIC approach is also used \nfor stakeholder consultations and communications which were discussed earlier in this report."
             }
           ],
-          "second_opinion_p_yes": 0.98,
+          "second_opinion_p_yes": 0.99,
           "needs_review": false,
           "dropped": null
         }
       ],
       "quotes": [
         {
-          "text": "By maintaining a comprehensive and organised record, the SIRETA database helps monitor \ngrievance trends, improve response efficiency, and ensure that all concerns are handled fairly \nand consistently. \n  \nTransparent Record-Keeping: Once a grievance is resolved, all details are documented, including \nmeeting minutes, agreements, and photos when applicable. These records are uploaded to the \ndatabase, ensuring a clear, traceable history of how issues were handled. This process maintains \ntransparency, accountability, and trust with stakeholders. \n  \nPublic Access to Information: To maintain transparency and trust, key grievance summaries and \nresolutions are shared through village meetings and, when needed, on the project’s website. \nSensitive information is anonymised to protect privacy, ensuring the community stays informed \nwhile respecting individuals' confidentiality. \n  \nFeedback Loops: Feedback on the grievance process is used to continuously improve the system, \nmaking it more effective and responsive to community needs. The project listens to input and \nmakes necessary adjustments to ensure concerns are handled fairly and efficiently. \n \n \nPublicising the Grievance Redress Procedure \nLocal Presence: By restructuring to establish a zona manager and staff within each project cluster \n(Cempaga, Mendawai, Pulau Hanaut, Seranau, Bangkurung and Kamipang), the project ensures \nthat there is a tangible, on-the-ground presence that the local communities can easily access. \nThese zone officials are specifically tasked with engaging the community and facilitating the \ngrievance process, making it easier for villagers to approach the project with their concerns. \n \nCommunity Engagement: Regular meetings and workshops are held to inform and educate the \ncommunities about the grievance mechanism. These interactions serve as opportunities for the \nproject staff to explain how grievances can be lodged, the process followed to address them, and \nhow the outcomes will be communicated.",
-          "page": 66,
-          "paragraph_id": "p66-05",
+          "text": "All project activities were designed and implemented in participation with project-zone \ncommunities and based on full consultation and FPIC principles. The project has continuously \npromoted collaborative management, as described in Section 3.1.7. An example of this is the \ndevelopment of collaboration management areas within the project area, including one that \ninvolves community members living near the Hantipan Canal and in the North Eastern area. A \npartnership scheme has been agreed between Kampung Melayu village, Telaga village and the \nproject to ensure tenurial rights are fully recognized. Through the partnership, a community-led \nagroforestry initiative has been developed, which has been designed to generate local income \nand has included the planting of various native tree species. The partnership was established \nfollowing a formal process, involving central and local government institutions, community \norganizers, representatives from the villages, and the project staff. Spatial planning, area \ndelineation, and the agroforestry technical concept were made in collaboration with the two \nvillages. For further details about activities related to this community-led agroforestry initiative \nduring this monitoring period, please see Section 5.2.3.3.",
+          "page": 22,
+          "paragraph_id": "x4-p22-05",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Information Materials: The project distributes brochures, flyers, and posters throughout the \ncommunity centres and public gathering spots, detailing the steps to file a grievance, contact \ninformation for zona managers, and the types of issues that can be addressed through this \nmechanism. \n \nAccessibility of the Grievance Mechanism \nMultiple Reporting Channels: Grievances can be reported not just in person but also via \ndedicated phone lines, email addresses, and a project-specific app, if available. This multi-\nchannel approach ensures that villagers can submit their grievances in a manner that is most \nconvenient and accessible to them. \n \nAssistance in Grievance Filing: For individuals who may need assistance in articulating their \ngrievances, such as the elderly or those who are illiterate, project staff provide support in \ndocumenting and filing their complaints to ensure everyone could be heard. \n \nDocumentation and Public Availability \nSIRETA Database: All grievances, whether they are validated or not, are recorded in the SIRETA \ndatabase. This centralised system includes detailed entries of each case, such as the nature of \nthe grievance, the stakeholders involved, the responses provided, and the resolution status. \n \nTransparency in Documentation: Once a grievance is resolved, all relevant documentation \nincluding minutes of meetings, agreements, and photographic evidence, is uploaded to the \ndatabase. This not only maintains a record of the issue and its resolution but also ensures that \nthe process is transparent. \n \nPublic Access to Information: Key summaries of grievance cases and their resolutions are \nperiodically shared with the community through public meetings and posted on the project’s \nofficial website. For sensitive issues, privacy is maintained by anonymising the details that could \nidentify the individuals involved. \n \nFeedback Loops: The project incorporates feedback received about the grievance process itself \ninto ongoing improvements, ensuring the mechanism remains effective and responsive to \ncommunity needs.",
+          "page": 67,
+          "paragraph_id": "p67-02",
           "verification": "cited_paragraph"
         },
         {
@@ -714,14 +1049,16 @@
           "verification": "cited_paragraph"
         },
         {
-          "text": "The project recognises and formalises community members' management rights over the land \nwithin the project area, aligning with international REDD+ safeguards and principles of equitable \nbenefit-sharing (UNFCCC, 2011). Their direct involvement and the practices they implement are \nintegral to achieving the Katingan Mentaya Project’s goals. These efforts make community \nmembers rightful claimants to the project’s climate, community, and biodiversity benefits. This \nsetup underscores their crucial role in sustaining the project’s long-term environmental and \nsocio-economic outcomes, affirming their management rights and contributions to the project’s \nsuccess (HCV Resource Network, n.d.).",
-          "page": 300,
-          "paragraph_id": "p300-02",
+          "text": "The Katingan Project adopts FPIC principles in all community consultation processes (see \nFigure 2). This approach has been and will be maintained throughout the life of the project. It \nallows local people to critically consider potential impacts of the project and to negotiate based \non mutual consensus without being forced or manipulated. The FPIC approach is also used \nfor stakeholder consultations and communications which were discussed earlier in this report.",
+          "page": 36,
+          "paragraph_id": "x1-p36-04",
           "verification": "cited_paragraph"
         }
       ],
       "dropped_findings": 0,
-      "review_flags": [],
+      "review_flags": [
+        "models_disagree:S1"
+      ],
       "excerpt": {
         "paragraphs": [
           "p45-03",
@@ -747,14 +1084,43 @@
           "p307-02",
           "p307-03",
           "p307-05",
-          "p343-06"
+          "p343-06",
+          "x1-p23-06",
+          "x1-p23-07",
+          "x1-p23-08",
+          "x1-p24-06",
+          "x1-p24-07",
+          "x1-p24-08",
+          "x1-p36-03",
+          "x1-p36-04",
+          "x1-p40-10",
+          "x1-p40-11",
+          "x1-p49-05",
+          "x1-p147-08",
+          "x3-p14-06",
+          "x3-p14-07",
+          "x3-p14-08",
+          "x3-p25-03",
+          "x3-p25-05",
+          "x3-p25-07",
+          "x3-p39-03",
+          "x3-p44-05",
+          "x3-p44-06",
+          "x4-p22-04",
+          "x4-p22-05",
+          "x4-p34-05",
+          "x4-p34-06",
+          "x4-p34-07",
+          "x5-p304-67",
+          "x6-p15-03",
+          "x6-p15-04"
         ],
-        "chars": 29996
+        "chars": 44995
       }
     }
   ],
   "overall": {
-    "score": 79,
+    "score": 81,
     "included": [
       "additionality",
       "permanence",
@@ -772,5 +1138,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T17:46:56+00:00"
+  "generated_at": "2026-10-20T17:31:36+00:00"
 }

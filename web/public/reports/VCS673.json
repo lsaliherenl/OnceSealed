@@ -44,27 +44,28 @@
     "question_set_version": "qs-v2-checklist",
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
-    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0) on the project description + select_paragraphs(budget_chars=15000, overview_chars=0) on the other documents",
     "injection_screen": "injection-screen-v1",
+    "review_rule": "person-decides-flagged-checks-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
+  "method_hash": "0x05f2d815a67e7bfa5eba473409b663801b86b6fe07d2b1da7ae10c8d96d862e5",
   "principles": [
     {
       "principle": "additionality",
       "status": "partial_evidence",
-      "score": 50,
-      "rationale": "Evidence found for 2 of 4 checks (A2, A4); not found in the excerpt: A1, A3.",
+      "score": 25,
+      "rationale": "Evidence found for 1 of 4 checks (A2); not found in the excerpt: A1, A3, A4.",
       "checks": [
         {
           "id": "A1",
           "question": "Does the text report a quantified financial analysis: at least one numeric financial indicator (such as IRR or NPV) together with a benchmark or threshold value it is compared against?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.04,
+          "second_opinion_p_yes": 0.05,
           "needs_review": false,
           "dropped": null
         },
@@ -79,7 +80,7 @@
               "text": "***) The part of the Development Area studied by Meijer exceeded the area implemented; the \ntypes listed by Meijer also includes riverine vegetation, and other vegetation outside the \ncompartment area. \n \nSTEP 3. Investment analysis \n \nWas not carried out for this ARR project activity because the baseline scenario \nidentified in sub-step 2c above allows for the highest baseline GHG removals by \nsinks.  \n \nSTEP 4. Common practice analysis \nThere are a couple of projects being implemented in other regions of Uganda. The \nfirst is a small scale reforestation project in Rwoho Central Forest Reserve of the \nNile Basin. The Rwoho project was the first ever Ugandan project to be registered \nunder CDM. It is part of a project cluster of 5 similar projects aiming to provide a \nnew financing mechanism to overcome the current barriers to establish timber \nplantations in Uganda and to allow communities to benefit from the CDM. In total \nthe project activities cover an area of 347.1 ha within Rwoho Central Forest \nReserve (NFA planting area: 324.9 ha (94 %), community planting area: 22.2 ha (6 \n%). The Reserve covers in total an area of 9,100 ha. Based on conservative \nestimates, with a 22 years rotation cycle for all tree species, the project will \nproduce 24,421 tCO2-e by 2012. The project allows the involvement of private and \ncommunity-based tree planting initiatives with different investor shares. Due \ndiligence, monitoring, validation and verification costs will be shared among the \nproject cluster. Based on a successful implementation of the first pilot cluster it is \nplanned to extend the portfolio across the country clustered in a number of \ndeforested public forest reserves and target regions. Hence, a project design that \ncan be easily replicated was developed and the concept will consider options for a \nprogrammatic approach. \n \nThe other reforestation activity is the Community Reforestation Project in the \nAlbertine Rift valley region which is currently working with established groups of \nfarmers in the Albertine Rift region of Uganda to plant agroforestry and small"
             }
           ],
-          "second_opinion_p_yes": 0.96,
+          "second_opinion_p_yes": 0.95,
           "needs_review": false,
           "dropped": null
         },
@@ -88,23 +89,17 @@
           "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.23,
+          "second_opinion_p_yes": 0.2,
           "needs_review": false,
           "dropped": null
         },
         {
           "id": "A4",
           "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
-          "answer": "yes",
-          "evidence": [
-            {
-              "paragraph_id": "p37-02",
-              "page": 37,
-              "text": "absence of the project activity (assessment and demonstration of \nadditionality): \n \nThe “Combined tool to identify the baseline scenario and demonstrate \nadditionality in ARR CDM project activities” is used to both identify  the baseline \nscenario and to demonstrate additionally: \n \nSTEP 0: Preliminary screening based on the starting date of the ARR project \nactivity \n \nThe proposed ARR VCS project was started in 1995 and since then, it has applied \nan externally reviewed methodology and engaged independent carbon \nmonitoring experts to assess and quantify the project’s baseline scenario and net \nemissions reductions or removals resulting in carbon crediting under the SGS \nstandard. In 2003 Face contracted the certification Société Générale de \nSurveillance (SGS) to validate and verify Kibale, based on SGS’ GHG Validation and \nVerification program. In the absence of an international standard defined or \naccepted by the UNFCCC Secretariat, SGS had prepared a set of criteria based on \nDecision 17/C.P7 of the Marrakech accords. These criteria act as a standard and the \nKibale project was validated against it twice: in 2003 and 2008 respectively. \nReports of these assessments were published in 2004 and 2009. Since then, \nproject activity has been geared towards future crediting under VCS.  The \nincentive of planned sale of GHG emission allowances is evidenced in the steps \nfurther below of the additionality test. Without the GHG allowance sales, the \nproject would not be economically attractive, and would face significant barriers.  \n \nSTEP 1: Identification of alternative land use scenarios to the proposed ARR VCS \nproject activity \n \nSub-step 1a: Identification of credible alternative land use scenarios to the project \nactivity \nSince the lands to be planted are restricted to forestry purposes by government, \nother land uses are practically impossible, therefore the identified alternative land \nuses include three that were historically possible and one that relates to \nafforestation as recommended by the tool."
-            }
-          ],
-          "second_opinion_p_yes": 0.44,
-          "needs_review": true,
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.35,
+          "needs_review": false,
           "dropped": null
         }
       ],
@@ -114,18 +109,10 @@
           "page": 42,
           "paragraph_id": "p42-06",
           "verification": "cited_paragraph"
-        },
-        {
-          "text": "absence of the project activity (assessment and demonstration of \nadditionality): \n \nThe “Combined tool to identify the baseline scenario and demonstrate \nadditionality in ARR CDM project activities” is used to both identify  the baseline \nscenario and to demonstrate additionally: \n \nSTEP 0: Preliminary screening based on the starting date of the ARR project \nactivity \n \nThe proposed ARR VCS project was started in 1995 and since then, it has applied \nan externally reviewed methodology and engaged independent carbon \nmonitoring experts to assess and quantify the project’s baseline scenario and net \nemissions reductions or removals resulting in carbon crediting under the SGS \nstandard. In 2003 Face contracted the certification Société Générale de \nSurveillance (SGS) to validate and verify Kibale, based on SGS’ GHG Validation and \nVerification program. In the absence of an international standard defined or \naccepted by the UNFCCC Secretariat, SGS had prepared a set of criteria based on \nDecision 17/C.P7 of the Marrakech accords. These criteria act as a standard and the \nKibale project was validated against it twice: in 2003 and 2008 respectively. \nReports of these assessments were published in 2004 and 2009. Since then, \nproject activity has been geared towards future crediting under VCS.  The \nincentive of planned sale of GHG emission allowances is evidenced in the steps \nfurther below of the additionality test. Without the GHG allowance sales, the \nproject would not be economically attractive, and would face significant barriers.  \n \nSTEP 1: Identification of alternative land use scenarios to the proposed ARR VCS \nproject activity \n \nSub-step 1a: Identification of credible alternative land use scenarios to the project \nactivity \nSince the lands to be planted are restricted to forestry purposes by government, \nother land uses are practically impossible, therefore the identified alternative land \nuses include three that were historically possible and one that relates to \nafforestation as recommended by the tool.",
-          "page": 37,
-          "paragraph_id": "p37-02",
-          "verification": "cited_paragraph"
         }
       ],
       "dropped_findings": 0,
-      "review_flags": [
-        "models_disagree:A4"
-      ],
+      "review_flags": [],
       "excerpt": {
         "paragraphs": [
           "p2-03",
@@ -133,6 +120,7 @@
           "p11-02",
           "p21-04",
           "p21-05",
+          "p25-02",
           "p35-04",
           "p35-05",
           "p35-06",
@@ -151,22 +139,65 @@
           "p42-06",
           "p43-03",
           "p56-02",
+          "p60-04",
           "p61-03",
           "p61-04",
+          "x1-p9-08",
+          "x1-p9-09",
+          "x1-p9-10",
+          "x1-p20-21",
+          "x1-p20-22",
+          "x1-p32-06",
+          "x1-p32-07",
+          "x1-p38-08",
+          "x1-p38-09",
+          "x1-p44-11",
+          "x1-p44-12",
+          "x2-p14-02",
+          "x2-p14-03",
+          "x2-p24-23",
+          "x2-p24-24",
+          "x2-p36-09",
           "x2-p36-10",
+          "x2-p43-02",
+          "x2-p43-03",
+          "x2-p50-06",
+          "x2-p50-07",
+          "x3-p3-28",
+          "x3-p3-29",
+          "x3-p3-30",
+          "x3-p3-31",
           "x3-p4-08",
           "x3-p4-09",
           "x3-p4-10",
+          "x3-p9-19",
+          "x3-p9-20",
+          "x3-p11-05",
+          "x3-p11-06",
           "x3-p11-12",
           "x3-p11-13",
+          "x3-p14-08",
+          "x3-p14-09",
+          "x3-p14-10",
+          "x3-p20-07",
+          "x3-p20-08",
+          "x3-p20-09",
+          "x3-p20-10",
+          "x3-p25-06",
+          "x3-p25-08",
           "x3-p27-02",
+          "x3-p32-22",
+          "x3-p33-13",
+          "x3-p33-14",
+          "x3-p34-02",
+          "x3-p36-04",
           "x3-p50-09",
           "x3-p50-10",
           "x3-p57-05",
           "x3-p57-06",
           "x3-p57-07"
         ],
-        "chars": 29987
+        "chars": 44967
       }
     },
     {
@@ -196,9 +227,9 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "x2-p56-04",
-              "page": 56,
-              "text": "The percentage of VCU’s to be deposited in the AFOLU Pooled buffer account is 10% = 22,172 \ntCO2e (see the VCS Non-Permanence Risk Report Kibale 2017-2020 v1.0)."
+              "paragraph_id": "x1-p48-47",
+              "page": 48,
+              "text": "The percentage of VCU’s to be deposited in the AFOLU Pooled buffer account is 10% = 24,085 (see Non-\nPermanence Risk Report 2017)."
             }
           ],
           "second_opinion_p_yes": 0.99,
@@ -229,9 +260,9 @@
           "verification": "cited_paragraph"
         },
         {
-          "text": "The percentage of VCU’s to be deposited in the AFOLU Pooled buffer account is 10% = 22,172 \ntCO2e (see the VCS Non-Permanence Risk Report Kibale 2017-2020 v1.0).",
-          "page": 56,
-          "paragraph_id": "x2-p56-04",
+          "text": "The percentage of VCU’s to be deposited in the AFOLU Pooled buffer account is 10% = 24,085 (see Non-\nPermanence Risk Report 2017).",
+          "page": 48,
+          "paragraph_id": "x1-p48-47",
           "verification": "cited_paragraph"
         },
         {
@@ -245,20 +276,34 @@
       "review_flags": [],
       "excerpt": {
         "paragraphs": [
+          "p4-02",
           "p5-02",
           "p5-03",
+          "p12-02",
+          "p12-03",
           "p14-02",
           "p14-03",
+          "p14-04",
+          "p14-05",
           "p18-02",
           "p18-03",
+          "p20-02",
+          "p21-02",
+          "p21-03",
           "p21-04",
+          "p21-05",
+          "p22-02",
           "p25-02",
+          "p34-05",
           "p36-06",
           "p36-07",
           "p37-02",
           "p37-03",
           "p41-02",
           "p41-03",
+          "p42-02",
+          "p52-02",
+          "p71-06",
           "x1-p9-08",
           "x1-p9-09",
           "x1-p9-10",
@@ -278,6 +323,9 @@
           "x3-p2-11",
           "x3-p2-12",
           "x3-p4-15",
+          "x3-p4-16",
+          "x3-p5-09",
+          "x3-p5-11",
           "x3-p11-12",
           "x3-p11-13",
           "x3-p14-06",
@@ -306,14 +354,14 @@
           "x3-p48-07",
           "x3-p48-08"
         ],
-        "chars": 29990
+        "chars": 44870
       }
     },
     {
       "principle": "robust_quantification",
-      "status": "partial_evidence",
-      "score": 75,
-      "rationale": "Evidence found for 3 of 4 checks (Q1, Q3, Q4); not found in the excerpt: Q2.",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (Q1, Q2, Q3, Q4).",
       "checks": [
         {
           "id": "Q1",
@@ -326,16 +374,22 @@
               "text": "For this ARR project activity, Face in 1999 commissioned Meijer to carry out a \nbaseline study whose results show that changes in the carbon stocks for both \nabove and below ground biomass are expected not to exceed actual net GHG \nremovals by sinks and are therefore assumed to be zero in the absence of the \nproject activity. Hence the formula above is only applied to multiply the 5.2 tonnes \nof carbon per hectare (adjusted from Meijer, 1999), which is the conservative \nvalue of the carbon stock in the stratum ‘banana plantation’, with the combined \narea Ai of stratum ‘Planted Area’ and ‘Regenerating Area’. The total area to be \nplanted during the crediting period is presented in Table 7.2 and has a size of \n6,000 hectares. In addition, the Regenerating Area is 2,593 hectares. The \ncombined area is therefore 8,593 hectares. As the baseline is in a steady state, \nthere is no increases in GHG removals. See Annex III for details on the estimation, \nand the spreadsheet ´ Kibale Baseline Recalculation_082711 ´, which details the \ncalculation of the mean tree carbon stock in the baseline, based on inventory data \nby Meijer in 1999. In addition, the carbon stock changes in dead wood, litter and \nsoil organic matter are conservatively assumed to be zero based on the \nmethodology applied."
             }
           ],
-          "second_opinion_p_yes": 0.85,
+          "second_opinion_p_yes": 0.9,
           "needs_review": false,
           "dropped": null
         },
         {
           "id": "Q2",
           "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
-          "answer": "no",
-          "evidence": [],
-          "second_opinion_p_yes": 0.36,
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p67-14",
+              "page": 67,
+              "text": "Total for crediting period \n4.615.038 \n \n \n4.4 Quantifying GHG emission reductions and removal enhancements for \nthe GHG project:  \n \nBased on the methodology AR-ACM0001, version 05.0.0, the net anthropogenic \nGHG removals by sinks is calculated with equation (8): \n \nCAR-CDM = ΔCACTUAL – ΔCBSL – LK  \n \nLeakage (LK) is not applicable to the project. The parameter ΔCBSL is quantified in \nSection 4.2 of the PD and ΔCACTUAL is quantified in Section 4.3 of the PD. The Table \n4.4.1 below presents the calculation of the parameter CAR-CDM."
+            }
+          ],
+          "second_opinion_p_yes": 0.9,
           "needs_review": false,
           "dropped": null
         },
@@ -350,7 +404,7 @@
               "text": "For this ARR project activity, Face in 1999 commissioned Meijer to carry out a \nbaseline study whose results show that changes in the carbon stocks for both \nabove and below ground biomass are expected not to exceed actual net GHG \nremovals by sinks and are therefore assumed to be zero in the absence of the \nproject activity. Hence the formula above is only applied to multiply the 5.2 tonnes \nof carbon per hectare (adjusted from Meijer, 1999), which is the conservative \nvalue of the carbon stock in the stratum ‘banana plantation’, with the combined \narea Ai of stratum ‘Planted Area’ and ‘Regenerating Area’. The total area to be \nplanted during the crediting period is presented in Table 7.2 and has a size of \n6,000 hectares. In addition, the Regenerating Area is 2,593 hectares. The \ncombined area is therefore 8,593 hectares. As the baseline is in a steady state, \nthere is no increases in GHG removals. See Annex III for details on the estimation, \nand the spreadsheet ´ Kibale Baseline Recalculation_082711 ´, which details the \ncalculation of the mean tree carbon stock in the baseline, based on inventory data \nby Meijer in 1999. In addition, the carbon stock changes in dead wood, litter and \nsoil organic matter are conservatively assumed to be zero based on the \nmethodology applied."
             }
           ],
-          "second_opinion_p_yes": 0.92,
+          "second_opinion_p_yes": 0.95,
           "needs_review": false,
           "dropped": null
         },
@@ -360,12 +414,12 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "p58-03",
-              "page": 58,
-              "text": "The carbon pools in the baseline scenario are in a steady state. Therefore no \nmonitoring of baseline net GHG removals is carried out.  \n \n3.4.2.9 Monitoring of the actual net GHG removals by sinks \n \nMonitoring of the actual net GHG removals by sinks in the planted compartments \ntakes place every five years.  In Kibale, these were carried out in 2003 and 2008, \nwith an exception of  2011 which took only  3 years between 2008 and 2011. This \nexception to the 5-year interval is as a result of the transition from SGS"
+              "paragraph_id": "p44-03",
+              "page": 44,
+              "text": "The type and origin of data and information to be reported is described in the \nSections 3.3 and 3.4 below. Section 3.4 deals with monitoring frequency, roles and \nresponsibilities and management of data quality. \n \n3.3 Data and parameters monitored / Selecting relevant GHG sources, \nsinks and reservoirs for monitoring or estimating GHG emissions and \nremovals:  \nData / Parameter: \nAi \nData unit: \nha \nDescription: \nTotal area monitored for GHG sinks \nSource of data to be used: \nGPS coordinates \nValue of data applied for the purpose of \ncalculating expected emission reductions"
             }
           ],
-          "second_opinion_p_yes": 0.96,
+          "second_opinion_p_yes": 0.97,
           "needs_review": false,
           "dropped": null
         }
@@ -378,9 +432,15 @@
           "verification": "cited_paragraph"
         },
         {
-          "text": "The carbon pools in the baseline scenario are in a steady state. Therefore no \nmonitoring of baseline net GHG removals is carried out.  \n \n3.4.2.9 Monitoring of the actual net GHG removals by sinks \n \nMonitoring of the actual net GHG removals by sinks in the planted compartments \ntakes place every five years.  In Kibale, these were carried out in 2003 and 2008, \nwith an exception of  2011 which took only  3 years between 2008 and 2011. This \nexception to the 5-year interval is as a result of the transition from SGS",
-          "page": 58,
-          "paragraph_id": "p58-03",
+          "text": "Total for crediting period \n4.615.038 \n \n \n4.4 Quantifying GHG emission reductions and removal enhancements for \nthe GHG project:  \n \nBased on the methodology AR-ACM0001, version 05.0.0, the net anthropogenic \nGHG removals by sinks is calculated with equation (8): \n \nCAR-CDM = ΔCACTUAL – ΔCBSL – LK  \n \nLeakage (LK) is not applicable to the project. The parameter ΔCBSL is quantified in \nSection 4.2 of the PD and ΔCACTUAL is quantified in Section 4.3 of the PD. The Table \n4.4.1 below presents the calculation of the parameter CAR-CDM.",
+          "page": 67,
+          "paragraph_id": "p67-14",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The type and origin of data and information to be reported is described in the \nSections 3.3 and 3.4 below. Section 3.4 deals with monitoring frequency, roles and \nresponsibilities and management of data quality. \n \n3.3 Data and parameters monitored / Selecting relevant GHG sources, \nsinks and reservoirs for monitoring or estimating GHG emissions and \nremovals:  \nData / Parameter: \nAi \nData unit: \nha \nDescription: \nTotal area monitored for GHG sinks \nSource of data to be used: \nGPS coordinates \nValue of data applied for the purpose of \ncalculating expected emission reductions",
+          "page": 44,
+          "paragraph_id": "p44-03",
           "verification": "cited_paragraph"
         }
       ],
@@ -389,22 +449,51 @@
       "excerpt": {
         "paragraphs": [
           "p3-02",
+          "p11-02",
           "p28-02",
+          "p30-02",
+          "p36-03",
+          "p36-04",
+          "p41-02",
+          "p41-03",
+          "p42-05",
+          "p42-06",
           "p43-02",
           "p43-03",
+          "p44-03",
+          "p44-06",
+          "p44-08",
+          "p44-09",
+          "p47-06",
+          "p47-07",
+          "p47-09",
+          "p47-10",
+          "p48-06",
+          "p48-07",
+          "p49-12",
           "p50-02",
+          "p56-02",
+          "p56-03",
+          "p57-19",
+          "p57-45",
           "p58-02",
           "p58-03",
           "p59-02",
           "p59-03",
+          "p61-03",
+          "p61-04",
           "p62-02",
           "p62-03",
           "p65-02",
+          "p67-14",
+          "p67-15",
           "x1-p3-04",
+          "x1-p3-05",
+          "x1-p3-06",
+          "x1-p27-05",
           "x1-p30-05",
           "x1-p30-06",
           "x1-p34-02",
-          "x1-p34-04",
           "x2-p4-04",
           "x2-p4-05",
           "x2-p4-06",
@@ -427,12 +516,11 @@
           "x3-p29-03",
           "x3-p29-04",
           "x3-p29-05",
-          "x3-p31-07",
           "x3-p35-07",
           "x3-p35-08",
           "x3-p35-09"
         ],
-        "chars": 29995
+        "chars": 44954
       }
     },
     {
@@ -447,12 +535,12 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "x3-p10-12",
-              "page": 10,
-              "text": "The project has not sought or received any other form of GHG-related environmental credit other than under \nthe VCS Program. Also, it has not been registered, and is not seeking registration, with any GHG program \nother than the VCS."
+              "paragraph_id": "p2-03",
+              "page": 2,
+              "text": "1 \nDescription of Project:.........................................................................................4 \n1.1 \nProject title.................................................................................................4 \n1.2 \nType/Category of the project .....................................................................4 \n1.3 \nEstimated amount of emission reductions over the crediting period \nincluding project size:............................................................................................4 \n1.4 \nA brief description of the project:..............................................................4 \n1.5 \nProject location including geographic and physical information allowing \nthe unique identification and delineation of the specific extent of the project:.....5 \n1.6 \nDuration of the project activity/crediting period: ....................................11 \n1.7 \nConditions prior to project initiation: ......................................................12 \n1.8 \nA description of how the project will achieve GHG emission reductions \nand/or removal enhancements: ............................................................................14 \n1.9 \nProject technologies, products, services and the expected level of activity:\n \n14 \n1.10 \nCompliance with relevant local laws and regulations related to the \nproject: .................................................................................................................23 \n1.11 \nIdentification of risks that may substantially affect the project’s GHG \nemission reductions or removal enhancements: ..................................................25 \n1.12 \nDemonstration to confirm that the project was not implemented to create \nGHG emissions primarily for the purpose of its subsequent removal or \ndestruction............................................................................................................25 \n1.13 \nDemonstration that the project has not created another form of \nenvironmental credit (for example renewable energy certificates)......................25 \n1.14 \nProject rejected under other GHG programs (if applicable):...................26 \n1.15 \nProject proponents roles and responsibilities, including contact \ninformation of the project proponent, other project participants:........................26 \n1.16 \nAny information relevant for the eligibility of the project and \nquantification of emission reductions or removal enhancements, including \nlegislative, technical, economic, sectoral, social, environmental, geographic, site-\nspecific and temporal information.):....................................................................33 \n1.17 \nList of commercially sensitive information (if applicable): ....................33 \n2 \nVCS  Methodology:.............................................................................................. 33 \n2.1 \nTitle and reference of the VCS methodology applied to the project \nactivity and explanation of methodology choices:...............................................33 \n2.2 \nJustification of the choice of the methodology and why it is applicable to \nthe project activity: ..............................................................................................33 \n2.3 \nIdentifying GHG sources, sinks and reservoirs for the baseline scenario \nand for the project:...............................................................................................35 \n2.4 \nDescription of how the baseline scenario is identified and description of \nthe identified baseline scenario:...........................................................................36 \n2.5 \nDescription of how the emissions of GHG by source in baseline scenario \nare reduced below those that would have occurred in the absence of the project \nactivity (assessment and demonstration of additionality):...................................36 \n3 \nMonitoring: ........................................................................................................... 43"
             }
           ],
-          "second_opinion_p_yes": 0.82,
+          "second_opinion_p_yes": 0.78,
           "needs_review": false,
           "dropped": null
         },
@@ -462,9 +550,9 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "x3-p13-11",
-              "page": 13,
-              "text": "The project has not participated nor been rejected under any other GHG programs other than VCS. GHG \nemission reductions or removals generated by the project are not included in an emission trading program \nor any other mechanism that includes GHG allowance trading. The project has not received or sought any \nother form of environmental credit."
+              "paragraph_id": "p3-02",
+              "page": 3,
+              "text": "3.1 \nTitle and reference of the VCS methodology (which includes the \nmonitoring requirements) applied to the project activity and explanation of \nmethodology choices: ..........................................................................................43 \n3.2 \nMonitoring, including estimation, modelling, measurement or calculation \napproaches: ..........................................................................................................43 \n3.3 \nData and parameters monitored / Selecting relevant GHG sources, sinks \nand reservoirs for monitoring or estimating GHG emissions and removals:.......44 \n3.4 \nDescription of the monitoring plan..........................................................49 \n4 \nGHG Emission Reductions: .............................................................................. 61 \n4.1 \nExplanation of methodological choice: ...................................................61 \n4.2 \nQuantifying GHG emissions and/or removals for the baseline scenario:61 \n4.3 \nQuantifying GHG emissions and/or removals for the project: ................64 \n4.4 \nQuantifying GHG emission reductions and removal enhancements for the \nGHG project:........................................................................................................67 \n5 \nEnvironmental Impact:........................................................................................ 69 \n6 \nStakeholders comments:.................................................................................. 70 \n6.1 \nBrief description of how comments by local stakeholders have been \ninvited and compiled:...........................................................................................70 \n6.2 \nReport on how due account was taken of any comments received: ........71 \n7 \nSchedule:................................................................................................................ 73 \n8 \nOwnership:............................................................................................................ 73 \n8.1 \nProof of Title............................................................................................73 \n8.2 \nProjects that reduce GHG emissions from activities that participate in an \nemissions trading program (if applicable): ..........................................................75 \n9 \nReferences: ........................................................................................................... 75 \n10. List of Annexes:.................................................................................................... 77"
             }
           ],
           "second_opinion_p_yes": 0.95,
@@ -476,22 +564,22 @@
           "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.07,
+          "second_opinion_p_yes": 0.06,
           "needs_review": false,
           "dropped": null
         }
       ],
       "quotes": [
         {
-          "text": "The project has not sought or received any other form of GHG-related environmental credit other than under \nthe VCS Program. Also, it has not been registered, and is not seeking registration, with any GHG program \nother than the VCS.",
-          "page": 10,
-          "paragraph_id": "x3-p10-12",
+          "text": "1 \nDescription of Project:.........................................................................................4 \n1.1 \nProject title.................................................................................................4 \n1.2 \nType/Category of the project .....................................................................4 \n1.3 \nEstimated amount of emission reductions over the crediting period \nincluding project size:............................................................................................4 \n1.4 \nA brief description of the project:..............................................................4 \n1.5 \nProject location including geographic and physical information allowing \nthe unique identification and delineation of the specific extent of the project:.....5 \n1.6 \nDuration of the project activity/crediting period: ....................................11 \n1.7 \nConditions prior to project initiation: ......................................................12 \n1.8 \nA description of how the project will achieve GHG emission reductions \nand/or removal enhancements: ............................................................................14 \n1.9 \nProject technologies, products, services and the expected level of activity:\n \n14 \n1.10 \nCompliance with relevant local laws and regulations related to the \nproject: .................................................................................................................23 \n1.11 \nIdentification of risks that may substantially affect the project’s GHG \nemission reductions or removal enhancements: ..................................................25 \n1.12 \nDemonstration to confirm that the project was not implemented to create \nGHG emissions primarily for the purpose of its subsequent removal or \ndestruction............................................................................................................25 \n1.13 \nDemonstration that the project has not created another form of \nenvironmental credit (for example renewable energy certificates)......................25 \n1.14 \nProject rejected under other GHG programs (if applicable):...................26 \n1.15 \nProject proponents roles and responsibilities, including contact \ninformation of the project proponent, other project participants:........................26 \n1.16 \nAny information relevant for the eligibility of the project and \nquantification of emission reductions or removal enhancements, including \nlegislative, technical, economic, sectoral, social, environmental, geographic, site-\nspecific and temporal information.):....................................................................33 \n1.17 \nList of commercially sensitive information (if applicable): ....................33 \n2 \nVCS  Methodology:.............................................................................................. 33 \n2.1 \nTitle and reference of the VCS methodology applied to the project \nactivity and explanation of methodology choices:...............................................33 \n2.2 \nJustification of the choice of the methodology and why it is applicable to \nthe project activity: ..............................................................................................33 \n2.3 \nIdentifying GHG sources, sinks and reservoirs for the baseline scenario \nand for the project:...............................................................................................35 \n2.4 \nDescription of how the baseline scenario is identified and description of \nthe identified baseline scenario:...........................................................................36 \n2.5 \nDescription of how the emissions of GHG by source in baseline scenario \nare reduced below those that would have occurred in the absence of the project \nactivity (assessment and demonstration of additionality):...................................36 \n3 \nMonitoring: ........................................................................................................... 43",
+          "page": 2,
+          "paragraph_id": "p2-03",
           "verification": "cited_paragraph"
         },
         {
-          "text": "The project has not participated nor been rejected under any other GHG programs other than VCS. GHG \nemission reductions or removals generated by the project are not included in an emission trading program \nor any other mechanism that includes GHG allowance trading. The project has not received or sought any \nother form of environmental credit.",
-          "page": 13,
-          "paragraph_id": "x3-p13-11",
+          "text": "3.1 \nTitle and reference of the VCS methodology (which includes the \nmonitoring requirements) applied to the project activity and explanation of \nmethodology choices: ..........................................................................................43 \n3.2 \nMonitoring, including estimation, modelling, measurement or calculation \napproaches: ..........................................................................................................43 \n3.3 \nData and parameters monitored / Selecting relevant GHG sources, sinks \nand reservoirs for monitoring or estimating GHG emissions and removals:.......44 \n3.4 \nDescription of the monitoring plan..........................................................49 \n4 \nGHG Emission Reductions: .............................................................................. 61 \n4.1 \nExplanation of methodological choice: ...................................................61 \n4.2 \nQuantifying GHG emissions and/or removals for the baseline scenario:61 \n4.3 \nQuantifying GHG emissions and/or removals for the project: ................64 \n4.4 \nQuantifying GHG emission reductions and removal enhancements for the \nGHG project:........................................................................................................67 \n5 \nEnvironmental Impact:........................................................................................ 69 \n6 \nStakeholders comments:.................................................................................. 70 \n6.1 \nBrief description of how comments by local stakeholders have been \ninvited and compiled:...........................................................................................70 \n6.2 \nReport on how due account was taken of any comments received: ........71 \n7 \nSchedule:................................................................................................................ 73 \n8 \nOwnership:............................................................................................................ 73 \n8.1 \nProof of Title............................................................................................73 \n8.2 \nProjects that reduce GHG emissions from activities that participate in an \nemissions trading program (if applicable): ..........................................................75 \n9 \nReferences: ........................................................................................................... 75 \n10. List of Annexes:.................................................................................................... 77",
+          "page": 3,
+          "paragraph_id": "p3-02",
           "verification": "cited_paragraph"
         }
       ],
@@ -518,38 +606,69 @@
           "p35-06",
           "p36-06",
           "p36-07",
+          "p37-02",
           "p37-03",
           "p42-05",
           "p42-06",
+          "p43-02",
+          "p43-03",
           "p58-02",
           "p58-03",
           "p59-03",
-          "p64-15",
-          "p64-16",
           "p67-14",
           "p67-15",
-          "p75-02",
-          "p75-03",
           "p75-04",
+          "x1-p3-09",
+          "x1-p33-44",
           "x1-p34-02",
           "x1-p34-03",
+          "x1-p44-10",
+          "x1-p44-11",
+          "x1-p44-12",
+          "x1-p44-19",
+          "x1-p46-24",
+          "x1-p46-29",
+          "x1-p46-30",
+          "x1-p46-31",
           "x2-p2-10",
           "x2-p2-11",
           "x2-p2-12",
+          "x2-p4-08",
           "x2-p9-03",
           "x2-p9-04",
           "x2-p38-03",
           "x2-p38-04",
+          "x2-p50-04",
+          "x2-p50-05",
+          "x2-p50-06",
+          "x2-p50-07",
+          "x2-p50-15",
+          "x2-p52-28",
+          "x2-p53-02",
+          "x2-p53-03",
+          "x2-p53-04",
           "x3-p3-16",
           "x3-p3-17",
           "x3-p3-18",
+          "x3-p5-06",
+          "x3-p5-07",
+          "x3-p6-09",
+          "x3-p6-10",
+          "x3-p6-11",
+          "x3-p6-12",
           "x3-p10-11",
           "x3-p10-12",
           "x3-p10-13",
           "x3-p13-10",
-          "x3-p13-11"
+          "x3-p13-11",
+          "x3-p19-14",
+          "x3-p19-15",
+          "x3-p19-16",
+          "x3-p23-10",
+          "x3-p23-11",
+          "x3-p23-12"
         ],
-        "chars": 29987
+        "chars": 42801
       }
     },
     {
@@ -569,7 +688,7 @@
               "text": "6 Stakeholders comments: \n \n6.1 Brief description of how comments by local stakeholders have been \ninvited and compiled: \n \nThe 2006  SGS’ FSC  report states that “Community consultation was carried out at \nKibale and all groups/individuals interviewed (e.g. the Nyabweya Parish Community, \nthe Bigodi Women’s Group, the Mugume Clinic Nurse, Nursery workers) were well \naware of the benefits of the forest, and how they could access these benefits. In \naddition, there was evidence of good communication between UWA and the \ncommunity. Records of liaison (e.g. minutes of meetings, letters etc) were kept by \nthe Assistant Warden for Community Conservation (Olivia Biira), who was appointed \nto operate in the 28 parishes, which are on the boundary of the park. UWA also \nsupports the CPI (Community Protected area Institution), which comprises of people \nnominated by the communities, to represent the different Parishes and have the \nresponsibility of overseeing issues in the communities, including environmental \nissues.” \n \n6.1.1 Summary of the comments received \n \nSince the start of the project activities, there have been several meetings held \nwith local stakeholders. The following are only a small sample of comments \nreceived over the years by the UWA members of staff during community \nconsultations. UWA’s Isunga office in Kibale National Park contains several folders \nwhere meeting minutes are filed.  \n \n6.1.2 Minutes of the meeting held Mbale Parish on 17th July 1996 \n \nThe meeting objective was to address the community’s needs to access wild \ncoffee in the National Park.  To ensure long-term sustainable harvest of wild \ncoffee, community members suggested that UWA should limit the number of \npeople accessing the park for coffee using distance of the village settlement from \nthe park boundary and also to include those whose gardens are raided by wildlife. \nThe community members further suggested that they could form community \ngroups which would limit the number of people going into the park to harvest \nwild coffee. They also wanted to know if their views would be integrated into the \ncoffee resource management plan.  \n \n6.1.3 Workshop on management of problem animals held on July 28th 2000 at St. \nJoseph’s Inn in Virika  \n \nCrop raiding by problem animals was a major issue of concern and communities \nfelt that they it required joint efforts from all relevant stakeholders such as UWA \nand the Local Government to live up to their responsibilities. The major threats to \ncrop damage included baboons, elephants, wild pigs, red-tailed monkeys and to a \ncertain extent, birds."
             }
           ],
-          "second_opinion_p_yes": 0.98,
+          "second_opinion_p_yes": 0.97,
           "needs_review": false,
           "dropped": null
         },
@@ -578,7 +697,7 @@
           "question": "Does the text describe a grievance or complaint mechanism through which affected people can raise concerns?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.77,
+          "second_opinion_p_yes": 0.5,
           "needs_review": true,
           "dropped": null
         },
@@ -608,7 +727,7 @@
               "text": "During the remote audit process AENOR could confirm that the project protects the rights of Indigenous \nPeoples, communities and other stakeholders in accordance to the Climate, Community & Biodiversity \nStandards and the validated project design."
             }
           ],
-          "second_opinion_p_yes": 0.84,
+          "second_opinion_p_yes": 0.83,
           "needs_review": false,
           "dropped": null
         }
@@ -642,38 +761,59 @@
           "p3-02",
           "p5-02",
           "p5-03",
+          "p18-02",
+          "p18-03",
+          "p24-02",
+          "p24-03",
+          "p25-02",
           "p26-02",
           "p26-03",
+          "p31-05",
+          "p31-06",
           "p32-02",
           "p38-02",
           "p38-03",
+          "p39-07",
           "p42-05",
           "p42-06",
+          "p69-14",
           "p69-15",
           "p69-16",
           "p70-02",
           "p71-02",
           "p71-03",
           "p71-04",
+          "p71-06",
           "p72-02",
           "p72-03",
           "x1-p3-03",
           "x1-p3-04",
           "x1-p3-05",
+          "x1-p4-17",
+          "x1-p4-18",
+          "x1-p4-19",
           "x2-p4-03",
+          "x2-p4-04",
+          "x2-p4-05",
+          "x2-p5-05",
+          "x2-p5-06",
+          "x2-p5-07",
+          "x2-p10-06",
+          "x2-p10-07",
           "x3-p12-11",
           "x3-p12-12",
           "x3-p12-13",
+          "x3-p15-11",
           "x3-p16-09",
           "x3-p16-10",
           "x3-p16-11",
-          "x3-p17-08",
           "x3-p19-02",
           "x3-p19-03",
           "x3-p25-06",
           "x3-p25-07",
           "x3-p25-08",
           "x3-p27-02",
+          "x3-p34-12",
           "x3-p35-06",
           "x3-p35-07",
           "x3-p35-08",
@@ -683,7 +823,7 @@
           "x3-p61-04",
           "x3-p61-05"
         ],
-        "chars": 29992
+        "chars": 44969
       }
     }
   ],
@@ -706,5 +846,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T17:47:18+00:00"
+  "generated_at": "2026-10-20T17:40:06+00:00"
 }

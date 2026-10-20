@@ -16,9 +16,10 @@ together with ``method_hash``, which pins the models, questions, prompt and exce
 
 import json
 import logging
+import re
+from collections.abc import Callable
 from dataclasses import asdict
 from datetime import datetime, timezone
-from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
@@ -42,7 +43,14 @@ REPORT_SCHEMA_VERSION = "report-v2"
 # missed evidence in at least 46 of the 119 "not found" answers (data/eval/citation_check). On 30,000 characters the
 # same checks still find 56 of the 58 known positives, and 46 of their 61 new findings were confirmed.
 EXCERPT_CHARS = 30_000
-EXCERPT_RULE = f"select_paragraphs(budget_chars={EXCERPT_CHARS}, overview_chars=0)"
+# Further documents (monitoring, validation, verification reports) add their own budget instead of competing for
+# the project description's: when they shared one budget, adding them pushed evidence the project description holds
+# out of the excerpt (8 checks turned from found to not found across 7 projects).
+EXTRA_EXCERPT_CHARS = 15_000
+EXCERPT_RULE = (f"select_paragraphs(budget_chars={EXCERPT_CHARS}, overview_chars=0) on the project description"
+                f" + select_paragraphs(budget_chars={EXTRA_EXCERPT_CHARS}, overview_chars=0) on the other documents")
+
+EXTRA_FILE_ID = re.compile(r"x[0-9]+-")  # paragraph ids of extra files (core.ai.pdf_extract.extract_many)
 
 DISCLAIMER = (
     "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the "
@@ -52,7 +60,15 @@ DISCLAIMER = (
 
 
 def excerpt(doc: Document, principle: str) -> list[Paragraph]:
-    return select_paragraphs(doc, BY_KEY[principle], budget_chars=EXCERPT_CHARS, overview_chars=0)
+    """The project description's excerpt (the measured setup), then the other documents' own excerpt."""
+    main = [p for p in doc.paragraphs if not EXTRA_FILE_ID.match(p.id)]
+    extra = [p for p in doc.paragraphs if EXTRA_FILE_ID.match(p.id)]
+    picked = select_paragraphs(Document("", "", 0, main), BY_KEY[principle], budget_chars=EXCERPT_CHARS,
+                               overview_chars=0)
+    if extra:
+        picked += select_paragraphs(Document("", "", 0, extra), BY_KEY[principle],
+                                    budget_chars=EXTRA_EXCERPT_CHARS, overview_chars=0)
+    return picked
 
 
 def principle_status(answers: list[str | None]) -> tuple[str, int | None]:

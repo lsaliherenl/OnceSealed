@@ -9,8 +9,30 @@
   },
   "document": {
     "file_name": "Fuel Efficient Cooking in South Africa Grouped PDD_v9_Clean.pdf",
-    "sha256": "1d09240addf6b933de31de7492b798775ddf16183425b8d0eff00e6f0e5d810a",
-    "pages": 64
+    "sha256": "be4624f7ee7bb9cc4911edb6913f8910edfdfebc9c8dc078bda3b3453a150713",
+    "pages": 450,
+    "extra_files": [
+      {
+        "file_name": "VCS MR 2505 01082023-31012024_V1.8_Clean.pdf",
+        "sha256": "9411c563c352965a2aff3f6cfe4df0bd0d0a174de37396b7b15b946563e7b620"
+      },
+      {
+        "file_name": "VCS MR 2505 01022024-31072024_V1.12_clean.pdf",
+        "sha256": "bd78fdd956957a28e28536b1218dc08c61c0559f7455adb6f2351c6d1a869f8f"
+      },
+      {
+        "file_name": "VCS_MR6_2505_01082024-24012025_Round2_v1.9_Clean.pdf",
+        "sha256": "a8460c6e506cb0c0cb361a4548c9e7359453b4c232cf5d8b9d8393abb333359a"
+      },
+      {
+        "file_name": "VCS VerR 2505 01022024-31072024-Clean.pdf",
+        "sha256": "b5d8b4e8a6dfff60e63f0432e668861df5ea36a32f0c485fa09c1714d1467e6e"
+      },
+      {
+        "file_name": "2022_03_07 FVR_VERRA-R3-Clean.pdf",
+        "sha256": "888e0a7b314c8b3377122f6486344e0d7b96b8c28e2f19fd3b18009938b63943"
+      }
+    ]
   },
   "methodology_status": {
     "code": "VMR0006",
@@ -28,14 +50,15 @@
     "question_set_version": "qs-v2-checklist",
     "prompt_version": "checklist-v1",
     "evidence_rule": "yes-cites-excerpt-paragraph-v2",
-    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0) on the project description + select_paragraphs(budget_chars=15000, overview_chars=0) on the other documents",
     "injection_screen": "injection-screen-v1",
+    "review_rule": "person-decides-flagged-checks-v1",
     "llm_model": "deepseek/deepseek-v4.1-flash",
     "second_opinion_model": "typesafe/jev-1.13",
     "methodology_table_version": "2026-10-15",
     "pdf_extractor": "pymupdf 1.28.2"
   },
-  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
+  "method_hash": "0x05f2d815a67e7bfa5eba473409b663801b86b6fe07d2b1da7ae10c8d96d862e5",
   "principles": [
     {
       "principle": "additionality",
@@ -57,7 +80,7 @@
           "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.6,
+          "second_opinion_p_yes": 0.62,
           "needs_review": true,
           "dropped": null
         },
@@ -72,7 +95,7 @@
               "text": "1. There \nis \nno \ngovernment \nmandated programme or policy \nin South Africa ensuring the \ndistribution \nof \nnew \nproject \nactivity \ninstances \nor \nfuel \nefficient cookstoves."
             }
           ],
-          "second_opinion_p_yes": 0.62,
+          "second_opinion_p_yes": 0.81,
           "needs_review": false,
           "dropped": null
         },
@@ -81,7 +104,7 @@
           "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.11,
+          "second_opinion_p_yes": 0.16,
           "needs_review": false,
           "dropped": null
         }
@@ -171,9 +194,69 @@
           "p57-09",
           "p57-10",
           "p58-09",
-          "p58-10"
+          "p58-10",
+          "x1-p9-02",
+          "x1-p9-03",
+          "x1-p19-03",
+          "x1-p21-07",
+          "x1-p21-08",
+          "x1-p21-13",
+          "x1-p21-14",
+          "x1-p22-02",
+          "x1-p22-04",
+          "x1-p22-05",
+          "x1-p22-06",
+          "x3-p9-02",
+          "x3-p9-03",
+          "x3-p9-04",
+          "x3-p27-10",
+          "x3-p27-11",
+          "x3-p27-13",
+          "x3-p27-14",
+          "x3-p27-15",
+          "x4-p18-07",
+          "x4-p84-07",
+          "x4-p84-08",
+          "x4-p84-09",
+          "x5-p11-02",
+          "x5-p11-03",
+          "x5-p11-04",
+          "x5-p23-03",
+          "x5-p23-04",
+          "x5-p23-05",
+          "x5-p30-04",
+          "x5-p46-03",
+          "x5-p46-04",
+          "x5-p46-05",
+          "x5-p72-12",
+          "x5-p72-13",
+          "x5-p72-14",
+          "x5-p73-02",
+          "x5-p73-04",
+          "x5-p73-05",
+          "x5-p73-10",
+          "x5-p73-11",
+          "x5-p74-05",
+          "x5-p74-06",
+          "x5-p74-07",
+          "x5-p79-06",
+          "x5-p79-07",
+          "x5-p79-08",
+          "x5-p79-09",
+          "x5-p80-07",
+          "x5-p80-08",
+          "x5-p80-09",
+          "x5-p80-15",
+          "x5-p87-12",
+          "x5-p87-13",
+          "x5-p87-14",
+          "x5-p87-15",
+          "x5-p87-16",
+          "x5-p88-18",
+          "x5-p88-19",
+          "x5-p88-20"
         ],
-        "chars": 14686
+        "chars": 29685
       }
     },
     {
@@ -199,14 +282,9 @@
           "answer": "yes",
           "evidence": [
             {
-              "paragraph_id": "p50-12",
+              "paragraph_id": "p50-31",
               "page": 50,
-              "text": "In order to calculate the ex-ante annual quantity of biomass that would have been used in \nthe absence of project activity to generate useful thermal energy equivalent to that provided \nby the ICS (Bold), the parameters and estimates are used from the first planned PI: PI1-K2C, \noutlined below."
-            },
-            {
-              "paragraph_id": "p50-13",
-              "page": 50,
-              "text": "A PI-level analysis for PI1-K2C, has been provided below for the GP’s ex-ante emissions \nreductions calculations."
+              "text": "Bold \ntonnes/year \n5.49 \nQuantity of biomass \nconsumed in baseline"
             },
             {
               "paragraph_id": "p50-20",
@@ -219,12 +297,47 @@
               "text": "Efwf,non-CO2 \ntCO2e/TJ \n26.23 \nNon-CO2 emission factor of \nbiomass that is substituted \nor reduced"
             },
             {
-              "paragraph_id": "p50-31",
+              "paragraph_id": "p50-30",
               "page": 50,
-              "text": "Bold \ntonnes/year \n5.49 \nQuantity of biomass \nconsumed in baseline"
+              "text": "DF \nfraction \n0.95 \nDefault leakage adjustment \nfactor"
+            },
+            {
+              "paragraph_id": "p52-12",
+              "page": 52,
+              "text": "Comments \nParameter Bold once determined shall remain fixed for the \nentire crediting period. \nWhere charcoal is used by the baseline devices, a default wood \nto charcoal conversion factor of 6 kg of firewood per kg of \ncharcoal may be used in line with paragraph 35 of AMS II.G, \nversion 11."
+            },
+            {
+              "paragraph_id": "p52-15",
+              "page": 52,
+              "text": "Description \nFraction of woody biomass that can be established as non-\nrenewable biomass"
+            },
+            {
+              "paragraph_id": "p52-16",
+              "page": 52,
+              "text": "Source of data \nCalculated based on the CDM TOOL 30 “Calculation of the \nfraction of non-renewable biomass” v3.0 for PI1-K2C. \n \nSee associated report: Biomass Baseline for Cookstove \nProject in the Kruger to Canyon and Waterberg Biospheres;"
+            },
+            {
+              "paragraph_id": "p53-10",
+              "page": 53,
+              "text": "Description \nCO2 emission factor of biomass that is substituted or reduced."
+            },
+            {
+              "paragraph_id": "p53-11",
+              "page": 53,
+              "text": "Source of data \nVMR0006 methodology default: \n \nIPCC default for wood fuel"
+            },
+            {
+              "paragraph_id": "p53-19",
+              "page": 53,
+              "text": "Description \nNon-CO2 emission factor of biomass that is substituted or \nreduced."
+            },
+            {
+              "paragraph_id": "p53-20",
+              "page": 53,
+              "text": "Source of data \nVMR0006 methodology default: \n \nIPCC default for wood fuel"
             }
           ],
-          "second_opinion_p_yes": 0.79,
+          "second_opinion_p_yes": 0.85,
           "needs_review": false,
           "dropped": null
         },
@@ -259,7 +372,7 @@
               "text": "DF \nfraction \n0.95 \nDefault leakage adjustment \nfactor"
             }
           ],
-          "second_opinion_p_yes": 0.94,
+          "second_opinion_p_yes": 0.95,
           "needs_review": false,
           "dropped": null
         },
@@ -319,11 +432,6 @@
               "text": "The total number of devices in operation compared to the total \nnumber of distributed (according to the monitoring database) \nwill be surveyed."
             },
             {
-              "paragraph_id": "p54-22",
-              "page": 54,
-              "text": "Devices in operation in the sampled group will be counted \nduring each monitoring period to derive an attrition rate \n(expressed as a percentage) and this percentage deduction \nwill be applied to the total number of devices operating."
-            },
-            {
               "paragraph_id": "p55-08",
               "page": 55,
               "text": "Data from the monitoring survey will be collected at least \nbiennially and applied to the emissions reductions \ncalculations during that monitoring period. Where the required \nlevel of precision is not met either additional surveys may be \ncompleted, or the lower bound value applied."
@@ -332,11 +440,6 @@
               "paragraph_id": "p56-06",
               "page": 56,
               "text": "Monitoring equipment \nWhen measured: as specified in WBT protocol"
-            },
-            {
-              "paragraph_id": "p56-09",
-              "page": 56,
-              "text": "Data will be collected annually and applied to the emissions \nreductions calculations during that monitoring period."
             },
             {
               "paragraph_id": "p57-06",
@@ -349,29 +452,14 @@
               "text": "Data from the monitoring survey will be collected at least \nonce every two years and applied to the emissions reductions \ncalculations during that monitoring period. Where the required \nlevel of precision is not met either additional surveys may be \ncompleted, or the lower bound value applied."
             },
             {
-              "paragraph_id": "p60-15",
-              "page": 60,
-              "text": "The actual operation of stoves is monitored via parameter \n𝑵𝑵𝑵𝑵,𝒊𝒊,𝒋𝒋 and therefore any stove found to be in operation beyond \nits expected lifetime may still be credited during the PI crediting \nperiod. Likewise, stoves found not to be in operation prior to \nthe end of their lifetime will be discounted."
-            },
-            {
               "paragraph_id": "p63-05",
               "page": 63,
               "text": "Field-based monitoring activities to determine monitored parameter values will be either a field \nsurvey, KPT or WBT."
             },
             {
-              "paragraph_id": "p63-06",
-              "page": 63,
-              "text": "Data shall be recorded for each activity either directly onto a smartphone-based app designed for \nthe purpose, or via paper forms where this is not possible."
-            },
-            {
-              "paragraph_id": "p63-10",
-              "page": 63,
-              "text": "Data collection will be conducted by a dedicated monitoring team of trained individuals, either from \nTASC SA or the Project Instance Implementer. The monitoring team will use a survey \nquestionnaire and instruments required for KPT/WBT measurements on the sampled ICS."
-            },
-            {
-              "paragraph_id": "p64-05",
-              "page": 64,
-              "text": "Completed survey questionnaires and KPT/WBT data will be collected by the monitoring team and \ndelivered to the TASC SA Carbon Project Manager for analysis. These shall be checked through \nfor errors and completeness, and compiled into a monitoring report. Any incomplete or missing \ndata shall be documented clearly. The monitoring report will include:"
+              "paragraph_id": "x4-p30-02",
+              "page": 30,
+              "text": "based on the information included in the final monitoring report, there are several procedures \nfor data collecting depending on the methodology applicable for each step of the project. The \norganizational structure/26/, along with roles and responsibilities throughout project \nimplementation, has been provided in the MR and verified. \n \nPP conducted sampling surveys to gather information needed for the monitoring of Ny,i,j and μy \nparameters. Monitoring surveys/21/22/23/ were conducted across both PIs between June and July \n2024. The minimum sample size of 100 households as per VMR0006 Section 8.4 Option (b) \nwere selected to survey for the proportion parameter ny,i,j.and µy. \n \nSampling captured information on monitoring variables with required confidence/precision \n(90/10 for individual PIs on an annual basis, or 95/10 confidence/precision basis for groups \nof PIs or sampling on a biennial basis). PP has applied 90/10 confidence/precision for \nsampling for each individual project instance. A simple random sampling was used. \n \nThe applied confidence interval and precision level is 90/10. The sample size for the \nparameter μy is determined based on the section 8.4 Option (b) of the. VMR0006 methodology, \ni.e. Project target population > 1000: Minimum sample size 100. PP has applied a sample size \nof 101 for K2C, 106 for WB and 105 for VH, both parameters Ny,i,j and μy. The sampling \napproach has been demonstrated in the monitoring survey/21/22/23/ for each PIs. \n \nRelative precision of data is calculated at 8.2% for K2C, 0% for WB and 7% for VH determined \nfor the parameter ny,i,j (which is used to calculate parameter Ny,i,j and is less than the precision \nlevel limit of 10 %.  \n \nFor parameter μy, calculation of precision level is calculated as 8.1% for K2C, 5.6% for WB and \n7.2% for VH which is used to remove outlier data for average wood fuel consumption for the \nsampled households. Both parameters are derived from survey with sample size accordance \nwith the option (b) provided in the section 8.4 of the VMR0006 methodology/7/ which \ncompliance with 90/10 confidence precision is not obligatory. \n \nInconsistencies, such as sampling data variations and data discrepancies, identified between \nthe MR, ER, and KPT have been addressed in findings CAR#2, CAR#3, CAR#4, and CAR#5. \nEach of these findings has been thoroughly reviewed and fully resolved to ensure alignment \nand data accuracy across all reports. \n \nThe Sampling and surveys for CDM project activities and programmes of activities (Version \n9.0)/31/ states under paragraph 28 that “When the project participants or the \ncoordinating/managing entity have applied a sampling approach, the VVB may apply \nacceptance sampling as described in the steps indicated in paragraphs 29–38 below as part of \nvalidation/verification activities based on an AQL of 1 % and UQL of 15 %, producer risk 10 % \nand consumer risk 10 % which sample size of 25 and acceptance number of 1 is determined. \nThe sampled users are taken from each project instance, 9 users from K2C, 8 from WB and 8 \nfrom VH."
             }
           ],
           "second_opinion_p_yes": 0.97,
@@ -381,15 +469,9 @@
       ],
       "quotes": [
         {
-          "text": "In order to calculate the ex-ante annual quantity of biomass that would have been used in \nthe absence of project activity to generate useful thermal energy equivalent to that provided \nby the ICS (Bold), the parameters and estimates are used from the first planned PI: PI1-K2C, \noutlined below.",
+          "text": "Bold \ntonnes/year \n5.49 \nQuantity of biomass \nconsumed in baseline",
           "page": 50,
-          "paragraph_id": "p50-12",
-          "verification": "cited_paragraph"
-        },
-        {
-          "text": "A PI-level analysis for PI1-K2C, has been provided below for the GP’s ex-ante emissions \nreductions calculations.",
-          "page": 50,
-          "paragraph_id": "p50-13",
+          "paragraph_id": "p50-31",
           "verification": "cited_paragraph"
         },
         {
@@ -405,9 +487,51 @@
           "verification": "cited_paragraph"
         },
         {
-          "text": "Bold \ntonnes/year \n5.49 \nQuantity of biomass \nconsumed in baseline",
+          "text": "DF \nfraction \n0.95 \nDefault leakage adjustment \nfactor",
           "page": 50,
-          "paragraph_id": "p50-31",
+          "paragraph_id": "p50-30",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Comments \nParameter Bold once determined shall remain fixed for the \nentire crediting period. \nWhere charcoal is used by the baseline devices, a default wood \nto charcoal conversion factor of 6 kg of firewood per kg of \ncharcoal may be used in line with paragraph 35 of AMS II.G, \nversion 11.",
+          "page": 52,
+          "paragraph_id": "p52-12",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Description \nFraction of woody biomass that can be established as non-\nrenewable biomass",
+          "page": 52,
+          "paragraph_id": "p52-15",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Source of data \nCalculated based on the CDM TOOL 30 “Calculation of the \nfraction of non-renewable biomass” v3.0 for PI1-K2C. \n \nSee associated report: Biomass Baseline for Cookstove \nProject in the Kruger to Canyon and Waterberg Biospheres;",
+          "page": 52,
+          "paragraph_id": "p52-16",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Description \nCO2 emission factor of biomass that is substituted or reduced.",
+          "page": 53,
+          "paragraph_id": "p53-10",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Source of data \nVMR0006 methodology default: \n \nIPCC default for wood fuel",
+          "page": 53,
+          "paragraph_id": "p53-11",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Description \nNon-CO2 emission factor of biomass that is substituted or \nreduced.",
+          "page": 53,
+          "paragraph_id": "p53-19",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Source of data \nVMR0006 methodology default: \n \nIPCC default for wood fuel",
+          "page": 53,
+          "paragraph_id": "p53-20",
           "verification": "cited_paragraph"
         },
         {
@@ -432,12 +556,6 @@
           "text": "A net gross leakage factor of 0.95 is applied to ERy,i,j.",
           "page": 48,
           "paragraph_id": "p48-16",
-          "verification": "cited_paragraph"
-        },
-        {
-          "text": "DF \nfraction \n0.95 \nDefault leakage adjustment \nfactor",
-          "page": 50,
-          "paragraph_id": "p50-30",
           "verification": "cited_paragraph"
         },
         {
@@ -489,21 +607,9 @@
           "verification": "cited_paragraph"
         },
         {
-          "text": "Devices in operation in the sampled group will be counted \nduring each monitoring period to derive an attrition rate \n(expressed as a percentage) and this percentage deduction \nwill be applied to the total number of devices operating.",
-          "page": 54,
-          "paragraph_id": "p54-22",
-          "verification": "cited_paragraph"
-        },
-        {
           "text": "Monitoring equipment \nWhen measured: as specified in WBT protocol",
           "page": 56,
           "paragraph_id": "p56-06",
-          "verification": "cited_paragraph"
-        },
-        {
-          "text": "Data will be collected annually and applied to the emissions \nreductions calculations during that monitoring period.",
-          "page": 56,
-          "paragraph_id": "p56-09",
           "verification": "cited_paragraph"
         },
         {
@@ -513,33 +619,15 @@
           "verification": "cited_paragraph"
         },
         {
-          "text": "The actual operation of stoves is monitored via parameter \n𝑵𝑵𝑵𝑵,𝒊𝒊,𝒋𝒋 and therefore any stove found to be in operation beyond \nits expected lifetime may still be credited during the PI crediting \nperiod. Likewise, stoves found not to be in operation prior to \nthe end of their lifetime will be discounted.",
-          "page": 60,
-          "paragraph_id": "p60-15",
-          "verification": "cited_paragraph"
-        },
-        {
           "text": "Field-based monitoring activities to determine monitored parameter values will be either a field \nsurvey, KPT or WBT.",
           "page": 63,
           "paragraph_id": "p63-05",
           "verification": "cited_paragraph"
         },
         {
-          "text": "Data shall be recorded for each activity either directly onto a smartphone-based app designed for \nthe purpose, or via paper forms where this is not possible.",
-          "page": 63,
-          "paragraph_id": "p63-06",
-          "verification": "cited_paragraph"
-        },
-        {
-          "text": "Data collection will be conducted by a dedicated monitoring team of trained individuals, either from \nTASC SA or the Project Instance Implementer. The monitoring team will use a survey \nquestionnaire and instruments required for KPT/WBT measurements on the sampled ICS.",
-          "page": 63,
-          "paragraph_id": "p63-10",
-          "verification": "cited_paragraph"
-        },
-        {
-          "text": "Completed survey questionnaires and KPT/WBT data will be collected by the monitoring team and \ndelivered to the TASC SA Carbon Project Manager for analysis. These shall be checked through \nfor errors and completeness, and compiled into a monitoring report. Any incomplete or missing \ndata shall be documented clearly. The monitoring report will include:",
-          "page": 64,
-          "paragraph_id": "p64-05",
+          "text": "based on the information included in the final monitoring report, there are several procedures \nfor data collecting depending on the methodology applicable for each step of the project. The \norganizational structure/26/, along with roles and responsibilities throughout project \nimplementation, has been provided in the MR and verified. \n \nPP conducted sampling surveys to gather information needed for the monitoring of Ny,i,j and μy \nparameters. Monitoring surveys/21/22/23/ were conducted across both PIs between June and July \n2024. The minimum sample size of 100 households as per VMR0006 Section 8.4 Option (b) \nwere selected to survey for the proportion parameter ny,i,j.and µy. \n \nSampling captured information on monitoring variables with required confidence/precision \n(90/10 for individual PIs on an annual basis, or 95/10 confidence/precision basis for groups \nof PIs or sampling on a biennial basis). PP has applied 90/10 confidence/precision for \nsampling for each individual project instance. A simple random sampling was used. \n \nThe applied confidence interval and precision level is 90/10. The sample size for the \nparameter μy is determined based on the section 8.4 Option (b) of the. VMR0006 methodology, \ni.e. Project target population > 1000: Minimum sample size 100. PP has applied a sample size \nof 101 for K2C, 106 for WB and 105 for VH, both parameters Ny,i,j and μy. The sampling \napproach has been demonstrated in the monitoring survey/21/22/23/ for each PIs. \n \nRelative precision of data is calculated at 8.2% for K2C, 0% for WB and 7% for VH determined \nfor the parameter ny,i,j (which is used to calculate parameter Ny,i,j and is less than the precision \nlevel limit of 10 %.  \n \nFor parameter μy, calculation of precision level is calculated as 8.1% for K2C, 5.6% for WB and \n7.2% for VH which is used to remove outlier data for average wood fuel consumption for the \nsampled households. Both parameters are derived from survey with sample size accordance \nwith the option (b) provided in the section 8.4 of the VMR0006 methodology/7/ which \ncompliance with 90/10 confidence precision is not obligatory. \n \nInconsistencies, such as sampling data variations and data discrepancies, identified between \nthe MR, ER, and KPT have been addressed in findings CAR#2, CAR#3, CAR#4, and CAR#5. \nEach of these findings has been thoroughly reviewed and fully resolved to ensure alignment \nand data accuracy across all reports. \n \nThe Sampling and surveys for CDM project activities and programmes of activities (Version \n9.0)/31/ states under paragraph 28 that “When the project participants or the \ncoordinating/managing entity have applied a sampling approach, the VVB may apply \nacceptance sampling as described in the steps indicated in paragraphs 29–38 below as part of \nvalidation/verification activities based on an AQL of 1 % and UQL of 15 %, producer risk 10 % \nand consumer risk 10 % which sample size of 25 and acceptance number of 1 is determined. \nThe sampled users are taken from each project instance, 9 users from K2C, 8 from WB and 8 \nfrom VH.",
+          "page": 30,
+          "paragraph_id": "x4-p30-02",
           "verification": "cited_paragraph"
         }
       ],
@@ -703,9 +791,42 @@
           "p64-06",
           "p64-08",
           "p64-10",
-          "p64-11"
+          "p64-11",
+          "x1-p42-15",
+          "x4-p2-14",
+          "x4-p2-15",
+          "x4-p2-16",
+          "x4-p13-07",
+          "x4-p29-13",
+          "x4-p29-14",
+          "x4-p30-02",
+          "x4-p35-03",
+          "x4-p35-04",
+          "x4-p38-02",
+          "x4-p38-03",
+          "x4-p42-05",
+          "x4-p42-06",
+          "x4-p44-07",
+          "x4-p46-03",
+          "x4-p50-02",
+          "x4-p50-03",
+          "x4-p50-04",
+          "x4-p51-03",
+          "x4-p54-04",
+          "x4-p54-05",
+          "x4-p56-03",
+          "x4-p58-11",
+          "x4-p58-12",
+          "x4-p60-09",
+          "x4-p60-10",
+          "x4-p75-11",
+          "x4-p75-12",
+          "x4-p75-13",
+          "x5-p36-02",
+          "x5-p36-03",
+          "x5-p36-04"
         ],
-        "chars": 29863
+        "chars": 44854
       }
     },
     {
@@ -723,9 +844,34 @@
               "paragraph_id": "p20-10",
               "page": 20,
               "text": "This is a new project and has not been registered or seeking registration under any other \nGHG programs."
+            },
+            {
+              "paragraph_id": "p21-02",
+              "page": 21,
+              "text": "This is a new project and has not been rejected by any other GHG program."
+            },
+            {
+              "paragraph_id": "x4-p17-04",
+              "page": 17,
+              "text": "The project activity is not registered under any other GHG and \nnon-GHG program or registry/12/. This has been confirmed by \nmeans of research on relevant applicable registries and \navailable information in public domain and through declaration \nfrom the Project Owner."
+            },
+            {
+              "paragraph_id": "x4-p17-05",
+              "page": 17,
+              "text": "The assessment team has searched for similar projects having \nsame nature, capacity and project proponent as well as legal \nowner. The name of the owners mentions in the regulatory \nlicenses are also matched and checked. It was concluded that \nno such projects having same location and geo-coordinates, \ntechnology or project/legal owners are registered in various \ncarbon schemes like CDM, GCC, and Gold Standard."
+            },
+            {
+              "paragraph_id": "x4-p74-18",
+              "page": 74,
+              "text": "5. The project is not active in any other crediting \nschemes other than the VCS. A signed \ndeclaration labelled \n“Double_Counting_Declaration_v1.0 signed \n(MP5)” is included as evidence."
+            },
+            {
+              "paragraph_id": "x4-p75-02",
+              "page": 75,
+              "text": "(MP5).pdf” that the current project is not \nregistered under any other GHG program."
             }
           ],
-          "second_opinion_p_yes": 0.77,
+          "second_opinion_p_yes": 0.81,
           "needs_review": false,
           "dropped": null
         },
@@ -743,9 +889,64 @@
               "paragraph_id": "p21-07",
               "page": 21,
               "text": "The project has not sought, nor received another form of GHG-related environmental \ncredit."
+            },
+            {
+              "paragraph_id": "x4-p17-06",
+              "page": 17,
+              "text": "No double claiming with \nemissions trading \nprograms or binding \nemission limits"
+            },
+            {
+              "paragraph_id": "x4-p17-07",
+              "page": 17,
+              "text": "The project activity has been thoroughly search on the various \nwebsites of various emission trading programs and or ETS \nprograms running in various counties, using nature, capacity \nand project proponent as well as legal owner as the search \noption. The project is not double claiming/35/ with other with \nother emission trading programs or binding emission limits.  The \nassessment team has searched for similar projects having \nsame nature, capacity and project proponent as well as legal \nowner. The name of the owners mentions in the regulatory \nlicenses are also matched and checked. It was concluded that \nno such projects having same location and geo-coordinates, \ntechnology or project/legal owners are registered in other \nemission trading programs or binding emission limits various \ncarbon schemes like CDM, GCC, and Gold Standard. Therefore, \nit is confirmed by VVB that the project is not double claiming \nwith other emission trading programs or binding emission limits \nthereby complying with VCS Standard, v4.7; Sections 3.24.3."
+            },
+            {
+              "paragraph_id": "x4-p17-08",
+              "page": 17,
+              "text": "No double claiming with \nother forms of \nenvironmental credit"
+            },
+            {
+              "paragraph_id": "x4-p17-09",
+              "page": 17,
+              "text": "As discussed above the, the project has been thoroughly search \nin the currently active environment schemes and found that the \nproject is not registered with any other environmental credits. \nPP has also submitted a declaration/12/ stating that the project \nis not registered with any other registry (see CL#2). \nTherefore, it can be concluded that the project is not claiming \nany credits from other programs/schemes."
+            },
+            {
+              "paragraph_id": "x4-p74-19",
+              "page": 74,
+              "text": "3. Section 1.10, MR: In order to avoid \nthe double counting of the credits, PP \nshall provide a declaration stating the \ncredits generated under this \nmonitoring period will not be used \nwith any other GHG programs and \nenvironmental credits"
+            },
+            {
+              "paragraph_id": "x1-p9-15",
+              "page": 9,
+              "text": "Are project reductions and removals or project activities also included in an emissions trading \nprogram or binding emission limit? See the VCS Program Definitions for definitions of \nemissions trading program and binding emission limit."
+            },
+            {
+              "paragraph_id": "x1-p9-19",
+              "page": 9,
+              "text": "Has the project activity sought, received, or is planning to receive credit from another GHG-\nrelated environmental credit system? See the VCS Program Definitions for definition of GHG-\nrelated environmental credit system."
+            },
+            {
+              "paragraph_id": "x2-p9-12",
+              "page": 9,
+              "text": "Are project reductions and removals or project activities also included in an emissions trading \nprogram or binding emission limit? See the VCS Program Definitions for definitions of emissions \ntrading program and binding emission limit."
+            },
+            {
+              "paragraph_id": "x2-p9-15",
+              "page": 9,
+              "text": "Has the project activity sought, received, or is planning to receive credit from another GHG-related \nenvironmental credit system? See the VCS Program Definitions for definition of GHG-related \nenvironmental credit system."
+            },
+            {
+              "paragraph_id": "x3-p10-04",
+              "page": 10,
+              "text": "Are project reductions and removals or project activities also included in an emissions trading \nprogram or binding emission limit? See the VCS Program Definitions for definitions of \nemissions trading program and binding emission limit."
+            },
+            {
+              "paragraph_id": "x3-p10-08",
+              "page": 10,
+              "text": "Has the project activity sought, received, or is planning to receive credit from another GHG-\nrelated environmental credit system? See the VCS Program Definitions for definition of GHG-\nrelated environmental credit system."
             }
           ],
-          "second_opinion_p_yes": 0.86,
+          "second_opinion_p_yes": 0.88,
           "needs_review": false,
           "dropped": null
         },
@@ -754,7 +955,7 @@
           "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
           "answer": "no",
           "evidence": [],
-          "second_opinion_p_yes": 0.07,
+          "second_opinion_p_yes": 0.09,
           "needs_review": false,
           "dropped": null
         }
@@ -767,6 +968,36 @@
           "verification": "cited_paragraph"
         },
         {
+          "text": "This is a new project and has not been rejected by any other GHG program.",
+          "page": 21,
+          "paragraph_id": "p21-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The project activity is not registered under any other GHG and \nnon-GHG program or registry/12/. This has been confirmed by \nmeans of research on relevant applicable registries and \navailable information in public domain and through declaration \nfrom the Project Owner.",
+          "page": 17,
+          "paragraph_id": "x4-p17-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The assessment team has searched for similar projects having \nsame nature, capacity and project proponent as well as legal \nowner. The name of the owners mentions in the regulatory \nlicenses are also matched and checked. It was concluded that \nno such projects having same location and geo-coordinates, \ntechnology or project/legal owners are registered in various \ncarbon schemes like CDM, GCC, and Gold Standard.",
+          "page": 17,
+          "paragraph_id": "x4-p17-05",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "5. The project is not active in any other crediting \nschemes other than the VCS. A signed \ndeclaration labelled \n“Double_Counting_Declaration_v1.0 signed \n(MP5)” is included as evidence.",
+          "page": 74,
+          "paragraph_id": "x4-p74-18",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "(MP5).pdf” that the current project is not \nregistered under any other GHG program.",
+          "page": 75,
+          "paragraph_id": "x4-p75-02",
+          "verification": "cited_paragraph"
+        },
+        {
           "text": "The project is not included in an emissions trading program or any other mechanism that \nincludes GHG allowance trading.",
           "page": 21,
           "paragraph_id": "p21-05",
@@ -776,6 +1007,72 @@
           "text": "The project has not sought, nor received another form of GHG-related environmental \ncredit.",
           "page": 21,
           "paragraph_id": "p21-07",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "No double claiming with \nemissions trading \nprograms or binding \nemission limits",
+          "page": 17,
+          "paragraph_id": "x4-p17-06",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The project activity has been thoroughly search on the various \nwebsites of various emission trading programs and or ETS \nprograms running in various counties, using nature, capacity \nand project proponent as well as legal owner as the search \noption. The project is not double claiming/35/ with other with \nother emission trading programs or binding emission limits.  The \nassessment team has searched for similar projects having \nsame nature, capacity and project proponent as well as legal \nowner. The name of the owners mentions in the regulatory \nlicenses are also matched and checked. It was concluded that \nno such projects having same location and geo-coordinates, \ntechnology or project/legal owners are registered in other \nemission trading programs or binding emission limits various \ncarbon schemes like CDM, GCC, and Gold Standard. Therefore, \nit is confirmed by VVB that the project is not double claiming \nwith other emission trading programs or binding emission limits \nthereby complying with VCS Standard, v4.7; Sections 3.24.3.",
+          "page": 17,
+          "paragraph_id": "x4-p17-07",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "No double claiming with \nother forms of \nenvironmental credit",
+          "page": 17,
+          "paragraph_id": "x4-p17-08",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "As discussed above the, the project has been thoroughly search \nin the currently active environment schemes and found that the \nproject is not registered with any other environmental credits. \nPP has also submitted a declaration/12/ stating that the project \nis not registered with any other registry (see CL#2). \nTherefore, it can be concluded that the project is not claiming \nany credits from other programs/schemes.",
+          "page": 17,
+          "paragraph_id": "x4-p17-09",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "3. Section 1.10, MR: In order to avoid \nthe double counting of the credits, PP \nshall provide a declaration stating the \ncredits generated under this \nmonitoring period will not be used \nwith any other GHG programs and \nenvironmental credits",
+          "page": 74,
+          "paragraph_id": "x4-p74-19",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Are project reductions and removals or project activities also included in an emissions trading \nprogram or binding emission limit? See the VCS Program Definitions for definitions of \nemissions trading program and binding emission limit.",
+          "page": 9,
+          "paragraph_id": "x1-p9-15",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Has the project activity sought, received, or is planning to receive credit from another GHG-\nrelated environmental credit system? See the VCS Program Definitions for definition of GHG-\nrelated environmental credit system.",
+          "page": 9,
+          "paragraph_id": "x1-p9-19",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Are project reductions and removals or project activities also included in an emissions trading \nprogram or binding emission limit? See the VCS Program Definitions for definitions of emissions \ntrading program and binding emission limit.",
+          "page": 9,
+          "paragraph_id": "x2-p9-12",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Has the project activity sought, received, or is planning to receive credit from another GHG-related \nenvironmental credit system? See the VCS Program Definitions for definition of GHG-related \nenvironmental credit system.",
+          "page": 9,
+          "paragraph_id": "x2-p9-15",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Are project reductions and removals or project activities also included in an emissions trading \nprogram or binding emission limit? See the VCS Program Definitions for definitions of \nemissions trading program and binding emission limit.",
+          "page": 10,
+          "paragraph_id": "x3-p10-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Has the project activity sought, received, or is planning to receive credit from another GHG-\nrelated environmental credit system? See the VCS Program Definitions for definition of GHG-\nrelated environmental credit system.",
+          "page": 10,
+          "paragraph_id": "x3-p10-08",
           "verification": "cited_paragraph"
         }
       ],
@@ -828,16 +1125,84 @@
           "p61-13",
           "p61-16",
           "p61-17",
-          "p61-18"
+          "p61-18",
+          "x1-p2-14",
+          "x1-p2-15",
+          "x1-p8-16",
+          "x1-p9-02",
+          "x1-p9-03",
+          "x1-p9-08",
+          "x1-p9-09",
+          "x1-p9-10",
+          "x1-p9-15",
+          "x1-p9-19",
+          "x1-p9-20",
+          "x1-p9-21",
+          "x1-p31-15",
+          "x1-p37-21",
+          "x1-p39-03",
+          "x1-p39-12",
+          "x1-p41-05",
+          "x1-p41-06",
+          "x1-p42-02",
+          "x1-p54-07",
+          "x1-p55-03",
+          "x1-p55-04",
+          "x2-p2-14",
+          "x2-p2-15",
+          "x2-p8-15",
+          "x2-p9-02",
+          "x2-p9-07",
+          "x2-p9-08",
+          "x2-p9-12",
+          "x2-p9-15",
+          "x2-p9-20",
+          "x2-p27-14",
+          "x2-p33-19",
+          "x3-p9-02",
+          "x3-p9-03",
+          "x3-p10-04",
+          "x3-p10-08",
+          "x3-p46-16",
+          "x4-p17-02",
+          "x4-p17-03",
+          "x4-p17-04",
+          "x4-p17-05",
+          "x4-p17-06",
+          "x4-p17-07",
+          "x4-p17-08",
+          "x4-p17-09",
+          "x4-p74-16",
+          "x4-p74-18",
+          "x4-p74-19",
+          "x4-p74-20",
+          "x4-p75-02",
+          "x5-p23-02",
+          "x5-p23-03",
+          "x5-p23-04",
+          "x5-p29-06",
+          "x5-p29-07",
+          "x5-p29-08",
+          "x5-p41-09",
+          "x5-p41-10",
+          "x5-p46-03",
+          "x5-p46-04",
+          "x5-p46-05",
+          "x5-p67-02",
+          "x5-p73-10",
+          "x5-p73-11",
+          "x5-p74-05",
+          "x5-p74-06",
+          "x5-p74-07"
         ],
-        "chars": 8694
+        "chars": 23670
       }
     },
     {
       "principle": "safeguards",
-      "status": "partial_evidence",
-      "score": 75,
-      "rationale": "Evidence found for 3 of 4 checks (S1, S2, S4); not found in the excerpt: S3.",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (S1, S2, S3, S4).",
       "checks": [
         {
           "id": "S1",
@@ -872,10 +1237,16 @@
         {
           "id": "S3",
           "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
-          "answer": "no",
-          "evidence": [],
-          "second_opinion_p_yes": 0.77,
-          "needs_review": true,
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p31-10",
+              "page": 31,
+              "text": "No Listed Activities requiring an environmental impact assessment under the National \nEnvironmental Management Act (NEMA, Act 107 of 1998), Environmental Impact"
+            }
+          ],
+          "second_opinion_p_yes": 0.76,
+          "needs_review": false,
           "dropped": null
         },
         {
@@ -889,7 +1260,7 @@
               "text": "1) The project proponent \nshall \nrecognize, \nrespect and support \nlocal \nstakeholders’ \nproperty \nrights \nand \nwhere feasible, take \nmeasures \nto \nhelp \nsecure \nrights. \nThe \nproject \nshall \nnot \nencroach on private, \nstakeholder \nor \ngovernment property \nor relocate people off \ntheir \nlands \nwithout \nconsent. The project \nmay affect property \nrights if free, prior and \ninformed consent is \nobtained from those \nconcerned \nand \na"
             }
           ],
-          "second_opinion_p_yes": 0.85,
+          "second_opinion_p_yes": 0.81,
           "needs_review": false,
           "dropped": null
         }
@@ -908,6 +1279,12 @@
           "verification": "cited_paragraph"
         },
         {
+          "text": "No Listed Activities requiring an environmental impact assessment under the National \nEnvironmental Management Act (NEMA, Act 107 of 1998), Environmental Impact",
+          "page": 31,
+          "paragraph_id": "p31-10",
+          "verification": "cited_paragraph"
+        },
+        {
           "text": "1) The project proponent \nshall \nrecognize, \nrespect and support \nlocal \nstakeholders’ \nproperty \nrights \nand \nwhere feasible, take \nmeasures \nto \nhelp \nsecure \nrights. \nThe \nproject \nshall \nnot \nencroach on private, \nstakeholder \nor \ngovernment property \nor relocate people off \ntheir \nlands \nwithout \nconsent. The project \nmay affect property \nrights if free, prior and \ninformed consent is \nobtained from those \nconcerned \nand \na",
           "page": 28,
           "paragraph_id": "p28-11",
@@ -915,9 +1292,7 @@
         }
       ],
       "dropped_findings": 0,
-      "review_flags": [
-        "models_disagree:S3"
-      ],
+      "review_flags": [],
       "excerpt": {
         "paragraphs": [
           "p2-19",
@@ -1018,14 +1393,44 @@
           "p35-15",
           "p35-16",
           "p61-07",
-          "p61-08"
+          "p61-08",
+          "x1-p15-02",
+          "x1-p15-03",
+          "x1-p15-04",
+          "x1-p15-06",
+          "x1-p55-03",
+          "x1-p55-04",
+          "x2-p16-04",
+          "x2-p16-05",
+          "x2-p16-06",
+          "x2-p16-08",
+          "x2-p16-09",
+          "x2-p17-02",
+          "x2-p17-03",
+          "x2-p39-06",
+          "x2-p39-07",
+          "x3-p18-09",
+          "x3-p18-10",
+          "x4-p20-04",
+          "x4-p22-02",
+          "x4-p22-03",
+          "x4-p23-06",
+          "x4-p23-07",
+          "x4-p24-02",
+          "x4-p25-05",
+          "x4-p25-06",
+          "x4-p39-02",
+          "x4-p39-03",
+          "x4-p81-16",
+          "x5-p72-18",
+          "x5-p72-19"
         ],
-        "chars": 28372
+        "chars": 43360
       }
     }
   ],
   "overall": {
-    "score": 66,
+    "score": 70,
     "included": [
       "additionality",
       "robust_quantification",
@@ -1044,5 +1449,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-19T17:47:05+00:00"
+  "generated_at": "2026-10-20T17:35:14+00:00"
 }

@@ -1,0 +1,859 @@
+{
+  "schema": "report-v2",
+  "project": {
+    "project_id": "VCS985",
+    "project_name": "Cordillera Azul National Park REDD Project",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/985",
+    "methodology": "VM0007",
+    "methodology_version": "1.3"
+  },
+  "document": {
+    "file_name": "PROJ_DESC_985_20DEC2012.pdf",
+    "sha256": "7523e87dc6f3ae5537f0c7288bedab1004602e22c36cf7501a69d39ae8849106",
+    "pages": 810,
+    "extra_files": [
+      {
+        "file_name": "MONIT_REP_985_08AUG2008_07AUG2012.pdf",
+        "sha256": "341fe342b5d5077f32dcc9f572095a5cb7e2e92aeae2d4555051ceb53b5373bd"
+      },
+      {
+        "file_name": "MONIT_REP_985_08AUG2012_07AUG2014.pdf",
+        "sha256": "9d73fbd7116c491803054f995987e397536aa09eba71ce811bbc48737ba24440"
+      },
+      {
+        "file_name": "MONIT_REP_985_08AUG2014_07AUG2015.pdf",
+        "sha256": "8681af7a38ecd1fa2c9307c60cc62c9e9aa7319c90642397468e87667005da3f"
+      },
+      {
+        "file_name": "MONIT_REP_985_8AUG2015_7AUG2016.pdf",
+        "sha256": "1bfd510e3d4c19d44872f8a801aa314a05472403758c07d47f054bdf4db85a42"
+      },
+      {
+        "file_name": "MONIT_REP_985_08AUG2016_07AUG2018.pdf",
+        "sha256": "3ac946d6676b4de6268107bb46065a65d6ef7b2937d26c51e229e0959e626536"
+      },
+      {
+        "file_name": "VALID_REP_985_01FEB2013.pdf",
+        "sha256": "e9205e6147e77ef53acd3a7376a512af85c1e1987d51358588c75733b30c98ab"
+      }
+    ]
+  },
+  "methodology_status": {
+    "code": "VM0007",
+    "version": "1.3",
+    "status": "not_ccp_approved",
+    "summary": "Verra excluded its older REDD+ methodologies (including VM0007) from ICVCM assessment; their credits cannot carry the CCP label. ICVCM approved the successor VM0048 v1.0 with conditions in November 2024.",
+    "sources": [
+      "https://icvcm.org/integrity-council-approves-three-redd-methodologies/",
+      "https://www.jonesday.com/en/insights/2025/03/the-icvcm-and-redd-standards-implications-for-voluntary-carbon-markets"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v2",
+    "question_set_version": "qs-v2-checklist",
+    "prompt_version": "checklist-v1",
+    "evidence_rule": "yes-cites-excerpt-paragraph-v2",
+    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0) on the project description + select_paragraphs(budget_chars=15000, overview_chars=0) on the other documents",
+    "injection_screen": "injection-screen-v1",
+    "review_rule": "person-decides-flagged-checks-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "second_opinion_model": "typesafe/jev-1.13",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x05f2d815a67e7bfa5eba473409b663801b86b6fe07d2b1da7ae10c8d96d862e5",
+  "principles": [
+    {
+      "principle": "additionality",
+      "status": "partial_evidence",
+      "score": 50,
+      "rationale": "Evidence found for 2 of 4 checks (A2, A3); not found in the excerpt: A1, A4.",
+      "checks": [
+        {
+          "id": "A1",
+          "question": "Does the text report a quantified financial analysis: at least one numeric financial indicator (such as IRR or NPV) together with a benchmark or threshold value it is compared against?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.05,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A2",
+          "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p79-02",
+              "page": 79,
+              "text": "2.5.2 \nCommon Practice \nStep 4: Common Practice Assessment \nThere are twelve designated national parks in Peru. Two non-profit organizations have management \ncontracts with the Peruvian government over two of these national parks.  Cordillera Azul is managed by"
+            }
+          ],
+          "second_opinion_p_yes": 0.97,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A3",
+          "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p60-02",
+              "page": 60,
+              "text": "1.11.2 Regulatory Additionality \nCIMA’s agreement to support the management of the park was a completely voluntary action; there was \nno regulatory obligation. Because of resource limitations, it is almost certain that the Peruvian \ngovernment would not have designated PNCAZ as a national park if an organization had not been willing \nto fund and manage the park. Additional background regarding the creation of the park is provided in \nSection 2.5, Additionality. \n \nIn the absence of this REDD project, the intense deforestation surrounding PNCAZ would overwhelm any \nweight that a national park designation carries when it is only a “paper park” and the intact forests of the \npark would succumb to fragmentation and deterioration. When the park was established, there were \nlarge-scale illegal logging settlements operating in the park. These operations were all removed from the \npark peacefully, in coordination and collaboration with surrounding communities.  \n \nIn addition, the regional governments’ resources are severely strained, especially given the rapid, large \ninflux of immigrants.  There is currently insufficient capacity to ensure awareness of and adherence to \nnational, regional and local laws in the buffer zone.  Without the project, land-use zoning and tenure \nprocesses would be limited to nonexistent and illegal activities would seldom be reported to the correct \nlaw enforcement authorities by community members \n \n \n1.12 Ownership and Other Programs"
+            }
+          ],
+          "second_opinion_p_yes": 0.94,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A4",
+          "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.34,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "2.5.2 \nCommon Practice \nStep 4: Common Practice Assessment \nThere are twelve designated national parks in Peru. Two non-profit organizations have management \ncontracts with the Peruvian government over two of these national parks.  Cordillera Azul is managed by",
+          "page": 79,
+          "paragraph_id": "p79-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "1.11.2 Regulatory Additionality \nCIMA’s agreement to support the management of the park was a completely voluntary action; there was \nno regulatory obligation. Because of resource limitations, it is almost certain that the Peruvian \ngovernment would not have designated PNCAZ as a national park if an organization had not been willing \nto fund and manage the park. Additional background regarding the creation of the park is provided in \nSection 2.5, Additionality. \n \nIn the absence of this REDD project, the intense deforestation surrounding PNCAZ would overwhelm any \nweight that a national park designation carries when it is only a “paper park” and the intact forests of the \npark would succumb to fragmentation and deterioration. When the park was established, there were \nlarge-scale illegal logging settlements operating in the park. These operations were all removed from the \npark peacefully, in coordination and collaboration with surrounding communities.  \n \nIn addition, the regional governments’ resources are severely strained, especially given the rapid, large \ninflux of immigrants.  There is currently insufficient capacity to ensure awareness of and adherence to \nnational, regional and local laws in the buffer zone.  Without the project, land-use zoning and tenure \nprocesses would be limited to nonexistent and illegal activities would seldom be reported to the correct \nlaw enforcement authorities by community members \n \n \n1.12 Ownership and Other Programs",
+          "page": 60,
+          "paragraph_id": "p60-02",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p1-15",
+          "p2-01",
+          "p3-01",
+          "p16-03",
+          "p60-01",
+          "p60-02",
+          "p60-03",
+          "p70-12",
+          "p74-13",
+          "p74-14",
+          "p74-15",
+          "p74-16",
+          "p75-01",
+          "p75-02",
+          "p78-01",
+          "p78-02",
+          "p78-03",
+          "p79-01",
+          "p79-02",
+          "p81-02",
+          "p152-03",
+          "p154-01",
+          "p154-02",
+          "x1-p7-12",
+          "x1-p7-13",
+          "x1-p7-14",
+          "x1-p40-06",
+          "x1-p40-07",
+          "x1-p40-08",
+          "x1-p42-02",
+          "x1-p42-03",
+          "x1-p42-04",
+          "x2-p6-11",
+          "x2-p6-12",
+          "x2-p6-13",
+          "x2-p35-02",
+          "x2-p35-03",
+          "x2-p35-04",
+          "x2-p36-02",
+          "x2-p63-04",
+          "x2-p63-05",
+          "x3-p6-12",
+          "x3-p6-13",
+          "x3-p37-03",
+          "x3-p37-04",
+          "x3-p37-05",
+          "x3-p38-02",
+          "x3-p38-03",
+          "x4-p52-12",
+          "x4-p52-13",
+          "x4-p52-14",
+          "x4-p54-03",
+          "x4-p54-04",
+          "x5-p57-03",
+          "x5-p57-04",
+          "x6-p18-02",
+          "x6-p18-03",
+          "x6-p18-04",
+          "x6-p18-05",
+          "x6-p19-02",
+          "x6-p19-03",
+          "x6-p32-04",
+          "x6-p32-05",
+          "x6-p32-06"
+        ],
+        "chars": 44974
+      }
+    },
+    {
+      "principle": "permanence",
+      "status": "partial_evidence",
+      "score": 67,
+      "rationale": "Evidence found for 2 of 3 checks (P1, P3); not found in the excerpt: P2.",
+      "checks": [
+        {
+          "id": "P1",
+          "question": "Does the text assess the risk that stored carbon is released (reversal or non-permanence risk), for example with a risk tool, a rating or a score?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p62-03",
+              "page": 62,
+              "text": "1.13.4 Risk Assessment (CCB: G3.5) \nThe risk analysis has been conducted in accordance with the Verified Carbon Standard, AFOLU Non-\nPermanence Risk Tool Version 3.1 dated February 1, 2012 (VCS Non-Permanence Tool).  Risks were \nassessed over a period of 100 years in accordance with the Tool’s requirements.  The overall risk rating \nis calculated using the formulas included in the Tool and the criteria for each subsection.  The overall risk \ntable summarizes the scores for each sub-section and presents the total risk.  The Non-Permanence Risk \nReport details the analysis and is included in Appendix 3. \n \nTable 1.5: Overall Risk Rating Table (Summary from Appendix 3) \nRisk Category  \nRating  \na) Internal Risk \n0 \nb) External Risk \n0 \nc) Natural Risk \n3 \nOverall Risk Rating (a + b + c) = 3 \n \nThe Overall Risk Rating is 3.  Per the requirements of the tool, the project will use 10 for its risk rating \nsince that is the lowest rating allowed. \n \nAdditional risks to the project not included in the VCS risk assessment include the following issues.  CIMA \nhas worked and will continue to work actively to mitigate these potential threats as detailed below each \nrisk.   \n \nConcessions in the buffer zone – The Peruvian government has granted timber, mining, and oil \nconcessions in the buffer zone.  Not all of these concessions are active but the concession owners do \nhave the right to use the land. While these concessions are not in the park directly, they pose a risk to the \npark.  Threats to the park may result from illegal operations in or misuse of the concessions, resulting in \ndeforestation or pollution within the park and displacement of immigrants who move closer to or into the \npark, increasing pressure in the area.  \n \nMitigation strategy: CIMA will continue to build relationships and work closely with local, regional, and \nnational government entities to monitor concession activities.  In addition, CIMA will raise awareness of \nlaws and regulations in the communities to enable community members also to monitor and report illegal \nactivities to the proper authorities.  \n \nLack of land tenure in the buffer zone – As discussed several times in this document, most individuals in \nthe buffer zone do not own their land.  This results in immigrants having only weak ties to a specific \nlocation and no motivation to remain as erosion and soil depletion occurs, when instead they move to a \nnew location.  This advancing agricultural frontier presents one of the most severe threats to the park as \nwaves of immigrants advance their deforestation and erosion-provoking practices closer to and eventually \nwell into the park. \n \nMitigation strategy: CIMA will work to train local community members in sustainable land-use practices; to \nfacilitate land-tenure processes; to ensure constant communication with as many communities as \npossible, and to strengthen and improve the quality of life in the communities.  Many of the specific"
+            },
+            {
+              "paragraph_id": "x6-p22-06",
+              "page": 22,
+              "text": "5 \nNON-PERMANANCE RISK ASSESSMENT \nThe project developer described the non permanence risk assessment process and summarized \nsupporting data in a document titled “PNCAZ Non-Permanence Risk Report.”  The document outlines a \nrisk assessment conducted using the VCA AFOLU Non-Permanence Risk Tool.  SCS reviewed the risk \nscores assigned and the supporting evidence presented.  During field interviews, SCS inquired about risk \nelements, and as relevant, checked any calculations made.  SCS determined that the risk score assigned \nby the project proponent is appropriate and in conformance with the tool.  The risk score assigned and \nevidence reviewed is summarized below:"
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "P2",
+          "question": "Does the text give a specific buffer contribution (a percentage or a number of credits set aside)?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.17,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "P3",
+          "question": "Does the text describe concrete measures to monitor or prevent reversals (e.g. fire, illegal logging, land conversion)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p42-01",
+              "page": 42,
+              "text": "1.10.4  Land Use and Property Rights (CCB: G1.6, G5.2, G5.3, G5.4, G5.5) \nLand within the project area is a national park owned by the national government of Peru. Land use in \nnational parks is limited by Law No. 26834 to non-commercial activities. The park is sub-divided into four \nzones, each with a range of restrictions, from areas with no permitted entry to ones that permit traditional \nand low-impact uses (INRENA 2006). With SERNANP, CIMA developed criteria for land use based on the \nhistory of traditional use and fragility of the land and then implemented programs to patrol and enforce the \ndesignated uses.  \n \nAs described in Section 1.10.1.1, there is a possibility that an uncontacted group of Kakataibo resides in \nor near the park, which led to the development of the intangible zone that permits no entry or use by \nanyone other than the Kakataibo in voluntary isolation.  CIMA worked extensively with Kakataibo tribal \nleaders and the Peruvian government to identify the greatest possible range of these people when \ndefining this intangible zone.  Park guards, communal park guards and extension team personnel all \nreceive training regarding how to respect the rights of these people to remain uncontacted and the best \nways to react if contact accidentally happens in the buffer zone.  Any attempts to locate these people in \nvoluntary isolation, to ask them for permission to develop a REDD project, would directly violate their right \nunder Peruvian laws and the international agreements signed by Peru as described in Section 1.11 to \nremain uncontacted.  However, through the efforts discussed, CIMA has taken every possible measure to \nensure that the project design allows no project activity in any way to encroach on these people. In fact, \nthe activities in this region are designed specifically to allow the uncontacted peoples to conduct their \nlives as they wish, with zero interference from outsiders.   \n  \nIn late 2000, when CIMA’s predecessor organization APECO and The Field Museum were preparing the \ndocuments necessary to establish Cordillera Azul National Park, they partnered with Conservational \nInternational (CI). CI retained a law firm in Peru to research land ownership and claims in the area so that \nboundaries for the park could be designed to avoid any private properties inside. Due to an oversight, \nownership claims filed in the district of Loreto were not investigated. As a result, the park was established \nwith some private parcels, 1,227 hectares, inside the park boundaries. CIMA reached agreements with all \n21 landowners to limit land-clearing activities in the park. Although there are no permanent residences in \nthe park, the project will not claim any avoided deforestation credits for these areas. \n  \nWhen the project began, only one area inside the park continued to be incompatible with conservation: an \nestimated 220 hectare, cattle ranch on the southwest corner of the park that had not been detected when \nthe park was established. Once it was detected, the cattle rancher was asked to leave the park (Carta \nMultiple Nº 002-2006-INRENA-IANP-PNCAZ/J) since he did not own the land. In a response letter, the \nrancher offered not to expand his operations and to help keep watch for illegal uses of land within the \npark (Carta de respuesta y compromiso del 18 de febrero de 2007), since he was there prior to the \ndevelopment of the Park. SERNANP and CIMA agreed to this and allowed the rancher to remain under \nthese terms because he had been there prior to the Park’s establishment.  Just prior to the start of the \nproject, monitoring demonstrated that the cattle rancher has expanded his operations in violation of his \nagreement.  CIMA is working with SERNANP to develop a plan for legally relocating the rancher to \nsuitable, already cleared land in the buffer zone.  The legal process will be handled by MINAM and will \nwork through the Peruvian legal system to ensure that the cattle rancher obtains appropriate legal \nrepresentation in the proceedings.   \n \nThe Peruvian government has assigned rights or designated areas in the buffer zone for various uses \nincluding forestry concessions, petroleum lots, mining concessions and community lands. While the area \nassigned for a specific use is clearly delineated, designated lands often overlap with each other. The \nmajority of people in the buffer zone do not legally own their land. They are squatters who live and work \non land owned by the national government. These overlapping concessions and squatters lead to conflict \nwhen all try to work the same land. One of the project priorities is to work with the communities in critical \nareas where roads or rivers provide access into the park to establish community boundaries, obtain land \ntenure for residents, lessen land erosion, and strengthen interest in conservation and sustainable land \nuse. The communities in critical areas and other areas of priority in the buffer zone have had extensive \ninteraction with CIMA as described in Sections 1.10.2 Demographics, 6.1 Net Impact on the Community, \n7.1 Stakeholder Involvement in Project Design, and 6.2 Community Monitoring."
+            },
+            {
+              "paragraph_id": "p62-03",
+              "page": 62,
+              "text": "1.13.4 Risk Assessment (CCB: G3.5) \nThe risk analysis has been conducted in accordance with the Verified Carbon Standard, AFOLU Non-\nPermanence Risk Tool Version 3.1 dated February 1, 2012 (VCS Non-Permanence Tool).  Risks were \nassessed over a period of 100 years in accordance with the Tool’s requirements.  The overall risk rating \nis calculated using the formulas included in the Tool and the criteria for each subsection.  The overall risk \ntable summarizes the scores for each sub-section and presents the total risk.  The Non-Permanence Risk \nReport details the analysis and is included in Appendix 3. \n \nTable 1.5: Overall Risk Rating Table (Summary from Appendix 3) \nRisk Category  \nRating  \na) Internal Risk \n0 \nb) External Risk \n0 \nc) Natural Risk \n3 \nOverall Risk Rating (a + b + c) = 3 \n \nThe Overall Risk Rating is 3.  Per the requirements of the tool, the project will use 10 for its risk rating \nsince that is the lowest rating allowed. \n \nAdditional risks to the project not included in the VCS risk assessment include the following issues.  CIMA \nhas worked and will continue to work actively to mitigate these potential threats as detailed below each \nrisk.   \n \nConcessions in the buffer zone – The Peruvian government has granted timber, mining, and oil \nconcessions in the buffer zone.  Not all of these concessions are active but the concession owners do \nhave the right to use the land. While these concessions are not in the park directly, they pose a risk to the \npark.  Threats to the park may result from illegal operations in or misuse of the concessions, resulting in \ndeforestation or pollution within the park and displacement of immigrants who move closer to or into the \npark, increasing pressure in the area.  \n \nMitigation strategy: CIMA will continue to build relationships and work closely with local, regional, and \nnational government entities to monitor concession activities.  In addition, CIMA will raise awareness of \nlaws and regulations in the communities to enable community members also to monitor and report illegal \nactivities to the proper authorities.  \n \nLack of land tenure in the buffer zone – As discussed several times in this document, most individuals in \nthe buffer zone do not own their land.  This results in immigrants having only weak ties to a specific \nlocation and no motivation to remain as erosion and soil depletion occurs, when instead they move to a \nnew location.  This advancing agricultural frontier presents one of the most severe threats to the park as \nwaves of immigrants advance their deforestation and erosion-provoking practices closer to and eventually \nwell into the park. \n \nMitigation strategy: CIMA will work to train local community members in sustainable land-use practices; to \nfacilitate land-tenure processes; to ensure constant communication with as many communities as \npossible, and to strengthen and improve the quality of life in the communities.  Many of the specific"
+            },
+            {
+              "paragraph_id": "p63-01",
+              "page": 63,
+              "text": "activities will be further defined once the regional meetings with communities have taken place to allow \ncommunities to provide their input into the design process. \n \nIllegal activities in the buffer zone – Illegal activities in the buffer zone place additional deforestation \npressure on the park by increasing deforestation in the buffer zone and pushing immigrants closer to and \neventually into the park.  \n \nMitigation strategy: CIMA will raise awareness of laws and regulations in the communities to enable \ncommunities also to monitor and report illegal activities to the proper authorities. Because many illegal \nactivities are driven by a need for additional resources, CIMA will work to train local communities in \nsustainable land-use practices; to facilitate land-tenure processes; to ensure constant communication \nwith as many communities as possible, and to strengthen and improve the quality of life in the \ncommunities (as mentioned above).     \n \nIncreased tensions between communities CIMA is initially working with and those that will be worked with \nin the future – There is a possibility that communities not located in the critical areas will become jealous \nof the communities that have received priority.  On the one hand, this would indicate a major success in \nthat jealousy will only arise if CIMA’s activities are perceived as having value and improving the quality of \nlife for buffer zone communities.  On the other hand, increased tensions might be a negative issue and \nmay pose a risk to the project if raids or land grabs occurred as a result. For example, some communities \nmay become jealous of others who have been formally granted land tenure or zoning.   \n \nMitigation strategy: CIMA will work to ensure constant communication with as many communities as \npossible to identify and address concerns as quickly as possible and to institute a strong, proactive \ncommunication program and complaint-resolution process.  CIMA will never be able to work with all \ncommunities simultaneously but these measures will assist communities in understanding the priority-\nsetting process and to be able to voice concerns."
+            },
+            {
+              "paragraph_id": "x1-p10-02",
+              "page": 10,
+              "text": "Goal 2:Sub-goal: Strengthen the participatory management model for PNCAZ \nActivity: \n5. Coordinate with the Comité de Gestión (CG) to develop and implement the Plan Maestro \n \nThe CG has participated in the development of the Plan Maestro but has not yet been fully integrated into \nthe implementation of the Plan Maestro.  Not all members of the CG represent Primary Stakeholders, and \ntherefore not all members have been equally trained regarding the REDD Project.  The CG’s role will \ncontinue to increase following the implementation of the Secondary Stakeholder Communication Plan.  \nOnce all primary and secondary stakeholders are introduced to the REDD project process and the project \nactivities, the CG will be able to play a greater role as an organization. \n \nAll other activities have occurred during the timeframe of this monitoring period.   \n \nSummary of Park Protection Activities \nThe approach to park protection has not changed over the four year monitoring period.  CIMA continues \nto implement the ICC, an integrated planning and monitoring tool that incorporates social, biological, \ninstitutional, and operational aspects to effectively manage and protect the park.   \n \nThe system of park guard control posts and routes remains the same and is being maintained.  The park \nguards’ routes are defined but special patrols are done periodically in response to potential threats being \nreported.  Feedback from park guards and CIMA has been used to improve and streamline the reporting \nsystem.  \n \nPark guards continue to document key species observed (sightings or tracks) during their patrols to \nmonitor the project’s impacts on biodiversity.  Similarly park guards report any signs of illegal uses of the \npark found in the park or buffer zone.    \n \nSummary of Buffer Zone Activities \nCIMA’s work in the buffer zone has evolved over the monitoring period as CIMA was able to monitor the \neffectiveness of its activities and learn new techniques and participatory processes. \n \nBased on its work in the region prior to the project’s start in 2008, CIMA initially focused on five strategies \nfor stabilizing land use and improving quality of life in the buffer zone: Environmental Awareness, \nStrengthening Organizations, Strengthening Technical Support for community efforts, Monitoring and \nEvaluation.  During this time, CIMA developed a number of conservation agreements with communities in \nline with the customary and traditional uses in the region where communities committed to using their \nresources in a sustainable manner.  These agreements also include commitments by local people to \nparticipate in supporting the protection of PNCAZ (park guards and control posts), and their own \nresources in the buffer zone (rural patrols, self-defense committees) \n \nIn 2009 and 2010, CIMA began a formal strategic planning effort with communities building on the efforts \nof the educational programs.  Quality of Life plans specific to each community began to be developed \nallowing CIMA and the residents to better define the community’s needs and future desires and identify \nhow these related to the park’s conservation and economic sustainability. These plans included setting \nobjectives in three areas:"
+            },
+            {
+              "paragraph_id": "x2-p53-04",
+              "page": 53,
+              "text": "Further, during the monitoring period, no fires were detected in the project area by Firecast,\nwith the latest update issued 28 January 2015. Firecast2 is a MODIS-based fire monitoring\nsystem developed by Conservation International, NASA and ESRI, with highly precise\ndetection of fires >50m2."
+            },
+            {
+              "paragraph_id": "x3-p55-04",
+              "page": 55,
+              "text": "Further, during the monitoring period, no fires were detected in the project area by Firecast, \nwithin the period from August 2014 to August 2015. Firecast 2 is a MODIS-based fire \nmonitoring system developed by Conservation International, NASA and ESRI, with highly \nprecise detection of fires >50m2.  A map showing the location of all reported fires from \nFirecast is shown in Figure 4.1.2"
+            },
+            {
+              "paragraph_id": "x4-p74-04",
+              "page": 74,
+              "text": "Further, during the monitoring period, no fires were detected in the project area by Firecast, within \nthe period from August 2015 to August 2016. Firecast29 is a MODIS-based fire monitoring system \ndeveloped by Conservation International, NASA and ESRI, with highly precise detection of fires \n>50m2.  A map showing the location of all reported fires from Firecast is shown in Figure 10"
+            },
+            {
+              "paragraph_id": "x5-p76-03",
+              "page": 76,
+              "text": "Parkguards reported no forest fires during the monitoring period from August 2016 to August 2018."
+            },
+            {
+              "paragraph_id": "x5-p76-04",
+              "page": 76,
+              "text": "Likewise, Firecast detected few fires in the project area during the same period (Figure 10). \nFirecast35 is a MODIS-based fire monitoring system developed by Conservation International, \nNASA and ESRI, with highly precise detection of fires >50m2. Two apparent fires were detected in \nthe northern area of PNCAZ, however, in the classification process, no evidence of fire scars was \ndetected (i.e. no visible loss of forest cover or structural loss), and therefore Aburn,i,t  was set equal \nto 0."
+            }
+          ],
+          "second_opinion_p_yes": 0.95,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "1.13.4 Risk Assessment (CCB: G3.5) \nThe risk analysis has been conducted in accordance with the Verified Carbon Standard, AFOLU Non-\nPermanence Risk Tool Version 3.1 dated February 1, 2012 (VCS Non-Permanence Tool).  Risks were \nassessed over a period of 100 years in accordance with the Tool’s requirements.  The overall risk rating \nis calculated using the formulas included in the Tool and the criteria for each subsection.  The overall risk \ntable summarizes the scores for each sub-section and presents the total risk.  The Non-Permanence Risk \nReport details the analysis and is included in Appendix 3. \n \nTable 1.5: Overall Risk Rating Table (Summary from Appendix 3) \nRisk Category  \nRating  \na) Internal Risk \n0 \nb) External Risk \n0 \nc) Natural Risk \n3 \nOverall Risk Rating (a + b + c) = 3 \n \nThe Overall Risk Rating is 3.  Per the requirements of the tool, the project will use 10 for its risk rating \nsince that is the lowest rating allowed. \n \nAdditional risks to the project not included in the VCS risk assessment include the following issues.  CIMA \nhas worked and will continue to work actively to mitigate these potential threats as detailed below each \nrisk.   \n \nConcessions in the buffer zone – The Peruvian government has granted timber, mining, and oil \nconcessions in the buffer zone.  Not all of these concessions are active but the concession owners do \nhave the right to use the land. While these concessions are not in the park directly, they pose a risk to the \npark.  Threats to the park may result from illegal operations in or misuse of the concessions, resulting in \ndeforestation or pollution within the park and displacement of immigrants who move closer to or into the \npark, increasing pressure in the area.  \n \nMitigation strategy: CIMA will continue to build relationships and work closely with local, regional, and \nnational government entities to monitor concession activities.  In addition, CIMA will raise awareness of \nlaws and regulations in the communities to enable community members also to monitor and report illegal \nactivities to the proper authorities.  \n \nLack of land tenure in the buffer zone – As discussed several times in this document, most individuals in \nthe buffer zone do not own their land.  This results in immigrants having only weak ties to a specific \nlocation and no motivation to remain as erosion and soil depletion occurs, when instead they move to a \nnew location.  This advancing agricultural frontier presents one of the most severe threats to the park as \nwaves of immigrants advance their deforestation and erosion-provoking practices closer to and eventually \nwell into the park. \n \nMitigation strategy: CIMA will work to train local community members in sustainable land-use practices; to \nfacilitate land-tenure processes; to ensure constant communication with as many communities as \npossible, and to strengthen and improve the quality of life in the communities.  Many of the specific",
+          "page": 62,
+          "paragraph_id": "p62-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "5 \nNON-PERMANANCE RISK ASSESSMENT \nThe project developer described the non permanence risk assessment process and summarized \nsupporting data in a document titled “PNCAZ Non-Permanence Risk Report.”  The document outlines a \nrisk assessment conducted using the VCA AFOLU Non-Permanence Risk Tool.  SCS reviewed the risk \nscores assigned and the supporting evidence presented.  During field interviews, SCS inquired about risk \nelements, and as relevant, checked any calculations made.  SCS determined that the risk score assigned \nby the project proponent is appropriate and in conformance with the tool.  The risk score assigned and \nevidence reviewed is summarized below:",
+          "page": 22,
+          "paragraph_id": "x6-p22-06",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "1.10.4  Land Use and Property Rights (CCB: G1.6, G5.2, G5.3, G5.4, G5.5) \nLand within the project area is a national park owned by the national government of Peru. Land use in \nnational parks is limited by Law No. 26834 to non-commercial activities. The park is sub-divided into four \nzones, each with a range of restrictions, from areas with no permitted entry to ones that permit traditional \nand low-impact uses (INRENA 2006). With SERNANP, CIMA developed criteria for land use based on the \nhistory of traditional use and fragility of the land and then implemented programs to patrol and enforce the \ndesignated uses.  \n \nAs described in Section 1.10.1.1, there is a possibility that an uncontacted group of Kakataibo resides in \nor near the park, which led to the development of the intangible zone that permits no entry or use by \nanyone other than the Kakataibo in voluntary isolation.  CIMA worked extensively with Kakataibo tribal \nleaders and the Peruvian government to identify the greatest possible range of these people when \ndefining this intangible zone.  Park guards, communal park guards and extension team personnel all \nreceive training regarding how to respect the rights of these people to remain uncontacted and the best \nways to react if contact accidentally happens in the buffer zone.  Any attempts to locate these people in \nvoluntary isolation, to ask them for permission to develop a REDD project, would directly violate their right \nunder Peruvian laws and the international agreements signed by Peru as described in Section 1.11 to \nremain uncontacted.  However, through the efforts discussed, CIMA has taken every possible measure to \nensure that the project design allows no project activity in any way to encroach on these people. In fact, \nthe activities in this region are designed specifically to allow the uncontacted peoples to conduct their \nlives as they wish, with zero interference from outsiders.   \n  \nIn late 2000, when CIMA’s predecessor organization APECO and The Field Museum were preparing the \ndocuments necessary to establish Cordillera Azul National Park, they partnered with Conservational \nInternational (CI). CI retained a law firm in Peru to research land ownership and claims in the area so that \nboundaries for the park could be designed to avoid any private properties inside. Due to an oversight, \nownership claims filed in the district of Loreto were not investigated. As a result, the park was established \nwith some private parcels, 1,227 hectares, inside the park boundaries. CIMA reached agreements with all \n21 landowners to limit land-clearing activities in the park. Although there are no permanent residences in \nthe park, the project will not claim any avoided deforestation credits for these areas. \n  \nWhen the project began, only one area inside the park continued to be incompatible with conservation: an \nestimated 220 hectare, cattle ranch on the southwest corner of the park that had not been detected when \nthe park was established. Once it was detected, the cattle rancher was asked to leave the park (Carta \nMultiple Nº 002-2006-INRENA-IANP-PNCAZ/J) since he did not own the land. In a response letter, the \nrancher offered not to expand his operations and to help keep watch for illegal uses of land within the \npark (Carta de respuesta y compromiso del 18 de febrero de 2007), since he was there prior to the \ndevelopment of the Park. SERNANP and CIMA agreed to this and allowed the rancher to remain under \nthese terms because he had been there prior to the Park’s establishment.  Just prior to the start of the \nproject, monitoring demonstrated that the cattle rancher has expanded his operations in violation of his \nagreement.  CIMA is working with SERNANP to develop a plan for legally relocating the rancher to \nsuitable, already cleared land in the buffer zone.  The legal process will be handled by MINAM and will \nwork through the Peruvian legal system to ensure that the cattle rancher obtains appropriate legal \nrepresentation in the proceedings.   \n \nThe Peruvian government has assigned rights or designated areas in the buffer zone for various uses \nincluding forestry concessions, petroleum lots, mining concessions and community lands. While the area \nassigned for a specific use is clearly delineated, designated lands often overlap with each other. The \nmajority of people in the buffer zone do not legally own their land. They are squatters who live and work \non land owned by the national government. These overlapping concessions and squatters lead to conflict \nwhen all try to work the same land. One of the project priorities is to work with the communities in critical \nareas where roads or rivers provide access into the park to establish community boundaries, obtain land \ntenure for residents, lessen land erosion, and strengthen interest in conservation and sustainable land \nuse. The communities in critical areas and other areas of priority in the buffer zone have had extensive \ninteraction with CIMA as described in Sections 1.10.2 Demographics, 6.1 Net Impact on the Community, \n7.1 Stakeholder Involvement in Project Design, and 6.2 Community Monitoring.",
+          "page": 42,
+          "paragraph_id": "p42-01",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "activities will be further defined once the regional meetings with communities have taken place to allow \ncommunities to provide their input into the design process. \n \nIllegal activities in the buffer zone – Illegal activities in the buffer zone place additional deforestation \npressure on the park by increasing deforestation in the buffer zone and pushing immigrants closer to and \neventually into the park.  \n \nMitigation strategy: CIMA will raise awareness of laws and regulations in the communities to enable \ncommunities also to monitor and report illegal activities to the proper authorities. Because many illegal \nactivities are driven by a need for additional resources, CIMA will work to train local communities in \nsustainable land-use practices; to facilitate land-tenure processes; to ensure constant communication \nwith as many communities as possible, and to strengthen and improve the quality of life in the \ncommunities (as mentioned above).     \n \nIncreased tensions between communities CIMA is initially working with and those that will be worked with \nin the future – There is a possibility that communities not located in the critical areas will become jealous \nof the communities that have received priority.  On the one hand, this would indicate a major success in \nthat jealousy will only arise if CIMA’s activities are perceived as having value and improving the quality of \nlife for buffer zone communities.  On the other hand, increased tensions might be a negative issue and \nmay pose a risk to the project if raids or land grabs occurred as a result. For example, some communities \nmay become jealous of others who have been formally granted land tenure or zoning.   \n \nMitigation strategy: CIMA will work to ensure constant communication with as many communities as \npossible to identify and address concerns as quickly as possible and to institute a strong, proactive \ncommunication program and complaint-resolution process.  CIMA will never be able to work with all \ncommunities simultaneously but these measures will assist communities in understanding the priority-\nsetting process and to be able to voice concerns.",
+          "page": 63,
+          "paragraph_id": "p63-01",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Goal 2:Sub-goal: Strengthen the participatory management model for PNCAZ \nActivity: \n5. Coordinate with the Comité de Gestión (CG) to develop and implement the Plan Maestro \n \nThe CG has participated in the development of the Plan Maestro but has not yet been fully integrated into \nthe implementation of the Plan Maestro.  Not all members of the CG represent Primary Stakeholders, and \ntherefore not all members have been equally trained regarding the REDD Project.  The CG’s role will \ncontinue to increase following the implementation of the Secondary Stakeholder Communication Plan.  \nOnce all primary and secondary stakeholders are introduced to the REDD project process and the project \nactivities, the CG will be able to play a greater role as an organization. \n \nAll other activities have occurred during the timeframe of this monitoring period.   \n \nSummary of Park Protection Activities \nThe approach to park protection has not changed over the four year monitoring period.  CIMA continues \nto implement the ICC, an integrated planning and monitoring tool that incorporates social, biological, \ninstitutional, and operational aspects to effectively manage and protect the park.   \n \nThe system of park guard control posts and routes remains the same and is being maintained.  The park \nguards’ routes are defined but special patrols are done periodically in response to potential threats being \nreported.  Feedback from park guards and CIMA has been used to improve and streamline the reporting \nsystem.  \n \nPark guards continue to document key species observed (sightings or tracks) during their patrols to \nmonitor the project’s impacts on biodiversity.  Similarly park guards report any signs of illegal uses of the \npark found in the park or buffer zone.    \n \nSummary of Buffer Zone Activities \nCIMA’s work in the buffer zone has evolved over the monitoring period as CIMA was able to monitor the \neffectiveness of its activities and learn new techniques and participatory processes. \n \nBased on its work in the region prior to the project’s start in 2008, CIMA initially focused on five strategies \nfor stabilizing land use and improving quality of life in the buffer zone: Environmental Awareness, \nStrengthening Organizations, Strengthening Technical Support for community efforts, Monitoring and \nEvaluation.  During this time, CIMA developed a number of conservation agreements with communities in \nline with the customary and traditional uses in the region where communities committed to using their \nresources in a sustainable manner.  These agreements also include commitments by local people to \nparticipate in supporting the protection of PNCAZ (park guards and control posts), and their own \nresources in the buffer zone (rural patrols, self-defense committees) \n \nIn 2009 and 2010, CIMA began a formal strategic planning effort with communities building on the efforts \nof the educational programs.  Quality of Life plans specific to each community began to be developed \nallowing CIMA and the residents to better define the community’s needs and future desires and identify \nhow these related to the park’s conservation and economic sustainability. These plans included setting \nobjectives in three areas:",
+          "page": 10,
+          "paragraph_id": "x1-p10-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Further, during the monitoring period, no fires were detected in the project area by Firecast,\nwith the latest update issued 28 January 2015. Firecast2 is a MODIS-based fire monitoring\nsystem developed by Conservation International, NASA and ESRI, with highly precise\ndetection of fires >50m2.",
+          "page": 53,
+          "paragraph_id": "x2-p53-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Further, during the monitoring period, no fires were detected in the project area by Firecast, \nwithin the period from August 2014 to August 2015. Firecast 2 is a MODIS-based fire \nmonitoring system developed by Conservation International, NASA and ESRI, with highly \nprecise detection of fires >50m2.  A map showing the location of all reported fires from \nFirecast is shown in Figure 4.1.2",
+          "page": 55,
+          "paragraph_id": "x3-p55-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Further, during the monitoring period, no fires were detected in the project area by Firecast, within \nthe period from August 2015 to August 2016. Firecast29 is a MODIS-based fire monitoring system \ndeveloped by Conservation International, NASA and ESRI, with highly precise detection of fires \n>50m2.  A map showing the location of all reported fires from Firecast is shown in Figure 10",
+          "page": 74,
+          "paragraph_id": "x4-p74-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Parkguards reported no forest fires during the monitoring period from August 2016 to August 2018.",
+          "page": 76,
+          "paragraph_id": "x5-p76-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Likewise, Firecast detected few fires in the project area during the same period (Figure 10). \nFirecast35 is a MODIS-based fire monitoring system developed by Conservation International, \nNASA and ESRI, with highly precise detection of fires >50m2. Two apparent fires were detected in \nthe northern area of PNCAZ, however, in the classification process, no evidence of fire scars was \ndetected (i.e. no visible loss of forest cover or structural loss), and therefore Aburn,i,t  was set equal \nto 0.",
+          "page": 76,
+          "paragraph_id": "x5-p76-04",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p3-02",
+          "p23-01",
+          "p25-02",
+          "p25-03",
+          "p26-01",
+          "p30-01",
+          "p34-01",
+          "p34-02",
+          "p34-03",
+          "p41-16",
+          "p42-01",
+          "p43-01",
+          "p44-01",
+          "p62-02",
+          "p62-03",
+          "p63-01",
+          "p156-02",
+          "p156-03",
+          "p171-01",
+          "x1-p7-13",
+          "x1-p7-14",
+          "x1-p10-02",
+          "x1-p10-03",
+          "x1-p45-02",
+          "x1-p45-03",
+          "x2-p53-03",
+          "x2-p53-04",
+          "x3-p55-03",
+          "x3-p55-04",
+          "x3-p55-05",
+          "x4-p13-02",
+          "x4-p13-03",
+          "x4-p57-04",
+          "x4-p74-03",
+          "x4-p74-04",
+          "x4-p74-05",
+          "x5-p13-06",
+          "x5-p13-07",
+          "x5-p13-08",
+          "x5-p76-03",
+          "x5-p76-04",
+          "x5-p76-05",
+          "x6-p8-04",
+          "x6-p8-06",
+          "x6-p22-05",
+          "x6-p22-06"
+        ],
+        "chars": 44954
+      }
+    },
+    {
+      "principle": "robust_quantification",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (Q1, Q2, Q3, Q4).",
+      "checks": [
+        {
+          "id": "Q1",
+          "question": "Does the text show how baseline emissions are calculated, with an equation, parameter values or a numeric result?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p123-12",
+              "page": 123,
+              "text": "Ex-ante baseline emissions occurring in the leakage belt are estimated by first estimating the amount \nof deforestation that is thought to be displaced from the project area to the leakage belt due to the \nimplementation of the REDD project activity. For ex ante purposes, a leakage factor of 20% is applied, \ni.e. 20% of deforestation caused by local agents is shifted outside of the project area due the project \nactivity. Leakage is then calculated as the difference between project and baseline emissions in the \nleakage belt, as outlined in Equation 1 from LK-ASU Module (below). Ex-ante estimates of the net \nCO2 emissions due to unplanned deforestation displaced from the project area to the leakage belt is \ncalculated for each year in the baseline period in Table 3.38."
+            }
+          ],
+          "second_opinion_p_yes": 0.93,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q2",
+          "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p123-12",
+              "page": 123,
+              "text": "Ex-ante baseline emissions occurring in the leakage belt are estimated by first estimating the amount \nof deforestation that is thought to be displaced from the project area to the leakage belt due to the \nimplementation of the REDD project activity. For ex ante purposes, a leakage factor of 20% is applied, \ni.e. 20% of deforestation caused by local agents is shifted outside of the project area due the project \nactivity. Leakage is then calculated as the difference between project and baseline emissions in the \nleakage belt, as outlined in Equation 1 from LK-ASU Module (below). Ex-ante estimates of the net \nCO2 emissions due to unplanned deforestation displaced from the project area to the leakage belt is \ncalculated for each year in the baseline period in Table 3.38."
+            }
+          ],
+          "second_opinion_p_yes": 0.97,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q3",
+          "question": "Does the text address uncertainty or the use of conservative assumptions in the emission reduction estimate?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x6-p20-03",
+              "page": 20,
+              "text": "Uncertainty calculations and appropriate deductions are applied by the methodology in the monitoring \nstage, and will use the X-UNC module.  These calculations are reported in monitoring reports, and are \nassessed at verification, rather than validation."
+            }
+          ],
+          "second_opinion_p_yes": 0.95,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q4",
+          "question": "Does the text describe a monitoring plan that names the parameters to be measured and how often or by what method?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p152-04",
+              "page": 152,
+              "text": "4.3.3 \nEmissions due to deforestation and natural disturbance \nForest cover change due to deforestation and natural disturbance is monitored through periodic \nassessment of classified satellite imagery covering the project area. Emissions (ÄCP,Def,i,t and ÄCP,DistPA,i,t \nfor deforestation and natural disturbance, respectively)  are estimated by multiplying area of forest loss \ndetected (ADefPA,u,i,t and ADistPA,q,i,t, for deforestation and natural disturbance, respectively) by average \nforest carbon stock per unit area (conservatively assuming ÄCP,Dist,q,i,t and ÄCpools,Def,u,i,t  = CBSL,i). Stock \nestimates from the initial field inventory completed in 2009, are valid for 10 years (per VM0007), minimally \nthrough 2018. Post 2018, forest carbon stock estimates will be updated for any strata where deforestation \nor natural disturbance is detected.  \n \n \n4.3.3.1 \nMonitoring changes in forest cover \nThe project boundary, as set in the PD, will serve as the initial “forest cover benchmark map” against \nwhich changes in forest cover will assessed over the interval of the first monitoring period; the entire \nproject area has been demonstrated to meet the forest definition at the beginning of the crediting period. \nFor subsequent monitoring periods, change in forest cover will be assessed against the preceding \nclassified forest cover map marking the beginning of the monitoring interval. \n \nData collection and analysis to determine forest cover change at each monitoring event will follow the \nprocedures detailed below. The resulting classified image is compared with the preceding classified \nimage (forest cover benchmark map marking the start of the monitoring interval) to detect forest cover \nchange over the monitoring interval, and subsequently becomes the updated forest cover benchmark \nmap for the next monitoring interval. Thus, the forest benchmark map is updated at each monitoring \nevent. All changes in forest cover detected for the monitoring interval will be annualized (to produce \nestimates of ha for each year) by dividing the area by the number of years in the period. \n \nFor each monitoring/verification date, satellite imagery for that year will be acquired and interpreted to \nproduce a classified forest cover map in which forest and non forest are distinguished. AMinimum \nMapping Unit (MMU) of 0.81 ha, corresponding to 3pixels by 3 pixels Landsat resolution (90m by 90m) \nwill be used throughout the duration of the project crediting period. \n \nThe general work flow for monitoring forest cover change is shown in Figure 4.1. \n \nFigure 4.1: General workflow for monitoring of forest cover change in the project area and leakage belt"
+            }
+          ],
+          "second_opinion_p_yes": 0.94,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "Ex-ante baseline emissions occurring in the leakage belt are estimated by first estimating the amount \nof deforestation that is thought to be displaced from the project area to the leakage belt due to the \nimplementation of the REDD project activity. For ex ante purposes, a leakage factor of 20% is applied, \ni.e. 20% of deforestation caused by local agents is shifted outside of the project area due the project \nactivity. Leakage is then calculated as the difference between project and baseline emissions in the \nleakage belt, as outlined in Equation 1 from LK-ASU Module (below). Ex-ante estimates of the net \nCO2 emissions due to unplanned deforestation displaced from the project area to the leakage belt is \ncalculated for each year in the baseline period in Table 3.38.",
+          "page": 123,
+          "paragraph_id": "p123-12",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Uncertainty calculations and appropriate deductions are applied by the methodology in the monitoring \nstage, and will use the X-UNC module.  These calculations are reported in monitoring reports, and are \nassessed at verification, rather than validation.",
+          "page": 20,
+          "paragraph_id": "x6-p20-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "4.3.3 \nEmissions due to deforestation and natural disturbance \nForest cover change due to deforestation and natural disturbance is monitored through periodic \nassessment of classified satellite imagery covering the project area. Emissions (ÄCP,Def,i,t and ÄCP,DistPA,i,t \nfor deforestation and natural disturbance, respectively)  are estimated by multiplying area of forest loss \ndetected (ADefPA,u,i,t and ADistPA,q,i,t, for deforestation and natural disturbance, respectively) by average \nforest carbon stock per unit area (conservatively assuming ÄCP,Dist,q,i,t and ÄCpools,Def,u,i,t  = CBSL,i). Stock \nestimates from the initial field inventory completed in 2009, are valid for 10 years (per VM0007), minimally \nthrough 2018. Post 2018, forest carbon stock estimates will be updated for any strata where deforestation \nor natural disturbance is detected.  \n \n \n4.3.3.1 \nMonitoring changes in forest cover \nThe project boundary, as set in the PD, will serve as the initial “forest cover benchmark map” against \nwhich changes in forest cover will assessed over the interval of the first monitoring period; the entire \nproject area has been demonstrated to meet the forest definition at the beginning of the crediting period. \nFor subsequent monitoring periods, change in forest cover will be assessed against the preceding \nclassified forest cover map marking the beginning of the monitoring interval. \n \nData collection and analysis to determine forest cover change at each monitoring event will follow the \nprocedures detailed below. The resulting classified image is compared with the preceding classified \nimage (forest cover benchmark map marking the start of the monitoring interval) to detect forest cover \nchange over the monitoring interval, and subsequently becomes the updated forest cover benchmark \nmap for the next monitoring interval. Thus, the forest benchmark map is updated at each monitoring \nevent. All changes in forest cover detected for the monitoring interval will be annualized (to produce \nestimates of ha for each year) by dividing the area by the number of years in the period. \n \nFor each monitoring/verification date, satellite imagery for that year will be acquired and interpreted to \nproduce a classified forest cover map in which forest and non forest are distinguished. AMinimum \nMapping Unit (MMU) of 0.81 ha, corresponding to 3pixels by 3 pixels Landsat resolution (90m by 90m) \nwill be used throughout the duration of the project crediting period. \n \nThe general work flow for monitoring forest cover change is shown in Figure 4.1. \n \nFigure 4.1: General workflow for monitoring of forest cover change in the project area and leakage belt",
+          "page": 152,
+          "paragraph_id": "p152-04",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-01",
+          "p3-01",
+          "p3-02",
+          "p6-03",
+          "p6-04",
+          "p6-05",
+          "p24-04",
+          "p25-01",
+          "p25-02",
+          "p80-02",
+          "p81-01",
+          "p81-02",
+          "p123-11",
+          "p123-12",
+          "p123-13",
+          "p130-04",
+          "p152-03",
+          "p152-04",
+          "p154-01",
+          "p154-02",
+          "p163-01",
+          "p163-02",
+          "p166-04",
+          "x1-p40-06",
+          "x1-p40-07",
+          "x1-p40-08",
+          "x1-p52-02",
+          "x1-p52-03",
+          "x1-p64-33",
+          "x1-p64-34",
+          "x2-p23-09",
+          "x2-p23-10",
+          "x2-p24-09",
+          "x2-p24-10",
+          "x2-p33-04",
+          "x2-p33-05",
+          "x2-p33-13",
+          "x2-p33-14",
+          "x2-p35-02",
+          "x2-p35-03",
+          "x2-p35-04",
+          "x2-p58-03",
+          "x3-p25-13",
+          "x3-p64-02",
+          "x3-p64-03",
+          "x6-p20-02",
+          "x6-p20-03",
+          "x6-p21-20",
+          "x6-p21-21",
+          "x6-p36-04",
+          "x6-p36-05",
+          "x6-p36-06",
+          "x6-p42-04"
+        ],
+        "chars": 44991
+      }
+    },
+    {
+      "principle": "no_double_counting",
+      "status": "partial_evidence",
+      "score": 67,
+      "rationale": "Evidence found for 2 of 3 checks (D1, D2); not found in the excerpt: D3.",
+      "checks": [
+        {
+          "id": "D1",
+          "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p61-03",
+              "page": 61,
+              "text": "1.12.3 Participation under Other GHG Programs (CCB: CL1.5) \nThis project is only seeking registration under the VCS and CCB programs.  CCB does not issue carbon \ncredits and the project is not seeking to register credits with any other program."
+            }
+          ],
+          "second_opinion_p_yes": 0.83,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D2",
+          "question": "Does the text address other environmental credits or certificates (e.g. renewable energy certificates, I-RECs) or participation in an emissions trading scheme?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p61-04",
+              "page": 61,
+              "text": "1.12.4 Other Forms of Environmental Credit (CCB: CL1.5) \nThis project has not and will not seek to generate any other form of environmental credit."
+            },
+            {
+              "paragraph_id": "p61-02",
+              "page": 61,
+              "text": "1.12.2 Emissions Trading Programs and Other Binding Limits (CCB: CL1.5) \nThe avoided emissions from this project will not be used for compliance purposes in a regional or national \ncompliance program or to demonstrate conformance with a binding limit on GHG emissions.  Neither Peru \nnor regional or local governments have established a national target, a compliance program or a cap and \ntrade system."
+            }
+          ],
+          "second_opinion_p_yes": 0.94,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D3",
+          "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.19,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "1.12.3 Participation under Other GHG Programs (CCB: CL1.5) \nThis project is only seeking registration under the VCS and CCB programs.  CCB does not issue carbon \ncredits and the project is not seeking to register credits with any other program.",
+          "page": 61,
+          "paragraph_id": "p61-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "1.12.4 Other Forms of Environmental Credit (CCB: CL1.5) \nThis project has not and will not seek to generate any other form of environmental credit.",
+          "page": 61,
+          "paragraph_id": "p61-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "1.12.2 Emissions Trading Programs and Other Binding Limits (CCB: CL1.5) \nThe avoided emissions from this project will not be used for compliance purposes in a regional or national \ncompliance program or to demonstrate conformance with a binding limit on GHG emissions.  Neither Peru \nnor regional or local governments have established a national target, a compliance program or a cap and \ntrade system.",
+          "page": 61,
+          "paragraph_id": "p61-02",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p1-15",
+          "p2-01",
+          "p3-01",
+          "p61-01",
+          "p61-02",
+          "p61-03",
+          "p61-04",
+          "p61-05",
+          "p61-06",
+          "p70-14",
+          "p70-15",
+          "p71-11",
+          "p71-12",
+          "p71-13",
+          "p71-14",
+          "x1-p7-14",
+          "x1-p7-15",
+          "x2-p6-13",
+          "x2-p6-14",
+          "x2-p6-15",
+          "x2-p6-16",
+          "x2-p6-17",
+          "x3-p6-14",
+          "x3-p6-15",
+          "x3-p6-16",
+          "x3-p6-17",
+          "x3-p6-18",
+          "x4-p15-15",
+          "x4-p15-16",
+          "x4-p89-12",
+          "x4-p89-13",
+          "x4-p131-09",
+          "x4-p131-10",
+          "x5-p15-05",
+          "x5-p94-23",
+          "x5-p94-24",
+          "x5-p94-25",
+          "x5-p171-04",
+          "x6-p13-04",
+          "x6-p13-05",
+          "x6-p13-06",
+          "x6-p13-08",
+          "x6-p13-09",
+          "x6-p13-10",
+          "x6-p14-19",
+          "x6-p14-20",
+          "x6-p15-10",
+          "x6-p15-11",
+          "x6-p26-11",
+          "x6-p26-12",
+          "x6-p38-10",
+          "x6-p38-11"
+        ],
+        "chars": 25517
+      }
+    },
+    {
+      "principle": "safeguards",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (S1, S2, S3, S4).",
+      "checks": [
+        {
+          "id": "S1",
+          "question": "Does the text describe a stakeholder consultation with specifics such as dates, places, participants or comments received?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p35-02",
+              "page": 35,
+              "text": "The MUF process has evolved over time. For the 2003 MUF, communities elected their local facilitator. \nDepending on the size of the community, more than one facilitator was elected. For example, for the 2003 \nMUF, 53 facilitators, 5% women, were hired for the two month period while for the 2008 MUF, 345 \ncommunity representatives were hired, 19% women. CIMA and The Field Museum personnel trained the \nfacilitators and community representatives on data collection and provided information regarding PNCAZ \nand CIMA. In 2003, facilitators collected data on social organizations and use of natural resources over a \ntwo month period, using community assemblies and household interviews to conduct structured and \nsemi-structured interviews. Eight focus groups were used in each community along with individual \ninterviews: four focus groups included residents of both genders and all age groups, two focus groups \nincluded only women, one group was of community leaders, and one included only specialists or experts \n(e.g., the best hunters). Individual interviews were conducted with health workers, teachers, and directors \nof the local school if one is present, and other significant individuals like shamans, healers, and \ncommunity leaders or founders. In 2008, a change was made to the process to improve data collection \nand workshops were held with community representatives from each geographic area. Three to four \nrepresentatives from each community participated in the process to update the data from the previous \nMUF."
+            }
+          ],
+          "second_opinion_p_yes": 0.39,
+          "needs_review": true,
+          "dropped": null
+        },
+        {
+          "id": "S2",
+          "question": "Does the text describe a grievance or complaint mechanism through which affected people can raise concerns?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p191-02",
+              "page": 191,
+              "text": "complaints voiced by residents to the field offices. Most items will be easily resolved by the field offices, \nbut when necessary will be forwarded to the Program Director or local law enforcement authorities, as \nappropriate.     \n \nConcerns and comments will be handled in a consistent manner. Depending on the issue, conference \ncalls, in-person meetings, interviews with the commenter or CIMA personnel, and other means will be \nused to obtain additional information as necessary, and appropriate actions will then be taken. Some \ncomplaints have resulted in expanded training, new communications to buffer zone communities, and \neven firing of an employee. There is no formal written procedure for this process but it will be applied \nconsistently and will build on CIMA's close relationship with the buffer zone communities. CIMA’s \nExecutive Director will be ultimately responsible for the resolution of all issues but questions, complaints, \nand comments may be addressed by several individuals within the organization, depending on the topic.  \nTo date, all issues have been satisfactorily resolved through this process.   \n \nWhen issues are addressed immediately in the field by the park guard or technician, the interaction will be \ndocumented in the park guard’s or technician’s report but no formal written summary of the response will \nbe provided to the individual with the question or concern.  If the issue cannot be immediately resolved \nand is forwarded to CIMA’s offices or Headquarters, a written response will be issued to the individual in \nquestion within 30 days. \n   \nIf any stakeholder feels that an issue cannot be or has not been addressed satisfactorily through this \nprocess, all stakeholders could also raise the issue to the Comité de Gestión (CG).  This organization \nincludes representation from all stakeholders involved in the management of the park including \ncommunities, local and regional governments, local organizations, the Park Head and CIMA.  CIMA will \nrecuse itself from all CG meeting items regarding these issues to ensure the impartiality of the review.  \nThis diverse representation provides natural pathways for reporting issues and for providing an \nindependent, third-party review of any issues raised.  Outcomes of the CG reviews will also be provided \nin writing to the submitting individual or community within 30 days. \n \nMinutes of the CG meetings, park guard reports and technician reports will capture the input received \nfrom communities while emails, meeting minutes and phone logs will capture input from primary \nstakeholders.  In addition, reports to funders will often summarize much of the same information.  All of \nthis information will feed into the ICC system to provide data on new threats (illegal activities, tensions \nbetween communities), suggestions or other issues.  As appropriate, CIMA’s strategies and activities will \nbe adjusted better to achieve the project’s goals.  Immediate threats may result in immediate changes in \nactivities and will not require a quarterly ICC review.  The ICC documentation and quarterly project \nreports will capture how the plan has been revised as a result of stakeholder dialogues.   \n \nOnce the regional community meetings have occurred in 2008 and early 2009, a summary document will \nbe prepared in conjunction with the new Plan Maestro documenting this input process, its results, and \nhow the project has been developed in line with this input."
+            }
+          ],
+          "second_opinion_p_yes": 0.97,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S3",
+          "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p171-01",
+              "page": 171,
+              "text": "5.1.2 \nBiodiversity Impacts in the Buffer Zone and Offsite \nThis project is devoted to preventing negative biodiversity impacts inside the project area and in the \nsurrounding lands (buffer zone). Project activities themselves will generate positive, not negative impacts \non biodiversity. Work with communities in the buffer zone focuses primarily on land-use stabilization and \nwildlife management. Both efforts benefit native biodiversity outside the park. In addition, stream recovery \nand agroforestry with native species is promoted in the buffer zone as well as reducing hunting pressure \ninside PNCAZ, further benefiting the native biota in the region which in turn benefits the local \ncommunities. For example, “huanganadas” (big herds of peccaries) have been seen entering the buffer \nzone as noted in Table 5.2.  \n \nSimilar positive impacts may also be felt beyond the buffer zone (offsite).  Stream recovery and erosion \nprevention measures will have impacts on biodiversity all along the stream and downstream waters.  \nIncreases in herd size and habitat may allow biota to travel in wider ranges and some locations offsite \nmight also notice increases in biota numbers. \n \nTable 5.2: Wildlife Sightings in the PNCAZ Buffer Zone (Source: CIMA Field Technical Team) \n \nITEM \nDate \nCommunity \nEvent \n1 \n2006 \nNo specific"
+            }
+          ],
+          "second_opinion_p_yes": 0.94,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S4",
+          "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x4-p31-04",
+              "page": 31,
+              "text": "It should be noted that any attempts to locate these people in voluntary isolation, to ask them \nfor permission to develop a REDD project, would directly violate their right to remain \nuncontacted under Peruvian laws and the international agreements signed by Peru (see PD \nSection 3.1.2). In this context, CIMA and SERNANP (parkguards) activities in this region are \ndesigned specifically to allow the uncontacted peoples to conduct their lives as they wish, with \nzero interference from outsiders."
+            }
+          ],
+          "second_opinion_p_yes": 0.67,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "The MUF process has evolved over time. For the 2003 MUF, communities elected their local facilitator. \nDepending on the size of the community, more than one facilitator was elected. For example, for the 2003 \nMUF, 53 facilitators, 5% women, were hired for the two month period while for the 2008 MUF, 345 \ncommunity representatives were hired, 19% women. CIMA and The Field Museum personnel trained the \nfacilitators and community representatives on data collection and provided information regarding PNCAZ \nand CIMA. In 2003, facilitators collected data on social organizations and use of natural resources over a \ntwo month period, using community assemblies and household interviews to conduct structured and \nsemi-structured interviews. Eight focus groups were used in each community along with individual \ninterviews: four focus groups included residents of both genders and all age groups, two focus groups \nincluded only women, one group was of community leaders, and one included only specialists or experts \n(e.g., the best hunters). Individual interviews were conducted with health workers, teachers, and directors \nof the local school if one is present, and other significant individuals like shamans, healers, and \ncommunity leaders or founders. In 2008, a change was made to the process to improve data collection \nand workshops were held with community representatives from each geographic area. Three to four \nrepresentatives from each community participated in the process to update the data from the previous \nMUF.",
+          "page": 35,
+          "paragraph_id": "p35-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "complaints voiced by residents to the field offices. Most items will be easily resolved by the field offices, \nbut when necessary will be forwarded to the Program Director or local law enforcement authorities, as \nappropriate.     \n \nConcerns and comments will be handled in a consistent manner. Depending on the issue, conference \ncalls, in-person meetings, interviews with the commenter or CIMA personnel, and other means will be \nused to obtain additional information as necessary, and appropriate actions will then be taken. Some \ncomplaints have resulted in expanded training, new communications to buffer zone communities, and \neven firing of an employee. There is no formal written procedure for this process but it will be applied \nconsistently and will build on CIMA's close relationship with the buffer zone communities. CIMA’s \nExecutive Director will be ultimately responsible for the resolution of all issues but questions, complaints, \nand comments may be addressed by several individuals within the organization, depending on the topic.  \nTo date, all issues have been satisfactorily resolved through this process.   \n \nWhen issues are addressed immediately in the field by the park guard or technician, the interaction will be \ndocumented in the park guard’s or technician’s report but no formal written summary of the response will \nbe provided to the individual with the question or concern.  If the issue cannot be immediately resolved \nand is forwarded to CIMA’s offices or Headquarters, a written response will be issued to the individual in \nquestion within 30 days. \n   \nIf any stakeholder feels that an issue cannot be or has not been addressed satisfactorily through this \nprocess, all stakeholders could also raise the issue to the Comité de Gestión (CG).  This organization \nincludes representation from all stakeholders involved in the management of the park including \ncommunities, local and regional governments, local organizations, the Park Head and CIMA.  CIMA will \nrecuse itself from all CG meeting items regarding these issues to ensure the impartiality of the review.  \nThis diverse representation provides natural pathways for reporting issues and for providing an \nindependent, third-party review of any issues raised.  Outcomes of the CG reviews will also be provided \nin writing to the submitting individual or community within 30 days. \n \nMinutes of the CG meetings, park guard reports and technician reports will capture the input received \nfrom communities while emails, meeting minutes and phone logs will capture input from primary \nstakeholders.  In addition, reports to funders will often summarize much of the same information.  All of \nthis information will feed into the ICC system to provide data on new threats (illegal activities, tensions \nbetween communities), suggestions or other issues.  As appropriate, CIMA’s strategies and activities will \nbe adjusted better to achieve the project’s goals.  Immediate threats may result in immediate changes in \nactivities and will not require a quarterly ICC review.  The ICC documentation and quarterly project \nreports will capture how the plan has been revised as a result of stakeholder dialogues.   \n \nOnce the regional community meetings have occurred in 2008 and early 2009, a summary document will \nbe prepared in conjunction with the new Plan Maestro documenting this input process, its results, and \nhow the project has been developed in line with this input.",
+          "page": 191,
+          "paragraph_id": "p191-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "5.1.2 \nBiodiversity Impacts in the Buffer Zone and Offsite \nThis project is devoted to preventing negative biodiversity impacts inside the project area and in the \nsurrounding lands (buffer zone). Project activities themselves will generate positive, not negative impacts \non biodiversity. Work with communities in the buffer zone focuses primarily on land-use stabilization and \nwildlife management. Both efforts benefit native biodiversity outside the park. In addition, stream recovery \nand agroforestry with native species is promoted in the buffer zone as well as reducing hunting pressure \ninside PNCAZ, further benefiting the native biota in the region which in turn benefits the local \ncommunities. For example, “huanganadas” (big herds of peccaries) have been seen entering the buffer \nzone as noted in Table 5.2.  \n \nSimilar positive impacts may also be felt beyond the buffer zone (offsite).  Stream recovery and erosion \nprevention measures will have impacts on biodiversity all along the stream and downstream waters.  \nIncreases in herd size and habitat may allow biota to travel in wider ranges and some locations offsite \nmight also notice increases in biota numbers. \n \nTable 5.2: Wildlife Sightings in the PNCAZ Buffer Zone (Source: CIMA Field Technical Team) \n \nITEM \nDate \nCommunity \nEvent \n1 \n2006 \nNo specific",
+          "page": 171,
+          "paragraph_id": "p171-01",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "It should be noted that any attempts to locate these people in voluntary isolation, to ask them \nfor permission to develop a REDD project, would directly violate their right to remain \nuncontacted under Peruvian laws and the international agreements signed by Peru (see PD \nSection 3.1.2). In this context, CIMA and SERNANP (parkguards) activities in this region are \ndesigned specifically to allow the uncontacted peoples to conduct their lives as they wish, with \nzero interference from outsiders.",
+          "page": 31,
+          "paragraph_id": "x4-p31-04",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [
+        "models_disagree:S1"
+      ],
+      "excerpt": {
+        "paragraphs": [
+          "p3-01",
+          "p3-02",
+          "p4-01",
+          "p7-01",
+          "p7-02",
+          "p8-01",
+          "p21-35",
+          "p22-01",
+          "p23-01",
+          "p34-01",
+          "p35-01",
+          "p35-02",
+          "p35-03",
+          "p41-08",
+          "p138-02",
+          "p171-01",
+          "p180-02",
+          "p180-03",
+          "p185-03",
+          "p190-02",
+          "p190-03",
+          "p191-02",
+          "x1-p3-05",
+          "x1-p3-06",
+          "x1-p3-07",
+          "x1-p10-02",
+          "x1-p10-03",
+          "x1-p11-02",
+          "x3-p13-14",
+          "x3-p13-15",
+          "x4-p31-02",
+          "x4-p31-03",
+          "x4-p31-04",
+          "x4-p104-03",
+          "x4-p115-08",
+          "x4-p115-10",
+          "x4-p115-11",
+          "x4-p115-12",
+          "x5-p131-08",
+          "x5-p131-09",
+          "x5-p131-10"
+        ],
+        "chars": 44988
+      }
+    }
+  ],
+  "overall": {
+    "score": 76,
+    "included": [
+      "additionality",
+      "permanence",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-20T17:42:18+00:00"
+}
