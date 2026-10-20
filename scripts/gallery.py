@@ -4,6 +4,7 @@
     python scripts/gallery.py
     python scripts/gallery.py --dark     # dark theme instead of light
     python scripts/gallery.py --base https://once-sealed.vercel.app --out somewhere   # check the hosted site
+    python scripts/gallery.py --scale 2 --out video/public/shots   # sharper captures for the video
 
 Drives a local headless Chrome or Edge over the DevTools protocol: each page gets time to read the chain, then is
 scrolled to the section shown before the capture.
@@ -28,6 +29,7 @@ BASE = "http://localhost:3000"
 WIDTH, HEIGHT = 1500, 1000  # Devpost recommends 3:2
 PORT = 9333
 THEME = "dark" if "--dark" in sys.argv else "light"
+SCALE = float(sys.argv[sys.argv.index("--scale") + 1]) if "--scale" in sys.argv else 1
 # (file name, path, element id to scroll to or None, seconds to wait for chain reads)
 SHOTS = [
     ("01-overview", "/", None, 6),
@@ -36,7 +38,7 @@ SHOTS = [
     ("04-report-checks", "/projects/VCS985", "ccp-h", 8),
     ("05-data-checks", "/projects/VCS985", "checks-h", 8),
     ("06-report-versions", "/projects/VCS138", "versions-h", 15),
-    ("07-verify", "/verify?q=3", None, 12),
+    ("07-verify", "/verify?q=3", None, 25),
     ("08-auditor", "/auditor", None, 12),
     ("09-assess", "/assess", None, 8),
     ("10-review", "/review", None, 8),
@@ -65,11 +67,12 @@ async def capture(ws_url: str) -> None:
                 if msg.get("id") == n:
                     return msg.get("result", {})
 
-        await call("Emulation.setDeviceMetricsOverride", width=WIDTH, height=HEIGHT, deviceScaleFactor=1, mobile=False)
+        await call("Emulation.setDeviceMetricsOverride", width=WIDTH, height=HEIGHT, deviceScaleFactor=SCALE, mobile=False)
         # light theme: the site follows the system setting (next-themes), and Devpost's page is white
         await call("Emulation.setEmulatedMedia", features=[{"name": "prefers-color-scheme", "value": THEME}])
         await call("Page.addScriptToEvaluateOnNewDocument",
                    source=f"try {{ localStorage.setItem('theme', '{THEME}') }} catch (e) {{}}")
+        await call("Emulation.setLocaleOverride", locale="en-US")
         await call("Page.enable")
         for name, path, anchor, wait in SHOTS:
             await call("Page.navigate", url=BASE + path)
@@ -91,7 +94,8 @@ def main() -> None:
         OUT = Path(sys.argv[sys.argv.index("--out") + 1]).resolve()
     OUT.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as profile:
-        proc = subprocess.Popen([browser(), "--headless=new", "--disable-gpu", "--hide-scrollbars",
+        # --lang: native controls (file input, date picker) otherwise follow the system language
+        proc = subprocess.Popen([browser(), "--headless=new", "--disable-gpu", "--hide-scrollbars", "--lang=en-US",
                                  f"--remote-debugging-port={PORT}", f"--user-data-dir={profile}",
                                  f"--window-size={WIDTH},{HEIGHT}", "about:blank"],
                                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)

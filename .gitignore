@@ -59,3 +59,7 @@ samples/incoming/
 CLAUDE.md
 docs/presentation_notes.md
 docs/evaluation_plan.md
+
+# demo video (Remotion): dependencies and rendered output
+video/node_modules/
+video/out/

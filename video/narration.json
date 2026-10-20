@@ -1,0 +1,68 @@
+{
+  "voice": "en-US-AndrewNeural",
+  "rate": "+10%",
+  "scenes": [
+    {
+      "id": "problem",
+      "text": "Companies retire carbon credits to back their climate claims, and more and more of them do not want to say who they are. In CarbonPlan's OffsetsDB, the share of retired tonnes explicitly marked undisclosed rose from under half a percent up to 2018, to seventeen percent since 2023."
+    },
+    {
+      "id": "tension",
+      "text": "But the market still needs proof that each credit is retired only once, and that a project's quality claims rest on evidence. Today a buyer gets either confidentiality, or public proof. OnceSealed gives both.",
+      "say": "But the market still needs proof that each credit is retired only once, and that a project's quality claims rest on evidence. Today a buyer gets either confidentiality, or public proof. Once Sealed gives both."
+    },
+    {
+      "id": "overview",
+      "text": "OnceSealed is a prototype verification and privacy layer that could sit on top of registries like Verra. It has three parts: once, sealed, and evidence-backed.",
+      "say": "Once Sealed is a prototype verification and privacy layer that could sit on top of registries like Verra. It has three parts: once, sealed, and evidence-backed."
+    },
+    {
+      "id": "once",
+      "text": "Once. A smart contract on Sepolia records every retirement as a range of serial numbers. Any later retirement that overlaps it is rejected: AlreadyRetired. There is no transfer and no mint function, so retired credits never become tradable tokens, in line with Verra's 2022 ban.",
+      "say": "Once. A smart contract on Sepolia records every retirement as a range of serial numbers. Any later retirement that overlaps it is rejected: already retired. There is no transfer and no mint function, so retired credits never become tradable tokens, in line with Verra's 2022 ban."
+    },
+    {
+      "id": "scale",
+      "text": "We replayed 38,382 real retirements from one Verra vintage. Our first design checked every earlier retirement, and hit the block gas limit at number 7,467. The final contract keeps a sorted list with a hint, so every retirement costs the same."
+    },
+    {
+      "id": "sealed",
+      "text": "Sealed. Only a salted commitment to the buyer goes on-chain, bound to the exact serial range. The buyer's identity, a Legal Entity Identifier, is encrypted to an accredited auditor."
+    },
+    {
+      "id": "auditor",
+      "text": "The auditor opens the sealed vault, runs six checks, and writes Verified or Rejected on-chain. Once written, it can never be changed."
+    },
+    {
+      "id": "verify",
+      "text": "Anyone can look up a retirement. This page reads the contract straight from the browser, with no OnceSealed server in between. A buyer who chooses to disclose shares a receipt, and the browser recomputes the commitment. This is commitment plus encryption, not zero-knowledge.",
+      "say": "Anyone can look up a retirement. This page reads the contract straight from the browser, with no Once Sealed server in between. A buyer who chooses to disclose shares a receipt, and the browser recomputes the commitment. This is commitment plus encryption, not zero-knowledge."
+    },
+    {
+      "id": "evidence",
+      "text": "Evidence-backed. For eleven real Verra projects, the system reads each project's registry documents and answers eighteen yes-or-no checks against five ICVCM Core Carbon Principles.",
+      "say": "Evidence-backed. For eleven real Verra projects, the system reads each project's registry documents and answers eighteen yes-or-no checks against five I C V C M Core Carbon Principles."
+    },
+    {
+      "id": "citations",
+      "text": "Every found must cite a paragraph of the documents, shown with its page. A second model cross-checks each answer. Where the two disagree, a person decides, and both answers stay in the report."
+    },
+    {
+      "id": "datachecks",
+      "text": "Deterministic checks compare the documents' own figures with the credits actually issued. For Cordillera Azul, issuance is 1.72 times the project description's projection, which is where an independent rating agency questioned its baseline."
+    },
+    {
+      "id": "measured",
+      "text": "We measured before we trusted. On 177 labelled questions the checks were right 94 percent of the time, and paragraphs that try to instruct the model are screened out before it reads anything."
+    },
+    {
+      "id": "anchored",
+      "text": "Each report's hash and its exact method are anchored on-chain. Your browser re-hashes the published file, and every earlier version stays readable."
+    },
+    {
+      "id": "closing",
+      "text": "What is real: the projects, their documents, and their issuance and retirement histories. What is simulated: serial numbers and buyers. The score is a signal, not an ICVCM assessment. The contract is verified on Etherscan, and the code is open source. OnceSealed: retired once, sealed for the buyer, open for anyone to check.",
+      "say": "What is real: the projects, their documents, and their issuance and retirement histories. What is simulated: serial numbers and buyers. The score is a signal, not an I C V C M assessment. The contract is verified on Etherscan, and the code is open source. Once Sealed: retired once, sealed for the buyer, open for anyone to check."
+    }
+  ]
+}

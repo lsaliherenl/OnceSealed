@@ -1,0 +1,447 @@
+{
+ "voice": "en-US-AndrewNeural",
+ "scenes": [
+  {
+   "id": "problem",
+   "text": "Companies retire carbon credits to back their climate claims, and more and more of them do not want to say who they are. In CarbonPlan's OffsetsDB, the share of retired tonnes explicitly marked undisclosed rose from under half a percent up to 2018, to seventeen percent since 2023.",
+   "audio": "audio/problem.mp3",
+   "duration": 16.584,
+   "captions": [
+    {
+     "text": "Companies retire carbon credits to back their climate claims,",
+     "start": 0.090916,
+     "end": 3.261375
+    },
+    {
+     "text": "and more and more of them do not want to say",
+     "start": 3.261375,
+     "end": 5.113625
+    },
+    {
+     "text": "who they are.",
+     "start": 5.113625,
+     "end": 6.056833
+    },
+    {
+     "text": "In CarbonPlan's OffsetsDB, the share of retired tonnes explicitly marked undisclosed",
+     "start": 6.056833,
+     "end": 10.272708
+    },
+    {
+     "text": "rose from under half a percent up to 2018,",
+     "start": 10.272708,
+     "end": 12.829541
+    },
+    {
+     "text": "to seventeen percent since 2023.",
+     "start": 12.829541,
+     "end": 16.2386239
+    }
+   ]
+  },
+  {
+   "id": "tension",
+   "text": "But the market still needs proof that each credit is retired only once, and that a project's quality claims rest on evidence. Today a buyer gets either confidentiality, or public proof. OnceSealed gives both.",
+   "audio": "audio/tension.mp3",
+   "duration": 11.832,
+   "captions": [
+    {
+     "text": "But the market still needs proof that each credit is retired",
+     "start": 0.102291,
+     "end": 3.125
+    },
+    {
+     "text": "only once, and that a project's quality claims rest on evidence.",
+     "start": 3.125,
+     "end": 7.159083
+    },
+    {
+     "text": "Today a buyer gets either confidentiality,",
+     "start": 7.159083,
+     "end": 9.386375
+    },
+    {
+     "text": "or public proof.",
+     "start": 9.386375,
+     "end": 10.625
+    },
+    {
+     "text": "OnceSealed gives both.",
+     "start": 10.625,
+     "end": 11.499998999999999
+    }
+   ]
+  },
+  {
+   "id": "overview",
+   "text": "OnceSealed is a prototype verification and privacy layer that could sit on top of registries like Verra. It has three parts: once, sealed, and evidence-backed.",
+   "audio": "audio/overview.mp3",
+   "duration": 9.504,
+   "captions": [
+    {
+     "text": "OnceSealed is a prototype verification and privacy layer that could sit",
+     "start": 0.090916,
+     "end": 3.613625
+    },
+    {
+     "text": "on top of registries like Verra.",
+     "start": 3.613625,
+     "end": 5.772708
+    },
+    {
+     "text": "It has three parts:",
+     "start": 5.772708,
+     "end": 7.136375
+    },
+    {
+     "text": "once, sealed, and evidence-backed.",
+     "start": 7.136375,
+     "end": 9.170458
+    }
+   ]
+  },
+  {
+   "id": "once",
+   "text": "Once. A smart contract on Sepolia records every retirement as a range of serial numbers. Any later retirement that overlaps it is rejected: AlreadyRetired. There is no transfer and no mint function, so retired credits never become tradable tokens, in line with Verra's 2022 ban.",
+   "audio": "audio/once.mp3",
+   "duration": 18.0,
+   "captions": [
+    {
+     "text": "Once. A smart contract on Sepolia records every retirement as a",
+     "start": 0.102291,
+     "end": 4.193166
+    },
+    {
+     "text": "range of serial numbers.",
+     "start": 4.193166,
+     "end": 5.818166
+    },
+    {
+     "text": "Any later retirement that overlaps it is rejected:",
+     "start": 5.818166,
+     "end": 9.159083
+    },
+    {
+     "text": "AlreadyRetired. There is no transfer and no mint function,",
+     "start": 9.159083,
+     "end": 12.568166
+    },
+    {
+     "text": "so retired credits never become tradable tokens,",
+     "start": 12.568166,
+     "end": 15.488625
+    },
+    {
+     "text": "in line with Verra's 2022 ban.",
+     "start": 15.488625,
+     "end": 17.659083
+    }
+   ]
+  },
+  {
+   "id": "scale",
+   "text": "We replayed 38,382 real retirements from one Verra vintage. Our first design checked every earlier retirement, and hit the block gas limit at number 7,467. The final contract keeps a sorted list with a hint, so every retirement costs the same.",
+   "audio": "audio/scale.mp3",
+   "duration": 17.472,
+   "captions": [
+    {
+     "text": "We replayed 38,382 real retirements from one Verra vintage.",
+     "start": 0.102291,
+     "end": 5.761375
+    },
+    {
+     "text": "Our first design checked every earlier retirement,",
+     "start": 5.761375,
+     "end": 8.556833
+    },
+    {
+     "text": "and hit the block gas limit at number 7,467.",
+     "start": 8.556833,
+     "end": 12.670458
+    },
+    {
+     "text": "The final contract keeps a sorted list with a hint,",
+     "start": 12.670458,
+     "end": 15.295458
+    },
+    {
+     "text": "so every retirement costs the same.",
+     "start": 15.295458,
+     "end": 17.136374
+    }
+   ]
+  },
+  {
+   "id": "sealed",
+   "text": "Sealed. Only a salted commitment to the buyer goes on-chain, bound to the exact serial range. The buyer's identity, a Legal Entity Identifier, is encrypted to an accredited auditor.",
+   "audio": "audio/sealed.mp3",
+   "duration": 11.064,
+   "captions": [
+    {
+     "text": "Sealed. Only a salted commitment to the buyer goes on-chain,",
+     "start": 0.090916,
+     "end": 3.625
+    },
+    {
+     "text": "bound to the exact serial range.",
+     "start": 3.625,
+     "end": 5.920458
+    },
+    {
+     "text": "The buyer's identity, a Legal Entity Identifier,",
+     "start": 5.920458,
+     "end": 8.886375
+    },
+    {
+     "text": "is encrypted to an accredited auditor.",
+     "start": 8.886375,
+     "end": 10.715916
+    }
+   ]
+  },
+  {
+   "id": "auditor",
+   "text": "The auditor opens the sealed vault, runs six checks, and writes Verified or Rejected on-chain. Once written, it can never be changed.",
+   "audio": "audio/auditor.mp3",
+   "duration": 7.848,
+   "captions": [
+    {
+     "text": "The auditor opens the sealed vault,",
+     "start": 0.090916,
+     "end": 2.011375
+    },
+    {
+     "text": "runs six checks, and writes Verified or Rejected on-chain.",
+     "start": 2.011375,
+     "end": 5.727291
+    },
+    {
+     "text": "Once written, it can never be changed.",
+     "start": 5.727291,
+     "end": 7.511375
+    }
+   ]
+  },
+  {
+   "id": "verify",
+   "text": "Anyone can look up a retirement. This page reads the contract straight from the browser, with no OnceSealed server in between. A buyer who chooses to disclose shares a receipt, and the browser recomputes the commitment. This is commitment plus encryption, not zero-knowledge.",
+   "audio": "audio/verify.mp3",
+   "duration": 15.072,
+   "captions": [
+    {
+     "text": "Anyone can look up a retirement.",
+     "start": 0.090916,
+     "end": 1.875
+    },
+    {
+     "text": "This page reads the contract straight from the browser,",
+     "start": 1.875,
+     "end": 4.647708
+    },
+    {
+     "text": "with no OnceSealed server in between.",
+     "start": 4.647708,
+     "end": 6.022708
+    },
+    {
+     "text": "A buyer who chooses to disclose shares a receipt,",
+     "start": 6.022708,
+     "end": 9.693166
+    },
+    {
+     "text": "and the browser recomputes the commitment.",
+     "start": 9.693166,
+     "end": 11.829541
+    },
+    {
+     "text": "This is commitment plus encryption, not zero-knowledge.",
+     "start": 11.829541,
+     "end": 14.727291
+    }
+   ]
+  },
+  {
+   "id": "evidence",
+   "text": "Evidence-backed. For eleven real Verra projects, the system reads each project's registry documents and answers eighteen yes-or-no checks against five ICVCM Core Carbon Principles.",
+   "audio": "audio/evidence.mp3",
+   "duration": 11.4,
+   "captions": [
+    {
+     "text": "Evidence-backed. For eleven real Verra projects,",
+     "start": 0.090916,
+     "end": 3.125
+    },
+    {
+     "text": "the system reads each project's registry documents and answers eighteen yes-or-no",
+     "start": 3.125,
+     "end": 8.761375
+    },
+    {
+     "text": "checks against five ICVCM Core Carbon Principles.",
+     "start": 8.761375,
+     "end": 11.068207
+    }
+   ]
+  },
+  {
+   "id": "citations",
+   "text": "Every found must cite a paragraph of the documents, shown with its page. A second model cross-checks each answer. Where the two disagree, a person decides, and both answers stay in the report.",
+   "audio": "audio/citations.mp3",
+   "duration": 11.112,
+   "captions": [
+    {
+     "text": "Every found must cite a paragraph of the documents,",
+     "start": 0.090916,
+     "end": 2.909083
+    },
+    {
+     "text": "shown with its page.",
+     "start": 2.909083,
+     "end": 4.420458
+    },
+    {
+     "text": "A second model cross-checks each answer.",
+     "start": 4.420458,
+     "end": 6.761375
+    },
+    {
+     "text": "Where the two disagree, a person decides,",
+     "start": 6.761375,
+     "end": 9.136375
+    },
+    {
+     "text": "and both answers stay in the report.",
+     "start": 9.136375,
+     "end": 10.761332
+    }
+   ]
+  },
+  {
+   "id": "datachecks",
+   "text": "Deterministic checks compare the documents' own figures with the credits actually issued. For Cordillera Azul, issuance is 1.72 times the project description's projection, which is where an independent rating agency questioned its baseline.",
+   "audio": "audio/datachecks.mp3",
+   "duration": 13.872,
+   "captions": [
+    {
+     "text": "Deterministic checks compare the documents' own figures with the credits actually",
+     "start": 0.102291,
+     "end": 4.090916
+    },
+    {
+     "text": "issued. For Cordillera Azul, issuance is 1.72 times the project description's",
+     "start": 4.090916,
+     "end": 9.715916
+    },
+    {
+     "text": "projection, which is where an independent rating agency questioned its baseline.",
+     "start": 9.715916,
+     "end": 13.534082999999999
+    }
+   ]
+  },
+  {
+   "id": "measured",
+   "text": "We measured before we trusted. On 177 labelled questions the checks were right 94 percent of the time, and paragraphs that try to instruct the model are screened out before it reads anything.",
+   "audio": "audio/measured.mp3",
+   "duration": 10.512,
+   "captions": [
+    {
+     "text": "We measured before we trusted.",
+     "start": 0.090916,
+     "end": 1.681833
+    },
+    {
+     "text": "On 177 labelled questions the checks were right 94 percent of",
+     "start": 1.681833,
+     "end": 5.636375
+    },
+    {
+     "text": "the time, and paragraphs that try to instruct the model are",
+     "start": 5.636375,
+     "end": 8.545458
+    },
+    {
+     "text": "screened out before it reads anything.",
+     "start": 8.545458,
+     "end": 10.159083
+    }
+   ]
+  },
+  {
+   "id": "anchored",
+   "text": "Each report's hash and its exact method are anchored on-chain. Your browser re-hashes the published file, and every earlier version stays readable.",
+   "audio": "audio/anchored.mp3",
+   "duration": 8.064,
+   "captions": [
+    {
+     "text": "Each report's hash and its exact method are anchored on-chain.",
+     "start": 0.090916,
+     "end": 3.545458
+    },
+    {
+     "text": "Your browser re-hashes the published file,",
+     "start": 3.545458,
+     "end": 5.965916
+    },
+    {
+     "text": "and every earlier version stays readable.",
+     "start": 5.965916,
+     "end": 7.715916
+    }
+   ]
+  },
+  {
+   "id": "closing",
+   "text": "What is real: the projects, their documents, and their issuance and retirement histories. What is simulated: serial numbers and buyers. The score is a signal, not an ICVCM assessment. The contract is verified on Etherscan, and the code is open source. OnceSealed: retired once, sealed for the buyer, open for anyone to check.",
+   "audio": "audio/closing.mp3",
+   "duration": 20.424,
+   "captions": [
+    {
+     "text": "What is real:",
+     "start": 0.090916,
+     "end": 1.011375
+    },
+    {
+     "text": "the projects, their documents, and their issuance and retirement histories.",
+     "start": 1.011375,
+     "end": 5.204541
+    },
+    {
+     "text": "What is simulated:",
+     "start": 5.204541,
+     "end": 6.738625
+    },
+    {
+     "text": "serial numbers and buyers.",
+     "start": 6.738625,
+     "end": 8.147708
+    },
+    {
+     "text": "The score is a signal, not an ICVCM assessment.",
+     "start": 8.147708,
+     "end": 10.409083
+    },
+    {
+     "text": "The contract is verified on Etherscan,",
+     "start": 10.409083,
+     "end": 12.704541
+    },
+    {
+     "text": "and the code is open source.",
+     "start": 12.704541,
+     "end": 15.602291
+    },
+    {
+     "text": "OnceSealed: retired once, sealed for the buyer,",
+     "start": 15.602291,
+     "end": 18.806833
+    },
+    {
+     "text": "open for anyone to check.",
+     "start": 18.806833,
+     "end": 20.079541
+    }
+   ]
+  }
+ ]
+}
