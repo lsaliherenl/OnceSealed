@@ -23,6 +23,14 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+VENV = ROOT / ".venv"
+VENV_PYTHON = VENV / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
+if VENV_PYTHON.exists() and Path(sys.prefix).resolve() != VENV.resolve():
+    # started with another Python (e.g. the system one): rerun inside the project's virtual environment
+    try:
+        sys.exit(subprocess.call([str(VENV_PYTHON), str(Path(__file__).resolve()), *sys.argv[1:]]))
+    except KeyboardInterrupt:  # Ctrl+C reaches the child too, which stops its servers
+        sys.exit(130)
 sys.path.insert(0, str(ROOT))
 
 from eth_account import Account  # noqa: E402
