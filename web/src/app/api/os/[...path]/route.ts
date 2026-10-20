@@ -25,6 +25,9 @@ const ROUTES: Route[] = [
   { method: "GET", pattern: /^assess\/[A-Za-z0-9]+\/draft$/, role: "assessor" },
   { method: "POST", pattern: /^assess\/[A-Za-z0-9]+\/(run|discard|publish)$/, role: "assessor" },
   { method: "POST", pattern: /^assess\/[A-Za-z0-9]+\/documents$/, role: "assessor", binary: true },
+  { method: "GET", pattern: /^review\/queue$/, role: "assessor" },
+  { method: "GET", pattern: /^review\/[A-Za-z0-9]+\/[a-z_]+\/excerpt$/, role: "assessor" },
+  { method: "POST", pattern: /^review\/[A-Za-z0-9]+$/, role: "assessor" },
 ];
 
 const TOKEN_ENV = { operator: "OPERATOR_API_TOKEN", auditor: "AUDITOR_API_TOKEN", assessor: "ASSESSOR_API_TOKEN" } as const;

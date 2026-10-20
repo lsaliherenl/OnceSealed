@@ -20,7 +20,7 @@ from typing import Any, Callable
 from fastapi import Depends, FastAPI, HTTPException, Request
 from pydantic import BaseModel
 
-from core.ai import assessment
+from core.ai import assessment, review
 from core.ai.checklist_models import JevChecklist, LLMChecklist
 from core.ai.principles import PRINCIPLES
 from core.ai.sources import ROLES, get_project, register_document
@@ -36,6 +36,13 @@ SEPOLIA = 11155111
 class RunRequest(BaseModel):
     use_cache: bool = True
     second_opinion: bool = True
+
+
+class ReviewRequest(BaseModel):
+    principle: str
+    check_id: str
+    decision: str
+    note: str = ""
 
 
 def _manifest_entry(pid: str) -> dict[str, Any]:
@@ -207,3 +214,54 @@ def add_assessor_routes(app: FastAPI, service: OnceSealed, require: Callable[[st
                                 capture_output=True, text=True)
         return {**out, "files_written": True, "web_data_refreshed": export.returncode == 0,
                 "export_error": export.stderr[-400:] if export.returncode else None}
+
+    # --- human review of flagged checks ------------------------------------------------------
+
+    @app.get("/api/review/queue", dependencies=guard)
+    def queue() -> list[dict[str, Any]]:
+        """Checks the models disagree on in the published reports, with any decision already made."""
+        out = []
+        docs = json.loads((PROJECT_ROOT / "samples" / "manifest.json").read_text(encoding="utf-8"))["documents"]
+        for d in docs:
+            pid = d["project_id"]
+            report = _published(pid)
+            if report is None:
+                continue
+            sha = report["document"]["sha256"]
+            decisions = review.decisions_for(pid, sha)
+            for p in report["principles"]:
+                for c in p["checks"]:
+                    decision = decisions.get((p["principle"], c["id"]))
+                    if not (c["needs_review"] or c.get("human_review") or decision):
+                        continue
+                    out.append({"project_id": pid, "name": d["project_name"], "principle": p["principle"],
+                                "check_id": c["id"], "question": c["question"], "answer": c["answer"],
+                                "evidence": c["evidence"], "second_opinion_p_yes": c["second_opinion_p_yes"],
+                                "decision": decision, "in_published_report": bool(c.get("human_review"))})
+        return out
+
+    @app.get("/api/review/{pid}/{principle}/excerpt", dependencies=guard)
+    def excerpt(pid: str, principle: str) -> dict[str, Any]:
+        """The paragraphs the models read for this principle (data/evidence/<pid>.jsonl)."""
+        path = PROJECT_ROOT / "data" / "evidence" / f"{pid}.jsonl"
+        if not path.exists():
+            raise HTTPException(status_code=404, detail="no evidence file; run the assessment first")
+        for line in path.read_text(encoding="utf-8").splitlines():
+            row = json.loads(line)
+            if row["principle"] == principle:
+                return {"paragraphs": row["paragraphs"], "document_sha256": row["document_sha256"]}
+        raise HTTPException(status_code=404, detail=f"no excerpt for {principle}")
+
+    @app.post("/api/review/{pid}", dependencies=guard)
+    def decide(pid: str, req: ReviewRequest) -> dict[str, Any]:
+        report = _published(pid)
+        if report is None:
+            raise HTTPException(status_code=404, detail="no published report")
+        check = next((c for p in report["principles"] if p["principle"] == req.principle
+                      for c in p["checks"] if c["id"] == req.check_id), None)
+        if check is None:
+            raise HTTPException(status_code=404, detail="no such check in the published report")
+        entry = review.record(pid, report["document"]["sha256"], req.principle, req.check_id, req.decision,
+                              req.note, check["answer"])
+        return {"decision": entry}
+

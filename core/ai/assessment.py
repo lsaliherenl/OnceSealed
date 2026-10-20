@@ -15,6 +15,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from core.ai import review
 from core.ai.checklist import BY_PRINCIPLE, QUESTION_SET_VERSION
 from core.ai.checklist_models import JevChecklist, LLMChecklist
 from core.ai.pdf_extract import extract_many, file_sha256
@@ -50,7 +51,9 @@ def run(project: dict[str, Any], llm: LLMChecklist, second: JevChecklist | None,
         if f.get("sha256") and f["sha256"] != file_sha256(PROJECT_ROOT / f["local_path"]):
             raise ValueError(f"{f['local_path']} does not match the sha256 recorded in the manifest")
     doc = extract_many(PROJECT_ROOT / project["local_path"], [PROJECT_ROOT / f["local_path"] for f in files[1:]])
-    report, run_log = build_report(doc, project, llm, second, principles, CACHE if use_cache else None, on_principle)
+    reviews = review.decisions_for(pid, doc.sha256)  # a person's decisions on flagged checks, same documents only
+    report, run_log = build_report(doc, project, llm, second, principles, CACHE if use_cache else None, on_principle,
+                                   reviews)
 
     by_id = {p.id: p for p in doc.paragraphs}
     evidence = [{

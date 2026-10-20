@@ -1,6 +1,6 @@
 "use client";
 
-import { FilePenLine, FileSearch, House, KeyRound, Moon, Search, ShieldCheck, Stamp, Sun } from "lucide-react";
+import { FilePenLine, FileSearch, House, KeyRound, ListChecks, Moon, Search, ShieldCheck, Stamp, Sun } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
@@ -16,6 +16,7 @@ const NAV = [
   { href: "/verify", label: "Verify", icon: ShieldCheck },
   { href: "/auditor", label: "Auditor", icon: KeyRound },
   { href: "/assess", label: "Assess", icon: FilePenLine },
+  { href: "/review", label: "Review", icon: ListChecks },
 ];
 
 /** Item size + gap on the rail; the active highlight slides by this step. */

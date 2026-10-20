@@ -137,3 +137,28 @@ def test_instruction_like_paragraphs_are_screened_out_and_flagged():
     assert "p9-09" not in seen and entry["screened_out"][0]["paragraph_id"] == "p9-09"
     assert "instruction_like_text" in entry["review_flags"]
     assert report["method"]["injection_screen"] == "injection-screen-v1"
+
+
+def test_a_persons_decision_replaces_the_flagged_answer_and_keeps_the_models():
+    r = result(Q1=("yes", ["p4-02"]), Q2=("yes", ["p3-01"]), Q3=("no", []), Q4=("no", []))
+    probs = {"Q1": 0.9, "Q2": 0.2, "Q3": 0.1, "Q4": 0.7}
+    reviews = {("robust_quantification", "Q2"): {"decision": "not_found", "note": "boilerplate only",
+                                                  "reviewer": "team member", "reviewed_at": "2026-10-20T00:00:00+00:00"},
+               ("robust_quantification", "Q4"): {"decision": "unclear", "note": "", "reviewer": "team member",
+                                                  "reviewed_at": "2026-10-20T00:00:00+00:00"}}
+    e = judge_principle("robust_quantification", PARAS, r, probs, reviews)
+    q2, q4 = e["checks"][1], e["checks"][3]
+    assert q2["answer"] == "yes" and q2["human_review"]["decision"] == "not_found" and not q2["needs_review"]
+    assert e["score"] == 25 and e["status"] == "partial_evidence"  # Q1 only: the person's "not found" counts
+    assert e["review_flags"] == ["models_disagree:Q4"] and q4["needs_review"]  # "unclear" keeps the flag
+    assert "1 decided by a person" in e["rationale"]
+
+
+def test_review_decisions_apply_only_to_the_documents_they_were_made_on(tmp_path, monkeypatch):
+    from core.ai import review
+    monkeypatch.setattr(review, "REVIEWS", tmp_path)
+    review.record("VCS0", "aa" * 32, "safeguards", "S1", "found", "  see p12  ", "no")
+    assert review.decisions_for("VCS0", "aa" * 32)[("safeguards", "S1")]["note"] == "see p12"
+    assert review.decisions_for("VCS0", "bb" * 32) == {}
+    review.record("VCS0", "aa" * 32, "safeguards", "S1", "not_found", "", "no")
+    assert len(review.load("VCS0")["decisions"]) == 1

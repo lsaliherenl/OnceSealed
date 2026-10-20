@@ -40,8 +40,8 @@ def _principle(p: dict[str, Any]) -> dict[str, Any]:
         "principle": p["principle"], "status": p["status"], "score": p.get("score"),
         "rationale": p.get("rationale", ""), "dropped_findings": p.get("dropped_findings", 0),
         "review_flags": p.get("review_flags", []),
-        "checks": [{k: c[k] for k in ("id", "question", "answer", "evidence", "second_opinion_p_yes", "needs_review",
-                                      "dropped")} for c in p.get("checks", [])],
+        "checks": [{**{k: c[k] for k in ("id", "question", "answer", "evidence", "second_opinion_p_yes", "needs_review",
+                                         "dropped")}, "human_review": c.get("human_review")} for c in p.get("checks", [])],
         "excerpt_chars": (p.get("excerpt") or {}).get("chars"),
         "screened_out": p.get("screened_out", []),
     }

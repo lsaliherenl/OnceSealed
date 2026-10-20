@@ -29,6 +29,7 @@ from core.ai.checklist_models import (CHECKLIST_PROMPT_VERSION, EVIDENCE_RULE, A
                                       JevChecklist, LLMChecklist)
 from core.ai.methodology import load_table, methodology_status
 from core.ai.injection import SCREEN_VERSION, screen
+from core.ai.review import DECISIONS, REVIEW_RULE, final_answer
 from core.ai.pdf_extract import Document, Paragraph
 from core.ai.principles import BY_KEY, PRINCIPLES
 from core.ai.select import select_paragraphs
@@ -64,28 +65,39 @@ def principle_status(answers: list[str | None]) -> tuple[str, int | None]:
 
 
 def judge_principle(principle: str, paragraphs: list[Paragraph], llm: ChecklistResult,
-                    second: dict[str, float] | None) -> dict[str, Any]:
-    """Combine the LLM's checklist answers and the second model's probabilities into one report entry."""
+                    second: dict[str, float] | None,
+                    reviews: dict[tuple[str, str], dict[str, Any]] | None = None) -> dict[str, Any]:
+    """Combine the LLM's checklist answers, the second model's probabilities and any person's decisions on
+    flagged checks (core.ai.review) into one report entry."""
     by_id = {p.id: p for p in paragraphs}
     checks, flags, quotes = [], [], {}
     for q in BY_PRINCIPLE[principle]:
         a: Answer = llm.answers[q.id]
         p_yes = None if second is None else round(second[q.id], 4)
         disagree = p_yes is not None and a.answer in ("yes", "no") and (p_yes >= 0.5) != (a.answer == "yes")
+        review = (reviews or {}).get((principle, q.id))
+        if review and DECISIONS[review["decision"]] is not None:
+            disagree = False  # a person decided; the models' answers stay in the entry
         if disagree:
             flags.append(f"models_disagree:{q.id}")
         evidence = [{"paragraph_id": i, "page": by_id[i].page, "text": by_id[i].text}
                     for i in a.evidence if i in by_id] if a.answer == "yes" else []
         for e in evidence:
             quotes.setdefault(e["paragraph_id"], e)
-        checks.append({"id": q.id, "question": q.text, "answer": a.answer, "evidence": evidence,
-                       "second_opinion_p_yes": p_yes, "needs_review": disagree, "dropped": a.dropped})
-    status, score = principle_status([c["answer"] for c in checks])
-    found = [c["id"] for c in checks if c["answer"] == "yes"]
-    missing = [c["id"] for c in checks if c["answer"] == "no"]
+        check = {"id": q.id, "question": q.text, "answer": a.answer, "evidence": evidence,
+                 "second_opinion_p_yes": p_yes, "needs_review": disagree, "dropped": a.dropped}
+        if review:
+            check["human_review"] = {k: review[k] for k in ("decision", "note", "reviewer", "reviewed_at")}
+        checks.append(check)
+    answers = [final_answer(c) for c in checks]
+    status, score = principle_status(answers)
+    found = [c["id"] for c, x in zip(checks, answers) if x == "yes"]
+    missing = [c["id"] for c, x in zip(checks, answers) if x == "no"]
+    decided = sum(1 for c in checks if c.get("human_review") and DECISIONS[c["human_review"]["decision"]] is not None)
     rationale = (f"Evidence found for {len(found)} of {len(checks)} checks"
                  + (f" ({', '.join(found)})" if found else "")
-                 + (f"; not found in the excerpt: {', '.join(missing)}" if missing else "") + ".")
+                 + (f"; not found in the excerpt: {', '.join(missing)}" if missing else "")
+                 + (f"; {decided} decided by a person after the models disagreed" if decided else "") + ".")
     return {
         "principle": principle, "status": status, "score": score, "rationale": rationale,
         "checks": checks,
@@ -157,6 +169,7 @@ def build_report(
     principle_keys: list[str] | None = None,
     cache_dir: Path | None = None,
     on_principle: Callable[[str], None] | None = None,
+    reviews: dict[tuple[str, str], dict[str, Any]] | None = None,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     """Return (report, run_log). The run log keeps costs and served models out of the hashed report.
     ``on_principle`` is called with each principle's key when it is done (progress for the API)."""
@@ -181,7 +194,7 @@ def build_report(
             except Exception as e:  # the second opinion is optional; its absence is flagged in the report
                 log.warning("second opinion failed for %s: %s", key, e)
                 run_log["second_opinion"].append({"principle": key, "error": str(e)})
-        entry = judge_principle(key, paragraphs, result, probs)
+        entry = judge_principle(key, paragraphs, result, probs, reviews)
         if screened_out:
             entry["screened_out"] = screened_out
             entry["review_flags"].append("instruction_like_text")
@@ -198,6 +211,7 @@ def build_report(
         "evidence_rule": EVIDENCE_RULE,
         "excerpt_rule": EXCERPT_RULE,
         "injection_screen": SCREEN_VERSION,
+        "review_rule": REVIEW_RULE,
         "llm_model": llm.name,
         "second_opinion_model": second.name if second else None,
         "methodology_table_version": load_table()["table_version"],

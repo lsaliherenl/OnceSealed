@@ -163,3 +163,23 @@ def test_assessor_upload_rejects_non_pdf(client):
     res = client.post("/api/assess/VCS1851/documents?role=monitoring_report&file_name=x.pdf", content=b"hello",
                       headers=AS)
     assert res.status_code == 400
+
+
+def test_review_queue_and_decision(client, monkeypatch, tmp_path):
+    from core.ai import review
+    monkeypatch.setattr(review, "REVIEWS", tmp_path)
+    assert client.get("/api/review/queue").status_code == 401
+    items = client.get("/api/review/queue", headers=AS).json()
+    assert items and all(i["decision"] is None for i in items)
+    item = items[0]
+    ex = client.get(f"/api/review/{item['project_id']}/{item['principle']}/excerpt", headers=AS).json()
+    assert ex["paragraphs"] and {"id", "page", "text"} <= set(ex["paragraphs"][0])
+
+    body = {"principle": item["principle"], "check_id": item["check_id"], "decision": "maybe"}
+    assert client.post(f"/api/review/{item['project_id']}", json=body, headers=AS).status_code == 400
+    body["decision"] = "found"
+    res = client.post(f"/api/review/{item['project_id']}", json=body, headers=AS).json()
+    assert res["decision"]["model_answer"] == item["answer"]
+    again = client.get("/api/review/queue", headers=AS).json()
+    assert next(i for i in again if i["check_id"] == item["check_id"] and i["project_id"] == item["project_id"]
+                and i["principle"] == item["principle"])["decision"]["decision"] == "found"

@@ -21,6 +21,7 @@ import {
   PROJECTS,
   REPO_URL,
   type Report,
+  finalAnswer,
   getProject,
   sourceOf,
 } from "@/lib/data";
@@ -82,7 +83,8 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
   const status = report.methodology_status;
   const latest = project.anchors.at(-1);
   const checks = report.principles.flatMap((p) => p.checks);
-  const found = checks.filter((c) => c.answer === "yes").length;
+  const found = checks.filter((c) => finalAnswer(c) === "yes").length;
+  const decided = checks.filter((c) => c.human_review && c.human_review.decision !== "unclear").length;
   const review = checks.filter((c) => c.needs_review).length;
   const dropped = report.principles.reduce((n, p) => n + p.dropped_findings, 0);
 
@@ -235,6 +237,9 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
               {review > 0
                 ? ` ${review} check${review === 1 ? "" : "s"} where a second model disagrees ${review === 1 ? "is" : "are"} marked for review.`
                 : ""}
+              {decided > 0
+                ? ` ${decided} check${decided === 1 ? "" : "s"} the models disagreed on ${decided === 1 ? "was" : "were"} decided by a team member, whose answer counts; the models’ answers are shown next to it.`
+                : ""}
             </p>
             {EVALUATION && (
               <p className="text-[13px] text-muted-foreground">
@@ -336,14 +341,15 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
                   <ul className="flex flex-col gap-2.5">
                     {p.checks.map((c) => {
                       const measured = EVALUATION?.per_question[c.id];
+                      const final = finalAnswer(c);
                       return (
                         <li key={c.id} className="flex flex-col gap-2 rounded-lg bg-secondary px-4 py-3 transition-colors duration-300">
                           <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
                             <span
-                              className={`inline-flex items-center gap-1.5 text-[13px] font-semibold ${c.answer === "yes" ? "text-ok" : "text-muted-foreground"}`}
+                              className={`inline-flex items-center gap-1.5 text-[13px] font-semibold ${final === "yes" ? "text-ok" : "text-muted-foreground"}`}
                             >
-                              {c.answer === "yes" ? <Check aria-hidden className="size-3.5" /> : <Minus aria-hidden className="size-3.5" />}
-                              {c.answer === "yes" ? "Found" : c.answer === "no" ? "Not found" : "No answer"}
+                              {final === "yes" ? <Check aria-hidden className="size-3.5" /> : <Minus aria-hidden className="size-3.5" />}
+                              {final === "yes" ? "Found" : final === "no" ? "Not found" : "No answer"}
                             </span>
                             <span className="font-medium" title={c.question}>
                               <span className="font-mono text-[12px] text-muted-foreground">{c.id}</span> {CHECK_NAME[c.id] ?? c.question}
@@ -384,6 +390,18 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
                               </blockquote>
                             );
                           })}
+                          {c.human_review && (
+                            <p className="text-[12px] text-muted-foreground">
+                              <strong className="text-foreground">
+                                {c.human_review.decision === "unclear"
+                                  ? "A team member found it unclear"
+                                  : `Decided by a team member: ${c.human_review.decision === "found" ? "found" : "not found"}`}
+                              </strong>{" "}
+                              (checklist model: {c.answer === "yes" ? "found" : "not found"}
+                              {c.second_opinion_p_yes != null ? `; second model ${pct(c.second_opinion_p_yes)} likely found` : ""})
+                              {c.human_review.note ? ` · “${c.human_review.note}”` : ""}
+                            </p>
+                          )}
                           {c.dropped && (
                             <p className="text-[12px] text-muted-foreground">
                               The model answered “found” but cited no paragraph of the excerpt, so it counts as not found.

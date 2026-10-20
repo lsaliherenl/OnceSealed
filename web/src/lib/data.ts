@@ -91,7 +91,16 @@ export type CheckAnswer = {
   second_opinion_p_yes: number | null;
   needs_review: boolean;
   dropped: string | null;
+  /** A person's decision on a check the two models disagreed on (core/ai/review.py); it counts in the score. */
+  human_review: { decision: "found" | "not_found" | "unclear"; note: string; reviewer: string; reviewed_at: string } | null;
 };
+
+/** The answer that counts: the person's decision when there is one, else the checklist model's. */
+export function finalAnswer(c: CheckAnswer): "yes" | "no" | null {
+  if (c.human_review?.decision === "found") return "yes";
+  if (c.human_review?.decision === "not_found") return "no";
+  return c.answer;
+}
 
 export type Principle = {
   principle: string;

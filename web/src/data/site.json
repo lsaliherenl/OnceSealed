@@ -266,7 +266,8 @@
         ],
         "second_opinion_p_yes": 0.99,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A2",
@@ -281,7 +282,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A3",
@@ -296,7 +298,8 @@
         ],
         "second_opinion_p_yes": 0.92,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A4",
@@ -305,7 +308,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.38,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29961,
@@ -358,7 +362,8 @@
         ],
         "second_opinion_p_yes": 0.93,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q2",
@@ -398,7 +403,8 @@
         ],
         "second_opinion_p_yes": 0.95,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q3",
@@ -468,7 +474,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q4",
@@ -518,7 +525,8 @@
         ],
         "second_opinion_p_yes": 0.96,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29983,
@@ -545,7 +553,8 @@
         ],
         "second_opinion_p_yes": 0.79,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D2",
@@ -560,7 +569,8 @@
         ],
         "second_opinion_p_yes": 0.96,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D3",
@@ -569,7 +579,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.12,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 18327,
@@ -596,7 +607,8 @@
         ],
         "second_opinion_p_yes": 0.97,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S2",
@@ -611,7 +623,8 @@
         ],
         "second_opinion_p_yes": 0.97,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S3",
@@ -626,7 +639,8 @@
         ],
         "second_opinion_p_yes": 0.97,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S4",
@@ -635,7 +649,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.25,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 17958,
@@ -868,7 +883,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.03,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A2",
@@ -883,7 +899,8 @@
         ],
         "second_opinion_p_yes": 0.88,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A3",
@@ -898,7 +915,8 @@
         ],
         "second_opinion_p_yes": 0.84,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A4",
@@ -907,7 +925,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.38,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29984,
@@ -934,7 +953,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "P2",
@@ -949,7 +969,8 @@
         ],
         "second_opinion_p_yes": 0.88,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "P3",
@@ -964,7 +985,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29993,
@@ -1006,7 +1028,8 @@
         ],
         "second_opinion_p_yes": 0.6,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q2",
@@ -1021,7 +1044,8 @@
         ],
         "second_opinion_p_yes": 0.94,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q3",
@@ -1051,7 +1075,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q4",
@@ -1086,7 +1111,8 @@
         ],
         "second_opinion_p_yes": 0.97,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29983,
@@ -1107,7 +1133,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.38,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D2",
@@ -1122,7 +1149,8 @@
         ],
         "second_opinion_p_yes": 0.88,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D3",
@@ -1137,7 +1165,8 @@
         ],
         "second_opinion_p_yes": 0.9,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 7346,
@@ -1158,7 +1187,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.09,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S2",
@@ -1173,7 +1203,8 @@
         ],
         "second_opinion_p_yes": 0.99,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S3",
@@ -1188,7 +1219,8 @@
         ],
         "second_opinion_p_yes": 0.54,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S4",
@@ -1203,7 +1235,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29996,
@@ -1398,7 +1431,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.04,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A2",
@@ -1413,7 +1447,8 @@
         ],
         "second_opinion_p_yes": 0.96,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A3",
@@ -1422,7 +1457,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.23,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A4",
@@ -1437,7 +1473,8 @@
         ],
         "second_opinion_p_yes": 0.44,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29987,
@@ -1464,7 +1501,8 @@
         ],
         "second_opinion_p_yes": 0.99,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "P2",
@@ -1479,7 +1517,8 @@
         ],
         "second_opinion_p_yes": 0.99,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "P3",
@@ -1494,7 +1533,8 @@
         ],
         "second_opinion_p_yes": 0.96,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29990,
@@ -1521,7 +1561,8 @@
         ],
         "second_opinion_p_yes": 0.85,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q2",
@@ -1530,7 +1571,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.36,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q3",
@@ -1545,7 +1587,8 @@
         ],
         "second_opinion_p_yes": 0.92,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q4",
@@ -1560,7 +1603,8 @@
         ],
         "second_opinion_p_yes": 0.96,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29995,
@@ -1587,7 +1631,8 @@
         ],
         "second_opinion_p_yes": 0.82,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D2",
@@ -1602,7 +1647,8 @@
         ],
         "second_opinion_p_yes": 0.95,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D3",
@@ -1611,7 +1657,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.07,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29987,
@@ -1640,7 +1687,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S2",
@@ -1649,7 +1697,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.77,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S3",
@@ -1664,7 +1713,8 @@
         ],
         "second_opinion_p_yes": 0.95,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S4",
@@ -1679,7 +1729,8 @@
         ],
         "second_opinion_p_yes": 0.84,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29992,
@@ -1855,7 +1906,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.04,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A2",
@@ -1870,7 +1922,8 @@
         ],
         "second_opinion_p_yes": 0.95,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A3",
@@ -1879,7 +1932,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.25,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A4",
@@ -1888,7 +1942,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.33,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29977,
@@ -1915,7 +1970,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "P2",
@@ -1924,7 +1980,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.36,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "P3",
@@ -1939,7 +1996,8 @@
         ],
         "second_opinion_p_yes": 0.97,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29992,
@@ -1966,7 +2024,8 @@
         ],
         "second_opinion_p_yes": 0.92,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q2",
@@ -1981,7 +2040,8 @@
         ],
         "second_opinion_p_yes": 0.96,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q3",
@@ -1996,7 +2056,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q4",
@@ -2011,7 +2072,8 @@
         ],
         "second_opinion_p_yes": 0.96,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29991,
@@ -2048,7 +2110,8 @@
         ],
         "second_opinion_p_yes": 0.87,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D2",
@@ -2073,7 +2136,8 @@
         ],
         "second_opinion_p_yes": 0.95,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D3",
@@ -2082,7 +2146,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.07,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 1766,
@@ -2111,7 +2176,8 @@
         ],
         "second_opinion_p_yes": 0.4,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S2",
@@ -2126,7 +2192,8 @@
         ],
         "second_opinion_p_yes": 0.92,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S3",
@@ -2141,7 +2208,8 @@
         ],
         "second_opinion_p_yes": 0.72,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S4",
@@ -2156,7 +2224,8 @@
         ],
         "second_opinion_p_yes": 0.99,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29997,
@@ -2631,7 +2700,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.02,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A2",
@@ -2646,7 +2716,8 @@
         ],
         "second_opinion_p_yes": 0.39,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A3",
@@ -2661,7 +2732,8 @@
         ],
         "second_opinion_p_yes": 0.96,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A4",
@@ -2670,7 +2742,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.05,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 28950,
@@ -2708,7 +2781,8 @@
         ],
         "second_opinion_p_yes": 0.9,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q2",
@@ -2723,7 +2797,8 @@
         ],
         "second_opinion_p_yes": 0.96,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q3",
@@ -2738,7 +2813,8 @@
         ],
         "second_opinion_p_yes": 0.91,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q4",
@@ -2753,7 +2829,8 @@
         ],
         "second_opinion_p_yes": 0.97,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29992,
@@ -2780,7 +2857,8 @@
         ],
         "second_opinion_p_yes": 0.95,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D2",
@@ -2805,7 +2883,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D3",
@@ -2814,7 +2893,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.07,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 20630,
@@ -2837,7 +2917,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.05,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S2",
@@ -2852,7 +2933,8 @@
         ],
         "second_opinion_p_yes": 0.89,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S3",
@@ -2867,7 +2949,8 @@
         ],
         "second_opinion_p_yes": 0.48,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S4",
@@ -2876,7 +2959,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.04,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 9590,
@@ -3171,7 +3255,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.02,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A2",
@@ -3180,7 +3265,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.6,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A3",
@@ -3195,7 +3281,8 @@
         ],
         "second_opinion_p_yes": 0.62,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A4",
@@ -3204,7 +3291,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.11,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 14686,
@@ -3262,7 +3350,8 @@
         ],
         "second_opinion_p_yes": 0.79,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q2",
@@ -3297,7 +3386,8 @@
         ],
         "second_opinion_p_yes": 0.94,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q3",
@@ -3342,7 +3432,8 @@
         ],
         "second_opinion_p_yes": 0.97,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q4",
@@ -3412,7 +3503,8 @@
         ],
         "second_opinion_p_yes": 0.97,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29863,
@@ -3439,7 +3531,8 @@
         ],
         "second_opinion_p_yes": 0.77,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D2",
@@ -3459,7 +3552,8 @@
         ],
         "second_opinion_p_yes": 0.86,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D3",
@@ -3468,7 +3562,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.07,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 8694,
@@ -3497,7 +3592,8 @@
         ],
         "second_opinion_p_yes": 0.97,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S2",
@@ -3512,7 +3608,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S3",
@@ -3521,7 +3618,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.77,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S4",
@@ -3536,7 +3634,8 @@
         ],
         "second_opinion_p_yes": 0.85,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 28372,
@@ -3754,7 +3853,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.05,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A2",
@@ -3769,7 +3869,8 @@
         ],
         "second_opinion_p_yes": 0.91,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A3",
@@ -3784,7 +3885,8 @@
         ],
         "second_opinion_p_yes": 0.92,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A4",
@@ -3793,7 +3895,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.36,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29984,
@@ -3825,7 +3928,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "P2",
@@ -3834,7 +3938,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.07,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "P3",
@@ -3889,7 +3994,8 @@
         ],
         "second_opinion_p_yes": 0.93,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29985,
@@ -3912,7 +4018,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.92,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q2",
@@ -3937,7 +4044,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q3",
@@ -3957,7 +4065,8 @@
         ],
         "second_opinion_p_yes": 0.91,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q4",
@@ -3982,7 +4091,8 @@
         ],
         "second_opinion_p_yes": 0.91,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29996,
@@ -4009,7 +4119,8 @@
         ],
         "second_opinion_p_yes": 0.79,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D2",
@@ -4029,7 +4140,8 @@
         ],
         "second_opinion_p_yes": 0.94,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D3",
@@ -4038,7 +4150,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.18,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 25517,
@@ -4067,7 +4180,8 @@
         ],
         "second_opinion_p_yes": 0.49,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S2",
@@ -4082,7 +4196,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S3",
@@ -4097,7 +4212,8 @@
         ],
         "second_opinion_p_yes": 0.93,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S4",
@@ -4106,7 +4222,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.4,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29992,
@@ -4313,7 +4430,8 @@
         ],
         "second_opinion_p_yes": 0.99,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A2",
@@ -4328,7 +4446,8 @@
         ],
         "second_opinion_p_yes": 0.94,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A3",
@@ -4337,7 +4456,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.25,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A4",
@@ -4352,7 +4472,8 @@
         ],
         "second_opinion_p_yes": 0.94,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29983,
@@ -4390,7 +4511,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q2",
@@ -4405,7 +4527,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q3",
@@ -4420,7 +4543,8 @@
         ],
         "second_opinion_p_yes": 0.7,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q4",
@@ -4435,7 +4559,8 @@
         ],
         "second_opinion_p_yes": 0.78,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29959,
@@ -4458,7 +4583,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.29,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D2",
@@ -4467,7 +4593,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.63,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D3",
@@ -4476,7 +4603,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.06,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29961,
@@ -4513,7 +4641,8 @@
         ],
         "second_opinion_p_yes": 0.94,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S2",
@@ -4522,7 +4651,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.24,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S3",
@@ -4542,7 +4672,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S4",
@@ -4551,7 +4682,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.37,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29976,
@@ -4910,7 +5042,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A2",
@@ -4919,7 +5052,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.5,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A3",
@@ -4928,7 +5062,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.53,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A4",
@@ -4937,7 +5072,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.53,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29985,
@@ -4975,7 +5111,8 @@
         ],
         "second_opinion_p_yes": 0.97,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q2",
@@ -4984,7 +5121,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.46,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q3",
@@ -4999,7 +5137,8 @@
         ],
         "second_opinion_p_yes": 0.86,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q4",
@@ -5014,7 +5153,8 @@
         ],
         "second_opinion_p_yes": 0.96,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29988,
@@ -5046,7 +5186,8 @@
         ],
         "second_opinion_p_yes": 0.86,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D2",
@@ -5076,7 +5217,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D3",
@@ -5085,7 +5227,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.25,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29968,
@@ -5117,7 +5260,8 @@
         ],
         "second_opinion_p_yes": 0.97,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S2",
@@ -5132,7 +5276,8 @@
         ],
         "second_opinion_p_yes": 0.96,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S3",
@@ -5147,7 +5292,8 @@
         ],
         "second_opinion_p_yes": 0.91,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S4",
@@ -5156,7 +5302,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.2,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29195,
@@ -5349,7 +5496,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.02,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A2",
@@ -5358,7 +5506,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.46,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A3",
@@ -5373,7 +5522,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A4",
@@ -5382,7 +5532,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.18,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29983,
@@ -5420,7 +5571,8 @@
         ],
         "second_opinion_p_yes": 0.76,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q2",
@@ -5429,7 +5581,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.36,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q3",
@@ -5449,7 +5602,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q4",
@@ -5484,7 +5638,8 @@
         ],
         "second_opinion_p_yes": 0.96,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29979,
@@ -5516,7 +5671,8 @@
         ],
         "second_opinion_p_yes": 0.86,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D2",
@@ -5541,7 +5697,8 @@
         ],
         "second_opinion_p_yes": 0.8,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D3",
@@ -5550,7 +5707,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.13,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29994,
@@ -5579,7 +5737,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S2",
@@ -5594,7 +5753,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S3",
@@ -5603,7 +5763,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.69,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S4",
@@ -5618,7 +5779,8 @@
         ],
         "second_opinion_p_yes": 0.97,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29998,
@@ -5801,7 +5963,8 @@
         ],
         "second_opinion_p_yes": 0.99,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A2",
@@ -5826,7 +5989,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A3",
@@ -5841,7 +6005,8 @@
         ],
         "second_opinion_p_yes": 0.95,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "A4",
@@ -5850,7 +6015,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.65,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29993,
@@ -5890,7 +6056,8 @@
         ],
         "second_opinion_p_yes": 0.98,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q2",
@@ -5899,7 +6066,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.37,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q3",
@@ -5908,7 +6076,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.62,
         "needs_review": true,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "Q4",
@@ -5923,7 +6092,8 @@
         ],
         "second_opinion_p_yes": 0.82,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 29991,
@@ -5944,7 +6114,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.47,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D2",
@@ -5959,7 +6130,8 @@
         ],
         "second_opinion_p_yes": 0.92,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "D3",
@@ -5968,7 +6140,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.06,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 20153,
@@ -5995,7 +6168,8 @@
         ],
         "second_opinion_p_yes": 0.93,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S2",
@@ -6010,7 +6184,8 @@
         ],
         "second_opinion_p_yes": 0.96,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S3",
@@ -6019,7 +6194,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.26,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        },
        {
         "id": "S4",
@@ -6028,7 +6204,8 @@
         "evidence": [],
         "second_opinion_p_yes": 0.18,
         "needs_review": false,
-        "dropped": null
+        "dropped": null,
+        "human_review": null
        }
       ],
       "excerpt_chars": 13492,
