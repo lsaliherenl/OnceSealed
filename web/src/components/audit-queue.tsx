@@ -3,6 +3,7 @@
 import { Check, LoaderCircle, Lock, LockOpen, TriangleAlert, X } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { EtherscanLink, HashChip } from "@/components/hash";
+import { LocalDemoNotice } from "@/components/local-demo-notice";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Callout, Card, Eyebrow, KeyValue, Tag } from "@/components/ui/card";
@@ -87,9 +88,7 @@ export function AuditQueue() {
   }
   if (error) {
     return (
-      <Callout tone="bad" icon={<TriangleAlert aria-hidden />}>
-        <strong>Auditor API not reachable.</strong> {error}
-      </Callout>
+      <LocalDemoNotice role="auditor" detail={error} />
     );
   }
 

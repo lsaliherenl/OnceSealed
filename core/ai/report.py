@@ -18,6 +18,7 @@ import json
 import logging
 from dataclasses import asdict
 from datetime import datetime, timezone
+from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
@@ -155,12 +156,16 @@ def build_report(
     second: JevChecklist | None,
     principle_keys: list[str] | None = None,
     cache_dir: Path | None = None,
+    on_principle: Callable[[str], None] | None = None,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
-    """Return (report, run_log). The run log keeps costs and served models out of the hashed report."""
+    """Return (report, run_log). The run log keeps costs and served models out of the hashed report.
+    ``on_principle`` is called with each principle's key when it is done (progress for the API)."""
     principles, run_log = [], {"llm": [], "second_opinion": []}
     for key in principle_keys or [p.key for p in PRINCIPLES]:
         if key == "permanence" and project.get("reversal_risk") is False:
             principles.append(not_applicable_by_rule(key))
+            if on_principle:
+                on_principle(key)
             continue
         # instruction-like paragraphs (prompt injection) never reach a model; they are listed for a person
         paragraphs, screened_out = screen(excerpt(doc, key))
@@ -183,6 +188,8 @@ def build_report(
         if second is not None and probs is None:
             entry["review_flags"].append("second_opinion_failed")
         principles.append(entry)
+        if on_principle:
+            on_principle(key)
 
     method = {
         "report_schema": REPORT_SCHEMA_VERSION,

@@ -1,4 +1,4 @@
-"""Create the demo role tokens for the API (OPERATOR_API_TOKEN, AUDITOR_API_TOKEN) in .env if missing.
+"""Create the demo role tokens for the API (operator, auditor, assessor) in .env if missing.
 
 The tokens are not printed; the web app reads them from its own environment (see web/README).
 
@@ -10,7 +10,7 @@ import secrets
 
 from core.config import PROJECT_ROOT
 
-KEYS = ["OPERATOR_API_TOKEN", "AUDITOR_API_TOKEN"]
+KEYS = ["OPERATOR_API_TOKEN", "AUDITOR_API_TOKEN", "ASSESSOR_API_TOKEN"]
 
 
 def main() -> None:

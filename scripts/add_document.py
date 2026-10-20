@@ -8,17 +8,12 @@ project's document coverage. The PDF itself stays out of git (samples/pdfs/ is i
 """
 
 import argparse
-import json
-import shutil
 import sys
 from pathlib import Path
 
-from core.ai.pdf_extract import file_sha256, profile
-from core.ai.sources import MANIFEST, ROLES, get_project
+from core.ai.pdf_extract import profile
+from core.ai.sources import ROLES, get_project, register_document
 from core.config import PROJECT_ROOT
-
-SHORT = {"project_description": "PD", "validation_report": "VAL", "monitoring_report": "MR",
-         "verification_report": "VER", "supporting": "DOC"}
 
 
 def main() -> None:
@@ -29,35 +24,18 @@ def main() -> None:
     parser.add_argument("--url", help="registry URL the file was downloaded from")
     parser.add_argument("--doc-type", help="title as shown on the registry page (default: the role's name)")
     parser.add_argument("--period", help="monitoring/verification period, YYYY-MM-DD/YYYY-MM-DD")
+    parser.add_argument("--covers", nargs="*", help="further roles the file serves (e.g. verification_report)")
     args = parser.parse_args()
 
     if not args.pdf.is_file():
         sys.exit(f"{args.pdf} not found")
-    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    entry = next((d for d in manifest["documents"] if d["project_id"] == args.project_id), None)
-    if entry is None:
-        sys.exit(f"{args.project_id} is not in samples/manifest.json")
+    try:
+        record = register_document(args.project_id, args.role, args.pdf, url=args.url, period=args.period,
+                                   doc_type=args.doc_type, covers=args.covers)
+    except ValueError as e:
+        sys.exit(str(e))
 
-    sha = file_sha256(args.pdf)
-    extra = entry.setdefault("extra_files", [])
-    if any(x.get("sha256") == sha for x in extra) or entry.get("sha256") == sha:
-        sys.exit("this file is already registered")
-
-    n = 1 + sum(1 for x in extra if x.get("role") == args.role)
-    dest = PROJECT_ROOT / "samples" / "pdfs" / f"{args.project_id}_{SHORT[args.role]}{n}.pdf"
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(args.pdf, dest)
-
-    record = {"role": args.role, "doc_type": args.doc_type or ROLES[args.role], "file_name": args.pdf.name,
-              "local_path": dest.relative_to(PROJECT_ROOT).as_posix(), "sha256": sha}
-    if args.url:
-        record["url"] = args.url
-    if args.period:
-        record["period"] = args.period
-    extra.append(record)
-    MANIFEST.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-
-    prof = profile(dest)
+    prof = profile(PROJECT_ROOT / record["local_path"])
     print(f"added {record['local_path']}: {prof.pages} pages, {prof.tables} tables, "
           f"{len(prof.pages_without_text)} pages without a text layer")
     if prof.pages_without_text:

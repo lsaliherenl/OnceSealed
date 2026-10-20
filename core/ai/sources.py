@@ -95,3 +95,49 @@ def get_project(project_id: str, path: Path = MANIFEST) -> ProjectSources:
         if p.project_id == project_id:
             return p
     raise KeyError(f"{project_id} is not in {path.name}")
+
+
+SHORT = {"project_description": "PD", "validation_report": "VAL", "monitoring_report": "MR",
+         "verification_report": "VER", "supporting": "DOC"}
+
+
+def register_document(project_id: str, role: str, pdf: Path, file_name: str | None = None, url: str | None = None,
+                      period: str | None = None, doc_type: str | None = None,
+                      covers: list[str] | None = None) -> dict[str, Any]:
+    """Copy a downloaded PDF into samples/pdfs/ and record it under the project's ``extra_files``.
+
+    Returns the manifest record. Raises ValueError for an unknown project or role, or a file already registered.
+    """
+    import shutil
+
+    if role not in ROLES or role == "project_description":
+        raise ValueError(f"role must be one of {[r for r in ROLES if r != 'project_description']}")
+    if period is not None and not _valid_period(period):
+        raise ValueError("period must be YYYY-MM-DD/YYYY-MM-DD")
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    entry = next((d for d in manifest["documents"] if d["project_id"] == project_id), None)
+    if entry is None:
+        raise ValueError(f"{project_id} is not in samples/manifest.json")
+    sha = file_sha256(pdf)
+    extra = entry.setdefault("extra_files", [])
+    if entry.get("sha256") == sha or any(x.get("sha256") == sha for x in extra):
+        raise ValueError("this file is already registered")
+
+    n = 1 + sum(1 for x in extra if x.get("role") == role)
+    dest = PROJECT_ROOT / "samples" / "pdfs" / f"{project_id}_{SHORT[role]}{n}.pdf"
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(pdf, dest)
+    record: dict[str, Any] = {"role": role, "doc_type": doc_type or ROLES[role], "file_name": file_name or pdf.name,
+                              "local_path": dest.relative_to(PROJECT_ROOT).as_posix(), "sha256": sha}
+    for key, value in (("url", url), ("period", period), ("covers", covers)):
+        if value:
+            record[key] = value
+    extra.append(record)
+    MANIFEST.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return record
+
+
+def _valid_period(period: str) -> bool:
+    import re
+    m = re.fullmatch(r"(\d{4}-\d{2}-\d{2})/(\d{4}-\d{2}-\d{2})", period)
+    return bool(m) and m.group(1) <= m.group(2)

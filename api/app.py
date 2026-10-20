@@ -27,8 +27,10 @@ from core.data.batches import IssuanceBatch, load_batches
 from core.hashing import hash_json
 from core.privacy.commitment import to_hex
 from core.privacy.identity import is_valid_lei, project_id as project_id_bytes
-from core.reports import archive
+from core.reports import archive, log_anchor
 from core.service import OnceSealed
+
+from api.assess import add_assessor_routes
 
 SEPOLIA = 11155111
 EXPLORERS = {SEPOLIA: "https://sepolia.etherscan.io"}
@@ -208,8 +210,9 @@ def create_app(service: OnceSealed, network: str, tokens: dict[str, str],
         if report is None:
             raise HTTPException(status_code=404, detail="no published report")
         version, tx, rhash = service.publish_report(report)
-        if service.chain_id == SEPOLIA:  # the archive mirrors the Sepolia deployment only
+        if service.chain_id == SEPOLIA:  # the archive and the transaction log mirror the Sepolia deployment
             archive(pid, version)
+            log_anchor(reg.address, tx.tx_hash, tx.block_number, tx.gas_used, pid, version, rhash)
         return {"version": version, "report_hash": rhash, "tx_hash": tx.tx_hash, "gas_used": tx.gas_used}
 
     @app.post("/api/retirements", dependencies=[Depends(require("operator"))])
@@ -246,4 +249,5 @@ def create_app(service: OnceSealed, network: str, tokens: dict[str, str],
         tx = reg.attest(rid, req.valid)
         return {"retirement": _public(reg.get_retirement(rid)), "tx_hash": tx.tx_hash}
 
+    add_assessor_routes(app, service, require)
     return app

@@ -16,6 +16,7 @@ samples/pdfs/
 # Local run logs and LLM cache (reports/ and data/evidence/ are published)
 data/runs/
 data/cache/
+data/drafts/
 *.sqlite
 *.db
 

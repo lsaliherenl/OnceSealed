@@ -233,15 +233,25 @@ way, through a public RPC, and checks receipts there.
 cd web && npm ci && npm test && npm run build && npm start       # http://localhost:3000
 ```
 
-The retire and audit screens call the API, which holds the demo operator and auditor keys
-(`.env` with the Sepolia keys and `OPERATOR_API_TOKEN` / `AUDITOR_API_TOKEN` from `scripts/gen_api_tokens.py`):
+### Run the full demo
+
+The operator (retire), auditor and assessor screens call the local API, which signs transactions with the demo
+keys. One command starts the API and the web app (and rebuilds the web app when its sources changed):
 
 ```bash
-ONCESEALED_NETWORK=sepolia uvicorn api.server:app     # in the repository root, next to the web server
+python scripts/demo_up.py            # Sepolia: needs .env with the test-wallet keys and SEPOLIA_RPC_URL
+python scripts/demo_up.py --local    # throwaway Anvil chain with temporary keys: no .env and no test ETH needed
 ```
 
-The web server adds the role tokens on the server side, so they never reach the browser; that also means anyone who
-can open it can act as the operator and the auditor. Run it locally for the demo and do not expose it publicly.
+Then open http://localhost:3000: **Retire credits** records lots for a fictional buyer, **Auditor** opens the sealed
+vault and attests on-chain, **Assess** adds a registry PDF, runs the AI-assisted checks, shows what changed against
+the published report and anchors a new version. In `--local` mode those screens act on the local chain while the
+public pages keep reading Sepolia, and publishing an assessment leaves the published report files untouched.
+
+The web server adds the role tokens (`OPERATOR_API_TOKEN`, `AUDITOR_API_TOKEN`, `ASSESSOR_API_TOKEN`, created by
+`scripts/gen_api_tokens.py`) on the server side, so they never reach the browser; that also means anyone who can open
+it can act in those roles. Run it locally and do not expose it publicly: the hosted site serves only the public
+pages, and the role screens there explain how to run them.
 
 ## Data sources and attribution
 

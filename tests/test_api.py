@@ -18,9 +18,10 @@ from core.service import OnceSealed
 
 pytestmark = pytest.mark.skipif(anvil.anvil_binary() is None, reason="anvil not installed")
 
-TOKENS = {"operator": "op-token", "auditor": "aud-token"}
+TOKENS = {"operator": "op-token", "auditor": "aud-token", "assessor": "as-token"}
 OP = {"X-Role-Token": "op-token"}
 AUD = {"X-Role-Token": "aud-token"}
+AS = {"X-Role-Token": "as-token"}
 
 
 @pytest.fixture(scope="module")
@@ -108,3 +109,57 @@ def test_retire_overlap_audit_and_disclosure(client):
     # the bundle verifies as a whole, but stays pending until every lot is audited
     whole = client.post("/api/receipts/verify", json=bundle).json()
     assert whole["valid"] and whole["audit_status"] == "pending"
+
+
+def test_assessor_runs_compares_and_publishes_a_draft(client, monkeypatch, tmp_path):
+    """The assessment itself is stubbed (no model calls); the routes, draft, comparison and anchoring are real."""
+    import copy
+    import json
+    import time
+
+    from api import assess
+    from core.ai.assessment import Assessment
+    from core.config import PROJECT_ROOT
+
+    published = json.loads((PROJECT_ROOT / "reports" / "VCS1851.json").read_text(encoding="utf-8"))
+    report = copy.deepcopy(published)
+    first = report["principles"][0]["checks"][0]
+    first["answer"] = "no" if first["answer"] == "yes" else "yes"
+    saved = {}
+
+    def fake_run(project, llm, second, principles, use_cache, progress):
+        for p in report["principles"]:
+            progress(p["principle"])
+        return Assessment(report, {"llm": [{"cost": 0.01}], "second_opinion": []}, [])
+
+    monkeypatch.setattr(assess, "DRAFTS", tmp_path)
+    monkeypatch.setattr(assess, "LLMChecklist", lambda: None)
+    monkeypatch.setattr(assess, "JevChecklist", lambda: None)
+    monkeypatch.setattr(assess.assessment, "run", fake_run)
+    monkeypatch.setattr(assess.assessment, "save", lambda pid, a: saved.setdefault(pid, a))
+    monkeypatch.setattr(assess.subprocess, "run", lambda *a, **k: type("R", (), {"returncode": 0, "stderr": ""})())
+    monkeypatch.setattr(assess, "get_project", lambda pid: type("P", (), {"files": []})())
+
+    assert client.post("/api/assess/VCS1851/run", json={}).status_code == 401
+    assert client.post("/api/assess/VCS1851/run", json={}, headers=AS).json() == {"status": "running"}
+    for _ in range(50):
+        d = client.get("/api/assess/VCS1851/draft", headers=AS).json()
+        if d["job"]["status"] != "running":
+            break
+        time.sleep(0.1)
+    assert d["job"]["status"] == "done" and len(d["job"]["done"]) == len(report["principles"])
+    draft = d["draft"]
+    assert draft["cost"] == 0.01 and draft["same_method"]
+    assert [(c["id"], c["before"], c["after"]) for c in draft["changed_checks"]] == [
+        (first["id"], "no" if first["answer"] == "yes" else "yes", first["answer"])]
+
+    res = client.post("/api/assess/VCS1851/publish", headers=AS).json()
+    assert res["version"] >= 1 and res["report_hash"] == draft["report_hash"]
+    assert not res["files_written"] and saved == {}  # a local chain never rewrites the published Sepolia files
+    assert client.get("/api/assess/VCS1851/draft", headers=AS).json()["draft"] is None
+
+
+def test_assessor_upload_rejects_non_pdf(client):
+    res = client.post("/api/assess/VCS1851/documents?role=monitoring_report&file_name=x.pdf", content=b"hello",
+                      headers=AS)
+    assert res.status_code == 400

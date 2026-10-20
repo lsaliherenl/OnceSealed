@@ -36,7 +36,7 @@ def build():
 
     public, private = auditor_box_keys()
     service = OnceSealed(registry, VaultStore(PROJECT_ROOT / "data" / "vault" / f"{chain_id}.sqlite"), public, private)
-    tokens = {"operator": os.environ.get("OPERATOR_API_TOKEN", ""), "auditor": os.environ.get("AUDITOR_API_TOKEN", "")}
+    tokens = {role: os.environ.get(f"{role.upper()}_API_TOKEN", "") for role in ("operator", "auditor", "assessor")}
     origins = os.environ.get("CORS_ORIGINS", "http://localhost:3000").split(",")
     return create_app(service, network, tokens, origins)
 

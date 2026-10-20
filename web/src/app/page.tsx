@@ -45,6 +45,7 @@ const SCREENS: { href: string; role: string; tone?: Tone; title: string; body: s
   { href: "/retire", role: "Registry operator", title: "Retire credits", body: "Retire whole lots of simulated serials for a fictional buyer and issue a private receipt." },
   { href: "/verify", role: "Anyone", title: "Verify a retirement", body: "Look up a retirement or serial and check a receipt against the chain." },
   { href: "/auditor", role: "Auditor", tone: "seal", title: "Audit queue", body: "Open the sealed identity, review the checks and attest once." },
+  { href: "/assess", role: "Assessor", tone: "seal", title: "Assess a project", body: "Add a registry document, run the checks, compare the draft and anchor a new report version." },
 ];
 
 export default function OverviewPage() {

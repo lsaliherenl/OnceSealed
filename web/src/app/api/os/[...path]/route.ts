@@ -10,7 +10,8 @@ import path from "node:path";
 
 const API = process.env.ONCESEALED_API_URL ?? "http://127.0.0.1:8000";
 
-type Route = { method: "GET" | "POST"; pattern: RegExp; role?: "operator" | "auditor" };
+type Role = "operator" | "auditor" | "assessor";
+type Route = { method: "GET" | "POST"; pattern: RegExp; role?: Role; binary?: boolean };
 
 const ROUTES: Route[] = [
   { method: "GET", pattern: /^health$/ },
@@ -20,12 +21,16 @@ const ROUTES: Route[] = [
   { method: "POST", pattern: /^retirements$/, role: "operator" },
   { method: "POST", pattern: /^audit\/\d+\/open$/, role: "auditor" },
   { method: "POST", pattern: /^audit\/\d+\/attest$/, role: "auditor" },
+  { method: "GET", pattern: /^assess\/projects$/, role: "assessor" },
+  { method: "GET", pattern: /^assess\/[A-Za-z0-9]+\/draft$/, role: "assessor" },
+  { method: "POST", pattern: /^assess\/[A-Za-z0-9]+\/(run|discard|publish)$/, role: "assessor" },
+  { method: "POST", pattern: /^assess\/[A-Za-z0-9]+\/documents$/, role: "assessor", binary: true },
 ];
 
-const TOKEN_ENV = { operator: "OPERATOR_API_TOKEN", auditor: "AUDITOR_API_TOKEN" } as const;
+const TOKEN_ENV = { operator: "OPERATOR_API_TOKEN", auditor: "AUDITOR_API_TOKEN", assessor: "ASSESSOR_API_TOKEN" } as const;
 
 /** Reads a token from the environment, falling back to the repository's .env (one level up). */
-function token(role: "operator" | "auditor") {
+function token(role: Role) {
   const name = TOKEN_ENV[role];
   if (process.env[name]) return process.env[name]!;
   try {
@@ -42,7 +47,7 @@ async function forward(request: Request, segments: string[], method: "GET" | "PO
   const route = ROUTES.find((r) => r.method === method && r.pattern.test(sub));
   if (!route) return Response.json({ error: "NotFound", message: `no proxy route for ${method} ${sub}` }, { status: 404 });
 
-  const headers: Record<string, string> = { "content-type": "application/json" };
+  const headers: Record<string, string> = { "content-type": route.binary ? "application/pdf" : "application/json" };
   if (route.role) {
     const t = token(route.role);
     if (!t) {
@@ -58,7 +63,7 @@ async function forward(request: Request, segments: string[], method: "GET" | "PO
     const res = await fetch(`${API}/api/${sub}${query}`, {
       method,
       headers,
-      body: method === "POST" ? await request.text() : undefined,
+      body: method === "POST" ? (route.binary ? await request.arrayBuffer() : await request.text()) : undefined,
       cache: "no-store",
     });
     return new Response(await res.text(), { status: res.status, headers: { "content-type": "application/json" } });

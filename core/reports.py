@@ -35,3 +35,14 @@ def anchored_versions(seed: Path = SEPOLIA_SEED) -> dict[str, list[tuple[int, st
         if tx["kind"] == "registerQualityReport":
             out.setdefault(tx["project"], []).append((tx["version"], tx["report_hash"]))
     return {p: sorted(v) for p, v in out.items()}
+
+
+def log_anchor(contract: str, tx_hash: str, block: int, gas: int, project_id: str, version: int,
+               report_hash: str, seed: Path = SEPOLIA_SEED) -> None:
+    """Append a report anchoring to the Sepolia transaction log (the web export reads anchors from it)."""
+    log = json.loads(seed.read_text(encoding="utf-8"))
+    if log["contract"].lower() != contract.lower():
+        raise ValueError("the Sepolia log belongs to another contract")
+    log["txs"].append({"kind": "registerQualityReport", "tx": tx_hash, "block": block, "gas": gas,
+                       "project": project_id, "version": version, "report_hash": report_hash})
+    seed.write_text(json.dumps(log, indent=2) + "\n", encoding="utf-8")

@@ -4,6 +4,7 @@ import { Check, Download, LoaderCircle, Lock, TriangleAlert } from "lucide-react
 import { useEffect, useId, useState } from "react";
 import { EtherscanLink, HashChip } from "@/components/hash";
 import { TransitionLink } from "@/components/transition-link";
+import { LocalDemoNotice } from "@/components/local-demo-notice";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Callout, Card, KeyValue } from "@/components/ui/card";
@@ -190,9 +191,7 @@ export function RetireForm() {
           }}
         >
           {apiError && (
-            <Callout tone="bad" icon={<TriangleAlert aria-hidden />}>
-              <strong>Operator API not reachable.</strong> {apiError}
-            </Callout>
+            <LocalDemoNotice role="operator" detail={apiError} />
           )}
 
           <Step n={1} title="Project">
