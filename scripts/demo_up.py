@@ -15,6 +15,7 @@ import argparse
 import os
 import secrets
 import shutil
+import socket
 import subprocess
 import sys
 import time
@@ -64,6 +65,11 @@ def main() -> None:
     parser.add_argument("--local", action="store_true", help="throwaway Anvil chain with temporary keys")
     args = parser.parse_args()
     sys.stdout.reconfigure(line_buffering=True)
+
+    for port in (API_PORT, WEB_PORT):
+        with socket.socket() as sock:
+            if sock.connect_ex(("127.0.0.1", port)) == 0:
+                sys.exit(f"port {port} is already in use: stop the other server first")
 
     npm = shutil.which("npm")
     if npm is None:

@@ -2,13 +2,17 @@ import { FileWarning } from "lucide-react";
 import { DeterministicTag } from "@/components/quality";
 import { Badge } from "@/components/ui/badge";
 import { Callout, Card } from "@/components/ui/card";
-import { CHECK_LABEL, CHECK_TONE, type Checks, DOCUMENT_ROLE, REPO_URL } from "@/lib/data";
+import { CHECK_LABEL, CHECK_TONE, type Checks, DOCUMENT_ROLE, DOCUMENT_ROLE_ONE, REPO_URL } from "@/lib/data";
 import { formatInt, staggerStyle } from "@/lib/utils";
 
 /** Deterministic checks of the documents against registry data, shown apart from the AI findings. */
 export function DataChecks({ projectId, checks }: { projectId: string; checks: Checks }) {
   const results = checks.results.filter((c) => c.id !== "document_coverage");
-  const read = checks.documents.map((d) => DOCUMENT_ROLE[d.role] ?? d.role).join(", ");
+  const counts = new Map<string, number>();
+  for (const d of checks.documents) counts.set(d.role, (counts.get(d.role) ?? 0) + 1);
+  const read = [...counts]
+    .map(([role, n]) => (n === 1 ? (DOCUMENT_ROLE_ONE[role] ?? role) : `${n} ${(DOCUMENT_ROLE_ONE[role] ?? role).toLowerCase()}s`))
+    .join(", ");
   const pages = checks.documents.reduce((n, d) => n + d.pages, 0);
   const tables = checks.documents.reduce((n, d) => n + d.tables, 0);
 
