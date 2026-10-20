@@ -64,7 +64,7 @@
       "principle": "additionality",
       "status": "partial_evidence",
       "score": 25,
-      "rationale": "Evidence found for 1 of 4 checks (A3); not found in the excerpt: A1, A2, A4.",
+      "rationale": "Evidence found for 1 of 4 checks (A3); not found in the excerpt: A1, A2, A4; 1 decided by a person after the models disagreed.",
       "checks": [
         {
           "id": "A1",
@@ -81,8 +81,14 @@
           "answer": "no",
           "evidence": [],
           "second_opinion_p_yes": 0.62,
-          "needs_review": true,
-          "dropped": null
+          "needs_review": false,
+          "dropped": null,
+          "human_review": {
+            "decision": "not_found",
+            "note": "",
+            "reviewer": "team member",
+            "reviewed_at": "2026-10-20T18:15:41+00:00"
+          }
         },
         {
           "id": "A3",
@@ -118,9 +124,7 @@
         }
       ],
       "dropped_findings": 0,
-      "review_flags": [
-        "models_disagree:A2"
-      ],
+      "review_flags": [],
       "excerpt": {
         "paragraphs": [
           "p2-18",
@@ -1449,5 +1453,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-20T17:35:14+00:00"
+  "generated_at": "2026-10-20T18:23:11+00:00"
 }

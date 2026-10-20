@@ -58,9 +58,9 @@
   "principles": [
     {
       "principle": "additionality",
-      "status": "partial_evidence",
-      "score": 75,
-      "rationale": "Evidence found for 3 of 4 checks (A1, A2, A3); not found in the excerpt: A4.",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (A1, A2, A3, A4); 1 decided by a person after the models disagreed.",
       "checks": [
         {
           "id": "A1",
@@ -123,8 +123,14 @@
           "answer": "no",
           "evidence": [],
           "second_opinion_p_yes": 0.75,
-          "needs_review": true,
-          "dropped": null
+          "needs_review": false,
+          "dropped": null,
+          "human_review": {
+            "decision": "found",
+            "note": "",
+            "reviewer": "team member",
+            "reviewed_at": "2026-10-20T18:16:59+00:00"
+          }
         }
       ],
       "quotes": [
@@ -160,9 +166,7 @@
         }
       ],
       "dropped_findings": 0,
-      "review_flags": [
-        "models_disagree:A4"
-      ],
+      "review_flags": [],
       "excerpt": {
         "paragraphs": [
           "p2-02",
@@ -892,7 +896,7 @@
     }
   ],
   "overall": {
-    "score": 81,
+    "score": 89,
     "included": [
       "additionality",
       "robust_quantification",
@@ -911,5 +915,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-20T17:36:46+00:00"
+  "generated_at": "2026-10-20T18:23:14+00:00"
 }

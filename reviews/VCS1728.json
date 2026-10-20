@@ -1,0 +1,16 @@
+{
+  "schema": "review-v1",
+  "project_id": "VCS1728",
+  "decisions": [
+    {
+      "principle": "additionality",
+      "check_id": "A4",
+      "decision": "found",
+      "note": "",
+      "model_answer": "no",
+      "document_sha256": "d914898fdbcf2c8be93d488884c86ea940ca247b13eaecfcca0ab2e76a908375",
+      "reviewer": "team member",
+      "reviewed_at": "2026-10-20T18:16:59+00:00"
+    }
+  ]
+}

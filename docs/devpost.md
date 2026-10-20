@@ -38,7 +38,8 @@ OnceSealed is a prototype verification and privacy layer that could sit on top o
 - **Evidence-backed quality (blockchain-based carbon credit verification).** For real Verra projects the system reads
   the project description and the monitoring, validation and verification reports and answers 18 yes/no checks
   against five ICVCM Core Carbon Principles. Every "found" must cite a paragraph of the documents, a second model
-  cross-checks each answer, and a team member decides where the two disagree. Deterministic data checks compare the
+  cross-checks each answer, and a team member decides where the two disagree (12 flagged: the person sided with the
+  checklist model on 9, with the second model on 2, and left 1 open). Deterministic data checks compare the
   documents' own figures with the credits actually issued. The report's hash and the exact method (models, prompt,
   questions, excerpt rule) are anchored on-chain, and every version stays readable.
 - **Verify without trusting us.** The public verify and report pages read the contract directly from the browser and

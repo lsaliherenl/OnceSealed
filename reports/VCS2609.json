@@ -670,7 +670,7 @@
       "principle": "no_double_counting",
       "status": "strong_evidence",
       "score": 100,
-      "rationale": "Evidence found for 3 of 3 checks (D1, D2, D3).",
+      "rationale": "Evidence found for 3 of 3 checks (D1, D2, D3); 1 decided by a person after the models disagreed.",
       "checks": [
         {
           "id": "D1",
@@ -719,8 +719,14 @@
             }
           ],
           "second_opinion_p_yes": 0.27,
-          "needs_review": true,
-          "dropped": null
+          "needs_review": false,
+          "dropped": null,
+          "human_review": {
+            "decision": "found",
+            "note": "",
+            "reviewer": "team member",
+            "reviewed_at": "2026-10-20T18:17:13+00:00"
+          }
         }
       ],
       "quotes": [
@@ -750,9 +756,7 @@
         }
       ],
       "dropped_findings": 0,
-      "review_flags": [
-        "models_disagree:D3"
-      ],
+      "review_flags": [],
       "excerpt": {
         "paragraphs": [
           "p68-06",
@@ -1020,5 +1024,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-20T17:38:12+00:00"
+  "generated_at": "2026-10-20T18:23:17+00:00"
 }

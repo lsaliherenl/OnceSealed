@@ -1,0 +1,26 @@
+{
+  "schema": "review-v1",
+  "project_id": "VCS1477",
+  "decisions": [
+    {
+      "principle": "robust_quantification",
+      "check_id": "Q1",
+      "decision": "not_found",
+      "note": "",
+      "model_answer": "no",
+      "document_sha256": "36f05d93b296982c2b49712eb339c7700e6c4b90c50e9dce6bc46eb43394c17a",
+      "reviewer": "team member",
+      "reviewed_at": "2026-10-20T18:11:35+00:00"
+    },
+    {
+      "principle": "safeguards",
+      "check_id": "S1",
+      "decision": "found",
+      "note": "",
+      "model_answer": "yes",
+      "document_sha256": "36f05d93b296982c2b49712eb339c7700e6c4b90c50e9dce6bc46eb43394c17a",
+      "reviewer": "team member",
+      "reviewed_at": "2026-10-20T18:11:33+00:00"
+    }
+  ]
+}

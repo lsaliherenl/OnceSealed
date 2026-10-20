@@ -1,0 +1,16 @@
+{
+  "schema": "review-v1",
+  "project_id": "VCS673",
+  "decisions": [
+    {
+      "principle": "safeguards",
+      "check_id": "S2",
+      "decision": "not_found",
+      "note": "",
+      "model_answer": "no",
+      "document_sha256": "5c61f797fcac776e1d9acf8eed414827ac6be1aea3d7c8447b39ffe97e7ba3fc",
+      "reviewer": "team member",
+      "reviewed_at": "2026-10-20T18:18:09+00:00"
+    }
+  ]
+}

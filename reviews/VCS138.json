@@ -1,0 +1,26 @@
+{
+  "schema": "review-v1",
+  "project_id": "VCS138",
+  "decisions": [
+    {
+      "principle": "additionality",
+      "check_id": "A2",
+      "decision": "not_found",
+      "note": "",
+      "model_answer": "no",
+      "document_sha256": "bab9be841b7f46df331480cf68e7fa3235716614c809533a889d2ec6d9ea54ba",
+      "reviewer": "team member",
+      "reviewed_at": "2026-10-20T18:14:04+00:00"
+    },
+    {
+      "principle": "safeguards",
+      "check_id": "S1",
+      "decision": "not_found",
+      "note": "",
+      "model_answer": "yes",
+      "document_sha256": "bab9be841b7f46df331480cf68e7fa3235716614c809533a889d2ec6d9ea54ba",
+      "reviewer": "team member",
+      "reviewed_at": "2026-10-20T18:14:58+00:00"
+    }
+  ]
+}

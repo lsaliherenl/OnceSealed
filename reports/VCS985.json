@@ -710,7 +710,13 @@
           ],
           "second_opinion_p_yes": 0.39,
           "needs_review": true,
-          "dropped": null
+          "dropped": null,
+          "human_review": {
+            "decision": "unclear",
+            "note": "The cited paragraphs (p35-01, p35-02) describe the MUF participatory mapping: 2003 and a 2008 update, 89 buffer-zone communities, 53 local facilitators in 2003 and 345 community representatives in 2008, 8 focus groups per community. Whether this mapping exercise counts as a stakeholder consultation is a matter of interpretation, so the models' disagreement is left open.",
+            "reviewer": "team member",
+            "reviewed_at": "2026-10-20T18:19:01+00:00"
+          }
         },
         {
           "id": "S2",
@@ -855,5 +861,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-20T17:42:18+00:00"
+  "generated_at": "2026-10-20T18:23:22+00:00"
 }

@@ -389,7 +389,7 @@
       "principle": "robust_quantification",
       "status": "partial_evidence",
       "score": 75,
-      "rationale": "Evidence found for 3 of 4 checks (Q2, Q3, Q4); not found in the excerpt: Q1.",
+      "rationale": "Evidence found for 3 of 4 checks (Q2, Q3, Q4); not found in the excerpt: Q1; 1 decided by a person after the models disagreed.",
       "checks": [
         {
           "id": "Q1",
@@ -397,8 +397,14 @@
           "answer": "no",
           "evidence": [],
           "second_opinion_p_yes": 0.59,
-          "needs_review": true,
-          "dropped": null
+          "needs_review": false,
+          "dropped": null,
+          "human_review": {
+            "decision": "not_found",
+            "note": "",
+            "reviewer": "team member",
+            "reviewed_at": "2026-10-20T18:11:35+00:00"
+          }
         },
         {
           "id": "Q2",
@@ -538,9 +544,7 @@
         }
       ],
       "dropped_findings": 0,
-      "review_flags": [
-        "models_disagree:Q1"
-      ],
+      "review_flags": [],
       "excerpt": {
         "paragraphs": [
           "p19-03",
@@ -966,7 +970,7 @@
       "principle": "safeguards",
       "status": "strong_evidence",
       "score": 100,
-      "rationale": "Evidence found for 4 of 4 checks (S1, S2, S3, S4).",
+      "rationale": "Evidence found for 4 of 4 checks (S1, S2, S3, S4); 1 decided by a person after the models disagreed.",
       "checks": [
         {
           "id": "S1",
@@ -980,8 +984,14 @@
             }
           ],
           "second_opinion_p_yes": 0.13,
-          "needs_review": true,
-          "dropped": null
+          "needs_review": false,
+          "dropped": null,
+          "human_review": {
+            "decision": "found",
+            "note": "",
+            "reviewer": "team member",
+            "reviewed_at": "2026-10-20T18:11:33+00:00"
+          }
         },
         {
           "id": "S2",
@@ -1056,9 +1066,7 @@
         }
       ],
       "dropped_findings": 0,
-      "review_flags": [
-        "models_disagree:S1"
-      ],
+      "review_flags": [],
       "excerpt": {
         "paragraphs": [
           "p45-03",
@@ -1138,5 +1146,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-20T17:31:36+00:00"
+  "generated_at": "2026-10-20T18:23:05+00:00"
 }

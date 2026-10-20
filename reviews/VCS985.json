@@ -1,0 +1,16 @@
+{
+  "schema": "review-v1",
+  "project_id": "VCS985",
+  "decisions": [
+    {
+      "principle": "safeguards",
+      "check_id": "S1",
+      "decision": "unclear",
+      "note": "The cited paragraphs (p35-01, p35-02) describe the MUF participatory mapping: 2003 and a 2008 update, 89 buffer-zone communities, 53 local facilitators in 2003 and 345 community representatives in 2008, 8 focus groups per community. Whether this mapping exercise counts as a stakeholder consultation is a matter of interpretation, so the models' disagreement is left open.",
+      "model_answer": "yes",
+      "document_sha256": "7523e87dc6f3ae5537f0c7288bedab1004602e22c36cf7501a69d39ae8849106",
+      "reviewer": "team member",
+      "reviewed_at": "2026-10-20T18:19:01+00:00"
+    }
+  ]
+}

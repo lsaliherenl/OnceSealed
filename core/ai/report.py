@@ -153,6 +153,34 @@ def overall_score(principles: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def excerpt_key(doc: Document, paragraphs: list[Paragraph]) -> str:
+    """Short hash of an excerpt (the documents and the exact paragraphs read), for the answer caches."""
+    return hash_json({"document": doc.sha256, "paragraphs": [[p.id, p.text] for p in paragraphs]})[2:18]
+
+
+def second_opinion_cache(cache_dir: Path, doc: Document, principle: str, paragraphs: list[Paragraph],
+                         model: str) -> Path:
+    return cache_dir / "second_opinion" / f"{excerpt_key(doc, paragraphs)}-{principle}-{model.replace('/', '_')}.json"
+
+
+def _cached_second(doc: Document, principle: str, paragraphs: list[Paragraph], second: JevChecklist,
+                   cache_dir: Path | None) -> tuple[dict[str, float], dict[str, Any], bool]:
+    """The second model's probabilities, cached like the checklist answers.
+
+    The second model varies a little between runs, so asking it again would move which checks are flagged; with
+    the cache, re-building a report after a person's review keeps the flags that person decided on.
+    """
+    path = None if cache_dir is None else second_opinion_cache(cache_dir, doc, principle, paragraphs, second.name)
+    if path is not None and path.exists():
+        d = json.loads(path.read_text(encoding="utf-8"))
+        return d["probabilities"], {"model": d.get("model"), "usage": None}, True
+    probs, data = second.probabilities(principle, paragraphs)
+    if path is not None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps({"probabilities": probs, "model": data.get("model")}, indent=2), encoding="utf-8")
+    return probs, data, False
+
+
 def _cached_checklist(doc: Document, principle: str, paragraphs: list[Paragraph], llm: LLMChecklist,
                       cache_dir: Path | None) -> tuple[ChecklistResult, bool]:
     """LLM checklist answers, cached per (excerpt, principle, prompt, evidence rule, model).
@@ -164,8 +192,7 @@ def _cached_checklist(doc: Document, principle: str, paragraphs: list[Paragraph]
     path = None
     if cache_dir is not None:
         model = llm.name.replace("/", "_")
-        ex = hash_json({"document": doc.sha256, "paragraphs": [[p.id, p.text] for p in paragraphs]})[2:18]
-        path = cache_dir / f"{ex}-{principle}-{CHECKLIST_PROMPT_VERSION}-{EVIDENCE_RULE}-{model}.json"
+        path = cache_dir / f"{excerpt_key(doc, paragraphs)}-{principle}-{CHECKLIST_PROMPT_VERSION}-{EVIDENCE_RULE}-{model}.json"
         if path.exists():
             d = json.loads(path.read_text(encoding="utf-8"))
             answers = {k: Answer(**v) for k, v in d.pop("answers").items()}
@@ -204,8 +231,8 @@ def build_report(
         probs = None
         if second is not None:
             try:
-                probs, data = second.probabilities(key, paragraphs)
-                run_log["second_opinion"].append({"principle": key, "model": data.get("model"),
+                probs, data, cached_second = _cached_second(doc, key, paragraphs, second, cache_dir)
+                run_log["second_opinion"].append({"principle": key, "model": data.get("model"), "cached": cached_second,
                                                   "cost": (data.get("usage") or {}).get("cost")})
             except Exception as e:  # the second opinion is optional; its absence is flagged in the report
                 log.warning("second opinion failed for %s: %s", key, e)

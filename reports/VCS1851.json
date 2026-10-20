@@ -48,7 +48,7 @@
       "principle": "additionality",
       "status": "partial_evidence",
       "score": 25,
-      "rationale": "Evidence found for 1 of 4 checks (A1); not found in the excerpt: A2, A3, A4.",
+      "rationale": "Evidence found for 1 of 4 checks (A1); not found in the excerpt: A2, A3, A4; 3 decided by a person after the models disagreed.",
       "checks": [
         {
           "id": "A1",
@@ -71,8 +71,14 @@
           "answer": "no",
           "evidence": [],
           "second_opinion_p_yes": 0.54,
-          "needs_review": true,
-          "dropped": null
+          "needs_review": false,
+          "dropped": null,
+          "human_review": {
+            "decision": "not_found",
+            "note": "",
+            "reviewer": "team member",
+            "reviewed_at": "2026-10-20T18:11:29+00:00"
+          }
         },
         {
           "id": "A3",
@@ -80,8 +86,14 @@
           "answer": "no",
           "evidence": [],
           "second_opinion_p_yes": 0.51,
-          "needs_review": true,
-          "dropped": null
+          "needs_review": false,
+          "dropped": null,
+          "human_review": {
+            "decision": "not_found",
+            "note": "",
+            "reviewer": "team member",
+            "reviewed_at": "2026-10-20T18:12:07+00:00"
+          }
         },
         {
           "id": "A4",
@@ -89,8 +101,14 @@
           "answer": "no",
           "evidence": [],
           "second_opinion_p_yes": 0.55,
-          "needs_review": true,
-          "dropped": null
+          "needs_review": false,
+          "dropped": null,
+          "human_review": {
+            "decision": "not_found",
+            "note": "",
+            "reviewer": "team member",
+            "reviewed_at": "2026-10-20T18:13:26+00:00"
+          }
         }
       ],
       "quotes": [
@@ -102,11 +120,7 @@
         }
       ],
       "dropped_findings": 0,
-      "review_flags": [
-        "models_disagree:A2",
-        "models_disagree:A3",
-        "models_disagree:A4"
-      ],
+      "review_flags": [],
       "excerpt": {
         "paragraphs": [
           "p2-03",
@@ -687,5 +701,5 @@
     }
   },
   "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
-  "generated_at": "2026-10-20T17:32:31+00:00"
+  "generated_at": "2026-10-20T18:23:06+00:00"
 }

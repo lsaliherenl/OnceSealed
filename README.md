@@ -20,7 +20,7 @@ OnceSealed is a prototype verification and privacy layer that could sit on top o
 > on the Sepolia test network.
 
 **Live on Sepolia:** [`0xBb88057576b92Ef27753A6b2a4Df83bE444F1308`](https://sepolia.etherscan.io/address/0xBb88057576b92Ef27753A6b2a4Df83bE444F1308#code)
-(source verified on Etherscan). It holds 11 anchored quality reports (48 versions, all readable), four issuance batches and audited purchases; every transaction is listed in [`deployments/11155111-seed.json`](deployments/11155111-seed.json).
+(source verified on Etherscan). It holds 11 anchored quality reports (56 versions, all readable), four issuance batches and audited purchases; every transaction is listed in [`deployments/11155111-seed.json`](deployments/11155111-seed.json).
 
 ---
 
@@ -93,15 +93,15 @@ applicable):
 
 | Project | Methodology, ICVCM status | Overall | A | P | Q | D | S |
 |---|---|---|---|---|---|---|---|
+| [VCS1728](reports/VCS1728.json) onshore wind, India | ACM0002 v17: not approved (additionality) | 89 | 100 | - | 100 | 67 | 75 |
 | [VCS2846](reports/VCS2846.json) manure biodigesters, China | ACM0010 v8: no ICVCM decision found | 81 | 75 | - | 100 | 67 | 75 |
 | [VCS2609](reports/VCS2609.json) Kuamut forest protection, Malaysia | VM0010 v1.4: under ICVCM assessment | 81 | 25 | 100 | 100 | 100 | 100 |
-| [VCS1728](reports/VCS1728.json) onshore wind, India | ACM0002 v17: not approved (additionality) | 81 | 75 | - | 100 | 67 | 75 |
 | [VCS1477](reports/VCS1477.json) Katingan peatland REDD+, Indonesia | VM0007 v1.5: not CCP-approved (successor VM0048 approved) | 81 | 50 | 100 | 75 | 100 | 100 |
 | [VCS1742](reports/VCS1742.json) hydropower, India | ACM0002 v12.1: not approved (additionality) | 78 | 50 | - | 100 | 67 | 100 |
 | [VCS985](reports/VCS985.json) Cordillera Azul REDD+, Peru | VM0007 v1.3: not CCP-approved (successor VM0048 approved) | 76 | 50 | 67 | 100 | 67 | 100 |
 | [VCS673](reports/VCS673.json) Kibale forest rehabilitation, Uganda | AR-ACM0001 v5: no CCP approval (successor VM0047 approved) | 73 | 25 | 100 | 100 | 67 | 75 |
 | [VCS2505](reports/VCS2505.json) cookstoves, South Africa | VMR0006: not CCP-approved (successor VM0050 approved) | 70 | 25 | - | 100 | 67 | 100 |
-| [VCS138](reports/VCS138.json) landfill gas, USA | ACM0001 v16: approved with conditions | 70 | 25 | - | 100 | 67 | 100 |
+| [VCS138](reports/VCS138.json) landfill gas, USA | ACM0001 v16: approved with conditions | 66 | 25 | - | 100 | 67 | 75 |
 | [VCS4150](reports/VCS4150.json) DelAgua cookstoves, Rwanda | VM0050 v1.0: approved with conditions | 63 | 25 | - | 75 | 67 | 100 |
 | [VCS1851](reports/VCS1851.json) grid-connected solar, India | ACM0002 v19: not approved (additionality) | 58 | 25 | - | 75 | 67 | 75 |
 
@@ -120,11 +120,13 @@ How to read this, honestly:
   monitoring reports account for the issued volume (issued = monitored net reductions, less a 10% buffer from 2015),
   so the gap sits between the ex-ante projection and what monitoring reported, which is where a contested baseline
   would show. External ratings are the right complement.
-- **12 checks across the 11 reports are marked for review** because the second model disagrees; a team member
-  decides them on the review screen.
+- **12 checks across the 11 reports were flagged** because the second model disagreed. A team member read each
+  excerpt on the review screen and decided 11: they sided with the checklist model on 9 and with the second model
+  on 2 (VCS138 S1, VCS1728 A4); 1 (VCS985 S1) was left open and stays flagged. Decisions, with notes, are in
+  [`reviews/`](reviews/); each report shows them next to both models' answers.
 - **Reading more documents changed the signal.** With monitoring, validation and verification reports registered
   for all 11 projects, 19 checks found evidence they had not found in the project description alone and 4
-  turned the other way (2 of those are among the review flags); for example VCS1728 rose from 55 to 81.
+  turned the other way (2 of those are among the review flags); for example VCS1728 rose from 55 to 81 (89 after the review).
 
 Earlier report versions stay readable on-chain: version 1 (2026-10-13/15) used an LLM quote extractor and Jev's
 evidence-strength rating, which was never measured; the current version replaces it with the measured checklist.

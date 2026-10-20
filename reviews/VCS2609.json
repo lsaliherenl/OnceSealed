@@ -1,0 +1,16 @@
+{
+  "schema": "review-v1",
+  "project_id": "VCS2609",
+  "decisions": [
+    {
+      "principle": "no_double_counting",
+      "check_id": "D3",
+      "decision": "found",
+      "note": "",
+      "model_answer": "yes",
+      "document_sha256": "7c5d3204720bd0aa29fea87ad6e0b2e9f4d086319e438ce1684ec03f259ef1c5",
+      "reviewer": "team member",
+      "reviewed_at": "2026-10-20T18:17:13+00:00"
+    }
+  ]
+}
