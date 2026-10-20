@@ -131,7 +131,7 @@ function render() {
     const opt = (v, t) => `<label><input type="radio" name="${qid}" value="${v}" ${a.answer===v?'checked':''}><span>${t}</span></label>`;
     return `<div class="q"><div><span class="qid">${qid}</span>${esc(q.text)}</div>
       <div class="tr">${esc(q.tr)}</div>
-      <div class="hint"><b>Evet sayılır:</b> ${esc(q.yes_if)}<br><b>Hayır sayılır:</b> ${esc(q.no_if)}</div>
+      <div class="hint"><b>Evet sayılır:</b> ${esc(q.yes_if_tr)}<br><b>Hayır sayılır:</b> ${esc(q.no_if_tr)}</div>
       <div class="opts">${opt('yes','Evet')}${opt('no','Hayır')}${opt('unclear','Belirsiz')}
         <input type="text" data-q="${qid}" placeholder="paragraf (ör. p32-03)" value="${esc(a.evidence||'')}"></div></div>`;
   }).join('');

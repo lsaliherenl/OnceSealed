@@ -3,6 +3,9 @@ import { TransitionLink } from "@/components/transition-link";
 import { Callout } from "@/components/ui/card";
 import { REPO_URL } from "@/lib/data";
 
+/** The technical error helps on a local demo; on the hosted site the API is absent by design. */
+const isLocal = () => typeof window !== "undefined" && ["localhost", "127.0.0.1"].includes(window.location.hostname);
+
 /**
  * Shown by the operator, auditor and assessor screens when the local API does not answer. These screens hold
  * test-network keys, so they only run on a local demo; the hosted site keeps the public pages.
@@ -32,7 +35,7 @@ export function LocalDemoNotice({ role, detail }: { role: string; detail?: strin
           and their audits on the verify page, and every anchored report version on the{" "}
           <TransitionLink href="/projects">project pages</TransitionLink>.
         </span>
-        {detail && <span className="text-[12px] opacity-75">({detail})</span>}
+        {detail && isLocal() && <span className="text-[12px] opacity-75">({detail})</span>}
       </span>
     </Callout>
   );

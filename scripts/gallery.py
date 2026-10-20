@@ -2,6 +2,8 @@
 
     python scripts/demo_up.py          # in another terminal (Sepolia, so the role screens have data)
     python scripts/gallery.py
+    python scripts/gallery.py --dark     # dark theme instead of light
+    python scripts/gallery.py --base https://once-sealed.vercel.app --out somewhere   # check the hosted site
 
 Drives a local headless Chrome or Edge over the DevTools protocol: each page gets time to read the chain, then is
 scrolled to the section shown before the capture.
@@ -25,6 +27,7 @@ OUT = ROOT / "docs" / "gallery"
 BASE = "http://localhost:3000"
 WIDTH, HEIGHT = 1500, 1000  # Devpost recommends 3:2
 PORT = 9333
+THEME = "dark" if "--dark" in sys.argv else "light"
 # (file name, path, element id to scroll to or None, seconds to wait for chain reads)
 SHOTS = [
     ("01-overview", "/", None, 6),
@@ -63,6 +66,10 @@ async def capture(ws_url: str) -> None:
                     return msg.get("result", {})
 
         await call("Emulation.setDeviceMetricsOverride", width=WIDTH, height=HEIGHT, deviceScaleFactor=1, mobile=False)
+        # light theme: the site follows the system setting (next-themes), and Devpost's page is white
+        await call("Emulation.setEmulatedMedia", features=[{"name": "prefers-color-scheme", "value": THEME}])
+        await call("Page.addScriptToEvaluateOnNewDocument",
+                   source=f"try {{ localStorage.setItem('theme', '{THEME}') }} catch (e) {{}}")
         await call("Page.enable")
         for name, path, anchor, wait in SHOTS:
             await call("Page.navigate", url=BASE + path)
@@ -73,10 +80,15 @@ async def capture(ws_url: str) -> None:
                 await asyncio.sleep(2)
             shot = await call("Page.captureScreenshot", format="png")
             (OUT / f"{name}.png").write_bytes(base64.b64decode(shot["data"]))
-            print(f"wrote docs/gallery/{name}.png")
+            print(f"wrote {OUT / name}.png")
 
 
 def main() -> None:
+    global BASE, OUT
+    if "--base" in sys.argv:
+        BASE = sys.argv[sys.argv.index("--base") + 1].rstrip("/")
+    if "--out" in sys.argv:
+        OUT = Path(sys.argv[sys.argv.index("--out") + 1]).resolve()
     OUT.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as profile:
         proc = subprocess.Popen([browser(), "--headless=new", "--disable-gpu", "--hide-scrollbars",

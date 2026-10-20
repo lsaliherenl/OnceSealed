@@ -104,7 +104,7 @@ pandas, next.js, react, typescript, tailwindcss, viem, openrouter, deepseek, git
 
 - Source code: https://github.com/lsaliherenl/OnceSealed
 - Contract on Sepolia Etherscan: https://sepolia.etherscan.io/address/0xBb88057576b92Ef27753A6b2a4Df83bE444F1308#code
-- Public pages (project reports, verify): hosted demo link (Vercel)
+- Public pages (project reports, report versions, verify): https://once-sealed.vercel.app
 
 ## Image gallery (3:2, 1500x1000)
 

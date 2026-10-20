@@ -123,7 +123,7 @@ def main() -> None:
 
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "labels").mkdir(exist_ok=True)
-    questions = {q.id: {"text": q.text, "tr": q.tr, "yes_if": q.yes_if, "no_if": q.no_if} for q in QUESTIONS}
+    questions = {q.id: {"text": q.text, "tr": q.tr, "yes_if": q.yes_if_tr, "no_if": q.no_if_tr} for q in QUESTIONS}
     data = {"version": "citation-check-v1", "excerpt_chars": EXCERPT_CHARS, "units": shuffled,
             "questions": questions, "rules": GUIDE_RULES}
     (OUT / "units.json").write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
