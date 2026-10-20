@@ -1,0 +1,563 @@
+{
+  "schema": "report-v2",
+  "project": {
+    "project_id": "VCS1742",
+    "project_name": "Hydroelectric Project in Kinnaur District in Himachal Pradesh",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/1742",
+    "methodology": "ACM0002",
+    "methodology_version": "12.1.0"
+  },
+  "document": {
+    "file_name": "PL1742_VCS PD_HBPCL_V02_17042018_Clean.pdf",
+    "sha256": "8b6a6c39c13b6e0b57404ccd3c8f7ca0d51f4139da1a18495534b53b0b77822f",
+    "pages": 104,
+    "extra_files": [
+      {
+        "file_name": "4993 PDD.pdf",
+        "sha256": "5b628305c25ac13b2bb4020de96d072e3148701bb0e7635fbfe0b964ed7f0401"
+      }
+    ]
+  },
+  "methodology_status": {
+    "code": "ACM0002",
+    "version": "12.1.0",
+    "status": "not_approved",
+    "summary": "In August 2024 ICVCM rejected current grid-connected renewable energy methodologies because their additionality tests were insufficiently rigorous.",
+    "sources": [
+      "https://icvcm.org/carbon-credits-from-current-renewable-energy-methodologies-will-not-receive-high-integrity-ccp-label/",
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v2",
+    "question_set_version": "qs-v2-checklist",
+    "prompt_version": "checklist-v1",
+    "evidence_rule": "yes-cites-excerpt-paragraph-v2",
+    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "injection_screen": "injection-screen-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "second_opinion_model": "typesafe/jev-1.13",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0xb3599672299efa5b2eb8bde2fa08b8f62017305b23382f8beb8ca843373bc283",
+  "principles": [
+    {
+      "principle": "additionality",
+      "status": "partial_evidence",
+      "score": 75,
+      "rationale": "Evidence found for 3 of 4 checks (A1, A2, A4); not found in the excerpt: A3.",
+      "checks": [
+        {
+          "id": "A1",
+          "question": "Does the text report a quantified financial analysis: at least one numeric financial indicator (such as IRR or NPV) together with a benchmark or threshold value it is compared against?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x1-p27-02",
+              "page": 27,
+              "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 27 \n \n \n \nThus the ex bus tariff applicable for sale in the open market after commissioning of the project activity at \nthe time of investment decision after deducting the transmission cost and trading margin has been \nestimated to be INR 3.27 per unit. The same has been used in the IRR calculations.  Considering the \nelectricity forecast made by CEA in its 17th Electric Power Survey Report28 that by 2011-12, the \nelectricity requirements will be met in full, it is reasonable to assume that the merchant power will have a \nstabilised rate thereafter. \n  \nAt the time of conceptualization of the project, the concept of open market sale in the country was in a \nnascent stage. The project proponent also did not have any experience in operation of merchant power \nplants. With no assured buyer, there is no guarantee for off taking of the output. Also, with the project \nactivity being a hydel power project, 73% of the generation would happen between the months of May to \nSeptember. If there is no spot demand for such power during these months, such power would need to be \nsupplied to the grid for no additional revenues.  \n \nThus although the provision for sale in open market was not contemplated at the time of investment \ndecision, the same has been incorporated to be conservative while demonstrating project returns. \n \nThe IRR of the project activity without considering CDM benefits has been estimated to be 9.80 % which \nis lower in comparison to benchmark WACC of 11.45%. \n \nSub-step 2d. Sensitivity analysis \n \nIn accordance with the guidance on the assessment of investment analysis, only variables, \nincluding the initial investment cost, that constitute more than 20% of either total project costs or \ntotal project revenues should be subjected to reasonable variation. The results of the sensitivity \nanalysis are given hereunder: \n \n \n \n \n \n \nTable: Results of Sensitivity Analysis \n \nParameters \n10% \nBase \nCase"
+            }
+          ],
+          "second_opinion_p_yes": 0.99,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A2",
+          "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x1-p32-01",
+              "page": 32,
+              "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 32 \n \n \nOutcome of Step 2: \nIt can be justifiably concluded that the CDM revenues which the project activity would generate through \nsale of the emission reductions is very crucial to sustain the operations of the project activity. The returns \nfrom the project after considering CDM revenues give a project IRR of 11.54%. Thus, with CDM \nbenefits the project becomes financially attractive in as much as the project IRR crosses the benchmark.  \n \nHence the project is additional. \n \n \nStep 3: Barrier Analysis:  \n \nSub-step 3a: Identify barriers that would prevent the implementation of the type of the proposed project \nactivity \n \nThe project proponent has not opted for Barrier Analysis to demonstrate additionality for the project \nactivity.  \n \nStep 4: Common practice analysis \n \nSub-step 4a: Analyze other activities similar to the proposed project activity: \n \nThe re-assessment studies of hydro-electric potential of the country, completed by CEA in 198729, have \nassessed the economically exploitable hydro power potential as 84,04430 MW at 60% load factor. As on \n31.03.2007, the hydro-electric schemes in operation account for only 20.32% and those under execution \nfor 5.18% of the total potential at 60% Load Factor. Thus, the bulk of the potential (74.50%) remains yet \nto be developed. \n \nThe All-India aggregate installed capacity of electric power generating stations under various utilities as \non 31.3.2007 was 132329.21 MW comprising 34653.77 MW of hydro, 86014.84 MW of thermal, 3900 \nMW of nuclear and 7760.60 MW of Renewable Energy Sources (RES). The percentage share of hydro, \nthermal, nuclear and RES of the total installed capacity stood at 26.1931%, 65%, 2.95% and 5.86% \nrespectively. \n \nIndia has for many years faced severe power shortages. Currently, at the time of peak demand, power \nshortages are estimated to be about 12%, while annual energy shortages are nearly 7% of demand32. \nThese shortages are likely to continue and increase in the foreseeable future, even with the planned \nadditions in generation capacity. Analysis shows that the gap in supply (after considering the impact of \nprice elasticity on demand) can be only marginally reduced by loss reduction and efficiency gains. The"
+            }
+          ],
+          "second_opinion_p_yes": 0.94,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A3",
+          "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.25,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A4",
+          "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x1-p13-08",
+              "page": 13,
+              "text": "funds to mitigate various risks associated with the project activity. The minutes of the meeting of the \nBoard of Directors of JKHCL held on 2nd June 2003 clearly state that the CDM revenues were \nessential to mitigate various risks inherent to the project activity. Subsequent to the in principal \ndecision to take up the project for further evaluation and mandatory clearances, JKHCL entered into"
+            }
+          ],
+          "second_opinion_p_yes": 0.94,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 27 \n \n \n \nThus the ex bus tariff applicable for sale in the open market after commissioning of the project activity at \nthe time of investment decision after deducting the transmission cost and trading margin has been \nestimated to be INR 3.27 per unit. The same has been used in the IRR calculations.  Considering the \nelectricity forecast made by CEA in its 17th Electric Power Survey Report28 that by 2011-12, the \nelectricity requirements will be met in full, it is reasonable to assume that the merchant power will have a \nstabilised rate thereafter. \n  \nAt the time of conceptualization of the project, the concept of open market sale in the country was in a \nnascent stage. The project proponent also did not have any experience in operation of merchant power \nplants. With no assured buyer, there is no guarantee for off taking of the output. Also, with the project \nactivity being a hydel power project, 73% of the generation would happen between the months of May to \nSeptember. If there is no spot demand for such power during these months, such power would need to be \nsupplied to the grid for no additional revenues.  \n \nThus although the provision for sale in open market was not contemplated at the time of investment \ndecision, the same has been incorporated to be conservative while demonstrating project returns. \n \nThe IRR of the project activity without considering CDM benefits has been estimated to be 9.80 % which \nis lower in comparison to benchmark WACC of 11.45%. \n \nSub-step 2d. Sensitivity analysis \n \nIn accordance with the guidance on the assessment of investment analysis, only variables, \nincluding the initial investment cost, that constitute more than 20% of either total project costs or \ntotal project revenues should be subjected to reasonable variation. The results of the sensitivity \nanalysis are given hereunder: \n \n \n \n \n \n \nTable: Results of Sensitivity Analysis \n \nParameters \n10% \nBase \nCase",
+          "page": 27,
+          "paragraph_id": "x1-p27-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 32 \n \n \nOutcome of Step 2: \nIt can be justifiably concluded that the CDM revenues which the project activity would generate through \nsale of the emission reductions is very crucial to sustain the operations of the project activity. The returns \nfrom the project after considering CDM revenues give a project IRR of 11.54%. Thus, with CDM \nbenefits the project becomes financially attractive in as much as the project IRR crosses the benchmark.  \n \nHence the project is additional. \n \n \nStep 3: Barrier Analysis:  \n \nSub-step 3a: Identify barriers that would prevent the implementation of the type of the proposed project \nactivity \n \nThe project proponent has not opted for Barrier Analysis to demonstrate additionality for the project \nactivity.  \n \nStep 4: Common practice analysis \n \nSub-step 4a: Analyze other activities similar to the proposed project activity: \n \nThe re-assessment studies of hydro-electric potential of the country, completed by CEA in 198729, have \nassessed the economically exploitable hydro power potential as 84,04430 MW at 60% load factor. As on \n31.03.2007, the hydro-electric schemes in operation account for only 20.32% and those under execution \nfor 5.18% of the total potential at 60% Load Factor. Thus, the bulk of the potential (74.50%) remains yet \nto be developed. \n \nThe All-India aggregate installed capacity of electric power generating stations under various utilities as \non 31.3.2007 was 132329.21 MW comprising 34653.77 MW of hydro, 86014.84 MW of thermal, 3900 \nMW of nuclear and 7760.60 MW of Renewable Energy Sources (RES). The percentage share of hydro, \nthermal, nuclear and RES of the total installed capacity stood at 26.1931%, 65%, 2.95% and 5.86% \nrespectively. \n \nIndia has for many years faced severe power shortages. Currently, at the time of peak demand, power \nshortages are estimated to be about 12%, while annual energy shortages are nearly 7% of demand32. \nThese shortages are likely to continue and increase in the foreseeable future, even with the planned \nadditions in generation capacity. Analysis shows that the gap in supply (after considering the impact of \nprice elasticity on demand) can be only marginally reduced by loss reduction and efficiency gains. The",
+          "page": 32,
+          "paragraph_id": "x1-p32-01",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "funds to mitigate various risks associated with the project activity. The minutes of the meeting of the \nBoard of Directors of JKHCL held on 2nd June 2003 clearly state that the CDM revenues were \nessential to mitigate various risks inherent to the project activity. Subsequent to the in principal \ndecision to take up the project for further evaluation and mandatory clearances, JKHCL entered into",
+          "page": 13,
+          "paragraph_id": "x1-p13-08",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-02",
+          "x1-p9-06",
+          "x1-p10-01",
+          "x1-p10-02",
+          "x1-p13-07",
+          "x1-p13-08",
+          "x1-p17-25",
+          "x1-p18-01",
+          "x1-p18-05",
+          "x1-p19-02",
+          "x1-p19-09",
+          "x1-p20-01",
+          "x1-p21-01",
+          "x1-p21-02",
+          "x1-p27-02",
+          "x1-p27-03",
+          "x1-p28-03",
+          "x1-p28-04",
+          "x1-p31-01",
+          "x1-p31-02",
+          "x1-p31-03",
+          "x1-p32-01",
+          "x1-p32-02",
+          "x1-p34-14",
+          "x1-p34-15",
+          "x1-p35-01",
+          "x1-p36-06"
+        ],
+        "chars": 29983
+      }
+    },
+    {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "checks": [],
+      "quotes": [],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "rule": "no_reversal_risk"
+    },
+    {
+      "principle": "robust_quantification",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (Q1, Q2, Q3, Q4).",
+      "checks": [
+        {
+          "id": "Q1",
+          "question": "Does the text show how baseline emissions are calculated, with an equation, parameter values or a numeric result?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x1-p49-04",
+              "page": 49,
+              "text": "Annual Generation EGy is calculated as follows: \nParameters \n \n \n \n \n \nEnergy generation in 2011-12 (16/08/2011 to 31/03/2012) \n1343.64 \nGWh \nElectricity Generation from 2012-13 onwards (01/04/2012 to 31/03/2013) \n4463.88 \nGWh \nAuxiliary consumption \n0.7 \n% \nTransformation Losses \n0.5 \n% \nNet generation in 2011-12 (16/08/2011 to 31/03/2012) \n1327.51 \nGWh \nNet Generation from 2012-13 onwards (01/04/2012 to 31/03/2013) \n4410.31 \nGWh \n  \nBaseline Emission factor (Northern Grid) \n803.1 \ntCO2/GWh \nThe Baseline Emission Factor for the Northern Grid has been calculated using data from : \nThe CO2 Baseline Database for the Indian Power Sector, Central Electricity Authority (CEA), Version 4.0.\n \nBaseline Emissions \nBEy = EFy x EGy \nBaseline emissions in 2011-12 (16/08/2011 to 31/03/2012) \n1066123 \ntCO2"
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q2",
+          "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x1-p46-10",
+              "page": 46,
+              "text": "(W). For new hydro power plants, this value is zero. \nAPJ  \n= Area of the reservoir measured in the surface of the water, after the implementation of the \nproject activity, when the reservoir is full (m2). \nABL  \n= Area of the reservoir measured in the surface of the water, before the implementation of the \nproject activity, when the reservoir is full (m2). For new reservoirs, this value is zero. \n \nLeakage \nAccording to ACM0002, the main emissions potentially giving rise to leakage in the context of electric \nsector projects are emissions arising due to activities such as power plant construction, fuel handling \n(extraction, processing, and transport), and land inundation (for hydroelectric projects). Project \nparticipants do not need to consider these emission sources as leakage in applying this methodology. \nProject activities using ACM0002 shall not claim any credit for the project on account of reducing these \nemissions below the level of the baseline scenario. Thus the leakage emissions are nil."
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q3",
+          "question": "Does the text address uncertainty or the use of conservative assumptions in the emission reduction estimate?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x1-p45-04",
+              "page": 45,
+              "text": "- \nWind and solar power generation project activities: wOM = 0.75 and wBM = 0.25 (owing to their \nintermittent and non-dispatchable nature) for the first crediting period and for subsequent \ncrediting periods.  \n- \nAll other projects: wOM = 0.5 and wBM = 0.5 for the first crediting period, and wOM = 0.25 and \nwBM = 0.75 for the second and third crediting period, unless otherwise specified in the approved \nmethodology which refers to this tool.  \n \nAs mentioned before, the CEA has calculated the baseline emission factors for various regional grids in \nIndia according to the formulas specified above. As this is the most authentic information available in the \npublic domain. The baseline emission factor used in the calculation of baseline emissions for the \nproposed project activity is being referred from the same for transparency and conservativeness41. \n \nProject activity emissions"
+            }
+          ],
+          "second_opinion_p_yes": 0.7,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q4",
+          "question": "Does the text describe a monitoring plan that names the parameters to be measured and how often or by what method?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x1-p60-12",
+              "page": 60,
+              "text": "- \nPost monitoring of environmental indicators like river water quality, sediment transport analysis, \nland use, soil erosion, ecological changes, aquatic life is conducted periodically as per guidelines \nissued by the project monitoring committee.  Frequency of such monitoring with respect to \nparameters will be decided by the Project Monitoring Committee."
+            }
+          ],
+          "second_opinion_p_yes": 0.78,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "Annual Generation EGy is calculated as follows: \nParameters \n \n \n \n \n \nEnergy generation in 2011-12 (16/08/2011 to 31/03/2012) \n1343.64 \nGWh \nElectricity Generation from 2012-13 onwards (01/04/2012 to 31/03/2013) \n4463.88 \nGWh \nAuxiliary consumption \n0.7 \n% \nTransformation Losses \n0.5 \n% \nNet generation in 2011-12 (16/08/2011 to 31/03/2012) \n1327.51 \nGWh \nNet Generation from 2012-13 onwards (01/04/2012 to 31/03/2013) \n4410.31 \nGWh \n  \nBaseline Emission factor (Northern Grid) \n803.1 \ntCO2/GWh \nThe Baseline Emission Factor for the Northern Grid has been calculated using data from : \nThe CO2 Baseline Database for the Indian Power Sector, Central Electricity Authority (CEA), Version 4.0.\n \nBaseline Emissions \nBEy = EFy x EGy \nBaseline emissions in 2011-12 (16/08/2011 to 31/03/2012) \n1066123 \ntCO2",
+          "page": 49,
+          "paragraph_id": "x1-p49-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "(W). For new hydro power plants, this value is zero. \nAPJ  \n= Area of the reservoir measured in the surface of the water, after the implementation of the \nproject activity, when the reservoir is full (m2). \nABL  \n= Area of the reservoir measured in the surface of the water, before the implementation of the \nproject activity, when the reservoir is full (m2). For new reservoirs, this value is zero. \n \nLeakage \nAccording to ACM0002, the main emissions potentially giving rise to leakage in the context of electric \nsector projects are emissions arising due to activities such as power plant construction, fuel handling \n(extraction, processing, and transport), and land inundation (for hydroelectric projects). Project \nparticipants do not need to consider these emission sources as leakage in applying this methodology. \nProject activities using ACM0002 shall not claim any credit for the project on account of reducing these \nemissions below the level of the baseline scenario. Thus the leakage emissions are nil.",
+          "page": 46,
+          "paragraph_id": "x1-p46-10",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "- \nWind and solar power generation project activities: wOM = 0.75 and wBM = 0.25 (owing to their \nintermittent and non-dispatchable nature) for the first crediting period and for subsequent \ncrediting periods.  \n- \nAll other projects: wOM = 0.5 and wBM = 0.5 for the first crediting period, and wOM = 0.25 and \nwBM = 0.75 for the second and third crediting period, unless otherwise specified in the approved \nmethodology which refers to this tool.  \n \nAs mentioned before, the CEA has calculated the baseline emission factors for various regional grids in \nIndia according to the formulas specified above. As this is the most authentic information available in the \npublic domain. The baseline emission factor used in the calculation of baseline emissions for the \nproposed project activity is being referred from the same for transparency and conservativeness41. \n \nProject activity emissions",
+          "page": 45,
+          "paragraph_id": "x1-p45-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "- \nPost monitoring of environmental indicators like river water quality, sediment transport analysis, \nland use, soil erosion, ecological changes, aquatic life is conducted periodically as per guidelines \nissued by the project monitoring committee.  Frequency of such monitoring with respect to \nparameters will be decided by the Project Monitoring Committee.",
+          "page": 60,
+          "paragraph_id": "x1-p60-12",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-02",
+          "p8-03",
+          "p9-13",
+          "x1-p9-06",
+          "x1-p10-01",
+          "x1-p10-02",
+          "x1-p39-03",
+          "x1-p39-04",
+          "x1-p40-01",
+          "x1-p40-02",
+          "x1-p40-08",
+          "x1-p40-09",
+          "x1-p41-01",
+          "x1-p41-07",
+          "x1-p42-01",
+          "x1-p42-02",
+          "x1-p43-01",
+          "x1-p43-02",
+          "x1-p43-03",
+          "x1-p44-02",
+          "x1-p44-03",
+          "x1-p45-01",
+          "x1-p45-02",
+          "x1-p45-03",
+          "x1-p45-04",
+          "x1-p45-05",
+          "x1-p46-09",
+          "x1-p46-10",
+          "x1-p46-11",
+          "x1-p48-06",
+          "x1-p49-03",
+          "x1-p49-04",
+          "x1-p49-05",
+          "x1-p49-06",
+          "x1-p50-19",
+          "x1-p50-20",
+          "x1-p52-11",
+          "x1-p52-12",
+          "x1-p53-01",
+          "x1-p60-11",
+          "x1-p60-12",
+          "x1-p60-13",
+          "x1-p79-03",
+          "x1-p79-04"
+        ],
+        "chars": 29959
+      }
+    },
+    {
+      "principle": "no_double_counting",
+      "status": "no_evidence",
+      "score": 0,
+      "rationale": "Evidence found for 0 of 3 checks; not found in the excerpt: D1, D2, D3.",
+      "checks": [
+        {
+          "id": "D1",
+          "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.29,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D2",
+          "question": "Does the text address other environmental credits or certificates (e.g. renewable energy certificates, I-RECs) or participation in an emissions trading scheme?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.63,
+          "needs_review": true,
+          "dropped": null
+        },
+        {
+          "id": "D3",
+          "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.06,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [],
+      "dropped_findings": 0,
+      "review_flags": [
+        "models_disagree:D2"
+      ],
+      "excerpt": {
+        "paragraphs": [
+          "p2-02",
+          "p8-14",
+          "p8-16",
+          "p9-02",
+          "p9-04",
+          "x1-p9-06",
+          "x1-p10-01",
+          "x1-p10-02",
+          "x1-p13-07",
+          "x1-p13-08",
+          "x1-p17-25",
+          "x1-p18-01",
+          "x1-p19-09",
+          "x1-p20-01",
+          "x1-p21-01",
+          "x1-p23-03",
+          "x1-p24-01",
+          "x1-p27-02",
+          "x1-p27-03",
+          "x1-p31-03",
+          "x1-p32-01",
+          "x1-p32-02",
+          "x1-p43-05",
+          "x1-p44-01",
+          "x1-p44-02",
+          "x1-p52-11",
+          "x1-p52-12",
+          "x1-p53-01",
+          "x1-p54-02"
+        ],
+        "chars": 29961
+      }
+    },
+    {
+      "principle": "safeguards",
+      "status": "partial_evidence",
+      "score": 50,
+      "rationale": "Evidence found for 2 of 4 checks (S1, S3); not found in the excerpt: S2, S4.",
+      "checks": [
+        {
+          "id": "S1",
+          "question": "Does the text describe a stakeholder consultation with specifics such as dates, places, participants or comments received?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x1-p66-02",
+              "page": 66,
+              "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 66 \n \n \nThe Stakeholder Consultation Report primarily deals with socio-economic impact of the project activity \nand provided an opportunity for the local population to express their viewpoints and comments with \nrespect to the project. \n \nA total of eighteen community level consultation events were held during the study wherein \napproximately 412 people participated. In addition, 29 other stakeholders from PRIs, Government \ndepartments and local NGOs were covered. A summary of the various categories of stakeholders \nconsulted during this process is provided in the table below. This table also provides data on the number \nof stakeholders consulted, issues discussed and tools used with respect to different stakeholders are \nmentioned in the following table:  \n \nStakeholders \nStakeholder Type \nNumber \nPurpose of \nConsultation"
+            },
+            {
+              "paragraph_id": "x1-p71-05",
+              "page": 71,
+              "text": "The above stakeholders were consulted as part of the stakeholder consultation process, besides the \nStakeholder Consultation Report conducted by Sharnam Sewa Samiti. The comments received by each of \nthese stakeholders, along with the ways in which they were addressed are presented in the following \nsection. \n \nE.2. \nSummary of the comments received: \n>> \nThe Stakeholders Consultation Report was conducted using a process providing the stakeholders with an \nopportunity to understand the project activity and give their comments. Provided below is a summary of \nthe comments received from the local stakeholders. \n \na) Local population (Villagers/Representatives of local governing bodies)"
+            },
+            {
+              "paragraph_id": "x1-p71-06",
+              "page": 71,
+              "text": "Comment from Local Villagers \nResponse of Project Proponent \nThe rock structure in the region is not solid enough \nto bear the impact of blasting as the mountains \nshake during blasting conducted underground, \nresulting in cracks in houses."
+            }
+          ],
+          "second_opinion_p_yes": 0.94,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S2",
+          "question": "Does the text describe a grievance or complaint mechanism through which affected people can raise concerns?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.24,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S3",
+          "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x1-p56-01",
+              "page": 56,
+              "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 56 \n \n \n \nSECTION D.  Environmental impacts \n>> \n \nD.1. \nDocumentation on the analysis of the environmental impacts, including transboundary \nimpacts:  \n>> \nThe Environment Impact Assessment (EIA) for the project has been done comprehensively by one of the \nmost reputed environment research institute - National Environmental Engineering Research Institute \n(NEERI), Nagpur, India, to analyse the environmental impacts associated with various activities \nenvisaged by the project proponent against the backdrop of existing environmental quality at the project \narea and the statutory requirements. This is in compliance with the Environment Impact Notification, \n199443 which is the applicable regulation in India.  \n \nThe report, completed in 2005, reviews the legal and administrative framework for the EIA and then \ndescribes the project in all these aspects. The report also describes the quality of air, water, noise, land, \nsocio-economic aspects and environment around the project. Predictive analysis has been done to \nestimate impacts of the project on the environment. Some of these impacts may affect the environment \ntemporarily but can be countered by safety and environmental stabilization measures. \n \nDescription of the plausible environmental impacts predicted in the EIA for the proposed project activity \nare as follows: \nAir and Noise Environment"
+            },
+            {
+              "paragraph_id": "x1-p56-02",
+              "page": 56,
+              "text": "- \nThe plying of trucks and other transport vehicles and use of construction machinery, marginal \nincrease in the levels of Suspended Particulate Matter (SPM), oxides of nitrogen and sulphur is \nlikely to occur, which will be sporadic and limited to construction phase only."
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S4",
+          "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.37,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 66 \n \n \nThe Stakeholder Consultation Report primarily deals with socio-economic impact of the project activity \nand provided an opportunity for the local population to express their viewpoints and comments with \nrespect to the project. \n \nA total of eighteen community level consultation events were held during the study wherein \napproximately 412 people participated. In addition, 29 other stakeholders from PRIs, Government \ndepartments and local NGOs were covered. A summary of the various categories of stakeholders \nconsulted during this process is provided in the table below. This table also provides data on the number \nof stakeholders consulted, issues discussed and tools used with respect to different stakeholders are \nmentioned in the following table:  \n \nStakeholders \nStakeholder Type \nNumber \nPurpose of \nConsultation",
+          "page": 66,
+          "paragraph_id": "x1-p66-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The above stakeholders were consulted as part of the stakeholder consultation process, besides the \nStakeholder Consultation Report conducted by Sharnam Sewa Samiti. The comments received by each of \nthese stakeholders, along with the ways in which they were addressed are presented in the following \nsection. \n \nE.2. \nSummary of the comments received: \n>> \nThe Stakeholders Consultation Report was conducted using a process providing the stakeholders with an \nopportunity to understand the project activity and give their comments. Provided below is a summary of \nthe comments received from the local stakeholders. \n \na) Local population (Villagers/Representatives of local governing bodies)",
+          "page": 71,
+          "paragraph_id": "x1-p71-05",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Comment from Local Villagers \nResponse of Project Proponent \nThe rock structure in the region is not solid enough \nto bear the impact of blasting as the mountains \nshake during blasting conducted underground, \nresulting in cracks in houses.",
+          "page": 71,
+          "paragraph_id": "x1-p71-06",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "PROJECT DESIGN DOCUMENT FORM (CDM PDD) - Version 03 \n \nCDM – Executive Board  \n \n \n \n \n \n \n \n \npage 56 \n \n \n \nSECTION D.  Environmental impacts \n>> \n \nD.1. \nDocumentation on the analysis of the environmental impacts, including transboundary \nimpacts:  \n>> \nThe Environment Impact Assessment (EIA) for the project has been done comprehensively by one of the \nmost reputed environment research institute - National Environmental Engineering Research Institute \n(NEERI), Nagpur, India, to analyse the environmental impacts associated with various activities \nenvisaged by the project proponent against the backdrop of existing environmental quality at the project \narea and the statutory requirements. This is in compliance with the Environment Impact Notification, \n199443 which is the applicable regulation in India.  \n \nThe report, completed in 2005, reviews the legal and administrative framework for the EIA and then \ndescribes the project in all these aspects. The report also describes the quality of air, water, noise, land, \nsocio-economic aspects and environment around the project. Predictive analysis has been done to \nestimate impacts of the project on the environment. Some of these impacts may affect the environment \ntemporarily but can be countered by safety and environmental stabilization measures. \n \nDescription of the plausible environmental impacts predicted in the EIA for the proposed project activity \nare as follows: \nAir and Noise Environment",
+          "page": 56,
+          "paragraph_id": "x1-p56-01",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "- \nThe plying of trucks and other transport vehicles and use of construction machinery, marginal \nincrease in the levels of Suspended Particulate Matter (SPM), oxides of nitrogen and sulphur is \nlikely to occur, which will be sporadic and limited to construction phase only.",
+          "page": 56,
+          "paragraph_id": "x1-p56-02",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-02",
+          "x1-p1-03",
+          "x1-p1-04",
+          "x1-p1-05",
+          "x1-p17-12",
+          "x1-p17-13",
+          "x1-p55-01",
+          "x1-p56-01",
+          "x1-p56-02",
+          "x1-p58-08",
+          "x1-p58-09",
+          "x1-p59-01",
+          "x1-p60-13",
+          "x1-p61-01",
+          "x1-p61-02",
+          "x1-p62-01",
+          "x1-p62-02",
+          "x1-p62-03",
+          "x1-p62-08",
+          "x1-p62-09",
+          "x1-p62-10",
+          "x1-p63-01",
+          "x1-p63-02",
+          "x1-p64-01",
+          "x1-p64-09",
+          "x1-p64-10",
+          "x1-p66-02",
+          "x1-p71-04",
+          "x1-p71-05",
+          "x1-p71-06",
+          "x1-p72-02",
+          "x1-p72-03",
+          "x1-p72-04",
+          "x1-p73-02",
+          "x1-p74-01",
+          "x1-p75-01",
+          "x1-p80-01",
+          "x1-p80-02",
+          "x1-p81-01"
+        ],
+        "chars": 29976
+      }
+    }
+  ],
+  "overall": {
+    "score": 64,
+    "included": [
+      "additionality",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [
+      "permanence"
+    ],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-19T17:47:07+00:00"
+}

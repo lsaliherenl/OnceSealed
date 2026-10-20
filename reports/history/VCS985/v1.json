@@ -1,0 +1,348 @@
+{
+  "schema": "report-v1",
+  "project": {
+    "project_id": "VCS985",
+    "project_name": "Cordillera Azul National Park REDD Project",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/985",
+    "methodology": "VM0007",
+    "methodology_version": "1.3"
+  },
+  "document": {
+    "file_name": "PROJ_DESC_985_20DEC2012.pdf",
+    "sha256": "dac2ea6448372916437480321cc7de2719e770b28f22e6ce8a1ef15ef3504487",
+    "pages": 198
+  },
+  "methodology_status": {
+    "code": "VM0007",
+    "version": "1.3",
+    "status": "not_ccp_approved",
+    "summary": "Verra excluded its older REDD+ methodologies (including VM0007) from ICVCM assessment; their credits cannot carry the CCP label. ICVCM approved the successor VM0048 v1.0 with conditions in November 2024.",
+    "sources": [
+      "https://icvcm.org/integrity-council-approves-three-redd-methodologies/",
+      "https://www.jonesday.com/en/insights/2025/03/the-icvcm-and-redd-standards-implications-for-voluntary-carbon-markets"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v1",
+    "prompt_version": "v1",
+    "question_set_version": "qs-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "decision_model": "typesafe/jev-1.13",
+    "decision_input": "verified_quotes",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+  "principles": [
+    {
+      "principle": "additionality",
+      "rationale": "The document applies the VT0001 additionality tool, presenting a simple cost analysis showing no revenue besides carbon credits, a common practice assessment, elimination of alternative land-use scenarios, and a regulatory surplus statement. It asserts government would not have funded or designated the park without CIMA. Financial statements and detailed figures are promised to the validator rather than shown, so some support remains asserted.",
+      "quotes": [
+        {
+          "text": "This project generates no financial or economic benefits other than VCS related income.  Therefore, Option 1, a simple cost analysis, is the appropriate analysis method.",
+          "page": 79,
+          "paragraph_id": "p79-01",
+          "verification": "exact"
+        },
+        {
+          "text": "No additional sources of revenue exist for the project. Given the specific conditions under which PNCAZ was designated a national park, there is no established government funding for management of the park and protection of its intact forests.",
+          "page": 79,
+          "paragraph_id": "p79-01",
+          "verification": "exact"
+        },
+        {
+          "text": "CIMA’s agreement to support the management of the park was a completely voluntary action; there was no regulatory obligation.",
+          "page": 60,
+          "paragraph_id": "p60-02",
+          "verification": "exact"
+        },
+        {
+          "text": "The investment analysis in Section 2.5, Additionality, demonstrates that Alternative 5 is much less financially attractive than Alternative 1, which indicates that Alternative 1 is the most likely baseline scenario",
+          "page": 75,
+          "paragraph_id": "p75-01",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 78,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.04,
+          "documentary": 0.79,
+          "assertion_only": 0.17,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.72,
+        "independent_sources": 0.19,
+        "strength": 1.71,
+        "strength_probabilities": {
+          "0": 0.01,
+          "1": 0.36,
+          "2": 0.55,
+          "3": 0.08
+        },
+        "strength_confidence": 0.54,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 57,
+      "review_flags": []
+    },
+    {
+      "principle": "permanence",
+      "rationale": "The document states a VCS AFOLU Non-Permanence Risk Tool analysis over 100 years, reports an overall risk rating of 3 and use of 10, references Appendix 3, and lists additional risks with mitigation strategies. It does not show buffer pool contribution details in these excerpts.",
+      "quotes": [
+        {
+          "text": "The risk analysis has been conducted in accordance with the Verified Carbon Standard, AFOLU Non-Permanence Risk Tool Version 3.1 dated February 1, 2012 (VCS Non-Permanence Tool).  Risks were assessed over a period of 100 years in accordance with the Tool’s requirements.",
+          "page": 62,
+          "paragraph_id": "p62-03",
+          "verification": "alnum"
+        },
+        {
+          "text": "The Overall Risk Rating is 3.  Per the requirements of the tool, the project will use 10 for its risk rating since that is the lowest rating allowed.",
+          "page": 62,
+          "paragraph_id": "p62-03",
+          "verification": "exact"
+        },
+        {
+          "text": "The Non-Permanence Risk Report details the analysis and is included in Appendix 3.",
+          "page": 62,
+          "paragraph_id": "p62-03",
+          "verification": "exact"
+        },
+        {
+          "text": "Additional risks to the project not included in the VCS risk assessment include the following issues.  CIMA has worked and will continue to work actively to mitigate these potential threats as detailed below each risk.",
+          "page": 62,
+          "paragraph_id": "p62-03",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.12,
+          "documentary": 0.67,
+          "assertion_only": 0.21,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.56,
+        "independent_sources": 0.42,
+        "strength": 1.94,
+        "strength_probabilities": {
+          "0": 0.02,
+          "1": 0.16,
+          "2": 0.68,
+          "3": 0.14
+        },
+        "strength_confidence": 0.66,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 65,
+      "review_flags": []
+    },
+    {
+      "principle": "robust_quantification",
+      "rationale": "Excerpts show a quantified leakage factor, monitoring of forest cover change, carbon stock estimates from inventory, and conservative assumptions. However, detailed baseline calculations, emission factors, uncertainty treatment, and QA/QC procedures are mostly referenced in the table of contents rather than shown in the provided excerpts.",
+      "quotes": [
+        {
+          "text": "For ex ante purposes, a leakage factor of 20% is applied, i.e. 20% of deforestation caused by local agents is shifted outside of the project area due the project activity.",
+          "page": 123,
+          "paragraph_id": "p123-12",
+          "verification": "exact"
+        },
+        {
+          "text": "Stock estimates from the initial field inventory completed in 2009, are valid for 10 years (per VM0007), minimally through 2018.",
+          "page": 152,
+          "paragraph_id": "p152-04",
+          "verification": "exact"
+        },
+        {
+          "text": "Activity-shifting leakage in the leakage belt will be monitored by tracking forest cover change in the leakage belt (ADefLB,u,i,t), using classified satellite imagery produced following the same procedures outlined above in Section 4.2.1, referencing the 2008 forest cover benchmark map for the leakage belt (Figure 4.3).",
+          "page": 163,
+          "paragraph_id": "p163-01",
+          "verification": "exact"
+        },
+        {
+          "text": "To be conservative, the financial statements assumed that only 80% of the project’s carbon credits would be available for sale, that the leakage would be 20% and that the risk rating would also be 20%.",
+          "page": 81,
+          "paragraph_id": "p81-01",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 75,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "quantified_verifiable",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.61,
+          "documentary": 0.37,
+          "assertion_only": 0.02,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.48,
+        "independent_sources": 0.46,
+        "strength": 2.46,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.09,
+          "2": 0.37,
+          "3": 0.54
+        },
+        "strength_confidence": 0.45,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 82,
+      "review_flags": []
+    },
+    {
+      "principle": "no_double_counting",
+      "rationale": "The excerpts include specific statements that the project seeks registration only under VCS and CCB, will not generate other environmental credits, and is not registered under the CDM or other carbon trading schemes. They also describe monitoring of land exclusion from other schemes. However, they do not show corresponding adjustments or host-country authorization details.",
+      "quotes": [
+        {
+          "text": "This project is only seeking registration under the VCS and CCB programs.  CCB does not issue carbon credits and the project is not seeking to register credits with any other program.",
+          "page": 61,
+          "paragraph_id": "p61-03",
+          "verification": "exact"
+        },
+        {
+          "text": "This project has not and will not seek to generate any other form of environmental credit.",
+          "page": 61,
+          "paragraph_id": "p61-04",
+          "verification": "exact"
+        },
+        {
+          "text": "No land areas within the project area are currently registered under the CDM or any other carbon trading scheme (neither voluntary nor compliance-based).",
+          "page": 71,
+          "paragraph_id": "p71-12",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 88,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "assertion_only",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.36,
+          "assertion_only": 0.64,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.52,
+        "independent_sources": 0.11,
+        "strength": 1.07,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.95,
+          "2": 0.03,
+          "3": 0.02
+        },
+        "strength_confidence": 0.93,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "assertion_only",
+      "score": 36,
+      "review_flags": []
+    },
+    {
+      "principle": "safeguards",
+      "rationale": "Document shows community consultation, complaint handling, biodiversity monitoring, and social impact assessment via ICC/ROtI. It does not show explicit FPIC, labour safeguards, or a standalone environmental impact assessment. Evidence is substantive but incomplete for all safeguard sub-elements.",
+      "quotes": [
+        {
+          "text": "If a community member has a suggestion, complaint or question that the technician cannot immediately settle, the item will be handled in accordance with the process outlined in the next section.",
+          "page": 190,
+          "paragraph_id": "p190-02",
+          "verification": "exact"
+        },
+        {
+          "text": "Following the community meetings for discussing the design and needs for park management and avoiding deforestation, specific activities and an implementation plan will be developed, with input and feedback from the communities.",
+          "page": 22,
+          "paragraph_id": "p22-01",
+          "verification": "exact"
+        },
+        {
+          "text": "At the landscape level, CIMA analyze annually with satellite images (and aerial overflights when feasible) to confirm that there is no deforestation inside the park. Deforestation in the park is the best indicator readily available to the project, of any negative impact to biodiversity.",
+          "page": 180,
+          "paragraph_id": "p180-03",
+          "verification": "exact"
+        },
+        {
+          "text": "To complement the ICC and assess project impact on improvements to the quality of life of off-site communities, CIMA measures specific indicators drawn from the sustainable-livelihoods framework.",
+          "page": 185,
+          "paragraph_id": "p185-03",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 75,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 1.0,
+          "assertion_only": 0.0,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 1.0,
+        "independent_sources": 0.5,
+        "strength": 2.14,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.13,
+          "2": 0.59,
+          "3": 0.28
+        },
+        "strength_confidence": 0.59,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 71,
+      "review_flags": []
+    }
+  ],
+  "overall": {
+    "score": 64,
+    "included": [
+      "additionality",
+      "permanence",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-15T17:27:25+00:00"
+}

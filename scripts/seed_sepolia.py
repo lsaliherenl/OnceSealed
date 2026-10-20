@@ -17,6 +17,7 @@ from core.data.batches import load_batches
 from core.hashing import hash_json
 from core.privacy.identity import project_id
 from core.privacy.vault import VaultStore
+from core.reports import archive
 from core.service import OnceSealed
 
 SEPOLIA = 11155111
@@ -56,6 +57,7 @@ def main() -> None:
             continue
         version, tx, report_hash = svc.publish_report(report)
         note("registerQualityReport", tx, project=pid, version=version, report_hash=report_hash)
+        archive(pid, version)  # reports/history/<pid>/v<n>.json: old versions stay readable
 
     print("issuance batches (first batch of each project; simulated serials, standard lots)")
     batches = {pid: load_batches(pid)[0] for pid in DEMO_PROJECTS}

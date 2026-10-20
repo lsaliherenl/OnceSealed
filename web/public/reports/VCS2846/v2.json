@@ -1,0 +1,927 @@
+{
+  "schema": "report-v2",
+  "project": {
+    "project_id": "VCS2846",
+    "project_name": "FSW AMMS GHG Mitigation Project in Nanyang City",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/2846",
+    "methodology": "ACM0010",
+    "methodology_version": "8"
+  },
+  "document": {
+    "file_name": "VCS-Joint-Project-Description-Monitoring-Report-Muanyuan FSW-version03-clean.pdf",
+    "sha256": "29955d5d170062c4913c6e3d7c570d0e56b7c933c5a861312604a09770b6e3e3",
+    "pages": 137
+  },
+  "methodology_status": {
+    "code": "ACM0010",
+    "version": "8",
+    "status": "unknown",
+    "summary": "No ICVCM decision found for ACM0010 (manure management): it is not in the Calyx CCP-label tracker (May 2026) and no ICVCM announcement covers livestock manure methodologies. The methodology remains active in the VCS Program.",
+    "sources": [
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker",
+      "https://verra.org/methodologies/ghg-emission-reductions-from-manure-management-systems/"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v2",
+    "question_set_version": "qs-v2-checklist",
+    "prompt_version": "checklist-v1",
+    "evidence_rule": "yes-cites-excerpt-paragraph-v2",
+    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "second_opinion_model": "typesafe/jev-1.13",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+  "principles": [
+    {
+      "principle": "additionality",
+      "status": "partial_evidence",
+      "score": 75,
+      "rationale": "Evidence found for 3 of 4 checks (A1, A2, A3); not found in the excerpt: A4.",
+      "checks": [
+        {
+          "id": "A1",
+          "question": "Does the text report a quantified financial analysis: at least one numeric financial indicator (such as IRR or NPV) together with a benchmark or threshold value it is compared against?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p41-10",
+              "page": 41,
+              "text": "(b) Comparison of the project IRR for the project and the benchmark following table.  \nWithout income from selling VCUs, the IRR of the project is 5.38%, lower than the benchmark IRR \n9.5% and the project is financially unacceptable because of its low profitability. While considering \nsuch income, the IRR of the project is 10.69%, higher than the benchmark, and the project is \nfinancially acceptable."
+            }
+          ],
+          "second_opinion_p_yes": 0.99,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A2",
+          "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p46-05",
+              "page": 46,
+              "text": "Sub-step 4a.5: calculate factor F=1-Ndiff/Nall representing the share of similar projects \n(penetration rate of the measure/technology) using a measure/technology similar to the \nmeasure/technology used in the proposed project activity that deliver the same output or \ncapacity as the proposed project activity. \n \nAccording to the analysis above, Nall= Ndiff =0, and the factor F=1-Ndiff/Nall=1-1 =0< 0.2. Therefore, \nthe result of common practice assessment is: Nall-Ndiff=0 < 3 Therefore, the project activity is not \na common practice in the region."
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A3",
+          "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p36-10",
+              "page": 36,
+              "text": "Applicable \nA single aerobic treatment technique is not suitable for \ntreating low concentration organic wastewater in \nwastewater. This kind of wastewater contains a large \namount of highly concentrated organic wastewater, which \nis difficult to be treated by the aerobic method and does \nnot meet the Chinese environmental quality standards \nand pollutant discharge standards for discharge to water \nbodies. \nAt present a combine Anaerobic Digester-Aerobic \nTreatment system is considered to be one of the most \nadvanced \nmanure \nmanagement \nsystems, \nbut \nto \nimplement such technology need high invest and the \nproposed project will not be invested and constructed \nwithout being registered as a VCS project. \n \n \nOutcome of Step 1a: In summary, the alternatives to the baseline scenario are identified by the \ntool 02:” Combined tool to identify the baseline scenario and demonstrate additionality (Version \n07.0)”as: \nScenario 6: “The manure is disposed in an uncovered anaerobic lagoon”  \nScenario 8&17: Anaerobic Digester-Aerobic Treatment i.e., the project activity not being \nregistered as a VCS project activity. \n \nStep 1b: Consistency with mandatory applicable laws and regulations \nThere is no legal law and regulation to mandate the livestock farm owners to implement \nanaerobic digestion, aerobic or other biological treatment techniques to treat the animal manure \nin China. Only the manure is prohibited to discharge directly into environment without any \ntreatment as per Regulations on Prevention and Control of Pollution from Livestock and Poultry \nFarming11 issued by the State Council in Nov. 2013."
+            }
+          ],
+          "second_opinion_p_yes": 0.92,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A4",
+          "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.35,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "(b) Comparison of the project IRR for the project and the benchmark following table.  \nWithout income from selling VCUs, the IRR of the project is 5.38%, lower than the benchmark IRR \n9.5% and the project is financially unacceptable because of its low profitability. While considering \nsuch income, the IRR of the project is 10.69%, higher than the benchmark, and the project is \nfinancially acceptable.",
+          "page": 41,
+          "paragraph_id": "p41-10",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Sub-step 4a.5: calculate factor F=1-Ndiff/Nall representing the share of similar projects \n(penetration rate of the measure/technology) using a measure/technology similar to the \nmeasure/technology used in the proposed project activity that deliver the same output or \ncapacity as the proposed project activity. \n \nAccording to the analysis above, Nall= Ndiff =0, and the factor F=1-Ndiff/Nall=1-1 =0< 0.2. Therefore, \nthe result of common practice assessment is: Nall-Ndiff=0 < 3 Therefore, the project activity is not \na common practice in the region.",
+          "page": 46,
+          "paragraph_id": "p46-05",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Applicable \nA single aerobic treatment technique is not suitable for \ntreating low concentration organic wastewater in \nwastewater. This kind of wastewater contains a large \namount of highly concentrated organic wastewater, which \nis difficult to be treated by the aerobic method and does \nnot meet the Chinese environmental quality standards \nand pollutant discharge standards for discharge to water \nbodies. \nAt present a combine Anaerobic Digester-Aerobic \nTreatment system is considered to be one of the most \nadvanced \nmanure \nmanagement \nsystems, \nbut \nto \nimplement such technology need high invest and the \nproposed project will not be invested and constructed \nwithout being registered as a VCS project. \n \n \nOutcome of Step 1a: In summary, the alternatives to the baseline scenario are identified by the \ntool 02:” Combined tool to identify the baseline scenario and demonstrate additionality (Version \n07.0)”as: \nScenario 6: “The manure is disposed in an uncovered anaerobic lagoon”  \nScenario 8&17: Anaerobic Digester-Aerobic Treatment i.e., the project activity not being \nregistered as a VCS project activity. \n \nStep 1b: Consistency with mandatory applicable laws and regulations \nThere is no legal law and regulation to mandate the livestock farm owners to implement \nanaerobic digestion, aerobic or other biological treatment techniques to treat the animal manure \nin China. Only the manure is prohibited to discharge directly into environment without any \ntreatment as per Regulations on Prevention and Control of Pollution from Livestock and Poultry \nFarming11 issued by the State Council in Nov. 2013.",
+          "page": 36,
+          "paragraph_id": "p36-10",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-19",
+          "p2-20",
+          "p2-21",
+          "p2-30",
+          "p3-01",
+          "p3-02",
+          "p3-03",
+          "p4-04",
+          "p4-05",
+          "p5-09",
+          "p5-10",
+          "p9-12",
+          "p9-13",
+          "p9-15",
+          "p9-17",
+          "p17-03",
+          "p17-04",
+          "p17-05",
+          "p20-13",
+          "p26-06",
+          "p26-07",
+          "p27-02",
+          "p27-03",
+          "p27-04",
+          "p27-05",
+          "p27-06",
+          "p27-07",
+          "p30-07",
+          "p30-08",
+          "p30-09",
+          "p30-10",
+          "p30-11",
+          "p33-02",
+          "p33-03",
+          "p34-04",
+          "p34-05",
+          "p34-06",
+          "p34-07",
+          "p36-10",
+          "p36-11",
+          "p37-02",
+          "p37-03",
+          "p38-02",
+          "p41-02",
+          "p41-10",
+          "p41-11",
+          "p41-12",
+          "p42-02",
+          "p42-03",
+          "p42-09",
+          "p42-10",
+          "p43-02",
+          "p43-03",
+          "p43-04",
+          "p43-05",
+          "p43-06",
+          "p44-02",
+          "p44-03",
+          "p44-04",
+          "p44-05",
+          "p44-06",
+          "p44-07",
+          "p44-08",
+          "p46-04",
+          "p46-05",
+          "p46-06",
+          "p46-07"
+        ],
+        "chars": 29961
+      }
+    },
+    {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "checks": [],
+      "quotes": [],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "rule": "no_reversal_risk"
+    },
+    {
+      "principle": "robust_quantification",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 4 of 4 checks (Q1, Q2, Q3, Q4).",
+      "checks": [
+        {
+          "id": "Q1",
+          "question": "Does the text show how baseline emissions are calculated, with an equation, parameter values or a numeric result?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p122-02",
+              "page": 122,
+              "text": "project will be captured for heat generation and all the heat generated from this project will be \nused by the daily operation of AWMS and the 9 swine farms. The heat generated is not connected \nto another user. So, the baseline CO2 emission from electricity and/or heat used in the baseline \nis 0, which is conservative. So, 𝐵𝐸𝑦= 𝐵𝐸𝐶𝐻4,𝑦+ 𝐵𝐸𝑁2𝑂,𝑦 ."
+            },
+            {
+              "paragraph_id": "p122-03",
+              "page": 122,
+              "text": "During this monitoring period, the basic monitoring data values used in the calculation of \nbaseline emissions and the calculation results are shown in the Table 6-1 and Table 6-2."
+            },
+            {
+              "paragraph_id": "p123-02",
+              "page": 123,
+              "text": "Table 6-1 the basic monitoring data values used in the calculation of baseline emissions"
+            },
+            {
+              "paragraph_id": "p134-22",
+              "page": 134,
+              "text": "6.5 \nNet GHG Emission Reductions and Removals \nAs per paragraph 54 in applied methodology ACM0010 (Version08.0): Furthermore, if the actual methane \ncaptured from anaerobic digesters in project activity is lower than (BECH4,y - PEAD,y), then(BECH4,y - PEAD,y) \nis replaced by actual methane captured QCH4,y. \n \nBiogas captured during monitoring period is 60,783,901.90m3, which equals to 661,957 tCO2e that \nemission from methane production 34. Baseline methane emission (BECH4,y) in this monitoring period is \n695,501tCO2e. Project emissions associated with anaerobic digester in this monitoring period is (PEAD,y) \nis 36,280 tCO2e. Actual methane captured from anaerobic digesters is higher than the difference of \nBECH4,y and  PEAD,y. Therefore, the equation (BECH4,y - PEAD,y) can be used to calculate emission reduction. \nSo, the Net GHG Emission Reductions and Removals can be calculated using Equation 45 in Section 4.4. \nThe Net GHG Emission Reductions and Removals in this monitoring period is shown in following table."
+            }
+          ],
+          "second_opinion_p_yes": 0.93,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q2",
+          "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p20-16",
+              "page": 20,
+              "text": "The leakage involved in this project includes the leakage of anaerobic digestion in a digester and"
+            },
+            {
+              "paragraph_id": "p20-17",
+              "page": 20,
+              "text": "the leakage of organic fertilizer into the soil. The project participants have no authority, \nintervention or control over the leakage of organic fertilizer into the soil. Moreover, this leakage \nhas been included in the emission reductions calculation as per the applied methodology and \ntool."
+            },
+            {
+              "paragraph_id": "p63-12",
+              "page": 63,
+              "text": "The emission reduction ERy by the project activity during a given year y is the difference between \nthe baseline emissions (BEy) and the sum of project emissions (PEy) and leakage, as follows:"
+            },
+            {
+              "paragraph_id": "p132-04",
+              "page": 132,
+              "text": "The 𝐿𝐸𝐵𝐿,𝑁2𝑂,𝑦, 𝐿𝐸𝑃𝐽,𝑁2𝑂,𝑦, , 𝐿𝐸𝐵𝐿,𝐶𝐻4,𝑦 𝑎𝑛𝑑 𝐿𝐸𝑃𝐽,𝐶𝐻4,𝑦,,can be calculated by Equation 34-43"
+            },
+            {
+              "paragraph_id": "p132-05",
+              "page": 132,
+              "text": "described in Section 4.3 and the specific calculation and the result are shown in Table 6-9. The \ncalculation result of leakage emission is shown in Table 6-10."
+            },
+            {
+              "paragraph_id": "p132-06",
+              "page": 132,
+              "text": "Table 6-9 the calculation result of 𝐿𝐸𝐵𝐿,𝑁2𝑂,𝑦, 𝐿𝐸𝑃𝐽,𝑁2𝑂,𝑦, 𝐿𝐸𝐵𝐿,𝐶𝐻4,𝑦 𝑎𝑛𝑑 𝐿𝐸𝑃𝐽,𝐶𝐻4,𝑦"
+            }
+          ],
+          "second_opinion_p_yes": 0.94,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q3",
+          "question": "Does the text address uncertainty or the use of conservative assumptions in the emission reduction estimate?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p84-11",
+              "page": 84,
+              "text": "Value applied \n100% for ex ante estimation, which sourced from Project evaluation \nreport. As this parameter is not monitored in the actual operation. So, \nin the monitoring period, to be conservative, the value of this \nparameter in the emission reduction calculation is 100%."
+            },
+            {
+              "paragraph_id": "p87-04",
+              "page": 87,
+              "text": "Default value of 20% will be applied, which is conservative. According \nto tool 05” Baseline, project and/or leakage emissions from \nelectricity consumption and monitoring of electricity generation” \n(version 03.0)"
+            },
+            {
+              "paragraph_id": "p91-10",
+              "page": 91,
+              "text": "Value applied \n100% for ex-estimated.  As this parameter is not monitored in the \nactual operation. so, in the monitoring period, to be conservative, the \nvalue of this parameter in the emission reduction calculation is \n100%."
+            },
+            {
+              "paragraph_id": "p94-11",
+              "page": 94,
+              "text": "The actual Annual average ambient temperature at project site from \nOfficial public information during this monitoring period will be \ncompared with the value of ex-ante estimated, i.e., 15 °. In the \nmonitoring period, to be conservative, corresponding MCFj with lower \nannual average ambient temperature as per Appendix 3 of \nACM0010(Version08.0) will be used for calculation after comparing \nthe actual value and the value of ex-ante estimated."
+            },
+            {
+              "paragraph_id": "p95-02",
+              "page": 95,
+              "text": "Figure 5-1 The Organization Structure of the Monitoring Team \n2.Monitoring equipment and installation \nInstallation and configuration of meters are shown as Figure 5-2. In order to ensure \nmeasurements with a low degree of uncertainty, the data metering equipment will be calibrated \nand checked by an appropriately qualified third party according to an appropriate national \nstandard. The calibration records will be appropriately maintained and made available for review \nby VVB."
+            },
+            {
+              "paragraph_id": "p99-02",
+              "page": 99,
+              "text": "The project will sign an agreement that it will not participate in other environment credits, other \nGHG programs and has not been rejected by any other GHG Programs. The whole VCS monitoring \nteam will follow recognized standard data evaluation methods to guarantee that the data is \nreliable and accurate. The quality control and quality assurance procedures include the handling \nand correction of nonconformities in the implementation of the project or the monitoring plan. In \ncase such nonconformities are observed: \n- An analysis of the nonconformity and its causes will be carried out immediately by the project \nowner, with the help of external experts if necessary. \n- A corrective action plan should then be developed to eliminate the non-conformity and its causes \nto prevent its recurrence. \n- Corrective actions are implemented and reported back to the VCS monitoring team. \n- Relative information will be included in the monitoring report and reported to VVB during the \nverification. \nIf the data record is missing or damaged during the monitoring periods, the following makeup \nprocess will be conducted: \n-The general principle is that Conservative value will be used for the missing or damaged data. \nThis is most conservative approach. The monitoring personnel will be trained before the starting \nof the project operation to ensure that each team member is fully aware of and able to strictly \nfollow this conservative principle. During the monitoring process, the monitoring personnel will \nbe required to strictly abide by the above conservative principle in data recording, i.e., use \nConservative value for all the missing or damaged data. \n-If this is due to the working error of the monitoring personnel, further train the person until he \nor she can perform the job properly. And in the meantime, use Conservative value for the missing \nor damaged data; \n-If this is due to the inability or attitude of a particular worker in monitoring team, dismiss such \nworker and re-hire those with proper ability and attitude. And in the meantime, use Conservative \nvalue for the missing or damaged data; \n-If some data recorded are significantly higher than the normal range, the monitoring personnel \nshould ask for the reason. If the measurement is high due to the damage of measurement \nequipment, Conservative value will be used for that day's data. And need to calibrate and \nmaintain the measuring equipment immediately and avoid this situation in the future.  \nIf the monitoring results are satisfactory in terms of correct reporting, data completeness and \ncorrect analysis, the data will be accepted for the monitoring report. \n \n6. Sample plan  \nThe sampling objective \nTo determining the average animal weight of a defined livestock population (Wsite) at the project \nsite during the crediting period with a 95/10 confidence/precision. \n \nAccording to “Sampling and surveys for CDM project activities and programmes of activities \n(Version 09.0)”, the sampling plan is as follows:"
+            },
+            {
+              "paragraph_id": "p100-06",
+              "page": 100,
+              "text": "For the ex-calculation, A total of 479,100 swine (454,600 Market swine and \n24,500 Breeding swine) included in this project and the data of the average \nanimal weight of a defined livestock population at the project site is from the \nProject evaluation report. As the applied value of 454,600 Market swine and \n24,500 Breeding swine is the design scale, during the monitoring periods, the \nactual breeding scale of the farm will not exceed the design value, so the \nsample size calculated from the design values for monitoring period is \nmaximum and also conservative."
+            },
+            {
+              "paragraph_id": "p102-08",
+              "page": 102,
+              "text": "The calculation result of n is 423. Therefore, 423 samples should be sufficient to satisfy the \ndesired confidence and precision. 423 samples will be selected from the sampling frame \naccording to the stratified sampling method every month.  \n \nAs the applied value of 454,600 Market swine and 24,500 Breeding swine is the design scale, \nduring the monitoring periods, the actual breeding scale of the farm will not exceed the design \nvalue, so the sample size calculated from the design values for monitoring period is maximum \nand also conservative. \n \nStratified sampling (with samples of 423) was used for the monitoring of the Wsite. The specific \nsampling methods are as follows: For the sampling, PP should calculate the overall sample size \nbased on the population of pigs in stock firstly. As the project involved 9 swine farms, so the \nsample size in each swine farm should be determined based on the proportion of the number of \neach farm in the total number of 9 swine farms. Similarly, the sample size of each age group of \nMarket swine and Breeding swine in a farm were also calculated based on the proportion of the \nnumber of each age group of Market swine and Breeding swine to the total number of swine in \nthe farm. To be conservative, both the samples number of the ten subsidiary farms is adjusted \nto be integer value.  As a result, 449 samples of swine population were selected for the \nmonitoring of the Wsite. \n \nThe distribution of the samples in each age category in each farm shows as follow:"
+            },
+            {
+              "paragraph_id": "p103-11",
+              "page": 103,
+              "text": "During the monthly monitoring activities, the weight of the month's sample was recorded in the \nweight record table by the monitoring team member in the 9 swine farms. Then average animal \nweight of a defined livestock population at the project site was calculated based on these data \nby the monitoring team member. The data will be reviewed by the project developer and VVB. \nIf the recorded raw data on the monitoring form are reasonable and basically consistent with the \nactual growth state, the raw data will be archived. \n \nIf the data record is missing or damaged or the target animal was dead during the monitoring \nperiods, the following makeup process will be conducted: \n1) The general principle is that zero value will be used for the missing or damaged data. This is \nmost conservative approach. The monitoring personnel will be trained before the starting of the \nproject operation to ensure that each team member is fully aware of and able to strictly follow \nthis conservative principle. During the monitoring process, the monitoring personnel will be \nrequired to strictly abide by the above conservative principle in data recording, i.e., use zero \nvalues for all the missing or damaged data. \n2) If this is due to the working error of the monitoring personnel, further train the person until he \nor she can perform the job properly. And in the meantime, use zero value for the missing or \ndamaged data;"
+            },
+            {
+              "paragraph_id": "p119-06",
+              "page": 119,
+              "text": "Value applied: \n100%. As this parameter is not monitored during this monitoring period. so, \nto be conservative, the value of this parameter in the emission reduction \ncalculation is 100%."
+            },
+            {
+              "paragraph_id": "p119-13",
+              "page": 119,
+              "text": "Comments \nB0, LT can be measured as per ISO 11734:1995. As this parameter is not \nmonitored in the actual operation. so, in the monitoring period 0.29 \nm3CH4/kg-dm is still applied. While the actual methane producing potential \nof the volatile solid generated by swine manure is 479.4ml/gVS according \nto the public literature 31,which is higher. Therefore 0.29 m3CH4/kg -dm \napplied in monitoring period is conservative."
+            },
+            {
+              "paragraph_id": "p121-10",
+              "page": 121,
+              "text": "Comments \nThe temperature in 2020 and 2021 is sourced from Henan Province Bureau \nof Statistics, which is Official institutions. Therefore, the data is creditable.  \nWhile only six months are included for the period from 01-January-2022  to \n30-June-2022 and the monthly average temperature is not available from \nofficial public information. Furthermore, the temperature in these 6 months \ncannot represent the annual average temperature of the whole year. So, the \nAnnual average ambient temperature at project site of 2022 applied the \nlower  ex-ante estimated value i.e.15℃, which is more conservative. \nMCF value is still 74% with the temperature of 15°C and15.9°C as per \nAppendix 3 of ACM0010(Version 08.0). Then multiplying MCF values with a \nvalue of 0.94, so 69.56% of MCFj (74%*0.94) is used for calculation during \nthis monitoring period, which is consistent with the valued of ex-ante."
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q4",
+          "question": "Does the text describe a monitoring plan that names the parameters to be measured and how often or by what method?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p94-16",
+              "page": 94,
+              "text": "The monitoring plan presented in this JPM assures that real, measurable, long term GHG \nemission reductions can be monitored, recorded and reported. It is a crucial procedure to identify \nthe final VCUs of the project. This monitoring plan will be implemented by the project owner during \nthe project operation. The details of the monitoring plan are specified as follows:"
+            },
+            {
+              "paragraph_id": "p95-02",
+              "page": 95,
+              "text": "Figure 5-1 The Organization Structure of the Monitoring Team \n2.Monitoring equipment and installation \nInstallation and configuration of meters are shown as Figure 5-2. In order to ensure \nmeasurements with a low degree of uncertainty, the data metering equipment will be calibrated \nand checked by an appropriately qualified third party according to an appropriate national \nstandard. The calibration records will be appropriately maintained and made available for review \nby VVB."
+            },
+            {
+              "paragraph_id": "p96-03",
+              "page": 96,
+              "text": "The monitoring requirements for this methodology include the monitoring of parameters for baseline \nemission, project emissions and leakage calculations. All provisions in the methodology and relevant \ntools shall apply, as described for each parameter in Section 5.2 of this JPM \nFor this project, the parameters that need to be monitored as the description of Section 5.2 are"
+            },
+            {
+              "paragraph_id": "p98-07",
+              "page": 98,
+              "text": "s \nAnnual average nitrogen excretion per head of a \ndefined livestock population estimated as described \nin Appendix 2, NEXLT,y"
+            },
+            {
+              "paragraph_id": "p98-08",
+              "page": 98,
+              "text": "The parameter is calculated as the \nequation of option 2 in Appendix 2 of \nmethodology ACM0010 Version 08.0 and \nthe value of other parameter applied in the \nequation is taken from IPCC 2006, which is \na published source. The parameter value \nwill be updated on latest available public \ndata source. While for parameter Wsite, it \nis monitored during this MR, please refer to \nmonitoring parameter Wsite \n \n5. Quality control and quality assurance procedures \nA quality management system will be established, which ensures the quality and accuracy of the \nmeasured data. \nTraining \nFor all members involved in the project, necessary trainings will be provided by the project owner. \nBesides, the project owner should ensure that only skilled employees are allowed to undertake \nthe monitoring work. The training contents should be regard to the general and technical aspects \nof the project to the extent appropriate, as well as basic understandings of VCS Standard and \nclimate change. \nData management \nAll data collected as part of monitoring plan should be saved with at least 1 backup copy until \nthe end of the crediting period. After the crediting period ends, the data should be archived \nelectronically on hard disks and be kept at least 2 years after the end of the last crediting period. \nCorrective actions"
+            },
+            {
+              "paragraph_id": "p103-10",
+              "page": 103,
+              "text": "Implementation and Monitoring frequency \nThe sampling process will start as soon as the target population is determined, and the sampling \nshould be done once a month. The Sampling process will be determined by the VCS monitoring \nteam. \n \nThe one monthly monitoring activity of the samples will be completed in the 9 swine farms during \neach monitoring periods. \n \nBecause the sampling activity is once a month, all the samples will be changed in the next month. \nThe monitoring data will be collected and recorded throughout the entire crediting period. All \narchived data and documentation will be kept for at least 2 years after the end of the last \ncrediting period. \n \nProcedures for Administering Data Collection and Minimizing Non-sampling Errors"
+            },
+            {
+              "paragraph_id": "p103-11",
+              "page": 103,
+              "text": "During the monthly monitoring activities, the weight of the month's sample was recorded in the \nweight record table by the monitoring team member in the 9 swine farms. Then average animal \nweight of a defined livestock population at the project site was calculated based on these data \nby the monitoring team member. The data will be reviewed by the project developer and VVB. \nIf the recorded raw data on the monitoring form are reasonable and basically consistent with the \nactual growth state, the raw data will be archived. \n \nIf the data record is missing or damaged or the target animal was dead during the monitoring \nperiods, the following makeup process will be conducted: \n1) The general principle is that zero value will be used for the missing or damaged data. This is \nmost conservative approach. The monitoring personnel will be trained before the starting of the \nproject operation to ensure that each team member is fully aware of and able to strictly follow \nthis conservative principle. During the monitoring process, the monitoring personnel will be \nrequired to strictly abide by the above conservative principle in data recording, i.e., use zero \nvalues for all the missing or damaged data. \n2) If this is due to the working error of the monitoring personnel, further train the person until he \nor she can perform the job properly. And in the meantime, use zero value for the missing or \ndamaged data;"
+            },
+            {
+              "paragraph_id": "p85-23",
+              "page": 85,
+              "text": "Comments \nThe biogas flow will be measured at four points, as shown in the \nfigure. But if the project participants can demonstrate that leakage \nin distribution pipeline is zero, it need be measured at any three \npoints. The biogas flow to electricity or heat equipment in a moment \ncan be considered destroyed, by monitoring that the equipment was"
+            }
+          ],
+          "second_opinion_p_yes": 0.96,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "project will be captured for heat generation and all the heat generated from this project will be \nused by the daily operation of AWMS and the 9 swine farms. The heat generated is not connected \nto another user. So, the baseline CO2 emission from electricity and/or heat used in the baseline \nis 0, which is conservative. So, 𝐵𝐸𝑦= 𝐵𝐸𝐶𝐻4,𝑦+ 𝐵𝐸𝑁2𝑂,𝑦 .",
+          "page": 122,
+          "paragraph_id": "p122-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "During this monitoring period, the basic monitoring data values used in the calculation of \nbaseline emissions and the calculation results are shown in the Table 6-1 and Table 6-2.",
+          "page": 122,
+          "paragraph_id": "p122-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Table 6-1 the basic monitoring data values used in the calculation of baseline emissions",
+          "page": 123,
+          "paragraph_id": "p123-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "6.5 \nNet GHG Emission Reductions and Removals \nAs per paragraph 54 in applied methodology ACM0010 (Version08.0): Furthermore, if the actual methane \ncaptured from anaerobic digesters in project activity is lower than (BECH4,y - PEAD,y), then(BECH4,y - PEAD,y) \nis replaced by actual methane captured QCH4,y. \n \nBiogas captured during monitoring period is 60,783,901.90m3, which equals to 661,957 tCO2e that \nemission from methane production 34. Baseline methane emission (BECH4,y) in this monitoring period is \n695,501tCO2e. Project emissions associated with anaerobic digester in this monitoring period is (PEAD,y) \nis 36,280 tCO2e. Actual methane captured from anaerobic digesters is higher than the difference of \nBECH4,y and  PEAD,y. Therefore, the equation (BECH4,y - PEAD,y) can be used to calculate emission reduction. \nSo, the Net GHG Emission Reductions and Removals can be calculated using Equation 45 in Section 4.4. \nThe Net GHG Emission Reductions and Removals in this monitoring period is shown in following table.",
+          "page": 134,
+          "paragraph_id": "p134-22",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The leakage involved in this project includes the leakage of anaerobic digestion in a digester and",
+          "page": 20,
+          "paragraph_id": "p20-16",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "the leakage of organic fertilizer into the soil. The project participants have no authority, \nintervention or control over the leakage of organic fertilizer into the soil. Moreover, this leakage \nhas been included in the emission reductions calculation as per the applied methodology and \ntool.",
+          "page": 20,
+          "paragraph_id": "p20-17",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The emission reduction ERy by the project activity during a given year y is the difference between \nthe baseline emissions (BEy) and the sum of project emissions (PEy) and leakage, as follows:",
+          "page": 63,
+          "paragraph_id": "p63-12",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The 𝐿𝐸𝐵𝐿,𝑁2𝑂,𝑦, 𝐿𝐸𝑃𝐽,𝑁2𝑂,𝑦, , 𝐿𝐸𝐵𝐿,𝐶𝐻4,𝑦 𝑎𝑛𝑑 𝐿𝐸𝑃𝐽,𝐶𝐻4,𝑦,,can be calculated by Equation 34-43",
+          "page": 132,
+          "paragraph_id": "p132-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "described in Section 4.3 and the specific calculation and the result are shown in Table 6-9. The \ncalculation result of leakage emission is shown in Table 6-10.",
+          "page": 132,
+          "paragraph_id": "p132-05",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Table 6-9 the calculation result of 𝐿𝐸𝐵𝐿,𝑁2𝑂,𝑦, 𝐿𝐸𝑃𝐽,𝑁2𝑂,𝑦, 𝐿𝐸𝐵𝐿,𝐶𝐻4,𝑦 𝑎𝑛𝑑 𝐿𝐸𝑃𝐽,𝐶𝐻4,𝑦",
+          "page": 132,
+          "paragraph_id": "p132-06",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Value applied \n100% for ex ante estimation, which sourced from Project evaluation \nreport. As this parameter is not monitored in the actual operation. So, \nin the monitoring period, to be conservative, the value of this \nparameter in the emission reduction calculation is 100%.",
+          "page": 84,
+          "paragraph_id": "p84-11",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Default value of 20% will be applied, which is conservative. According \nto tool 05” Baseline, project and/or leakage emissions from \nelectricity consumption and monitoring of electricity generation” \n(version 03.0)",
+          "page": 87,
+          "paragraph_id": "p87-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Value applied \n100% for ex-estimated.  As this parameter is not monitored in the \nactual operation. so, in the monitoring period, to be conservative, the \nvalue of this parameter in the emission reduction calculation is \n100%.",
+          "page": 91,
+          "paragraph_id": "p91-10",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The actual Annual average ambient temperature at project site from \nOfficial public information during this monitoring period will be \ncompared with the value of ex-ante estimated, i.e., 15 °. In the \nmonitoring period, to be conservative, corresponding MCFj with lower \nannual average ambient temperature as per Appendix 3 of \nACM0010(Version08.0) will be used for calculation after comparing \nthe actual value and the value of ex-ante estimated.",
+          "page": 94,
+          "paragraph_id": "p94-11",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Figure 5-1 The Organization Structure of the Monitoring Team \n2.Monitoring equipment and installation \nInstallation and configuration of meters are shown as Figure 5-2. In order to ensure \nmeasurements with a low degree of uncertainty, the data metering equipment will be calibrated \nand checked by an appropriately qualified third party according to an appropriate national \nstandard. The calibration records will be appropriately maintained and made available for review \nby VVB.",
+          "page": 95,
+          "paragraph_id": "p95-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The project will sign an agreement that it will not participate in other environment credits, other \nGHG programs and has not been rejected by any other GHG Programs. The whole VCS monitoring \nteam will follow recognized standard data evaluation methods to guarantee that the data is \nreliable and accurate. The quality control and quality assurance procedures include the handling \nand correction of nonconformities in the implementation of the project or the monitoring plan. In \ncase such nonconformities are observed: \n- An analysis of the nonconformity and its causes will be carried out immediately by the project \nowner, with the help of external experts if necessary. \n- A corrective action plan should then be developed to eliminate the non-conformity and its causes \nto prevent its recurrence. \n- Corrective actions are implemented and reported back to the VCS monitoring team. \n- Relative information will be included in the monitoring report and reported to VVB during the \nverification. \nIf the data record is missing or damaged during the monitoring periods, the following makeup \nprocess will be conducted: \n-The general principle is that Conservative value will be used for the missing or damaged data. \nThis is most conservative approach. The monitoring personnel will be trained before the starting \nof the project operation to ensure that each team member is fully aware of and able to strictly \nfollow this conservative principle. During the monitoring process, the monitoring personnel will \nbe required to strictly abide by the above conservative principle in data recording, i.e., use \nConservative value for all the missing or damaged data. \n-If this is due to the working error of the monitoring personnel, further train the person until he \nor she can perform the job properly. And in the meantime, use Conservative value for the missing \nor damaged data; \n-If this is due to the inability or attitude of a particular worker in monitoring team, dismiss such \nworker and re-hire those with proper ability and attitude. And in the meantime, use Conservative \nvalue for the missing or damaged data; \n-If some data recorded are significantly higher than the normal range, the monitoring personnel \nshould ask for the reason. If the measurement is high due to the damage of measurement \nequipment, Conservative value will be used for that day's data. And need to calibrate and \nmaintain the measuring equipment immediately and avoid this situation in the future.  \nIf the monitoring results are satisfactory in terms of correct reporting, data completeness and \ncorrect analysis, the data will be accepted for the monitoring report. \n \n6. Sample plan  \nThe sampling objective \nTo determining the average animal weight of a defined livestock population (Wsite) at the project \nsite during the crediting period with a 95/10 confidence/precision. \n \nAccording to “Sampling and surveys for CDM project activities and programmes of activities \n(Version 09.0)”, the sampling plan is as follows:",
+          "page": 99,
+          "paragraph_id": "p99-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "For the ex-calculation, A total of 479,100 swine (454,600 Market swine and \n24,500 Breeding swine) included in this project and the data of the average \nanimal weight of a defined livestock population at the project site is from the \nProject evaluation report. As the applied value of 454,600 Market swine and \n24,500 Breeding swine is the design scale, during the monitoring periods, the \nactual breeding scale of the farm will not exceed the design value, so the \nsample size calculated from the design values for monitoring period is \nmaximum and also conservative.",
+          "page": 100,
+          "paragraph_id": "p100-06",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The calculation result of n is 423. Therefore, 423 samples should be sufficient to satisfy the \ndesired confidence and precision. 423 samples will be selected from the sampling frame \naccording to the stratified sampling method every month.  \n \nAs the applied value of 454,600 Market swine and 24,500 Breeding swine is the design scale, \nduring the monitoring periods, the actual breeding scale of the farm will not exceed the design \nvalue, so the sample size calculated from the design values for monitoring period is maximum \nand also conservative. \n \nStratified sampling (with samples of 423) was used for the monitoring of the Wsite. The specific \nsampling methods are as follows: For the sampling, PP should calculate the overall sample size \nbased on the population of pigs in stock firstly. As the project involved 9 swine farms, so the \nsample size in each swine farm should be determined based on the proportion of the number of \neach farm in the total number of 9 swine farms. Similarly, the sample size of each age group of \nMarket swine and Breeding swine in a farm were also calculated based on the proportion of the \nnumber of each age group of Market swine and Breeding swine to the total number of swine in \nthe farm. To be conservative, both the samples number of the ten subsidiary farms is adjusted \nto be integer value.  As a result, 449 samples of swine population were selected for the \nmonitoring of the Wsite. \n \nThe distribution of the samples in each age category in each farm shows as follow:",
+          "page": 102,
+          "paragraph_id": "p102-08",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "During the monthly monitoring activities, the weight of the month's sample was recorded in the \nweight record table by the monitoring team member in the 9 swine farms. Then average animal \nweight of a defined livestock population at the project site was calculated based on these data \nby the monitoring team member. The data will be reviewed by the project developer and VVB. \nIf the recorded raw data on the monitoring form are reasonable and basically consistent with the \nactual growth state, the raw data will be archived. \n \nIf the data record is missing or damaged or the target animal was dead during the monitoring \nperiods, the following makeup process will be conducted: \n1) The general principle is that zero value will be used for the missing or damaged data. This is \nmost conservative approach. The monitoring personnel will be trained before the starting of the \nproject operation to ensure that each team member is fully aware of and able to strictly follow \nthis conservative principle. During the monitoring process, the monitoring personnel will be \nrequired to strictly abide by the above conservative principle in data recording, i.e., use zero \nvalues for all the missing or damaged data. \n2) If this is due to the working error of the monitoring personnel, further train the person until he \nor she can perform the job properly. And in the meantime, use zero value for the missing or \ndamaged data;",
+          "page": 103,
+          "paragraph_id": "p103-11",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Value applied: \n100%. As this parameter is not monitored during this monitoring period. so, \nto be conservative, the value of this parameter in the emission reduction \ncalculation is 100%.",
+          "page": 119,
+          "paragraph_id": "p119-06",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Comments \nB0, LT can be measured as per ISO 11734:1995. As this parameter is not \nmonitored in the actual operation. so, in the monitoring period 0.29 \nm3CH4/kg-dm is still applied. While the actual methane producing potential \nof the volatile solid generated by swine manure is 479.4ml/gVS according \nto the public literature 31,which is higher. Therefore 0.29 m3CH4/kg -dm \napplied in monitoring period is conservative.",
+          "page": 119,
+          "paragraph_id": "p119-13",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Comments \nThe temperature in 2020 and 2021 is sourced from Henan Province Bureau \nof Statistics, which is Official institutions. Therefore, the data is creditable.  \nWhile only six months are included for the period from 01-January-2022  to \n30-June-2022 and the monthly average temperature is not available from \nofficial public information. Furthermore, the temperature in these 6 months \ncannot represent the annual average temperature of the whole year. So, the \nAnnual average ambient temperature at project site of 2022 applied the \nlower  ex-ante estimated value i.e.15℃, which is more conservative. \nMCF value is still 74% with the temperature of 15°C and15.9°C as per \nAppendix 3 of ACM0010(Version 08.0). Then multiplying MCF values with a \nvalue of 0.94, so 69.56% of MCFj (74%*0.94) is used for calculation during \nthis monitoring period, which is consistent with the valued of ex-ante.",
+          "page": 121,
+          "paragraph_id": "p121-10",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The monitoring plan presented in this JPM assures that real, measurable, long term GHG \nemission reductions can be monitored, recorded and reported. It is a crucial procedure to identify \nthe final VCUs of the project. This monitoring plan will be implemented by the project owner during \nthe project operation. The details of the monitoring plan are specified as follows:",
+          "page": 94,
+          "paragraph_id": "p94-16",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The monitoring requirements for this methodology include the monitoring of parameters for baseline \nemission, project emissions and leakage calculations. All provisions in the methodology and relevant \ntools shall apply, as described for each parameter in Section 5.2 of this JPM \nFor this project, the parameters that need to be monitored as the description of Section 5.2 are",
+          "page": 96,
+          "paragraph_id": "p96-03",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "s \nAnnual average nitrogen excretion per head of a \ndefined livestock population estimated as described \nin Appendix 2, NEXLT,y",
+          "page": 98,
+          "paragraph_id": "p98-07",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The parameter is calculated as the \nequation of option 2 in Appendix 2 of \nmethodology ACM0010 Version 08.0 and \nthe value of other parameter applied in the \nequation is taken from IPCC 2006, which is \na published source. The parameter value \nwill be updated on latest available public \ndata source. While for parameter Wsite, it \nis monitored during this MR, please refer to \nmonitoring parameter Wsite \n \n5. Quality control and quality assurance procedures \nA quality management system will be established, which ensures the quality and accuracy of the \nmeasured data. \nTraining \nFor all members involved in the project, necessary trainings will be provided by the project owner. \nBesides, the project owner should ensure that only skilled employees are allowed to undertake \nthe monitoring work. The training contents should be regard to the general and technical aspects \nof the project to the extent appropriate, as well as basic understandings of VCS Standard and \nclimate change. \nData management \nAll data collected as part of monitoring plan should be saved with at least 1 backup copy until \nthe end of the crediting period. After the crediting period ends, the data should be archived \nelectronically on hard disks and be kept at least 2 years after the end of the last crediting period. \nCorrective actions",
+          "page": 98,
+          "paragraph_id": "p98-08",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Implementation and Monitoring frequency \nThe sampling process will start as soon as the target population is determined, and the sampling \nshould be done once a month. The Sampling process will be determined by the VCS monitoring \nteam. \n \nThe one monthly monitoring activity of the samples will be completed in the 9 swine farms during \neach monitoring periods. \n \nBecause the sampling activity is once a month, all the samples will be changed in the next month. \nThe monitoring data will be collected and recorded throughout the entire crediting period. All \narchived data and documentation will be kept for at least 2 years after the end of the last \ncrediting period. \n \nProcedures for Administering Data Collection and Minimizing Non-sampling Errors",
+          "page": 103,
+          "paragraph_id": "p103-10",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Comments \nThe biogas flow will be measured at four points, as shown in the \nfigure. But if the project participants can demonstrate that leakage \nin distribution pipeline is zero, it need be measured at any three \npoints. The biogas flow to electricity or heat equipment in a moment \ncan be considered destroyed, by monitoring that the equipment was",
+          "page": 85,
+          "paragraph_id": "p85-23",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p3-11",
+          "p3-12",
+          "p3-13",
+          "p4-05",
+          "p5-02",
+          "p20-04",
+          "p20-12",
+          "p20-14",
+          "p20-16",
+          "p20-17",
+          "p26-06",
+          "p26-07",
+          "p29-09",
+          "p29-12",
+          "p29-13",
+          "p29-14",
+          "p53-16",
+          "p53-17",
+          "p53-18",
+          "p56-09",
+          "p56-10",
+          "p56-11",
+          "p56-12",
+          "p57-19",
+          "p57-20",
+          "p57-21",
+          "p63-11",
+          "p63-12",
+          "p63-14",
+          "p63-15",
+          "p69-29",
+          "p69-30",
+          "p81-07",
+          "p81-08",
+          "p82-03",
+          "p82-04",
+          "p82-19",
+          "p84-11",
+          "p85-23",
+          "p87-04",
+          "p87-05",
+          "p91-10",
+          "p94-11",
+          "p94-12",
+          "p94-16",
+          "p94-18",
+          "p95-02",
+          "p95-03",
+          "p96-02",
+          "p96-03",
+          "p98-07",
+          "p98-08",
+          "p99-02",
+          "p100-06",
+          "p101-22",
+          "p101-23",
+          "p102-08",
+          "p103-10",
+          "p103-11",
+          "p104-02",
+          "p106-04",
+          "p114-04",
+          "p119-05",
+          "p119-06",
+          "p119-07",
+          "p119-13",
+          "p121-05",
+          "p121-09",
+          "p121-10",
+          "p122-02",
+          "p122-03",
+          "p123-02",
+          "p127-02",
+          "p127-03",
+          "p127-04",
+          "p131-23",
+          "p131-24",
+          "p131-25",
+          "p132-04",
+          "p132-05",
+          "p132-06",
+          "p134-21",
+          "p134-22",
+          "p134-23"
+        ],
+        "chars": 29983
+      }
+    },
+    {
+      "principle": "no_double_counting",
+      "status": "partial_evidence",
+      "score": 67,
+      "rationale": "Evidence found for 2 of 3 checks (D1, D2); not found in the excerpt: D3.",
+      "checks": [
+        {
+          "id": "D1",
+          "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p18-04",
+              "page": 18,
+              "text": "The project has neither been registered nor seeking registration under any other GHG programs. \nThe project is seeking registration only in VCS program."
+            }
+          ],
+          "second_opinion_p_yes": 0.81,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D2",
+          "question": "Does the text address other environmental credits or certificates (e.g. renewable energy certificates, I-RECs) or participation in an emissions trading scheme?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p18-11",
+              "page": 18,
+              "text": "The project hasn’t sought or received another form of environmental credits."
+            }
+          ],
+          "second_opinion_p_yes": 0.96,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D3",
+          "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.13,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "The project has neither been registered nor seeking registration under any other GHG programs. \nThe project is seeking registration only in VCS program.",
+          "page": 18,
+          "paragraph_id": "p18-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The project hasn’t sought or received another form of environmental credits.",
+          "page": 18,
+          "paragraph_id": "p18-11",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-16",
+          "p2-17",
+          "p2-18",
+          "p5-11",
+          "p5-12",
+          "p5-13",
+          "p5-15",
+          "p18-02",
+          "p18-03",
+          "p18-04",
+          "p18-05",
+          "p18-06",
+          "p18-08",
+          "p18-09",
+          "p18-10",
+          "p18-11",
+          "p18-12",
+          "p26-06",
+          "p26-07",
+          "p28-07",
+          "p28-08",
+          "p28-09",
+          "p33-02",
+          "p33-03",
+          "p44-03",
+          "p44-04",
+          "p44-05",
+          "p44-06",
+          "p44-07",
+          "p44-08",
+          "p45-02",
+          "p46-02",
+          "p46-03",
+          "p46-04",
+          "p51-24",
+          "p56-20",
+          "p56-21",
+          "p79-21",
+          "p79-22",
+          "p99-02",
+          "p100-04",
+          "p101-02",
+          "p101-03"
+        ],
+        "chars": 18327
+      }
+    },
+    {
+      "principle": "safeguards",
+      "status": "partial_evidence",
+      "score": 75,
+      "rationale": "Evidence found for 3 of 4 checks (S1, S2, S3); not found in the excerpt: S4.",
+      "checks": [
+        {
+          "id": "S1",
+          "question": "Does the text describe a stakeholder consultation with specifics such as dates, places, participants or comments received?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p21-08",
+              "page": 21,
+              "text": "Local stakeholder consultation was conducted by project owner before the construction of the \nproject and during the monitoring period through the means of questionnaire. \nLocal stakeholder consultation before the construction of the project \nIn order to solicit the opinions and attitudes of various stakeholders on the construction of this \nproject, the project owner issued a stakeholder survey opinion form at each project site from 04-\nNovember-2019 to 09-November-2019 investigate the opinions of local residents on the \nconstruction of this project. Since the farm has been in operation for a long time, local \nstakeholders or farmers have a better understanding of the situation of the farm. Therefore, for \nthe stakeholder investigation of the project which can bring economic and environment benefits \nto the local people, the Local stakeholders or farmers is more willing to participate in the survey. \nThe questionnaire mainly contains the following content: \n1. Do you know the purpose of this project? \n2. What do you think is the impact of the implementation of this project on the local environment? \n3. What impact do you think the implementation of this project will have on your life? \n4. Do you think the implementation of this project is in harmony with the local ecosystem? \n5. What impact do you think the implementation of this project will have on the social economy? \n6. What effect do you think the implementation of this project will have on local sustainable \ndevelopment? \n7. What effect do you think the implementation of this project will have on local employment? \n8. Do you think other regions should also vigorously promote this type of technology? \n9. Do you support the construction and implementation of this project? \n10. Do you have any suggestions and comments on this project? \nA total of 180 questionnaires were issued for this project, 20 copies for each project site, and \n180 copies were collected. The basic information about the survey respondents is listed in Table \n2-1.  \nTable 2-1 Structure of stakeholder survey"
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S2",
+          "question": "Does the text describe a grievance or complaint mechanism through which affected people can raise concerns?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p24-13",
+              "page": 24,
+              "text": "In all, all the villagers and local government that filling out questionnaires are all supportive of \nthe project and to date there has been no need to modify the due to the comments received. \n \nIn addition, in order to set up the mechanism for on-going communication with local stakeholders, \na grievance book was put at the entrance of each swine farm. All stakeholders are allowed to \nrecord their grievances or comments in the book at any time. No any grievances or comments \nwere received during this monitoring period."
+            }
+          ],
+          "second_opinion_p_yes": 0.97,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S3",
+          "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p24-15",
+              "page": 24,
+              "text": "The Environmental Impact Assessment (EIA) Report for the project has been approved by local \ngovernmental authorities. The environmental impacts and mitigation measures during the \nconstruction period and the operation period are summarized as follows. \nConstruction period \nAir pollution \nFor dust-generating points such as excavation, filling, and temporary storage yards, measures \nshould be taken to reduce dust by watering; the transportation of powdered materials such as \ncement, dust, and sand should be closed or covered, and the speed of vehicles should be limited \nto reduce the generation of dust.  \nWastewater \nThe wastewater during the construction period of the project is mainly generated from the \ndomestic sewage of construction workers, groundwater during foundation excavation and rinsing \nwater after pouring concrete. Oil separation and sedimentation tanks should be set up in the \nconstruction site so that the production wastewater can be reused for construction after oil \nseparation and sedimentation. The groundwater and rinsing water will be intercepted and treated \ncentrally. The domestic sewage can be collected in a septic tank and treated centrally, and then \nused as fertiliser for the surrounding farmland after precipitation and clarification. Therefore, the \nwastewater generated during the construction of the project has little impact on the surrounding \nenvironment. \nNoise \nNoise during the construction period is mainly generated by the construction machineries and \nvehicles. Use advanced low-noise equipment as much as possible, and construction is prohibited"
+            }
+          ],
+          "second_opinion_p_yes": 0.97,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S4",
+          "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.27,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "Local stakeholder consultation was conducted by project owner before the construction of the \nproject and during the monitoring period through the means of questionnaire. \nLocal stakeholder consultation before the construction of the project \nIn order to solicit the opinions and attitudes of various stakeholders on the construction of this \nproject, the project owner issued a stakeholder survey opinion form at each project site from 04-\nNovember-2019 to 09-November-2019 investigate the opinions of local residents on the \nconstruction of this project. Since the farm has been in operation for a long time, local \nstakeholders or farmers have a better understanding of the situation of the farm. Therefore, for \nthe stakeholder investigation of the project which can bring economic and environment benefits \nto the local people, the Local stakeholders or farmers is more willing to participate in the survey. \nThe questionnaire mainly contains the following content: \n1. Do you know the purpose of this project? \n2. What do you think is the impact of the implementation of this project on the local environment? \n3. What impact do you think the implementation of this project will have on your life? \n4. Do you think the implementation of this project is in harmony with the local ecosystem? \n5. What impact do you think the implementation of this project will have on the social economy? \n6. What effect do you think the implementation of this project will have on local sustainable \ndevelopment? \n7. What effect do you think the implementation of this project will have on local employment? \n8. Do you think other regions should also vigorously promote this type of technology? \n9. Do you support the construction and implementation of this project? \n10. Do you have any suggestions and comments on this project? \nA total of 180 questionnaires were issued for this project, 20 copies for each project site, and \n180 copies were collected. The basic information about the survey respondents is listed in Table \n2-1.  \nTable 2-1 Structure of stakeholder survey",
+          "page": 21,
+          "paragraph_id": "p21-08",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "In all, all the villagers and local government that filling out questionnaires are all supportive of \nthe project and to date there has been no need to modify the due to the comments received. \n \nIn addition, in order to set up the mechanism for on-going communication with local stakeholders, \na grievance book was put at the entrance of each swine farm. All stakeholders are allowed to \nrecord their grievances or comments in the book at any time. No any grievances or comments \nwere received during this monitoring period.",
+          "page": 24,
+          "paragraph_id": "p24-13",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The Environmental Impact Assessment (EIA) Report for the project has been approved by local \ngovernmental authorities. The environmental impacts and mitigation measures during the \nconstruction period and the operation period are summarized as follows. \nConstruction period \nAir pollution \nFor dust-generating points such as excavation, filling, and temporary storage yards, measures \nshould be taken to reduce dust by watering; the transportation of powdered materials such as \ncement, dust, and sand should be closed or covered, and the speed of vehicles should be limited \nto reduce the generation of dust.  \nWastewater \nThe wastewater during the construction period of the project is mainly generated from the \ndomestic sewage of construction workers, groundwater during foundation excavation and rinsing \nwater after pouring concrete. Oil separation and sedimentation tanks should be set up in the \nconstruction site so that the production wastewater can be reused for construction after oil \nseparation and sedimentation. The groundwater and rinsing water will be intercepted and treated \ncentrally. The domestic sewage can be collected in a septic tank and treated centrally, and then \nused as fertiliser for the surrounding farmland after precipitation and clarification. Therefore, the \nwastewater generated during the construction of the project has little impact on the surrounding \nenvironment. \nNoise \nNoise during the construction period is mainly generated by the construction machineries and \nvehicles. Use advanced low-noise equipment as much as possible, and construction is prohibited",
+          "page": 24,
+          "paragraph_id": "p24-15",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-20",
+          "p2-21",
+          "p2-22",
+          "p2-23",
+          "p2-24",
+          "p2-25",
+          "p2-26",
+          "p2-27",
+          "p7-04",
+          "p17-05",
+          "p17-06",
+          "p17-07",
+          "p17-08",
+          "p21-04",
+          "p21-05",
+          "p21-06",
+          "p21-08",
+          "p22-12",
+          "p23-02",
+          "p24-12",
+          "p24-13",
+          "p24-15",
+          "p33-06",
+          "p33-07",
+          "p33-08",
+          "p34-04",
+          "p34-05",
+          "p34-06",
+          "p34-07",
+          "p34-08",
+          "p34-09",
+          "p35-11",
+          "p35-12",
+          "p43-03",
+          "p43-04",
+          "p43-05",
+          "p45-02",
+          "p87-25",
+          "p89-09",
+          "p90-05"
+        ],
+        "chars": 17958
+      }
+    }
+  ],
+  "overall": {
+    "score": 81,
+    "included": [
+      "additionality",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [
+      "permanence"
+    ],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-19T16:54:53+00:00"
+}

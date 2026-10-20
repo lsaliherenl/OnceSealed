@@ -1,0 +1,709 @@
+{
+  "schema": "report-v2",
+  "project": {
+    "project_id": "VCS673",
+    "project_name": "Natural High Forest Rehabilitation Project on degraded land of Kibale National Park",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/673",
+    "methodology": "AR-ACM0001",
+    "methodology_version": "5.0.0"
+  },
+  "document": {
+    "file_name": "PROJ_DESC_673_05SEP2011.pdf",
+    "sha256": "5c61f797fcac776e1d9acf8eed414827ac6be1aea3d7c8447b39ffe97e7ba3fc",
+    "pages": 248,
+    "extra_files": [
+      {
+        "file_name": "MONIT_REP_673_02MAR2014_28FEB2017.pdf",
+        "sha256": "9e77b386e62dabfd20cdb4687a67585c8c1df0974ab4aceb26307c2fd110a6cf"
+      },
+      {
+        "file_name": "VCS_Monitoring_Report_Kibale_2017-2020_v1.1 (002).pdf",
+        "sha256": "14c51068bf0ce9c849448664086cfd3d2566e8054d9ed79815914350ff4421ba"
+      },
+      {
+        "file_name": "20201118_CCBVCS_VER Report_KNP UWA-FACE.pdf",
+        "sha256": "8aa72518334f9565e34ad8bd80e8203d0faf7cf523e620280495d6b7a31fe7fe"
+      }
+    ]
+  },
+  "methodology_status": {
+    "code": "AR-ACM0001",
+    "version": "5.0.0",
+    "status": "not_ccp_approved",
+    "summary": "No ICVCM decision found for this CDM afforestation methodology. Its CDM successor AR-ACM0003 was inactivated in the VCS Program in September 2023 in favour of VM0047, which ICVCM approved; ICVCM also approved ACR's afforestation methodology (v1.0-1.2, natural forests) and Isometric's reforestation protocol.",
+    "sources": [
+      "https://verra.org/methodologies/ar-acm0003-afforestation-and-reforestation-of-lands-except-wetlands/",
+      "https://verra.org/icvcm-approves-updated-version-of-verras-afforestation-reforestation-and-revegetation-methodology/",
+      "https://icvcm.org/integrity-council-approves-second-afforestation-reforestation-and-revegetation-methodology/",
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v2",
+    "question_set_version": "qs-v2-checklist",
+    "prompt_version": "checklist-v1",
+    "evidence_rule": "yes-cites-excerpt-paragraph-v2",
+    "excerpt_rule": "select_paragraphs(budget_chars=30000, overview_chars=0)",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "second_opinion_model": "typesafe/jev-1.13",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0xcbc09ba01911f0718fbc17bbfdb895ca5c498e02f8b51522917086118532df35",
+  "principles": [
+    {
+      "principle": "additionality",
+      "status": "partial_evidence",
+      "score": 50,
+      "rationale": "Evidence found for 2 of 4 checks (A2, A4); not found in the excerpt: A1, A3.",
+      "checks": [
+        {
+          "id": "A1",
+          "question": "Does the text report a quantified financial analysis: at least one numeric financial indicator (such as IRR or NPV) together with a benchmark or threshold value it is compared against?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.04,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A2",
+          "question": "Does the text discuss common practice, i.e. whether similar activities are already widespread in the region or sector?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p42-06",
+              "page": 42,
+              "text": "***) The part of the Development Area studied by Meijer exceeded the area implemented; the \ntypes listed by Meijer also includes riverine vegetation, and other vegetation outside the \ncompartment area. \n \nSTEP 3. Investment analysis \n \nWas not carried out for this ARR project activity because the baseline scenario \nidentified in sub-step 2c above allows for the highest baseline GHG removals by \nsinks.  \n \nSTEP 4. Common practice analysis \nThere are a couple of projects being implemented in other regions of Uganda. The \nfirst is a small scale reforestation project in Rwoho Central Forest Reserve of the \nNile Basin. The Rwoho project was the first ever Ugandan project to be registered \nunder CDM. It is part of a project cluster of 5 similar projects aiming to provide a \nnew financing mechanism to overcome the current barriers to establish timber \nplantations in Uganda and to allow communities to benefit from the CDM. In total \nthe project activities cover an area of 347.1 ha within Rwoho Central Forest \nReserve (NFA planting area: 324.9 ha (94 %), community planting area: 22.2 ha (6 \n%). The Reserve covers in total an area of 9,100 ha. Based on conservative \nestimates, with a 22 years rotation cycle for all tree species, the project will \nproduce 24,421 tCO2-e by 2012. The project allows the involvement of private and \ncommunity-based tree planting initiatives with different investor shares. Due \ndiligence, monitoring, validation and verification costs will be shared among the \nproject cluster. Based on a successful implementation of the first pilot cluster it is \nplanned to extend the portfolio across the country clustered in a number of \ndeforested public forest reserves and target regions. Hence, a project design that \ncan be easily replicated was developed and the concept will consider options for a \nprogrammatic approach. \n \nThe other reforestation activity is the Community Reforestation Project in the \nAlbertine Rift valley region which is currently working with established groups of \nfarmers in the Albertine Rift region of Uganda to plant agroforestry and small"
+            }
+          ],
+          "second_opinion_p_yes": 0.96,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A3",
+          "question": "Does the text state that the project activity is not required by any law or regulation (regulatory surplus)?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.22,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "A4",
+          "question": "Does the text state that carbon credit revenue was considered before or at the start of the project (prior consideration), for example with a date or a document?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p37-02",
+              "page": 37,
+              "text": "absence of the project activity (assessment and demonstration of \nadditionality): \n \nThe “Combined tool to identify the baseline scenario and demonstrate \nadditionality in ARR CDM project activities” is used to both identify  the baseline \nscenario and to demonstrate additionally: \n \nSTEP 0: Preliminary screening based on the starting date of the ARR project \nactivity \n \nThe proposed ARR VCS project was started in 1995 and since then, it has applied \nan externally reviewed methodology and engaged independent carbon \nmonitoring experts to assess and quantify the project’s baseline scenario and net \nemissions reductions or removals resulting in carbon crediting under the SGS \nstandard. In 2003 Face contracted the certification Société Générale de \nSurveillance (SGS) to validate and verify Kibale, based on SGS’ GHG Validation and \nVerification program. In the absence of an international standard defined or \naccepted by the UNFCCC Secretariat, SGS had prepared a set of criteria based on \nDecision 17/C.P7 of the Marrakech accords. These criteria act as a standard and the \nKibale project was validated against it twice: in 2003 and 2008 respectively. \nReports of these assessments were published in 2004 and 2009. Since then, \nproject activity has been geared towards future crediting under VCS.  The \nincentive of planned sale of GHG emission allowances is evidenced in the steps \nfurther below of the additionality test. Without the GHG allowance sales, the \nproject would not be economically attractive, and would face significant barriers.  \n \nSTEP 1: Identification of alternative land use scenarios to the proposed ARR VCS \nproject activity \n \nSub-step 1a: Identification of credible alternative land use scenarios to the project \nactivity \nSince the lands to be planted are restricted to forestry purposes by government, \nother land uses are practically impossible, therefore the identified alternative land \nuses include three that were historically possible and one that relates to \nafforestation as recommended by the tool."
+            }
+          ],
+          "second_opinion_p_yes": 0.45,
+          "needs_review": true,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "***) The part of the Development Area studied by Meijer exceeded the area implemented; the \ntypes listed by Meijer also includes riverine vegetation, and other vegetation outside the \ncompartment area. \n \nSTEP 3. Investment analysis \n \nWas not carried out for this ARR project activity because the baseline scenario \nidentified in sub-step 2c above allows for the highest baseline GHG removals by \nsinks.  \n \nSTEP 4. Common practice analysis \nThere are a couple of projects being implemented in other regions of Uganda. The \nfirst is a small scale reforestation project in Rwoho Central Forest Reserve of the \nNile Basin. The Rwoho project was the first ever Ugandan project to be registered \nunder CDM. It is part of a project cluster of 5 similar projects aiming to provide a \nnew financing mechanism to overcome the current barriers to establish timber \nplantations in Uganda and to allow communities to benefit from the CDM. In total \nthe project activities cover an area of 347.1 ha within Rwoho Central Forest \nReserve (NFA planting area: 324.9 ha (94 %), community planting area: 22.2 ha (6 \n%). The Reserve covers in total an area of 9,100 ha. Based on conservative \nestimates, with a 22 years rotation cycle for all tree species, the project will \nproduce 24,421 tCO2-e by 2012. The project allows the involvement of private and \ncommunity-based tree planting initiatives with different investor shares. Due \ndiligence, monitoring, validation and verification costs will be shared among the \nproject cluster. Based on a successful implementation of the first pilot cluster it is \nplanned to extend the portfolio across the country clustered in a number of \ndeforested public forest reserves and target regions. Hence, a project design that \ncan be easily replicated was developed and the concept will consider options for a \nprogrammatic approach. \n \nThe other reforestation activity is the Community Reforestation Project in the \nAlbertine Rift valley region which is currently working with established groups of \nfarmers in the Albertine Rift region of Uganda to plant agroforestry and small",
+          "page": 42,
+          "paragraph_id": "p42-06",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "absence of the project activity (assessment and demonstration of \nadditionality): \n \nThe “Combined tool to identify the baseline scenario and demonstrate \nadditionality in ARR CDM project activities” is used to both identify  the baseline \nscenario and to demonstrate additionally: \n \nSTEP 0: Preliminary screening based on the starting date of the ARR project \nactivity \n \nThe proposed ARR VCS project was started in 1995 and since then, it has applied \nan externally reviewed methodology and engaged independent carbon \nmonitoring experts to assess and quantify the project’s baseline scenario and net \nemissions reductions or removals resulting in carbon crediting under the SGS \nstandard. In 2003 Face contracted the certification Société Générale de \nSurveillance (SGS) to validate and verify Kibale, based on SGS’ GHG Validation and \nVerification program. In the absence of an international standard defined or \naccepted by the UNFCCC Secretariat, SGS had prepared a set of criteria based on \nDecision 17/C.P7 of the Marrakech accords. These criteria act as a standard and the \nKibale project was validated against it twice: in 2003 and 2008 respectively. \nReports of these assessments were published in 2004 and 2009. Since then, \nproject activity has been geared towards future crediting under VCS.  The \nincentive of planned sale of GHG emission allowances is evidenced in the steps \nfurther below of the additionality test. Without the GHG allowance sales, the \nproject would not be economically attractive, and would face significant barriers.  \n \nSTEP 1: Identification of alternative land use scenarios to the proposed ARR VCS \nproject activity \n \nSub-step 1a: Identification of credible alternative land use scenarios to the project \nactivity \nSince the lands to be planted are restricted to forestry purposes by government, \nother land uses are practically impossible, therefore the identified alternative land \nuses include three that were historically possible and one that relates to \nafforestation as recommended by the tool.",
+          "page": 37,
+          "paragraph_id": "p37-02",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [
+        "models_disagree:A4"
+      ],
+      "excerpt": {
+        "paragraphs": [
+          "p2-03",
+          "p3-02",
+          "p11-02",
+          "p21-04",
+          "p21-05",
+          "p35-04",
+          "p35-05",
+          "p35-06",
+          "p35-10",
+          "p35-11",
+          "p36-06",
+          "p36-07",
+          "p37-02",
+          "p37-03",
+          "p39-07",
+          "p39-08",
+          "p40-02",
+          "p41-02",
+          "p41-03",
+          "p42-05",
+          "p42-06",
+          "p43-03",
+          "p56-02",
+          "p61-03",
+          "p61-04",
+          "x2-p36-10",
+          "x3-p4-08",
+          "x3-p4-09",
+          "x3-p4-10",
+          "x3-p11-12",
+          "x3-p11-13",
+          "x3-p27-02",
+          "x3-p50-09",
+          "x3-p50-10",
+          "x3-p57-05",
+          "x3-p57-06",
+          "x3-p57-07"
+        ],
+        "chars": 29987
+      }
+    },
+    {
+      "principle": "permanence",
+      "status": "strong_evidence",
+      "score": 100,
+      "rationale": "Evidence found for 3 of 3 checks (P1, P2, P3).",
+      "checks": [
+        {
+          "id": "P1",
+          "question": "Does the text assess the risk that stored carbon is released (reversal or non-permanence risk), for example with a risk tool, a rating or a score?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p25-02",
+              "page": 25,
+              "text": "1.11 Identification of risks that may substantially affect the project’s GHG \nemission reductions or removal enhancements: \n \nNon-permanence risk assessment was carried out using the VCS’  “AFOLU Non-\nPermanence Risk Tool” version 3 of 8 March 2011.  According to this tool, the \nproject activity was rated at a low risk after yielding a 8.5% of buffer requirement. \nThe project has a system in place to identify risks and established targets to \nreduce any non-permanent risks. Procedures have been developed and \nresponsibilities are well assigned with internal auditing, reviews and training in \nplace.  The project also has a well qualified, experienced local management team \nin place to ensure that the project activities are implemented effectively.  The land \nplanned for the project activity is wholly contained within a national park.  Based \non the Sections 3,4 and 5 of the Uganda Wildlife Statute, the national park is fully \nowned by the government of Uganda under the UWA Act and mandated by \nUganda Wildlife Authority on behalf of Uganda government and all Ugandans. \nTherefore, UWA has full control over the entire project lands. Additionally, the \nproject will hold a 10%  VCS buffer in reserve for use in case of any loss of \npermanence.   \n \nReference is hereby made to the detailed VCS report called  “Non-Permanence Risk \nReport: Natural High Forest Rehabilitation Project on degraded land of Kibale \nNational Park” for more information.   \n \n \n1.12 Demonstration to confirm that the project was not implemented to \ncreate GHG emissions primarily for the purpose of its subsequent \nremoval or destruction.  \n \n At the time the project started, in 1995, carbon credits were not a commodity and \nthe concept was unheard of. Face became involved in 1994 and did not invest in \nforest destruction but in forest restoration. Instead, deforestation that took place \nin the UWA-Face project area was as a result of  encroachment by local  \ncommunities in the period between 1970 and 1985 (Okonya, 1993). For almost  30 \nyears local communities were farming within the Forest Reserve, grazing cattle, \ngrowing maize and bananas. There was no productively managed forest in the \narea. In 1993 all inhabitants and encroachers within the boundaries of the National \nPark were were re-settled  in Kibaale District,  approximately 100 km from Kibale \nNational Park (FSC, 2010; General Management Plan of Kibale National Park, 2003-\n2013).  These statements are further substantiated by the Figures 1.7.1 and 1.7.2 \npresented earlier in the PD. \n \nThe purpose of the project is to reforest degraded lands and to promote natural \nregeneration. The project was not implemented to create GHG emissions hence \nno clearing of forest for creation of VCU’s took place.  \n \n1.13 Demonstration that the project has not created another form of \nenvironmental credit (for example renewable energy certificates)."
+            }
+          ],
+          "second_opinion_p_yes": 0.99,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "P2",
+          "question": "Does the text give a specific buffer contribution (a percentage or a number of credits set aside)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x2-p56-04",
+              "page": 56,
+              "text": "The percentage of VCU’s to be deposited in the AFOLU Pooled buffer account is 10% = 22,172 \ntCO2e (see the VCS Non-Permanence Risk Report Kibale 2017-2020 v1.0)."
+            }
+          ],
+          "second_opinion_p_yes": 0.99,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "P3",
+          "question": "Does the text describe concrete measures to monitor or prevent reversals (e.g. fire, illegal logging, land conversion)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p18-02",
+              "page": 18,
+              "text": "Spot slashing: In the second year after planting, spot slashing was carried out at \nintervals of three months in the second and third year. In the fourth and fifth year, \nspot slashing was carried   at four month intervals to harden off planted crop and \nreduce maintenance costs.  \n \nSpot hoeing: this was only carried out in the new crop during the second rains \nafter planting. This was done in order to allow easy penetration of water and \nreduce weed competition. \n \nFire Protection:  Fires are a major factor preventing forest regeneration. Elephant \ngrass and spear grass provide excellent combustible material especially during the \ndry seasons. Planted areas are completely surrounded by a 15 m external fire line \nor by non-combustible riverine vegetation. In the centre of each 15 m firebreak 4 \nm are scrapped clean of all vegetation. Furthermore, each compartment is divided \ninto manageable blocks, which are separated by 10 m wide internal fire lines. \nThree meters of all internal fire lines is also scrapped clean. All fire lines are \naccessible by cars during the dry season. Training and retraining workers in fire \nfighting techniques is done. Another vital component of fire protection is fire \nawareness campaigns among the local populations neighbouring the park, \nincluding schools.   \n \nGIS technology:"
+            }
+          ],
+          "second_opinion_p_yes": 0.97,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "1.11 Identification of risks that may substantially affect the project’s GHG \nemission reductions or removal enhancements: \n \nNon-permanence risk assessment was carried out using the VCS’  “AFOLU Non-\nPermanence Risk Tool” version 3 of 8 March 2011.  According to this tool, the \nproject activity was rated at a low risk after yielding a 8.5% of buffer requirement. \nThe project has a system in place to identify risks and established targets to \nreduce any non-permanent risks. Procedures have been developed and \nresponsibilities are well assigned with internal auditing, reviews and training in \nplace.  The project also has a well qualified, experienced local management team \nin place to ensure that the project activities are implemented effectively.  The land \nplanned for the project activity is wholly contained within a national park.  Based \non the Sections 3,4 and 5 of the Uganda Wildlife Statute, the national park is fully \nowned by the government of Uganda under the UWA Act and mandated by \nUganda Wildlife Authority on behalf of Uganda government and all Ugandans. \nTherefore, UWA has full control over the entire project lands. Additionally, the \nproject will hold a 10%  VCS buffer in reserve for use in case of any loss of \npermanence.   \n \nReference is hereby made to the detailed VCS report called  “Non-Permanence Risk \nReport: Natural High Forest Rehabilitation Project on degraded land of Kibale \nNational Park” for more information.   \n \n \n1.12 Demonstration to confirm that the project was not implemented to \ncreate GHG emissions primarily for the purpose of its subsequent \nremoval or destruction.  \n \n At the time the project started, in 1995, carbon credits were not a commodity and \nthe concept was unheard of. Face became involved in 1994 and did not invest in \nforest destruction but in forest restoration. Instead, deforestation that took place \nin the UWA-Face project area was as a result of  encroachment by local  \ncommunities in the period between 1970 and 1985 (Okonya, 1993). For almost  30 \nyears local communities were farming within the Forest Reserve, grazing cattle, \ngrowing maize and bananas. There was no productively managed forest in the \narea. In 1993 all inhabitants and encroachers within the boundaries of the National \nPark were were re-settled  in Kibaale District,  approximately 100 km from Kibale \nNational Park (FSC, 2010; General Management Plan of Kibale National Park, 2003-\n2013).  These statements are further substantiated by the Figures 1.7.1 and 1.7.2 \npresented earlier in the PD. \n \nThe purpose of the project is to reforest degraded lands and to promote natural \nregeneration. The project was not implemented to create GHG emissions hence \nno clearing of forest for creation of VCU’s took place.  \n \n1.13 Demonstration that the project has not created another form of \nenvironmental credit (for example renewable energy certificates).",
+          "page": 25,
+          "paragraph_id": "p25-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The percentage of VCU’s to be deposited in the AFOLU Pooled buffer account is 10% = 22,172 \ntCO2e (see the VCS Non-Permanence Risk Report Kibale 2017-2020 v1.0).",
+          "page": 56,
+          "paragraph_id": "x2-p56-04",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "Spot slashing: In the second year after planting, spot slashing was carried out at \nintervals of three months in the second and third year. In the fourth and fifth year, \nspot slashing was carried   at four month intervals to harden off planted crop and \nreduce maintenance costs.  \n \nSpot hoeing: this was only carried out in the new crop during the second rains \nafter planting. This was done in order to allow easy penetration of water and \nreduce weed competition. \n \nFire Protection:  Fires are a major factor preventing forest regeneration. Elephant \ngrass and spear grass provide excellent combustible material especially during the \ndry seasons. Planted areas are completely surrounded by a 15 m external fire line \nor by non-combustible riverine vegetation. In the centre of each 15 m firebreak 4 \nm are scrapped clean of all vegetation. Furthermore, each compartment is divided \ninto manageable blocks, which are separated by 10 m wide internal fire lines. \nThree meters of all internal fire lines is also scrapped clean. All fire lines are \naccessible by cars during the dry season. Training and retraining workers in fire \nfighting techniques is done. Another vital component of fire protection is fire \nawareness campaigns among the local populations neighbouring the park, \nincluding schools.   \n \nGIS technology:",
+          "page": 18,
+          "paragraph_id": "p18-02",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p5-02",
+          "p5-03",
+          "p14-02",
+          "p14-03",
+          "p18-02",
+          "p18-03",
+          "p21-04",
+          "p25-02",
+          "p36-06",
+          "p36-07",
+          "p37-02",
+          "p37-03",
+          "p41-02",
+          "p41-03",
+          "x1-p9-08",
+          "x1-p9-09",
+          "x1-p9-10",
+          "x1-p48-47",
+          "x1-p48-48",
+          "x1-p49-07",
+          "x1-p49-08",
+          "x1-p49-09",
+          "x2-p14-02",
+          "x2-p14-03",
+          "x2-p56-04",
+          "x2-p56-05",
+          "x2-p57-10",
+          "x2-p57-11",
+          "x2-p57-12",
+          "x3-p2-10",
+          "x3-p2-11",
+          "x3-p2-12",
+          "x3-p4-15",
+          "x3-p11-12",
+          "x3-p11-13",
+          "x3-p14-06",
+          "x3-p14-07",
+          "x3-p14-08",
+          "x3-p14-09",
+          "x3-p22-02",
+          "x3-p22-03",
+          "x3-p22-04",
+          "x3-p24-12",
+          "x3-p24-13",
+          "x3-p25-06",
+          "x3-p25-07",
+          "x3-p25-08",
+          "x3-p27-13",
+          "x3-p28-02",
+          "x3-p28-16",
+          "x3-p28-17",
+          "x3-p38-08",
+          "x3-p38-09",
+          "x3-p46-04",
+          "x3-p46-05",
+          "x3-p46-06",
+          "x3-p46-08",
+          "x3-p46-09",
+          "x3-p48-07",
+          "x3-p48-08"
+        ],
+        "chars": 29990
+      }
+    },
+    {
+      "principle": "robust_quantification",
+      "status": "partial_evidence",
+      "score": 75,
+      "rationale": "Evidence found for 3 of 4 checks (Q1, Q3, Q4); not found in the excerpt: Q2.",
+      "checks": [
+        {
+          "id": "Q1",
+          "question": "Does the text show how baseline emissions are calculated, with an equation, parameter values or a numeric result?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p62-02",
+              "page": 62,
+              "text": "For this ARR project activity, Face in 1999 commissioned Meijer to carry out a \nbaseline study whose results show that changes in the carbon stocks for both \nabove and below ground biomass are expected not to exceed actual net GHG \nremovals by sinks and are therefore assumed to be zero in the absence of the \nproject activity. Hence the formula above is only applied to multiply the 5.2 tonnes \nof carbon per hectare (adjusted from Meijer, 1999), which is the conservative \nvalue of the carbon stock in the stratum ‘banana plantation’, with the combined \narea Ai of stratum ‘Planted Area’ and ‘Regenerating Area’. The total area to be \nplanted during the crediting period is presented in Table 7.2 and has a size of \n6,000 hectares. In addition, the Regenerating Area is 2,593 hectares. The \ncombined area is therefore 8,593 hectares. As the baseline is in a steady state, \nthere is no increases in GHG removals. See Annex III for details on the estimation, \nand the spreadsheet ´ Kibale Baseline Recalculation_082711 ´, which details the \ncalculation of the mean tree carbon stock in the baseline, based on inventory data \nby Meijer in 1999. In addition, the carbon stock changes in dead wood, litter and \nsoil organic matter are conservatively assumed to be zero based on the \nmethodology applied."
+            }
+          ],
+          "second_opinion_p_yes": 0.87,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q2",
+          "question": "Does the text address leakage (emissions shifted outside the project boundary), either by quantifying it or by justifying why it is zero?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.37,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q3",
+          "question": "Does the text address uncertainty or the use of conservative assumptions in the emission reduction estimate?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p62-02",
+              "page": 62,
+              "text": "For this ARR project activity, Face in 1999 commissioned Meijer to carry out a \nbaseline study whose results show that changes in the carbon stocks for both \nabove and below ground biomass are expected not to exceed actual net GHG \nremovals by sinks and are therefore assumed to be zero in the absence of the \nproject activity. Hence the formula above is only applied to multiply the 5.2 tonnes \nof carbon per hectare (adjusted from Meijer, 1999), which is the conservative \nvalue of the carbon stock in the stratum ‘banana plantation’, with the combined \narea Ai of stratum ‘Planted Area’ and ‘Regenerating Area’. The total area to be \nplanted during the crediting period is presented in Table 7.2 and has a size of \n6,000 hectares. In addition, the Regenerating Area is 2,593 hectares. The \ncombined area is therefore 8,593 hectares. As the baseline is in a steady state, \nthere is no increases in GHG removals. See Annex III for details on the estimation, \nand the spreadsheet ´ Kibale Baseline Recalculation_082711 ´, which details the \ncalculation of the mean tree carbon stock in the baseline, based on inventory data \nby Meijer in 1999. In addition, the carbon stock changes in dead wood, litter and \nsoil organic matter are conservatively assumed to be zero based on the \nmethodology applied."
+            }
+          ],
+          "second_opinion_p_yes": 0.93,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "Q4",
+          "question": "Does the text describe a monitoring plan that names the parameters to be measured and how often or by what method?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p58-03",
+              "page": 58,
+              "text": "The carbon pools in the baseline scenario are in a steady state. Therefore no \nmonitoring of baseline net GHG removals is carried out.  \n \n3.4.2.9 Monitoring of the actual net GHG removals by sinks \n \nMonitoring of the actual net GHG removals by sinks in the planted compartments \ntakes place every five years.  In Kibale, these were carried out in 2003 and 2008, \nwith an exception of  2011 which took only  3 years between 2008 and 2011. This \nexception to the 5-year interval is as a result of the transition from SGS"
+            }
+          ],
+          "second_opinion_p_yes": 0.96,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "For this ARR project activity, Face in 1999 commissioned Meijer to carry out a \nbaseline study whose results show that changes in the carbon stocks for both \nabove and below ground biomass are expected not to exceed actual net GHG \nremovals by sinks and are therefore assumed to be zero in the absence of the \nproject activity. Hence the formula above is only applied to multiply the 5.2 tonnes \nof carbon per hectare (adjusted from Meijer, 1999), which is the conservative \nvalue of the carbon stock in the stratum ‘banana plantation’, with the combined \narea Ai of stratum ‘Planted Area’ and ‘Regenerating Area’. The total area to be \nplanted during the crediting period is presented in Table 7.2 and has a size of \n6,000 hectares. In addition, the Regenerating Area is 2,593 hectares. The \ncombined area is therefore 8,593 hectares. As the baseline is in a steady state, \nthere is no increases in GHG removals. See Annex III for details on the estimation, \nand the spreadsheet ´ Kibale Baseline Recalculation_082711 ´, which details the \ncalculation of the mean tree carbon stock in the baseline, based on inventory data \nby Meijer in 1999. In addition, the carbon stock changes in dead wood, litter and \nsoil organic matter are conservatively assumed to be zero based on the \nmethodology applied.",
+          "page": 62,
+          "paragraph_id": "p62-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The carbon pools in the baseline scenario are in a steady state. Therefore no \nmonitoring of baseline net GHG removals is carried out.  \n \n3.4.2.9 Monitoring of the actual net GHG removals by sinks \n \nMonitoring of the actual net GHG removals by sinks in the planted compartments \ntakes place every five years.  In Kibale, these were carried out in 2003 and 2008, \nwith an exception of  2011 which took only  3 years between 2008 and 2011. This \nexception to the 5-year interval is as a result of the transition from SGS",
+          "page": 58,
+          "paragraph_id": "p58-03",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p3-02",
+          "p28-02",
+          "p43-02",
+          "p43-03",
+          "p50-02",
+          "p58-02",
+          "p58-03",
+          "p59-02",
+          "p59-03",
+          "p62-02",
+          "p62-03",
+          "p65-02",
+          "x1-p3-04",
+          "x1-p30-05",
+          "x1-p30-06",
+          "x1-p34-02",
+          "x1-p34-04",
+          "x2-p4-04",
+          "x2-p4-05",
+          "x2-p4-06",
+          "x2-p34-03",
+          "x2-p34-04",
+          "x2-p38-03",
+          "x2-p38-04",
+          "x2-p38-05",
+          "x3-p13-07",
+          "x3-p13-08",
+          "x3-p13-09",
+          "x3-p13-10",
+          "x3-p13-11",
+          "x3-p23-06",
+          "x3-p23-07",
+          "x3-p23-08",
+          "x3-p24-02",
+          "x3-p24-03",
+          "x3-p24-04",
+          "x3-p29-03",
+          "x3-p29-04",
+          "x3-p29-05",
+          "x3-p31-07",
+          "x3-p35-07",
+          "x3-p35-08",
+          "x3-p35-09"
+        ],
+        "chars": 29995
+      }
+    },
+    {
+      "principle": "no_double_counting",
+      "status": "partial_evidence",
+      "score": 67,
+      "rationale": "Evidence found for 2 of 3 checks (D1, D2); not found in the excerpt: D3.",
+      "checks": [
+        {
+          "id": "D1",
+          "question": "Does the text state whether the project is registered, or issues credits, under another GHG program (e.g. CDM, Gold Standard)?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x3-p10-12",
+              "page": 10,
+              "text": "The project has not sought or received any other form of GHG-related environmental credit other than under \nthe VCS Program. Also, it has not been registered, and is not seeking registration, with any GHG program \nother than the VCS."
+            }
+          ],
+          "second_opinion_p_yes": 0.8,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D2",
+          "question": "Does the text address other environmental credits or certificates (e.g. renewable energy certificates, I-RECs) or participation in an emissions trading scheme?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x3-p13-11",
+              "page": 13,
+              "text": "The project has not participated nor been rejected under any other GHG programs other than VCS. GHG \nemission reductions or removals generated by the project are not included in an emission trading program \nor any other mechanism that includes GHG allowance trading. The project has not received or sought any \nother form of environmental credit."
+            }
+          ],
+          "second_opinion_p_yes": 0.95,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "D3",
+          "question": "Does the text address the host country's national accounting or registry, or a corresponding adjustment?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.07,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "The project has not sought or received any other form of GHG-related environmental credit other than under \nthe VCS Program. Also, it has not been registered, and is not seeking registration, with any GHG program \nother than the VCS.",
+          "page": 10,
+          "paragraph_id": "x3-p10-12",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "The project has not participated nor been rejected under any other GHG programs other than VCS. GHG \nemission reductions or removals generated by the project are not included in an emission trading program \nor any other mechanism that includes GHG allowance trading. The project has not received or sought any \nother form of environmental credit.",
+          "page": 13,
+          "paragraph_id": "x3-p13-11",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [],
+      "excerpt": {
+        "paragraphs": [
+          "p2-03",
+          "p3-02",
+          "p12-02",
+          "p12-03",
+          "p25-02",
+          "p26-02",
+          "p26-03",
+          "p33-02",
+          "p33-03",
+          "p34-02",
+          "p34-03",
+          "p34-04",
+          "p34-05",
+          "p35-03",
+          "p35-04",
+          "p35-05",
+          "p35-06",
+          "p36-06",
+          "p36-07",
+          "p37-03",
+          "p42-05",
+          "p42-06",
+          "p58-02",
+          "p58-03",
+          "p59-03",
+          "p64-15",
+          "p64-16",
+          "p67-14",
+          "p67-15",
+          "p75-02",
+          "p75-03",
+          "p75-04",
+          "x1-p34-02",
+          "x1-p34-03",
+          "x2-p2-10",
+          "x2-p2-11",
+          "x2-p2-12",
+          "x2-p9-03",
+          "x2-p9-04",
+          "x2-p38-03",
+          "x2-p38-04",
+          "x3-p3-16",
+          "x3-p3-17",
+          "x3-p3-18",
+          "x3-p10-11",
+          "x3-p10-12",
+          "x3-p10-13",
+          "x3-p13-10",
+          "x3-p13-11"
+        ],
+        "chars": 29987
+      }
+    },
+    {
+      "principle": "safeguards",
+      "status": "partial_evidence",
+      "score": 75,
+      "rationale": "Evidence found for 3 of 4 checks (S1, S3, S4); not found in the excerpt: S2.",
+      "checks": [
+        {
+          "id": "S1",
+          "question": "Does the text describe a stakeholder consultation with specifics such as dates, places, participants or comments received?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p70-02",
+              "page": 70,
+              "text": "6 Stakeholders comments: \n \n6.1 Brief description of how comments by local stakeholders have been \ninvited and compiled: \n \nThe 2006  SGS’ FSC  report states that “Community consultation was carried out at \nKibale and all groups/individuals interviewed (e.g. the Nyabweya Parish Community, \nthe Bigodi Women’s Group, the Mugume Clinic Nurse, Nursery workers) were well \naware of the benefits of the forest, and how they could access these benefits. In \naddition, there was evidence of good communication between UWA and the \ncommunity. Records of liaison (e.g. minutes of meetings, letters etc) were kept by \nthe Assistant Warden for Community Conservation (Olivia Biira), who was appointed \nto operate in the 28 parishes, which are on the boundary of the park. UWA also \nsupports the CPI (Community Protected area Institution), which comprises of people \nnominated by the communities, to represent the different Parishes and have the \nresponsibility of overseeing issues in the communities, including environmental \nissues.” \n \n6.1.1 Summary of the comments received \n \nSince the start of the project activities, there have been several meetings held \nwith local stakeholders. The following are only a small sample of comments \nreceived over the years by the UWA members of staff during community \nconsultations. UWA’s Isunga office in Kibale National Park contains several folders \nwhere meeting minutes are filed.  \n \n6.1.2 Minutes of the meeting held Mbale Parish on 17th July 1996 \n \nThe meeting objective was to address the community’s needs to access wild \ncoffee in the National Park.  To ensure long-term sustainable harvest of wild \ncoffee, community members suggested that UWA should limit the number of \npeople accessing the park for coffee using distance of the village settlement from \nthe park boundary and also to include those whose gardens are raided by wildlife. \nThe community members further suggested that they could form community \ngroups which would limit the number of people going into the park to harvest \nwild coffee. They also wanted to know if their views would be integrated into the \ncoffee resource management plan.  \n \n6.1.3 Workshop on management of problem animals held on July 28th 2000 at St. \nJoseph’s Inn in Virika  \n \nCrop raiding by problem animals was a major issue of concern and communities \nfelt that they it required joint efforts from all relevant stakeholders such as UWA \nand the Local Government to live up to their responsibilities. The major threats to \ncrop damage included baboons, elephants, wild pigs, red-tailed monkeys and to a \ncertain extent, birds."
+            }
+          ],
+          "second_opinion_p_yes": 0.98,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S2",
+          "question": "Does the text describe a grievance or complaint mechanism through which affected people can raise concerns?",
+          "answer": "no",
+          "evidence": [],
+          "second_opinion_p_yes": 0.77,
+          "needs_review": true,
+          "dropped": null
+        },
+        {
+          "id": "S3",
+          "question": "Does the text report an environmental impact assessment or an analysis of the project's environmental risks?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "p69-16",
+              "page": 69,
+              "text": "• collection of soil for nursery activities \n• disposal of plastic pots from seedlings \n• collection of wildlings from the forest \n \nHowever, from 2001 onwards seedlings raised in the communities are purchased, \nas a way of promoting further income generation activities within the local \ncommunities. The nursery farmers raise seedlings adjacent to the project \nnurseries not only for easy supervision by Project staff, but also for proper \nrehabilitation of areas where nursery soil is collected. Plastic pots are generally re-\nused by local communities and the pots are bio-degradable. Collection of wildings \nis not considered to be on such a scale that it would have a significant impact.  \nThere is no road construction or harvesting activities and no chemicals or exotic \nspecies are being utilised. The re-establishment of natural forest is seen as a \npositive impact, enlarging the habitat for native species, protecting the park’s \nbiodiversity and enhancing its tourism value. Native grasslands located in the \nproject area need to be protected; they are not reforested. \n \nDetailed documentation on the analysis of environmental impacts are contained \nin the “Environmental Impact Study (EIS) report for the future operations of the \nUWA-Face Project” prepared by Environmental Monitoring Associates (EMA) Ltd \nin 1999."
+            }
+          ],
+          "second_opinion_p_yes": 0.95,
+          "needs_review": false,
+          "dropped": null
+        },
+        {
+          "id": "S4",
+          "question": "Does the text address the rights of local communities or indigenous peoples, such as free, prior and informed consent (FPIC) or benefit sharing?",
+          "answer": "yes",
+          "evidence": [
+            {
+              "paragraph_id": "x3-p19-02",
+              "page": 19,
+              "text": "During the remote audit process AENOR could confirm that the project protects the rights of Indigenous \nPeoples, communities and other stakeholders in accordance to the Climate, Community & Biodiversity \nStandards and the validated project design."
+            }
+          ],
+          "second_opinion_p_yes": 0.85,
+          "needs_review": false,
+          "dropped": null
+        }
+      ],
+      "quotes": [
+        {
+          "text": "6 Stakeholders comments: \n \n6.1 Brief description of how comments by local stakeholders have been \ninvited and compiled: \n \nThe 2006  SGS’ FSC  report states that “Community consultation was carried out at \nKibale and all groups/individuals interviewed (e.g. the Nyabweya Parish Community, \nthe Bigodi Women’s Group, the Mugume Clinic Nurse, Nursery workers) were well \naware of the benefits of the forest, and how they could access these benefits. In \naddition, there was evidence of good communication between UWA and the \ncommunity. Records of liaison (e.g. minutes of meetings, letters etc) were kept by \nthe Assistant Warden for Community Conservation (Olivia Biira), who was appointed \nto operate in the 28 parishes, which are on the boundary of the park. UWA also \nsupports the CPI (Community Protected area Institution), which comprises of people \nnominated by the communities, to represent the different Parishes and have the \nresponsibility of overseeing issues in the communities, including environmental \nissues.” \n \n6.1.1 Summary of the comments received \n \nSince the start of the project activities, there have been several meetings held \nwith local stakeholders. The following are only a small sample of comments \nreceived over the years by the UWA members of staff during community \nconsultations. UWA’s Isunga office in Kibale National Park contains several folders \nwhere meeting minutes are filed.  \n \n6.1.2 Minutes of the meeting held Mbale Parish on 17th July 1996 \n \nThe meeting objective was to address the community’s needs to access wild \ncoffee in the National Park.  To ensure long-term sustainable harvest of wild \ncoffee, community members suggested that UWA should limit the number of \npeople accessing the park for coffee using distance of the village settlement from \nthe park boundary and also to include those whose gardens are raided by wildlife. \nThe community members further suggested that they could form community \ngroups which would limit the number of people going into the park to harvest \nwild coffee. They also wanted to know if their views would be integrated into the \ncoffee resource management plan.  \n \n6.1.3 Workshop on management of problem animals held on July 28th 2000 at St. \nJoseph’s Inn in Virika  \n \nCrop raiding by problem animals was a major issue of concern and communities \nfelt that they it required joint efforts from all relevant stakeholders such as UWA \nand the Local Government to live up to their responsibilities. The major threats to \ncrop damage included baboons, elephants, wild pigs, red-tailed monkeys and to a \ncertain extent, birds.",
+          "page": 70,
+          "paragraph_id": "p70-02",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "• collection of soil for nursery activities \n• disposal of plastic pots from seedlings \n• collection of wildlings from the forest \n \nHowever, from 2001 onwards seedlings raised in the communities are purchased, \nas a way of promoting further income generation activities within the local \ncommunities. The nursery farmers raise seedlings adjacent to the project \nnurseries not only for easy supervision by Project staff, but also for proper \nrehabilitation of areas where nursery soil is collected. Plastic pots are generally re-\nused by local communities and the pots are bio-degradable. Collection of wildings \nis not considered to be on such a scale that it would have a significant impact.  \nThere is no road construction or harvesting activities and no chemicals or exotic \nspecies are being utilised. The re-establishment of natural forest is seen as a \npositive impact, enlarging the habitat for native species, protecting the park’s \nbiodiversity and enhancing its tourism value. Native grasslands located in the \nproject area need to be protected; they are not reforested. \n \nDetailed documentation on the analysis of environmental impacts are contained \nin the “Environmental Impact Study (EIS) report for the future operations of the \nUWA-Face Project” prepared by Environmental Monitoring Associates (EMA) Ltd \nin 1999.",
+          "page": 69,
+          "paragraph_id": "p69-16",
+          "verification": "cited_paragraph"
+        },
+        {
+          "text": "During the remote audit process AENOR could confirm that the project protects the rights of Indigenous \nPeoples, communities and other stakeholders in accordance to the Climate, Community & Biodiversity \nStandards and the validated project design.",
+          "page": 19,
+          "paragraph_id": "x3-p19-02",
+          "verification": "cited_paragraph"
+        }
+      ],
+      "dropped_findings": 0,
+      "review_flags": [
+        "models_disagree:S2"
+      ],
+      "excerpt": {
+        "paragraphs": [
+          "p3-02",
+          "p5-02",
+          "p5-03",
+          "p26-02",
+          "p26-03",
+          "p32-02",
+          "p38-02",
+          "p38-03",
+          "p42-05",
+          "p42-06",
+          "p69-15",
+          "p69-16",
+          "p70-02",
+          "p71-02",
+          "p71-03",
+          "p71-04",
+          "p72-02",
+          "p72-03",
+          "x1-p3-03",
+          "x1-p3-04",
+          "x1-p3-05",
+          "x2-p4-03",
+          "x3-p12-11",
+          "x3-p12-12",
+          "x3-p12-13",
+          "x3-p16-09",
+          "x3-p16-10",
+          "x3-p16-11",
+          "x3-p17-08",
+          "x3-p19-02",
+          "x3-p19-03",
+          "x3-p25-06",
+          "x3-p25-07",
+          "x3-p25-08",
+          "x3-p27-02",
+          "x3-p35-06",
+          "x3-p35-07",
+          "x3-p35-08",
+          "x3-p37-06",
+          "x3-p37-07",
+          "x3-p37-08",
+          "x3-p61-04",
+          "x3-p61-05"
+        ],
+        "chars": 29992
+      }
+    }
+  ],
+  "overall": {
+    "score": 73,
+    "included": [
+      "additionality",
+      "permanence",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Each check says whether a specific kind of evidence is present in an excerpt of the submitted documents, not whether the evidence is true. Scores are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-19T16:53:52+00:00"
+}

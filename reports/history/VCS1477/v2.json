@@ -1,0 +1,348 @@
+{
+  "schema": "report-v1",
+  "project": {
+    "project_id": "VCS1477",
+    "project_name": "Katingan Peatland Restoration and Conservation Project",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/1477",
+    "methodology": "VM0007",
+    "methodology_version": "1.5"
+  },
+  "document": {
+    "file_name": "CCB VCS PD 1477_30.11.2025_v4.pdf",
+    "sha256": "f2c4ea5cb1f617445cd4583a0835f21f3c853139bb9aff3df9f53e45c021b03f",
+    "pages": 396
+  },
+  "methodology_status": {
+    "code": "VM0007",
+    "version": "1.5",
+    "status": "not_ccp_approved",
+    "summary": "Verra excluded its older REDD+ methodologies (including VM0007) from ICVCM assessment; their credits cannot carry the CCP label. ICVCM approved the successor VM0048 v1.0 with conditions in November 2024.",
+    "sources": [
+      "https://icvcm.org/integrity-council-approves-three-redd-methodologies/",
+      "https://www.jonesday.com/en/insights/2025/03/the-icvcm-and-redd-standards-implications-for-voluntary-carbon-markets"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v1",
+    "prompt_version": "v1",
+    "question_set_version": "qs-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "decision_model": "typesafe/jev-1.13",
+    "decision_input": "verified_quotes",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+  "principles": [
+    {
+      "principle": "additionality",
+      "rationale": "The document states a most-likely baseline (industrial acacia plantation), lists economic, institutional and technological barriers, and asserts reliance on carbon finance. It also notes additionality was demonstrated in the first baseline period and not re-assessed at renewal. No investment analysis (IRR versus benchmark) is presented; the financial model is only offered to auditors on request, so quantitative support is absent.",
+      "quotes": [
+        {
+          "text": "The baseline scenario was determined for the first baseline period as industrial forestry (typically planting monoculture acacia) plantation and remains the most credible scenario for the second baseline period.",
+          "page": 42,
+          "paragraph_id": "p42-07",
+          "verification": "exact"
+        },
+        {
+          "text": "The project overcomes these barriers through community conservation training, sustainable livelihoods, ecological monitoring systems, and legal support. Without carbon finance or similar performance-based payments, these interventions would not be viable.",
+          "page": 43,
+          "paragraph_id": "p43-04",
+          "verification": "exact"
+        },
+        {
+          "text": "Furthermore, project activities rely on carbon finance to be implemented. Without the Verified Carbon Standard (VCS) mechanism and associated revenues, the project would not be financially viable.",
+          "page": 44,
+          "paragraph_id": "p44-02",
+          "verification": "exact"
+        },
+        {
+          "text": "Additionality was demonstrated for the first baseline period (see PT. Rimba Makmur Utama 2016), and the project is therefore additional for its entire lifetime, not requiring a full additionality assessment for the baseline renewal.",
+          "page": 121,
+          "paragraph_id": "p121-03",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 72,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "assertion_only",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.49,
+          "assertion_only": 0.51,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.35,
+        "independent_sources": 0.34,
+        "strength": 1.7,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.3,
+          "2": 0.69,
+          "3": 0.01
+        },
+        "strength_confidence": 0.69,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 57,
+      "review_flags": []
+    },
+    {
+      "principle": "permanence",
+      "rationale": "The document reports a formal non-permanence risk assessment using the AFOLU Non-Permanence Risk Tool v4.2, yielding a 14% buffer, and states a 60-year project/crediting lifetime. It also describes ongoing fire detection, monitoring and response systems addressing a principal reversal driver in this peatland REDD+ activity. Reversal monitoring and long-term commitments are therefore documented with specific figures and procedures.",
+      "quotes": [
+        {
+          "text": "A non-permanence risk assessment was carried out in accordance with the most recent AFOLU Non-Permanence Risk Tool v.4.2 and the Risk Assessment Calculator. The resulting risk rating and non-permanence risk buffer is 14%.",
+          "page": 241,
+          "paragraph_id": "p241-16",
+          "verification": "exact"
+        },
+        {
+          "text": "01 November 2010 – 31 October 2070; 60-year lifetime",
+          "page": 1,
+          "paragraph_id": "p1-05",
+          "verification": "exact"
+        },
+        {
+          "text": "The technical and field team monitors the presence of fire within the project area and in the surrounding project zones (see Figure 3.37). If/when fire is detected, the team evaluates the risk and deploys the most appropriate protocol to stop the fire and avoid spread.",
+          "page": 252,
+          "paragraph_id": "p252-06",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "quantified_verifiable",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.9,
+          "documentary": 0.1,
+          "assertion_only": 0.0,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.87,
+        "independent_sources": 0.24,
+        "strength": 2.41,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.06,
+          "2": 0.47,
+          "3": 0.47
+        },
+        "strength_confidence": 0.47,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 80,
+      "review_flags": []
+    },
+    {
+      "principle": "robust_quantification",
+      "rationale": "The document specifies Tier 2 emission factors, recalculation of project emissions each monitoring period, a 2.44% uncertainty calculation against a 15% threshold, leakage monitoring, and conservative baseline choices. It also references VM0007 equations and monitoring of ecological leakage. These are specific, substantive elements of robust and conservative quantification.",
+      "quotes": [
+        {
+          "text": "GHG sources included in or excluded from project emission are listed in Section 3.1.3 Tier 2 emissions factors are used for the emission calculations from peat (same emissions factors as for the baseline, see Climate Annex for details).",
+          "page": 210,
+          "paragraph_id": "p210-18",
+          "verification": "exact"
+        },
+        {
+          "text": "The total uncertainty error in the project was calculated to be 2.44%. Considering the 15% uncertainty threshold, no VCU deductions were made due to uncertainty.",
+          "page": 238,
+          "paragraph_id": "p238-22",
+          "verification": "exact"
+        },
+        {
+          "text": "As there was no leakage during the previous baseline period, it is assumed that no leakage will occur. Actual leakage will be monitored throughout the project crediting period and will be reported at each monitoring event.",
+          "page": 235,
+          "paragraph_id": "p235-19",
+          "verification": "exact"
+        },
+        {
+          "text": "This stratum is maintained in the baseline on a precautionary and conservative basis, resulting in a larger protected area than the current regulatory minimum requires and thereby reducing rather than inflating baseline emissions.",
+          "page": 391,
+          "paragraph_id": "p391-05",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "quantified_verifiable",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.62,
+          "documentary": 0.35,
+          "assertion_only": 0.03,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.49,
+        "independent_sources": 0.26,
+        "strength": 2.35,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.08,
+          "2": 0.49,
+          "3": 0.43
+        },
+        "strength_confidence": 0.49,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 78,
+      "review_flags": []
+    },
+    {
+      "principle": "no_double_counting",
+      "rationale": "The document addresses double counting through dedicated VCS/CCB sections: it answers \"No\" to receiving credit under another GHG programme, registering under other GHG programs, inclusion in an emissions trading program or binding limit, and seeking other GHG-related environmental credit. It also cites Indonesian SRN PPI registration and states the national registry prevents double counting. Evidence is checkbox-based with limited narrative detail, but specific and directly on point.",
+      "quotes": [
+        {
+          "text": "Although the SRUK registry is not yet available at the time of the preparation of the PD, the recently launched registry system of Indonesia ensures transparency and prevents double counting",
+          "page": 80,
+          "paragraph_id": "p80-03",
+          "verification": "exact"
+        },
+        {
+          "text": "Is the project receiving or seeking credit for reductions and removals from a project activity under another GHG programme, or any other form of community, social, or biodiversity unit or credit?",
+          "page": 96,
+          "paragraph_id": "p96-23",
+          "verification": "exact"
+        },
+        {
+          "text": "Are project reductions and removals or project activities also included in an emissions trading program or binding emission limit? See the VCS Program Definitions for definitions of emissions trading program and binding emission limit.",
+          "page": 97,
+          "paragraph_id": "p97-17",
+          "verification": "exact"
+        },
+        {
+          "text": "Has the project activity sought, received, or is planning to receive credit from another GHG-related environmental credit system? See the VCS Program Definitions for definition of GHG-related environmental credit system.",
+          "page": 98,
+          "paragraph_id": "p98-03",
+          "verification": "alnum"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 74,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "assertion_only",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.1,
+          "assertion_only": 0.62,
+          "not_addressed": 0.28
+        },
+        "evidence_confidence": 0.49,
+        "independent_sources": 0.32,
+        "strength": 1.03,
+        "strength_probabilities": {
+          "0": 0.02,
+          "1": 0.93,
+          "2": 0.05,
+          "3": 0.0
+        },
+        "strength_confidence": 0.93,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "assertion_only",
+      "score": 34,
+      "review_flags": []
+    },
+    {
+      "principle": "safeguards",
+      "rationale": "The document provides specific evidence of social and environmental risk assessment and mitigation: it describes risk assessments aligned with the precautionary principle, ongoing stakeholder consultation with legitimate representatives, a grievance redress mechanism with a database and multiple reporting channels, and FPIC processes. Biodiversity protection and monitoring are also detailed. This constitutes substantive evidence for the safeguards principle.",
+      "quotes": [
+        {
+          "text": "In alignment with the precautionary principle (Rio Declaration, 1992), we conduct risk assessments that consider both scientifically substantiated risks and potential risks for which conclusive evidence may be lacking.",
+          "page": 291,
+          "paragraph_id": "p291-02",
+          "verification": "exact"
+        },
+        {
+          "text": "By maintaining a comprehensive and organised record, the SIRETA database helps monitor grievance trends, improve response efficiency, and ensure that all concerns are handled fairly and consistently.",
+          "page": 66,
+          "paragraph_id": "p66-05",
+          "verification": "exact"
+        },
+        {
+          "text": "The Project has demonstrated a comprehensive commitment to ensuring that all consultations and participatory processes are conducted directly with communities, stakeholders, and through their legitimate representatives, tailored to the context of the specific issues under consideration.",
+          "page": 61,
+          "paragraph_id": "p61-03",
+          "verification": "exact"
+        },
+        {
+          "text": "Participatory planning and Free, Prior and Informed Consent (FPIC) processes empower communities to participate actively in governance and forest management, reinforcing trust, inclusion, and shared ownership of project outcomes.",
+          "page": 300,
+          "paragraph_id": "p300-03",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 90,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.91,
+          "assertion_only": 0.09,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.88,
+        "independent_sources": 0.16,
+        "strength": 1.1,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.9,
+          "2": 0.1,
+          "3": 0.0
+        },
+        "strength_confidence": 0.9,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "assertion_only",
+      "score": 37,
+      "review_flags": []
+    }
+  ],
+  "overall": {
+    "score": 60,
+    "included": [
+      "additionality",
+      "permanence",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-15T17:31:02+00:00"
+}

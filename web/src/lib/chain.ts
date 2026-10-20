@@ -70,6 +70,12 @@ export async function latestReport(projectId: string) {
   return { version: Number(count), reportHash: r.reportHash, methodHash: r.methodHash, score: Number(r.score) };
 }
 
+/** A specific anchored report version (versions start at 1). */
+export async function getReport(projectId: string, version: number) {
+  const r = await client.readContract({ ...contract, functionName: "getReport", args: [textId(projectId), version] });
+  return { reportHash: r.reportHash, methodHash: r.methodHash, score: Number(r.score) };
+}
+
 export async function verifyClaim(id: number, buyer: Hex, salt: Hex) {
   return client.readContract({ ...contract, functionName: "verifyClaim", args: [BigInt(id), buyer, salt] });
 }

@@ -1,0 +1,268 @@
+{
+  "schema": "report-v1",
+  "project": {
+    "project_id": "VCS1742",
+    "project_name": "Hydroelectric Project in Kinnaur District in Himachal Pradesh",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/1742",
+    "methodology": "ACM0002",
+    "methodology_version": "12.1.0"
+  },
+  "document": {
+    "file_name": "PL1742_VCS PD_HBPCL_V02_17042018_Clean.pdf",
+    "sha256": "8b6a6c39c13b6e0b57404ccd3c8f7ca0d51f4139da1a18495534b53b0b77822f",
+    "pages": 104,
+    "extra_files": [
+      {
+        "file_name": "4993 PDD.pdf",
+        "sha256": "5b628305c25ac13b2bb4020de96d072e3148701bb0e7635fbfe0b964ed7f0401"
+      }
+    ]
+  },
+  "methodology_status": {
+    "code": "ACM0002",
+    "version": "12.1.0",
+    "status": "not_approved",
+    "summary": "In August 2024 ICVCM rejected current grid-connected renewable energy methodologies because their additionality tests were insufficiently rigorous.",
+    "sources": [
+      "https://icvcm.org/carbon-credits-from-current-renewable-energy-methodologies-will-not-receive-high-integrity-ccp-label/",
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v1",
+    "prompt_version": "v1",
+    "question_set_version": "qs-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "decision_model": "typesafe/jev-1.13",
+    "decision_input": "verified_quotes",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+  "principles": [
+    {
+      "principle": "additionality",
+      "rationale": "The document provides a benchmark investment analysis using WACC, project IRR without and with CDM revenues, sensitivity analysis, prior CDM consideration, and a baseline scenario. It states barrier analysis was not opted for. Evidence is specific and substantive, though it relies on the project proponent's own financial assumptions.",
+      "quotes": [
+        {
+          "text": "The IRR of the project activity without considering CDM benefits has been estimated to be 9.80 % which is lower in comparison to benchmark WACC of 11.45%.",
+          "page": 27,
+          "paragraph_id": "x1-p27-02",
+          "verification": "exact"
+        },
+        {
+          "text": "The returns from the project after considering CDM revenues give a project IRR of 11.54%. Thus, with CDM benefits the project becomes financially attractive in as much as the project IRR crosses the benchmark.",
+          "page": 32,
+          "paragraph_id": "x1-p32-01",
+          "verification": "exact"
+        },
+        {
+          "text": "The minutes of the meeting of the Board of Directors of JKHCL held on 2nd June 2003 clearly state that the CDM revenues were essential to mitigate various risks inherent to the project activity.",
+          "page": 13,
+          "paragraph_id": "x1-p13-08",
+          "verification": "exact"
+        },
+        {
+          "text": "The results of the sensitivity analysis as presented in the table above, confirms that the project IRR remains below the benchmark (i.e. 11.45%) even after reasonable variations in the critical assumptions.",
+          "page": 28,
+          "paragraph_id": "x1-p28-03",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "quantified_verifiable",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.98,
+          "documentary": 0.01,
+          "assertion_only": 0.01,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.97,
+        "independent_sources": 0.18,
+        "strength": 2.67,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.01,
+          "2": 0.3,
+          "3": 0.69
+        },
+        "strength_confidence": 0.68,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "strong_evidence",
+      "score": 89,
+      "review_flags": []
+    },
+    {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "quotes": [],
+      "dropped_findings": 0,
+      "llm": null,
+      "decision": null,
+      "rule": "no_reversal_risk"
+    },
+    {
+      "principle": "robust_quantification",
+      "rationale": "The excerpts set out ACM0002-based baseline/project emission equations, a combined-margin factor sourced ex-ante from the CEA database and described as conservative, a power-density calculation giving zero project emissions, and zero leakage. A monitoring team, training and periodic data review are described. No uncertainty or sensitivity analysis is shown in the excerpts, and specific ex-post QA/QC procedures for metered generation are not detailed.",
+      "quotes": [
+        {
+          "text": "The baseline emission factor used in the calculation of baseline emissions for the proposed project activity is being referred from the same for transparency and conservativeness41.",
+          "page": 45,
+          "paragraph_id": "x1-p45-04",
+          "verification": "exact"
+        },
+        {
+          "text": "The power density of the project activity is 1699.52 W/m2. Since the power density of the project is greater than 10 W/m2:  PEy = 0.",
+          "page": 49,
+          "paragraph_id": "x1-p49-05",
+          "verification": "exact"
+        },
+        {
+          "text": "Project participants do not need to consider these emission sources as leakage in applying this methodology. Project activities using ACM0002 shall not claim any credit for the project on account of reducing these emissions below the level of the baseline scenario.",
+          "page": 46,
+          "paragraph_id": "x1-p46-10",
+          "verification": "exact"
+        },
+        {
+          "text": "A CDM project team would be constituted with participation from relevant departments. People will be trained on CDM concept and monitoring plan.",
+          "page": 52,
+          "paragraph_id": "x1-p52-12",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 68,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.36,
+          "documentary": 0.38,
+          "assertion_only": 0.25,
+          "not_addressed": 0.01
+        },
+        "evidence_confidence": 0.17,
+        "independent_sources": 0.23,
+        "strength": 1.61,
+        "strength_probabilities": {
+          "0": 0.01,
+          "1": 0.45,
+          "2": 0.46,
+          "3": 0.08
+        },
+        "strength_confidence": 0.45,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 54,
+      "review_flags": []
+    },
+    {
+      "principle": "no_double_counting",
+      "rationale": "The excerpts list section headings for ownership and other programs, but the body text of sections 1.12.2-1.12.5 is absent. No statements address registration under other GHG programs, other environmental credits, emissions trading schemes, double issuance, or corresponding adjustments. Only a CDM PDD form and methodology references appear.",
+      "quotes": [],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "no_evidence",
+        "score": 8,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": null,
+      "status": "no_evidence",
+      "score": 0
+    },
+    {
+      "principle": "safeguards",
+      "rationale": "The document provides an EIA by NEERI, an Environment Management Plan, and a third-party stakeholder consultation covering 45 villages, with separate interactions for women and tribal groups. It also records comments and responses. It does not explicitly detail FPIC or a formal grievance mechanism, but the evidence is substantive for assessment and mitigation.",
+      "quotes": [
+        {
+          "text": "The report, completed in 2005, reviews the legal and administrative framework for the EIA and then describes the project in all these aspects.",
+          "page": 56,
+          "paragraph_id": "x1-p56-01",
+          "verification": "exact"
+        },
+        {
+          "text": "JKHCL has devised an Environment Management Plan (EMP) which will combat all the adverse environmental impacts and will ensure environment friendly operation of Karcham-Wangtoo hydroelectric power project.",
+          "page": 58,
+          "paragraph_id": "x1-p58-09",
+          "verification": "exact"
+        },
+        {
+          "text": "However, JKHCL being a socially and environmentally responsible organization has endeavoured to do a detailed stakeholder consultation process with special emphasis on the socio-environmental impact of the project on the region.",
+          "page": 61,
+          "paragraph_id": "x1-p61-01",
+          "verification": "exact"
+        },
+        {
+          "text": "The team also made sure that men and women from both tribal and non-tribal households and all possible socio-economic groups were covered and their views documented.",
+          "page": 63,
+          "paragraph_id": "x1-p63-02",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.95,
+          "assertion_only": 0.05,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.93,
+        "independent_sources": 0.19,
+        "strength": 1.57,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.46,
+          "2": 0.51,
+          "3": 0.03
+        },
+        "strength_confidence": 0.51,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 52,
+      "review_flags": []
+    }
+  ],
+  "overall": {
+    "score": 54,
+    "included": [
+      "additionality",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [
+      "permanence"
+    ],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-15T17:21:40+00:00"
+}

@@ -1,0 +1,300 @@
+{
+  "schema": "report-v1",
+  "project": {
+    "project_id": "VCS1851",
+    "project_name": "Renewable Solar Power Project by ReNew Solar Power Private Limited",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/1851",
+    "methodology": "ACM0002",
+    "methodology_version": "19"
+  },
+  "document": {
+    "file_name": "VCS Joint PDMR_Renew Power_V02_29.01.19.pdf",
+    "sha256": "ec4a5b85922c7a42435d783dbecdbe0c31b534b1870ebf61eae0b9f6bdfe8fc3",
+    "pages": 128
+  },
+  "methodology_status": {
+    "code": "ACM0002",
+    "version": "19",
+    "status": "not_approved",
+    "summary": "In August 2024 ICVCM rejected current grid-connected renewable energy methodologies because their additionality tests were insufficiently rigorous.",
+    "sources": [
+      "https://icvcm.org/carbon-credits-from-current-renewable-energy-methodologies-will-not-receive-high-integrity-ccp-label/"
+    ],
+    "table_version": "2026-10-13"
+  },
+  "method": {
+    "report_schema": "report-v1",
+    "prompt_version": "v1",
+    "question_set_version": "qs-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "decision_model": "typesafe/jev-1.13",
+    "decision_input": "verified_quotes",
+    "methodology_table_version": "2026-10-13",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x77db5fd6b725dc8d6f2e2b1447ec2f91b8433a5f1eedfcbc811383577c657bdf",
+  "principles": [
+    {
+      "principle": "additionality",
+      "rationale": "The document presents a benchmark investment analysis using post-tax equity IRR against a 15.10% benchmark, concluding IRR is below benchmark and sensitivity confirms additionality. Barrier analysis is not used and common practice analysis is not shown. Baseline scenario is defined.",
+      "quotes": [
+        {
+          "text": "Based on result of IRR excel spreadsheets, equity IRR is less than Benchmark. \nThis substantiates that the investment is not financially attractive (Equity IRR for the project \nactivity is less than the Benchmark).",
+          "page": 46,
+          "paragraph_id": "p46-05",
+          "verification": "exact"
+        },
+        {
+          "text": "As per Investment Analysis tool, Required/expected returns on equity are appropriate benchmarks for an equity IRR.",
+          "page": 32,
+          "paragraph_id": "p32-04",
+          "verification": "exact"
+        },
+        {
+          "text": "The results of sensitivity analysis show that even with a variation of +10% & -10% in project cost, O&M cost, PLF and Tariff Rate Equity IRR is significantly lower than the benchmark.",
+          "page": 46,
+          "paragraph_id": "p46-08",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 75,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "quantified_verifiable",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.49,
+          "documentary": 0.2,
+          "assertion_only": 0.07,
+          "not_addressed": 0.24
+        },
+        "evidence_confidence": 0.32,
+        "independent_sources": 0.14,
+        "strength": 1.92,
+        "strength_probabilities": {
+          "0": 0.14,
+          "1": 0.14,
+          "2": 0.38,
+          "3": 0.34
+        },
+        "strength_confidence": 0.24,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 64,
+      "review_flags": []
+    },
+    {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "quotes": [],
+      "dropped_findings": 0,
+      "llm": null,
+      "decision": null,
+      "rule": "no_reversal_risk"
+    },
+    {
+      "principle": "robust_quantification",
+      "rationale": "Document specifies baseline emissions formula, uses CEA database for combined margin EF, states project emissions zero for solar, and describes metering QA/QC with sealed utility meters and calibration. Leakage and uncertainty treatment are not detailed in excerpts.",
+      "quotes": [
+        {
+          "text": "Baseline emissions include only CO2 emissions from electricity generation in fossil fuel fired power plants that are displaced due to the project activity.",
+          "page": 49,
+          "paragraph_id": "p49-11",
+          "verification": "exact"
+        },
+        {
+          "text": "CO2 Baseline Database for the Indian Power Sector, Version 13, June 201863 published by Central Electricity Authority (CEA), Government of India has been used for the calculation of emission reduction.",
+          "page": 50,
+          "paragraph_id": "p50-08",
+          "verification": "exact"
+        },
+        {
+          "text": "As the project activity is the installation of a new grid-connected Solar Power plant and does not involve any project emissions from fossil fuel, operation of dry, flash steam or binary geothermal power plants, and from water reservoirs of hydro power plants.",
+          "page": 54,
+          "paragraph_id": "p54-12",
+          "verification": "exact"
+        },
+        {
+          "text": "The meters is approved, tested & sealed by the State Utility. The meters are in the custody of State Utility.",
+          "page": 57,
+          "paragraph_id": "p57-05",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 75,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.01,
+          "documentary": 0.92,
+          "assertion_only": 0.06,
+          "not_addressed": 0.01
+        },
+        "evidence_confidence": 0.89,
+        "independent_sources": 0.79,
+        "strength": 2.27,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.05,
+          "2": 0.63,
+          "3": 0.32
+        },
+        "strength_confidence": 0.63,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 76,
+      "review_flags": []
+    },
+    {
+      "principle": "no_double_counting",
+      "rationale": "The document makes specific declarations addressing double counting: no use for emissions trading compliance, no other GHG-related environmental credit, no REC benefits, and no registration or registration-seeking under other GHG programs. It states the project seeks registration only in VCS. No corresponding adjustment discussion appears, but the excerpts directly address the principle.",
+      "quotes": [
+        {
+          "text": "Net GHG emission reductions or removals generated by the Project will not be used for compliance with an emissions trading program or to meet binding limits on GHG emissions in any Emission Trading program or other binding limits.",
+          "page": 21,
+          "paragraph_id": "p21-06",
+          "verification": "exact"
+        },
+        {
+          "text": "The Project has no intend to generate any other form of GHG-related environmental credit for GHG emission reductions or removals claimed under the VCS Program.",
+          "page": 21,
+          "paragraph_id": "p21-08",
+          "verification": "exact"
+        },
+        {
+          "text": "However it can be crosschecked that PP is not claiming REC benefits, the same can be verified with the REC accreditation body of India31.",
+          "page": 21,
+          "paragraph_id": "p21-09",
+          "verification": "exact"
+        },
+        {
+          "text": "The project has neither been registered nor seeking registration under any other GHG programs. The project is seeking registration only in VCS program.",
+          "page": 22,
+          "paragraph_id": "p22-03",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 80,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.02,
+          "documentary": 0.62,
+          "assertion_only": 0.36,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.49,
+        "independent_sources": 0.44,
+        "strength": 1.82,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.32,
+          "2": 0.54,
+          "3": 0.14
+        },
+        "strength_confidence": 0.54,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 61,
+      "review_flags": []
+    },
+    {
+      "principle": "safeguards",
+      "rationale": "The table of contents lists safeguards sections (No Net Harm, Environmental Impact, Local Stakeholder Consultation, Public Comments), but excerpts only contain substance for stakeholder consultation: meetings held, presentation of social/environmental/economic benefits, and minutes submitted to the DOE. No content on risk assessment or mitigation, environmental impact assessment, biodiversity, grievance mechanisms, FPIC, indigenous peoples, labour or gender appears in the excerpts.",
+      "quotes": [
+        {
+          "text": "The details of the Stakeholder Meetings are as follows:",
+          "page": 65,
+          "paragraph_id": "p65-14",
+          "verification": "exact"
+        },
+        {
+          "text": "In the introductory speech, the representatives of ReNew Solar Power Private Limited (Project Investor), welcomed the gathering and given a brief about the climate mitigation project activity.",
+          "page": 67,
+          "paragraph_id": "p67-23",
+          "verification": "exact"
+        },
+        {
+          "text": "The representative of project participant explained Technical aspects of project to stakeholders. He also explained about social, environmental & economical benefits of the project.",
+          "page": 67,
+          "paragraph_id": "p67-25",
+          "verification": "exact"
+        },
+        {
+          "text": "The Minutes of meeting with commenting sheet from LSH, invitation letter receipt copy are submitted to the DOE.",
+          "page": 67,
+          "paragraph_id": "p67-24",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_weak",
+        "score": 38,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.62,
+          "assertion_only": 0.28,
+          "not_addressed": 0.1
+        },
+        "evidence_confidence": 0.49,
+        "independent_sources": 0.38,
+        "strength": 1.39,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.61,
+          "2": 0.39,
+          "3": 0.0
+        },
+        "strength_confidence": 0.61,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "assertion_only",
+      "score": 46,
+      "review_flags": []
+    }
+  ],
+  "overall": {
+    "score": 64,
+    "included": [
+      "additionality",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [
+      "permanence"
+    ],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-13T19:51:01+00:00"
+}

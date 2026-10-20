@@ -185,7 +185,7 @@ api/            FastAPI layer (public reads; operator and auditor actions need a
 web/            Next.js front end: project reports, retire, verify (reads Sepolia in the browser), audit
 scripts/        demo, deployment, report generation and every measurement in the table above
 tests/          pytest suite + vectors.json shared with the Foundry tests
-reports/        published quality reports
+reports/        published quality reports; reports/history/ keeps every version anchored on Sepolia
 checks/         published data checks (deterministic): document figures vs registry records
 data/           simulated batches, demo buyers, evaluation set, derived measurements
 deployments/    Sepolia deployment record and demo transactions

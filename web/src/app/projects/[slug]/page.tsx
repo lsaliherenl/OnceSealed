@@ -6,6 +6,7 @@ import { AnchorCheck } from "@/components/anchor-check";
 import { DataChecks } from "@/components/data-checks";
 import { EtherscanLink, HashChip } from "@/components/hash";
 import { DeterministicTag, IcvcmStamp, ScoreBar, SignalBanner } from "@/components/quality";
+import { ReportVersions } from "@/components/report-versions";
 import { TransitionLink } from "@/components/transition-link";
 import { Badge } from "@/components/ui/badge";
 import { Card, KeyValue } from "@/components/ui/card";
@@ -168,7 +169,13 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
                   <EtherscanLink hash={latest.tx} />
                   <span className="text-[13px] text-muted-foreground">
                     version {latest.version}
-                    {latest.version > 1 ? "; earlier versions stay readable" : ""}
+                    {latest.version > 1 ? (
+                      <>
+                        ; <a href="#versions-h">earlier versions</a> stay readable
+                      </>
+                    ) : (
+                      ""
+                    )}
                   </span>
                 </dd>
               </>
@@ -398,6 +405,8 @@ async function ProjectReport({ params }: { params: Promise<Params> }) {
           ))}
         </ol>
       </section>
+
+      {project.anchors.length > 0 && <ReportVersions projectId={project.id} anchors={project.anchors} />}
 
       <Card className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 py-5">
         <p className="flex-[1_1_420px] text-[13px] text-muted-foreground">{report.disclaimer}</p>

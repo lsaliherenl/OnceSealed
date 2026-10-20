@@ -16,6 +16,7 @@ from typing import Any
 from core.config import PROJECT_ROOT
 from core.data.batches import load_batches
 from core.hashing import hash_json
+from core.reports import history_path
 
 OUT = PROJECT_ROOT / "web" / "src" / "data" / "site.json"
 PUBLIC_REPORTS = PROJECT_ROOT / "web" / "public" / "reports"
@@ -97,15 +98,26 @@ def main() -> None:
         raise SystemExit("seed log is for another contract; re-run scripts/seed_sepolia.py first")
     table = _read("core/ai/methodology_status.json")
 
-    anchors: dict[str, list[dict[str, Any]]] = {}
-    for tx in seed["txs"]:
-        if tx["kind"] == "registerQualityReport":
-            anchors.setdefault(tx["project"], []).append(
-                {"version": tx["version"], "tx": tx["tx"], "block": tx["block"], "report_hash": tx["report_hash"]})
-
     projects = []
     shutil.rmtree(PUBLIC_REPORTS, ignore_errors=True)
     PUBLIC_REPORTS.mkdir(parents=True)
+
+    # every anchored version, served from web/public/reports/<pid>/v<n>.json (archive: core/reports.py)
+    anchors: dict[str, list[dict[str, Any]]] = {}
+    for tx in seed["txs"]:
+        if tx["kind"] != "registerQualityReport":
+            continue
+        pid, version = tx["project"], tx["version"]
+        archived = history_path(pid, version)
+        if not archived.exists():
+            raise SystemExit(f"{archived} is missing; run scripts/backfill_report_history.py")
+        old = json.loads(archived.read_text(encoding="utf-8"))
+        (PUBLIC_REPORTS / pid).mkdir(exist_ok=True)
+        shutil.copyfile(archived, PUBLIC_REPORTS / pid / archived.name)
+        anchors.setdefault(pid, []).append(
+            {"version": version, "tx": tx["tx"], "block": tx["block"], "report_hash": tx["report_hash"],
+             "generated_at": old["generated_at"], "overall": old["overall"]["score"],
+             "schema": old.get("schema", "report-v1"), "file": f"/reports/{pid}/{archived.name}"})
     for doc in _read("samples/manifest.json")["documents"]:
         pid = doc["project_id"]
         report_path = PROJECT_ROOT / "reports" / f"{pid}.json"

@@ -324,10 +324,13 @@ function PublicRecord({ lookup }: { lookup: Lookup }) {
         <dd>
           {r.reportVersion > 0 && where ? (
             <>
-              <TransitionLink href={`/projects/${where.project.id}`} className="font-mono text-[13px]">
+              <TransitionLink href={`/projects/${where.project.id}#report-v${r.reportVersion}`} className="font-mono text-[13px]">
                 v{r.reportVersion}
               </TransitionLink>{" "}
-              <span className="text-[13px] text-muted-foreground">· the project’s latest report when retired</span>
+              <span className="text-[13px] text-muted-foreground">
+                · the project’s latest report when retired
+                {r.reportVersion < (where.project.anchors.at(-1)?.version ?? 0) ? "; it has been replaced since" : ""}
+              </span>
             </>
           ) : (
             <span className="text-[13px] text-muted-foreground">No report anchored at retirement time</span>

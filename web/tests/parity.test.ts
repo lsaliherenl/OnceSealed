@@ -71,3 +71,17 @@ test("every published report hashes in the browser to the hash Python computed a
     assert.equal(read(`web/public/reports/${f}`), text, `${id}: the copy the web app serves is the published file`);
   }
 });
+
+test("every archived report version hashes to the hash anchored for that version", () => {
+  const site = JSON.parse(read("web/src/data/site.json"));
+  let n = 0;
+  for (const p of site.projects) {
+    for (const a of p.anchors) {
+      const text = read(`reports/history/${p.id}/v${a.version}.json`);
+      assert.equal(reportHash(text), a.report_hash, `${p.id} v${a.version}`);
+      assert.equal(read(`web/public${a.file}`), text, `${p.id} v${a.version}: served copy`);
+      n++;
+    }
+  }
+  assert.ok(n >= 37, `only ${n} archived versions`);
+});

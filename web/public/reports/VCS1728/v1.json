@@ -1,0 +1,301 @@
+{
+  "schema": "report-v1",
+  "project": {
+    "project_id": "VCS1728",
+    "project_name": "Bundled Wind Power Project by Mytrah Group",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/1728",
+    "methodology": "ACM0002",
+    "methodology_version": "17.0"
+  },
+  "document": {
+    "file_name": "VCS Joint PD  MR_Mytrah_V03_20122017_Clean.pdf",
+    "sha256": "5c879cd740a01ed857dbd050d40df237c7eb5168fffe173e0e34889190368f7c",
+    "pages": 75
+  },
+  "methodology_status": {
+    "code": "ACM0002",
+    "version": "17.0",
+    "status": "not_approved",
+    "summary": "In August 2024 ICVCM rejected current grid-connected renewable energy methodologies because their additionality tests were insufficiently rigorous.",
+    "sources": [
+      "https://icvcm.org/carbon-credits-from-current-renewable-energy-methodologies-will-not-receive-high-integrity-ccp-label/",
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v1",
+    "prompt_version": "v1",
+    "question_set_version": "qs-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "decision_model": "typesafe/jev-1.13",
+    "decision_input": "verified_quotes",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+  "principles": [
+    {
+      "principle": "additionality",
+      "rationale": "The document presents a step-wise additionality demonstration: baseline alternatives, benchmark investment analysis using post-tax equity IRR against a 15.32% benchmark, sensitivity analysis on PLF, O&M, project cost and tariff, regulatory surplus, and a common practice analysis. It states the equity IRR is below the benchmark and that the activity is not common practice. IRR spreadsheets are referenced as submitted to the DOE rather than reproduced in the excerpts.",
+      "quotes": [
+        {
+          "text": "The Post tax Equity IRR is evaluated for the entire lifetime of the project activity, i.e. 25 years. It is calculated based on the cash outflows from and cash inflows into the project activity.",
+          "page": 38,
+          "paragraph_id": "p38-10",
+          "verification": "exact"
+        },
+        {
+          "text": "The results of sensitivity analysis show that even with a variation of +10% & -10% in project cost, O&M cost, PLF and Tariff Rate Equity IRR is significantly lower than the benchmark.",
+          "page": 39,
+          "paragraph_id": "p39-03",
+          "verification": "exact"
+        },
+        {
+          "text": "Thus, the proposed project activity is not a “common practice” within a sector in the applicable geographical area.",
+          "page": 42,
+          "paragraph_id": "p42-05",
+          "verification": "exact"
+        },
+        {
+          "text": "Power generation using wind energy is not a legal requirement or a mandatory option.",
+          "page": 36,
+          "paragraph_id": "p36-04",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 88,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "quantified_verifiable",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.47,
+          "documentary": 0.31,
+          "assertion_only": 0.21,
+          "not_addressed": 0.01
+        },
+        "evidence_confidence": 0.29,
+        "independent_sources": 0.2,
+        "strength": 1.63,
+        "strength_probabilities": {
+          "0": 0.06,
+          "1": 0.42,
+          "2": 0.35,
+          "3": 0.17
+        },
+        "strength_confidence": 0.25,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 54,
+      "review_flags": []
+    },
+    {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "quotes": [],
+      "dropped_findings": 0,
+      "llm": null,
+      "decision": null,
+      "rule": "no_reversal_risk"
+    },
+    {
+      "principle": "robust_quantification",
+      "rationale": "Document specifies CEA combined-margin factors, ex-ante OM/BM, zero project emissions, and a monitoring plan with QA/QC, data storage and archiving. Leakage calculation is not shown in the excerpts. These are specific quantification elements, though conservative choices beyond ex-ante are not detailed.",
+      "quotes": [
+        {
+          "text": "The combined margin (EFgrid, CM,y) is the result of a weighted average of two emission factor pertaining to the electricity system: the operating margin (OM) and build margin (BM).",
+          "page": 33,
+          "paragraph_id": "p33-02",
+          "verification": "exact"
+        },
+        {
+          "text": "PP has chosen ex-ante option for calculation of Simple OM emission factor using a 3-year generation-weighted average, based on the most recent data available at the time of submission of the PD to the DOE for validation.",
+          "page": 45,
+          "paragraph_id": "p45-08",
+          "verification": "exact"
+        },
+        {
+          "text": "As the project activity is the installation of a new grid-connected Wind Power plant and does not involve any project emissions from fossil fuel, operation of dry, flash steam or binary geothermal power plants, and from water reservoirs of hydro power plants.",
+          "page": 47,
+          "paragraph_id": "p47-09",
+          "verification": "exact"
+        },
+        {
+          "text": "The monitoring plan, which will be implemented by the project participant describes about the monitoring organisation, parameters to be monitored, monitoring practices, quality assurance, quality control procedures, data storage and archiving.",
+          "page": 50,
+          "paragraph_id": "p50-17",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 82,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.99,
+          "assertion_only": 0.01,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.99,
+        "independent_sources": 0.37,
+        "strength": 1.84,
+        "strength_probabilities": {
+          "0": 0.01,
+          "1": 0.28,
+          "2": 0.58,
+          "3": 0.13
+        },
+        "strength_confidence": 0.57,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 61,
+      "review_flags": []
+    },
+    {
+      "principle": "no_double_counting",
+      "rationale": "The document states reductions will not be used for emissions trading compliance and no intent to generate other environmental credits, and not rejected by other GHG programs. However, the section on participation under other GHG programs is empty, and no evidence of registration status under other programs or corresponding adjustments is provided. Therefore, evidence is assertion-based and incomplete.",
+      "quotes": [
+        {
+          "text": "Net GHG emission reductions or removals generated by the Project will not be used for compliance with an emissions trading program or to meet binding limits on GHG emissions in any Emission Trading program or other binding limits.",
+          "page": 25,
+          "paragraph_id": "p25-10",
+          "verification": "exact"
+        },
+        {
+          "text": "The Project has no intend to generate any other form of GHG-related environmental credit for GHG emission reductions or removals claimed under the VCS Program.",
+          "page": 25,
+          "paragraph_id": "p25-12",
+          "verification": "exact"
+        },
+        {
+          "text": "The Project is not rejected by other GHG programs.",
+          "page": 25,
+          "paragraph_id": "p25-16",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_weak",
+        "score": 45,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "assertion_only",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.07,
+          "assertion_only": 0.93,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.91,
+        "independent_sources": 0.15,
+        "strength": 1.08,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.94,
+          "2": 0.05,
+          "3": 0.01
+        },
+        "strength_confidence": 0.93,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "assertion_only",
+      "score": 36,
+      "review_flags": []
+    },
+    {
+      "principle": "safeguards",
+      "rationale": "The excerpts show a local stakeholder consultation, a public comment period, a grievance register and ongoing communication mechanisms, but the substance is deferred to the DOE and no environmental impact assessment, biodiversity, indigenous/FPIC, labour or gender content appears. Section 5 headings exist in the table of contents only; no assessment detail is provided in the excerpts.",
+      "quotes": [
+        {
+          "text": "The local stakeholder consultation for all the project activity instances have been carried out. The details of which are as follows: The Local Stakeholder consultation will be provided to DOE during validation of project activity.",
+          "page": 52,
+          "paragraph_id": "p52-10",
+          "verification": "exact"
+        },
+        {
+          "text": "The PP also placed an grievance register onsite in where the stakeholder can put down his/her complain and the same if found genuine will be addressed immediately.",
+          "page": 53,
+          "paragraph_id": "p53-04",
+          "verification": "exact"
+        },
+        {
+          "text": "The PP have established the mechanisms for ongoing communication with local stakeholders to allow stakeholders to raise concerns about potential negative impacts during project implementation.",
+          "page": 54,
+          "paragraph_id": "p54-02",
+          "verification": "exact"
+        },
+        {
+          "text": "The project activity was published for public comment and few comments were received during the one month commenting period.",
+          "page": 53,
+          "paragraph_id": "p53-05",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_weak",
+        "score": 50,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.95,
+          "assertion_only": 0.05,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.93,
+        "independent_sources": 0.14,
+        "strength": 1.51,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.53,
+          "2": 0.42,
+          "3": 0.05
+        },
+        "strength_confidence": 0.48,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 50,
+      "review_flags": []
+    }
+  ],
+  "overall": {
+    "score": 52,
+    "included": [
+      "additionality",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [
+      "permanence"
+    ],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-15T17:22:11+00:00"
+}

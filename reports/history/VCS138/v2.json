@@ -1,0 +1,295 @@
+{
+  "schema": "report-v1",
+  "project": {
+    "project_id": "VCS138",
+    "project_name": "Greater New Bedford LFG Utilization Project",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/138",
+    "methodology": "ACM0001",
+    "methodology_version": "16"
+  },
+  "document": {
+    "file_name": "PROJ_DESC_138_12MAY2016.pdf",
+    "sha256": "8c22eb7d83ff957fa785940a206c03b5adc4b0f7506ea2d98d5fd455ab44e104",
+    "pages": 37
+  },
+  "methodology_status": {
+    "code": "ACM0001",
+    "version": "16",
+    "status": "approved_with_conditions",
+    "summary": "ICVCM approved ACM0001 versions 15-19 for landfill gas projects, subject to additional criteria (including limits on electricity generation). Earlier versions are not eligible. Verra's successor VMR0016 was approved in August 2026.",
+    "sources": [
+      "https://verra.org/verras-rice-cultivation-and-landfill-gas-methodologies-receive-icvcm-approval/",
+      "https://verra.org/methodologies/acm0001-flaring-or-use-of-landfill-gas/"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v1",
+    "prompt_version": "v1",
+    "question_set_version": "qs-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "decision_model": "typesafe/jev-1.13",
+    "decision_input": "verified_quotes",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+  "principles": [
+    {
+      "principle": "additionality",
+      "rationale": "The document relies on a previously validated additionality analysis and states a full review is not required for renewal, demonstrating only regulatory surplus. It asserts the expansion would not have occurred under the baseline and was motivated by gas quality, but no investment, barrier, common-practice or carbon-revenue analysis is provided. Evidence is therefore incomplete.",
+      "quotes": [
+        {
+          "text": "In accordance with VCS Standard Section 3.8.5.1, a full additionality review is not required for the renewal of the crediting period.  Only regulatory surplus need be demonstrated again and this is presented in Section 1.11.",
+          "page": 13,
+          "paragraph_id": "p13-03",
+          "verification": "exact"
+        },
+        {
+          "text": "The expansion and improvement of the landfill gas collection system was motivated by the need for additional, higher quality gas for the electricity generation plant and would not have occurred under the voluntary collection and flaring of the landfill gas in the baseline scenario described in Section 2.4.",
+          "page": 5,
+          "paragraph_id": "p5-02",
+          "verification": "exact"
+        },
+        {
+          "text": "The District Initial System was implemented solely to mitigate potential odor complaints.  This driver would prompt the District to continue the system but not to expand or improve it over time as demonstrated in the initial validated baseline analysis.",
+          "page": 13,
+          "paragraph_id": "p13-02",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_weak",
+        "score": 45,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "assertion_only",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.47,
+          "assertion_only": 0.53,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.37,
+        "independent_sources": 0.2,
+        "strength": 1.28,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.75,
+          "2": 0.22,
+          "3": 0.03
+        },
+        "strength_confidence": 0.72,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "assertion_only",
+      "score": 43,
+      "review_flags": []
+    },
+    {
+      "principle": "permanence",
+      "status": "not_applicable",
+      "score": null,
+      "rationale": "Emission-avoidance activity without stored carbon at risk of reversal; permanence is not applicable (rule based on project category, not AI).",
+      "quotes": [],
+      "dropped_findings": 0,
+      "llm": null,
+      "decision": null,
+      "rule": "no_reversal_risk"
+    },
+    {
+      "principle": "robust_quantification",
+      "rationale": "Document provides baseline and project emission equations, leakage treatment, a conservative modification, and monitoring accuracy/QA. It also discloses deviations that decrease conservativeness. Evidence is specific and substantive, though not uniformly conservative.",
+      "quotes": [
+        {
+          "text": "Baseline emissions associated with electricity generation and heat generation are excluded as the Project is not seeking carbon credits for the displacement of grid electricity or the beneficial reuse of the Project’s waste heat.",
+          "page": 15,
+          "paragraph_id": "p15-03",
+          "verification": "exact"
+        },
+        {
+          "text": "Because electricity generation has a higher destruction efficiency than a flare, this is a conservative modification that reflects actual Project operations.",
+          "page": 16,
+          "paragraph_id": "p16-02",
+          "verification": "exact"
+        },
+        {
+          "text": "This deviation decreases the conservativeness of the emissions reductions claimed but significantly increases the accuracy of the calculations as is allowable under VCS Standard v3.5, Section 3.5.1.",
+          "page": 14,
+          "paragraph_id": "p14-03",
+          "verification": "exact"
+        },
+        {
+          "text": "The design data for the instrument specifies an accuracy of ± 0.6 percent of full scale and the capability of measuring flows from 0 to 1,600 actual cubic feet per minute.",
+          "page": 30,
+          "paragraph_id": "p30-02",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 75,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.15,
+          "documentary": 0.71,
+          "assertion_only": 0.13,
+          "not_addressed": 0.01
+        },
+        "evidence_confidence": 0.61,
+        "independent_sources": 0.28,
+        "strength": 1.98,
+        "strength_probabilities": {
+          "0": 0.01,
+          "1": 0.21,
+          "2": 0.59,
+          "3": 0.19
+        },
+        "strength_confidence": 0.58,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 66,
+      "review_flags": []
+    },
+    {
+      "principle": "no_double_counting",
+      "rationale": "The document explicitly addresses counting-once issues: no participation in a compliance emissions trading scheme or binding limits, no credits claimed for grid electricity or waste heat, disclosure that the only other GHG registration is ACR with no verified reductions or issuance since 2008 and none planned under VCS, and that environmental attributes belong to the Lessee. No corresponding-adjustment or retirement language appears.",
+      "quotes": [
+        {
+          "text": "The Project is not participating in nor is required to participate in any compliance emissions trading scheme and is not located in a jurisdiction with binding greenhouse gas emissions limits.",
+          "page": 9,
+          "paragraph_id": "p9-03",
+          "verification": "exact"
+        },
+        {
+          "text": "The Project is not claiming credits associated with the electricity produced from the landfill methane that displaces fossil–fuel-generated grid electricity.",
+          "page": 9,
+          "paragraph_id": "p9-04",
+          "verification": "exact"
+        },
+        {
+          "text": "The only other active GHG Program under which the Project is registered is the American Carbon Registry – Project ID of ACR 113.",
+          "page": 10,
+          "paragraph_id": "p10-03",
+          "verification": "exact"
+        },
+        {
+          "text": "The Project has neither verified emissions reductions under nor requested issuance of credits under ACR since 2008's emission reductions and does not plan to do so during its second crediting period under VCS.",
+          "page": 10,
+          "paragraph_id": "p10-03",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 82,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.05,
+          "documentary": 0.86,
+          "assertion_only": 0.09,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.81,
+        "independent_sources": 0.25,
+        "strength": 1.87,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.47,
+          "2": 0.2,
+          "3": 0.33
+        },
+        "strength_confidence": 0.14,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 62,
+      "review_flags": []
+    },
+    {
+      "principle": "safeguards",
+      "rationale": "The document shows a MEPA environmental review and a public complaint process, but stakeholder consultation is dismissed as unnecessary, and there is no assessment of biodiversity, indigenous peoples, labour or gender risks. Safeguard treatment is generic and incomplete.",
+      "quotes": [
+        {
+          "text": "In accordance with the requirements of the Massachusetts Environmental Policy Act (“MEPA”), prior to construction of the  Project and as a pre-requisite to Project permitting, CNBE submitted an Environmental Notification Form (“ENF”) to the Massachusetts Secretary of Environmental Affairs",
+          "page": 32,
+          "paragraph_id": "p32-04",
+          "verification": "exact"
+        },
+        {
+          "text": "The Project stakeholders are the District and CNBE.  There are no other investment group or public groups involved in the Project.  Therefore, no formal stakeholder consultations are required.",
+          "page": 32,
+          "paragraph_id": "p32-05",
+          "verification": "exact"
+        },
+        {
+          "text": "However, the District does have a formal process for receiving comments or complaints available to the public via email or telephone.  No comments regarding this Project have been received.",
+          "page": 32,
+          "paragraph_id": "p32-05",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_weak",
+        "score": 45,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.69,
+          "assertion_only": 0.29,
+          "not_addressed": 0.02
+        },
+        "evidence_confidence": 0.59,
+        "independent_sources": 0.22,
+        "strength": 1.63,
+        "strength_probabilities": {
+          "0": 0.01,
+          "1": 0.36,
+          "2": 0.62,
+          "3": 0.01
+        },
+        "strength_confidence": 0.61,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 54,
+      "review_flags": []
+    }
+  ],
+  "overall": {
+    "score": 56,
+    "included": [
+      "additionality",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [
+      "permanence"
+    ],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-15T17:31:11+00:00"
+}

@@ -139,7 +139,17 @@ export type Report = {
   principles: Principle[];
 };
 
-export type Anchor = { version: number; tx: string; block: number; report_hash: string };
+/** One report version anchored on Sepolia; `file` is the archived report served by this site. */
+export type Anchor = {
+  version: number;
+  tx: string;
+  block: number;
+  report_hash: string;
+  generated_at: string;
+  overall: number;
+  schema: string;
+  file: string;
+};
 
 export type Batch = {
   key: string;

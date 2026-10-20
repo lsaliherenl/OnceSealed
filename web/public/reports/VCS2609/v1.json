@@ -1,0 +1,355 @@
+{
+  "schema": "report-v1",
+  "project": {
+    "project_id": "VCS2609",
+    "project_name": "Kuamut Rainforest Conservation Project",
+    "registry_url": "https://registry.verra.org/app/projectDetail/VCS/2609",
+    "methodology": "VM0010",
+    "methodology_version": "1.4"
+  },
+  "document": {
+    "file_name": "PROJ_DESC_2609_07032023.pdf",
+    "sha256": "0967d5670ec19d4b0190194d57022f6520836359874691613a48d36034543a2e",
+    "pages": 225
+  },
+  "methodology_status": {
+    "code": "VM0010",
+    "version": "1.4",
+    "status": "under_assessment",
+    "summary": "VM0010 v1.4 (improved forest management: conversion from logged to protected forest) is listed as under ICVCM assessment with no decision published (Calyx tracker, May 2026). ICVCM has approved other IFM methodologies, e.g. Verra VM0045 v1.2 (August 2025). Earlier VM0010 versions are not covered.",
+    "sources": [
+      "https://calyxglobal.com/research-hub/commentary/icvcm-ccp-label-tracker",
+      "https://icvcm.org/integrity-council-approves-biochar-amp-improved-forest-management-methodologies/",
+      "https://verra.org/methodologies/vm0010-methodology-for-improved-forest-management-conversion-from-logged-to-protected-forest-v1-4/"
+    ],
+    "table_version": "2026-10-15"
+  },
+  "method": {
+    "report_schema": "report-v1",
+    "prompt_version": "v1",
+    "question_set_version": "qs-v1",
+    "llm_model": "deepseek/deepseek-v4.1-flash",
+    "decision_model": "typesafe/jev-1.13",
+    "decision_input": "verified_quotes",
+    "methodology_table_version": "2026-10-15",
+    "pdf_extractor": "pymupdf 1.28.2"
+  },
+  "method_hash": "0x076a22fba5542813548efeedda46f487883a123b0350f79d1bc0c45f892e33d8",
+  "principles": [
+    {
+      "principle": "additionality",
+      "rationale": "The document applies VT0001, identifies a most-likely baseline scenario, and reports barrier and common practice analyses. It states the protected-forest scenario faces financial barriers and that the project activity is not common practice and is additional. No detailed IRR benchmark appears in the excerpts, but the additionality evidence is substantive.",
+      "quotes": [
+        {
+          "text": "Scenario v is a scenario where the project activity of converting the area to a protected forest would be performed without being registered as the VCS AFOLU project. This scenario faces financial barriers.",
+          "page": 81,
+          "paragraph_id": "p81-09",
+          "verification": "exact"
+        },
+        {
+          "text": "There are no barriers preventing this scenario from occurring and therefore scenario iv. (combination of Natural Forest Management and the Mosaic Planting Approach) is considered as the most likely baseline scenario for this project.",
+          "page": 82,
+          "paragraph_id": "p82-03",
+          "verification": "exact"
+        },
+        {
+          "text": "Other formerly Class II Forest Reserves (e.g. Ulu Segama and Malua) have primarily been protected because of external financial incentives; Therefore the outcome of the common practice analysis is that the project activity, without the prospect of the sale of GHG credits, is not common practice.",
+          "page": 112,
+          "paragraph_id": "p112-03",
+          "verification": "exact"
+        },
+        {
+          "text": "Following the steps above, it is concluded that the proposed VCS AFOLU project activity is not the baseline scenario and, hence, it is additional",
+          "page": 112,
+          "paragraph_id": "p112-05",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "documentary",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.63,
+          "assertion_only": 0.37,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.51,
+        "independent_sources": 0.32,
+        "strength": 1.56,
+        "strength_probabilities": {
+          "0": 0.01,
+          "1": 0.47,
+          "2": 0.48,
+          "3": 0.04
+        },
+        "strength_confidence": 0.47,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 52,
+      "review_flags": []
+    },
+    {
+      "principle": "permanence",
+      "rationale": "The document applies the VCS AFOLU Non-Permanence Risk Tool, reports an ex-ante non-permanence risk rating of 10, and states credits will be withheld in the VCS AFOLU pooled buffer account. It identifies natural and human-induced reversal risks and describes monitoring for illegal logging and fire. The full risk assessment is referenced as annexed rather than reproduced, but the excerpts show specific risk identification and management measures.",
+      "quotes": [
+        {
+          "text": "An ex-ante estimation of the risks has been performed using the VCS AFOLU Non-Permanence Risk Tool. The assessment is annexed to this PD and shows that the non-permanence risk rating for this project is 10 which is the minimum risks rating to be applied according to the tool.",
+          "page": 161,
+          "paragraph_id": "p161-22",
+          "verification": "exact"
+        },
+        {
+          "text": "Applying this to the numbers in Table 32 gives the following ex-ante estimates of the number of credits to be withheld in VCS AFOLU pooled buffer account",
+          "page": 161,
+          "paragraph_id": "p161-23",
+          "verification": "exact"
+        },
+        {
+          "text": "Natural risks to the climate change benefits of the project are considered low, both in the short and long-term. Such risks, including natural fires, pests & disease, extreme weather, geological events and other natural risks are considered in detail in the non-permanence risk assessment.",
+          "page": 38,
+          "paragraph_id": "p38-18",
+          "verification": "alnum"
+        },
+        {
+          "text": "In addition, for illegal logging, a field team from Rakyat Berjaya Sdn. Bhd will monitor the project area on a regular basis.",
+          "page": 174,
+          "paragraph_id": "p174-04",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "quantified_verifiable",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.59,
+          "documentary": 0.39,
+          "assertion_only": 0.02,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.45,
+        "independent_sources": 0.34,
+        "strength": 1.96,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.19,
+          "2": 0.65,
+          "3": 0.16
+        },
+        "strength_confidence": 0.65,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 65,
+      "review_flags": []
+    },
+    {
+      "principle": "robust_quantification",
+      "rationale": "The excerpts show an explicit conservative baseline assumption (VEX,INF set to zero), a market-leakage estimate using baseline harvest emissions multiplied by a leakage factor, an uncertainty estimate of 0.262% below the 15% threshold requiring no deduction, and QA/QC review with SOPs. These are specific elements relevant to robust and conservative quantification, though not every calculation step is shown.",
+      "quotes": [
+        {
+          "text": "This parameter was therefore considered to be zero in the calculations. This is a conservative assumption since it underestimates the timber extracted, and therefore the carbon removed, in the baseline.",
+          "page": 115,
+          "paragraph_id": "p115-11",
+          "verification": "exact"
+        },
+        {
+          "text": "When it comes to leakage due to market effects, this was estimated as the net emissions from planned timber harvest activities in the baseline scenario multiplied by an appropriate leakage factor:",
+          "page": 150,
+          "paragraph_id": "p150-06",
+          "verification": "exact"
+        },
+        {
+          "text": "The resulting uncertainty if 0.262% is smaller than the 15% threshold indicated in the methodology, therefore no deduction for uncertainty is required.",
+          "page": 161,
+          "paragraph_id": "p161-12",
+          "verification": "exact"
+        },
+        {
+          "text": "All data collected, recorded, stored and reported are subject to review and approval by team leaders and/or project managers with reference to written SOPs covering each level of data management (see Figure 38).",
+          "page": 175,
+          "paragraph_id": "p175-04",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "quantified_verifiable",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.6,
+          "documentary": 0.37,
+          "assertion_only": 0.03,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.47,
+        "independent_sources": 0.28,
+        "strength": 2.34,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.08,
+          "2": 0.5,
+          "3": 0.42
+        },
+        "strength_confidence": 0.5,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 78,
+      "review_flags": []
+    },
+    {
+      "principle": "no_double_counting",
+      "rationale": "The document states the project is not registered under emissions trading or other credit programs, will not claim the same reductions elsewhere, is not subject to binding limits, and has not been rejected by other GHG programs. It does not mention corresponding adjustments. These are specific declarations addressing double counting.",
+      "quotes": [
+        {
+          "text": "The Kuamut Rainforest Conservation Project has not been registered under any emissions trading \nprograms or any program involving environmental or social credits. The project will not claim credit for the \nsame GHG emission reduction under another program.",
+          "page": 68,
+          "paragraph_id": "p68-08",
+          "verification": "exact"
+        },
+        {
+          "text": "Not applicable, the project is not part of any Emissions Trading Programs and is not subject to Other Binding Limits",
+          "page": 68,
+          "paragraph_id": "p68-10",
+          "verification": "exact"
+        },
+        {
+          "text": "The project will not claim other Forms of Environmental Credit under another program.",
+          "page": 68,
+          "paragraph_id": "p68-12",
+          "verification": "exact"
+        },
+        {
+          "text": "The Kuamut Rainforest Conservation Project has not applied for or been rejected by any other GHG programs.",
+          "page": 68,
+          "paragraph_id": "p68-16",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 85,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "assertion_only",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.0,
+          "documentary": 0.13,
+          "assertion_only": 0.87,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.83,
+        "independent_sources": 0.11,
+        "strength": 1.08,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.94,
+          "2": 0.04,
+          "3": 0.02
+        },
+        "strength_confidence": 0.92,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "assertion_only",
+      "score": 36,
+      "review_flags": []
+    },
+    {
+      "principle": "safeguards",
+      "rationale": "Document shows stakeholder identification and rights assessment, extensive community engagement (11 workshops, 488 participants), FPIC-based continuous dialogue, and biodiversity risk discussion. Grievance redress is still being formalised, so mitigation is partly prospective. Evidence is substantive but some mechanisms not finalised.",
+      "quotes": [
+        {
+          "text": "The project has sought to identify all stakeholders with a relationship to the project and to undertake an assessment of their rights, interests and relevance to the project itself.",
+          "page": 25,
+          "paragraph_id": "p25-08",
+          "verification": "exact"
+        },
+        {
+          "text": "Since the inception of community engagements in late 2017, the project has held a total of 11 community workshops and dialogue sessions, attended by a combined total of 488 community participants.",
+          "page": 47,
+          "paragraph_id": "p47-09",
+          "verification": "exact"
+        },
+        {
+          "text": "The project is currently in the process of formalising redress mechanisms for any potential grievances arising from project zone communities or other stakeholders.",
+          "page": 56,
+          "paragraph_id": "p56-05",
+          "verification": "exact"
+        },
+        {
+          "text": "Human-induced risks to the project’s biodiversity benefits, both in the short and long-term, are essentially the same to those related to climate change benefits (above) as they relate to the protection and regeneration of the natural ecosystem.",
+          "page": 39,
+          "paragraph_id": "p39-13",
+          "verification": "exact"
+        }
+      ],
+      "dropped_findings": 0,
+      "llm": {
+        "status": "evidence_found",
+        "score": 78,
+        "model": "deepseek/deepseek-v4.1-flash"
+      },
+      "decision": {
+        "evidence_level": "quantified_verifiable",
+        "evidence_probabilities": {
+          "quantified_verifiable": 0.81,
+          "documentary": 0.18,
+          "assertion_only": 0.01,
+          "not_addressed": 0.0
+        },
+        "evidence_confidence": 0.75,
+        "independent_sources": 0.12,
+        "strength": 2.07,
+        "strength_probabilities": {
+          "0": 0.0,
+          "1": 0.17,
+          "2": 0.59,
+          "3": 0.24
+        },
+        "strength_confidence": 0.59,
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      "status": "partial_evidence",
+      "score": 69,
+      "review_flags": []
+    }
+  ],
+  "overall": {
+    "score": 61,
+    "included": [
+      "additionality",
+      "permanence",
+      "robust_quantification",
+      "no_double_counting",
+      "safeguards"
+    ],
+    "excluded": [],
+    "weights": {
+      "additionality": 0.25,
+      "permanence": 0.2,
+      "robust_quantification": 0.25,
+      "no_double_counting": 0.15,
+      "safeguards": 0.15
+    }
+  },
+  "disclaimer": "Signal, not verdict. Scores describe how well the submitted document evidences each ICVCM principle. They are not an ICVCM assessment, a rating of the project, or a statement about its real-world impact.",
+  "generated_at": "2026-10-15T17:23:28+00:00"
+}
