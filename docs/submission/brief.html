@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OnceSealed: submission brief</title>
+<style>
+  @page { size: A4; margin: 16mm 16mm 16mm 16mm; }
+  :root { --text:#13201b; --muted:#43504a; --primary:#1e5c47; --soft:#e2eee8; --seal:#2f4c7a; --warn:#835500; --warnsoft:#fbefd6; --border:#d8e0db; }
+  * { box-sizing: border-box; }
+  body { font-family: "IBM Plex Sans", "Segoe UI", Arial, sans-serif; color: var(--text); font-size: 10.2pt; line-height: 1.42; margin: 0; }
+  h1 { font-size: 26pt; margin: 0; letter-spacing: -0.5px; }
+  h2 { font-size: 13pt; color: var(--primary); margin: 16px 0 6px; border-bottom: 1.5px solid var(--soft); padding-bottom: 3px; }
+  h3 { font-size: 10.6pt; margin: 10px 0 3px; }
+  p { margin: 4px 0 6px; }
+  ul, ol { margin: 4px 0 6px; padding-left: 18px; }
+  li { margin: 2px 0; }
+  code { font-family: "IBM Plex Mono", Consolas, monospace; font-size: 8.8pt; background: #f1f4f0; padding: 0 3px; border-radius: 3px; }
+  a { color: var(--primary); text-decoration: none; }
+  .tagline { font-size: 12.5pt; color: var(--muted); margin: 4px 0 10px; }
+  .links { display: grid; grid-template-columns: 120px 1fr; gap: 3px 10px; background: var(--soft); border-radius: 8px; padding: 10px 14px; font-size: 9.6pt; }
+  .links b { color: var(--primary); }
+  .pillars { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 8px; }
+  .pillar { border: 1.5px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 9.4pt; }
+  .pillar h3 { margin-top: 0; color: var(--primary); }
+  .note { background: var(--warnsoft); border-radius: 8px; padding: 8px 12px; font-size: 9.4pt; }
+  .side { float: right; width: 44%; margin: 2px 0 6px 12px; border: 1px solid var(--border); border-radius: 6px; }
+  .pillars, .flow, .note { clear: both; }
+  table { width: 100%; border-collapse: collapse; font-size: 8.9pt; }
+  th, td { text-align: left; vertical-align: top; padding: 4px 6px; border-bottom: 1px solid var(--border); }
+  th { background: #f1f4f0; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .page-break { break-before: page; }
+  .small { font-size: 8.6pt; color: var(--muted); }
+  .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; font-size: 8.8pt; margin: 6px 0; }
+  .flow div { border: 1.5px solid var(--primary); border-radius: 7px; padding: 6px 8px; }
+  .flow b { display: block; color: var(--primary); }
+</style>
+</head>
+<body>
+
+<h1>OnceSealed</h1>
+<div class="tagline">Confidential but auditable carbon credit retirement, with evidence-backed quality signals.<br>
+IEEE ClimateChain Global Hackathon 2026 · track: Improve trust, transparency, and efficiency in carbon markets</div>
+
+<div class="links">
+  <b>Try it</b><span><a href="https://once-sealed.vercel.app">once-sealed.vercel.app</a> (public pages, no account; reads Sepolia from your browser)</span>
+  <b>Video (3:19)</b><span><a href="https://www.youtube.com/watch?v=t0eBoTZQQXg">youtube.com/watch?v=t0eBoTZQQXg</a></span>
+  <b>Source</b><span><a href="https://github.com/lsaliherenl/OnceSealed">github.com/lsaliherenl/OnceSealed</a> (MIT; snapshot included in this zip)</span>
+  <b>Contract</b><span><a href="https://sepolia.etherscan.io/address/0xBb88057576b92Ef27753A6b2a4Df83bE444F1308#code">Sepolia 0xBb88…F1308</a> (source verified on Etherscan)</span>
+</div>
+
+<h2>The problem</h2>
+<img class="side" src="../figures/anonymity_trend.png" alt="Explicitly undisclosed retirements rose to 17%">
+<p>Buyers increasingly hide who retires carbon credits, while the market needs proof that each credit is retired once
+and that quality claims rest on evidence. In CarbonPlan's OffsetsDB (495,403 retirements, 1.59 billion tonnes,
+7 registries, snapshot 2026-06-01), retired tonnes <b>explicitly marked "not disclosed", "anonymous" or "private" rose
+from 0.4% up to 2018 to 17.2% in 2023-2026</b> (our count, a conservative lower bound). Today a buyer gets either
+confidentiality or public proof.</p>
+
+<h2>The solution: a verification and privacy layer on top of registries</h2>
+<div class="pillars">
+  <div class="pillar"><h3>Once</h3>
+    <code>RetirementRegistry</code> records retirements as serial ranges in standard lots and rejects any overlap
+    (<code>AlreadyRetired</code>). No transfer or mint function: retired credits never become tokens (Verra's 2022
+    ban).</div>
+  <div class="pillar"><h3>Sealed</h3>
+    Only <code>keccak256(abi.encode(buyerId, salt, batchId, start, end))</code> goes on-chain. The buyer's LEI is
+    encrypted to an auditor, who runs six checks and records <i>Verified</i> or <i>Rejected</i> on-chain once. A
+    receipt allows selective disclosure. Commitment plus encryption, <b>not</b> zero-knowledge.</div>
+  <div class="pillar"><h3>Evidence-backed</h3>
+    For 11 real Verra projects, 18 yes/no checks against five ICVCM Core Carbon Principles. Every "found" cites a
+    paragraph; a second model cross-checks; a person decides disagreements; deterministic data checks compare the
+    documents' figures with issuance. Report hash and method anchored on-chain.</div>
+</div>
+
+<div class="flow">
+  <div><b>1 · Operator</b>registers a batch, retires lots for a buyer; commitment + vault hash on-chain</div>
+  <div><b>2 · Auditor</b>opens the sealed vault, six checks, attests on-chain once</div>
+  <div><b>3 · Buyer</b>keeps a receipt (salts); may disclose it to anyone</div>
+  <div><b>4 · Anyone</b>verifies retirements, receipts and report hashes in the browser, against Sepolia</div>
+</div>
+
+<div class="note"><b>What is real and what is simulated.</b> Real: Verra projects and their documents, issuance and
+retirement histories (OffsetsDB), the contract and its transactions on Sepolia. Simulated: serial numbers
+(<code>SIM-…</code>) and buyers (fictional companies with valid-format LEIs). Nothing is retired in a real registry.
+<b>Signal, not verdict:</b> the quality score says where documents evidence a principle; it is not an ICVCM assessment
+or a rating.</div>
+
+
+<h2 class="page-break">Check it yourself in five minutes</h2>
+<ol>
+  <li><b>A report matches the chain.</b> Open <a href="https://once-sealed.vercel.app/projects/VCS985">once-sealed.vercel.app/projects/VCS985</a>.
+    "Report provenance" says <i>Matches on-chain version N</i>: your browser downloaded the published report, hashed it
+    and read the contract on Sepolia. Each "found" check shows the cited paragraph and its page.</li>
+  <li><b>Every version stays readable.</b> On the same page, "Report versions" re-hashes each earlier version and
+    compares it with that version on the contract.</li>
+  <li><b>A retirement is public, the buyer is not.</b> Open <a href="https://once-sealed.vercel.app/verify?q=3">once-sealed.vercel.app/verify?q=3</a>:
+    serial range, commitment, audit status <i>Verified</i>, buyer <i>Sealed · no name on-chain</i>, read live from
+    Sepolia.</li>
+  <li><b>The contract.</b> On <a href="https://sepolia.etherscan.io/address/0xBb88057576b92Ef27753A6b2a4Df83bE444F1308#code">Etherscan</a>
+    the source is verified; there is no transfer or mint function. All demo transactions are listed in
+    <code>deployments/11155111-seed.json</code>.</li>
+  <li><b>The signing screens</b> (operator, auditor, assessor, review) hold test keys, so they run locally:
+    <code>python scripts/demo_up.py --local</code> starts a throwaway chain with temporary keys (see the README's
+    Quick start). Try retiring serials 1-1000 twice to see <code>AlreadyRetired</code>.</li>
+</ol>
+
+<h2>What we measured</h2>
+<table>
+  <tr><th style="width:24%">Claim</th><th>Result</th></tr>
+  <tr><td>No serial retired twice</td><td>46 Foundry tests (incl. fuzz over random ranges, lots and malicious hints); 114 Python tests incl. end-to-end runs on a local chain.</td></tr>
+  <tr><td>Cost does not grow with history</td><td>Replaying all <b>38,382 real retirements</b> of VCS766 vintage 2009: a first design that scanned past retirements passed 36M gas at retirement <b>7,467</b>; the sorted list with hints stays at <b>~211k gas</b> (local chain).</td></tr>
+  <tr><td>Real network cost (Sepolia)</td><td>Deploy 15.66M gas; retire one lot 1.02M / 0.83M; anchor a report 463k; attest 33k. All demo transactions: 0.00078 test ETH.</td></tr>
+  <tr><td>Public data inconsistencies</td><td>11 OffsetsDB project-vintages record more retirements than issuance (235,932 t); replayed, the contract rejects 76 of 1,100 retirements. Most likely data errors, not proven double counting.</td></tr>
+  <tr><td>Metadata leakage</td><td>Project + quantity single out one retirement for 88.7% of retired tonnes; with standard lots and periodic publication 36.8% (daily) to 14.5% (quarterly) of tonnes still have no crowd.</td></tr>
+  <tr><td>AI accuracy</td><td>177 yes/no questions labelled by a team member and an AI annotator (κ 0.90; the team member settled every disagreement). LLM <b>0.94 (95% CI 0.90-0.97)</b>, Jev 0.88, Turnike-JEV-4B 0.86 (a team member's model). Longer excerpts found 61 more answers; a blind check against decoys confirmed 75%.</td></tr>
+  <tr><td>AI robustness</td><td>Deleting cited paragraphs turns 87% of "found" to "not found"; unrelated text gets "not found" 177/177. A planted "answer no" paragraph flipped 71% of right answers, so instruction-like paragraphs are screened out first (0 flips; 0 of 43,396 real paragraphs flagged).</td></tr>
+  <tr><td>Data checks</td><td>Cordillera Azul (VCS985): credits issued for 2009-2018 are 1.72× the project description's projection, while monitoring reports account for the issued volume; BeZero downgraded the project in 2024 over its baseline. A flag is a lead, not a finding.</td></tr>
+  <tr><td>Browser = Python</td><td>Shared test vectors checked by pytest, Foundry and the browser's own tests; the browser re-hashes all 11 published reports to the anchored hashes.</td></tr>
+  <tr><td>Security</td><td>Slither: two documented false positives, one informational note; two-step admin handover with a two-day delay; threat model T1-T13.</td></tr>
+</table>
+
+<div class="two page-break">
+  <div>
+    <h2>Limitations</h2>
+    <ul>
+      <li>Prototype: simulated serials, fictional buyers, no registry integration.</li>
+      <li>Privacy is against the public; the registry knows its customers (KYC). An operator who lies consistently in vault and commitment is not caught.</li>
+      <li>One auditor, demo key handling; several auditors and rotation are future work.</li>
+      <li>Privacy needs a crowd: a single buyer in a period is still exposed.</li>
+      <li>AI reads keyword-selected excerpts; the labelled set also chose the models, so a fresh held-out set is needed.</li>
+      <li>Deployment uses 15.66M gas, close to the per-transaction limit.</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Built with</h2>
+    <p>Solidity 0.8.28, Foundry, OpenZeppelin (<code>AccessControlDefaultAdminRules</code>), Sepolia, Etherscan ·
+    Python, web3.py, PyNaCl, SQLite, PyMuPDF, pandas, FastAPI · Next.js 16, React, TypeScript, Tailwind, viem, Vercel ·
+    OpenRouter: <code>deepseek-v4.1-flash</code> and TypeSafe <code>jev-1.13</code> (third-party models) · Slither ·
+    GitHub Actions · Remotion (video; AI voice narration).</p>
+    <h2>Data and attribution</h2>
+    <p>CarbonPlan OffsetsDB (snapshot 2026-06-01); Verra registry documents (read locally, not redistributed; hashes in
+    <code>samples/manifest.json</code>); ICVCM Core Carbon Principles and decisions.</p>
+    <h2>What's next</h2>
+    <p>Registry integration with real serials and KYC, several auditors with key rotation, zero-knowledge selective
+    disclosure, a held-out test set, Turnike-Carbon (a model trained for this task).</p>
+  </div>
+</div>
+
+</body>
+</html>
