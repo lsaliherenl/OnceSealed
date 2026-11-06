@@ -2,8 +2,9 @@
 
 **Confidential but auditable carbon credit retirement, with evidence-backed quality signals.**
 
-Built for the IEEE ClimateChain Global Hackathon 2026, track *Improve trust, transparency, and efficiency in carbon
-markets*: smart contracts that prevent double counting, and verification of carbon credit quality.
+Submitted to the [IEEE ClimateChain Global Hackathon 2026](https://devpost.com/software/oncesealed), track *Improve
+trust, transparency, and efficiency in carbon markets*: smart contracts that prevent double counting, and verification
+of carbon credit quality.
 
 OnceSealed is a prototype verification and privacy layer that could sit on top of existing carbon registries:
 
@@ -23,6 +24,11 @@ OnceSealed is a prototype verification and privacy layer that could sit on top o
 re-hashed in your browser against the chain), every report version, and retirement and receipt verification read
 straight from Sepolia. The operator, auditor, assessor and review screens sign transactions, so they run on the local
 demo ([Run the full demo](#run-the-full-demo)).
+
+**Watch:** the [3-minute demo video](https://www.youtube.com/watch?v=t0eBoTZQQXg) (AI voice narration; source in
+[`video/`](video/)) · **Read:** the [Devpost page](https://devpost.com/software/oncesealed) and the
+[three-page brief for judges](docs/submission/OnceSealed-brief.pdf), which includes a five-minute check you can do
+yourself.
 
 **Live on Sepolia:** [`0xBb88057576b92Ef27753A6b2a4Df83bE444F1308`](https://sepolia.etherscan.io/address/0xBb88057576b92Ef27753A6b2a4Df83bE444F1308#code)
 (source verified on Etherscan). It holds 11 anchored quality reports (56 versions, all readable), four issuance batches and audited purchases; every transaction is listed in [`deployments/11155111-seed.json`](deployments/11155111-seed.json).
@@ -190,19 +196,24 @@ small (about 10 questions per question type), so per-question results are indica
 contracts/      Foundry project: RetirementRegistry + tests (OpenZeppelin as a git submodule)
 core/chain/     web3.py client (simulate before sending, event index), deployment records, committed ABI
 core/privacy/   LEI identities, commitments, sealed-box audit vault, receipts
-core/ai/        PDF extraction, quote verification, LLM client, decision model, report builder, checklist
+core/ai/        PDF extraction, document registry, checklist and its two models, injection screen, review
+                decisions, report builder
+core/checks/    deterministic data checks: document tables vs OffsetsDB issuance and retirements
 core/data/      OffsetsDB loading, anonymity classes, simulated issuance batches
 core/service.py end-to-end flows: anchor a report, retire lots, audit, verify a receipt
-api/            FastAPI layer (public reads; operator and auditor actions need a role token)
-web/            Next.js front end: project reports, retire, verify (reads Sepolia in the browser), audit
-scripts/        demo, deployment, report generation and every measurement in the table above
-tests/          pytest suite + vectors.json shared with the Foundry tests
+api/            FastAPI layer (public reads; operator, auditor and assessor actions need a role token)
+web/            Next.js front end: project reports and versions, verify (reads Sepolia in the browser), retire,
+                audit, assess and review screens
+scripts/        demo, deployment, report generation, gallery capture and every measurement in the table above
+tests/          pytest suite + vectors.json shared with the Foundry and browser tests
 reports/        published quality reports; reports/history/ keeps every version anchored on Sepolia
+reviews/        a team member's decisions on the checks the two models disagree on
 checks/         published data checks (deterministic): document figures vs registry records
 data/           simulated batches, demo buyers, evaluation set, derived measurements
 deployments/    Sepolia deployment record and demo transactions
-docs/           threat model, anonymity statistics, AI evaluation, figures
+docs/           threat model, anonymity statistics, AI evaluation, figures, Devpost text, gallery, judges' brief
 samples/        manifest of project documents (URLs + SHA-256); PDFs are downloaded manually
+video/          the demo video as a Remotion project: narration, voice, screenshots and scenes
 ```
 
 ## Quick start
@@ -293,7 +304,15 @@ pages, and the role screens there explain how to run them.
 - [x] Human review of the checks the two models disagree on; every anchored report version kept readable
 - [x] Assessor screen (add a document, run, compare, anchor) and a one-command local demo
 - [x] Public pages hosted at [once-sealed.vercel.app](https://once-sealed.vercel.app)
-- [ ] Demo video
+- [x] [Demo video](https://www.youtube.com/watch?v=t0eBoTZQQXg) and [Devpost submission](https://devpost.com/software/oncesealed)
+
+Next:
+
+- [ ] Integration with a registry's real serials and customer checks (KYC)
+- [ ] Several auditors, key escrow and rotation
+- [ ] Zero-knowledge proofs for selective disclosure
+- [ ] A held-out test set from new documents, for an unbiased accuracy figure
+- [ ] Turnike-Carbon, a decision model trained for this task
 
 ## License
 
